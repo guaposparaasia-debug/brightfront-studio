@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Alebrijes — Oaxacan Food Truck in Columbus</title>
+  <meta name="description" content="Alebrijes is a family-run Oaxacan food truck at 1500 E Long St, Columbus, OH. Charcoal-grilled plates, breakfast, and house salsas. Mon–Fri 9:30 AM–2 PM.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --indigo: #1c1460;
+      --indigo-deep: #120c40;
+      --magenta: #e21878;
+      --coral: #ff5a3c;
+      --sun: #ffc43a;
+      --turquoise: #12b5a8;
+      --lime: #b6e04a;
+      --cream: #fff6ea;
+      --paper: #fffdf8;
+      --ink: #1a1230;
+      --ink-soft: #534568;
+      --line: rgba(26, 18, 48, 0.12);
+      --shadow: 0 16px 36px rgba(28, 20, 96, 0.12);
+      --banner-h: 44px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Outfit", system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.55;
+      font-size: 1.05rem;
+    }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--sun);
+      outline-offset: 3px;
+    }
+    .skip {
+      position: absolute;
+      left: 12px;
+      top: -48px;
+      background: var(--ink);
+      color: white;
+      padding: 8px 12px;
+      z-index: 80;
+    }
+    .skip:focus { top: 54px; }
+    .preview-banner {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      display: block;
+      background: var(--indigo-deep);
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-size: 0.78rem;
+      line-height: 1.35;
+      padding: 8px 14px;
+      min-height: var(--banner-h);
+    }
+    .preview-banner strong { color: var(--sun); font-weight: 700; }
+    .preview-banner:hover { background: #090628; }
+    header.site {
+      position: sticky;
+      top: var(--banner-h);
+      z-index: 50;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 700;
+    }
+    .brand small {
+      display: block;
+      font-weight: 500;
+      color: var(--ink-soft);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+    }
+    .mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      background: conic-gradient(from 20deg, var(--magenta), var(--sun), var(--turquoise), var(--coral), var(--magenta));
+      flex: none;
+    }
+    .nav-toggle {
+      border: 1px solid var(--line);
+      background: white;
+      border-radius: 10px;
+      padding: 8px 10px;
+      font: inherit;
+      font-weight: 650;
+    }
+    .nav-links {
+      display: none;
+      list-style: none;
+      margin: 0;
+      padding: 0 18px 14px;
+    }
+    .nav-links.open { display: grid; }
+    .nav-links a {
+      display: block;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 650;
+      padding: 8px 0;
+    }
+    @media (min-width: 780px) {
+      .nav-toggle { display: none; }
+      .nav-links { display: flex; gap: 18px; padding: 0; align-items: center; }
+      .nav-links a { padding: 0; }
+    }
+    .hero {
+      background:
+        radial-gradient(500px 240px at 8% 0%, rgba(255, 196, 58, 0.35), transparent 70%),
+        radial-gradient(480px 260px at 100% 20%, rgba(226, 24, 120, 0.28), transparent 65%),
+        linear-gradient(160deg, #1c1460, #2a1c86 55%, #12315c);
+      color: white;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 18px 52px;
+      display: grid;
+      gap: 24px;
+    }
+    .kicker {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      border: 1px solid rgba(255,255,255,0.28);
+      background: rgba(255,255,255,0.08);
+      border-radius: 999px;
+      padding: 6px 12px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+    }
+    h1 {
+      font-family: "Calistoga", Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(3rem, 10vw, 5.4rem);
+      line-height: 0.92;
+      margin: 12px 0 8px;
+      letter-spacing: -0.03em;
+    }
+    .lead { font-size: 1.15rem; max-width: 38rem; color: rgba(255,255,255,0.92); margin: 0; }
+    .hero-actions, .contact-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-weight: 700;
+      border: 2px solid transparent;
+    }
+    .btn-sun { background: var(--sun); color: var(--ink); }
+    .btn-sun:hover { background: #ffd56a; }
+    .btn-ghost { color: white; border-color: rgba(255,255,255,0.5); }
+    .btn-ghost:hover { background: rgba(255,255,255,0.1); }
+    .btn-magenta { background: var(--magenta); color: white; }
+    .btn-magenta:hover { background: #c41268; }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .pill {
+      background: rgba(255,255,255,0.12);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
+    .art { width: min(100%, 440px); justify-self: center; }
+    section { padding: 56px 18px; }
+    .wrap { max-width: 1100px; margin: 0 auto; }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--magenta);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-family: "Calistoga", Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      line-height: 1.08;
+      margin: 0 0 12px;
+    }
+    .lede { color: var(--ink-soft); max-width: 40rem; margin-top: 0; }
+    .story-grid, .visit-grid, .salsa-grid { display: grid; gap: 16px; }
+    .card {
+      background: var(--paper);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .card p:last-child { margin-bottom: 0; }
+    .who { display: grid; gap: 10px; }
+    .who div {
+      background: var(--cream);
+      border-radius: 14px;
+      padding: 14px;
+      border-left: 6px solid var(--turquoise);
+    }
+    .who div:nth-child(2) { border-left-color: var(--magenta); }
+    .who div:nth-child(3) { border-left-color: var(--sun); }
+    .who strong { display: block; font-size: 1.05rem; }
+    @media (min-width: 840px) {
+      .hero-inner { grid-template-columns: 1.1fr 0.9fr; align-items: center; padding: 64px 18px 72px; }
+      .story-grid, .visit-grid { grid-template-columns: 1.3fr 0.7fr; }
+      .menu-grid { grid-template-columns: 1fr 1fr; }
+      .salsa-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .menu { background: white; }
+    .menu-grid { display: grid; gap: 12px; margin-top: 18px; }
+    .dish {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      padding: 16px;
+      border-radius: 16px;
+      background: var(--cream);
+      border: 1px solid var(--line);
+    }
+    .emoji {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: white;
+      font-size: 1.4rem;
+    }
+    .dish h3 { margin: 0 0 4px; font-size: 1.08rem; }
+    .dish p { margin: 0; color: var(--ink-soft); }
+    .praise {
+      margin-top: 16px;
+      background: #fff1c9;
+      border-left: 5px solid var(--sun);
+      padding: 12px 14px;
+      border-radius: 0 12px 12px 0;
+    }
+    .salsa { background: linear-gradient(180deg, #fff6ea, #ffe8f3); }
+    .salsa-card { border-top: 8px solid var(--turquoise); }
+    .salsa-card.mango { border-top-color: var(--coral); }
+    .salsa-card h3 { font-family: "Calistoga", Georgia, serif; font-weight: 400; font-size: 1.7rem; margin: 8px 0; }
+    .visit { background: var(--cream); }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 9px 0; border-bottom: 1px solid var(--line); }
+    th { font-weight: 600; }
+    tr.closed td, tr.closed th { color: #8b7c99; }
+    .addr { font-size: 1.2rem; font-weight: 700; margin: 0 0 8px; }
+    .contact {
+      background: var(--indigo);
+      color: white;
+    }
+    .contact .eyebrow { color: var(--sun); }
+    .contact .lede { color: rgba(255,255,255,0.88); }
+    footer { background: var(--ink); color: #f6e7d4; padding: 28px 18px 36px; }
+    footer a { color: var(--sun); }
+    .foot { max-width: 1100px; margin: 0 auto; display: grid; gap: 8px; }
+    .foot small { color: #cbb8d4; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <a class="preview-banner" href="https://brightfront-studio.pages.dev">Free preview made for <strong>Alebrijes</strong> by Brightfront Studio · Not the official site yet · Like it? brightfront-studio.pages.dev</a>
+
+  <header class="site">
+    <div class="nav">
+      <a class="brand" href="#top">
+        <span class="mark" aria-hidden="true"></span>
+        <div>Alebrijes<small>Oaxacan food truck</small></div>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#story">Story</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#salsa">Salsas</a></li>
+      <li><a href="#visit">Hours</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div>
+          <p class="kicker">King-Lincoln Bronzeville · Columbus, OH</p>
+          <h1>Alebrijes</h1>
+          <p class="lead">An Oaxacan food truck painted with alebrijes — colorful folk-art creatures — and run by Luz Maria Garcia and her sons Mike and Alex. Charcoal grill, house salsas, weekday breakfast and lunch.</p>
+          <div class="hero-actions">
+            <a class="btn btn-sun" href="#menu">Menu highlights</a>
+            <a class="btn btn-ghost" href="tel:+16143639979">Call (614) 363-9979</a>
+          </div>
+          <div class="pills">
+            <span class="pill">Mon–Fri 9:30 AM–2 PM</span>
+            <span class="pill">Near MLK Library</span>
+            <span class="pill">Green &amp; mango-habanero salsa</span>
+          </div>
+        </div>
+        <div class="art" aria-hidden="true">
+          <svg viewBox="0 0 440 320" xmlns="http://www.w3.org/2000/svg" role="img">
+            <title>Geometric alebrije-style creatures</title>
+            <ellipse cx="230" cy="176" rx="150" ry="78" fill="#ffc43a"/>
+            <ellipse cx="230" cy="176" rx="118" ry="52" fill="#fff6ea"/>
+            <path d="M120 168c20-48 70-70 120-52 18 6 30 8 52-6 28-18 70-8 86 28 10 24-4 52-30 62-28 12-40 8-70 20-40 16-110 18-158-52z" fill="#e21878"/>
+            <circle cx="168" cy="150" r="16" fill="#1c1460"/>
+            <circle cx="173" cy="146" r="5" fill="#fff"/>
+            <path d="M150 126l-22-28 28 8 10-24 8 26 30-4-18 24z" fill="#12b5a8"/>
+            <path d="M250 150h70l-12 18h-46z" fill="#ff5a3c"/>
+            <circle cx="268" cy="188" r="10" fill="#12b5a8"/>
+            <circle cx="296" cy="188" r="10" fill="#1c1460"/>
+            <circle cx="324" cy="188" r="10" fill="#ffc43a"/>
+            <path d="M300 214c28 20 54 18 78 4" fill="none" stroke="#b6e04a" stroke-width="10" stroke-linecap="round"/>
+            <rect x="48" y="214" width="70" height="46" rx="16" fill="#12b5a8"/>
+            <circle cx="68" cy="232" r="6" fill="#ffc43a"/>
+            <circle cx="88" cy="232" r="6" fill="#e21878"/>
+            <path d="M78 196l10-22 10 22z" fill="#ff5a3c"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="story">
+      <div class="wrap story-grid">
+        <div class="card">
+          <p class="eyebrow">Story</p>
+          <h2>A family truck, painted like a folk-art parade.</h2>
+          <p>Alebrijes is family-run. Luz Maria Garcia makes the salsas. Her sons Mike and Alex run the truck with her. The truck itself is painted with alebrijes, the colorful Oaxacan folk-art creatures the name comes from.</p>
+          <p>They park at 1500 E Long St in King-Lincoln Bronzeville, near the MLK Library. Weekday mornings and lunch only — closed Saturday and Sunday.</p>
+          <p>People come back for the smoky charcoal-grilled flavor, the salsas, the huge burritos, and a friendly crew at the window.</p>
+        </div>
+        <div class="who">
+          <div><strong>Luz Maria Garcia</strong> Salsa maker. Green and mango-habanero are the standouts.</div>
+          <div><strong>Mike</strong> Her son, on the family truck.</div>
+          <div><strong>Alex</strong> Her son, on the family truck.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu" id="menu">
+      <div class="wrap">
+        <p class="eyebrow">Menu highlights</p>
+        <h2>Oaxacan plates, charcoal, and breakfast.</h2>
+        <p class="lede">What the window is known for. Prices aren’t listed on this preview — ask at the truck.</p>
+        <div class="menu-grid">
+          <article class="dish">
+            <div class="emoji" aria-hidden="true">🌮</div>
+            <div><h3>Oaxacan tacos</h3><p>Tacos from the truck, with the house salsas close by.</p></div>
+          </article>
+          <article class="dish">
+            <div class="emoji" aria-hidden="true">🌯</div>
+            <div><h3>Burritos</h3><p>Huge burritos — a reason regulars name the truck.</p></div>
+          </article>
+          <article class="dish">
+            <div class="emoji" aria-hidden="true">🥖</div>
+            <div><h3>Tortas</h3><p>Mexican sandwiches off the same menu.</p></div>
+          </article>
+          <article class="dish">
+            <div class="emoji" aria-hidden="true">🧀</div>
+            <div><h3>Quesadillas</h3><p>Folded and griddled at the window.</p></div>
+          </article>
+          <article class="dish">
+            <div class="emoji" aria-hidden="true">🔥</div>
+            <div><h3>Charcoal-grilled chicken</h3><p>Smoky from the charcoal grill.</p></div>
+          </article>
+          <article class="dish">
+            <div class="emoji" aria-hidden="true">🍖</div>
+            <div><h3>Charcoal-grilled ribs</h3><p>Ribs from the same charcoal fire.</p></div>
+          </article>
+          <article class="dish">
+            <div class="emoji" aria-hidden="true">🌅</div>
+            <div><h3>Breakfast tacos</h3><p>On the morning menu, while the truck is open.</p></div>
+          </article>
+          <article class="dish">
+            <div class="emoji" aria-hidden="true">🥪</div>
+            <div><h3>Breakfast sandwich</h3><p>Served on a house-made English muffin.</p></div>
+          </article>
+        </div>
+        <p class="praise">Customers praise the smoky charcoal-grilled flavor, the salsas, the huge burritos, and the friendly staff.</p>
+      </div>
+    </section>
+
+    <section class="salsa" id="salsa">
+      <div class="wrap">
+        <p class="eyebrow">Salsa spotlight</p>
+        <h2>Luz Maria’s two standouts.</h2>
+        <p class="lede">The salsas are made by Luz Maria Garcia. These two are the ones the truck is known for.</p>
+        <div class="salsa-grid">
+          <article class="card salsa-card">
+            <p class="eyebrow">Verde</p>
+            <h3>Green salsa</h3>
+            <p>The house green salsa. Ask for it on tacos, breakfast, or a burrito.</p>
+          </article>
+          <article class="card salsa-card mango">
+            <p class="eyebrow">Dulce y picante</p>
+            <h3>Mango-habanero</h3>
+            <p>Mango-habanero salsa — fruit, heat, and the other salsa people come for.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit" id="visit">
+      <div class="wrap">
+        <p class="eyebrow">Hours &amp; location</p>
+        <h2>Weekdays on E Long Street.</h2>
+        <div class="visit-grid">
+          <div class="card">
+            <h3>Hours</h3>
+            <table>
+              <caption style="position:absolute;left:-9999px;">Weekly hours</caption>
+              <tbody>
+                <tr><th scope="row">Monday</th><td>9:30 AM–2 PM</td></tr>
+                <tr><th scope="row">Tuesday</th><td>9:30 AM–2 PM</td></tr>
+                <tr><th scope="row">Wednesday</th><td>9:30 AM–2 PM</td></tr>
+                <tr><th scope="row">Thursday</th><td>9:30 AM–2 PM</td></tr>
+                <tr><th scope="row">Friday</th><td>9:30 AM–2 PM</td></tr>
+                <tr class="closed"><th scope="row">Saturday</th><td>Closed</td></tr>
+                <tr class="closed"><th scope="row">Sunday</th><td>Closed</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card">
+            <h3>Location</h3>
+            <p class="addr">1500 E Long St<br>Columbus, OH 43203</p>
+            <p>King-Lincoln Bronzeville, near the MLK Library.</p>
+            <p>Phone <a href="tel:+16143639979">(614) 363-9979</a><br>
+            Email <a href="mailto:alebrijes.truck@gmail.com">alebrijes.truck@gmail.com</a></p>
+            <p><a class="btn btn-magenta" href="https://www.google.com/maps/search/?api=1&amp;query=1500+E+Long+St%2C+Columbus%2C+OH+43203">Open in Google Maps</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <p class="eyebrow">Catering &amp; contact</p>
+        <h2>Call, email, or find them on Instagram.</h2>
+        <p class="lede">For a catering inquiry or an order question, reach the family directly. This preview does not take orders online.</p>
+        <div class="contact-actions">
+          <a class="btn btn-sun" href="tel:+16143639979">Call (614) 363-9979</a>
+          <a class="btn btn-ghost" href="mailto:alebrijes.truck@gmail.com">Email alebrijes.truck@gmail.com</a>
+          <a class="btn btn-ghost" href="https://www.instagram.com/alebrijes.foodtruck/">Instagram @alebrijes.foodtruck</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <strong>Alebrijes</strong>
+      <div>1500 E Long St, Columbus, OH 43203 · <a href="tel:+16143639979">(614) 363-9979</a></div>
+      <div><a href="https://www.instagram.com/alebrijes.foodtruck/">@alebrijes.foodtruck</a> · <a href="mailto:alebrijes.truck@gmail.com">alebrijes.truck@gmail.com</a></div>
+      <small>Free preview by Brightfront Studio · Not the official site · <a href="https://brightfront-studio.pages.dev">brightfront-studio.pages.dev</a></small>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector(".nav-toggle");
+      var list = document.getElementById("nav-links");
+      btn.addEventListener("click", function () {
+        var open = list.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      list.addEventListener("click", function (e) {
+        if (e.target.tagName === "A") {
+          list.classList.remove("open");
+          btn.setAttribute("aria-expanded", "false");
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
