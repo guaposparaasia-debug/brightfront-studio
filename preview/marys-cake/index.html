@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Mary's Cake Bakery & More — Custom Cakes in Tampa</title>
+  <meta name="description" content="Mary's Cake Bakery & More makes custom birthday, themed, and wedding cakes, bizcocho, coquito, cookies, and Latin desserts in Tampa, FL.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blush: #f4c9cf;
+      --rose: #c96b7b;
+      --rose-deep: #8d4452;
+      --butter: #f6e3b0;
+      --sage: #8eaa96;
+      --sage-deep: #3f624c;
+      --cream: #fff8f4;
+      --paper: #fffdfb;
+      --ink: #3a2a2e;
+      --soft: #6e5960;
+      --line: rgba(58, 42, 46, 0.1);
+      --shadow: 0 16px 36px rgba(141, 68, 82, 0.1);
+      --banner-h: 44px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Outfit", system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.55;
+      font-size: 1.05rem;
+    }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+      outline: 3px solid var(--sage);
+      outline-offset: 2px;
+    }
+    .skip { position: absolute; left: 12px; top: -48px; background: var(--ink); color: white; padding: 8px 12px; z-index: 80; }
+    .skip:focus { top: 54px; }
+    .preview-banner {
+      position: sticky; top: 0; z-index: 60;
+      display: block; background: var(--rose-deep); color: #fff;
+      text-align: center; text-decoration: none;
+      font-size: 0.78rem; line-height: 1.35; padding: 8px 14px; min-height: var(--banner-h);
+    }
+    .preview-banner strong { color: var(--butter); }
+    .preview-banner:hover { background: #6f3340; }
+    header.site {
+      position: sticky; top: var(--banner-h); z-index: 50;
+      background: rgba(255, 253, 251, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
+    }
+    .nav {
+      max-width: 1080px; margin: 0 auto; padding: 10px 18px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 700; }
+    .brand small { display: block; font-weight: 500; color: var(--soft); font-size: 0.72rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .mark { width: 36px; height: 36px; border-radius: 50%; background: radial-gradient(circle at 50% 40%, #fff, var(--blush) 55%, var(--rose)); flex: none; }
+    .nav-tools { display: flex; align-items: center; gap: 8px; }
+    .lang button, .nav-toggle {
+      border: 1px solid var(--line); background: white; border-radius: 999px;
+      padding: 7px 10px; font: inherit; font-weight: 650; color: var(--ink);
+    }
+    .lang button[aria-pressed="true"] { background: var(--rose); color: white; border-color: var(--rose); }
+    .nav-links { display: none; list-style: none; margin: 0; padding: 0 18px 14px; }
+    .nav-links.open { display: grid; }
+    .nav-links a { display: block; text-decoration: none; color: var(--ink); font-weight: 650; padding: 8px 0; }
+    @media (min-width: 820px) {
+      .nav-toggle { display: none; }
+      .nav-links { display: flex; gap: 18px; padding: 0; align-items: center; }
+      .nav-links a { padding: 0; }
+    }
+    .hero {
+      background:
+        radial-gradient(520px 240px at 100% 0%, rgba(246, 227, 176, 0.8), transparent 60%),
+        radial-gradient(420px 220px at 0% 80%, rgba(142, 170, 150, 0.28), transparent 70%),
+        linear-gradient(180deg, #fff1f3, #fff8f4);
+      overflow: hidden;
+    }
+    .hero-inner { max-width: 1080px; margin: 0 auto; padding: 40px 18px 52px; display: grid; gap: 20px; }
+    .kicker { color: var(--rose-deep); font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.78rem; margin: 0; }
+    h1 {
+      font-family: "Fraunces", Georgia, serif; font-weight: 680;
+      font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 0.96; margin: 8px 0; letter-spacing: -0.03em;
+    }
+    .lead { font-size: 1.12rem; max-width: 38rem; color: var(--soft); margin: 0; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      text-decoration: none; border-radius: 999px; padding: 12px 18px; font-weight: 700; border: 2px solid transparent;
+    }
+    .btn-rose { background: var(--rose); color: white; }
+    .btn-rose:hover { background: var(--rose-deep); }
+    .btn-line { background: white; color: var(--ink); border-color: var(--blush); }
+    .art { width: min(100%, 380px); justify-self: center; }
+    section { padding: 56px 18px; }
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    .eyebrow { margin: 0 0 8px; color: var(--rose); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    h2 { font-family: "Fraunces", Georgia, serif; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; margin: 0 0 12px; }
+    .lede { color: var(--soft); max-width: 40rem; margin-top: 0; }
+    .gallery, .steps, .visit-grid { display: grid; gap: 14px; }
+    .cake {
+      background: var(--paper); border-radius: 20px; padding: 16px; box-shadow: var(--shadow); border: 1px solid var(--line);
+    }
+    .cake svg { width: 100%; height: 140px; display: block; }
+    .cake h3 { margin: 10px 0 4px; font-size: 1.12rem; }
+    .cake p { margin: 0; color: var(--soft); }
+    .step {
+      background: white; border-radius: 16px; padding: 16px 16px 16px 18px;
+      border-left: 6px solid var(--sage); box-shadow: var(--shadow);
+    }
+    .step strong { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.2rem; }
+    .order { background: white; }
+    form { display: grid; gap: 12px; }
+    label { display: grid; gap: 6px; font-weight: 650; }
+    input, textarea, select {
+      font: inherit; padding: 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--cream); color: var(--ink);
+    }
+    textarea { min-height: 110px; resize: vertical; }
+    .form-note { color: var(--soft); font-size: 0.95rem; }
+    .visit { background: linear-gradient(180deg, var(--cream), #f8eee8); }
+    .panel { background: white; border-radius: 18px; padding: 22px; box-shadow: var(--shadow); }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 9px 0; border-bottom: 1px solid var(--line); }
+    tr.closed td, tr.closed th { color: #9a868c; }
+    .addr { font-size: 1.15rem; font-weight: 700; margin: 0 0 8px; }
+    .note { margin-top: 14px; background: #fff4d8; border-radius: 12px; padding: 12px; }
+    footer { background: var(--ink); color: #f8e8ea; padding: 28px 18px 36px; }
+    footer a { color: var(--butter); }
+    .foot { max-width: 1080px; margin: 0 auto; display: grid; gap: 8px; }
+    .foot small { color: #d7c2c6; }
+    @media (min-width: 760px) {
+      .hero-inner { grid-template-columns: 1.15fr 0.85fr; align-items: center; padding: 64px 18px 72px; }
+      .gallery { grid-template-columns: 1fr 1fr 1fr; }
+      .steps { grid-template-columns: 1fr 1fr; }
+      .visit-grid { grid-template-columns: 1fr 1fr; }
+      form { grid-template-columns: 1fr 1fr; }
+      form .full { grid-column: 1 / -1; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+  <a class="preview-banner" href="https://brightfront-studio.pages.dev"><span data-i18n="banner">Free preview made for <strong>Mary's Cake Bakery &amp; More</strong> by Brightfront Studio · Not the official site yet · Like it? brightfront-studio.pages.dev</span></a>
+
+  <header class="site">
+    <div class="nav">
+      <a class="brand" href="#top">
+        <span class="mark" aria-hidden="true"></span>
+        <div>Mary's Cake<small data-i18n="brandSub">Bakery &amp; More · Tampa</small></div>
+      </a>
+      <div class="nav-tools">
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" id="lang-en" aria-pressed="true">EN</button>
+          <button type="button" id="lang-es" aria-pressed="false">ES</button>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" data-i18n="menuBtn">Menu</button>
+      </div>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#styles" data-i18n="navStyles">Cake styles</a></li>
+      <li><a href="#order" data-i18n="navOrder">How to order</a></li>
+      <li><a href="#request" data-i18n="navRequest">Request</a></li>
+      <li><a href="#visit" data-i18n="navVisit">Hours</a></li>
+    </ul>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div>
+          <p class="kicker" data-i18n="kicker">Tampa, FL · Custom cakes &amp; Latin desserts</p>
+          <h1>Mary's Cake Bakery &amp; More</h1>
+          <p class="lead" data-i18n="lead">Custom birthday and themed cakes, wedding cakes, bizcocho, coquito, cookies, and desserts. Customers call the cakes beautiful and delicious, the service warm and professional, and the coquito a must.</p>
+          <div class="hero-actions">
+            <a class="btn btn-rose" href="#request" data-i18n="ctaRequest">Request a cake</a>
+            <a class="btn btn-line" href="tel:+18133260485" data-i18n="ctaCall">Call (813) 326-0485</a>
+          </div>
+        </div>
+        <div class="art" aria-hidden="true">
+          <svg viewBox="0 0 360 280" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="180" cy="236" rx="110" ry="16" fill="#f4c9cf"/>
+            <rect x="96" y="150" width="168" height="78" rx="16" fill="#fff"/>
+            <rect x="112" y="92" width="136" height="68" rx="14" fill="#f6e3b0"/>
+            <rect x="132" y="48" width="96" height="52" rx="12" fill="#f4c9cf"/>
+            <path d="M146 48c8-22 22-30 34-30s26 8 34 30" fill="none" stroke="#c96b7b" stroke-width="4"/>
+            <circle cx="180" cy="28" r="8" fill="#8eaa96"/>
+            <circle cx="128" cy="188" r="6" fill="#c96b7b"/>
+            <circle cx="156" cy="188" r="6" fill="#8eaa96"/>
+            <circle cx="184" cy="188" r="6" fill="#f6e3b0"/>
+            <circle cx="212" cy="188" r="6" fill="#c96b7b"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="styles">
+      <div class="wrap">
+        <p class="eyebrow" data-i18n="stylesEye">Cake styles</p>
+        <h2 data-i18n="stylesTitle">What they make</h2>
+        <p class="lede" data-i18n="stylesLede">Illustrated here — not photos. Prices are not listed on this preview.</p>
+        <div class="gallery">
+          <article class="cake">
+            <svg viewBox="0 0 200 120" aria-hidden="true"><rect x="30" y="48" width="140" height="52" rx="10" fill="#f4c9cf"/><rect x="48" y="28" width="104" height="32" rx="8" fill="#fff"/><circle cx="70" cy="74" r="5" fill="#c96b7b"/><circle cx="100" cy="74" r="5" fill="#8eaa96"/><circle cx="130" cy="74" r="5" fill="#f6e3b0"/></svg>
+            <h3 data-i18n="bdayTitle">Birthday cakes</h3>
+            <p data-i18n="bdayText">Custom birthday cakes, made to the occasion.</p>
+          </article>
+          <article class="cake">
+            <svg viewBox="0 0 200 120" aria-hidden="true"><rect x="36" y="40" width="128" height="58" rx="12" fill="#f6e3b0"/><path d="M50 40c10 16 20 16 30 0 10 16 20 16 30 0 10 16 20 16 30 0" fill="#8eaa96"/><circle cx="100" cy="28" r="8" fill="#c96b7b"/></svg>
+            <h3 data-i18n="themeTitle">Themed cakes</h3>
+            <p data-i18n="themeText">Themed designs from an idea you share.</p>
+          </article>
+          <article class="cake">
+            <svg viewBox="0 0 200 120" aria-hidden="true"><rect x="42" y="62" width="116" height="40" rx="8" fill="#fff"/><rect x="62" y="38" width="76" height="32" rx="8" fill="#f4c9cf"/><path d="M86 38c6-16 22-16 28 0" fill="none" stroke="#8eaa96" stroke-width="3"/></svg>
+            <h3 data-i18n="wedTitle">Wedding cakes</h3>
+            <p data-i18n="wedText">Wedding cakes for the celebration.</p>
+          </article>
+          <article class="cake">
+            <svg viewBox="0 0 200 120" aria-hidden="true"><ellipse cx="100" cy="78" rx="62" ry="24" fill="#e7c08a"/><ellipse cx="100" cy="70" rx="62" ry="18" fill="#f6e3b0"/><rect x="70" y="40" width="60" height="18" rx="6" fill="#c96b7b"/></svg>
+            <h3 data-i18n="bizTitle">Bizcocho</h3>
+            <p data-i18n="bizText">Latin bizcocho, alongside the custom cakes.</p>
+          </article>
+          <article class="cake">
+            <svg viewBox="0 0 200 120" aria-hidden="true"><rect x="78" y="28" width="44" height="70" rx="18" fill="#f6e3b0"/><rect x="84" y="36" width="32" height="48" rx="12" fill="#fff8f4"/><circle cx="100" cy="22" r="8" fill="#8eaa96"/></svg>
+            <h3 data-i18n="coqTitle">Coquito</h3>
+            <p data-i18n="coqText">Customers say the coquito is a must.</p>
+          </article>
+          <article class="cake">
+            <svg viewBox="0 0 200 120" aria-hidden="true"><circle cx="62" cy="68" r="24" fill="#f4c9cf"/><circle cx="108" cy="60" r="26" fill="#f6e3b0"/><circle cx="148" cy="72" r="20" fill="#8eaa96"/></svg>
+            <h3 data-i18n="cookTitle">Cookies &amp; desserts</h3>
+            <p data-i18n="cookText">Cookies and desserts with the cakes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="order">
+      <div class="wrap">
+        <p class="eyebrow" data-i18n="orderEye">How to order a custom cake</p>
+        <h2 data-i18n="orderTitle">Four steps, then they confirm.</h2>
+        <div class="steps">
+          <div class="step"><strong data-i18n="s1t">1. Occasion</strong><span data-i18n="s1">Tell them what the cake is for — birthday, theme, or wedding.</span></div>
+          <div class="step"><strong data-i18n="s2t">2. Date &amp; servings</strong><span data-i18n="s2">Share the date you need it and how many people it should serve.</span></div>
+          <div class="step"><strong data-i18n="s3t">3. Flavor &amp; design</strong><span data-i18n="s3">Describe the flavor and the design idea. No prices are set on this preview.</span></div>
+          <div class="step"><strong data-i18n="s4t">4. Send the request</strong><span data-i18n="s4">The form opens an email to maryscake24@gmail.com. Or call (813) 326-0485.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="order" id="request">
+      <div class="wrap">
+        <p class="eyebrow" data-i18n="formEye">Custom cake request</p>
+        <h2 data-i18n="formTitle">Email the details.</h2>
+        <p class="lede" data-i18n="formLede">This does not place an order. It opens your email app with the notes filled in, addressed to maryscake24@gmail.com.</p>
+        <form id="cake-form">
+          <label class="full"><span data-i18n="fName">Your name</span><input name="name" type="text" required autocomplete="name"></label>
+          <label><span data-i18n="fOccasion">Occasion</span><input name="occasion" type="text" required></label>
+          <label><span data-i18n="fDate">Date needed</span><input name="date" type="date" required></label>
+          <label><span data-i18n="fServings">Servings</span><input name="servings" type="text" required></label>
+          <label><span data-i18n="fFlavor">Flavor</span><input name="flavor" type="text" required></label>
+          <label class="full"><span data-i18n="fDesign">Design idea</span><textarea name="design" required></textarea></label>
+          <div class="full"><button class="btn btn-rose" type="submit" data-i18n="fSubmit">Open email draft</button></div>
+          <p class="form-note full" data-i18n="fNote">Customers also mention the cakes are affordable, and the service is warm and professional. Ask the bakery for the quote.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="visit" id="visit">
+      <div class="wrap">
+        <p class="eyebrow" data-i18n="visitEye">Hours &amp; location</p>
+        <h2 data-i18n="visitTitle">Polak Drive, Lot D.</h2>
+        <div class="visit-grid">
+          <div class="panel">
+            <h3 data-i18n="hoursH">Hours</h3>
+            <table>
+              <tbody>
+                <tr><th scope="row" data-i18n="mon">Monday</th><td>8 AM–5:30 PM</td></tr>
+                <tr><th scope="row" data-i18n="tue">Tuesday</th><td>8 AM–5:30 PM</td></tr>
+                <tr><th scope="row" data-i18n="wed">Wednesday</th><td>8 AM–5:30 PM</td></tr>
+                <tr><th scope="row" data-i18n="thu">Thursday</th><td>8 AM–5:30 PM</td></tr>
+                <tr><th scope="row" data-i18n="fri">Friday</th><td>8 AM–5:30 PM</td></tr>
+                <tr><th scope="row" data-i18n="sat">Saturday</th><td>8:30 AM–5 PM</td></tr>
+                <tr class="closed"><th scope="row" data-i18n="sun">Sunday</th><td data-i18n="closed">Closed</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="panel">
+            <h3 data-i18n="locH">Location</h3>
+            <p class="addr">9713 Polak Dr, Lot D<br>Tampa, FL 33610</p>
+            <p><span data-i18n="phoneL">Phone</span> <a href="tel:+18133260485">(813) 326-0485</a><br>
+            <span data-i18n="emailL">Email</span> <a href="mailto:maryscake24@gmail.com">maryscake24@gmail.com</a></p>
+            <p><a class="btn btn-rose" href="https://www.google.com/maps/search/?api=1&amp;query=9713+Polak+Dr%2C+Lot+D%2C+Tampa%2C+FL+33610" data-i18n="maps">Open in Google Maps</a></p>
+            <p class="note" data-i18n="loveNote">People say the cakes are beautiful and delicious, affordable, and the service is warm and professional. The coquito is a must.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <strong>Mary's Cake Bakery &amp; More</strong>
+      <div>9713 Polak Dr, Lot D, Tampa, FL 33610 · <a href="tel:+18133260485">(813) 326-0485</a></div>
+      <div><a href="https://www.facebook.com/share/1A7TrsPUns/">Facebook</a> · <a href="mailto:maryscake24@gmail.com">maryscake24@gmail.com</a></div>
+      <small data-i18n="footNote">Free preview by Brightfront Studio · Not the official site · <a href="https://brightfront-studio.pages.dev">brightfront-studio.pages.dev</a></small>
+    </div>
+  </footer>
+
+  <script>
+    var copy = {
+      en: {
+        skip: "Skip to content",
+        banner: "Free preview made for <strong>Mary's Cake Bakery &amp; More</strong> by Brightfront Studio · Not the official site yet · Like it? brightfront-studio.pages.dev",
+        brandSub: "Bakery & More · Tampa",
+        menuBtn: "Menu",
+        navStyles: "Cake styles",
+        navOrder: "How to order",
+        navRequest: "Request",
+        navVisit: "Hours",
+        kicker: "Tampa, FL · Custom cakes & Latin desserts",
+        lead: "Custom birthday and themed cakes, wedding cakes, bizcocho, coquito, cookies, and desserts. Customers call the cakes beautiful and delicious, the service warm and professional, and the coquito a must.",
+        ctaRequest: "Request a cake",
+        ctaCall: "Call (813) 326-0485",
+        stylesEye: "Cake styles",
+        stylesTitle: "What they make",
+        stylesLede: "Illustrated here — not photos. Prices are not listed on this preview.",
+        bdayTitle: "Birthday cakes",
+        bdayText: "Custom birthday cakes, made to the occasion.",
+        themeTitle: "Themed cakes",
+        themeText: "Themed designs from an idea you share.",
+        wedTitle: "Wedding cakes",
+        wedText: "Wedding cakes for the celebration.",
+        bizTitle: "Bizcocho",
+        bizText: "Latin bizcocho, alongside the custom cakes.",
+        coqTitle: "Coquito",
+        coqText: "Customers say the coquito is a must.",
+        cookTitle: "Cookies & desserts",
+        cookText: "Cookies and desserts with the cakes.",
+        orderEye: "How to order a custom cake",
+        orderTitle: "Four steps, then they confirm.",
+        s1t: "1. Occasion",
+        s1: "Tell them what the cake is for — birthday, theme, or wedding.",
+        s2t: "2. Date & servings",
+        s2: "Share the date you need it and how many people it should serve.",
+        s3t: "3. Flavor & design",
+        s3: "Describe the flavor and the design idea. No prices are set on this preview.",
+        s4t: "4. Send the request",
+        s4: "The form opens an email to maryscake24@gmail.com. Or call (813) 326-0485.",
+        formEye: "Custom cake request",
+        formTitle: "Email the details.",
+        formLede: "This does not place an order. It opens your email app with the notes filled in, addressed to maryscake24@gmail.com.",
+        fName: "Your name",
+        fOccasion: "Occasion",
+        fDate: "Date needed",
+        fServings: "Servings",
+        fFlavor: "Flavor",
+        fDesign: "Design idea",
+        fSubmit: "Open email draft",
+        fNote: "Customers also mention the cakes are affordable, and the service is warm and professional. Ask the bakery for the quote.",
+        visitEye: "Hours & location",
+        visitTitle: "Polak Drive, Lot D.",
+        hoursH: "Hours",
+        locH: "Location",
+        mon: "Monday", tue: "Tuesday", wed: "Wednesday", thu: "Thursday", fri: "Friday", sat: "Saturday", sun: "Sunday",
+        closed: "Closed",
+        phoneL: "Phone",
+        emailL: "Email",
+        maps: "Open in Google Maps",
+        loveNote: "People say the cakes are beautiful and delicious, affordable, and the service is warm and professional. The coquito is a must.",
+        footNote: "Free preview by Brightfront Studio · Not the official site · <a href=\"https://brightfront-studio.pages.dev\">brightfront-studio.pages.dev</a>",
+        mailSubject: "Custom cake request — Mary's Cake Bakery",
+        mailName: "Name", mailOccasion: "Occasion", mailDate: "Date", mailServings: "Servings", mailFlavor: "Flavor", mailDesign: "Design idea"
+      },
+      es: {
+        skip: "Saltar al contenido",
+        banner: "Vista previa gratis hecha para <strong>Mary's Cake Bakery &amp; More</strong> por Brightfront Studio · Aún no es el sitio oficial · ¿Te gusta? brightfront-studio.pages.dev",
+        brandSub: "Pastelería y más · Tampa",
+        menuBtn: "Menú",
+        navStyles: "Estilos",
+        navOrder: "Cómo pedir",
+        navRequest: "Solicitud",
+        navVisit: "Horario",
+        kicker: "Tampa, FL · Pasteles a medida y postres latinos",
+        lead: "Pasteles de cumpleaños y temáticos, pasteles de boda, bizcocho, coquito, galletas y postres. Dicen que los pasteles son hermosos y deliciosos, el servicio cálido y profesional, y que el coquito es imprescindible.",
+        ctaRequest: "Pedir un pastel",
+        ctaCall: "Llamar al (813) 326-0485",
+        stylesEye: "Estilos de pastel",
+        stylesTitle: "Lo que preparan",
+        stylesLede: "Ilustrado aquí — no son fotos. Esta vista previa no muestra precios.",
+        bdayTitle: "Pasteles de cumpleaños",
+        bdayText: "Pasteles de cumpleaños a medida, según la ocasión.",
+        themeTitle: "Pasteles temáticos",
+        themeText: "Diseños temáticos a partir de tu idea.",
+        wedTitle: "Pasteles de boda",
+        wedText: "Pasteles de boda para la celebración.",
+        bizTitle: "Bizcocho",
+        bizText: "Bizcocho latino, junto a los pasteles a medida.",
+        coqTitle: "Coquito",
+        coqText: "Dicen que el coquito es imprescindible.",
+        cookTitle: "Galletas y postres",
+        cookText: "Galletas y postres junto a los pasteles.",
+        orderEye: "Cómo pedir un pastel a medida",
+        orderTitle: "Cuatro pasos, y ellos confirman.",
+        s1t: "1. Ocasión",
+        s1: "Cuéntales para qué es el pastel: cumpleaños, tema o boda.",
+        s2t: "2. Fecha y porciones",
+        s2: "Indica la fecha y para cuántas personas.",
+        s3t: "3. Sabor y diseño",
+        s3: "Describe el sabor y la idea de diseño. Esta vista previa no fija precios.",
+        s4t: "4. Envía la solicitud",
+        s4: "El formulario abre un correo a maryscake24@gmail.com. O llama al (813) 326-0485.",
+        formEye: "Solicitud de pastel a medida",
+        formTitle: "Envía los detalles por correo.",
+        formLede: "Esto no hace el pedido. Abre tu app de correo con las notas, dirigido a maryscake24@gmail.com.",
+        fName: "Tu nombre",
+        fOccasion: "Ocasión",
+        fDate: "Fecha necesaria",
+        fServings: "Porciones",
+        fFlavor: "Sabor",
+        fDesign: "Idea de diseño",
+        fSubmit: "Abrir borrador de correo",
+        fNote: "También dicen que los pasteles son accesibles y el servicio cálido y profesional. Pide la cotización a la pastelería.",
+        visitEye: "Horario y ubicación",
+        visitTitle: "Polak Drive, lote D.",
+        hoursH: "Horario",
+        locH: "Ubicación",
+        mon: "Lunes", tue: "Martes", wed: "Miércoles", thu: "Jueves", fri: "Viernes", sat: "Sábado", sun: "Domingo",
+        closed: "Cerrado",
+        phoneL: "Teléfono",
+        emailL: "Correo",
+        maps: "Abrir en Google Maps",
+        loveNote: "Dicen que los pasteles son hermosos y deliciosos, accesibles, y que el servicio es cálido y profesional. El coquito es imprescindible.",
+        footNote: "Vista previa gratis de Brightfront Studio · No es el sitio oficial · <a href=\"https://brightfront-studio.pages.dev\">brightfront-studio.pages.dev</a>",
+        mailSubject: "Solicitud de pastel a medida — Mary's Cake Bakery",
+        mailName: "Nombre", mailOccasion: "Ocasión", mailDate: "Fecha", mailServings: "Porciones", mailFlavor: "Sabor", mailDesign: "Idea de diseño"
+      }
+    };
+    var lang = "en";
+    function apply(code) {
+      lang = code;
+      document.documentElement.lang = code === "es" ? "es" : "en";
+      document.getElementById("lang-en").setAttribute("aria-pressed", code === "en" ? "true" : "false");
+      document.getElementById("lang-es").setAttribute("aria-pressed", code === "es" ? "true" : "false");
+      document.querySelectorAll("[data-i18n]").forEach(function (el) {
+        var key = el.getAttribute("data-i18n");
+        if (copy[code][key]) el.innerHTML = copy[code][key];
+      });
+    }
+    document.getElementById("lang-en").addEventListener("click", function () { apply("en"); });
+    document.getElementById("lang-es").addEventListener("click", function () { apply("es"); });
+    var btn = document.querySelector(".nav-toggle");
+    var list = document.getElementById("nav-links");
+    btn.addEventListener("click", function () {
+      var open = list.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    list.addEventListener("click", function (e) {
+      if (e.target.tagName === "A") {
+        list.classList.remove("open");
+        btn.setAttribute("aria-expanded", "false");
+      }
+    });
+    document.getElementById("cake-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var data = new FormData(e.target);
+      var t = copy[lang];
+      var body = [
+        t.mailName + ": " + data.get("name"),
+        t.mailOccasion + ": " + data.get("occasion"),
+        t.mailDate + ": " + data.get("date"),
+        t.mailServings + ": " + data.get("servings"),
+        t.mailFlavor + ": " + data.get("flavor"),
+        t.mailDesign + ": " + data.get("design")
+      ].join("\n");
+      window.location.href = "mailto:maryscake24@gmail.com?subject=" + encodeURIComponent(t.mailSubject) + "&body=" + encodeURIComponent(body);
+    });
+  </script>
+</body>
+</html>
