@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brightfront Studio — Websites for cafes, salons, clinics and local shops</title>
+  <meta name="description" content="Brightfront Studio designs fast, clear websites for cafes, restaurants, salons, clinics and local shops. Landing pages, menus, booking, local SEO and Google Business setup. Starter sites from $299.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1a1714">
+  <link rel="canonical" href="https://guaposparaasia-debug.github.io/brightfront-studio/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Brightfront Studio">
+  <meta property="og:title" content="Brightfront Studio — Websites for local businesses">
+  <meta property="og:description" content="Clear, fast websites for cafes, restaurants, salons, clinics and shops. Starting at $299. Free quote by email.">
+  <meta property="og:url" content="https://guaposparaasia-debug.github.io/brightfront-studio/">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Brightfront Studio — Websites for local businesses">
+  <meta name="twitter:description" content="Clear, fast websites for cafes, restaurants, salons, clinics and shops. Starting at $299.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231a1714'/%3E%3Cpath d='M8 20.5c2.2-4.8 5-7.2 8-7.2s5.8 2.4 8 7.2' fill='none' stroke='%23e7c9a4' stroke-width='2.2' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='10' r='2.2' fill='%23c4512c'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,640&family=Outfit:wght@340;420;520;640&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Brightfront Studio",
+    "url": "https://guaposparaasia-debug.github.io/brightfront-studio/",
+    "email": "guaposparaasia@gmail.com",
+    "description": "Web design studio building websites, landing pages, online booking and menu pages, local SEO, and Google Business setup for small businesses in English-speaking markets.",
+    "slogan": "Websites local customers trust before they walk in.",
+    "knowsAbout": ["Website design", "Landing pages", "Online booking", "Menus", "Local SEO", "Google Business Profile"]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #f3eee6;
+      --bg-deep: #e7e0d4;
+      --ink: #1a1714;
+      --ink-soft: #3f3a34;
+      --muted: #6d665c;
+      --line: rgba(26, 23, 20, 0.12);
+      --paper: #fffdf8;
+      --accent: #b8431f;
+      --accent-deep: #8d3116;
+      --forest: #243f34;
+      --gold: #c6a15b;
+      --shadow: 0 18px 50px rgba(26, 23, 20, 0.08);
+      --radius: 22px;
+      --nav: 76px;
+      --max: 1120px;
+      --serif: "Fraunces", "Iowan Old Style", Palatino, Georgia, serif;
+      --sans: "Outfit", "Segoe UI", sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(900px 420px at 90% -10%, rgba(196, 81, 44, 0.08), transparent 60%),
+        radial-gradient(700px 380px at -10% 20%, rgba(36, 63, 52, 0.07), transparent 55%),
+        var(--bg);
+      font-family: var(--sans);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      font-weight: 420;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    button, input, select, textarea { font: inherit; color: inherit; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .skip { position: absolute; left: 12px; top: -40px; background: var(--ink); color: #fff; padding: 8px 12px; z-index: 100; border-radius: 8px; }
+    .skip:focus { top: 12px; }
+    .wrap { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+    .nav { position: sticky; top: 0; z-index: 40; height: var(--nav); display: flex; align-items: center; backdrop-filter: blur(16px); background: rgba(243, 238, 230, 0.86); border-bottom: 1px solid transparent; }
+    .nav.scrolled { border-bottom-color: var(--line); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 640; letter-spacing: -0.03em; }
+    .mark { width: 34px; height: 34px; border-radius: 10px; background: var(--ink); display: grid; place-items: center; flex: none; }
+    .mark svg { width: 22px; height: 22px; }
+    .nav-links { display: none; align-items: center; gap: 22px; }
+    .nav-links a { text-decoration: none; color: var(--ink-soft); font-size: 0.95rem; }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-cta { display: none; }
+    .menu-btn { border: 1px solid var(--line); background: var(--paper); border-radius: 999px; padding: 8px 14px; cursor: pointer; }
+    .menu-panel { display: none; position: absolute; left: 16px; right: 16px; top: calc(var(--nav) - 8px); background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 12px; box-shadow: var(--shadow); }
+    .menu-panel.open { display: grid; }
+    .menu-panel a { text-decoration: none; padding: 12px; border-radius: 12px; }
+    .menu-panel a:hover { background: var(--bg); }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; border-radius: 999px; padding: 13px 18px; border: 1px solid transparent; font-weight: 520; cursor: pointer; transition: transform .2s ease, background .2s ease; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-deep); }
+    .btn-ghost { background: transparent; border-color: var(--line); color: var(--ink); }
+    .btn-ghost:hover { background: rgba(255,255,255,.55); }
+    .btn-light { background: #fff; color: var(--ink); }
+    .hero { padding: 28px 0 64px; }
+    .hero-grid { display: grid; gap: 36px; align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--forest); font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 640; }
+    .eyebrow::before { content: ""; width: 18px; height: 1px; background: var(--forest); }
+    h1, h2, h3 { font-family: var(--serif); font-weight: 560; letter-spacing: -0.03em; line-height: 1.05; margin: 0; }
+    h1 { font-size: clamp(2.5rem, 8vw, 5.3rem); margin: 14px 0 16px; max-width: 11ch; }
+    .lede { font-size: 1.12rem; color: var(--ink-soft); max-width: 38rem; margin: 0 0 22px; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .fine { color: var(--muted); font-size: 0.92rem; margin-top: 14px; }
+    .hero-card { background: var(--paper); border: 1px solid var(--line); border-radius: 28px; box-shadow: var(--shadow); padding: 14px; overflow: hidden; }
+    .browser { border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: #fff; }
+    .chrome { display: flex; align-items: center; gap: 6px; padding: 10px 12px; background: #f7f3ec; border-bottom: 1px solid var(--line); }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #ddd4c6; }
+    .dot:nth-child(1) { background: #e7b2a2; }
+    .url { margin-left: 8px; font-size: 0.75rem; color: var(--muted); background: #fff; border-radius: 999px; padding: 3px 10px; }
+    .cafe-hero { background: linear-gradient(160deg, #f6e7d4, #efe0cb 50%, #e7d3b8); padding: 22px 18px 16px; }
+    .cafe-top { display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; }
+    .word { font-family: var(--serif); font-size: 1.25rem; }
+    .pill { border: 1px solid rgba(26,23,20,.2); border-radius: 999px; padding: 4px 8px; }
+    .cafe-hero h3 { font-size: clamp(1.8rem, 4vw, 2.6rem); max-width: 10ch; margin: 18px 0 8px; }
+    .cafe-hero p { margin: 0; color: var(--ink-soft); font-size: 0.92rem; }
+    .menu-row { display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 10px 0; border-top: 1px solid rgba(26,23,20,.1); font-size: 0.88rem; }
+    .section { padding: 72px 0; }
+    .section h2 { font-size: clamp(2rem, 5vw, 3.4rem); max-width: 14ch; }
+    .section-head { display: grid; gap: 12px; margin-bottom: 28px; }
+    .section-head p { margin: 0; color: var(--ink-soft); max-width: 40rem; }
+    .problem { background: var(--ink); color: #f6f1e8; border-radius: 32px; padding: 28px 22px; }
+    .problem h2 { color: #fff; }
+    .problem p { color: #ddd4c8; }
+    .problem-grid { display: grid; gap: 12px; margin-top: 22px; }
+    .problem article { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.08); border-radius: 18px; padding: 16px; }
+    .problem strong { display: block; font-family: var(--serif); font-size: 1.35rem; font-weight: 560; margin-bottom: 6px; color: #fff; }
+    .services { display: grid; gap: 12px; }
+    .service { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 18px; }
+    .num { color: var(--accent); font-size: 0.82rem; letter-spacing: 0.08em; font-weight: 640; }
+    .service h3 { font-size: 1.45rem; margin: 8px 0; }
+    .service p { margin: 0; color: var(--ink-soft); }
+    .note { display: inline-flex; align-items: center; gap: 8px; background: #efe6d6; color: var(--ink); border-radius: 999px; padding: 6px 10px; font-size: 0.82rem; font-weight: 640; letter-spacing: 0.04em; text-transform: uppercase; }
+    .work-grid { display: grid; gap: 16px; }
+    .mock { background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 14px; box-shadow: var(--shadow); }
+    .mock header { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; margin: 10px 2px 12px; }
+    .mock header p { margin: 4px 0 0; color: var(--muted); font-size: 0.92rem; }
+    .screen { border-radius: 16px; overflow: hidden; border: 1px solid var(--line); min-height: 280px; }
+    .salon { background: #161311; color: #f7efe6; padding: 18px; min-height: 280px; }
+    .salon .bar, .resto .bar, .dental .bar { display: flex; justify-content: space-between; font-size: 0.75rem; opacity: .8; }
+    .salon h3 { font-size: 2.2rem; margin: 28px 0 6px; }
+    .line { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.12); padding: 8px 0; font-size: 0.9rem; }
+    .book { display: inline-block; margin-top: 14px; background: #e7c9a4; color: #1a1714; border-radius: 999px; padding: 7px 12px; font-size: 0.82rem; }
+    .resto { background: #2b3328; color: #f4efe4; padding: 18px; min-height: 280px; }
+    .resto h3 { font-size: 2.3rem; margin: 26px 0 4px; }
+    .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
+    .chips span { border: 1px solid rgba(255,255,255,.2); border-radius: 999px; padding: 5px 9px; font-size: 0.78rem; }
+    .dental { background: linear-gradient(#f7fbf8, #e7f0ea); color: #1d2b26; padding: 18px; min-height: 280px; }
+    .dental h3 { font-size: 2rem; margin: 22px 0 6px; color: #1d2b26; }
+    .appt { margin-top: 16px; background: #fff; border-radius: 14px; padding: 12px; display: grid; gap: 4px; font-size: 0.88rem; }
+    .packages { display: grid; gap: 12px; }
+    .pack { background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 20px; display: flex; flex-direction: column; gap: 8px; }
+    .pack.featured { background: var(--forest); color: #f6f1e8; border-color: var(--forest); }
+    .pack .price { font-family: var(--serif); font-size: 2.4rem; letter-spacing: -0.03em; }
+    .pack .price span { font-family: var(--sans); font-size: 0.95rem; color: var(--muted); }
+    .pack.featured .price span { color: #d9d0c3; }
+    .pack ul { margin: 8px 0 16px; padding: 0; list-style: none; }
+    .pack li { padding: 7px 0 7px 18px; position: relative; border-top: 1px solid var(--line); }
+    .pack.featured li { border-top-color: rgba(255,255,255,.12); }
+    .pack li::before { content: ""; position: absolute; left: 0; top: 14px; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
+    .steps { display: grid; gap: 12px; }
+    .step { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 18px; }
+    .step h3 { font-size: 1.4rem; margin-bottom: 6px; }
+    .step p { margin: 0; color: var(--ink-soft); }
+    .kicker { color: var(--accent); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 640; }
+    .faq { display: grid; gap: 8px; }
+    .faq details { background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 4px 16px; }
+    .faq summary { cursor: pointer; padding: 14px 0; font-weight: 520; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; font-family: var(--serif); font-size: 1.4rem; color: var(--accent); }
+    .faq details[open] summary::after { content: "–"; }
+    .faq details p { margin: 0 0 14px; color: var(--ink-soft); }
+    .band { background: var(--accent); color: #fff; border-radius: 32px; padding: 36px 22px; text-align: left; }
+    .band h2 { color: #fff; max-width: 12ch; }
+    .band p { color: rgba(255,255,255,.88); max-width: 36rem; }
+    .contact-grid { display: grid; gap: 18px; }
+    form { background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 18px; display: grid; gap: 12px; }
+    label { display: grid; gap: 6px; font-size: 0.92rem; font-weight: 520; }
+    input, select, textarea { border: 1px solid var(--line); background: #fff; border-radius: 12px; padding: 12px; width: 100%; }
+    textarea { min-height: 120px; resize: vertical; }
+    .mail-card { background: var(--ink); color: #f6f1e8; border-radius: 24px; padding: 22px; }
+    .mail-card a { color: #e7c9a4; }
+    footer { padding: 28px 0 40px; color: var(--muted); border-top: 1px solid var(--line); }
+    .foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+    .reveal { opacity: 0; transform: translateY(18px); }
+    .reveal.in { animation: rise .7s ease forwards; }
+    .delay-1.in { animation-delay: .08s; }
+    .delay-2.in { animation-delay: .16s; }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+    @media (min-width: 760px) {
+      .nav-links, .nav-cta { display: flex; }
+      .menu-btn, .menu-panel { display: none !important; }
+      .hero-grid { grid-template-columns: 1.1fr .9fr; }
+      .problem-grid, .services, .packages, .steps { grid-template-columns: 1fr 1fr; }
+      .work-grid { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: .8fr 1.2fr; align-items: start; }
+      .problem, .band { padding: 42px; }
+    }
+    @media (min-width: 980px) {
+      .services { grid-template-columns: repeat(6, 1fr); }
+      .service:nth-child(1), .service:nth-child(2), .service:nth-child(3) { grid-column: span 2; }
+      .service:nth-child(4), .service:nth-child(5) { grid-column: span 3; }
+      .packages { grid-template-columns: repeat(3, 1fr); }
+      .steps { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { animation: none; opacity: 1; transform: none; }
+      .btn { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="logo" href="#top" aria-label="Brightfront Studio home">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M7 21c2.4-5 5.2-7.6 9-7.6S22.6 16 25 21" stroke="#e7c9a4" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="10" r="2.2" fill="#c4512c"/></svg>
+        </span>
+        Brightfront Studio
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#problem">Why it matters</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#packages">Packages</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-primary nav-cta" href="#contact">Get a free quote</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuPanel">Menu</button>
+    </div>
+    <div class="menu-panel" id="menuPanel">
+      <a href="#problem">Why it matters</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#packages">Packages</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Get a free quote</a>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow reveal">Websites for local businesses</p>
+          <h1 class="reveal delay-1">Websites local customers trust before they walk in.</h1>
+          <p class="lede reveal delay-2">Brightfront Studio designs clear, fast sites for cafes, restaurants, salons, clinics, and shops. When someone searches your name, the page they land on should feel open, current, and worth a visit.</p>
+          <div class="cta-row reveal delay-2">
+            <a class="btn btn-primary" href="#contact">Get a free quote</a>
+            <a class="btn btn-ghost" href="#work">See our work</a>
+          </div>
+          <p class="fine">Starting at $299. English-speaking markets. No invented claims, no template dumped on your name.</p>
+        </div>
+        <div class="hero-card reveal delay-2" aria-hidden="true">
+          <div class="browser">
+            <div class="chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">hearthandrye.example</span></div>
+            <div class="cafe-hero">
+              <div class="cafe-top"><span class="word">Hearth &amp; Rye</span><span class="pill">Open today</span></div>
+              <h3>Coffee, rye toast, a table by the window.</h3>
+              <p>A concept homepage: hours, menu, and a way to visit — visible without hunting.</p>
+              <div class="menu-row"><span>Oat flat white</span><span>4.50</span></div>
+              <div class="menu-row"><span>Rye breakfast plate</span><span>12</span></div>
+              <div class="menu-row"><span>Weekday hours</span><span>7–4</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="problem">
+      <div class="wrap">
+        <div class="problem reveal">
+          <p class="eyebrow" style="color:#e7c9a4">The problem</p>
+          <h2>Customers Google you first.</h2>
+          <p>Before they cross the street, they search your name, your neighbourhood, or “near me.” A missing site, a broken phone page, or a menu that lives only in a photo can send them to the next result. The website is the door they meet before the real one.</p>
+          <div class="problem-grid">
+            <article><strong>They search the name</strong><span>A clean page with hours, address text, and what you actually sell beats a blank result.</span></article>
+            <article><strong>They judge in seconds</strong><span>Type, photos, and a clear next step — call, book, or visit — do the talking.</span></article>
+            <article><strong>They pick what looks open</strong><span>A current menu or booking link makes a Tuesday afternoon feel looked-after.</span></article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Services</p>
+          <h2>What we build for a small front door.</h2>
+          <p>Practical pages for businesses that live on walk-ins, bookings, and repeat customers. Written in plain English, designed to load quickly, and easy to point people to from Google and Instagram.</p>
+        </div>
+        <div class="services">
+          <article class="service reveal"><span class="num">01</span><h3>Website design</h3><p>A custom small-business site: home, about, services, and contact, laid out for phones first.</p></article>
+          <article class="service reveal"><span class="num">02</span><h3>Landing pages</h3><p>One focused page for a new location, seasonal menu, offer, or campaign you need live this month.</p></article>
+          <article class="service reveal"><span class="num">03</span><h3>Online booking &amp; menus</h3><p>A menu people can read, or a booking button wired to the tool you already use.</p></article>
+          <article class="service reveal"><span class="num">04</span><h3>Local SEO &amp; Google Business</h3><p>Page titles, headings, and a Google Business Profile setup so searchers can find the right place.</p></article>
+          <article class="service reveal"><span class="num">05</span><h3>Maintenance &amp; hosting</h3><p>After launch: small text updates, hosting, and a person to email when something needs changing.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="note">Concept designs</p>
+          <h2>Four directions, not client logos.</h2>
+          <p>These are original mockups built for this page — cafe, hair salon, restaurant, and dental clinic. They show the kind of layout we design. They are not real client projects.</p>
+        </div>
+        <div class="work-grid">
+          <article class="mock reveal">
+            <div class="screen">
+              <div class="cafe-hero">
+                <div class="cafe-top"><span class="word">Hearth &amp; Rye</span><span class="pill">Cafe concept</span></div>
+                <h3>Morning, written plainly.</h3>
+                <p>Hours, a short menu, and a map line — the things a new customer looks for.</p>
+                <div class="menu-row"><span>Batch brew</span><span>3.20</span></div>
+                <div class="menu-row"><span>Sesame bun</span><span>4</span></div>
+              </div>
+            </div>
+            <header><div><strong>Cafe</strong><p>Concept design · menu and hours up front</p></div></header>
+          </article>
+          <article class="mock reveal">
+            <div class="screen salon">
+              <div class="bar"><span>Lumen Atelier</span><span>Salon concept</span></div>
+              <h3>Cut, colour, a chair that looks booked.</h3>
+              <div class="line"><span>Signature cut</span><span>68</span></div>
+              <div class="line"><span>Gloss colour</span><span>120</span></div>
+              <div class="line"><span>Blow-dry</span><span>45</span></div>
+              <span class="book">Book a chair</span>
+            </div>
+            <header><div><strong>Hair salon</strong><p>Concept design · services, prices, booking</p></div></header>
+          </article>
+          <article class="mock reveal">
+            <div class="screen resto">
+              <div class="bar"><span>Marrow</span><span>Restaurant concept</span></div>
+              <h3>Dinner, with a table held.</h3>
+              <p>Tonight’s kitchen, in three lines, plus a reservation path.</p>
+              <div class="chips"><span>Wood-fired</span><span>Late seating</span><span>Reserve</span></div>
+            </div>
+            <header><div><strong>Restaurant</strong><p>Concept design · evening mood and booking</p></div></header>
+          </article>
+          <article class="mock reveal">
+            <div class="screen dental">
+              <div class="bar"><span>Northline Dental</span><span>Clinic concept</span></div>
+              <h3>Calm, clear, easy to book.</h3>
+              <p>New patients can see what happens on a first visit.</p>
+              <div class="appt"><strong>New patient visit</strong><span>Check-up · clean · a plan you can read</span><span>Request a time</span></div>
+            </div>
+            <header><div><strong>Dental clinic</strong><p>Concept design · trust and appointment path</p></div></header>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="packages">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Packages</p>
+          <h2>Starting prices, said out loud.</h2>
+          <p>Final quotes depend on pages, photos, and booking tools. These are starting points, not a surprise invoice.</p>
+        </div>
+        <div class="packages">
+          <article class="pack reveal">
+            <span class="kicker">Starter</span>
+            <div class="price">$299 <span>from</span></div>
+            <p>A single strong page for a new shop or a simple relaunch.</p>
+            <ul>
+              <li>One-page site, phone-first</li>
+              <li>Headline, services, hours, contact</li>
+              <li>Basic on-page SEO title and description</li>
+              <li>Email enquiry link</li>
+              <li>One revision round</li>
+            </ul>
+            <a class="btn btn-ghost" href="#contact">Get a free quote</a>
+          </article>
+          <article class="pack featured reveal">
+            <span class="kicker">Business</span>
+            <div class="price">$699 <span>from</span></div>
+            <p>The usual shape for a cafe, salon, clinic, or shop with a few things to explain.</p>
+            <ul>
+              <li>Up to 5 pages</li>
+              <li>Menu or services layout</li>
+              <li>Booking link or button to your tool</li>
+              <li>Local SEO basics and Google Business setup</li>
+              <li>Two revision rounds</li>
+            </ul>
+            <a class="btn btn-light" href="#contact">Get a free quote</a>
+          </article>
+          <article class="pack reveal">
+            <span class="kicker">Premium</span>
+            <div class="price">$1,299 <span>from</span></div>
+            <p>More pages, a fuller launch, and someone on email after go-live.</p>
+            <ul>
+              <li>Up to 8 pages</li>
+              <li>Gallery, menu, and booking layout</li>
+              <li>Local SEO and Google Business setup</li>
+              <li>Copy guidance for key pages</li>
+              <li>3 months of maintenance and hosting</li>
+            </ul>
+            <a class="btn btn-ghost" href="#contact">Get a free quote</a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="process">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Process</p>
+          <h2>Four steps. No mystery queue.</h2>
+        </div>
+        <div class="steps">
+          <article class="step reveal"><span class="kicker">01</span><h3>Tell us the shop</h3><p>What you sell, who walks in, and the page you wish you already had.</p></article>
+          <article class="step reveal"><span class="kicker">02</span><h3>We send a direction</h3><p>A layout and the words on the first screen, so you can react to something real.</p></article>
+          <article class="step reveal"><span class="kicker">03</span><h3>Build and revise</h3><p>We design the pages, you review, we adjust within the package rounds.</p></article>
+          <article class="step reveal"><span class="kicker">04</span><h3>Launch</h3><p>We put it live, check it on a phone, and show you how small text updates work.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Questions owners actually ask.</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>How long does a site take?</summary>
+            <p>A Starter page is often ready in about a week once we have your text and photos. Business and Premium take longer if menus, booking tools, or extra pages are involved. We confirm a date in the quote.</p>
+          </details>
+          <details>
+            <summary>Do I have to write everything?</summary>
+            <p>You know the business; we shape it into page copy. Premium includes more writing help. You still approve anything that describes prices, hours, or medical-style services.</p>
+          </details>
+          <details>
+            <summary>Can you add booking or a menu?</summary>
+            <p>Yes. We design the menu on the page and link a booking button to the system you already use, such as a calendar or reservation tool. We do not invent a new booking product.</p>
+          </details>
+          <details>
+            <summary>What does “from $299” mean?</summary>
+            <p>It is the starting price for the listed scope. Extra pages, custom photography, or a complicated booking setup are quoted before work starts.</p>
+          </details>
+          <details>
+            <summary>Do you host the site?</summary>
+            <p>Premium includes three months of maintenance and hosting. Other packages can add hosting, or we can launch on a host you already pay for.</p>
+          </details>
+          <details>
+            <summary>Will it work on phones?</summary>
+            <p>Yes. Every layout is designed phone-first, then expanded for larger screens. That is how most local customers arrive.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="quote">
+      <div class="wrap">
+        <div class="band reveal">
+          <p class="eyebrow" style="color:#fff">Next step</p>
+          <h2>Get a free quote for the site you wish was already live.</h2>
+          <p>Tell us the business and what the page needs to do. We reply by email with a scope and a price, not a pitch deck.</p>
+          <div class="cta-row">
+            <a class="btn btn-light" href="#contact">Get a free quote</a>
+            <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)" href="#work">See our work</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="contact">
+      <div class="wrap contact-grid">
+        <div class="mail-card">
+          <p class="eyebrow" style="color:#e7c9a4">Contact</p>
+          <h2>Write to the studio.</h2>
+          <p>Email <a href="mailto:guaposparaasia@gmail.com">guaposparaasia@gmail.com</a>. The form opens your email app and does not store a message on a server.</p>
+        </div>
+        <form id="quoteForm">
+          <label>Name
+            <input name="name" required autocomplete="name" placeholder="Your name">
+          </label>
+          <label>Email
+            <input name="email" type="email" required autocomplete="email" placeholder="you@business.com">
+          </label>
+          <label>Business
+            <input name="business" autocomplete="organization" placeholder="Cafe, salon, clinic…">
+          </label>
+          <label>What you need
+            <select name="need">
+              <option>Starter website</option>
+              <option>Business website</option>
+              <option>Premium website</option>
+              <option>Landing page</option>
+              <option>Menu or booking page</option>
+              <option>Not sure yet</option>
+            </select>
+          </label>
+          <label>Message
+            <textarea name="message" required placeholder="What should a new customer find on the first screen?"></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Get a free quote</button>
+          <p class="fine">Opens your email client addressed to guaposparaasia@gmail.com.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap foot">
+      <span>© 2026 Brightfront Studio</span>
+      <a href="mailto:guaposparaasia@gmail.com">guaposparaasia@gmail.com</a>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var nav = document.getElementById("nav");
+      var btn = document.getElementById("menuBtn");
+      var panel = document.getElementById("menuPanel");
+      window.addEventListener("scroll", function () {
+        nav.classList.toggle("scrolled", window.scrollY > 8);
+      }, { passive: true });
+      btn.addEventListener("click", function () {
+        var open = panel.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      panel.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          panel.classList.remove("open");
+          btn.setAttribute("aria-expanded", "false");
+        });
+      });
+      var nodes = document.querySelectorAll(".reveal");
+      if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        nodes.forEach(function (node) { node.classList.add("in"); });
+      } else {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.14, rootMargin: "0px 0px -8% 0px" });
+        nodes.forEach(function (node) { observer.observe(node); });
+      }
+      document.getElementById("quoteForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+        var data = new FormData(event.target);
+        var name = data.get("name");
+        var subject = "Free quote request from " + name;
+        var body = [
+          "Name: " + name,
+          "Email: " + data.get("email"),
+          "Business: " + (data.get("business") || "—"),
+          "Need: " + data.get("need"),
+          "",
+          data.get("message")
+        ].join("\n");
+        window.location.href = "mailto:guaposparaasia@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      });
+    })();
+  </script>
+</body>
+</html>
