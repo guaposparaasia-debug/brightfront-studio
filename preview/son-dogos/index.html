@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Son Dogos — Sonoran Hot Dogs in Tucson</title>
+  <meta name="description" content="Son Dogos is Pablo's Sonoran hot dog cart at 5226 S 12th Ave, Tucson. Bacon-wrapped dogs, four regional styles, aguas frescas, and catering.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,720&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --night: #1b120e;
+      --dusk: #3a2218;
+      --amber: #f0a202;
+      --ember: #e85d04;
+      --sand: #f6e7d4;
+      --paper: #fffaf4;
+      --cactus: #3f6b4a;
+      --ink: #241812;
+      --soft: #6b5348;
+      --line: rgba(36, 24, 18, 0.1);
+      --shadow: 0 16px 36px rgba(27, 18, 14, 0.14);
+      --banner-h: 40px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Outfit", system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--sand);
+      line-height: 1.55;
+      font-size: 1.05rem;
+    }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+    .skip { position: absolute; left: 12px; top: -48px; background: var(--ink); color: white; padding: 8px 12px; z-index: 80; }
+    .skip:focus { top: 48px; }
+    .preview-banner {
+      position: sticky; top: 0; z-index: 60;
+      display: block; background: var(--night); color: var(--sand);
+      text-align: center; text-decoration: none; font-weight: 650;
+      font-size: 0.82rem; padding: 10px 14px; min-height: var(--banner-h);
+    }
+    .preview-banner:hover { background: #000; }
+    header.site {
+      position: sticky; top: var(--banner-h); z-index: 50;
+      background: rgba(255, 250, 244, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
+    }
+    .nav {
+      max-width: 1080px; margin: 0 auto; padding: 10px 18px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 700; }
+    .brand small { display: block; font-weight: 500; color: var(--soft); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; }
+    .mark { width: 36px; height: 36px; border-radius: 50%; background: radial-gradient(circle at 40% 40%, #f0a202, #e85d04 60%, #3a2218); flex: none; }
+    .nav-toggle { border: 1px solid var(--line); background: white; border-radius: 999px; padding: 8px 12px; font: inherit; font-weight: 650; }
+    .nav-links { display: none; list-style: none; margin: 0; padding: 0 18px 14px; }
+    .nav-links.open { display: grid; }
+    .nav-links a { display: block; text-decoration: none; color: var(--ink); font-weight: 650; padding: 8px 0; }
+    @media (min-width: 760px) {
+      .nav-toggle { display: none; }
+      .nav-links { display: flex; gap: 18px; padding: 0; align-items: center; }
+      .nav-links a { padding: 0; }
+    }
+    .hero {
+      background:
+        radial-gradient(500px 220px at 80% 0%, rgba(240, 162, 2, 0.28), transparent 60%),
+        radial-gradient(420px 240px at 10% 100%, rgba(63, 107, 74, 0.25), transparent 70%),
+        linear-gradient(165deg, #2a160f, #1b120e 55%, #3a2218);
+      color: white;
+      overflow: hidden;
+    }
+    .lights { height: 14px; background: radial-gradient(circle, #f0a202 1.5px, transparent 2px) 0 6px / 22px 14px; opacity: 0.85; }
+    .hero-inner { max-width: 1080px; margin: 0 auto; padding: 36px 18px 52px; display: grid; gap: 18px; }
+    .kicker { margin: 0; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.78rem; color: var(--amber); font-weight: 700; }
+    h1 { font-family: "Fraunces", Georgia, serif; font-weight: 720; font-size: clamp(3rem, 10vw, 5.4rem); line-height: 0.92; margin: 8px 0; letter-spacing: -0.03em; }
+    .lead { font-size: 1.14rem; max-width: 38rem; color: rgba(255,255,255,0.9); margin: 0; }
+    .stars { margin: 12px 0 0; font-weight: 700; color: var(--amber); }
+    .today { margin-top: 16px; background: rgba(255,255,255,0.08); border: 1px solid rgba(240, 162, 2, 0.45); border-radius: 16px; padding: 14px 16px; max-width: 26rem; }
+    .today span { display: block; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber); }
+    .today strong { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.45rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 999px; padding: 12px 18px; font-weight: 700; border: 2px solid transparent; }
+    .btn-amber { background: var(--amber); color: var(--ink); }
+    .btn-amber:hover { background: #ffb31a; }
+    .btn-ghost { color: white; border-color: rgba(255,255,255,0.4); }
+    .btn-ghost:hover { background: rgba(255,255,255,0.08); }
+    .btn-ember { background: var(--ember); color: white; }
+    .btn-ember:hover { background: #c44b03; }
+    .art { width: min(100%, 380px); justify-self: center; }
+    section { padding: 56px 18px; }
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    .eyebrow { margin: 0 0 8px; color: var(--ember); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    h2 { font-family: "Fraunces", Georgia, serif; font-size: clamp(1.8rem, 4vw, 2.7rem); line-height: 1.08; margin: 0 0 12px; }
+    .lede { color: var(--soft); max-width: 42rem; margin-top: 0; }
+    .grid, .visit-grid { display: grid; gap: 12px; }
+    .card { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 16px; box-shadow: var(--shadow); }
+    .card h3 { margin: 8px 0 4px; font-size: 1.08rem; }
+    .card p { margin: 0; color: var(--soft); }
+    .emoji { font-size: 1.5rem; }
+    .story { background: white; }
+    .quotes { display: grid; gap: 12px; margin-top: 16px; }
+    blockquote { margin: 0; background: #fff4e4; border-left: 5px solid var(--amber); border-radius: 0 14px 14px 0; padding: 14px 16px; font-family: "Fraunces", Georgia, serif; font-size: 1.15rem; }
+    .badge { display: inline-block; background: var(--cactus); color: white; border-radius: 999px; padding: 6px 12px; font-size: 0.88rem; font-weight: 700; margin-top: 10px; }
+    .hours { background: linear-gradient(180deg, var(--sand), #f3ddc4); }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+    tr.today-row { background: #fff1cc; outline: 2px solid var(--amber); }
+    tr.today-row th::after { content: " · Today"; color: var(--ember); font-weight: 700; }
+    tr.closed th, tr.closed td { color: #9a867a; }
+    .addr { font-size: 1.15rem; font-weight: 700; margin: 0 0 8px; }
+    .cater { background: var(--dusk); color: white; }
+    .cater .eyebrow { color: var(--amber); }
+    .cater .lede { color: rgba(255,255,255,0.86); }
+    footer { background: var(--night); color: var(--sand); padding: 28px 18px 36px; }
+    footer a { color: var(--amber); }
+    .foot { max-width: 1080px; margin: 0 auto; display: grid; gap: 8px; }
+    .foot small { color: #cbb5a4; }
+    @media (min-width: 760px) {
+      .hero-inner { grid-template-columns: 1.15fr 0.85fr; align-items: center; padding: 56px 18px 68px; }
+      .grid { grid-template-columns: 1fr 1fr; }
+      .quotes { grid-template-columns: 1fr 1fr; }
+      .visit-grid { grid-template-columns: 1.05fr 0.95fr; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <a class="preview-banner" href="https://brightfront-studio.pages.dev">Free preview by Brightfront Studio</a>
+
+  <header class="site">
+    <div class="nav">
+      <a class="brand" href="#top">
+        <span class="mark" aria-hidden="true"></span>
+        <div>Son Dogos<small>Sonoran hot dogs · Tucson</small></div>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#story">Story</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#visit">Hours</a></li>
+      <li><a href="#catering">Catering</a></li>
+    </ul>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="lights" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div>
+          <p class="kicker">Tucson · South 12th Avenue</p>
+          <h1>Son Dogos</h1>
+          <p class="lead">Pablo’s Sonoran hot dog cart. Bacon-wrapped dogs on soft buns, four regional styles from Sonora, a free toppings bar, and aguas frescas under the lights.</p>
+          <p class="stars">4.9 from 124 reviews</p>
+          <span class="badge">Neighborhood Favorite on Nextdoor</span>
+          <div class="today">
+            <span>Today in Tucson</span>
+            <strong id="today-status">Checking hours…</strong>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-amber" href="tel:+15205518536">Call</a>
+            <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=5226+S+12th+Ave%2C+Tucson%2C+AZ+85706">Get directions</a>
+            <a class="btn btn-ghost" href="mailto:sondogoss@gmail.com?subject=Catering%20inquiry%20for%20Son%20Dogos">Book catering</a>
+          </div>
+        </div>
+        <div class="art" aria-hidden="true">
+          <svg viewBox="0 0 380 280" xmlns="http://www.w3.org/2000/svg" role="img">
+            <title>Illustrated Sonoran hot dog under string lights</title>
+            <path d="M20 70c50-18 90-8 140-22 48-14 90-6 150 18" fill="none" stroke="#f0a202" stroke-width="3"/>
+            <circle cx="48" cy="62" r="4" fill="#f0a202"/>
+            <circle cx="120" cy="48" r="4" fill="#f0a202"/>
+            <circle cx="200" cy="42" r="4" fill="#f0a202"/>
+            <circle cx="280" cy="58" r="4" fill="#f0a202"/>
+            <rect x="40" y="150" width="210" height="78" rx="16" fill="#fffaf4"/>
+            <rect x="40" y="150" width="210" height="20" fill="#e85d04"/>
+            <circle cx="92" cy="230" r="14" fill="#241812"/>
+            <circle cx="196" cy="230" r="14" fill="#241812"/>
+            <path d="M268 168c22-8 48-4 58 16 8 16-2 32-20 34-22 4-40-16-38-50z" fill="#f6e7d4"/>
+            <path d="M276 176c18 6 28 20 24 34" fill="none" stroke="#c45c32" stroke-width="7" stroke-linecap="round"/>
+            <path d="M300 150c8-28 18-40 22-48" fill="none" stroke="#3f6b4a" stroke-width="6"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="story" id="story">
+      <div class="wrap">
+        <p class="eyebrow">The cart</p>
+        <h2>A bit of Sonora, on South 12th.</h2>
+        <p class="lede">Owner Pablo grew up in different towns across Sonora, Mexico. He dreamed of owning a hot dog stand since he was a kid. Now he serves a bit of that Sonoran childhood from the cart in Tucson.</p>
+        <p>There is a covered seating area. Cash and cards. Catering for events and parties.</p>
+        <div class="quotes">
+          <blockquote>“The single best spot for Sonoran Hot Dogs in Tucson.”</blockquote>
+          <blockquote>“Friendly, fast and clean, and he shows up early for catering.”</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu">
+      <div class="wrap">
+        <p class="eyebrow">Menu highlights</p>
+        <h2>Bacon, soft bun, four ways from Sonora.</h2>
+        <p class="lede">No prices on this preview. Ask Pablo at the cart.</p>
+        <div class="grid">
+          <article class="card"><div class="emoji" aria-hidden="true">🌭</div><h3>Sonoran hot dogs</h3><p>Four regional styles from Sonora — including Hermosillo style and Empalme style.</p></article>
+          <article class="card"><div class="emoji" aria-hidden="true">🥓</div><h3>Bacon-wrapped dogs</h3><p>Bacon-wrapped, on soft buns.</p></article>
+          <article class="card"><div class="emoji" aria-hidden="true">🧅</div><h3>Free toppings bar</h3><p>Build it the way you want. Toppings are free.</p></article>
+          <article class="card"><div class="emoji" aria-hidden="true">🥤</div><h3>Aguas frescas</h3><p>Cold drinks beside the dogs.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="hours" id="visit">
+      <div class="wrap">
+        <p class="eyebrow">Hours &amp; location</p>
+        <h2>Tonight’s status, Tucson time.</h2>
+        <div class="visit-grid">
+          <div class="card">
+            <table id="hours">
+              <caption style="position:absolute;left:-9999px;">Weekly hours, today highlighted</caption>
+              <tbody>
+                <tr data-day="0" class="closed"><th scope="row">Sunday</th><td>Closed</td></tr>
+                <tr data-day="1" class="closed"><th scope="row">Monday</th><td>Closed</td></tr>
+                <tr data-day="2"><th scope="row">Tuesday</th><td>5–9 PM</td></tr>
+                <tr data-day="3"><th scope="row">Wednesday</th><td>5–9 PM</td></tr>
+                <tr data-day="4"><th scope="row">Thursday</th><td>5–9 PM</td></tr>
+                <tr data-day="5"><th scope="row">Friday</th><td>5–11 PM</td></tr>
+                <tr data-day="6"><th scope="row">Saturday</th><td>5–11 PM</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card">
+            <h3>Find the cart</h3>
+            <p class="addr">5226 S 12th Ave<br>Tucson, AZ 85706</p>
+            <p>Covered seating. Cash and cards.</p>
+            <p>Phone <a href="tel:+15205518536">(520) 551-8536</a><br>
+            Email <a href="mailto:sondogoss@gmail.com">sondogoss@gmail.com</a></p>
+            <p><a class="btn btn-ember" href="https://www.google.com/maps/search/?api=1&amp;query=5226+S+12th+Ave%2C+Tucson%2C+AZ+85706">Get directions</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cater" id="catering">
+      <div class="wrap">
+        <p class="eyebrow">Catering</p>
+        <h2>Events and parties.</h2>
+        <p class="lede">Pablo caters events and parties. One guest put it simply: friendly, fast and clean, and he shows up early for catering.</p>
+        <div class="hero-actions">
+          <a class="btn btn-amber" href="mailto:sondogoss@gmail.com?subject=Catering%20inquiry%20for%20Son%20Dogos">Book catering</a>
+          <a class="btn btn-ghost" href="tel:+15205518536">Call (520) 551-8536</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <strong>Son Dogos</strong>
+      <div>5226 S 12th Ave, Tucson, AZ 85706 · <a href="tel:+15205518536">(520) 551-8536</a></div>
+      <div><a href="mailto:sondogoss@gmail.com">sondogoss@gmail.com</a> · 4.9 from 124 reviews · Neighborhood Favorite on Nextdoor</div>
+      <small>Free preview by Brightfront Studio · <a href="https://brightfront-studio.pages.dev">brightfront-studio.pages.dev</a></small>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector(".nav-toggle");
+      var list = document.getElementById("nav-links");
+      btn.addEventListener("click", function () {
+        var open = list.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      list.addEventListener("click", function (e) {
+        if (e.target.tagName === "A") {
+          list.classList.remove("open");
+          btn.setAttribute("aria-expanded", "false");
+        }
+      });
+      var weekday = new Intl.DateTimeFormat("en-US", { weekday: "short", timeZone: "America/Phoenix" }).format(new Date());
+      var map = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+      var day = map[weekday];
+      var hours = {
+        0: "Closed today",
+        1: "Closed today",
+        2: "Open today, 5–9 PM",
+        3: "Open today, 5–9 PM",
+        4: "Open today, 5–9 PM",
+        5: "Open today, 5–11 PM",
+        6: "Open today, 5–11 PM"
+      };
+      document.getElementById("today-status").textContent = hours[day];
+      var row = document.querySelector('#hours tr[data-day="' + day + '"]');
+      if (row) row.classList.add("today-row");
+    })();
+  </script>
+</body>
+</html>
