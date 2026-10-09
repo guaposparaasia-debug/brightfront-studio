@@ -1,7 +1,7 @@
 // functions/api/chat.js
 const PRIMARY_MODEL = "@cf/meta/llama-3.3-70b-instruct-fp8-fast";
 const FALLBACK_MODEL = "@cf/meta/llama-3.1-8b-instruct";
-const CONTACT_EMAIL = "guaposparaasia@gmail.com";
+const CONTACT_EMAIL = "info@brightfrontdesign.com";
 const CHAT_TTL = 60 * 24 * 60 * 60;
 const LEAD_TTL = 90 * 24 * 60 * 60;
 const EMAIL_RE = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i;
@@ -37,7 +37,7 @@ function allowedOrigin(request) {
     siteOrigin = "";
   }
   const allow = new Set(
-    [siteOrigin, "https://brightfront-studio.pages.dev"].filter(Boolean)
+    [siteOrigin, "https://brightfrontdesign.com", "https://www.brightfrontdesign.com", "https://brightfront-studio.pages.dev"].filter(Boolean)
   );
   return allow.has(origin) ? origin : null;
 }
