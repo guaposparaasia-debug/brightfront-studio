@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dulce Bun Co. — Food Truck in Riverbend</title>
+  <meta name="description" content="Dulce Bun Co. is a Riverbend food truck serving sweet and savory conchas, lattes, and café de olla at 123 Main St.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pink: #f3b6c6;
+      --pink-deep: #d46b8c;
+      --shell: #fff7f2;
+      --sugar: #fffdfb;
+      --cocoa: #6b4034;
+      --cinnamon: #c47a45;
+      --butter: #f6d98a;
+      --mint: #b7dcc8;
+      --ink: #3c2a28;
+      --soft: #6f564f;
+      --line: rgba(60, 42, 40, 0.1);
+      --shadow: 0 16px 34px rgba(107, 64, 52, 0.1);
+      --banner-h: 44px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Outfit", system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--shell);
+      line-height: 1.55;
+      font-size: 1.05rem;
+    }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--cinnamon);
+      outline-offset: 3px;
+    }
+    .skip { position: absolute; left: 12px; top: -48px; background: var(--ink); color: white; padding: 8px 12px; z-index: 80; }
+    .skip:focus { top: 54px; }
+    .preview-banner {
+      position: sticky; top: 0; z-index: 60;
+      display: block; background: var(--cocoa); color: #fff;
+      text-align: center; text-decoration: none;
+      font-size: 0.78rem; line-height: 1.35; padding: 8px 14px; min-height: var(--banner-h);
+    }
+    .preview-banner strong { color: var(--butter); }
+    .preview-banner:hover { background: #4e2d24; }
+    header.site {
+      position: sticky; top: var(--banner-h); z-index: 50;
+      background: rgba(255, 253, 251, 0.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(8px);
+    }
+    .nav {
+      max-width: 1080px; margin: 0 auto; padding: 10px 18px;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 700; }
+    .brand small { display: block; font-weight: 500; color: var(--soft); font-size: 0.72rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .mark {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: radial-gradient(circle at 50% 45%, #fff 0 28%, var(--pink) 29% 70%, var(--pink-deep) 71%);
+      flex: none;
+    }
+    .nav-toggle {
+      border: 1px solid var(--line); background: white; border-radius: 999px;
+      padding: 8px 12px; font: inherit; font-weight: 650;
+    }
+    .nav-links { display: none; list-style: none; margin: 0; padding: 0 18px 14px; }
+    .nav-links.open { display: grid; }
+    .nav-links a { display: block; text-decoration: none; color: var(--ink); font-weight: 650; padding: 8px 0; }
+    @media (min-width: 760px) {
+      .nav-toggle { display: none; }
+      .nav-links { display: flex; gap: 18px; padding: 0; align-items: center; }
+      .nav-links a { padding: 0; }
+    }
+    .hero {
+      background:
+        radial-gradient(480px 220px at 100% 0%, rgba(246, 217, 138, 0.7), transparent 60%),
+        radial-gradient(420px 240px at 0% 100%, rgba(183, 220, 200, 0.55), transparent 70%),
+        linear-gradient(180deg, #ffe8ef, #fff7f2);
+      overflow: hidden;
+    }
+    .hero-inner { max-width: 1080px; margin: 0 auto; padding: 40px 18px 52px; display: grid; gap: 18px; }
+    .kicker { margin: 0; color: var(--pink-deep); font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.78rem; }
+    h1 {
+      font-family: "Fraunces", Georgia, serif; font-weight: 700;
+      font-size: clamp(2.7rem, 9vw, 5rem); line-height: 0.94; margin: 8px 0; letter-spacing: -0.03em;
+    }
+    .lead { font-size: 1.12rem; max-width: 38rem; color: var(--soft); margin: 0; }
+    .stars { margin: 12px 0 0; font-weight: 700; color: var(--cocoa); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      text-decoration: none; border-radius: 999px; padding: 12px 18px; font-weight: 700; border: 2px solid transparent;
+    }
+    .btn-pink { background: var(--pink-deep); color: white; }
+    .btn-pink:hover { background: #b95576; }
+    .btn-line { background: white; color: var(--ink); border-color: var(--pink); }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .pill { background: white; border-radius: 999px; padding: 6px 12px; font-size: 0.9rem; }
+    .art { width: min(100%, 380px); justify-self: center; }
+    section { padding: 56px 18px; }
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    .eyebrow { margin: 0 0 8px; color: var(--pink-deep); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    h2 { font-family: "Fraunces", Georgia, serif; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; margin: 0 0 12px; }
+    .lede { color: var(--soft); max-width: 40rem; margin-top: 0; }
+    .grid { display: grid; gap: 12px; }
+    .card {
+      background: var(--sugar); border: 1px solid var(--line); border-radius: 18px; padding: 16px; box-shadow: var(--shadow);
+    }
+    .card h3 { margin: 8px 0 4px; font-size: 1.08rem; }
+    .card p { margin: 0; color: var(--soft); }
+    .card svg { width: 100%; height: 92px; display: block; }
+    .menu { background: white; }
+    .vibe { background: linear-gradient(180deg, #fff7f2, #f7efe4); }
+    .vibe-grid, .visit-grid { display: grid; gap: 14px; }
+    .vibe-item { background: white; border-radius: 16px; padding: 16px; box-shadow: var(--shadow); }
+    .vibe-item strong { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.2rem; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 9px 0; border-bottom: 1px solid var(--line); }
+    tr.closed th, tr.closed td { color: #9a8680; }
+    .addr { font-size: 1.15rem; font-weight: 700; margin: 0 0 8px; }
+    .note { margin-top: 14px; background: #fff1c9; border-radius: 12px; padding: 12px; }
+    footer { background: var(--ink); color: #f6e6de; padding: 28px 18px 36px; }
+    footer a { color: var(--butter); }
+    .foot { max-width: 1080px; margin: 0 auto; display: grid; gap: 8px; }
+    .foot small { color: #d8c4bc; }
+    @media (min-width: 760px) {
+      .hero-inner { grid-template-columns: 1.15fr 0.85fr; align-items: center; padding: 64px 18px 72px; }
+      .grid { grid-template-columns: 1fr 1fr; }
+      .vibe-grid { grid-template-columns: 1fr 1fr 1fr; }
+      .visit-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+
+<style id="bf-demo">
+  :root { --banner-h: 0px !important; }
+  .preview-banner, .lang { display: none !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .bf-demo-ribbon { position: fixed; z-index: 9999; right: 14px; bottom: 14px; display: inline-flex; align-items: center; gap: 8px;
+    padding: 9px 14px; border-radius: 999px; background: #1a1714; color: #f6f1e8 !important; text-decoration: none !important;
+    font: 500 13px/1.2 "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: .01em;
+    box-shadow: 0 10px 28px rgba(26,23,20,.28); border: 1px solid rgba(255,255,255,.12); max-width: calc(100vw - 28px); }
+  .bf-demo-ribbon b { color: #f0b49b; font-weight: 600; white-space: nowrap; }
+  .bf-demo-ribbon:hover { background: #b8431f; } .bf-demo-ribbon:hover b { color: #fff; }
+  .bf-demo-ribbon i { width: 7px; height: 7px; border-radius: 50%; background: #c4512c; flex: none; font-style: normal; }
+  @media (max-width: 480px) { .bf-demo-ribbon { left: 10px; right: 10px; bottom: 10px; justify-content: center; font-size: 12.5px; } }
+  .skip { top: -80px !important; } .skip:focus { top: 8px !important; }
+  @media (min-width: 760px) {
+    header.site { display: flex; align-items: center; gap: 24px; padding: 0 max(18px, calc((100% - 1080px) / 2 + 18px)); }
+    header.site > .nav { flex: 1 1 auto; max-width: none; margin: 0; padding: 10px 0; }
+    header.site > .nav-links { flex: none; margin: 0; padding: 0; }
+  }
+  @media print { .bf-demo-ribbon { display: none; } }
+</style>
+<script id="bf-demo-js">
+document.addEventListener('DOMContentLoaded', function () {
+  var ph = /\(?\b\d{3}\)?[\s.-]?\d{3}-\d{4}\b/g, em = /[\w.%+-]+@[\w.-]+\.[a-z]{2,}/gi;
+  var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT), n;
+  while ((n = w.nextNode())) {
+    var t = n.nodeValue.replace(ph, '(555) 010-0000').replace(em, 'hello@example.com');
+    if (t !== n.nodeValue) n.nodeValue = t;
+  }
+});
+</script>
+</head>
+<body>
+<a class="bf-demo-ribbon" href="https://brightfrontdesign.com/#contact" target="_blank" rel="noopener"><i aria-hidden="true"></i><span>Demo site by Brightfront Studio</span> <b>· Get yours free →</b></a>
+
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site">
+    <div class="nav">
+      <a class="brand" href="#top">
+        <span class="mark" aria-hidden="true"></span>
+        <div>Dulce Bun Co.<small>Riverbend food truck</small></div>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#vibe">The vibe</a></li>
+      <li><a href="#visit">Hours</a></li>
+      <li><a href="#">Order</a></li>
+    </ul>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div>
+          <p class="kicker">Riverbend · Sweet &amp; savory conchas</p>
+          <h1>Dulce Bun Co.</h1>
+          <p class="lead">A cute trailer off a back road, serving conchas as burgers, brisket, chilaquiles, ice cream, and lattes. String lights in the trees, benches out front, dogs welcome.</p>
+          <p class="stars" aria-label="5.0 stars">5.0 stars</p>
+          <div class="hero-actions">
+            <a class="btn btn-pink" href="#">Order online</a>
+            <a class="btn btn-line" href="tel:+15550100000">Call (555) 010-0000</a>
+          </div>
+          <div class="pills">
+            <span class="pill">Dog-friendly</span>
+            <span class="pill">Wed–Sun</span>
+            <span class="pill">Main St</span>
+          </div>
+        </div>
+        <div class="art" aria-hidden="true">
+          <svg viewBox="0 0 380 280" xmlns="http://www.w3.org/2000/svg" role="img">
+            <title>Illustrated concha and a small trailer under string lights</title>
+            <ellipse cx="190" cy="230" rx="140" ry="16" fill="#f3b6c6"/>
+            <rect x="70" y="128" width="200" height="86" rx="16" fill="#fffdfb"/>
+            <rect x="70" y="128" width="200" height="22" fill="#d46b8c"/>
+            <rect x="168" y="146" width="78" height="40" rx="6" fill="#f6d98a"/>
+            <circle cx="108" cy="214" r="16" fill="#6b4034"/>
+            <circle cx="232" cy="214" r="16" fill="#6b4034"/>
+            <path d="M40 118c40-20 80-8 120-24 40-16 90-10 140 16" fill="none" stroke="#f6d98a" stroke-width="3"/>
+            <circle cx="70" cy="104" r="4" fill="#f6d98a"/>
+            <circle cx="140" cy="88" r="4" fill="#f6d98a"/>
+            <circle cx="230" cy="92" r="4" fill="#f6d98a"/>
+            <circle cx="300" cy="112" r="4" fill="#f6d98a"/>
+            <circle cx="310" cy="78" r="36" fill="#f3b6c6"/>
+            <path d="M286 78c8 10 16 10 24 0M286 90c8 8 16 8 24 0" fill="none" stroke="#fff" stroke-width="3"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu" id="menu">
+      <div class="wrap">
+        <p class="eyebrow">Menu highlights</p>
+        <h2>Sweet shell, savory filling — and the other way around.</h2>
+        <p class="lede">Illustrated cards, not photos. No prices on this demo. Customers call it a creative mix of sweet concha with savory fillings, with lattes as cute as they are delicious.</p>
+        <div class="grid">
+          <article class="card">
+            <svg viewBox="0 0 220 80" aria-hidden="true"><circle cx="40" cy="40" r="24" fill="#f3b6c6"/><rect x="78" y="24" width="110" height="32" rx="10" fill="#c47a45"/></svg>
+            <h3>Burger on a concha</h3>
+            <p>A burger built on a concha.</p>
+          </article>
+          <article class="card">
+            <svg viewBox="0 0 220 80" aria-hidden="true"><circle cx="40" cy="40" r="24" fill="#f6d98a"/><rect x="78" y="28" width="100" height="24" rx="8" fill="#6b4034"/></svg>
+            <h3>Brisket concha</h3>
+            <p>Brisket in a sweet concha shell.</p>
+          </article>
+          <article class="card">
+            <svg viewBox="0 0 220 80" aria-hidden="true"><circle cx="40" cy="40" r="24" fill="#f3b6c6"/><circle cx="100" cy="40" r="10" fill="#c47a45"/><circle cx="126" cy="40" r="10" fill="#f6d98a"/></svg>
+            <h3>Chorizo con papas</h3>
+            <p>Chorizo and potatoes, concha-style.</p>
+          </article>
+          <article class="card">
+            <svg viewBox="0 0 220 80" aria-hidden="true"><path d="M24 56l28-28 28 20 20-24 28 32H24z" fill="#d46b8c"/></svg>
+            <h3>Chilaquiles</h3>
+            <p>Chilaquiles from the trailer window.</p>
+          </article>
+          <article class="card">
+            <svg viewBox="0 0 220 80" aria-hidden="true"><circle cx="46" cy="40" r="24" fill="#fff"/><path d="M34 40c6 8 18 8 24 0" fill="none" stroke="#d46b8c" stroke-width="3"/><rect x="90" y="26" width="90" height="28" rx="8" fill="#c47a45"/></svg>
+            <h3>Pork belly concha</h3>
+            <p>Pork belly tucked into a concha.</p>
+          </article>
+          <article class="card">
+            <svg viewBox="0 0 220 80" aria-hidden="true"><circle cx="46" cy="40" r="24" fill="#f6d98a"/><rect x="88" y="28" width="96" height="24" rx="8" fill="#6b4034"/></svg>
+            <h3>Pulled pork concha</h3>
+            <p>Pulled pork on the sweet shell.</p>
+          </article>
+          <article class="card">
+            <svg viewBox="0 0 220 80" aria-hidden="true"><circle cx="48" cy="44" r="22" fill="#f3b6c6"/><circle cx="92" cy="36" r="16" fill="#fff"/><circle cx="124" cy="40" r="14" fill="#b7dcc8"/></svg>
+            <h3>Ice-cream conchas</h3>
+            <p>The sweet side of the menu.</p>
+          </article>
+          <article class="card">
+            <svg viewBox="0 0 220 80" aria-hidden="true"><rect x="36" y="22" width="28" height="42" rx="10" fill="#f6d98a"/><rect x="78" y="22" width="28" height="42" rx="10" fill="#6b4034"/><rect x="120" y="22" width="28" height="42" rx="10" fill="#b7dcc8"/></svg>
+            <h3>Drinks</h3>
+            <p>Horchata latte, café de olla, coffee and chocolate drinks, and smoothies.</p>
+          </article>
+        </div>
+        <p class="note">Super friendly, quick service. Order ahead on Square or call the truck.</p>
+      </div>
+    </section>
+
+    <section class="vibe" id="vibe">
+      <div class="wrap">
+        <p class="eyebrow">The vibe</p>
+        <h2>A cozy stop off the back road.</h2>
+        <div class="vibe-grid">
+          <div class="vibe-item"><strong>The trailer</strong> A cute trailer, not a storefront on a main drag.</div>
+          <div class="vibe-item"><strong>String lights</strong> Lights in the trees over the benches.</div>
+          <div class="vibe-item"><strong>Dog-friendly</strong> Bring the dog. Cozy seating outside.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="visit">
+      <div class="wrap">
+        <p class="eyebrow">Hours &amp; location</p>
+        <h2>123 Main St.</h2>
+        <div class="visit-grid">
+          <div class="card">
+            <h3>Hours</h3>
+            <table>
+              <caption style="position:absolute;left:-9999px;">Weekly hours</caption>
+              <tbody>
+                <tr class="closed"><th scope="row">Monday</th><td>Closed</td></tr>
+                <tr class="closed"><th scope="row">Tuesday</th><td>Closed</td></tr>
+                <tr><th scope="row">Wednesday</th><td>4–9 PM</td></tr>
+                <tr><th scope="row">Thursday</th><td>4–9 PM</td></tr>
+                <tr><th scope="row">Friday</th><td>4–9 PM</td></tr>
+                <tr><th scope="row">Saturday</th><td>9 AM–9 PM</td></tr>
+                <tr><th scope="row">Sunday</th><td>12–6 PM</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card">
+            <h3>Location</h3>
+            <p class="addr">123 Main St<br>Riverbend, TX 00000</p>
+            <p>Riverbend. Phone <a href="tel:+15550100000">(555) 010-0000</a><br>
+            Email <a href="mailto:hello@example.com">hello@example.com</a></p>
+            <p>
+              <a class="btn btn-pink" href="#">Open in Google Maps</a>
+            </p>
+            <p><a href="#">Order online on Square</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <strong>Dulce Bun Co.</strong>
+      <div>123 Main St, Riverbend, TX 00000 · <a href="tel:+15550100000">(555) 010-0000</a></div>
+      <div><a href="#">Order online</a> · <a href="mailto:hello@example.com">hello@example.com</a></div>
+      <small>5.0 stars · Demo site by <a href="https://brightfrontdesign.com/">Brightfront Studio</a> · Names, address and contact details are fictional</small>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector(".nav-toggle");
+      var list = document.getElementById("nav-links");
+      btn.addEventListener("click", function () {
+        var open = list.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      list.addEventListener("click", function (e) {
+        if (e.target.tagName === "A") {
+          list.classList.remove("open");
+          btn.setAttribute("aria-expanded", "false");
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
