@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>BP Nails Station — Nails &amp; pedicures in Redbank Plains, QLD</title>
+  <meta name="description" content="BP Nails Station is Phuong’s mini nail salon in Redbank Plains: manicures, gel and acrylic sets, pedicures, with a tea and coffee station.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark: #173b3a; --dark2: #21504e; --accent: #f4a6a0; --accent2: #2f7f78;
+      --bg: #f6faf8; --paper: #ffffff; --ink: #163130; --soft: #577170; --tint: #e3f1ee;
+      --on-accent: #173b3a;
+      --line: rgba(0,0,0,0.1); --shadow: 0 16px 36px rgba(0,0,0,0.10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: "Plus Jakarta Sans", system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; font-size: 1.05rem; }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .skip { position: absolute; left: 12px; top: -48px; background: var(--ink); color: #fff; padding: 8px 12px; z-index: 80; }
+    .skip:focus { top: 48px; }
+    .preview-banner { display: block; background: var(--dark); color: #fff; text-align: center; text-decoration: none; font-weight: 600; font-size: 0.82rem; padding: 9px 14px; line-height: 1.35; }
+    .preview-banner:hover { background: #000; }
+    .preview-banner span { opacity: 0.75; font-weight: 500; }
+    header.site { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--paper) 94%, transparent); border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
+    .nav { max-width: 1080px; margin: 0 auto; padding: 10px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 700; line-height: 1.2; }
+    .brand small { display: block; font-weight: 500; color: var(--soft); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; }
+    .mark { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg,#f4a6a0,#2f7f78); flex: none; display: grid; place-items: center; font-size: 1.15rem; }
+    .nav-toggle { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 8px 14px; font: inherit; font-weight: 650; color: var(--ink); }
+    .nav-links { display: none; list-style: none; margin: 0; padding: 0 18px 14px; }
+    .nav-links.open { display: grid; }
+    .nav-links a { display: block; text-decoration: none; color: var(--ink); font-weight: 650; padding: 8px 0; }
+    @media (min-width: 760px) {
+      header.site .bar { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding-right: 18px; }
+      .nav-toggle { display: none; }
+      .nav-links { display: flex; gap: 22px; padding: 0; align-items: center; }
+      .nav-links a { padding: 0; }
+    }
+    .hero { background: radial-gradient(480px 260px at 85% 10%, rgba(244,166,160,0.32), transparent 60%), linear-gradient(160deg,#21504e,#173b3a 65%); color: #fff; overflow: hidden; }
+    .strip { height: 14px; background: repeating-linear-gradient(90deg,#f4a6a0 0 12px,#f6faf8 12px 24px,#2f7f78 24px 36px,#f6faf8 36px 48px); }
+    .hero-inner { max-width: 1080px; margin: 0 auto; padding: 34px 18px 50px; display: grid; gap: 22px; }
+    .kicker { margin: 0; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.78rem; color: var(--accent); font-weight: 700; }
+    h1 { font-family: "Fraunces", Georgia, serif; font-weight: 700; font-size: clamp(2.7rem, 9vw, 5rem); line-height: 0.95; margin: 10px 0 12px; letter-spacing: -0.02em; }
+    .lead { font-size: 1.12rem; max-width: 38rem; margin: 0; opacity: 0.92; }
+    .stars { margin: 14px 0 0; font-weight: 700; color: var(--accent); }
+    .badge { display: inline-block; background: var(--accent2); color: #fff; border-radius: 999px; padding: 6px 12px; font-size: 0.86rem; font-weight: 700; margin-top: 10px; }
+    .today { margin-top: 16px; background: rgba(255,255,255,0.09); border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 16px; padding: 14px 16px; max-width: 27rem; }
+    .today span { display: block; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+    .today strong { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.4rem; line-height: 1.25; margin-top: 2px; }
+    .today small { display: block; opacity: 0.8; margin-top: 2px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 999px; padding: 12px 18px; font-weight: 700; border: 2px solid transparent; min-height: 48px; }
+    .btn-main { background: var(--accent); color: var(--on-accent); }
+    .btn-main:hover { filter: brightness(1.08); }
+    .btn-ghost { color: inherit; border-color: color-mix(in srgb, currentColor 40%, transparent); }
+    .btn-ghost:hover { background: rgba(255,255,255,0.08); }
+    .btn-solid { background: var(--accent2); color: #fff; }
+    .art { width: min(100%, 300px); justify-self: center; }
+    @media (min-width: 760px) { .art { width: min(100%, 400px); } }
+    .art svg { width: 100%; height: auto; display: block; }
+    section { padding: 56px 18px; }
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    .eyebrow { margin: 0 0 8px; color: var(--accent2); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    h2 { font-family: "Fraunces", Georgia, serif; font-weight: 700; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; margin: 0 0 12px; }
+    .lede { color: var(--soft); max-width: 44rem; margin-top: 0; }
+    .story { background: var(--paper); }
+    .story p { max-width: 44rem; }
+    .facts { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 18px 0 0; }
+    .facts li { background: var(--tint); border-radius: 999px; padding: 6px 12px; font-weight: 600; font-size: 0.92rem; }
+    .quotes { display: grid; gap: 12px; margin-top: 22px; }
+    blockquote { margin: 0; background: var(--tint); border-left: 5px solid var(--accent); border-radius: 0 14px 14px 0; padding: 14px 16px; font-family: "Fraunces", Georgia, serif; font-size: 1.08rem; }
+    blockquote cite { display: block; font-family: "Plus Jakarta Sans", sans-serif; font-style: normal; font-size: 0.82rem; color: var(--soft); margin-top: 6px; }
+    .grid { display: grid; gap: 12px; }
+    .card { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 16px; box-shadow: var(--shadow); }
+    .card h3 { margin: 8px 0 4px; font-size: 1.08rem; }
+    .card p { margin: 0; color: var(--soft); }
+    .emoji { font-size: 1.6rem; }
+    .note { color: var(--soft); font-size: 0.9rem; margin-top: 14px; }
+    .hours { background: linear-gradient(180deg, var(--bg), var(--tint)); }
+    .visit-grid { display: grid; gap: 12px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+    tr.today-row { background: color-mix(in srgb, var(--accent) 22%, #fff); outline: 2px solid var(--accent); }
+    tr.today-row th::after { content: " · Today"; color: var(--accent2); font-weight: 700; }
+    tr.closed th, tr.closed td { color: #9a9088; }
+    .addr { font-size: 1.12rem; font-weight: 700; margin: 0 0 8px; }
+    .card .btn { margin-top: 6px; }
+    .cta { background: var(--dark2); color: #fff; }
+    .cta .eyebrow { color: var(--accent); }
+    .cta .lede { color: rgba(255,255,255,0.86); }
+    footer { background: var(--dark); color: #eee; padding: 28px 18px 36px; }
+    footer a { color: var(--accent); }
+    .foot { max-width: 1080px; margin: 0 auto; display: grid; gap: 8px; }
+    .foot small { opacity: 0.75; }
+    @media (min-width: 760px) {
+      .hero-inner { grid-template-columns: 1.15fr 0.85fr; align-items: center; padding: 56px 18px 68px; }
+      .grid { grid-template-columns: repeat(3, 1fr); }
+      .quotes { grid-template-columns: repeat(3, 1fr); }
+      .visit-grid { grid-template-columns: 1.05fr 0.95fr; }
+    }
+
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <a class="preview-banner" href="https://brightfrontdesign.com">Free preview by Brightfront Studio — made for BP Nails Station <span>· brightfrontdesign.com</span></a>
+  <header class="site">
+    <div class="bar">
+      <div class="nav">
+        <a class="brand" href="#top"><span class="mark" aria-hidden="true">🌸</span><div>BP Nails Station<small>Nail salon · Redbank Plains, QLD</small></div></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      </div>
+      <ul class="nav-links" id="nav-links"><li><a href="#story">About</a></li><li><a href="#services">Services</a></li><li><a href="#visit">Hours</a></li><li><a href="#book">Book</a></li></ul>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" style="padding:0">
+      <div class="strip" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div>
+          <p class="kicker">Redbank Plains · Ipswich &amp; west Brisbane</p>
+          <h1>BP Nails<br>Station</h1>
+          <p class="lead">A calm little salon where Phuong takes her time: beautiful nails, the best pedicure in the 4300, and a cuppa from the tea and coffee station while you relax.</p>
+          <p class="stars">★ 5.0 from 51 Google reviews</p>
+          <span class="badge">Perfect 5.0 rating</span> 
+          <div class="today" aria-live="polite">
+            <span>Today in Redbank Plains</span>
+            <strong id="today-status">Checking hours…</strong>
+            <small id="today-sub"></small>
+          </div>
+          <div class="hero-actions"><a class="btn btn-main" href="tel:+61468353666">Call</a><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=BP+Nails+Station%2C+140+Alawoona+St%2C+Redbank+Plains+QLD+4301">Get directions</a><a class="btn btn-ghost" href="https://m.me/bp.nails.station">Message us</a></div>
+        </div>
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><circle cx="210" cy="150" r="120" fill="#f4a6a0" opacity=".12"/><g transform="translate(110 110)"><rect x="18" y="0" width="34" height="40" rx="6" fill="#f6faf8"/><rect x="0" y="36" width="70" height="104" rx="18" fill="#f4a6a0"/><rect x="12" y="66" width="46" height="22" rx="5" fill="#fff" opacity=".85"/><text x="35" y="82" font-family="Georgia" font-size="12" text-anchor="middle" fill="#2f7f78">BP</text></g><g transform="translate(200 90)"><rect x="18" y="0" width="34" height="48" rx="6" fill="#f6faf8"/><rect x="0" y="44" width="70" height="116" rx="18" fill="#2f7f78"/><rect x="0" y="44" width="70" height="116" rx="18" fill="#fff" opacity=".12"/></g><g transform="translate(330 210)"><circle r="10" fill="#f6faf8"/><circle cx="0" cy="-20" r="14" fill="#f4a6a0"/><circle cx="19" cy="-6" r="14" fill="#f4a6a0"/><circle cx="12" cy="16" r="14" fill="#f4a6a0"/><circle cx="-12" cy="16" r="14" fill="#f4a6a0"/><circle cx="-19" cy="-6" r="14" fill="#f4a6a0"/><circle r="9" fill="#f6c445"/></g><path d="M60 250c40-20 80-20 120 0s80 20 120 0" stroke="#f4a6a0" stroke-width="4" fill="none" opacity=".6"/><circle cx="320" cy="70" r="6" fill="#f6c445"/><circle cx="80" cy="80" r="4" fill="#f4a6a0"/></svg></div>
+      </div>
+    </section>
+    <section class="story" id="story">
+      <div class="wrap">
+        <p class="eyebrow">About the salon</p>
+        <h2>Not your average nail salon.</h2>
+        <p>BP Nails Station is a spacious mini salon in Redbank Plains, run with real care by Phuong. Clients say she’s gentle, precise with every single nail, and always double-checks before going ahead — so you leave happy with exactly what you wanted.</p><p>It’s clean, warm and relaxed, with a tea and coffee station, and she’s mindful of sensitive cuticles and first-timers. “To all my 4300 ladies,” one review says, “this salon does not disappoint.”</p>
+        <ul class="facts"><li>Gentle & precise</li><li>Clean & hygienic</li><li>Tea & coffee station</li><li>Great for first-timers</li></ul>
+        <div class="quotes"><blockquote>“The best pedicure I’ve ever had hands down.”<cite>Google review, Aug 2025</cite></blockquote><blockquote>“Sweetest nail technician I’ve ever met.”<cite>Google review, Jan 2026</cite></blockquote><blockquote>“So much better than a regular nail salon!”<cite>Google review, Apr 2025</cite></blockquote></div>
+      </div>
+    </section>
+    <section id="services">
+      <div class="wrap">
+        <p class="eyebrow">Services</p>
+        <h2>Hands and feet, beautifully done.</h2>
+        <p class="lede">Ask Phuong for current prices (A$) and availability when you book.</p>
+        <div class="grid"><article class="card"><div class="emoji" aria-hidden="true">💅</div><h3>Manicures</h3><p>Neat shaping, cuticle care and polish, done gently.</p></article><article class="card"><div class="emoji" aria-hidden="true">✨</div><h3>Gel &amp; acrylic sets</h3><p>Full sets and refills, checked nail by nail.</p></article><article class="card"><div class="emoji" aria-hidden="true">🎨</div><h3>Colour &amp; design help</h3><p>Not sure what to choose? She’ll help you pick the perfect colour.</p></article><article class="card"><div class="emoji" aria-hidden="true">🦶</div><h3>Pedicures</h3><p>The treatment clients rave about — relaxing and thorough.</p></article><article class="card"><div class="emoji" aria-hidden="true">🌿</div><h3>Sensitive-cuticle care</h3><p>Mindful, gentle work for sensitive nails and skin.</p></article><article class="card"><div class="emoji" aria-hidden="true">☕</div><h3>Tea &amp; coffee station</h3><p>Have a cuppa while you’re pampered.</p></article></div>
+        <p class="note">Services based on client reviews; the salon will confirm the full menu.</p>
+      </div>
+    </section>
+    <section class="hours" id="visit">
+      <div class="wrap">
+        <p class="eyebrow">Hours &amp; location</p>
+        <h2>Open seven days.</h2>
+        <div class="visit-grid">
+          <div class="card">
+            <table id="hours"><caption style="position:absolute;left:-9999px;">Weekly hours, today highlighted</caption><tbody><tr data-day="0"><th scope="row">Sunday</th><td>10am–4pm</td></tr><tr data-day="1"><th scope="row">Monday</th><td>9am–5pm</td></tr><tr data-day="2"><th scope="row">Tuesday</th><td>9am–5pm</td></tr><tr data-day="3"><th scope="row">Wednesday</th><td>9am–5pm</td></tr><tr data-day="4"><th scope="row">Thursday</th><td>9am–7pm</td></tr><tr data-day="5"><th scope="row">Friday</th><td>9am–5pm</td></tr><tr data-day="6"><th scope="row">Saturday</th><td>9am–5pm</td></tr></tbody></table>
+            <p class="note">Hours from the Google listing, Brisbane time. Bookings recommended.</p>
+          </div>
+          <div class="card">
+            <h3>Find the salon</h3>
+            <p class="addr">140 Alawoona Street<br>Redbank Plains QLD 4301</p>
+            <p>Late night Thursdays until 7pm.</p>
+            <p>Phone <a href="tel:+61468353666">0468 353 666</a><br>Email <a href="mailto:bpnailsstation@gmail.com">bpnailsstation@gmail.com</a><br>Facebook <a href="https://www.facebook.com/bp.nails.station">facebook.com/bp.nails.station</a></p>
+            <p><a class="btn btn-solid" href="https://www.google.com/maps/search/?api=1&amp;query=BP+Nails+Station%2C+140+Alawoona+St%2C+Redbank+Plains+QLD+4301">Get directions</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta" id="book">
+      <div class="wrap">
+        <p class="eyebrow">Book your visit</p>
+        <h2>Treat yourself this week.</h2>
+        <p class="lede">Call, text or message on Facebook to book your nails or pedicure. Late appointments on Thursdays.</p>
+        <div class="hero-actions"><a class="btn btn-main" href="tel:+61468353666">Call 0468 353 666</a><a class="btn btn-ghost" href="https://m.me/bp.nails.station">Message on Facebook</a><a class="btn btn-ghost" href="mailto:bpnailsstation@gmail.com?subject=Booking%20request">Email</a></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="foot">
+      <strong>BP Nails Station</strong>
+      <div>140 Alawoona Street, Redbank Plains QLD 4301</div>
+      <div><a href="tel:+61468353666">0468 353 666</a> · <a href="mailto:bpnailsstation@gmail.com">bpnailsstation@gmail.com</a> · <a href="https://www.facebook.com/bp.nails.station">Facebook</a></div>
+      <div>★ 5.0 from 51 Google reviews</div>
+      <small>Free preview by Brightfront Studio · <a href="https://brightfrontdesign.com">brightfrontdesign.com</a> · Details from public listings and reviews; please confirm before ordering.</small>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector(".nav-toggle"), list = document.getElementById("nav-links");
+      btn.addEventListener("click", function () { var o = list.classList.toggle("open"); btn.setAttribute("aria-expanded", o ? "true" : "false"); });
+      list.addEventListener("click", function (e) { if (e.target.tagName === "A") { list.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); } });
+      var TZ = "Australia/Brisbane", H = [[600, 960], [540, 1020], [540, 1020], [540, 1020], [540, 1140], [540, 1020], [540, 1020]], T = ["10am\u20134pm", "9am\u20135pm", "9am\u20135pm", "9am\u20135pm", "9am\u20137pm", "9am\u20135pm", "9am\u20135pm"], H12 = true;
+      var DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      var parts = new Intl.DateTimeFormat("en-GB", { weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23", timeZone: TZ }).formatToParts(new Date());
+      var get = function (t) { for (var i = 0; i < parts.length; i++) if (parts[i].type === t) return parts[i].value; };
+      var day = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[get("weekday")];
+      var now = parseInt(get("hour"), 10) * 60 + parseInt(get("minute"), 10);
+      function fmt(m) { var h = Math.floor(m / 60) % 24, mm = m % 60; var s = mm ? ":" + (mm < 10 ? "0" : "") + mm : "";
+        if (H12) { var ap = h >= 12 ? "pm" : "am"; var hh = h % 12 || 12; return hh + s + ap; } return (h < 10 ? "0" : "") + h + ":" + (mm < 10 ? "0" : "") + mm; }
+      function nextOpen(d) { for (var i = 1; i <= 7; i++) { var k = (d + i) % 7; if (H[k]) return (i === 1 ? "tomorrow" : DAYS[k]) + " at " + fmt(H[k][0]); } return ""; }
+      var st = document.getElementById("today-status"), sub = document.getElementById("today-sub"), h = H[day];
+      if (!h) { st.textContent = "Closed today"; sub.textContent = "Back " + nextOpen(day); }
+      else if (now < h[0]) { st.textContent = "Opens today at " + fmt(h[0]); sub.textContent = "Today: " + T[day]; }
+      else if (now < h[1]) { st.textContent = "Open now · until " + fmt(h[1]); sub.textContent = "Today: " + T[day]; }
+      else { st.textContent = "Closed for today"; sub.textContent = "Back " + nextOpen(day); }
+      var row = document.querySelector('#hours tr[data-day="' + day + '"]'); if (row) row.classList.add("today-row");
+    })();
+  </script>
+</body>
+</html>
