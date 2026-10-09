@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>The Bakers Dozen — Traditional bakers on Splott Road, Cardiff</title>
+  <meta name="description" content="The Bakers Dozen is a traditional bakery at 17 Splott Road, Cardiff: fresh bread, rolls made to order, Welsh cakes, pasties, cakes and hot breakfasts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark: #2b1a10; --dark2: #3d5a3a; --accent: #e8b04b; --accent2: #b23a2e;
+      --bg: #fbf4e8; --paper: #fffdf8; --ink: #2b1a10; --soft: #6b5646; --tint: #f4e3c3;
+      --on-accent: #2b1a10;
+      --line: rgba(0,0,0,0.1); --shadow: 0 16px 36px rgba(0,0,0,0.10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: "Lato", system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; font-size: 1.05rem; }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .skip { position: absolute; left: 12px; top: -48px; background: var(--ink); color: #fff; padding: 8px 12px; z-index: 80; }
+    .skip:focus { top: 48px; }
+    .preview-banner { display: block; background: var(--dark); color: #fff; text-align: center; text-decoration: none; font-weight: 600; font-size: 0.82rem; padding: 9px 14px; line-height: 1.35; }
+    .preview-banner:hover { background: #000; }
+    .preview-banner span { opacity: 0.75; font-weight: 500; }
+    header.site { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--paper) 94%, transparent); border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
+    .nav { max-width: 1080px; margin: 0 auto; padding: 10px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 700; line-height: 1.2; }
+    .brand small { display: block; font-weight: 500; color: var(--soft); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; }
+    .mark { width: 38px; height: 38px; border-radius: 50%; background: radial-gradient(circle at 40% 35%,#f2cf8a,#c7863b 70%); flex: none; display: grid; place-items: center; font-size: 1.15rem; }
+    .nav-toggle { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 8px 14px; font: inherit; font-weight: 650; color: var(--ink); }
+    .nav-links { display: none; list-style: none; margin: 0; padding: 0 18px 14px; }
+    .nav-links.open { display: grid; }
+    .nav-links a { display: block; text-decoration: none; color: var(--ink); font-weight: 650; padding: 8px 0; }
+    @media (min-width: 760px) {
+      header.site .bar { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding-right: 18px; }
+      .nav-toggle { display: none; }
+      .nav-links { display: flex; gap: 22px; padding: 0; align-items: center; }
+      .nav-links a { padding: 0; }
+    }
+    .hero { background: radial-gradient(480px 240px at 85% 10%, rgba(232,176,75,0.30), transparent 60%), linear-gradient(160deg,#3a2416,#2b1a10 65%); color: #fff; overflow: hidden; }
+    .strip { height: 14px; background: repeating-linear-gradient(90deg,#b23a2e 0 20px,#fbf4e8 20px 40px,#3d5a3a 40px 60px,#fbf4e8 60px 80px); }
+    .hero-inner { max-width: 1080px; margin: 0 auto; padding: 34px 18px 50px; display: grid; gap: 22px; }
+    .kicker { margin: 0; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.78rem; color: var(--accent); font-weight: 700; }
+    h1 { font-family: "Playfair Display", Georgia, serif; font-weight: 800; font-size: clamp(2.7rem, 9vw, 5rem); line-height: 0.95; margin: 10px 0 12px; letter-spacing: -0.02em; }
+    .lead { font-size: 1.12rem; max-width: 38rem; margin: 0; opacity: 0.92; }
+    .stars { margin: 14px 0 0; font-weight: 700; color: var(--accent); }
+    .badge { display: inline-block; background: var(--accent2); color: #fff; border-radius: 999px; padding: 6px 12px; font-size: 0.86rem; font-weight: 700; margin-top: 10px; }
+    .today { margin-top: 16px; background: rgba(255,255,255,0.09); border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 16px; padding: 14px 16px; max-width: 27rem; }
+    .today span { display: block; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+    .today strong { display: block; font-family: "Playfair Display", Georgia, serif; font-size: 1.4rem; line-height: 1.25; margin-top: 2px; }
+    .today small { display: block; opacity: 0.8; margin-top: 2px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 999px; padding: 12px 18px; font-weight: 700; border: 2px solid transparent; min-height: 48px; }
+    .btn-main { background: var(--accent); color: var(--on-accent); }
+    .btn-main:hover { filter: brightness(1.08); }
+    .btn-ghost { color: inherit; border-color: color-mix(in srgb, currentColor 40%, transparent); }
+    .btn-ghost:hover { background: rgba(255,255,255,0.08); }
+    .btn-solid { background: var(--accent2); color: #fff; }
+    .art { width: min(100%, 300px); justify-self: center; }
+    @media (min-width: 760px) { .art { width: min(100%, 400px); } }
+    .art svg { width: 100%; height: auto; display: block; }
+    section { padding: 56px 18px; }
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    .eyebrow { margin: 0 0 8px; color: var(--accent2); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 700; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; margin: 0 0 12px; }
+    .lede { color: var(--soft); max-width: 44rem; margin-top: 0; }
+    .story { background: var(--paper); }
+    .story p { max-width: 44rem; }
+    .facts { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 18px 0 0; }
+    .facts li { background: var(--tint); border-radius: 999px; padding: 6px 12px; font-weight: 600; font-size: 0.92rem; }
+    .quotes { display: grid; gap: 12px; margin-top: 22px; }
+    blockquote { margin: 0; background: var(--tint); border-left: 5px solid var(--accent); border-radius: 0 14px 14px 0; padding: 14px 16px; font-family: "Playfair Display", Georgia, serif; font-size: 1.08rem; }
+    blockquote cite { display: block; font-family: "Lato", sans-serif; font-style: normal; font-size: 0.82rem; color: var(--soft); margin-top: 6px; }
+    .grid { display: grid; gap: 12px; }
+    .card { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 16px; box-shadow: var(--shadow); }
+    .card h3 { margin: 8px 0 4px; font-size: 1.08rem; }
+    .card p { margin: 0; color: var(--soft); }
+    .emoji { font-size: 1.6rem; }
+    .note { color: var(--soft); font-size: 0.9rem; margin-top: 14px; }
+    .hours { background: linear-gradient(180deg, var(--bg), var(--tint)); }
+    .visit-grid { display: grid; gap: 12px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+    tr.today-row { background: color-mix(in srgb, var(--accent) 22%, #fff); outline: 2px solid var(--accent); }
+    tr.today-row th::after { content: " · Today"; color: var(--accent2); font-weight: 700; }
+    tr.closed th, tr.closed td { color: #9a9088; }
+    .addr { font-size: 1.12rem; font-weight: 700; margin: 0 0 8px; }
+    .card .btn { margin-top: 6px; }
+    .cta { background: var(--dark2); color: #fff; }
+    .cta .eyebrow { color: var(--accent); }
+    .cta .lede { color: rgba(255,255,255,0.86); }
+    footer { background: var(--dark); color: #eee; padding: 28px 18px 36px; }
+    footer a { color: var(--accent); }
+    .foot { max-width: 1080px; margin: 0 auto; display: grid; gap: 8px; }
+    .foot small { opacity: 0.75; }
+    @media (min-width: 760px) {
+      .hero-inner { grid-template-columns: 1.15fr 0.85fr; align-items: center; padding: 56px 18px 68px; }
+      .grid { grid-template-columns: repeat(3, 1fr); }
+      .quotes { grid-template-columns: repeat(3, 1fr); }
+      .visit-grid { grid-template-columns: 1.05fr 0.95fr; }
+    }
+
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <a class="preview-banner" href="https://brightfrontdesign.com">Free preview by Brightfront Studio — made for The Bakers Dozen <span>· brightfrontdesign.com</span></a>
+  <header class="site">
+    <div class="bar">
+      <div class="nav">
+        <a class="brand" href="#top"><span class="mark" aria-hidden="true">🥖</span><div>The Bakers Dozen<small>Traditional bakers · Splott, Cardiff</small></div></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      </div>
+      <ul class="nav-links" id="nav-links"><li><a href="#story">Our bakery</a></li><li><a href="#menu">Bakes</a></li><li><a href="#visit">Opening times</a></li><li><a href="#orders">Orders</a></li></ul>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" style="padding:0">
+      <div class="strip" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div>
+          <p class="kicker">Cardiff · Splott Road</p>
+          <h1>The Bakers<br>Dozen</h1>
+          <p class="lead">A proper traditional bakers, baking fresh every day for Splott and the city: loaves, rolls made to order, Welsh cakes, pasties, cakes and hot breakfasts to take away.</p>
+          <p class="stars">★ 4.5 from 96 Google reviews</p>
+          <span class="badge">Welsh cakes for weddings</span> 
+          <div class="today" aria-live="polite">
+            <span>Today in Splott</span>
+            <strong id="today-status">Checking hours…</strong>
+            <small id="today-sub"></small>
+          </div>
+          <div class="hero-actions"><a class="btn btn-main" href="tel:+442920486589">Call</a><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=The+Bakers+Dozen%2C+17+Splott+Rd%2C+Cardiff+CF24+2BU">Get directions</a><a class="btn btn-ghost" href="https://m.me/BakersDozenCardiff">Message us</a></div>
+        </div>
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><ellipse cx="200" cy="250" rx="170" ry="16" fill="#000" opacity=".2"/><path d="M60 200c0-60 50-90 110-90s110 30 110 90z" fill="#d79a4e"/><path d="M90 150c10 10 20 14 30 14M130 128c10 12 20 18 30 18M175 122c10 12 20 18 30 18M220 130c8 10 16 16 26 18" stroke="#9c6026" stroke-width="5" fill="none" stroke-linecap="round"/><rect x="60" y="196" width="220" height="14" rx="7" fill="#b97a37"/><g transform="translate(300 190)"><ellipse cx="0" cy="10" rx="44" ry="12" fill="#c98b45"/><ellipse cx="0" cy="2" rx="44" ry="12" fill="#e5b36a"/><circle cx="-14" cy="0" r="2.5" fill="#4a2b14"/><circle cx="8" cy="4" r="2.5" fill="#4a2b14"/><circle cx="18" cy="-3" r="2.5" fill="#4a2b14"/></g><g transform="translate(300 150)"><ellipse cx="0" cy="10" rx="40" ry="11" fill="#c98b45"/><ellipse cx="0" cy="2" rx="40" ry="11" fill="#e5b36a"/><circle cx="-10" cy="1" r="2.5" fill="#4a2b14"/><circle cx="12" cy="0" r="2.5" fill="#4a2b14"/></g><path d="M320 70l12 26 28 4-20 20 5 28-25-14-25 14 5-28-20-20 28-4z" fill="#b23a2e" opacity=".85"/></svg></div>
+      </div>
+    </section>
+    <section class="story" id="story">
+      <div class="wrap">
+        <p class="eyebrow">Our bakery</p>
+        <h2>Fresh every morning, the traditional way.</h2>
+        <p>The Bakers Dozen is a traditional bakers on the corner of Splott Road, baking bread, cakes, pastries and hot food fresh each day for the local community — and for wholesale customers too.</p><p>Rolls are made fresh to order, the Welsh cakes are light and fluffy, and the kids love the dinosaur-shaped Cornish pasties. Get there early: regulars warn the best bits sell out. The shop is step-free and pram and wheelchair friendly.</p>
+        <ul class="facts"><li>Rolls made to order</li><li>Hot breakfasts to take away</li><li>Wholesale supplied</li><li>Step-free access</li></ul>
+        <div class="quotes"><blockquote>“A proper traditional bakers. Loads of fresh bread and freshly made rolls to order.”<cite>Google review</cite></blockquote><blockquote>“Best bakers I’ve been to on balance for price and quality.”<cite>Google review, Feb 2025</cite></blockquote><blockquote>“Couldn’t beat the prices either.”<cite>Google review, Sep 2025</cite></blockquote></div>
+      </div>
+    </section>
+    <section id="menu">
+      <div class="wrap">
+        <p class="eyebrow">From the counter</p>
+        <h2>Bread, bakes and a hot breakfast.</h2>
+        <p class="lede">A taste of what’s on the counter most days. Prices in the shop — regulars say they’re hard to beat.</p>
+        <div class="grid"><article class="card"><div class="emoji" aria-hidden="true">🍞</div><h3>Fresh bread &amp; rolls</h3><p>Loaves baked daily and rolls filled fresh to order.</p></article><article class="card"><div class="emoji" aria-hidden="true">🍪</div><h3>Welsh cakes</h3><p>Light, soft and fluffy. Custom-made to order for weddings.</p></article><article class="card"><div class="emoji" aria-hidden="true">🦕</div><h3>Dinosaur Cornish pasties</h3><p>The shop’s famous dino-shaped pasties — properly filled.</p></article><article class="card"><div class="emoji" aria-hidden="true">🥐</div><h3>Pasties &amp; sausage rolls</h3><p>Corned beef, lamb & mint, bacon & cheese puffs, sausage rolls served warm.</p></article><article class="card"><div class="emoji" aria-hidden="true">🎂</div><h3>Cakes</h3><p>Soft, fluffy sponges and cakes for the table or an occasion.</p></article><article class="card"><div class="emoji" aria-hidden="true">🍳</div><h3>Hot breakfasts</h3><p>Breakfasts and hot meals to take away.</p></article></div>
+        <p class="note">Fillings and flavours change daily — ask at the counter.</p>
+      </div>
+    </section>
+    <section class="hours" id="visit">
+      <div class="wrap">
+        <p class="eyebrow">Opening times &amp; location</p>
+        <h2>Pop in on Splott Road.</h2>
+        <div class="visit-grid">
+          <div class="card">
+            <table id="hours"><caption style="position:absolute;left:-9999px;">Weekly hours, today highlighted</caption><tbody><tr data-day="0" class="closed"><th scope="row">Sunday</th><td>Closed</td></tr><tr data-day="1"><th scope="row">Monday</th><td>7am–3pm</td></tr><tr data-day="2"><th scope="row">Tuesday</th><td>7am–3pm</td></tr><tr data-day="3"><th scope="row">Wednesday</th><td>7am–3pm</td></tr><tr data-day="4"><th scope="row">Thursday</th><td>7am–3pm</td></tr><tr data-day="5"><th scope="row">Friday</th><td>7am–3pm</td></tr><tr data-day="6"><th scope="row">Saturday</th><td>7am–1pm</td></tr></tbody></table>
+            <p class="note">Opening times from the Google listing, UK time.</p>
+          </div>
+          <div class="card">
+            <h3>Find the shop</h3>
+            <p class="addr">17 Splott Road<br>Cardiff CF24 2BU</p>
+            <p>On the corner of Splott Road and Railway Street.</p>
+            <p>Phone <a href="tel:+442920486589">029 2048 6589</a><br>Email <a href="mailto:stephensbakerycardiff@gmail.com">stephensbakerycardiff@gmail.com</a><br>Facebook <a href="https://www.facebook.com/BakersDozenCardiff/">facebook.com/BakersDozenCardiff</a></p>
+            <p><a class="btn btn-solid" href="https://www.google.com/maps/search/?api=1&amp;query=The+Bakers+Dozen%2C+17+Splott+Rd%2C+Cardiff+CF24+2BU">Get directions</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta" id="orders">
+      <div class="wrap">
+        <p class="eyebrow">Orders &amp; weddings</p>
+        <h2>Welsh cakes for your big day.</h2>
+        <p class="lede">Custom Welsh cakes for weddings, plus orders for parties, offices and wholesale. Ring the shop, email or send a message on Facebook.</p>
+        <div class="hero-actions"><a class="btn btn-main" href="tel:+442920486589">Call 029 2048 6589</a><a class="btn btn-ghost" href="mailto:stephensbakerycardiff@gmail.com?subject=Order%20enquiry">Email an order</a><a class="btn btn-ghost" href="https://m.me/BakersDozenCardiff">Message on Facebook</a></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="foot">
+      <strong>The Bakers Dozen</strong>
+      <div>17 Splott Road, Cardiff CF24 2BU</div>
+      <div><a href="tel:+442920486589">029 2048 6589</a> · <a href="mailto:stephensbakerycardiff@gmail.com">stephensbakerycardiff@gmail.com</a> · <a href="https://www.facebook.com/BakersDozenCardiff/">Facebook</a></div>
+      <div>★ 4.5 from 96 Google reviews</div>
+      <small>Free preview by Brightfront Studio · <a href="https://brightfrontdesign.com">brightfrontdesign.com</a> · Details from public listings and reviews; please confirm before ordering.</small>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector(".nav-toggle"), list = document.getElementById("nav-links");
+      btn.addEventListener("click", function () { var o = list.classList.toggle("open"); btn.setAttribute("aria-expanded", o ? "true" : "false"); });
+      list.addEventListener("click", function (e) { if (e.target.tagName === "A") { list.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); } });
+      var TZ = "Europe/London", H = [null, [420, 900], [420, 900], [420, 900], [420, 900], [420, 900], [420, 780]], T = ["Closed", "7am\u20133pm", "7am\u20133pm", "7am\u20133pm", "7am\u20133pm", "7am\u20133pm", "7am\u20131pm"], H12 = true;
+      var DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      var parts = new Intl.DateTimeFormat("en-GB", { weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23", timeZone: TZ }).formatToParts(new Date());
+      var get = function (t) { for (var i = 0; i < parts.length; i++) if (parts[i].type === t) return parts[i].value; };
+      var day = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[get("weekday")];
+      var now = parseInt(get("hour"), 10) * 60 + parseInt(get("minute"), 10);
+      function fmt(m) { var h = Math.floor(m / 60) % 24, mm = m % 60; var s = mm ? ":" + (mm < 10 ? "0" : "") + mm : "";
+        if (H12) { var ap = h >= 12 ? "pm" : "am"; var hh = h % 12 || 12; return hh + s + ap; } return (h < 10 ? "0" : "") + h + ":" + (mm < 10 ? "0" : "") + mm; }
+      function nextOpen(d) { for (var i = 1; i <= 7; i++) { var k = (d + i) % 7; if (H[k]) return (i === 1 ? "tomorrow" : DAYS[k]) + " at " + fmt(H[k][0]); } return ""; }
+      var st = document.getElementById("today-status"), sub = document.getElementById("today-sub"), h = H[day];
+      if (!h) { st.textContent = "Closed today"; sub.textContent = "Back " + nextOpen(day); }
+      else if (now < h[0]) { st.textContent = "Opens today at " + fmt(h[0]); sub.textContent = "Today: " + T[day]; }
+      else if (now < h[1]) { st.textContent = "Open now · until " + fmt(h[1]); sub.textContent = "Today: " + T[day]; }
+      else { st.textContent = "Closed for today"; sub.textContent = "Back " + nextOpen(day); }
+      var row = document.querySelector('#hours tr[data-day="' + day + '"]'); if (row) row.classList.add("today-row");
+    })();
+  </script>
+</body>
+</html>
