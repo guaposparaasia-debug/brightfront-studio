@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Tony&#x27;s Snack Van — Breakfast rolls, gourmet burgers &amp; proper tea, A28 Bethersden</title>
+  <meta name="description" content="Tony&#x27;s Snack Van in Furners Lay-by on the A28 Ashford Road, Bethersden: breakfast baguettes, gourmet burgers, seasoned chicken wraps and a proper cuppa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark: #13261c; --dark2: #1e3a2b; --accent: #f2c14e; --accent2: #c8553d;
+      --bg: #f5f1e8; --paper: #ffffff; --ink: #1b241f; --soft: #58625b; --tint: #efe4c4;
+      --on-accent: #13261c;
+      --line: rgba(0,0,0,0.1); --shadow: 0 16px 36px rgba(0,0,0,0.10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: "Source Sans 3", system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; font-size: 1.05rem; }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .skip { position: absolute; left: 12px; top: -48px; background: var(--ink); color: #fff; padding: 8px 12px; z-index: 80; }
+    .skip:focus { top: 48px; }
+    .preview-banner { display: block; background: var(--dark); color: #fff; text-align: center; text-decoration: none; font-weight: 600; font-size: 0.82rem; padding: 9px 14px; line-height: 1.35; }
+    .preview-banner:hover { background: #000; }
+    .preview-banner span { opacity: 0.75; font-weight: 500; }
+    header.site { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--paper) 94%, transparent); border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
+    .nav { max-width: 1080px; margin: 0 auto; padding: 10px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 700; line-height: 1.2; }
+    .brand small { display: block; font-weight: 500; color: var(--soft); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; }
+    .mark { width: 38px; height: 38px; border-radius: 10px; background: #1e3a2b; flex: none; display: grid; place-items: center; font-size: 1.15rem; }
+    .nav-toggle { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 8px 14px; font: inherit; font-weight: 650; color: var(--ink); }
+    .nav-links { display: none; list-style: none; margin: 0; padding: 0 18px 14px; }
+    .nav-links.open { display: grid; }
+    .nav-links a { display: block; text-decoration: none; color: var(--ink); font-weight: 650; padding: 8px 0; }
+    @media (min-width: 760px) {
+      header.site .bar { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding-right: 18px; }
+      .nav-toggle { display: none; }
+      .nav-links { display: flex; gap: 22px; padding: 0; align-items: center; }
+      .nav-links a { padding: 0; }
+    }
+    .hero { background: radial-gradient(500px 240px at 85% 5%, rgba(242,193,78,0.26), transparent 60%), linear-gradient(165deg,#1e3a2b,#13261c 65%); color: #fff; overflow: hidden; }
+    .strip { height: 14px; background: repeating-linear-gradient(90deg,#f2c14e 0 22px,#13261c 22px 44px); }
+    .hero-inner { max-width: 1080px; margin: 0 auto; padding: 34px 18px 50px; display: grid; gap: 22px; }
+    .kicker { margin: 0; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.78rem; color: var(--accent); font-weight: 700; }
+    h1 { font-family: "Alfa Slab One", Georgia, serif; font-weight: 400; font-size: clamp(2.7rem, 9vw, 5rem); line-height: 0.95; margin: 10px 0 12px; letter-spacing: -0.02em; }
+    .lead { font-size: 1.12rem; max-width: 38rem; margin: 0; opacity: 0.92; }
+    .stars { margin: 14px 0 0; font-weight: 700; color: var(--accent); }
+    .badge { display: inline-block; background: var(--accent2); color: #fff; border-radius: 999px; padding: 6px 12px; font-size: 0.86rem; font-weight: 700; margin-top: 10px; }
+    .today { margin-top: 16px; background: rgba(255,255,255,0.09); border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 16px; padding: 14px 16px; max-width: 27rem; }
+    .today span { display: block; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+    .today strong { display: block; font-family: "Alfa Slab One", Georgia, serif; font-size: 1.4rem; line-height: 1.25; margin-top: 2px; }
+    .today small { display: block; opacity: 0.8; margin-top: 2px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 999px; padding: 12px 18px; font-weight: 700; border: 2px solid transparent; min-height: 48px; }
+    .btn-main { background: var(--accent); color: var(--on-accent); }
+    .btn-main:hover { filter: brightness(1.08); }
+    .btn-ghost { color: inherit; border-color: color-mix(in srgb, currentColor 40%, transparent); }
+    .btn-ghost:hover { background: rgba(255,255,255,0.08); }
+    .btn-solid { background: var(--accent2); color: #fff; }
+    .art { width: min(100%, 300px); justify-self: center; }
+    @media (min-width: 760px) { .art { width: min(100%, 400px); } }
+    .art svg { width: 100%; height: auto; display: block; }
+    section { padding: 56px 18px; }
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    .eyebrow { margin: 0 0 8px; color: var(--accent2); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    h2 { font-family: "Alfa Slab One", Georgia, serif; font-weight: 400; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; margin: 0 0 12px; }
+    .lede { color: var(--soft); max-width: 44rem; margin-top: 0; }
+    .story { background: var(--paper); }
+    .story p { max-width: 44rem; }
+    .facts { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 18px 0 0; }
+    .facts li { background: var(--tint); border-radius: 999px; padding: 6px 12px; font-weight: 600; font-size: 0.92rem; }
+    .quotes { display: grid; gap: 12px; margin-top: 22px; }
+    blockquote { margin: 0; background: var(--tint); border-left: 5px solid var(--accent); border-radius: 0 14px 14px 0; padding: 14px 16px; font-family: "Alfa Slab One", Georgia, serif; font-size: 1.08rem; }
+    blockquote cite { display: block; font-family: "Source Sans 3", sans-serif; font-style: normal; font-size: 0.82rem; color: var(--soft); margin-top: 6px; }
+    .grid { display: grid; gap: 12px; }
+    .card { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 16px; box-shadow: var(--shadow); }
+    .card h3 { margin: 8px 0 4px; font-size: 1.08rem; }
+    .card p { margin: 0; color: var(--soft); }
+    .emoji { font-size: 1.6rem; }
+    .note { color: var(--soft); font-size: 0.9rem; margin-top: 14px; }
+    .hours { background: linear-gradient(180deg, var(--bg), var(--tint)); }
+    .visit-grid { display: grid; gap: 12px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+    tr.today-row { background: color-mix(in srgb, var(--accent) 22%, #fff); outline: 2px solid var(--accent); }
+    tr.today-row th::after { content: " · Today"; color: var(--accent2); font-weight: 700; }
+    tr.closed th, tr.closed td { color: #9a9088; }
+    .addr { font-size: 1.12rem; font-weight: 700; margin: 0 0 8px; }
+    .card .btn { margin-top: 6px; }
+    .cta { background: var(--dark2); color: #fff; }
+    .cta .eyebrow { color: var(--accent); }
+    .cta .lede { color: rgba(255,255,255,0.86); }
+    footer { background: var(--dark); color: #eee; padding: 28px 18px 36px; }
+    footer a { color: var(--accent); }
+    .foot { max-width: 1080px; margin: 0 auto; display: grid; gap: 8px; }
+    .foot small { opacity: 0.75; }
+    @media (min-width: 760px) {
+      .hero-inner { grid-template-columns: 1.15fr 0.85fr; align-items: center; padding: 56px 18px 68px; }
+      .grid { grid-template-columns: repeat(3, 1fr); }
+      .quotes { grid-template-columns: repeat(3, 1fr); }
+      .visit-grid { grid-template-columns: 1.05fr 0.95fr; }
+    }
+
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <a class="preview-banner" href="https://brightfrontdesign.com">Free preview by Brightfront Studio — made for Tony&#x27;s Snack Van <span>· brightfrontdesign.com</span></a>
+  <header class="site">
+    <div class="bar">
+      <div class="nav">
+        <a class="brand" href="#top"><span class="mark" aria-hidden="true">☕</span><div>Tony&#x27;s Snack Van<small>Roadside van · A28, Bethersden</small></div></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      </div>
+      <ul class="nav-links" id="nav-links"><li><a href="#story">About</a></li><li><a href="#menu">Menu</a></li><li><a href="#visit">Hours</a></li><li><a href="#order">Order</a></li></ul>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" style="padding:0">
+      <div class="strip" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div>
+          <p class="kicker">Kent · Furners Lay-by, A28 Ashford Road</p>
+          <h1>Tony's<br>Snack Van</h1>
+          <p class="lead">The lay-by van people pull over for: crispy breakfast baguettes, gourmet burgers with proper salad, seasoned chicken wraps — and tea made properly. All fresh, cooked to order.</p>
+          <p class="stars">★ 4.9 from 89 Google reviews</p>
+          <span class="badge">Cooked to order</span> 
+          <div class="today" aria-live="polite">
+            <span>Today in the lay-by</span>
+            <strong id="today-status">Checking hours…</strong>
+            <small id="today-sub"></small>
+          </div>
+          <div class="hero-actions"><a class="btn btn-main" href="tel:+447927672446">Call</a><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Tony%27s+Snack+Van%2C+Furners+Lay-by%2C+Ashford+Rd%2C+Bethersden+TN26+3BG">Get directions</a><a class="btn btn-ghost" href="https://m.me/338678166559815">Message us</a></div>
+        </div>
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="236" width="400" height="30" fill="#3b3b3b"/><rect x="0" y="248" width="400" height="5" fill="#f2c14e" stroke-dasharray="30 20"/><path d="M40 120h220a20 20 0 0 1 20 20v90H40z" fill="#f5f1e8"/><path d="M60 96h180l20 24H40z" fill="#c8553d"/><path d="M60 96h20l-6 24H52zM100 96h20l-2 24h-20zM140 96h20l2 24h-20zM180 96h20l6 24h-20zM220 96h20l10 24h-20z" fill="#f5f1e8" opacity=".9"/><rect x="70" y="140" width="150" height="54" rx="6" fill="#13261c"/><rect x="70" y="194" width="150" height="10" fill="#f2c14e"/><circle cx="90" cy="236" r="18" fill="#13261c"/><circle cx="240" cy="236" r="18" fill="#13261c"/><g transform="translate(320 150)"><path d="M-30 0h56l-6 56h-44z" fill="#ffffff"/><path d="M26 10a16 16 0 0 1 0 30" stroke="#ffffff" stroke-width="7" fill="none"/><rect x="-28" y="4" width="52" height="8" fill="#a0622d"/><path d="M-14 -14c-6-10 6-14 0-24M4 -14c-6-10 6-14 0-24" stroke="#f2c14e" stroke-width="4" fill="none" stroke-linecap="round"/></g></svg></div>
+      </div>
+    </section>
+    <section class="story" id="story">
+      <div class="wrap">
+        <p class="eyebrow">About Tony</p>
+        <h2>A roadside van that does it properly.</h2>
+        <p>Drivers say they went past for years before finally stopping — and now it’s their go-to. Tony cooks everything fresh to order, brings it out when it’s ready, and is always up for a chat.</p><p>It’s a classic roadside breakfast stop at one end and something special at the other: gourmet burgers with real salad, seasoned chicken wraps and stacked baguettes that beat any drive-through.</p>
+        <ul class="facts"><li>Fresh ingredients</li><li>Cooked to order</li><li>Easy lay-by parking</li><li>Weekday breakfast & lunch</li></ul>
+        <div class="quotes"><blockquote>“Must be one of the best burgers I have ever had.”<cite>Google review, Feb 2026</cite></blockquote><blockquote>“Food here is actually banging. I highly recommend the steak onion mushroom baguette, add cheese.”<cite>Google review, Sep 2025</cite></blockquote><blockquote>“A pleasant surprise to have [tea] made properly.”<cite>Google review, Oct 2025</cite></blockquote></div>
+      </div>
+    </section>
+    <section id="menu">
+      <div class="wrap">
+        <p class="eyebrow">The menu</p>
+        <h2>Breakfast to lunch, done right.</h2>
+        <p class="lede">Customer favourites from the van. Ask Tony for today’s specials and prices.</p>
+        <div class="grid"><article class="card"><div class="emoji" aria-hidden="true">🥖</div><h3>Breakfast rolls &amp; baguettes</h3><p>Crispy outside, fluffy inside, with fresh fillings.</p></article><article class="card"><div class="emoji" aria-hidden="true">🥩</div><h3>Steak, onion &amp; mushroom baguette</h3><p>The regulars’ tip: add cheese.</p></article><article class="card"><div class="emoji" aria-hidden="true">🍔</div><h3>Gourmet burgers</h3><p>A proper burger with salad — miles ahead of a fast-food one.</p></article><article class="card"><div class="emoji" aria-hidden="true">🌯</div><h3>Seasoned chicken wraps</h3><p>A lunchtime favourite.</p></article><article class="card"><div class="emoji" aria-hidden="true">☕</div><h3>Tea made properly</h3><p>No tea bag in hot water here — a proper cuppa.</p></article><article class="card"><div class="emoji" aria-hidden="true">🥤</div><h3>Cold drinks &amp; snacks</h3><p>Grab and go back on the road.</p></article></div>
+        <p class="note">Menu based on customer reviews; prices at the van.</p>
+      </div>
+    </section>
+    <section class="hours" id="visit">
+      <div class="wrap">
+        <p class="eyebrow">Opening times &amp; location</p>
+        <h2>Pull in at Furners Lay-by.</h2>
+        <div class="visit-grid">
+          <div class="card">
+            <table id="hours"><caption style="position:absolute;left:-9999px;">Weekly hours, today highlighted</caption><tbody><tr data-day="0" class="closed"><th scope="row">Sunday</th><td>Closed</td></tr><tr data-day="1"><th scope="row">Monday</th><td>7am–2:30pm</td></tr><tr data-day="2"><th scope="row">Tuesday</th><td>7am–2:30pm</td></tr><tr data-day="3"><th scope="row">Wednesday</th><td>7am–2:30pm</td></tr><tr data-day="4"><th scope="row">Thursday</th><td>7am–2:30pm</td></tr><tr data-day="5"><th scope="row">Friday</th><td>7am–2:30pm</td></tr><tr data-day="6" class="closed"><th scope="row">Saturday</th><td>Closed</td></tr></tbody></table>
+            <p class="note">Hours from the Google listing, UK time.</p>
+          </div>
+          <div class="card">
+            <h3>Where to find us</h3>
+            <p class="addr">Furners Lay-by, Ashford Road (A28)<br>Bethersden, Kent TN26 3BG</p>
+            <p>On the A28 between Ashford and Bethersden. Plenty of room to pull in.</p>
+            <p>Phone <a href="tel:+447927672446">07927 672446</a><br>Email <a href="mailto:lemaitretony29@gmail.com">lemaitretony29@gmail.com</a><br>Facebook <a href="https://facebook.com/338678166559815">Tony&#x27;s on Facebook</a></p>
+            <p><a class="btn btn-solid" href="https://www.google.com/maps/search/?api=1&amp;query=Tony%27s+Snack+Van%2C+Furners+Lay-by%2C+Ashford+Rd%2C+Bethersden+TN26+3BG">Get directions</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta" id="order">
+      <div class="wrap">
+        <p class="eyebrow">Ring ahead</p>
+        <h2>Order ahead, skip the wait.</h2>
+        <p class="lede">Give Tony a ring or a message with your order and it’ll be ready when you pull in.</p>
+        <div class="hero-actions"><a class="btn btn-main" href="tel:+447927672446">Call 07927 672446</a><a class="btn btn-ghost" href="https://m.me/338678166559815">Message on Facebook</a><a class="btn btn-ghost" href="mailto:lemaitretony29@gmail.com?subject=Catering%20enquiry">Email Tony</a></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="foot">
+      <strong>Tony&#x27;s Snack Van</strong>
+      <div>Furners Lay-by, Ashford Road (A28), Bethersden, Kent TN26 3BG</div>
+      <div><a href="tel:+447927672446">07927 672446</a> · <a href="mailto:lemaitretony29@gmail.com">lemaitretony29@gmail.com</a> · <a href="https://facebook.com/338678166559815">Facebook</a></div>
+      <div>★ 4.9 from 89 Google reviews</div>
+      <small>Free preview by Brightfront Studio · <a href="https://brightfrontdesign.com">brightfrontdesign.com</a> · Details from public listings and reviews; please confirm before ordering.</small>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector(".nav-toggle"), list = document.getElementById("nav-links");
+      btn.addEventListener("click", function () { var o = list.classList.toggle("open"); btn.setAttribute("aria-expanded", o ? "true" : "false"); });
+      list.addEventListener("click", function (e) { if (e.target.tagName === "A") { list.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); } });
+      var TZ = "Europe/London", H = [null, [420, 870], [420, 870], [420, 870], [420, 870], [420, 870], null], T = ["Closed", "7am\u20132:30pm", "7am\u20132:30pm", "7am\u20132:30pm", "7am\u20132:30pm", "7am\u20132:30pm", "Closed"], H12 = true;
+      var DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      var parts = new Intl.DateTimeFormat("en-GB", { weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23", timeZone: TZ }).formatToParts(new Date());
+      var get = function (t) { for (var i = 0; i < parts.length; i++) if (parts[i].type === t) return parts[i].value; };
+      var day = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[get("weekday")];
+      var now = parseInt(get("hour"), 10) * 60 + parseInt(get("minute"), 10);
+      function fmt(m) { var h = Math.floor(m / 60) % 24, mm = m % 60; var s = mm ? ":" + (mm < 10 ? "0" : "") + mm : "";
+        if (H12) { var ap = h >= 12 ? "pm" : "am"; var hh = h % 12 || 12; return hh + s + ap; } return (h < 10 ? "0" : "") + h + ":" + (mm < 10 ? "0" : "") + mm; }
+      function nextOpen(d) { for (var i = 1; i <= 7; i++) { var k = (d + i) % 7; if (H[k]) return (i === 1 ? "tomorrow" : DAYS[k]) + " at " + fmt(H[k][0]); } return ""; }
+      var st = document.getElementById("today-status"), sub = document.getElementById("today-sub"), h = H[day];
+      if (!h) { st.textContent = "Closed today"; sub.textContent = "Back " + nextOpen(day); }
+      else if (now < h[0]) { st.textContent = "Opens today at " + fmt(h[0]); sub.textContent = "Today: " + T[day]; }
+      else if (now < h[1]) { st.textContent = "Open now · until " + fmt(h[1]); sub.textContent = "Today: " + T[day]; }
+      else { st.textContent = "Closed for today"; sub.textContent = "Back " + nextOpen(day); }
+      var row = document.querySelector('#hours tr[data-day="' + day + '"]'); if (row) row.classList.add("today-row");
+    })();
+  </script>
+</body>
+</html>
