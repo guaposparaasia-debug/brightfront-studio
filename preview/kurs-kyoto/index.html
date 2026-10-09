@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Kurs（クルス）｜二条城そばの小さなベーカリー｜京都・中京区</title>
+  <meta name="description" content="京都・二条城近くのベーカリー Kurs（クルス）。サワードウ、カルダモンロール、クロワッサン、シナモンロール、BLTサンド。木〜日曜営業。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark: #2e2318; --dark2: #4a3826; --accent: #e8b765; --accent2: #9c5b3b;
+      --bg: #fbf6ee; --paper: #ffffff; --ink: #2e2318; --soft: #6f5f4f; --tint: #f4e6cf;
+      --on-accent: #2e2318;
+      --line: rgba(0,0,0,0.1); --shadow: 0 16px 36px rgba(0,0,0,0.10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: "Noto Sans JP", system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; font-size: 1.05rem; }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .skip { position: absolute; left: 12px; top: -48px; background: var(--ink); color: #fff; padding: 8px 12px; z-index: 80; }
+    .skip:focus { top: 48px; }
+    .preview-banner { display: block; background: var(--dark); color: #fff; text-align: center; text-decoration: none; font-weight: 600; font-size: 0.82rem; padding: 9px 14px; line-height: 1.35; }
+    .preview-banner:hover { background: #000; }
+    .preview-banner span { opacity: 0.75; font-weight: 500; }
+    header.site { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--paper) 94%, transparent); border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
+    .nav { max-width: 1080px; margin: 0 auto; padding: 10px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 700; line-height: 1.2; }
+    .brand small { display: block; font-weight: 500; color: var(--soft); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; }
+    .mark { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg,#e8b765,#9c5b3b); flex: none; display: grid; place-items: center; font-size: 1.15rem; }
+    .nav-toggle { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 8px 14px; font: inherit; font-weight: 650; color: var(--ink); }
+    .nav-links { display: none; list-style: none; margin: 0; padding: 0 18px 14px; }
+    .nav-links.open { display: grid; }
+    .nav-links a { display: block; text-decoration: none; color: var(--ink); font-weight: 650; padding: 8px 0; }
+    @media (min-width: 760px) {
+      header.site .bar { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding-right: 18px; }
+      .nav-toggle { display: none; }
+      .nav-links { display: flex; gap: 22px; padding: 0; align-items: center; }
+      .nav-links a { padding: 0; }
+    }
+    .hero { background: radial-gradient(520px 260px at 85% 8%, color-mix(in srgb, #e8b765 32%, transparent), transparent 60%), linear-gradient(160deg,#4a3826,#2e2318 62%); color: #fff; overflow: hidden; }
+    .strip { height: 14px; background: repeating-linear-gradient(90deg,#e8b765 0 22px,#9c5b3b 22px 44px,#f4e6cf 44px 66px); }
+    .hero-inner { max-width: 1080px; margin: 0 auto; padding: 34px 18px 50px; display: grid; gap: 22px; }
+    .kicker { margin: 0; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.78rem; color: var(--accent); font-weight: 700; }
+    h1 { font-family: "Shippori Mincho B1", "Noto Serif JP", serif; font-weight: 800; font-size: clamp(2.7rem, 9vw, 5rem); line-height: 0.95; margin: 10px 0 12px; letter-spacing: -0.02em; }
+    .lead { font-size: 1.12rem; max-width: 38rem; margin: 0; opacity: 0.92; }
+    .stars { margin: 14px 0 0; font-weight: 700; color: var(--accent); }
+    .badge { display: inline-block; background: var(--accent2); color: #fff; border-radius: 999px; padding: 6px 12px; font-size: 0.86rem; font-weight: 700; margin-top: 10px; }
+    .today { margin-top: 16px; background: rgba(255,255,255,0.09); border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 16px; padding: 14px 16px; max-width: 27rem; }
+    .today span { display: block; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+    .today strong { display: block; font-family: "Shippori Mincho B1", "Noto Serif JP", serif; font-size: 1.4rem; line-height: 1.25; margin-top: 2px; }
+    .today small { display: block; opacity: 0.8; margin-top: 2px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 999px; padding: 12px 18px; font-weight: 700; border: 2px solid transparent; min-height: 48px; }
+    .btn-main { background: var(--accent); color: var(--on-accent); }
+    .btn-main:hover { filter: brightness(1.08); }
+    .btn-ghost { color: inherit; border-color: color-mix(in srgb, currentColor 40%, transparent); }
+    .btn-ghost:hover { background: rgba(255,255,255,0.08); }
+    .btn-solid { background: var(--accent2); color: #fff; }
+    .art { width: min(100%, 300px); justify-self: center; }
+    @media (min-width: 760px) { .art { width: min(100%, 400px); } }
+    .art svg { width: 100%; height: auto; display: block; }
+    section { padding: 56px 18px; }
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    .eyebrow { margin: 0 0 8px; color: var(--accent2); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    h2 { font-family: "Shippori Mincho B1", "Noto Serif JP", serif; font-weight: 800; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; margin: 0 0 12px; }
+    .lede { color: var(--soft); max-width: 44rem; margin-top: 0; }
+    .story { background: var(--paper); }
+    .story p { max-width: 44rem; }
+    .facts { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 18px 0 0; }
+    .facts li { background: var(--tint); border-radius: 999px; padding: 6px 12px; font-weight: 600; font-size: 0.92rem; }
+    .quotes { display: grid; gap: 12px; margin-top: 22px; }
+    blockquote { margin: 0; background: var(--tint); border-left: 5px solid var(--accent); border-radius: 0 14px 14px 0; padding: 14px 16px; font-family: "Shippori Mincho B1", "Noto Serif JP", serif; font-size: 1.08rem; }
+    blockquote cite { display: block; font-family: "Noto Sans JP", sans-serif; font-style: normal; font-size: 0.82rem; color: var(--soft); margin-top: 6px; }
+    .grid { display: grid; gap: 12px; }
+    .card { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 16px; box-shadow: var(--shadow); }
+    .card h3 { margin: 8px 0 4px; font-size: 1.08rem; }
+    .card p { margin: 0; color: var(--soft); }
+    .emoji { font-size: 1.6rem; }
+    .note { color: var(--soft); font-size: 0.9rem; margin-top: 14px; }
+    .hours { background: linear-gradient(180deg, var(--bg), var(--tint)); }
+    .visit-grid { display: grid; gap: 12px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+    tr.today-row { background: color-mix(in srgb, var(--accent) 22%, #fff); outline: 2px solid var(--accent); }
+    tr.today-row th::after { content: " · 本日"; color: var(--accent2); font-weight: 700; }
+    tr.closed th, tr.closed td { color: #9a9088; }
+    .addr { font-size: 1.12rem; font-weight: 700; margin: 0 0 8px; }
+    .card .btn { margin-top: 6px; }
+    .cta { background: var(--dark2); color: #fff; }
+    .cta .eyebrow { color: var(--accent); }
+    .cta .lede { color: rgba(255,255,255,0.86); }
+    footer { background: var(--dark); color: #eee; padding: 28px 18px 36px; }
+    footer a { color: var(--accent); }
+    .foot { max-width: 1080px; margin: 0 auto; display: grid; gap: 8px; }
+    .foot small { opacity: 0.75; }
+    @media (min-width: 760px) {
+      .hero-inner { grid-template-columns: 1.15fr 0.85fr; align-items: center; padding: 56px 18px 68px; }
+      .grid { grid-template-columns: repeat(3, 1fr); }
+      .quotes { grid-template-columns: repeat(3, 1fr); }
+      .visit-grid { grid-template-columns: 1.05fr 0.95fr; }
+    }
+
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">本文へスキップ</a>
+  <a class="preview-banner" href="https://brightfrontdesign.com">Brightfront Studio による無料プレビュー — Kurs（クルス） のために制作 <span>· brightfrontdesign.com</span></a>
+  <header class="site">
+    <div class="bar">
+      <div class="nav">
+        <a class="brand" href="#top"><span class="mark" aria-hidden="true">🥐</span><div>Kurs クルス<small>ベーカリー · 京都・二条城前</small></div></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">メニュー</button>
+      </div>
+      <ul class="nav-links" id="nav-links"><li><a href="#story">お店について</a></li><li><a href="#menu">パン</a></li><li><a href="#visit">営業時間</a></li><li><a href="#visit-us">アクセス</a></li></ul>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" style="padding:0">
+      <div class="strip" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div>
+          <p class="kicker">京都・中京区 · 二条城のすぐそば</p>
+          <h1>Kurs<br>クルス</h1>
+          <p class="lead">朝7時、焼きたての香りが通りまで。サワードウ、カルダモンロール、クロワッサン——街の人にも旅の人にも愛される、小さなベーカリーです。</p>
+          <p class="stars">★ Google 4.6（口コミ258件）</p>
+          <span class="badge">朝7時オープン</span> 
+          <div class="today" aria-live="polite">
+            <span>本日の営業</span>
+            <strong id="today-status">営業時間を確認中…</strong>
+            <small id="today-sub"></small>
+          </div>
+          <div class="hero-actions"><a class="btn btn-main" href="tel:+815010768960">電話する</a><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Kurs+bakery%2C+334+Nishidaikokucho%2C+Nakagyo+Ward%2C+Kyoto+604-0063">道順を見る</a><a class="btn btn-ghost" href="https://ig.me/m/curusu.kurs">メッセージ</a></div>
+        </div>
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><circle cx="300" cy="70" r="46" fill="#e8b765" opacity=".25"/><ellipse cx="200" cy="258" rx="150" ry="14" fill="#000" opacity=".12"/><path d="M70 230c0-60 50-96 120-96s120 36 120 96z" fill="#9c5b3b"/><path d="M120 170l20 24M170 156l18 28M222 156l14 28M270 170l12 24" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/><rect x="70" y="226" width="240" height="20" rx="10" fill="#2e2318" opacity=".85"/><g transform="translate(320 200)"><circle r="30" fill="#e8b765"/><circle r="30" fill="none" stroke="#ffffff" stroke-width="4" stroke-dasharray="8 6"/></g><g transform="translate(90 110)"><path d="M0 0c10-30 50-30 60 0-20 10-40 10-60 0z" fill="#ffffff"/><path d="M12 -6l6 10M30 -12v12M48 -6l-6 10" stroke="#9c5b3b" stroke-width="3"/></g></svg></div>
+      </div>
+    </section>
+    <section class="story" id="story">
+      <div class="wrap">
+        <p class="eyebrow">お店について</p>
+        <h2>二条城の朝に、焼きたてを。</h2>
+        <p>Kursは二条城のすぐ近くにある、テイクアウト中心の小さなベーカリー。開店直後から、オーブンから出たばかりのパンを求めてお客さんが訪れます。</p><p>本格的なサワードウ、フランス人のお客さんも絶賛するクロワッサンとパン・オ・ショコラ、そして酒粕を使ったチョコレートのパンまで。お店の前のベンチで、焼きたてをすぐに味わうこともできます。</p>
+        <ul class="facts"><li>朝7時から営業</li><li>テイクアウト中心</li><li>店前にベンチあり</li><li>英語OK・現金のみ</li></ul>
+        <div class="quotes"><blockquote>“A lovely little neighborhood gem!”<cite>Googleの口コミ（2025年12月）</cite></blockquote><blockquote>“Some of the best sourdough bread I’ve ever had.”<cite>Googleの口コミ（2025年2月）</cite></blockquote><blockquote>“酒粕を使ったチョコレートのパンは、独特でとても美味しい。”<cite>Googleの口コミより要約（2024年4月）</cite></blockquote></div>
+      </div>
+    </section>
+    <section id="menu">
+      <div class="wrap">
+        <p class="eyebrow">人気のパン</p>
+        <h2>口コミでよく名前が挙がるパン。</h2>
+        <p class="lede">ラインナップは日によって変わります。最新情報はInstagramでご確認ください。</p>
+        <div class="grid"><article class="card"><div class="emoji" aria-hidden="true">🍞</div><h3>サワードウ</h3><p>しっかりとした酸味と香りの本格派。</p></article><article class="card"><div class="emoji" aria-hidden="true">🌀</div><h3>カルダモンロール</h3><p>焼きたての香りがたまらない人気者。</p></article><article class="card"><div class="emoji" aria-hidden="true">🥐</div><h3>クロワッサン</h3><p>パン・オ・ショコラと並ぶ定番。</p></article><article class="card"><div class="emoji" aria-hidden="true">🍥</div><h3>シナモンロール</h3><p>朝ごはんにも、おやつにも。</p></article><article class="card"><div class="emoji" aria-hidden="true">🥪</div><h3>BLTサンド</h3><p>ボリューム満点のサンドイッチ。</p></article><article class="card"><div class="emoji" aria-hidden="true">🍫</div><h3>酒粕チョコパン</h3><p>京都らしい、ここだけの味。</p></article></div>
+        <p class="note">メニューは公開されている口コミをもとに作成しています。</p>
+      </div>
+    </section>
+    <section class="hours" id="visit">
+      <div class="wrap">
+        <p class="eyebrow">営業時間・アクセス</p>
+        <h2>お店へのアクセス</h2>
+        <div class="visit-grid">
+          <div class="card">
+            <table id="hours"><caption style="position:absolute;left:-9999px;">営業時間（本日を強調表示）</caption><tbody><tr data-day="0"><th scope="row">日曜日</th><td>7:00–14:00</td></tr><tr data-day="1" class="closed"><th scope="row">月曜日</th><td>定休日</td></tr><tr data-day="2" class="closed"><th scope="row">火曜日</th><td>定休日</td></tr><tr data-day="3" class="closed"><th scope="row">水曜日</th><td>定休日</td></tr><tr data-day="4"><th scope="row">木曜日</th><td>7:00–15:00</td></tr><tr data-day="5"><th scope="row">金曜日</th><td>7:00–15:00</td></tr><tr data-day="6"><th scope="row">土曜日</th><td>7:00–15:00</td></tr></tbody></table>
+            <p class="note">Googleの掲載情報より（日本時間）。開店時間はInstagramで告知される場合があります。売り切れ次第終了のことも。</p>
+          </div>
+          <div class="card">
+            <h3>Kurs（クルス）</h3>
+            <p class="addr">〒604-0063<br>京都府京都市中京区西大黒町334<br>コーポラス二条 1F</p>
+            <p>二条城のすぐ近く。地下鉄東西線「二条城前」駅から徒歩圏内です。</p>
+            <p>電話 <a href="tel:+815010768960">050-1076-8960</a><br>メール <a href="mailto:kursbakery@gmail.com">kursbakery@gmail.com</a><br>Instagram <a href="https://www.instagram.com/curusu.kurs/">@curusu.kurs</a></p>
+            <p><a class="btn btn-solid" href="https://www.google.com/maps/search/?api=1&amp;query=Kurs+bakery%2C+334+Nishidaikokucho%2C+Nakagyo+Ward%2C+Kyoto+604-0063">道順を見る</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta" id="visit-us">
+      <div class="wrap">
+        <p class="eyebrow">ご来店をお待ちしています</p>
+        <h2>焼きたてを、朝いちばんに。</h2>
+        <p class="lede">お取り置きやご質問は、お電話またはInstagramのDMでどうぞ。</p>
+        <div class="hero-actions"><a class="btn btn-main" href="tel:+815010768960">電話する 050-1076-8960</a><a class="btn btn-ghost" href="https://www.instagram.com/curusu.kurs/">Instagramを見る</a></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="foot">
+      <strong>Kurs（クルス）</strong>
+      <div>京都府京都市中京区西大黒町334 コーポラス二条 1F</div>
+      <div><a href="tel:+815010768960">050-1076-8960</a> · <a href="mailto:kursbakery@gmail.com">kursbakery@gmail.com</a> · <a href="https://www.instagram.com/curusu.kurs/">Instagram</a></div>
+      <div>★ Google 4.6（口コミ258件）</div>
+      <small>Brightfront Studio による無料プレビュー · <a href="https://brightfrontdesign.com">brightfrontdesign.com</a> · 掲載内容は公開情報と口コミをもとにしています。ご来店前にご確認ください。</small>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector(".nav-toggle"), list = document.getElementById("nav-links");
+      btn.addEventListener("click", function () { var o = list.classList.toggle("open"); btn.setAttribute("aria-expanded", o ? "true" : "false"); });
+      list.addEventListener("click", function (e) { if (e.target.tagName === "A") { list.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); } });
+      var TZ = "Asia/Tokyo", H = [[420, 840], null, null, null, [420, 900], [420, 900], [420, 900]], T = ["7:00\u201314:00", "\u5b9a\u4f11\u65e5", "\u5b9a\u4f11\u65e5", "\u5b9a\u4f11\u65e5", "7:00\u201315:00", "7:00\u201315:00", "7:00\u201315:00"], H12 = false;
+      var DAYS = ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"];
+      var parts = new Intl.DateTimeFormat("en-GB", { weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23", timeZone: TZ }).formatToParts(new Date());
+      var get = function (t) { for (var i = 0; i < parts.length; i++) if (parts[i].type === t) return parts[i].value; };
+      var day = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[get("weekday")];
+      var now = parseInt(get("hour"), 10) * 60 + parseInt(get("minute"), 10);
+      function fmt(m) { var h = Math.floor(m / 60) % 24, mm = m % 60; var s = mm ? ":" + (mm < 10 ? "0" : "") + mm : "";
+        if (H12) { var ap = h >= 12 ? "pm" : "am"; var hh = h % 12 || 12; return hh + s + ap; } return (h < 10 ? "0" : "") + h + ":" + (mm < 10 ? "0" : "") + mm; }
+      function nextOpen(d) { for (var i = 1; i <= 7; i++) { var k = (d + i) % 7; if (H[k]) return (i === 1 ? "明日" : DAYS[k]) + " " + fmt(H[k][0]); } return ""; }
+      var st = document.getElementById("today-status"), sub = document.getElementById("today-sub"), h = H[day];
+      if (!h) { st.textContent = "本日は定休日です"; sub.textContent = "次の営業：" + nextOpen(day); }
+      else if (now < h[0]) { st.textContent = "本日 " + fmt(h[0]) + " から営業"; sub.textContent = "本日：" + T[day]; }
+      else if (now < h[1]) { st.textContent = "営業中 · " + fmt(h[1]) + " まで"; sub.textContent = "本日：" + T[day]; }
+      else { st.textContent = "本日の営業は終了しました"; sub.textContent = "次の営業：" + nextOpen(day); }
+      var row = document.querySelector('#hours tr[data-day="' + day + '"]'); if (row) row.classList.add("today-row");
+    })();
+  </script>
+</body>
+</html>
