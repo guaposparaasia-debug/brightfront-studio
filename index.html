@@ -7,12 +7,12 @@
   <meta name="description" content="Brightfront Studio builds a free homepage preview for cafes, restaurants, salons, clinics and shops. Review it, request tweaks, and pay only if you love it. Sites from $299.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#1a1714">
-  <link rel="canonical" href="https://guaposparaasia-debug.github.io/brightfront-studio/">
+  <link rel="canonical" href="https://brightfrontdesign.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Brightfront Studio">
   <meta property="og:title" content="Brightfront Studio — Websites for local businesses">
   <meta property="og:description" content="Free homepage preview first. Review it, request changes, and pay only if you love it. Websites for cafes, salons, clinics and shops from $299.">
-  <meta property="og:url" content="https://guaposparaasia-debug.github.io/brightfront-studio/">
+  <meta property="og:url" content="https://brightfrontdesign.com/">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Brightfront Studio — Websites for local businesses">
@@ -26,8 +26,8 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Brightfront Studio",
-    "url": "https://guaposparaasia-debug.github.io/brightfront-studio/",
-    "email": "guaposparaasia@gmail.com",
+    "url": "https://brightfrontdesign.com/",
+    "email": "info@brightfrontdesign.com",
     "description": "Web design studio that builds a free homepage preview for small businesses. Owners review it, request tweaks, and pay only if they love it before launch. Websites, landing pages, booking and menu pages, local SEO, and Google Business setup.",
     "slogan": "Free homepage preview first. Pay only if you love it.",
     "knowsAbout": ["Website design", "Landing pages", "Online booking", "Menus", "Local SEO", "Google Business Profile"]
@@ -135,6 +135,17 @@
     .service p { margin: 0; color: var(--ink-soft); }
     .note { display: inline-flex; align-items: center; gap: 8px; background: #efe6d6; color: var(--ink); border-radius: 999px; padding: 6px 10px; font-size: 0.82rem; font-weight: 640; letter-spacing: 0.04em; text-transform: uppercase; }
     .work-grid { display: grid; gap: 16px; }
+    .ba-grid { display: grid; gap: 16px; }
+    .ba-card { margin: 0; background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 10px; box-shadow: var(--shadow); min-width: 0; }
+    .ba-card img { width: 100%; height: auto; border-radius: 16px; background: var(--bg-deep); }
+    .ba-card figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; padding: 10px 6px 4px; }
+    .ba-card figcaption strong { font-weight: 520; }
+    .ba-card figcaption span { color: var(--muted); font-size: 0.92rem; }
+    .ba-privacy { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; color: var(--muted); font-size: 0.92rem; margin: 20px 0 0; }
+    @media (min-width: 760px) {
+      .ba-grid { grid-template-columns: 1fr 1fr; }
+      .ba-card:first-child { grid-column: 1 / -1; }
+    }
     .mock { background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 14px; box-shadow: var(--shadow); }
     .mock header { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; margin: 10px 2px 12px; }
     .mock header p { margin: 4px 0 0; color: var(--muted); font-size: 0.92rem; }
@@ -237,6 +248,7 @@
         <a href="#problem">Why it matters</a>
         <a href="#services">Services</a>
         <a href="#work">Work</a>
+        <a href="#before-after">Before &amp; after</a>
         <a href="#packages">Packages</a>
         <a href="#faq">FAQ</a>
         <span class="social nav-social">
@@ -251,6 +263,7 @@
       <a href="#problem">Why it matters</a>
       <a href="#services">Services</a>
       <a href="#work">Work</a>
+      <a href="#before-after">Before &amp; after</a>
       <a href="#packages">Packages</a>
       <a href="#process">Process</a>
       <a href="#faq">FAQ</a>
@@ -364,6 +377,77 @@
             </div>
             <header><div><strong>Dental clinic</strong><p>Concept design · trust and appointment path</p></div></header>
           </article>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="before-after">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Before &amp; after</p>
+          <h2>Real small businesses. Real upgrades.</h2>
+          <p>Local food trucks and bakeries whose customers could only find a social page, a bare ordering link, or a broken site. Here is the free homepage preview we built for each one: menu, hours, and a clear way to call or visit.</p>
+        </div>
+        <div class="ba-grid">
+          <figure class="ba-card reveal">
+            <picture>
+              <source media="(max-width: 600px)" srcset="/assets/before-after/catrachilandia-mobile.webp" width="720" height="900">
+              <img src="/assets/before-after/catrachilandia.webp" width="1200" height="700" loading="lazy" decoding="async"
+                   alt="Before and after: Honduran food truck · North Carolina. Before: only a social media page. After: a new homepage preview by Brightfront Studio. Names and details hidden.">
+            </picture>
+            <figcaption><strong>Honduran food truck · North Carolina</strong><span>Before: only a social media page</span></figcaption>
+          </figure>
+          <figure class="ba-card reveal">
+            <picture>
+              <source media="(max-width: 600px)" srcset="/assets/before-after/alebrijes-mobile.webp" width="720" height="900">
+              <img src="/assets/before-after/alebrijes.webp" width="1200" height="700" loading="lazy" decoding="async"
+                   alt="Before and after: Oaxacan food truck · Ohio. Before: only a photo feed, menu in a post. After: a new homepage preview by Brightfront Studio. Names and details hidden.">
+            </picture>
+            <figcaption><strong>Oaxacan food truck · Ohio</strong><span>Before: only a photo feed, menu in a post</span></figcaption>
+          </figure>
+          <figure class="ba-card reveal">
+            <picture>
+              <source media="(max-width: 600px)" srcset="/assets/before-after/marys-cake-mobile.webp" width="720" height="900">
+              <img src="/assets/before-after/marys-cake.webp" width="1200" height="700" loading="lazy" decoding="async"
+                   alt="Before and after: Custom cake bakery · Florida. Before: only a social media page. After: a new homepage preview by Brightfront Studio. Names and details hidden.">
+            </picture>
+            <figcaption><strong>Custom cake bakery · Florida</strong><span>Before: only a social media page</span></figcaption>
+          </figure>
+          <figure class="ba-card reveal">
+            <picture>
+              <source media="(max-width: 600px)" srcset="/assets/before-after/its-concha-time-mobile.webp" width="720" height="900">
+              <img src="/assets/before-after/its-concha-time.webp" width="1200" height="700" loading="lazy" decoding="async"
+                   alt="Before and after: Concha sandwich food truck · Texas. Before: only a bare ordering page. After: a new homepage preview by Brightfront Studio. Names and details hidden.">
+            </picture>
+            <figcaption><strong>Concha sandwich food truck · Texas</strong><span>Before: only a bare ordering page</span></figcaption>
+          </figure>
+          <figure class="ba-card reveal">
+            <picture>
+              <source media="(max-width: 600px)" srcset="/assets/before-after/tee-grill-mobile.webp" width="720" height="900">
+              <img src="/assets/before-after/tee-grill.webp" width="1200" height="700" loading="lazy" decoding="async"
+                   alt="Before and after: Gyro food truck · Ohio. Before: website down, hours unclear. After: a new homepage preview by Brightfront Studio. Names and details hidden.">
+            </picture>
+            <figcaption><strong>Gyro food truck · Ohio</strong><span>Before: website down, hours unclear</span></figcaption>
+          </figure>
+          <figure class="ba-card reveal">
+            <picture>
+              <source media="(max-width: 600px)" srcset="/assets/before-after/son-dogos-mobile.webp" width="720" height="900">
+              <img src="/assets/before-after/son-dogos.webp" width="1200" height="700" loading="lazy" decoding="async"
+                   alt="Before and after: Sonoran hot dog cart · Arizona. Before: only a social media page. After: a new homepage preview by Brightfront Studio. Names and details hidden.">
+            </picture>
+            <figcaption><strong>Sonoran hot dog cart · Arizona</strong><span>Before: only a social media page</span></figcaption>
+          </figure>
+          <figure class="ba-card reveal">
+            <picture>
+              <source media="(max-width: 600px)" srcset="/assets/before-after/the-special-guest-mobile.webp" width="720" height="900">
+              <img src="/assets/before-after/the-special-guest.webp" width="1200" height="700" loading="lazy" decoding="async"
+                   alt="Before and after: Custom cake bakery · Texas. Before: only a social media page. After: a new homepage preview by Brightfront Studio. Names and details hidden.">
+            </picture>
+            <figcaption><strong>Custom cake bakery · Texas</strong><span>Before: only a social media page</span></figcaption>
+          </figure>
+        </div>
+        <p class="ba-privacy"><span class="note">Privacy</span><span>Names and details hidden for privacy. Business names, addresses, phone numbers and emails are placeholders, and the &ldquo;before&rdquo; panels are generic illustrations, not their real pages.</span></p>
+        <div class="cta-row" style="margin-top:22px">
+          <a class="btn btn-primary" href="#contact">Get my free preview</a>
         </div>
       </div>
     </section>
@@ -495,7 +579,7 @@
         <div class="mail-card">
           <p class="eyebrow" style="color:#e7c9a4">Contact</p>
           <h2>Write to the studio.</h2>
-          <p>Tell us about the business and we’ll build a free homepage preview. Email <a href="mailto:guaposparaasia@gmail.com">guaposparaasia@gmail.com</a>. The form opens your email app and does not store a message on a server. Pay only if you love the preview.</p>
+          <p>Tell us about the business and we’ll build a free homepage preview. Email <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>. The form opens your email app and does not store a message on a server. Pay only if you love the preview.</p>
         </div>
         <form id="quoteForm">
           <label>Name
@@ -521,7 +605,7 @@
             <textarea name="message" required placeholder="What should a new customer find on the first screen?"></textarea>
           </label>
           <button class="btn btn-primary" type="submit">Get my free preview</button>
-          <p class="fine">Opens your email client addressed to guaposparaasia@gmail.com.</p>
+          <p class="fine">Opens your email client addressed to info@brightfrontdesign.com.</p>
         </form>
       </div>
     </section>
@@ -529,7 +613,7 @@
   <footer>
     <div class="wrap foot">
       <span>© 2026 Brightfront Studio</span>
-      <a href="mailto:guaposparaasia@gmail.com">guaposparaasia@gmail.com</a>
+      <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>
       <div class="social">
         <a href="https://www.instagram.com/free_website_developer/" target="_blank" rel="noopener" aria-label="Brightfront Studio on Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a>
         <a href="https://x.com/Brightfront_" target="_blank" rel="noopener" aria-label="Brightfront Studio on X" title="X (Twitter)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
@@ -581,7 +665,7 @@
           "",
           data.get("message")
         ].join("\n");
-        window.location.href = "mailto:guaposparaasia@gmail.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+        window.location.href = "mailto:info@brightfrontdesign.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
       });
     })();
   </script>

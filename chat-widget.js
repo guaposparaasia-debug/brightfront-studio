@@ -187,14 +187,14 @@
         var reply =
           data && typeof data.reply === "string" && data.reply
             ? data.reply
-            : "Sorry, I could not answer just now. Email guaposparaasia@gmail.com and the team will follow up.";
+            : "Sorry, I could not answer just now. Email info@brightfrontdesign.com and the team will follow up.";
         messages.push({ role: "assistant", content: reply });
         saveMessages(messages);
         addBubble("assistant", reply);
       })
       .catch(function () {
         var reply =
-          "Sorry, I could not answer just now. Email guaposparaasia@gmail.com with your name, business, and city for a free homepage preview.";
+          "Sorry, I could not answer just now. Email info@brightfrontdesign.com with your name, business, and city for a free homepage preview.";
         messages.push({ role: "assistant", content: reply });
         saveMessages(messages);
         addBubble("assistant", reply);
