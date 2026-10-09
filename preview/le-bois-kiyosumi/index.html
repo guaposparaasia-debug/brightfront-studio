@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>le bois（ル・ボア）｜観葉植物とアートのカフェ｜清澄白河</title>
+  <meta name="description" content="清澄白河のボタニカルカフェ le bois（ル・ボア）。長崎チーズケーキ、クロワッサンサンド、ポットの紅茶。観葉植物・雑貨・2Fギャラリー。月曜定休。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark: #1f3326; --dark2: #2f4a37; --accent: #c9d8a8; --accent2: #b5835a;
+      --bg: #f6f5ef; --paper: #ffffff; --ink: #1f3326; --soft: #5b6b5f; --tint: #e7eee0;
+      --on-accent: #1f3326;
+      --line: rgba(0,0,0,0.1); --shadow: 0 16px 36px rgba(0,0,0,0.10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: "Noto Sans JP", system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; font-size: 1.05rem; }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .skip { position: absolute; left: 12px; top: -48px; background: var(--ink); color: #fff; padding: 8px 12px; z-index: 80; }
+    .skip:focus { top: 48px; }
+    .preview-banner { display: block; background: var(--dark); color: #fff; text-align: center; text-decoration: none; font-weight: 600; font-size: 0.82rem; padding: 9px 14px; line-height: 1.35; }
+    .preview-banner:hover { background: #000; }
+    .preview-banner span { opacity: 0.75; font-weight: 500; }
+    header.site { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--paper) 94%, transparent); border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
+    .nav { max-width: 1080px; margin: 0 auto; padding: 10px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 700; line-height: 1.2; }
+    .brand small { display: block; font-weight: 500; color: var(--soft); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; }
+    .mark { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg,#c9d8a8,#b5835a); flex: none; display: grid; place-items: center; font-size: 1.15rem; }
+    .nav-toggle { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 8px 14px; font: inherit; font-weight: 650; color: var(--ink); }
+    .nav-links { display: none; list-style: none; margin: 0; padding: 0 18px 14px; }
+    .nav-links.open { display: grid; }
+    .nav-links a { display: block; text-decoration: none; color: var(--ink); font-weight: 650; padding: 8px 0; }
+    @media (min-width: 760px) {
+      header.site .bar { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding-right: 18px; }
+      .nav-toggle { display: none; }
+      .nav-links { display: flex; gap: 22px; padding: 0; align-items: center; }
+      .nav-links a { padding: 0; }
+    }
+    .hero { background: radial-gradient(520px 260px at 85% 8%, color-mix(in srgb, #c9d8a8 32%, transparent), transparent 60%), linear-gradient(160deg,#2f4a37,#1f3326 62%); color: #fff; overflow: hidden; }
+    .strip { height: 14px; background: repeating-linear-gradient(90deg,#c9d8a8 0 22px,#b5835a 22px 44px,#e7eee0 44px 66px); }
+    .hero-inner { max-width: 1080px; margin: 0 auto; padding: 34px 18px 50px; display: grid; gap: 22px; }
+    .kicker { margin: 0; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.78rem; color: var(--accent); font-weight: 700; }
+    h1 { font-family: "Shippori Mincho B1", "Noto Serif JP", serif; font-weight: 800; font-size: clamp(2.7rem, 9vw, 5rem); line-height: 0.95; margin: 10px 0 12px; letter-spacing: -0.02em; }
+    .lead { font-size: 1.12rem; max-width: 38rem; margin: 0; opacity: 0.92; }
+    .stars { margin: 14px 0 0; font-weight: 700; color: var(--accent); }
+    .badge { display: inline-block; background: var(--accent2); color: #fff; border-radius: 999px; padding: 6px 12px; font-size: 0.86rem; font-weight: 700; margin-top: 10px; }
+    .today { margin-top: 16px; background: rgba(255,255,255,0.09); border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 16px; padding: 14px 16px; max-width: 27rem; }
+    .today span { display: block; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+    .today strong { display: block; font-family: "Shippori Mincho B1", "Noto Serif JP", serif; font-size: 1.4rem; line-height: 1.25; margin-top: 2px; }
+    .today small { display: block; opacity: 0.8; margin-top: 2px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 999px; padding: 12px 18px; font-weight: 700; border: 2px solid transparent; min-height: 48px; }
+    .btn-main { background: var(--accent); color: var(--on-accent); }
+    .btn-main:hover { filter: brightness(1.08); }
+    .btn-ghost { color: inherit; border-color: color-mix(in srgb, currentColor 40%, transparent); }
+    .btn-ghost:hover { background: rgba(255,255,255,0.08); }
+    .btn-solid { background: var(--accent2); color: #fff; }
+    .art { width: min(100%, 300px); justify-self: center; }
+    @media (min-width: 760px) { .art { width: min(100%, 400px); } }
+    .art svg { width: 100%; height: auto; display: block; }
+    section { padding: 56px 18px; }
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    .eyebrow { margin: 0 0 8px; color: var(--accent2); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    h2 { font-family: "Shippori Mincho B1", "Noto Serif JP", serif; font-weight: 800; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; margin: 0 0 12px; }
+    .lede { color: var(--soft); max-width: 44rem; margin-top: 0; }
+    .story { background: var(--paper); }
+    .story p { max-width: 44rem; }
+    .facts { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 18px 0 0; }
+    .facts li { background: var(--tint); border-radius: 999px; padding: 6px 12px; font-weight: 600; font-size: 0.92rem; }
+    .quotes { display: grid; gap: 12px; margin-top: 22px; }
+    blockquote { margin: 0; background: var(--tint); border-left: 5px solid var(--accent); border-radius: 0 14px 14px 0; padding: 14px 16px; font-family: "Shippori Mincho B1", "Noto Serif JP", serif; font-size: 1.08rem; }
+    blockquote cite { display: block; font-family: "Noto Sans JP", sans-serif; font-style: normal; font-size: 0.82rem; color: var(--soft); margin-top: 6px; }
+    .grid { display: grid; gap: 12px; }
+    .card { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 16px; box-shadow: var(--shadow); }
+    .card h3 { margin: 8px 0 4px; font-size: 1.08rem; }
+    .card p { margin: 0; color: var(--soft); }
+    .emoji { font-size: 1.6rem; }
+    .note { color: var(--soft); font-size: 0.9rem; margin-top: 14px; }
+    .hours { background: linear-gradient(180deg, var(--bg), var(--tint)); }
+    .visit-grid { display: grid; gap: 12px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+    tr.today-row { background: color-mix(in srgb, var(--accent) 22%, #fff); outline: 2px solid var(--accent); }
+    tr.today-row th::after { content: " · 本日"; color: var(--accent2); font-weight: 700; }
+    tr.closed th, tr.closed td { color: #9a9088; }
+    .addr { font-size: 1.12rem; font-weight: 700; margin: 0 0 8px; }
+    .card .btn { margin-top: 6px; }
+    .cta { background: var(--dark2); color: #fff; }
+    .cta .eyebrow { color: var(--accent); }
+    .cta .lede { color: rgba(255,255,255,0.86); }
+    footer { background: var(--dark); color: #eee; padding: 28px 18px 36px; }
+    footer a { color: var(--accent); }
+    .foot { max-width: 1080px; margin: 0 auto; display: grid; gap: 8px; }
+    .foot small { opacity: 0.75; }
+    @media (min-width: 760px) {
+      .hero-inner { grid-template-columns: 1.15fr 0.85fr; align-items: center; padding: 56px 18px 68px; }
+      .grid { grid-template-columns: repeat(3, 1fr); }
+      .quotes { grid-template-columns: repeat(3, 1fr); }
+      .visit-grid { grid-template-columns: 1.05fr 0.95fr; }
+    }
+
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">本文へスキップ</a>
+  <a class="preview-banner" href="https://brightfrontdesign.com">Brightfront Studio による無料プレビュー — le bois（ル・ボア） のために制作 <span>· brightfrontdesign.com</span></a>
+  <header class="site">
+    <div class="bar">
+      <div class="nav">
+        <a class="brand" href="#top"><span class="mark" aria-hidden="true">🌿</span><div>le bois<small>カフェ &amp; 雑貨 · 清澄白河</small></div></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">メニュー</button>
+      </div>
+      <ul class="nav-links" id="nav-links"><li><a href="#story">お店について</a></li><li><a href="#menu">メニュー</a></li><li><a href="#visit">営業時間</a></li><li><a href="#visit-us">アクセス</a></li></ul>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" style="padding:0">
+      <div class="strip" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div>
+          <p class="kicker">東京・江東区 · 清澄白河</p>
+          <h1>le bois<br>ル・ボア</h1>
+          <p class="lead">緑に包まれたボタニカルカフェ。名物の長崎チーズケーキとクロワッサンサンド、ポットでたっぷりの紅茶を、植物とアートに囲まれて。</p>
+          <p class="stars">★ Google 4.3（口コミ102件）</p>
+          <span class="badge">観葉植物 · 雑貨 · ギャラリー</span> 
+          <div class="today" aria-live="polite">
+            <span>本日の営業</span>
+            <strong id="today-status">営業時間を確認中…</strong>
+            <small id="today-sub"></small>
+          </div>
+          <div class="hero-actions"><a class="btn btn-main" href="tel:+819070941519">電話する</a><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=le+bois%2C+3-1-14+Miyoshi%2C+Koto+City%2C+Tokyo">道順を見る</a><a class="btn btn-ghost" href="https://ig.me/m/le.bois_kiyosumi">メッセージ</a></div>
+        </div>
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><circle cx="310" cy="70" r="48" fill="#c9d8a8" opacity=".22"/><path d="M200 270L150 170h100z" fill="#ffffff"/><path d="M150 170h100l-12 24h-76z" fill="#b5835a" opacity=".6"/><g stroke="#4f7a4a" stroke-width="5" fill="none"><path d="M200 170c0-40-30-70-60-90"/><path d="M200 170c0-50 10-80 0-110"/><path d="M200 170c0-40 30-70 70-84"/><path d="M200 170c-10-30-50-40-80-30"/><path d="M200 170c10-30 50-36 86-24"/></g><path d="M150 112c-10-20 10-30 20-20-6 10-10 18-20 20zM240 120c10-20 30-14 30-4-10 6-20 8-30 4z" fill="#6e9c5f"/><circle cx="140" cy="64" r="16" fill="#c9d8a8"/><circle cx="156" cy="80" r="16" fill="#c9d8a8"/><circle cx="140" cy="96" r="16" fill="#c9d8a8"/><circle cx="124" cy="80" r="16" fill="#c9d8a8"/><circle cx="140" cy="80" r="11" fill="#ffd35c"/><circle cx="200" cy="44" r="14" fill="#b5835a"/><circle cx="214" cy="58" r="14" fill="#b5835a"/><circle cx="200" cy="72" r="14" fill="#b5835a"/><circle cx="186" cy="58" r="14" fill="#b5835a"/><circle cx="200" cy="58" r="10" fill="#ffd35c"/><circle cx="270" cy="72" r="14" fill="#c9d8a8"/><circle cx="284" cy="86" r="14" fill="#c9d8a8"/><circle cx="270" cy="100" r="14" fill="#c9d8a8"/><circle cx="256" cy="86" r="14" fill="#c9d8a8"/><circle cx="270" cy="86" r="10" fill="#ffd35c"/><circle cx="120" cy="128" r="12" fill="#1f3326"/><circle cx="132" cy="140" r="12" fill="#1f3326"/><circle cx="120" cy="152" r="12" fill="#1f3326"/><circle cx="108" cy="140" r="12" fill="#1f3326"/><circle cx="120" cy="140" r="8" fill="#ffd35c"/><circle cx="286" cy="134" r="12" fill="#b5835a"/><circle cx="298" cy="146" r="12" fill="#b5835a"/><circle cx="286" cy="158" r="12" fill="#b5835a"/><circle cx="274" cy="146" r="12" fill="#b5835a"/><circle cx="286" cy="146" r="8" fill="#ffd35c"/></svg></div>
+      </div>
+    </section>
+    <section class="story" id="story">
+      <div class="wrap">
+        <p class="eyebrow">お店について</p>
+        <h2>植物と、アートと、チーズケーキ。</h2>
+        <p>le boisは、清澄白河の散歩道にある小さなカフェ。店内には観葉植物や雑貨が並び、2階はレンタルギャラリー。東京都現代美術館の近くで、アート散歩の途中に立ち寄る人も多いお店です。</p><p>奥の席は天井が低い、秘密基地のような空間。「今まで行った中でいちばん居心地のいいカフェのひとつ」という声も届く、近所の方にも旅行者にも愛されるお店です。</p>
+        <ul class="facts"><li>観葉植物・雑貨の販売</li><li>2Fレンタルギャラリー</li><li>東京都現代美術館の近く</li><li>月曜定休（祝日は営業）</li></ul>
+        <div class="quotes"><blockquote>“Very cozy and extremely delicious”<cite>Googleの口コミ（2025年11月）</cite></blockquote><blockquote>“One of the coziest cafe I’ve been to.”<cite>Googleの口コミ（2025年6月）</cite></blockquote><blockquote>“The cheesecake was extremely good.”<cite>Googleの口コミ（2025年2月）</cite></blockquote></div>
+      </div>
+    </section>
+    <section id="menu">
+      <div class="wrap">
+        <p class="eyebrow">メニュー</p>
+        <h2>口コミで人気のメニュー。</h2>
+        <p class="lede">内容は変わることがあります。最新情報はInstagramでご確認ください。</p>
+        <div class="grid"><article class="card"><div class="emoji" aria-hidden="true">🍰</div><h3>長崎チーズケーキ</h3><p>ザラメの食感がアクセントの名物ケーキ。</p></article><article class="card"><div class="emoji" aria-hidden="true">🥐</div><h3>クロワッサンサンド</h3><p>食事にもぴったり。</p></article><article class="card"><div class="emoji" aria-hidden="true">🫖</div><h3>ポットの紅茶</h3><p>カップではなくポットでたっぷり。</p></article><article class="card"><div class="emoji" aria-hidden="true">🍷</div><h3>ワイン</h3><p>チーズケーキと合わせて。</p></article><article class="card"><div class="emoji" aria-hidden="true">🪴</div><h3>観葉植物</h3><p>お気に入りをお持ち帰り。</p></article><article class="card"><div class="emoji" aria-hidden="true">🖼️</div><h3>ギャラリー</h3><p>2階で展示を開催。</p></article></div>
+        <p class="note">メニューは公開されている口コミ・掲載情報をもとに作成しています。</p>
+      </div>
+    </section>
+    <section class="hours" id="visit">
+      <div class="wrap">
+        <p class="eyebrow">営業時間・アクセス</p>
+        <h2>お店へのアクセス</h2>
+        <div class="visit-grid">
+          <div class="card">
+            <table id="hours"><caption style="position:absolute;left:-9999px;">営業時間（本日を強調表示）</caption><tbody><tr data-day="0"><th scope="row">日曜日</th><td>11:00–18:00</td></tr><tr data-day="1" class="closed"><th scope="row">月曜日</th><td>定休日</td></tr><tr data-day="2"><th scope="row">火曜日</th><td>11:00–18:00</td></tr><tr data-day="3"><th scope="row">水曜日</th><td>11:00–18:00</td></tr><tr data-day="4"><th scope="row">木曜日</th><td>11:00–18:00</td></tr><tr data-day="5"><th scope="row">金曜日</th><td>11:00–18:00</td></tr><tr data-day="6"><th scope="row">土曜日</th><td>11:00–18:00</td></tr></tbody></table>
+            <p class="note">日本時間。月曜定休（祝日は営業）。</p>
+          </div>
+          <div class="card">
+            <h3>le bois</h3>
+            <p class="addr">〒135-0022<br>東京都江東区三好3-1-14</p>
+            <p>清澄白河駅から散歩がてら。少人数（4名程度まで）向けの席です。</p>
+            <p>電話 <a href="tel:+819070941519">090-7094-1519</a><br>メール <a href="mailto:thelittlethings.kiyosumi@gmail.com">thelittlethings.kiyosumi@gmail.com</a><br>Instagram <a href="https://instagram.com/le.bois_kiyosumi">@le.bois_kiyosumi</a></p>
+            <p><a class="btn btn-solid" href="https://www.google.com/maps/search/?api=1&amp;query=le+bois%2C+3-1-14+Miyoshi%2C+Koto+City%2C+Tokyo">道順を見る</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta" id="visit-us">
+      <div class="wrap">
+        <p class="eyebrow">ご来店をお待ちしています</p>
+        <h2>緑のなかで、ひと休み。</h2>
+        <p class="lede">ギャラリーのご利用やお問い合わせは、お電話またはInstagramのDMでどうぞ。</p>
+        <div class="hero-actions"><a class="btn btn-main" href="tel:+819070941519">電話する 090-7094-1519</a><a class="btn btn-ghost" href="https://instagram.com/le.bois_kiyosumi">Instagramを見る</a></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="foot">
+      <strong>le bois（ル・ボア）</strong>
+      <div>東京都江東区三好3-1-14</div>
+      <div><a href="tel:+819070941519">090-7094-1519</a> · <a href="mailto:thelittlethings.kiyosumi@gmail.com">thelittlethings.kiyosumi@gmail.com</a> · <a href="https://instagram.com/le.bois_kiyosumi">Instagram</a></div>
+      <div>★ Google 4.3（口コミ102件）</div>
+      <small>Brightfront Studio による無料プレビュー · <a href="https://brightfrontdesign.com">brightfrontdesign.com</a> · 掲載内容は公開情報と口コミをもとにしています。ご来店前にご確認ください。</small>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector(".nav-toggle"), list = document.getElementById("nav-links");
+      btn.addEventListener("click", function () { var o = list.classList.toggle("open"); btn.setAttribute("aria-expanded", o ? "true" : "false"); });
+      list.addEventListener("click", function (e) { if (e.target.tagName === "A") { list.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); } });
+      var TZ = "Asia/Tokyo", H = [[660, 1080], null, [660, 1080], [660, 1080], [660, 1080], [660, 1080], [660, 1080]], T = ["11:00\u201318:00", "\u5b9a\u4f11\u65e5", "11:00\u201318:00", "11:00\u201318:00", "11:00\u201318:00", "11:00\u201318:00", "11:00\u201318:00"], H12 = false;
+      var DAYS = ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日"];
+      var parts = new Intl.DateTimeFormat("en-GB", { weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23", timeZone: TZ }).formatToParts(new Date());
+      var get = function (t) { for (var i = 0; i < parts.length; i++) if (parts[i].type === t) return parts[i].value; };
+      var day = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[get("weekday")];
+      var now = parseInt(get("hour"), 10) * 60 + parseInt(get("minute"), 10);
+      function fmt(m) { var h = Math.floor(m / 60) % 24, mm = m % 60; var s = mm ? ":" + (mm < 10 ? "0" : "") + mm : "";
+        if (H12) { var ap = h >= 12 ? "pm" : "am"; var hh = h % 12 || 12; return hh + s + ap; } return (h < 10 ? "0" : "") + h + ":" + (mm < 10 ? "0" : "") + mm; }
+      function nextOpen(d) { for (var i = 1; i <= 7; i++) { var k = (d + i) % 7; if (H[k]) return (i === 1 ? "明日" : DAYS[k]) + " " + fmt(H[k][0]); } return ""; }
+      var st = document.getElementById("today-status"), sub = document.getElementById("today-sub"), h = H[day];
+      if (!h) { st.textContent = "本日は定休日です"; sub.textContent = "次の営業：" + nextOpen(day); }
+      else if (now < h[0]) { st.textContent = "本日 " + fmt(h[0]) + " から営業"; sub.textContent = "本日：" + T[day]; }
+      else if (now < h[1]) { st.textContent = "営業中 · " + fmt(h[1]) + " まで"; sub.textContent = "本日：" + T[day]; }
+      else { st.textContent = "本日の営業は終了しました"; sub.textContent = "次の営業：" + nextOpen(day); }
+      var row = document.querySelector('#hours tr[data-day="' + day + '"]'); if (row) row.classList.add("today-row");
+    })();
+  </script>
+</body>
+</html>
