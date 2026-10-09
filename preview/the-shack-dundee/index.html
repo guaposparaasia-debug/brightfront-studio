@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>The Shack Street Food — Award-winning burgers, filthy fries and pehs in Dundee</title>
+  <meta name="description" content="The Shack is Gill Young’s award-winning street food spot at 5 Isla Street, Dundee, since 2016: handcrafted burgers, jerk chicken, filthy fries, homemade pehs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark: #141414; --dark2: #22201d; --accent: #ffcc00; --accent2: #d7261e;
+      --bg: #f7f1e6; --paper: #ffffff; --ink: #1b1b1b; --soft: #5a544c; --tint: #fbe9b0;
+      --on-accent: #141414;
+      --line: rgba(0,0,0,0.1); --shadow: 0 16px 36px rgba(0,0,0,0.10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: "Work Sans", system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; font-size: 1.05rem; }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .skip { position: absolute; left: 12px; top: -48px; background: var(--ink); color: #fff; padding: 8px 12px; z-index: 80; }
+    .skip:focus { top: 48px; }
+    .preview-banner { display: block; background: var(--dark); color: #fff; text-align: center; text-decoration: none; font-weight: 600; font-size: 0.82rem; padding: 9px 14px; line-height: 1.35; }
+    .preview-banner:hover { background: #000; }
+    .preview-banner span { opacity: 0.75; font-weight: 500; }
+    header.site { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--paper) 94%, transparent); border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
+    .nav { max-width: 1080px; margin: 0 auto; padding: 10px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 700; line-height: 1.2; }
+    .brand small { display: block; font-weight: 500; color: var(--soft); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; }
+    .mark { width: 38px; height: 38px; border-radius: 10px; background: #d7261e; flex: none; display: grid; place-items: center; font-size: 1.15rem; }
+    .nav-toggle { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 8px 14px; font: inherit; font-weight: 650; color: var(--ink); }
+    .nav-links { display: none; list-style: none; margin: 0; padding: 0 18px 14px; }
+    .nav-links.open { display: grid; }
+    .nav-links a { display: block; text-decoration: none; color: var(--ink); font-weight: 650; padding: 8px 0; }
+    @media (min-width: 760px) {
+      header.site .bar { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding-right: 18px; }
+      .nav-toggle { display: none; }
+      .nav-links { display: flex; gap: 22px; padding: 0; align-items: center; }
+      .nav-links a { padding: 0; }
+    }
+    .hero { background: radial-gradient(520px 240px at 85% 5%, rgba(255,204,0,0.25), transparent 60%), linear-gradient(160deg,#2a2622,#141414 65%); color: #fff; overflow: hidden; }
+    .strip { height: 14px; background: repeating-linear-gradient(90deg,#d7261e 0 24px,#ffcc00 24px 48px); }
+    .hero-inner { max-width: 1080px; margin: 0 auto; padding: 34px 18px 50px; display: grid; gap: 22px; }
+    .kicker { margin: 0; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.78rem; color: var(--accent); font-weight: 700; }
+    h1 { font-family: "Bowlby One", Impact, sans-serif; font-weight: 400; font-size: clamp(2.7rem, 9vw, 5rem); line-height: 0.95; margin: 10px 0 12px; letter-spacing: -0.02em; }
+    .lead { font-size: 1.12rem; max-width: 38rem; margin: 0; opacity: 0.92; }
+    .stars { margin: 14px 0 0; font-weight: 700; color: var(--accent); }
+    .badge { display: inline-block; background: var(--accent2); color: #fff; border-radius: 999px; padding: 6px 12px; font-size: 0.86rem; font-weight: 700; margin-top: 10px; }
+    .today { margin-top: 16px; background: rgba(255,255,255,0.09); border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 16px; padding: 14px 16px; max-width: 27rem; }
+    .today span { display: block; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+    .today strong { display: block; font-family: "Bowlby One", Impact, sans-serif; font-size: 1.4rem; line-height: 1.25; margin-top: 2px; }
+    .today small { display: block; opacity: 0.8; margin-top: 2px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 999px; padding: 12px 18px; font-weight: 700; border: 2px solid transparent; min-height: 48px; }
+    .btn-main { background: var(--accent); color: var(--on-accent); }
+    .btn-main:hover { filter: brightness(1.08); }
+    .btn-ghost { color: inherit; border-color: color-mix(in srgb, currentColor 40%, transparent); }
+    .btn-ghost:hover { background: rgba(255,255,255,0.08); }
+    .btn-solid { background: var(--accent2); color: #fff; }
+    .art { width: min(100%, 300px); justify-self: center; }
+    @media (min-width: 760px) { .art { width: min(100%, 400px); } }
+    .art svg { width: 100%; height: auto; display: block; }
+    section { padding: 56px 18px; }
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    .eyebrow { margin: 0 0 8px; color: var(--accent2); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    h2 { font-family: "Bowlby One", Impact, sans-serif; font-weight: 400; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; margin: 0 0 12px; }
+    .lede { color: var(--soft); max-width: 44rem; margin-top: 0; }
+    .story { background: var(--paper); }
+    .story p { max-width: 44rem; }
+    .facts { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 18px 0 0; }
+    .facts li { background: var(--tint); border-radius: 999px; padding: 6px 12px; font-weight: 600; font-size: 0.92rem; }
+    .quotes { display: grid; gap: 12px; margin-top: 22px; }
+    blockquote { margin: 0; background: var(--tint); border-left: 5px solid var(--accent); border-radius: 0 14px 14px 0; padding: 14px 16px; font-family: "Bowlby One", Impact, sans-serif; font-size: 1.08rem; }
+    blockquote cite { display: block; font-family: "Work Sans", sans-serif; font-style: normal; font-size: 0.82rem; color: var(--soft); margin-top: 6px; }
+    .grid { display: grid; gap: 12px; }
+    .card { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 16px; box-shadow: var(--shadow); }
+    .card h3 { margin: 8px 0 4px; font-size: 1.08rem; }
+    .card p { margin: 0; color: var(--soft); }
+    .emoji { font-size: 1.6rem; }
+    .note { color: var(--soft); font-size: 0.9rem; margin-top: 14px; }
+    .hours { background: linear-gradient(180deg, var(--bg), var(--tint)); }
+    .visit-grid { display: grid; gap: 12px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+    tr.today-row { background: color-mix(in srgb, var(--accent) 22%, #fff); outline: 2px solid var(--accent); }
+    tr.today-row th::after { content: " · Today"; color: var(--accent2); font-weight: 700; }
+    tr.closed th, tr.closed td { color: #9a9088; }
+    .addr { font-size: 1.12rem; font-weight: 700; margin: 0 0 8px; }
+    .card .btn { margin-top: 6px; }
+    .cta { background: var(--dark2); color: #fff; }
+    .cta .eyebrow { color: var(--accent); }
+    .cta .lede { color: rgba(255,255,255,0.86); }
+    footer { background: var(--dark); color: #eee; padding: 28px 18px 36px; }
+    footer a { color: var(--accent); }
+    .foot { max-width: 1080px; margin: 0 auto; display: grid; gap: 8px; }
+    .foot small { opacity: 0.75; }
+    @media (min-width: 760px) {
+      .hero-inner { grid-template-columns: 1.15fr 0.85fr; align-items: center; padding: 56px 18px 68px; }
+      .grid { grid-template-columns: repeat(3, 1fr); }
+      .quotes { grid-template-columns: repeat(3, 1fr); }
+      .visit-grid { grid-template-columns: 1.05fr 0.95fr; }
+    }
+
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <a class="preview-banner" href="https://brightfrontdesign.com">Free preview by Brightfront Studio — made for The Shack Street Food <span>· brightfrontdesign.com</span></a>
+  <header class="site">
+    <div class="bar">
+      <div class="nav">
+        <a class="brand" href="#top"><span class="mark" aria-hidden="true">🍔</span><div>The Shack Street Food<small>Street food · Dundee</small></div></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      </div>
+      <ul class="nav-links" id="nav-links"><li><a href="#story">Gill’s story</a></li><li><a href="#menu">Menu</a></li><li><a href="#visit">Hours</a></li><li><a href="#events">Events</a></li></ul>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" style="padding:0">
+      <div class="strip" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div>
+          <p class="kicker">Dundee · 5 Isla Street · Est. 2016</p>
+          <h1>The Shack</h1>
+          <p class="lead">Award-winning street food from Auntie Gill: handcrafted burgers, jerk chicken, loaded filthy fries, nachos, steaks, chilli and proper homemade pehs. Dogs always welcome.</p>
+          <p class="stars">★ 4.9 from 78 Google reviews</p>
+          <span class="badge">Award-winning · Est. 2016</span> 
+          <div class="today" aria-live="polite">
+            <span>Today on Isla Street</span>
+            <strong id="today-status">Checking hours…</strong>
+            <small id="today-sub"></small>
+          </div>
+          <div class="hero-actions"><a class="btn btn-main" href="tel:+447562512501">Call</a><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=The+Shack+Street+Food%2C+5+Isla+St%2C+Dundee+DD3+7HT">Get directions</a><a class="btn btn-ghost" href="https://m.me/theshackstreetfood">Message us</a></div>
+        </div>
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><path d="M40 120l110-60 110 60z" fill="#d7261e"/><rect x="55" y="120" width="190" height="120" fill="#f7f1e6"/><rect x="80" y="140" width="140" height="56" rx="6" fill="#141414"/><rect x="80" y="140" width="140" height="12" fill="#ffcc00"/><text x="150" y="114" font-family="Impact,Arial" font-size="17" text-anchor="middle" fill="#ffcc00">THE SHACK</text><rect x="55" y="210" width="190" height="10" fill="#d7261e"/><g transform="translate(300 150)"><ellipse cx="0" cy="-24" rx="56" ry="30" fill="#e9a23b"/><rect x="-58" y="-10" width="116" height="10" rx="5" fill="#4caf50"/><rect x="-60" y="0" width="120" height="16" rx="8" fill="#6b3a1e"/><rect x="-56" y="16" width="112" height="8" fill="#ffcc00"/><ellipse cx="0" cy="34" rx="56" ry="14" fill="#e9a23b"/><circle cx="-20" cy="-34" r="2.5" fill="#fff"/><circle cx="6" cy="-40" r="2.5" fill="#fff"/><circle cx="24" cy="-30" r="2.5" fill="#fff"/></g><path d="M270 250c10-6 22-6 30 0" stroke="#ffcc00" stroke-width="4" fill="none"/></svg></div>
+      </div>
+    </section>
+    <section class="story" id="story">
+      <div class="wrap">
+        <p class="eyebrow">Gill’s story</p>
+        <h2>“I’d never made a burger until the night before I opened.”</h2>
+        <p>Gill Young opened The Shack on Isla Street in 2016 — and, as she told The Courier, she’d never made a burger until the night before. Since then “Auntie Gill’s” burgers have become the stuff of Dundee legend, with folk travelling from as far as Montrose.</p><p>The Shack is famous for its banter as much as its food: dance music on, Gill calling out names mid-service, and a welcome like an old friend. In 2024 she added a second truck, “the baby Shack”, for weddings, corporate events and festivals.</p>
+        <ul class="facts"><li>Since 2016</li><li>Dogs always welcome</li><li>Events truck for hire</li><li>Festive fries every winter</li></ul>
+        <div class="quotes"><blockquote>“Prob the best food Dundee has to offer!”<cite>Google review</cite></blockquote><blockquote>“Gill could not have been more welcoming and friendly.”<cite>Google review, Dec 2025</cite></blockquote><blockquote>“Best service in Dundee.”<cite>Google review, May 2025</cite></blockquote></div>
+      </div>
+    </section>
+    <section id="menu">
+      <div class="wrap">
+        <p class="eyebrow">The menu</p>
+        <h2>Proper Dundee comfort food.</h2>
+        <p class="lede">Straight from The Shack’s own Facebook intro and customer favourites. Prices at the hatch.</p>
+        <div class="grid"><article class="card"><div class="emoji" aria-hidden="true">🍔</div><h3>Handcrafted burgers</h3><p>Smoke cheese burger, NY deli burger, the DY burger and more.</p></article><article class="card"><div class="emoji" aria-hidden="true">🍟</div><h3>Loaded filthy fries</h3><p>Try them topped with jerk chicken — and the chipotle sauce.</p></article><article class="card"><div class="emoji" aria-hidden="true">🍗</div><h3>Jerk chicken</h3><p>A Shack favourite, on fries or on its own.</p></article><article class="card"><div class="emoji" aria-hidden="true">🥧</div><h3>Homemade pehs</h3><p>Creamy chicken peh, mince, curry, chilli and macaroni pies — get there early, they sell out.</p></article><article class="card"><div class="emoji" aria-hidden="true">🌶️</div><h3>Nachos, steaks &amp; chilli</h3><p>Hearty plates for a proper feed.</p></article><article class="card"><div class="emoji" aria-hidden="true">🍌</div><h3>Deep Banoffee</h3><p>Save room for pudding.</p></article></div>
+        <p class="note">Seasonal: Gill’s festive fries return over the holidays.</p>
+      </div>
+    </section>
+    <section class="hours" id="visit">
+      <div class="wrap">
+        <p class="eyebrow">Opening times &amp; location</p>
+        <h2>Find The Shack.</h2>
+        <div class="visit-grid">
+          <div class="card">
+            <table id="hours"><caption style="position:absolute;left:-9999px;">Weekly hours, today highlighted</caption><tbody><tr data-day="0" class="closed"><th scope="row">Sunday</th><td>Closed</td></tr><tr data-day="1"><th scope="row">Monday</th><td>11am–3pm</td></tr><tr data-day="2"><th scope="row">Tuesday</th><td>11am–3pm</td></tr><tr data-day="3"><th scope="row">Wednesday</th><td>11am–3pm</td></tr><tr data-day="4"><th scope="row">Thursday</th><td>11am–3pm</td></tr><tr data-day="5"><th scope="row">Friday</th><td>11am–3pm</td></tr><tr data-day="6" class="closed"><th scope="row">Saturday</th><td>Closed</td></tr></tbody></table>
+            <p class="note">Hours from the Google listing, UK time. Gill posts any changes on Facebook.</p>
+          </div>
+          <div class="card">
+            <h3>Isla Street, Dundee</h3>
+            <p class="addr">5 Isla Street<br>Dundee DD3 7HT</p>
+            <p>Takeaway with a smile and plenty of chat. Dogs welcome.</p>
+            <p>Phone <a href="tel:+447562512501">07562 512501</a><br>Email <a href="mailto:theshackstreetfood@gmail.com">theshackstreetfood@gmail.com</a><br>Facebook <a href="https://www.facebook.com/theshackstreetfood/">facebook.com/theshackstreetfood</a></p>
+            <p><a class="btn btn-solid" href="https://www.google.com/maps/search/?api=1&amp;query=The+Shack+Street+Food%2C+5+Isla+St%2C+Dundee+DD3+7HT">Get directions</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta" id="events">
+      <div class="wrap">
+        <p class="eyebrow">Weddings · corporate · festivals</p>
+        <h2>Book the baby Shack.</h2>
+        <p class="lede">The Shack Events truck brings breakfasts, coffees, homemade cakes and pies to weddings, corporate events and small festivals across Dundee and beyond.</p>
+        <div class="hero-actions"><a class="btn btn-main" href="mailto:theshackstreetfood@gmail.com?subject=Events%20truck%20enquiry">Email an enquiry</a><a class="btn btn-ghost" href="https://m.me/theshackstreetfood">Message on Facebook</a><a class="btn btn-ghost" href="tel:+447562512501">Call 07562 512501</a></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="foot">
+      <strong>The Shack Street Food</strong>
+      <div>5 Isla Street, Dundee DD3 7HT</div>
+      <div><a href="tel:+447562512501">07562 512501</a> · <a href="mailto:theshackstreetfood@gmail.com">theshackstreetfood@gmail.com</a> · <a href="https://www.facebook.com/theshackstreetfood/">Facebook</a></div>
+      <div>★ 4.9 from 78 Google reviews</div>
+      <small>Free preview by Brightfront Studio · <a href="https://brightfrontdesign.com">brightfrontdesign.com</a> · Details from public listings and reviews; please confirm before ordering.</small>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector(".nav-toggle"), list = document.getElementById("nav-links");
+      btn.addEventListener("click", function () { var o = list.classList.toggle("open"); btn.setAttribute("aria-expanded", o ? "true" : "false"); });
+      list.addEventListener("click", function (e) { if (e.target.tagName === "A") { list.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); } });
+      var TZ = "Europe/London", H = [null, [660, 900], [660, 900], [660, 900], [660, 900], [660, 900], null], T = ["Closed", "11am\u20133pm", "11am\u20133pm", "11am\u20133pm", "11am\u20133pm", "11am\u20133pm", "Closed"], H12 = true;
+      var DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      var parts = new Intl.DateTimeFormat("en-GB", { weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23", timeZone: TZ }).formatToParts(new Date());
+      var get = function (t) { for (var i = 0; i < parts.length; i++) if (parts[i].type === t) return parts[i].value; };
+      var day = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[get("weekday")];
+      var now = parseInt(get("hour"), 10) * 60 + parseInt(get("minute"), 10);
+      function fmt(m) { var h = Math.floor(m / 60) % 24, mm = m % 60; var s = mm ? ":" + (mm < 10 ? "0" : "") + mm : "";
+        if (H12) { var ap = h >= 12 ? "pm" : "am"; var hh = h % 12 || 12; return hh + s + ap; } return (h < 10 ? "0" : "") + h + ":" + (mm < 10 ? "0" : "") + mm; }
+      function nextOpen(d) { for (var i = 1; i <= 7; i++) { var k = (d + i) % 7; if (H[k]) return (i === 1 ? "tomorrow" : DAYS[k]) + " at " + fmt(H[k][0]); } return ""; }
+      var st = document.getElementById("today-status"), sub = document.getElementById("today-sub"), h = H[day];
+      if (!h) { st.textContent = "Closed today"; sub.textContent = "Back " + nextOpen(day); }
+      else if (now < h[0]) { st.textContent = "Opens today at " + fmt(h[0]); sub.textContent = "Today: " + T[day]; }
+      else if (now < h[1]) { st.textContent = "Open now · until " + fmt(h[1]); sub.textContent = "Today: " + T[day]; }
+      else { st.textContent = "Closed for today"; sub.textContent = "Back " + nextOpen(day); }
+      var row = document.querySelector('#hours tr[data-day="' + day + '"]'); if (row) row.classList.add("today-row");
+    })();
+  </script>
+</body>
+</html>
