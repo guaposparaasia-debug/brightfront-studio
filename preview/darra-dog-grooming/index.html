@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Darra Dog Grooming — Family-Run Dog Grooming in Darra, Brisbane</title>
+  <meta name="description" content="Darra Dog Grooming: a family-owned, home-based dog grooming salon in Darra, Brisbane. Gentle grooms, summer cuts and a loyalty program, at fair prices.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark: #123047; --dark2: #1b4566; --accent: #ffd166; --accent2: #ef476f;
+      --bg: #f6f9fb; --paper: #ffffff; --ink: #123047; --soft: #56677a; --tint: #e5f1f8;
+      --on-accent: #123047;
+      --line: rgba(0,0,0,0.1); --shadow: 0 16px 36px rgba(0,0,0,0.10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: "Nunito", system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; font-size: 1.05rem; }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .skip { position: absolute; left: 12px; top: -48px; background: var(--ink); color: #fff; padding: 8px 12px; z-index: 80; }
+    .skip:focus { top: 48px; }
+    .preview-banner { display: block; background: var(--dark); color: #fff; text-align: center; text-decoration: none; font-weight: 600; font-size: 0.82rem; padding: 9px 14px; line-height: 1.35; }
+    .preview-banner:hover { background: #000; }
+    .preview-banner span { opacity: 0.75; font-weight: 500; }
+    header.site { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--paper) 94%, transparent); border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
+    .nav { max-width: 1080px; margin: 0 auto; padding: 10px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 700; line-height: 1.2; }
+    .brand small { display: block; font-weight: 500; color: var(--soft); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; }
+    .mark { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg,#ffd166,#ef476f); flex: none; display: grid; place-items: center; font-size: 1.15rem; }
+    .nav-toggle { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 8px 14px; font: inherit; font-weight: 650; color: var(--ink); }
+    .nav-links { display: none; list-style: none; margin: 0; padding: 0 18px 14px; }
+    .nav-links.open { display: grid; }
+    .nav-links a { display: block; text-decoration: none; color: var(--ink); font-weight: 650; padding: 8px 0; }
+    @media (min-width: 760px) {
+      header.site .bar { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding-right: 18px; }
+      .nav-toggle { display: none; }
+      .nav-links { display: flex; gap: 22px; padding: 0; align-items: center; }
+      .nav-links a { padding: 0; }
+    }
+    .hero { background: radial-gradient(520px 260px at 85% 8%, color-mix(in srgb, #ffd166 32%, transparent), transparent 60%), linear-gradient(160deg,#1b4566,#123047 62%); color: #fff; overflow: hidden; }
+    .strip { height: 14px; background: repeating-linear-gradient(90deg,#ffd166 0 22px,#ef476f 22px 44px,#e5f1f8 44px 66px); }
+    .hero-inner { max-width: 1080px; margin: 0 auto; padding: 34px 18px 50px; display: grid; gap: 22px; }
+    .kicker { margin: 0; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.78rem; color: var(--accent); font-weight: 700; }
+    h1 { font-family: "Baloo 2", Arial, sans-serif; font-weight: 800; font-size: clamp(2.7rem, 9vw, 5rem); line-height: 0.95; margin: 10px 0 12px; letter-spacing: -0.02em; }
+    .lead { font-size: 1.12rem; max-width: 38rem; margin: 0; opacity: 0.92; }
+    .stars { margin: 14px 0 0; font-weight: 700; color: var(--accent); }
+    .badge { display: inline-block; background: var(--accent2); color: #fff; border-radius: 999px; padding: 6px 12px; font-size: 0.86rem; font-weight: 700; margin-top: 10px; }
+    .today { margin-top: 16px; background: rgba(255,255,255,0.09); border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 16px; padding: 14px 16px; max-width: 27rem; }
+    .today span { display: block; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+    .today strong { display: block; font-family: "Baloo 2", Arial, sans-serif; font-size: 1.4rem; line-height: 1.25; margin-top: 2px; }
+    .today small { display: block; opacity: 0.8; margin-top: 2px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 999px; padding: 12px 18px; font-weight: 700; border: 2px solid transparent; min-height: 48px; }
+    .btn-main { background: var(--accent); color: var(--on-accent); }
+    .btn-main:hover { filter: brightness(1.08); }
+    .btn-ghost { color: inherit; border-color: color-mix(in srgb, currentColor 40%, transparent); }
+    .btn-ghost:hover { background: rgba(255,255,255,0.08); }
+    .btn-solid { background: var(--accent2); color: #fff; }
+    .art { width: min(100%, 300px); justify-self: center; }
+    @media (min-width: 760px) { .art { width: min(100%, 400px); } }
+    .art svg { width: 100%; height: auto; display: block; }
+    section { padding: 56px 18px; }
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    .eyebrow { margin: 0 0 8px; color: var(--accent2); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    h2 { font-family: "Baloo 2", Arial, sans-serif; font-weight: 800; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; margin: 0 0 12px; }
+    .lede { color: var(--soft); max-width: 44rem; margin-top: 0; }
+    .story { background: var(--paper); }
+    .story p { max-width: 44rem; }
+    .facts { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 18px 0 0; }
+    .facts li { background: var(--tint); border-radius: 999px; padding: 6px 12px; font-weight: 600; font-size: 0.92rem; }
+    .quotes { display: grid; gap: 12px; margin-top: 22px; }
+    blockquote { margin: 0; background: var(--tint); border-left: 5px solid var(--accent); border-radius: 0 14px 14px 0; padding: 14px 16px; font-family: "Baloo 2", Arial, sans-serif; font-size: 1.08rem; }
+    blockquote cite { display: block; font-family: "Nunito", sans-serif; font-style: normal; font-size: 0.82rem; color: var(--soft); margin-top: 6px; }
+    .grid { display: grid; gap: 12px; }
+    .card { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 16px; box-shadow: var(--shadow); }
+    .card h3 { margin: 8px 0 4px; font-size: 1.08rem; }
+    .card p { margin: 0; color: var(--soft); }
+    .emoji { font-size: 1.6rem; }
+    .note { color: var(--soft); font-size: 0.9rem; margin-top: 14px; }
+    .hours { background: linear-gradient(180deg, var(--bg), var(--tint)); }
+    .visit-grid { display: grid; gap: 12px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+    tr.today-row { background: color-mix(in srgb, var(--accent) 22%, #fff); outline: 2px solid var(--accent); }
+    tr.today-row th::after { content: " · Today"; color: var(--accent2); font-weight: 700; }
+    tr.closed th, tr.closed td { color: #9a9088; }
+    .addr { font-size: 1.12rem; font-weight: 700; margin: 0 0 8px; }
+    .card .btn { margin-top: 6px; }
+    .cta { background: var(--dark2); color: #fff; }
+    .cta .eyebrow { color: var(--accent); }
+    .cta .lede { color: rgba(255,255,255,0.86); }
+    footer { background: var(--dark); color: #eee; padding: 28px 18px 36px; }
+    footer a { color: var(--accent); }
+    .foot { max-width: 1080px; margin: 0 auto; display: grid; gap: 8px; }
+    .foot small { opacity: 0.75; }
+    @media (min-width: 760px) {
+      .hero-inner { grid-template-columns: 1.15fr 0.85fr; align-items: center; padding: 56px 18px 68px; }
+      .grid { grid-template-columns: repeat(3, 1fr); }
+      .quotes { grid-template-columns: repeat(3, 1fr); }
+      .visit-grid { grid-template-columns: 1.05fr 0.95fr; }
+    }
+
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <a class="preview-banner" href="https://brightfrontdesign.com">Free preview by Brightfront Studio — made for Darra Dog Grooming <span>· brightfrontdesign.com</span></a>
+  <header class="site">
+    <div class="bar">
+      <div class="nav">
+        <a class="brand" href="#top"><span class="mark" aria-hidden="true">🐩</span><div>Darra Dog Grooming<small>Dog grooming · Darra, Brisbane</small></div></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      </div>
+      <ul class="nav-links" id="nav-links"><li><a href="#story">About</a></li><li><a href="#services">Services</a></li><li><a href="#visit">Hours</a></li><li><a href="#book">Book</a></li></ul>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" style="padding:0">
+      <div class="strip" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div>
+          <p class="kicker">Brisbane · Darra</p>
+          <h1>Darra Dog<br>Grooming</h1>
+          <p class="lead">A family-run grooming salon where your best mate gets pampered by Shelley and Donna — patient, gentle and affordable, with a loyalty program for regulars.</p>
+          <p class="stars">★ 4.9 from 35 Google reviews</p>
+          <span class="badge">Family owned</span> 
+          <div class="today" aria-live="polite">
+            <span>Today at the salon</span>
+            <strong id="today-status">Checking hours…</strong>
+            <small id="today-sub"></small>
+          </div>
+          <div class="hero-actions"><a class="btn btn-main" href="tel:+61427637288">Call</a><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Darra+Dog+Grooming%2C+Jervis+St%2C+Darra+QLD+4076">Get directions</a><a class="btn btn-ghost" href="https://m.me/darradoggrooming">Message us</a></div>
+        </div>
+        <div class="art" aria-hidden="true"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><circle cx="300" cy="70" r="46" fill="#ffd166" opacity=".28"/><ellipse cx="200" cy="262" rx="150" ry="14" fill="#000" opacity=".12"/><path d="M90 250c0-60 40-96 110-96s110 36 110 96z" fill="#ffffff"/><circle cx="200" cy="120" r="62" fill="#ffffff"/><path d="M146 92c-26-6-40 30-30 66 14-6 26-30 30-66zM254 92c26-6 40 30 30 66-14-6-26-30-30-66z" fill="#ef476f"/><circle cx="178" cy="116" r="7" fill="#123047"/><circle cx="222" cy="116" r="7" fill="#123047"/><ellipse cx="200" cy="140" rx="14" ry="10" fill="#123047"/><path d="M188 156q12 10 24 0" stroke="#123047" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M150 176h100l-10 26h-80z" fill="#ffd166"/><circle cx="200" cy="206" r="9" fill="#ef476f"/><g fill="#ffd166" opacity=".9"><circle cx="70" cy="80" r="10"/><circle cx="58" cy="62" r="6"/><circle cx="74" cy="56" r="6"/><circle cx="88" cy="64" r="6"/></g><g fill="#fff" opacity=".7"><circle cx="320" cy="170" r="10"/><circle cx="340" cy="150" r="6"/><circle cx="300" cy="140" r="5"/></g></svg></div>
+      </div>
+    </section>
+    <section class="story" id="story">
+      <div class="wrap">
+        <p class="eyebrow">About us</p>
+        <h2>Low prices, high dedication.</h2>
+        <p>Darra Dog Grooming is a family-owned, home-based salon. Grooming is their passion, and they aim to make every visit a positive experience — keeping prices low and dedication high.</p><p>Shelley and Donna are known for patience with scaredy-cats (like Remus, “scared of his own shadow”) and for squeezing dogs in on the day when another groomer cancels. Moodles, border collies and puggos all go home fresh and fluffy.</p>
+        <ul class="facts"><li>Family owned</li><li>Patient with nervous dogs</li><li>Loyalty program</li><li>Fair prices</li></ul>
+        <div class="quotes"><blockquote>“Dog comes home happy and pretty and smelling beautiful.”<cite>Google review, Feb 2026</cite></blockquote><blockquote>“Donna and Shelley turned her back into the beautiful princess.”<cite>Google review, Jan 2026</cite></blockquote><blockquote>“They handled him like he was their own.”<cite>Google review</cite></blockquote></div>
+      </div>
+    </section>
+    <section id="services">
+      <div class="wrap">
+        <p class="eyebrow">Services</p>
+        <h2>Hair and beauty for your best mate.</h2>
+        <p class="lede">Popular services. Message or call for prices and to book.</p>
+        <div class="grid"><article class="card"><div class="emoji" aria-hidden="true">✂️</div><h3>Full groom</h3><p>Wash, dry, cut and finish.</p></article><article class="card"><div class="emoji" aria-hidden="true">☀️</div><h3>Summer cuts</h3><p>Cool, comfy trims for Brisbane summers.</p></article><article class="card"><div class="emoji" aria-hidden="true">🐩</div><h3>Oodles &amp; doodles</h3><p>Moodles, cavoodles and curly coats.</p></article><article class="card"><div class="emoji" aria-hidden="true">🐕</div><h3>All sizes</h3><p>From pugs to border collies.</p></article><article class="card"><div class="emoji" aria-hidden="true">💅</div><h3>Nails &amp; tidy-ups</h3><p>Quick trims between grooms.</p></article><article class="card"><div class="emoji" aria-hidden="true">⭐</div><h3>Loyalty program</h3><p>Rewards for regular visits.</p></article></div>
+        <p class="note">Services based on the Facebook intro and public reviews.</p>
+      </div>
+    </section>
+    <section class="hours" id="visit">
+      <div class="wrap">
+        <p class="eyebrow">Hours &amp; location</p>
+        <h2>Book a groom.</h2>
+        <div class="visit-grid">
+          <div class="card">
+            <table id="hours"><caption style="position:absolute;left:-9999px;">Weekly hours, today highlighted</caption><tbody><tr data-day="0"><th scope="row">Sunday</th><td>9:30am–5pm</td></tr><tr data-day="1"><th scope="row">Monday</th><td>9am–2pm</td></tr><tr data-day="2" class="closed"><th scope="row">Tuesday</th><td>Closed</td></tr><tr data-day="3"><th scope="row">Wednesday</th><td>9am–2pm</td></tr><tr data-day="4"><th scope="row">Thursday</th><td>9am–2pm</td></tr><tr data-day="5" class="closed"><th scope="row">Friday</th><td>Closed</td></tr><tr data-day="6" class="closed"><th scope="row">Saturday</th><td>Closed</td></tr></tbody></table>
+            <p class="note">Hours from the Google listing, Brisbane time. By appointment.</p>
+          </div>
+          <div class="card">
+            <h3>Location</h3>
+            <p class="addr">Jervis Street<br>Darra QLD 4076</p>
+            <p>Home-based salon in Darra. Address details given when you book.</p>
+            <p>Phone <a href="tel:+61427637288">0427 637 288</a><br>Email <a href="mailto:darradoggrooming@gmail.com">darradoggrooming@gmail.com</a><br>Facebook <a href="https://www.facebook.com/darradoggrooming/">facebook.com/darradoggrooming</a></p>
+            <p><a class="btn btn-solid" href="https://www.google.com/maps/search/?api=1&amp;query=Darra+Dog+Grooming%2C+Jervis+St%2C+Darra+QLD+4076">Get directions</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta" id="book">
+      <div class="wrap">
+        <p class="eyebrow">Book in</p>
+        <h2>Time for a pamper?</h2>
+        <p class="lede">Call, text or message to book your dog’s next groom.</p>
+        <div class="hero-actions"><a class="btn btn-main" href="tel:+61427637288">Call 0427 637 288</a><a class="btn btn-ghost" href="sms:+61427637288">Send a text</a><a class="btn btn-ghost" href="https://m.me/darradoggrooming">Message on Facebook</a></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="foot">
+      <strong>Darra Dog Grooming</strong>
+      <div>Darra, Brisbane QLD 4076</div>
+      <div><a href="tel:+61427637288">0427 637 288</a> · <a href="mailto:darradoggrooming@gmail.com">darradoggrooming@gmail.com</a> · <a href="https://www.facebook.com/darradoggrooming/">Facebook</a></div>
+      <div>★ 4.9 from 35 Google reviews</div>
+      <small>Free preview by Brightfront Studio · <a href="https://brightfrontdesign.com">brightfrontdesign.com</a> · Details from public listings and reviews; please confirm before ordering.</small>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector(".nav-toggle"), list = document.getElementById("nav-links");
+      btn.addEventListener("click", function () { var o = list.classList.toggle("open"); btn.setAttribute("aria-expanded", o ? "true" : "false"); });
+      list.addEventListener("click", function (e) { if (e.target.tagName === "A") { list.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); } });
+      var TZ = "Australia/Brisbane", H = [[570, 1020], [540, 840], null, [540, 840], [540, 840], null, null], T = ["9:30am\u20135pm", "9am\u20132pm", "Closed", "9am\u20132pm", "9am\u20132pm", "Closed", "Closed"], H12 = true;
+      var DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      var parts = new Intl.DateTimeFormat("en-GB", { weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23", timeZone: TZ }).formatToParts(new Date());
+      var get = function (t) { for (var i = 0; i < parts.length; i++) if (parts[i].type === t) return parts[i].value; };
+      var day = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[get("weekday")];
+      var now = parseInt(get("hour"), 10) * 60 + parseInt(get("minute"), 10);
+      function fmt(m) { var h = Math.floor(m / 60) % 24, mm = m % 60; var s = mm ? ":" + (mm < 10 ? "0" : "") + mm : "";
+        if (H12) { var ap = h >= 12 ? "pm" : "am"; var hh = h % 12 || 12; return hh + s + ap; } return (h < 10 ? "0" : "") + h + ":" + (mm < 10 ? "0" : "") + mm; }
+      function nextOpen(d) { for (var i = 1; i <= 7; i++) { var k = (d + i) % 7; if (H[k]) return (i === 1 ? "tomorrow" : DAYS[k]) + " at " + fmt(H[k][0]); } return ""; }
+      var st = document.getElementById("today-status"), sub = document.getElementById("today-sub"), h = H[day];
+      if (!h) { st.textContent = "Closed today"; sub.textContent = "Back " + nextOpen(day); }
+      else if (now < h[0]) { st.textContent = "Opens today at " + fmt(h[0]); sub.textContent = "Today: " + T[day]; }
+      else if (now < h[1]) { st.textContent = "Open now · until " + fmt(h[1]); sub.textContent = "Today: " + T[day]; }
+      else { st.textContent = "Closed for today"; sub.textContent = "Back " + nextOpen(day); }
+      var row = document.querySelector('#hours tr[data-day="' + day + '"]'); if (row) row.classList.add("today-row");
+    })();
+  </script>
+</body>
+</html>
