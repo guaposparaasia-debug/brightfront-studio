@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Honeycrumb Bakery — Custom Cakes in Willow Creek, TX</title>
+  <meta name="description" content="Honeycrumb Bakery in Willow Creek, TX. Owner-baker the owner makes custom and themed cakes, tres leches, fruit cakes, and cupcakes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,680&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blush: #f3d5dc;
+      --rose: #c98492;
+      --rose-deep: #8d4d5c;
+      --lilac: #e4d7f2;
+      --butter: #f7e7b8;
+      --sage: #d7e4d8;
+      --ink: #3a2c32;
+      --soft: #6e5860;
+      --cream: #fff8f6;
+      --paper: #fffdfb;
+      --line: rgba(58, 44, 50, 0.1);
+      --shadow: 0 16px 36px rgba(141, 77, 92, 0.1);
+      --banner-h: 40px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: "Outfit", system-ui, sans-serif; color: var(--ink); background: var(--cream); line-height: 1.55; font-size: 1.05rem; }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid var(--rose); outline-offset: 2px; }
+    .skip { position: absolute; left: 12px; top: -48px; background: var(--ink); color: white; padding: 8px 12px; z-index: 80; }
+    .skip:focus { top: 48px; }
+    .preview-banner { position: sticky; top: 0; z-index: 60; display: block; background: var(--rose-deep); color: white; text-align: center; text-decoration: none; font-weight: 650; font-size: 0.82rem; padding: 10px 14px; min-height: var(--banner-h); }
+    .preview-banner:hover { background: #6f3b48; }
+    header.site { position: sticky; top: var(--banner-h); z-index: 50; background: rgba(255, 253, 251, 0.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
+    .nav { max-width: 1080px; margin: 0 auto; padding: 10px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 700; }
+    .brand small { display: block; font-weight: 500; color: var(--soft); font-size: 0.72rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .mark { width: 36px; height: 36px; border-radius: 50%; background: radial-gradient(circle at 50% 38%, #fff, var(--blush) 55%, var(--rose)); flex: none; }
+    .nav-toggle { border: 1px solid var(--line); background: white; border-radius: 999px; padding: 8px 12px; font: inherit; font-weight: 650; }
+    .nav-links { display: none; list-style: none; margin: 0; padding: 0 18px 14px; }
+    .nav-links.open { display: grid; }
+    .nav-links a { display: block; text-decoration: none; color: var(--ink); font-weight: 650; padding: 8px 0; }
+    @media (min-width: 800px) {
+      .nav-toggle { display: none; }
+      .nav-links { display: flex; gap: 18px; padding: 0; align-items: center; }
+      .nav-links a { padding: 0; }
+    }
+    .hero { background: radial-gradient(520px 240px at 100% 0%, rgba(247, 231, 184, 0.85), transparent 60%), linear-gradient(180deg, #fdeff2, #fff8f6); overflow: hidden; }
+    .hero-inner { max-width: 1080px; margin: 0 auto; padding: 40px 18px 52px; display: grid; gap: 18px; }
+    .kicker { margin: 0; color: var(--rose-deep); font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; font-size: 0.78rem; }
+    h1 { font-family: "Fraunces", Georgia, serif; font-weight: 680; font-size: clamp(2.5rem, 8vw, 4.6rem); line-height: 0.96; margin: 8px 0; letter-spacing: -0.03em; }
+    .lead { font-size: 1.12rem; max-width: 40rem; color: var(--soft); margin: 0; }
+    .stars { margin: 12px 0 0; font-weight: 700; color: var(--rose-deep); }
+    .today { margin-top: 16px; background: white; border: 1px solid var(--blush); border-radius: 16px; padding: 14px 16px; max-width: 26rem; }
+    .today span { display: block; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--rose); font-weight: 700; }
+    .today strong { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.4rem; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 999px; padding: 12px 18px; font-weight: 700; border: 2px solid transparent; }
+    .btn-rose { background: var(--rose); color: white; }
+    .btn-rose:hover { background: var(--rose-deep); }
+    .btn-line { background: white; color: var(--ink); border-color: var(--blush); }
+    .art { width: min(100%, 360px); justify-self: center; }
+    section { padding: 56px 18px; }
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    .eyebrow { margin: 0 0 8px; color: var(--rose); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    h2 { font-family: "Fraunces", Georgia, serif; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; margin: 0 0 12px; }
+    .lede { color: var(--soft); max-width: 42rem; margin-top: 0; }
+    .gallery, .quotes, .visit-grid { display: grid; gap: 12px; }
+    .cake { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 14px; box-shadow: var(--shadow); }
+    .cake svg { width: 100%; height: 120px; display: block; }
+    .cake h3 { margin: 8px 0 4px; font-size: 1.08rem; }
+    .cake p { margin: 0; color: var(--soft); }
+    blockquote { margin: 0; background: white; border-left: 5px solid var(--butter); border-radius: 0 14px 14px 0; padding: 14px 16px; font-family: "Fraunces", Georgia, serif; font-size: 1.15rem; }
+    .story { background: white; }
+    form { display: grid; gap: 12px; }
+    label { display: grid; gap: 6px; font-weight: 650; }
+    input, textarea { font: inherit; padding: 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--cream); color: var(--ink); }
+    textarea { min-height: 110px; resize: vertical; }
+    .form-note { color: var(--soft); font-size: 0.95rem; }
+    .hours { background: linear-gradient(180deg, var(--cream), #f7eee9); }
+    .card { background: white; border-radius: 18px; padding: 18px; box-shadow: var(--shadow); }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+    tr.today-row { background: #fff6d8; outline: 2px solid #e6c56a; }
+    tr.today-row th::after { content: " · Today"; color: var(--rose-deep); font-weight: 700; }
+    tr.closed th, tr.closed td { color: #a08b92; }
+    .addr { font-size: 1.15rem; font-weight: 700; margin: 0 0 8px; }
+    footer { background: var(--ink); color: #f6e8ea; padding: 28px 18px 36px; }
+    footer a { color: var(--butter); }
+    .foot { max-width: 1080px; margin: 0 auto; display: grid; gap: 8px; }
+    .foot small { color: #d7c4c8; }
+    @media (min-width: 760px) {
+      .hero-inner { grid-template-columns: 1.15fr 0.85fr; align-items: center; padding: 64px 18px 72px; }
+      .gallery { grid-template-columns: 1fr 1fr 1fr; }
+      .quotes { grid-template-columns: 1fr 1fr 1fr; }
+      .visit-grid { grid-template-columns: 1fr 1fr; }
+      form { grid-template-columns: 1fr 1fr; }
+      form .full { grid-column: 1 / -1; }
+    }
+  </style>
+
+<style id="bf-demo">
+  :root { --banner-h: 0px !important; }
+  .preview-banner, .lang { display: none !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .bf-demo-ribbon { position: fixed; z-index: 9999; right: 14px; bottom: 14px; display: inline-flex; align-items: center; gap: 8px;
+    padding: 9px 14px; border-radius: 999px; background: #1a1714; color: #f6f1e8 !important; text-decoration: none !important;
+    font: 500 13px/1.2 "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: .01em;
+    box-shadow: 0 10px 28px rgba(26,23,20,.28); border: 1px solid rgba(255,255,255,.12); max-width: calc(100vw - 28px); }
+  .bf-demo-ribbon b { color: #f0b49b; font-weight: 600; white-space: nowrap; }
+  .bf-demo-ribbon:hover { background: #b8431f; } .bf-demo-ribbon:hover b { color: #fff; }
+  .bf-demo-ribbon i { width: 7px; height: 7px; border-radius: 50%; background: #c4512c; flex: none; font-style: normal; }
+  @media (max-width: 480px) { .bf-demo-ribbon { left: 10px; right: 10px; bottom: 10px; justify-content: center; font-size: 12.5px; } }
+  .skip { top: -80px !important; } .skip:focus { top: 8px !important; }
+  @media (min-width: 760px) {
+    header.site { display: flex; align-items: center; gap: 24px; padding: 0 max(18px, calc((100% - 1080px) / 2 + 18px)); }
+    header.site > .nav { flex: 1 1 auto; max-width: none; margin: 0; padding: 10px 0; }
+    header.site > .nav-links { flex: none; margin: 0; padding: 0; }
+  }
+  @media print { .bf-demo-ribbon { display: none; } }
+</style>
+<script id="bf-demo-js">
+document.addEventListener('DOMContentLoaded', function () {
+  var ph = /\(?\b\d{3}\)?[\s.-]?\d{3}-\d{4}\b/g, em = /[\w.%+-]+@[\w.-]+\.[a-z]{2,}/gi;
+  var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT), n;
+  while ((n = w.nextNode())) {
+    var t = n.nodeValue.replace(ph, '(555) 010-0000').replace(em, 'hello@example.com');
+    if (t !== n.nodeValue) n.nodeValue = t;
+  }
+});
+</script>
+</head>
+<body>
+<a class="bf-demo-ribbon" href="https://brightfrontdesign.com/#contact" target="_blank" rel="noopener"><i aria-hidden="true"></i><span>Demo site by Brightfront Studio</span> <b>· Get yours free →</b></a>
+
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site">
+    <div class="nav">
+      <a class="brand" href="#top">
+        <span class="mark" aria-hidden="true"></span>
+        <div>Honeycrumb Bakery<small>Bakery · Willow Creek, TX</small></div>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#story">The baker</a></li>
+      <li><a href="#gallery">Cakes</a></li>
+      <li><a href="#request">Request</a></li>
+      <li><a href="#visit">Hours</a></li>
+    </ul>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <div>
+          <p class="kicker">Willow Creek, TX · Metro area</p>
+          <h1>Honeycrumb Bakery</h1>
+          <p class="lead">The owner-baker makes custom and themed cakes, including ones other bakers turn down. Bring a reference photo. She can recreate it.</p>
+          <p class="stars">4.8 from local reviews</p>
+          <div class="today">
+            <span>Today in Willow Creek</span>
+            <strong id="today-status">Checking hours…</strong>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-rose" href="tel:+15550100000">Call</a>
+            <a class="btn btn-line" href="#">Get directions</a>
+            <a class="btn btn-line" href="#request">Request a cake</a>
+          </div>
+        </div>
+        <div class="art" aria-hidden="true">
+          <svg viewBox="0 0 360 280" xmlns="http://www.w3.org/2000/svg" role="img">
+            <title>Illustrated celebration cake</title>
+            <ellipse cx="180" cy="230" rx="100" ry="14" fill="#f3d5dc"/>
+            <rect x="90" y="148" width="180" height="74" rx="16" fill="#fff"/>
+            <rect x="112" y="92" width="136" height="66" rx="14" fill="#f7e7b8"/>
+            <rect x="134" y="48" width="92" height="52" rx="12" fill="#f3d5dc"/>
+            <path d="M150 48c8-20 20-28 30-28s22 8 30 28" fill="none" stroke="#c98492" stroke-width="4"/>
+            <circle cx="180" cy="30" r="7" fill="#d7e4d8"/>
+            <circle cx="124" cy="184" r="6" fill="#c98492"/>
+            <circle cx="156" cy="184" r="6" fill="#e4d7f2"/>
+            <circle cx="188" cy="184" r="6" fill="#f7e7b8"/>
+            <circle cx="220" cy="184" r="6" fill="#c98492"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="story" id="story">
+      <div class="wrap">
+        <p class="eyebrow">The baker</p>
+        <h2>The baker takes the cakes other people pass on.</h2>
+        <p class="lede">The owner is the owner-baker. Custom and themed cakes are the heart of the shop — kids’ characters, sports teams, gender reveals — and she will work from a reference photo. Rush orders when possible. No prices on this demo; ask the bakery.</p>
+        <div class="quotes">
+          <blockquote>“Beautiful cakes that taste even better.”</blockquote>
+          <blockquote>“Out of this world tres leches.”</blockquote>
+          <blockquote>“I found my bakery for life.”</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="wrap">
+        <p class="eyebrow">Cake gallery</p>
+        <h2>Illustrated, not photographed.</h2>
+        <p class="lede">A look at what the counter is known for. Designs are drawn here so this demo does not use bakery photos.</p>
+        <div class="gallery">
+          <article class="cake">
+            <svg viewBox="0 0 200 110" aria-hidden="true"><rect x="36" y="48" width="128" height="46" rx="10" fill="#f3d5dc"/><rect x="54" y="26" width="92" height="30" rx="8" fill="#fff"/><circle cx="78" cy="70" r="5" fill="#c98492"/><circle cx="104" cy="70" r="5" fill="#e4d7f2"/><circle cx="130" cy="70" r="5" fill="#f7e7b8"/></svg>
+            <h3>Custom &amp; themed</h3>
+            <p>Kids’ characters, sports teams, gender reveals, and the designs other bakers turn down.</p>
+          </article>
+          <article class="cake">
+            <svg viewBox="0 0 200 110" aria-hidden="true"><rect x="40" y="36" width="120" height="54" rx="12" fill="#f7e7b8"/><path d="M52 36c12 14 20 14 32 0 12 14 20 14 32 0 10 12 18 12 28 0" fill="#d7e4d8"/></svg>
+            <h3>Tres leches</h3>
+            <p>Several tres leches flavors. Guests call it out of this world.</p>
+          </article>
+          <article class="cake">
+            <svg viewBox="0 0 200 110" aria-hidden="true"><ellipse cx="100" cy="70" rx="62" ry="22" fill="#fff"/><circle cx="70" cy="52" r="10" fill="#c98492"/><circle cx="100" cy="44" r="12" fill="#e4d7f2"/><circle cx="130" cy="54" r="9" fill="#d7e4d8"/></svg>
+            <h3>Fresh-fruit cakes</h3>
+            <p>Fruit on top of the cake, made to the order.</p>
+          </article>
+          <article class="cake">
+            <svg viewBox="0 0 200 110" aria-hidden="true"><circle cx="58" cy="62" r="20" fill="#f3d5dc"/><circle cx="100" cy="54" r="22" fill="#f7e7b8"/><circle cx="142" cy="64" r="18" fill="#e4d7f2"/></svg>
+            <h3>Cupcakes</h3>
+            <p>Cupcakes alongside the celebration cakes.</p>
+          </article>
+          <article class="cake">
+            <svg viewBox="0 0 200 110" aria-hidden="true"><rect x="34" y="40" width="132" height="48" rx="8" fill="#fff"/><rect x="46" y="52" width="108" height="8" fill="#f3d5dc"/><circle cx="100" cy="34" r="8" fill="#c98492"/></svg>
+            <h3>Office celebrations</h3>
+            <p>Cakes for the office celebration.</p>
+          </article>
+          <article class="cake">
+            <svg viewBox="0 0 200 110" aria-hidden="true"><rect x="70" y="28" width="60" height="58" rx="10" fill="#f7e7b8"/><path d="M84 28c6-14 26-14 32 0" fill="none" stroke="#c98492" stroke-width="3"/></svg>
+            <h3>From a photo</h3>
+            <p>Share a reference photo. The baker can recreate it. Rush orders when possible.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="request">
+      <div class="wrap">
+        <p class="eyebrow">Request a cake</p>
+        <h2>Send the idea to the baker.</h2>
+        <p class="lede">This does not place an order. It opens an email to <a href="mailto:hello@example.com">[email&#160;protected]</a> with what you wrote.</p>
+        <form id="cake-form">
+          <label class="full">Your name<input name="name" type="text" required autocomplete="name"></label>
+          <label>Occasion<input name="occasion" type="text" required placeholder="Birthday, gender reveal, office…"></label>
+          <label>Date needed<input name="date" type="date" required></label>
+          <label>Servings<input name="servings" type="text" required></label>
+          <label>Flavor<input name="flavor" type="text" placeholder="Tres leches, fruit, other"></label>
+          <label class="full">Design idea or reference<textarea name="design" required placeholder="Theme, team, character, or the photo you want recreated"></textarea></label>
+          <div class="full"><button class="btn btn-rose" type="submit">Request a cake</button></div>
+          <p class="form-note full">No prices are listed here. The bakery will reply with the details.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="hours" id="visit">
+      <div class="wrap">
+        <p class="eyebrow">Hours &amp; location</p>
+        <h2>Main Street.</h2>
+        <div class="visit-grid">
+          <div class="card">
+            <table id="hours">
+              <caption style="position:absolute;left:-9999px;">Weekly hours, today highlighted</caption>
+              <tbody>
+                <tr data-day="0" class="closed"><th scope="row">Sunday</th><td>Closed</td></tr>
+                <tr data-day="1" class="closed"><th scope="row">Monday</th><td>Closed</td></tr>
+                <tr data-day="2"><th scope="row">Tuesday</th><td>10 AM–7 PM</td></tr>
+                <tr data-day="3"><th scope="row">Wednesday</th><td>10 AM–7 PM</td></tr>
+                <tr data-day="4"><th scope="row">Thursday</th><td>10 AM–7 PM</td></tr>
+                <tr data-day="5"><th scope="row">Friday</th><td>10 AM–7 PM</td></tr>
+                <tr data-day="6"><th scope="row">Saturday</th><td>10 AM–7 PM</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="card">
+            <h3>Location</h3>
+            <p class="addr">123 Main St<br>Willow Creek, TX 00000</p>
+            <p>Metro area. Phone <a href="tel:+15550100000">(555) 010-0000</a><br>
+            Email <a href="mailto:hello@example.com">hello@example.com</a></p>
+            <p><a class="btn btn-rose" href="#">Get directions</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <strong>Honeycrumb Bakery</strong>
+      <div>123 Main St, Willow Creek, TX 00000 · <a href="tel:+15550100000">(555) 010-0000</a></div>
+      <div><a href="mailto:hello@example.com">hello@example.com</a> · 4.8 from local reviews</div>
+      <small>Demo site by <a href="https://brightfrontdesign.com/">Brightfront Studio</a> · Names, address and contact details are fictional</small>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector(".nav-toggle");
+      var list = document.getElementById("nav-links");
+      btn.addEventListener("click", function () {
+        var open = list.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      list.addEventListener("click", function (e) {
+        if (e.target.tagName === "A") {
+          list.classList.remove("open");
+          btn.setAttribute("aria-expanded", "false");
+        }
+      });
+      var weekday = new Intl.DateTimeFormat("en-US", { weekday: "short", timeZone: "America/Chicago" }).format(new Date());
+      var map = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+      var day = map[weekday];
+      var hours = {
+        0: "Closed today",
+        1: "Closed today",
+        2: "Open today, 10 AM–7 PM",
+        3: "Open today, 10 AM–7 PM",
+        4: "Open today, 10 AM–7 PM",
+        5: "Open today, 10 AM–7 PM",
+        6: "Open today, 10 AM–7 PM"
+      };
+      document.getElementById("today-status").textContent = hours[day];
+      var row = document.querySelector('#hours tr[data-day="' + day + '"]');
+      if (row) row.classList.add("today-row");
+      document.getElementById("cake-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        var data = new FormData(e.target);
+        var body = [
+          "Name: " + data.get("name"),
+          "Occasion: " + data.get("occasion"),
+          "Date: " + data.get("date"),
+          "Servings: " + data.get("servings"),
+          "Flavor: " + data.get("flavor"),
+          "Design idea: " + data.get("design")
+        ].join("\n");
+        window.location.href = "mailto:hello@example.com?subject=" + encodeURIComponent("Cake request — Honeycrumb Bakery") + "&body=" + encodeURIComponent(body);
+      });
+    })();
+  </script>
+</body>
+</html>
