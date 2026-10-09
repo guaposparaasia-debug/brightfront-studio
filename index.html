@@ -173,6 +173,57 @@
     .pack.featured li { border-top-color: rgba(255,255,255,.12); }
     .pack li::before { content: ""; position: absolute; left: 0; top: 14px; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
     .pack .btn + .btn { margin-top: 8px; }
+    [hidden] { display: none !important; }
+    .care { border: 0; margin: 4px 0 0; padding: 14px 0 0; border-top: 1px solid var(--line); display: grid; gap: 10px; min-width: 0; }
+    .pack.featured .care { border-top-color: rgba(255,255,255,.14); }
+    .care legend { padding: 0; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 640; color: var(--forest); float: left; width: 100%; margin-bottom: 2px; }
+    .pack.featured .care legend { color: #e7c9a4; }
+    .care-opts { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; clear: both; }
+    .care-opt { position: relative; display: block; cursor: pointer; font-weight: 420; }
+    .care-opt input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+    .care-opt span { display: grid; gap: 0; min-height: 52px; align-content: center; padding: 7px 11px; border: 1px solid var(--line); border-radius: 14px; background: #fff; line-height: 1.25; transition: border-color .15s ease, background .15s ease, box-shadow .15s ease; }
+    .care-opt b { font-weight: 560; font-size: 0.93rem; }
+    .care-opt small { color: var(--muted); font-size: 0.8rem; }
+    .care-opt:hover span { border-color: rgba(184, 67, 31, .45); }
+    .care-opt input:checked + span { border-color: var(--accent); background: #fbf1ea; box-shadow: inset 0 0 0 1px var(--accent); }
+    .care-opt input:checked + span small { color: var(--accent-deep); }
+    .care-opt input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .pack.featured .care-opt span { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.18); color: #f6f1e8; }
+    .pack.featured .care-opt small { color: #cfc6b8; }
+    .pack.featured .care-opt:hover span { border-color: rgba(231, 201, 164, .6); }
+    .pack.featured .care-opt input:checked + span { background: #f6f1e8; color: var(--ink); border-color: #e7c9a4; box-shadow: inset 0 0 0 1px #e7c9a4; }
+    .pack.featured .care-opt input:checked + span small { color: var(--accent-deep); }
+    .care-sum { margin: 2px 0 0; font-size: 0.92rem; font-weight: 520; color: var(--ink); background: var(--bg); border-radius: 12px; padding: 9px 12px; }
+    .pack.featured .care-sum { background: rgba(255,255,255,.08); color: #fff; }
+    .care-pay { display: grid; gap: 8px; }
+    .care-pay .btn { width: 100%; }
+    .pp-slot { min-height: 50px; }
+    .pp-slot[hidden] { display: none; }
+    .pp-msg { margin: 0; font-size: 0.86rem; color: var(--muted); }
+    .pack.featured .pp-msg { color: #d9d0c3; }
+    .pp-thanks { background: #fff; color: var(--ink); border: 1px solid var(--accent); border-radius: 16px; padding: 14px 16px; font-size: 0.95rem; }
+    .pp-thanks strong { display: block; font-family: var(--serif); font-size: 1.25rem; font-weight: 560; margin-bottom: 4px; }
+    .pp-thanks p { margin: 0 0 6px; }
+    .pp-thanks code { font-size: 0.82rem; background: var(--bg); border-radius: 6px; padding: 1px 6px; }
+    .pay-note { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; color: var(--muted); font-size: 0.92rem; margin: 18px 0 0; }
+    .care-block { margin-top: 44px; background: var(--paper); border: 1px solid var(--line); border-radius: 28px; padding: 24px 20px; box-shadow: var(--shadow); }
+    .care-block h3 { font-size: clamp(1.7rem, 4vw, 2.4rem); margin: 8px 0 8px; }
+    .care-block > p { margin: 0; color: var(--ink-soft); max-width: 44rem; }
+    .care-tiers { display: grid; gap: 10px; margin: 20px 0 18px; }
+    .care-tier { border: 1px solid var(--line); border-radius: 18px; padding: 16px; background: #fff; }
+    .care-tier .tier-price { font-family: var(--serif); font-size: 1.9rem; letter-spacing: -0.03em; line-height: 1.1; margin: 4px 0 6px; }
+    .care-tier .tier-price span { font-family: var(--sans); font-size: 0.9rem; color: var(--muted); letter-spacing: 0; }
+    .care-tier ul { margin: 0; padding: 0; list-style: none; }
+    .care-tier li { padding: 6px 0 6px 18px; position: relative; border-top: 1px solid var(--line); font-size: 0.95rem; }
+    .care-tier li::before { content: ""; position: absolute; left: 0; top: 13px; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); }
+    .care-terms { display: grid; gap: 6px 18px; margin: 0; padding: 0; list-style: none; color: var(--ink-soft); font-size: 0.95rem; }
+    .care-terms li { padding-left: 22px; position: relative; }
+    .care-terms li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 640; }
+    @media (min-width: 760px) {
+      .care-tiers { grid-template-columns: repeat(3, 1fr); }
+      .care-terms { grid-template-columns: 1fr 1fr; }
+      .care-block { padding: 34px; }
+    }
     .steps { display: grid; gap: 12px; }
     .step { background: var(--paper); border: 1px solid var(--line); border-radius: 20px; padding: 18px; }
     .step h3 { font-size: 1.4rem; margin-bottom: 6px; }
@@ -324,7 +375,7 @@
           <article class="service reveal"><span class="num">02</span><h3>Landing pages</h3><p>One focused page for a new location, seasonal menu, offer, or campaign you need live this month.</p></article>
           <article class="service reveal"><span class="num">03</span><h3>Online booking &amp; menus</h3><p>A menu people can read, or a booking button wired to the tool you already use.</p></article>
           <article class="service reveal"><span class="num">04</span><h3>Local SEO &amp; Google Business</h3><p>Page titles, headings, and a Google Business Profile setup so searchers can find the right place.</p></article>
-          <article class="service reveal"><span class="num">05</span><h3>Maintenance &amp; hosting</h3><p>After launch: small text updates, hosting, and a person to email when something needs changing.</p></article>
+          <article class="service reveal"><span class="num">05</span><h3>Maintenance &amp; hosting</h3><p>After launch: small text updates, hosting, and a person to email when something needs changing. Monthly care from $19/mo.</p></article>
         </div>
       </div>
     </section>
@@ -471,7 +522,20 @@
               <li>One revision round</li>
             </ul>
             <a class="btn btn-primary" href="#contact">Get my free preview</a>
-            <a class="btn btn-ghost" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=chedamso%40naver.com&amp;currency_code=USD&amp;amount=299&amp;item_name=Brightfront%20Studio%20-%20Starter%20website" target="_blank" rel="noopener noreferrer">Pay with PayPal</a>
+            <fieldset class="care" data-pack="starter" data-pack-name="Starter" data-price="299">
+              <legend>Add monthly care?</legend>
+              <div class="care-opts">
+                <label class="care-opt"><input type="radio" name="care-starter" value="none" checked><span><b>No monthly care</b><small>one-time only</small></span></label>
+                <label class="care-opt"><input type="radio" name="care-starter" value="basic"><span><b>Basic</b><small>$19/mo</small></span></label>
+                <label class="care-opt"><input type="radio" name="care-starter" value="standard"><span><b>Standard</b><small>$39/mo</small></span></label>
+                <label class="care-opt"><input type="radio" name="care-starter" value="pro"><span><b>Pro</b><small>$69/mo</small></span></label>
+              </div>
+              <p class="care-sum" aria-live="polite">Today: $299 · one-time payment · no monthly fees</p>
+              <div class="care-pay">
+                <a class="btn btn-ghost pp-oneoff" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=chedamso%40naver.com&amp;currency_code=USD&amp;amount=299&amp;item_name=Brightfront%20Studio%20-%20Starter%20website" target="_blank" rel="noopener noreferrer">Pay $299 with PayPal</a>
+                <div class="pp-area" hidden></div>
+              </div>
+            </fieldset>
           </article>
           <article class="pack featured reveal">
             <span class="kicker">Business</span>
@@ -485,7 +549,20 @@
               <li>Two revision rounds</li>
             </ul>
             <a class="btn btn-light" href="#contact">Get my free preview</a>
-            <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=chedamso%40naver.com&amp;currency_code=USD&amp;amount=699&amp;item_name=Brightfront%20Studio%20-%20Business%20website" target="_blank" rel="noopener noreferrer">Pay with PayPal</a>
+            <fieldset class="care" data-pack="business" data-pack-name="Business" data-price="699">
+              <legend>Add monthly care?</legend>
+              <div class="care-opts">
+                <label class="care-opt"><input type="radio" name="care-business" value="none" checked><span><b>No monthly care</b><small>one-time only</small></span></label>
+                <label class="care-opt"><input type="radio" name="care-business" value="basic"><span><b>Basic</b><small>$19/mo</small></span></label>
+                <label class="care-opt"><input type="radio" name="care-business" value="standard"><span><b>Standard</b><small>$39/mo</small></span></label>
+                <label class="care-opt"><input type="radio" name="care-business" value="pro"><span><b>Pro</b><small>$69/mo</small></span></label>
+              </div>
+              <p class="care-sum" aria-live="polite">Today: $699 · one-time payment · no monthly fees</p>
+              <div class="care-pay">
+                <a class="btn btn-ghost pp-oneoff" style="color:#fff;border-color:rgba(255,255,255,.35)" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=chedamso%40naver.com&amp;currency_code=USD&amp;amount=699&amp;item_name=Brightfront%20Studio%20-%20Business%20website" target="_blank" rel="noopener noreferrer">Pay $699 with PayPal</a>
+                <div class="pp-area" hidden></div>
+              </div>
+            </fieldset>
           </article>
           <article class="pack reveal">
             <span class="kicker">Premium</span>
@@ -499,8 +576,64 @@
               <li>3 months of maintenance and hosting</li>
             </ul>
             <a class="btn btn-primary" href="#contact">Get my free preview</a>
-            <a class="btn btn-ghost" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=chedamso%40naver.com&amp;currency_code=USD&amp;amount=1299&amp;item_name=Brightfront%20Studio%20-%20Premium%20website" target="_blank" rel="noopener noreferrer">Pay with PayPal</a>
+            <fieldset class="care" data-pack="premium" data-pack-name="Premium" data-price="1299">
+              <legend>Add monthly care?</legend>
+              <div class="care-opts">
+                <label class="care-opt"><input type="radio" name="care-premium" value="none" checked><span><b>No monthly care</b><small>one-time only</small></span></label>
+                <label class="care-opt"><input type="radio" name="care-premium" value="basic"><span><b>Basic</b><small>$19/mo</small></span></label>
+                <label class="care-opt"><input type="radio" name="care-premium" value="standard"><span><b>Standard</b><small>$39/mo</small></span></label>
+                <label class="care-opt"><input type="radio" name="care-premium" value="pro"><span><b>Pro</b><small>$69/mo</small></span></label>
+              </div>
+              <p class="care-sum" aria-live="polite">Today: $1,299 · one-time payment · no monthly fees</p>
+              <div class="care-pay">
+                <a class="btn btn-ghost pp-oneoff" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=chedamso%40naver.com&amp;currency_code=USD&amp;amount=1299&amp;item_name=Brightfront%20Studio%20-%20Premium%20website" target="_blank" rel="noopener noreferrer">Pay $1,299 with PayPal</a>
+                <div class="pp-area" hidden></div>
+              </div>
+            </fieldset>
           </article>
+        </div>
+        <p class="pay-note"><span class="note">Approved previews</span><span>Payment buttons are for clients who have already approved their free preview. Haven’t seen yours yet? <a href="#contact">Get a free preview first</a> — no card needed.</span></p>
+        <div class="care-block reveal" id="care">
+          <p class="eyebrow">Monthly care</p>
+          <h3>Keep the site current without thinking about it.</h3>
+          <p>Optional and month to month. Pick a care plan when you pay for your site: today you pay only the website price, care is free for the first month while we finish and launch (three months with Premium), and the monthly fee starts after that.</p>
+          <div class="care-tiers">
+            <article class="care-tier">
+              <span class="kicker">Basic</span>
+              <div class="tier-price">$19 <span>/ month</span></div>
+              <ul>
+                <li>2 small edits per month</li>
+                <li>Hosting and SSL certificate</li>
+                <li>Uptime check</li>
+              </ul>
+            </article>
+            <article class="care-tier">
+              <span class="kicker">Standard</span>
+              <div class="tier-price">$39 <span>/ month</span></div>
+              <ul>
+                <li>5 edits per month</li>
+                <li>Banner and photo swaps</li>
+                <li>Seasonal menu and price updates</li>
+                <li>Hosting, SSL, uptime check</li>
+              </ul>
+            </article>
+            <article class="care-tier">
+              <span class="kicker">Pro</span>
+              <div class="tier-price">$69 <span>/ month</span></div>
+              <ul>
+                <li>Unlimited small edits</li>
+                <li>1 new page per month</li>
+                <li>Monthly report</li>
+                <li>Hosting, SSL, uptime check</li>
+              </ul>
+            </article>
+          </div>
+          <ul class="care-terms">
+            <li>Edits are done within 48 hours of your email.</li>
+            <li>Unused edits don’t roll over to the next month.</li>
+            <li>Cancel anytime in your PayPal account — no contract.</li>
+            <li>Your site and your domain always stay yours.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -532,7 +665,19 @@
           </details>
           <details>
             <summary>How do I pay?</summary>
-            <p>Only after you approve the preview. You pay securely via PayPal. PayPal checkout accepts major cards, and in most countries you do not need a PayPal account.</p>
+            <p>Only after you approve the preview. You pay securely via PayPal. For a one-time website payment, PayPal checkout accepts major cards, and in most countries you do not need a PayPal account. Monthly care works a little differently — see below.</p>
+          </details>
+          <details>
+            <summary>How does monthly care billing work?</summary>
+            <p>Choose a care plan on your package card and subscribe with PayPal. Today you pay only the website price. Care is free for the first month while we finish and launch your site (the first three months with Premium), then PayPal bills the monthly fee automatically — $19, $39, or $69 — on the same date each month. Edits are done within 48 hours, and unused edits don’t roll over.</p>
+          </details>
+          <details>
+            <summary>Can I cancel?</summary>
+            <p>Yes, anytime, with no contract or cancellation fee. Cancel in your PayPal account under automatic payments, or email info@brightfrontdesign.com and we’ll cancel it for you. No further charges are taken after you cancel. Your site and your domain stay yours either way.</p>
+          </details>
+          <details>
+            <summary>Do I need a PayPal account?</summary>
+            <p>For a one-time website payment, usually not: PayPal guest checkout accepts major debit and credit cards in most countries. Monthly care is different because PayPal treats it as an automatic payment. Depending on your country, PayPal may offer a “Debit or Credit Card” option without an account, but in many countries it will ask you to log in or create a free PayPal account (you can still pay with your card inside it). Prefer not to? Pay for the website one-time and email us about care.</p>
           </details>
           <details>
             <summary>How long does a site take?</summary>
@@ -552,7 +697,7 @@
           </details>
           <details>
             <summary>Do you host the site?</summary>
-            <p>Premium includes three months of maintenance and hosting. Other packages can add hosting, or we can launch on a host you already pay for.</p>
+            <p>Yes, with any monthly care plan (from $19/mo), which includes hosting, SSL, and an uptime check. Premium includes the first three months of care. Without a care plan, we can launch on a host you already pay for.</p>
           </details>
           <details>
             <summary>Will it work on phones?</summary>
@@ -666,6 +811,101 @@
           data.get("message")
         ].join("\n");
         window.location.href = "mailto:info@brightfrontdesign.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var CLIENT_ID = "BAAb-9XFpj1TkoAzdIn6yPKFjr9At3dlVg2FbaRQn0F6vMDzwj_I9BZxNXZFyPkM8_bFKRNgaxM4yUSD18";
+      var PLANS = {"starter": {"basic": "P-37C72428AU1150909NLEHO6Y", "standard": "P-4PJ33085CC684101TNLEHO7A", "pro": "P-6YX189848F5148447NLEHO7A"}, "business": {"basic": "P-2JH365063T5835500NLEHO7I", "standard": "P-41B15152K0381711XNLEHO7I", "pro": "P-3WP32352G4740301WNLEHO7Q"}, "premium": {"basic": "P-83H864985W745880BNLEHO7Q", "standard": "P-6K19213792447484YNLEHO7Y", "pro": "P-2G234491388005507NLEHO7Y"}};
+      var TIERS = { basic: { name: "Basic", price: 19 }, standard: { name: "Standard", price: 39 }, pro: { name: "Pro", price: 69 } };
+      var TRIAL_MONTHS = { starter: 1, business: 1, premium: 3 };
+      var sdkPromise = null;
+      function money(n) { return "$" + n.toLocaleString("en-US"); }
+      function loadSdk() {
+        if (sdkPromise) return sdkPromise;
+        sdkPromise = new Promise(function (resolve, reject) {
+          if (window.paypal && window.paypal.Buttons) return resolve(window.paypal);
+          var s = document.createElement("script");
+          s.src = "https://www.paypal.com/sdk/js?client-id=" + encodeURIComponent(CLIENT_ID) + "&vault=true&intent=subscription&currency=USD&disable-funding=credit,paylater";
+          s.setAttribute("data-page-type", "checkout");
+          s.async = true;
+          s.onload = function () { window.paypal && window.paypal.Buttons ? resolve(window.paypal) : reject(new Error("PayPal SDK missing")); };
+          s.onerror = function () { sdkPromise = null; reject(new Error("PayPal SDK failed to load")); };
+          document.head.appendChild(s);
+        });
+        return sdkPromise;
+      }
+      function summary(pack, price, tier) {
+        if (!tier) return "Today: " + money(price) + " · one-time payment · no monthly fees";
+        var t = TIERS[tier];
+        if (TRIAL_MONTHS[pack] === 3) return "Today: " + money(price) + " · 3 months of care included · then $" + t.price + "/mo from month 4 · cancel anytime";
+        return "Today: " + money(price) + " · then $" + t.price + "/mo starting next month · cancel anytime";
+      }
+      function fallbackMsg(area) {
+        area.innerHTML = '<p class="pp-msg">PayPal couldn’t load here. Email <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a> and we’ll send you a secure subscription link, or choose “No monthly care” to pay one-time.</p>';
+      }
+      document.querySelectorAll("fieldset.care").forEach(function (box) {
+        var pack = box.getAttribute("data-pack");
+        var packName = box.getAttribute("data-pack-name");
+        var price = parseInt(box.getAttribute("data-price"), 10);
+        var sum = box.querySelector(".care-sum");
+        var oneoff = box.querySelector(".pp-oneoff");
+        var area = box.querySelector(".pp-area");
+        var slots = {};
+        var done = false;
+        function show(tier) {
+          if (done) return;
+          sum.textContent = summary(pack, price, tier);
+          if (!tier) { oneoff.hidden = false; area.hidden = true; return; }
+          oneoff.hidden = true; area.hidden = false;
+          Object.keys(slots).forEach(function (k) { slots[k].hidden = (k !== tier); });
+          if (slots[tier]) return;
+          var slot = document.createElement("div");
+          slot.className = "pp-slot";
+          slot.setAttribute("data-tier", tier);
+          slot.innerHTML = '<p class="pp-msg">Loading secure PayPal checkout…</p>';
+          area.appendChild(slot);
+          slots[tier] = slot;
+          loadSdk().then(function (paypal) {
+            var buttons = paypal.Buttons({
+              style: { shape: "pill", color: pack === "business" ? "white" : "gold", layout: "vertical", label: "subscribe", height: 45 },
+              createSubscription: function (data, actions) {
+                return actions.subscription.create({ plan_id: PLANS[pack][tier], custom_id: "brightfront-" + pack + "-" + tier });
+              },
+              onApprove: function (data) {
+                done = true;
+                box.querySelector(".care-opts").hidden = true;
+                sum.hidden = true;
+                area.innerHTML = "";
+                var ty = document.createElement("div");
+                ty.className = "pp-thanks";
+                ty.setAttribute("role", "status");
+                ty.innerHTML = "<strong>Thank you — you’re all set.</strong>" +
+                  "<p>Your " + packName + " website and " + TIERS[tier].name + " care plan are confirmed. We’ll email you from <a href=\"mailto:info@brightfrontdesign.com\">info@brightfrontdesign.com</a> within 24 hours.</p>" +
+                  "<p>Please reply to that email with your business name so we can match your payment.</p>" +
+                  (data && data.subscriptionID ? "<p>Reference: <code></code></p>" : "");
+                if (data && data.subscriptionID) ty.querySelector("code").textContent = data.subscriptionID;
+                area.appendChild(ty);
+                ty.scrollIntoView({ behavior: "smooth", block: "center" });
+              },
+              onError: function () {
+                var m = slot.querySelector(".pp-err") || document.createElement("p");
+                m.className = "pp-msg pp-err";
+                m.innerHTML = 'Something went wrong with PayPal. Nothing was charged. Please try again, or email <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>.';
+                slot.appendChild(m);
+              }
+            });
+            if (buttons.isEligible && !buttons.isEligible()) { fallbackMsg(slot); return; }
+            slot.innerHTML = "";
+            return buttons.render(slot);
+          }).catch(function () { fallbackMsg(slot); delete slots[tier]; });
+        }
+        box.querySelectorAll('input[type="radio"]').forEach(function (r) {
+          r.addEventListener("change", function () { if (r.checked) show(r.value === "none" ? null : r.value); });
+        });
+        var checked = box.querySelector('input[type="radio"]:checked');
+        if (checked && checked.value !== "none") show(checked.value);
       });
     })();
   </script>
