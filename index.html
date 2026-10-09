@@ -532,7 +532,7 @@
               </div>
               <p class="care-sum" aria-live="polite">Today: $299 · one-time payment · no monthly fees</p>
               <div class="care-pay">
-                <a class="btn btn-ghost pp-oneoff" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=chedamso%40naver.com&amp;currency_code=USD&amp;amount=299&amp;item_name=Brightfront%20Studio%20-%20Starter%20website" target="_blank" rel="noopener noreferrer">Pay $299 with PayPal</a>
+                <a class="btn btn-ghost pp-oneoff" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;lc=US&amp;business=chedamso%40naver.com&amp;currency_code=USD&amp;amount=299&amp;item_name=Brightfront%20Studio%20-%20Starter%20website" target="_blank" rel="noopener noreferrer">Pay $299 with PayPal</a>
                 <div class="pp-area" hidden></div>
               </div>
             </fieldset>
@@ -559,7 +559,7 @@
               </div>
               <p class="care-sum" aria-live="polite">Today: $699 · one-time payment · no monthly fees</p>
               <div class="care-pay">
-                <a class="btn btn-ghost pp-oneoff" style="color:#fff;border-color:rgba(255,255,255,.35)" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=chedamso%40naver.com&amp;currency_code=USD&amp;amount=699&amp;item_name=Brightfront%20Studio%20-%20Business%20website" target="_blank" rel="noopener noreferrer">Pay $699 with PayPal</a>
+                <a class="btn btn-ghost pp-oneoff" style="color:#fff;border-color:rgba(255,255,255,.35)" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;lc=US&amp;business=chedamso%40naver.com&amp;currency_code=USD&amp;amount=699&amp;item_name=Brightfront%20Studio%20-%20Business%20website" target="_blank" rel="noopener noreferrer">Pay $699 with PayPal</a>
                 <div class="pp-area" hidden></div>
               </div>
             </fieldset>
@@ -586,7 +586,7 @@
               </div>
               <p class="care-sum" aria-live="polite">Today: $1,299 · one-time payment · no monthly fees</p>
               <div class="care-pay">
-                <a class="btn btn-ghost pp-oneoff" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=chedamso%40naver.com&amp;currency_code=USD&amp;amount=1299&amp;item_name=Brightfront%20Studio%20-%20Premium%20website" target="_blank" rel="noopener noreferrer">Pay $1,299 with PayPal</a>
+                <a class="btn btn-ghost pp-oneoff" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;lc=US&amp;business=chedamso%40naver.com&amp;currency_code=USD&amp;amount=1299&amp;item_name=Brightfront%20Studio%20-%20Premium%20website" target="_blank" rel="noopener noreferrer">Pay $1,299 with PayPal</a>
                 <div class="pp-area" hidden></div>
               </div>
             </fieldset>
@@ -827,7 +827,7 @@
         sdkPromise = new Promise(function (resolve, reject) {
           if (window.paypal && window.paypal.Buttons) return resolve(window.paypal);
           var s = document.createElement("script");
-          s.src = "https://www.paypal.com/sdk/js?client-id=" + encodeURIComponent(CLIENT_ID) + "&vault=true&intent=subscription&currency=USD&disable-funding=credit,paylater";
+          s.src = "https://www.paypal.com/sdk/js?client-id=" + encodeURIComponent(CLIENT_ID) + "&vault=true&intent=subscription&currency=USD&disable-funding=credit,paylater&locale=en_US";
           s.setAttribute("data-page-type", "checkout");
           s.async = true;
           s.onload = function () { window.paypal && window.paypal.Buttons ? resolve(window.paypal) : reject(new Error("PayPal SDK missing")); };
