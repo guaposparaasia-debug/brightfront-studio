@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cocina Lempira — Authentic Honduran Food in Fairview</title>
+  <meta name="description" content="Cocina Lempira serves authentic Honduran food in Fairview, NC. Run by four sisters from Honduras. Thu–Sun on Main St.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650;9..144,720&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #0b3f86;
+      --blue-deep: #072a5c;
+      --blue-bright: #1a6fd4;
+      --white: #fffdf8;
+      --cream: #f7f0e4;
+      --sand: #efe2cf;
+      --ink: #24180f;
+      --ink-soft: #5c4636;
+      --terra: #c4512a;
+      --terra-deep: #8d3418;
+      --gold: #e0a01a;
+      --plantain: #f0c14b;
+      --avocado: #4f6b34;
+      --line: rgba(36, 24, 15, 0.12);
+      --shadow: 0 18px 40px rgba(36, 24, 15, 0.12);
+      --banner-h: 42px;
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Outfit", system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.55;
+      font-size: 1.05rem;
+    }
+    a { color: var(--blue); }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+    }
+    .skip {
+      position: absolute;
+      left: 12px;
+      top: -40px;
+      background: var(--ink);
+      color: white;
+      padding: 8px 12px;
+      z-index: 100;
+    }
+    .skip:focus { top: 52px; }
+
+    .preview-banner {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: block;
+      background: var(--blue-deep);
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-size: 0.78rem;
+      letter-spacing: 0.01em;
+      line-height: 1.35;
+      padding: 8px 14px;
+      min-height: var(--banner-h);
+    }
+    .preview-banner strong { color: var(--plantain); font-weight: 650; }
+    .preview-banner:hover { background: #041e44; }
+
+    header.site {
+      background: var(--white);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: var(--banner-h);
+      z-index: 40;
+    }
+    .nav {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 10px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 700;
+    }
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background:
+        linear-gradient(var(--blue) 0 33%, #fff 33% 66%, var(--blue) 66%);
+      border: 2px solid var(--blue);
+      flex: none;
+    }
+    .brand span { display: block; font-size: 0.72rem; font-weight: 500; color: var(--ink-soft); letter-spacing: 0.04em; text-transform: uppercase; }
+    .nav-toggle {
+      border: 1px solid var(--line);
+      background: var(--white);
+      border-radius: 10px;
+      padding: 8px 10px;
+      font: inherit;
+      font-weight: 600;
+    }
+    .nav-links {
+      display: none;
+      list-style: none;
+      margin: 0;
+      padding: 0 18px 14px;
+      gap: 8px;
+    }
+    .nav-links.open { display: grid; }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 600;
+      padding: 8px 0;
+      display: block;
+    }
+    @media (min-width: 760px) {
+      .nav-toggle { display: none; }
+      .nav-links {
+        display: flex;
+        padding: 0;
+        align-items: center;
+        gap: 18px;
+      }
+      .nav-links a { padding: 0; }
+    }
+
+    .hero {
+      background:
+        radial-gradient(900px 420px at 90% -10%, rgba(224, 160, 26, 0.28), transparent 60%),
+        linear-gradient(165deg, #0b3f86 0%, #124e9e 48%, #1d63b8 100%);
+      color: white;
+      overflow: hidden;
+    }
+    .flag-strip {
+      height: 10px;
+      background: linear-gradient(#0b3f86 0 33%, #fff 33% 66%, #0b3f86 66%);
+    }
+    .hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 36px 18px 48px;
+      display: grid;
+      gap: 28px;
+    }
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-family: "Fraunces", Georgia, serif;
+      font-weight: 720;
+      font-size: clamp(2.5rem, 8vw, 4.6rem);
+      line-height: 0.95;
+      margin: 12px 0 10px;
+      letter-spacing: -0.03em;
+    }
+    .hero p.lead {
+      font-size: 1.15rem;
+      max-width: 38rem;
+      color: rgba(255,255,255,0.92);
+      margin: 0 0 8px;
+    }
+    .es { font-style: italic; color: var(--plantain); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-weight: 700;
+      border: 2px solid transparent;
+    }
+    .btn-gold { background: var(--gold); color: var(--ink); }
+    .btn-gold:hover { background: var(--plantain); }
+    .btn-ghost { background: transparent; color: white; border-color: rgba(255,255,255,0.55); }
+    .btn-ghost:hover { background: rgba(255,255,255,0.1); }
+    .btn-blue { background: var(--blue); color: white; }
+    .btn-blue:hover { background: var(--blue-deep); }
+    .btn-terra { background: var(--terra); color: white; }
+    .btn-terra:hover { background: var(--terra-deep); }
+    .hero-art { justify-self: center; width: min(100%, 420px); }
+    .note-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+    .pill {
+      background: rgba(255,255,255,0.12);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
+
+    section { padding: 56px 18px; }
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--terra);
+      margin: 0 0 8px;
+    }
+    h2 {
+      font-family: "Fraunces", Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      line-height: 1.1;
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+    .lede { max-width: 40rem; color: var(--ink-soft); margin-top: 0; }
+
+    .story {
+      display: grid;
+      gap: 22px;
+    }
+    .story-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .story-card p { margin: 0 0 12px; }
+    .story-card p:last-child { margin-bottom: 0; }
+    .facts {
+      display: grid;
+      gap: 10px;
+    }
+    .fact {
+      background: var(--sand);
+      border-radius: 14px;
+      padding: 14px 16px;
+    }
+    .fact strong { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.15rem; }
+    @media (min-width: 800px) {
+      .story { grid-template-columns: 1.4fr 0.8fr; align-items: start; }
+      .hero-inner { grid-template-columns: 1.15fr 0.85fr; align-items: center; padding: 64px 18px 72px; }
+    }
+
+    .menu { background: var(--white); }
+    .menu-grid {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+    @media (min-width: 680px) {
+      .menu-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .dish {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 12px;
+      background: var(--cream);
+    }
+    .dish-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-size: 1.4rem;
+      background: white;
+    }
+    .dish h3 { margin: 0 0 4px; font-size: 1.08rem; }
+    .dish p { margin: 0; color: var(--ink-soft); font-size: 0.96rem; }
+    .menu-note {
+      margin-top: 18px;
+      background: #fff6e4;
+      border-left: 4px solid var(--gold);
+      padding: 12px 14px;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .visit { background: linear-gradient(180deg, var(--cream), #f3e7d4); }
+    .visit-grid { display: grid; gap: 16px; }
+    @media (min-width: 800px) {
+      .visit-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .panel {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 10px 0; border-bottom: 1px solid var(--line); }
+    th { font-weight: 600; color: var(--ink-soft); }
+    tr.closed td { color: #8a7364; }
+    .addr { font-size: 1.15rem; font-weight: 650; margin: 0 0 8px; }
+    .sellout {
+      margin-top: 14px;
+      background: #fde8df;
+      color: var(--terra-deep);
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-weight: 650;
+    }
+
+    .inquiry {
+      background: var(--blue);
+      color: white;
+    }
+    .inquiry .eyebrow { color: var(--plantain); }
+    .inquiry .lede { color: rgba(255,255,255,0.88); }
+    .inquiry-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+    .inquiry a.btn-gold { color: var(--ink); }
+
+    footer {
+      background: var(--ink);
+      color: #f3e7d4;
+      padding: 28px 18px 36px;
+    }
+    footer a { color: var(--plantain); }
+    .foot {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      gap: 8px;
+    }
+    .foot small { color: #cbb8a4; }
+  </style>
+
+<style id="bf-demo">
+  :root { --banner-h: 0px !important; }
+  .preview-banner, .lang { display: none !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+  .bf-demo-ribbon { position: fixed; z-index: 9999; right: 14px; bottom: 14px; display: inline-flex; align-items: center; gap: 8px;
+    padding: 9px 14px; border-radius: 999px; background: #1a1714; color: #f6f1e8 !important; text-decoration: none !important;
+    font: 500 13px/1.2 "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: .01em;
+    box-shadow: 0 10px 28px rgba(26,23,20,.28); border: 1px solid rgba(255,255,255,.12); max-width: calc(100vw - 28px); }
+  .bf-demo-ribbon b { color: #f0b49b; font-weight: 600; white-space: nowrap; }
+  .bf-demo-ribbon:hover { background: #b8431f; } .bf-demo-ribbon:hover b { color: #fff; }
+  .bf-demo-ribbon i { width: 7px; height: 7px; border-radius: 50%; background: #c4512c; flex: none; font-style: normal; }
+  @media (max-width: 480px) { .bf-demo-ribbon { left: 10px; right: 10px; bottom: 10px; justify-content: center; font-size: 12.5px; } }
+  .skip { top: -80px !important; } .skip:focus { top: 8px !important; }
+  @media (min-width: 760px) {
+    header.site { display: flex; align-items: center; gap: 24px; padding: 0 max(18px, calc((100% - 1080px) / 2 + 18px)); }
+    header.site > .nav { flex: 1 1 auto; max-width: none; margin: 0; padding: 10px 0; }
+    header.site > .nav-links { flex: none; margin: 0; padding: 0; }
+  }
+  @media print { .bf-demo-ribbon { display: none; } }
+</style>
+<script id="bf-demo-js">
+document.addEventListener('DOMContentLoaded', function () {
+  var ph = /\(?\b\d{3}\)?[\s.-]?\d{3}-\d{4}\b/g, em = /[\w.%+-]+@[\w.-]+\.[a-z]{2,}/gi;
+  var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT), n;
+  while ((n = w.nextNode())) {
+    var t = n.nodeValue.replace(ph, '(555) 010-0000').replace(em, 'hello@example.com');
+    if (t !== n.nodeValue) n.nodeValue = t;
+  }
+});
+</script>
+</head>
+<body>
+<a class="bf-demo-ribbon" href="https://brightfrontdesign.com/#contact" target="_blank" rel="noopener"><i aria-hidden="true"></i><span>Demo site by Brightfront Studio</span> <b>· Get yours free →</b></a>
+
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site">
+    <div class="nav">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <div>Cocina Lempira<span>Food truck · Fairview</span></div>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#story">Our story</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#visit">Hours &amp; location</a></li>
+      <li><a href="#order">Order</a></li>
+    </ul>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="flag-strip" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div>
+          <p class="kicker">Fairview, NC · <span class="es" lang="es">Comida hondureña</span></p>
+          <h1>Cocina Lempira</h1>
+          <p class="lead">Authentic Honduran food from four sisters of Honduras. Big plates, coconut broths, and the kind of cooking that started in an apartment and rolled out onto a truck.</p>
+          <p class="es" lang="es">Bienvenidos. Sabores de Honduras, servidos en Fairview.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#menu">See the menu</a>
+            <a class="btn btn-ghost" href="tel:+15550100000">Call (555) 010-0000</a>
+          </div>
+          <div class="note-row">
+            <span class="pill">Covered seating</span>
+            <span class="pill">Thu–Sun</span>
+            <span class="pill">Often sells out — come early</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 420 300" role="img" xmlns="http://www.w3.org/2000/svg">
+            <title>Illustrated food truck in Honduran blue and white</title>
+            <rect x="0" y="210" width="420" height="18" rx="9" fill="#e0a01a" opacity="0.85"/>
+            <rect x="36" y="92" width="300" height="120" rx="18" fill="#fffdf8"/>
+            <rect x="36" y="92" width="300" height="28" rx="10" fill="#0b3f86"/>
+            <rect x="36" y="168" width="300" height="18" fill="#0b3f86"/>
+            <circle cx="78" cy="118" r="4" fill="#f0c14b"/>
+            <circle cx="96" cy="118" r="4" fill="#f0c14b"/>
+            <circle cx="114" cy="118" r="4" fill="#f0c14b"/>
+            <circle cx="132" cy="118" r="4" fill="#f0c14b"/>
+            <circle cx="150" cy="118" r="4" fill="#f0c14b"/>
+            <rect x="196" y="128" width="118" height="52" rx="8" fill="#1a6fd4"/>
+            <rect x="206" y="136" width="98" height="28" rx="4" fill="#f7f0e4"/>
+            <text x="214" y="155" font-family="Georgia, serif" font-size="14" fill="#0b3f86">Cocina Lempira</text>
+            <rect x="58" y="136" width="112" height="44" rx="8" fill="#c4512a"/>
+            <circle cx="86" cy="158" r="10" fill="#f0c14b"/>
+            <circle cx="114" cy="158" r="8" fill="#4f6b34"/>
+            <rect x="318" y="124" width="54" height="88" rx="8" fill="#efe2cf"/>
+            <circle cx="118" cy="214" r="22" fill="#24180f"/>
+            <circle cx="118" cy="214" r="10" fill="#efe2cf"/>
+            <circle cx="286" cy="214" r="22" fill="#24180f"/>
+            <circle cx="286" cy="214" r="10" fill="#efe2cf"/>
+            <path d="M70 78c28-28 70-28 98 0" fill="none" stroke="#f0c14b" stroke-width="6" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section id="story">
+      <div class="wrap story">
+        <div class="story-card">
+          <p class="eyebrow">Nuestra historia · Our story</p>
+          <h2>From an apartment kitchen to a truck on Main St.</h2>
+          <p>Cocina Lempira is run by four sisters from Honduras. They started selling from their apartment. Now they have a food truck in Fairview — and a dream of opening a restaurant.</p>
+          <p>Customers come for the big, filling plates, the authentic flavor, and the kind sisters who help you choose. There is a covered seating area beside the truck.</p>
+          <p lang="es" class="es">Cuatro hermanas. Un camión. El sabor de Honduras.</p>
+        </div>
+        <div class="facts">
+          <div class="fact"><strong>Honduras</strong> Home cooking from Honduras, served in Fairview.</div>
+          <div class="fact"><strong>Four sisters</strong> They’ll help you pick if you’re new to the menu.</div>
+          <div class="fact"><strong>The dream</strong> A restaurant of their own, after the truck.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu" id="menu">
+      <div class="wrap">
+        <p class="eyebrow">El menú · Menu highlights</p>
+        <h2>What comes off the truck.</h2>
+        <p class="lede">A taste of the board. No prices listed here — ask at the window. Plates are known for being big and filling.</p>
+        <div class="menu-grid">
+          <article class="dish">
+            <div class="dish-icon" aria-hidden="true">🍽️</div>
+            <div>
+              <h3>Bandeja catracha</h3>
+              <p>The Honduran platter — a full plate, the way the sisters serve it.</p>
+            </div>
+          </article>
+          <article class="dish">
+            <div class="dish-icon" aria-hidden="true">🌮</div>
+            <div>
+              <h3>Tacos catrachos</h3>
+              <p>Catracho-style tacos from the truck window.</p>
+            </div>
+          </article>
+          <article class="dish">
+            <div class="dish-icon" aria-hidden="true">🥩</div>
+            <div>
+              <h3>Carne asada plate</h3>
+              <p>With rice, beans, plantain, queso fresco, and avocado.</p>
+            </div>
+          </article>
+          <article class="dish">
+            <div class="dish-icon" aria-hidden="true">🥟</div>
+            <div>
+              <h3>Pastelitos</h3>
+              <p>Fried Honduran pastries — a truck favorite.</p>
+            </div>
+          </article>
+          <article class="dish">
+            <div class="dish-icon" aria-hidden="true">🍲</div>
+            <div>
+              <h3>Mondongo</h3>
+              <p>Tripe soup in coconut broth.</p>
+            </div>
+          </article>
+          <article class="dish">
+            <div class="dish-icon" aria-hidden="true">🐚</div>
+            <div>
+              <h3>Sopa de caracol</h3>
+              <p>Snail soup in coconut milk.</p>
+            </div>
+          </article>
+          <article class="dish">
+            <div class="dish-icon" aria-hidden="true">🍌</div>
+            <div>
+              <h3>Banana-chip nachos</h3>
+              <p>Loaded on crisp banana chips.</p>
+            </div>
+          </article>
+          <article class="dish">
+            <div class="dish-icon" aria-hidden="true">🐖</div>
+            <div>
+              <h3>Oven-roasted pork leg</h3>
+              <p>Slow-roasted pierna, served from the truck.</p>
+            </div>
+          </article>
+          <article class="dish">
+            <div class="dish-icon" aria-hidden="true">🫔</div>
+            <div>
+              <h3>Enchiladas hondureñas</h3>
+              <p>Honduran enchiladas — not the Tex-Mex kind.</p>
+            </div>
+          </article>
+          <article class="dish">
+            <div class="dish-icon" aria-hidden="true">🍗</div>
+            <div>
+              <h3>Fried chicken</h3>
+              <p>Crispy chicken alongside the Honduran plates.</p>
+            </div>
+          </article>
+        </div>
+        <p class="menu-note">Often sells out. Come early if you have your heart set on a plate.</p>
+      </div>
+    </section>
+
+    <section class="visit" id="visit">
+      <div class="wrap">
+        <p class="eyebrow">Horario y ubicación · Hours &amp; location</p>
+        <h2>Find the truck on Main St.</h2>
+        <div class="visit-grid">
+          <div class="panel">
+            <h3>Hours</h3>
+            <table>
+              <caption class="visually-hidden" style="position:absolute;left:-9999px;">Weekly hours</caption>
+              <tbody>
+                <tr class="closed"><th scope="row">Monday</th><td>Closed</td></tr>
+                <tr class="closed"><th scope="row">Tuesday</th><td>Closed</td></tr>
+                <tr class="closed"><th scope="row">Wednesday</th><td>Closed</td></tr>
+                <tr><th scope="row">Thursday</th><td>12–8:30 PM</td></tr>
+                <tr><th scope="row">Friday</th><td>12–8:30 PM</td></tr>
+                <tr><th scope="row">Saturday</th><td>12–7:30 PM</td></tr>
+                <tr><th scope="row">Sunday</th><td>12–6 PM</td></tr>
+              </tbody>
+            </table>
+            <p class="sellout">Often sells out — come early. Covered seating area on site.</p>
+          </div>
+          <div class="panel">
+            <h3>Location</h3>
+            <p class="addr">123 Main St<br>Fairview, NC 00000</p>
+            <p>Phone <a href="tel:+15550100000">(555) 010-0000</a><br>
+            Email <a href="mailto:hello@example.com">hello@example.com</a></p>
+            <p><a class="btn btn-blue" href="#">Open in Google Maps</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="inquiry" id="order">
+      <div class="wrap">
+        <p class="eyebrow">Pedidos · Catering &amp; order inquiry</p>
+        <h2>Call or write the sisters.</h2>
+        <p class="lede">For an order question or a catering inquiry, reach Cocina Lempira by phone or email. No online checkout on this demo.</p>
+        <div class="inquiry-actions">
+          <a class="btn btn-gold" href="tel:+15550100000">Call (555) 010-0000</a>
+          <a class="btn btn-ghost" href="mailto:hello@example.com">Email hello@example.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot">
+      <strong>Cocina Lempira</strong>
+      <div>123 Main St, Fairview, NC 00000 · <a href="tel:+15550100000">(555) 010-0000</a></div>
+      <div><a href="#">Social page</a> · <a href="mailto:hello@example.com">hello@example.com</a></div>
+      <small>Demo site by <a href="https://brightfrontdesign.com/">Brightfront Studio</a> · Names, address and contact details are fictional</small>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector(".nav-toggle");
+      var list = document.getElementById("nav-links");
+      btn.addEventListener("click", function () {
+        var open = list.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      list.addEventListener("click", function (e) {
+        if (e.target.tagName === "A") {
+          list.classList.remove("open");
+          btn.setAttribute("aria-expanded", "false");
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
