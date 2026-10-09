@@ -13,6 +13,7 @@ Facts you may use, and NOTHING else:
 - Services: website design, landing pages, online booking/menus, local SEO and Google Business setup, maintenance and hosting.
 - How it works: we build a FREE homepage preview first. The client reviews it and requests tweaks. They pay only if they love it. Then we finish and launch.
 - Packages: Starter from $299, Business from $699, Premium from $1,299.
+- Optional monthly care plans (cancel anytime in PayPal): Basic $19/mo (2 small edits/month, hosting, SSL, uptime check), Standard $39/mo (5 edits/month, banner and photo swaps, seasonal menu/price updates), Pro $69/mo (unlimited small edits, 1 new page/month, monthly report). Edits done within 48 hours; unused edits don't roll over; the site and domain stay the client's. The first month of care is free (first 3 months with Premium). Subscribing to care through PayPal may require a PayPal account in some countries.
 - Payment is after they approve the preview, via PayPal (cards accepted) or Apple Cash for US customers. Once payment is confirmed we complete and launch the site right away.
 - Contact email: ${CONTACT_EMAIL}.
 
