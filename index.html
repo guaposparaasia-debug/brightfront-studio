@@ -219,6 +219,11 @@
     .care-terms { display: grid; gap: 6px 18px; margin: 0; padding: 0; list-style: none; color: var(--ink-soft); font-size: 0.95rem; }
     .care-terms li { padding-left: 22px; position: relative; }
     .care-terms li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 640; }
+    .addon-note { margin-top: 16px; background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 22px; padding: 20px; box-shadow: var(--shadow); }
+    .addon-note h3 { font-size: clamp(1.4rem, 3vw, 1.8rem); margin: 6px 0 8px; }
+    .addon-note p { margin: 0 0 8px; color: var(--ink-soft); max-width: 46rem; }
+    .addon-note .addon-fine { margin: 0; color: var(--muted); font-size: 0.92rem; }
+    @media (min-width: 760px) { .addon-note { padding: 24px 34px; } }
     @media (min-width: 760px) {
       .care-tiers { grid-template-columns: repeat(3, 1fr); }
       .care-terms { grid-template-columns: 1fr 1fr; }
@@ -305,6 +310,7 @@
         <span class="social nav-social">
           <a href="https://www.instagram.com/free_website_developer/" target="_blank" rel="noopener" aria-label="Brightfront Studio on Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a>
           <a href="https://x.com/Brightfront_" target="_blank" rel="noopener" aria-label="Brightfront Studio on X" title="X (Twitter)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61595195791707" target="_blank" rel="noopener" aria-label="Brightfront Studio on Facebook" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.87.25-1.46 1.5-1.46H16.6V4.46A21 21 0 0 0 14.3 4.3c-2.3 0-3.8 1.4-3.8 3.95v2.25H8v3h2.5V21z"/></svg></a>
         </span>
       </nav>
       <a class="btn btn-primary nav-cta" href="#contact">Free preview</a>
@@ -532,7 +538,7 @@
               </div>
               <p class="care-sum" aria-live="polite">Today: $299 · one-time payment · no monthly fees</p>
               <div class="care-pay">
-                <a class="btn btn-ghost pp-oneoff" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;lc=US&amp;business=chedamso%40naver.com&amp;currency_code=USD&amp;amount=299&amp;item_name=Brightfront%20Studio%20-%20Starter%20website" target="_blank" rel="noopener noreferrer">Pay $299 with PayPal</a>
+                <a class="btn btn-ghost pp-oneoff" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;lc=US&amp;business=chedamso%40naver.com&amp;currency_code=USD&amp;amount=299&amp;item_name=Brightfront%20Studio%20-%20Starter%20website&amp;charset=UTF-8&amp;notify_url=https%3A%2F%2Fbrightfrontdesign.com%2Fapi%2Fpaypal-ipn&amp;return=https%3A%2F%2Fbrightfrontdesign.com%2Fthanks%2F&amp;cancel_return=https%3A%2F%2Fbrightfrontdesign.com%2F%23packages" target="_blank" rel="noopener noreferrer">Pay $299 with PayPal</a>
                 <div class="pp-area" hidden></div>
               </div>
             </fieldset>
@@ -559,7 +565,7 @@
               </div>
               <p class="care-sum" aria-live="polite">Today: $699 · one-time payment · no monthly fees</p>
               <div class="care-pay">
-                <a class="btn btn-ghost pp-oneoff" style="color:#fff;border-color:rgba(255,255,255,.35)" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;lc=US&amp;business=chedamso%40naver.com&amp;currency_code=USD&amp;amount=699&amp;item_name=Brightfront%20Studio%20-%20Business%20website" target="_blank" rel="noopener noreferrer">Pay $699 with PayPal</a>
+                <a class="btn btn-ghost pp-oneoff" style="color:#fff;border-color:rgba(255,255,255,.35)" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;lc=US&amp;business=chedamso%40naver.com&amp;currency_code=USD&amp;amount=699&amp;item_name=Brightfront%20Studio%20-%20Business%20website&amp;charset=UTF-8&amp;notify_url=https%3A%2F%2Fbrightfrontdesign.com%2Fapi%2Fpaypal-ipn&amp;return=https%3A%2F%2Fbrightfrontdesign.com%2Fthanks%2F&amp;cancel_return=https%3A%2F%2Fbrightfrontdesign.com%2F%23packages" target="_blank" rel="noopener noreferrer">Pay $699 with PayPal</a>
                 <div class="pp-area" hidden></div>
               </div>
             </fieldset>
@@ -586,7 +592,7 @@
               </div>
               <p class="care-sum" aria-live="polite">Today: $1,299 · one-time payment · no monthly fees</p>
               <div class="care-pay">
-                <a class="btn btn-ghost pp-oneoff" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;lc=US&amp;business=chedamso%40naver.com&amp;currency_code=USD&amp;amount=1299&amp;item_name=Brightfront%20Studio%20-%20Premium%20website" target="_blank" rel="noopener noreferrer">Pay $1,299 with PayPal</a>
+                <a class="btn btn-ghost pp-oneoff" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;lc=US&amp;business=chedamso%40naver.com&amp;currency_code=USD&amp;amount=1299&amp;item_name=Brightfront%20Studio%20-%20Premium%20website&amp;charset=UTF-8&amp;notify_url=https%3A%2F%2Fbrightfrontdesign.com%2Fapi%2Fpaypal-ipn&amp;return=https%3A%2F%2Fbrightfrontdesign.com%2Fthanks%2F&amp;cancel_return=https%3A%2F%2Fbrightfrontdesign.com%2F%23packages" target="_blank" rel="noopener noreferrer">Pay $1,299 with PayPal</a>
                 <div class="pp-area" hidden></div>
               </div>
             </fieldset>
@@ -634,6 +640,12 @@
             <li>Cancel anytime in your PayPal account — no contract.</li>
             <li>Your site and your domain always stay yours.</li>
           </ul>
+        </div>
+        <div class="addon-note reveal" id="domain">
+          <span class="kicker">Add-on · Domain setup</span>
+          <h3>Want your own .com?</h3>
+          <p><strong>Domain setup: $49 + the domain cost</strong> (usually $10–15/year — we recommend prepaying 2–3 years). We register it, connect it, and can transfer it to your own account anytime. Or buy it yourself and we connect it for free.</p>
+          <p class="addon-fine">The exact domain cost depends on the name you choose, so we quote it by email before anything is charged — just ask at <a href="mailto:info@brightfrontdesign.com?subject=Domain%20setup">info@brightfrontdesign.com</a>.</p>
         </div>
       </div>
     </section>
@@ -700,6 +712,10 @@
             <p>Yes, with any monthly care plan (from $19/mo), which includes hosting, SSL, and an uptime check. Premium includes the first three months of care. Without a care plan, we can launch on a host you already pay for.</p>
           </details>
           <details>
+            <summary>Can you get me a domain name?</summary>
+            <p>Yes. Domain setup is $49 plus the domain cost itself (usually $10–15/year; we recommend prepaying 2–3 years). We register the domain, connect it to your site, and can transfer it to your own account anytime — it’s always yours. The exact domain cost is quoted by email before anything is charged. Already have a domain, or prefer to buy it yourself? We connect it for free.</p>
+          </details>
+          <details>
             <summary>Will it work on phones?</summary>
             <p>Yes. Every layout is designed phone-first, then expanded for larger screens. That is how most local customers arrive.</p>
           </details>
@@ -762,6 +778,7 @@
       <div class="social">
         <a href="https://www.instagram.com/free_website_developer/" target="_blank" rel="noopener" aria-label="Brightfront Studio on Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg></a>
         <a href="https://x.com/Brightfront_" target="_blank" rel="noopener" aria-label="Brightfront Studio on X" title="X (Twitter)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://www.facebook.com/profile.php?id=61595195791707" target="_blank" rel="noopener" aria-label="Brightfront Studio on Facebook" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.87.25-1.46 1.5-1.46H16.6V4.46A21 21 0 0 0 14.3 4.3c-2.3 0-3.8 1.4-3.8 3.95v2.25H8v3h2.5V21z"/></svg></a>
       </div>
     </div>
   </footer>
@@ -882,8 +899,8 @@
                 ty.className = "pp-thanks";
                 ty.setAttribute("role", "status");
                 ty.innerHTML = "<strong>Thank you — you’re all set.</strong>" +
-                  "<p>Your " + packName + " website and " + TIERS[tier].name + " care plan are confirmed. We’ll email you from <a href=\"mailto:info@brightfrontdesign.com\">info@brightfrontdesign.com</a> within 24 hours.</p>" +
-                  "<p>Please reply to that email with your business name so we can match your payment.</p>" +
+                  "<p>Your " + packName + " website and " + TIERS[tier].name + " care plan are confirmed. We’ve just emailed you a confirmation from <a href=\"mailto:info@brightfrontdesign.com\">info@brightfrontdesign.com</a> (check spam if you don’t see it).</p>" +
+                  "<p>Just reply to that email with your business name, logo/photos, hours, and menu or services — we start right away.</p>" +
                   (data && data.subscriptionID ? "<p>Reference: <code></code></p>" : "");
                 if (data && data.subscriptionID) ty.querySelector("code").textContent = data.subscriptionID;
                 area.appendChild(ty);
