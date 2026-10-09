@@ -146,22 +146,6 @@
       .ba-grid { grid-template-columns: 1fr 1fr; }
       .ba-card:first-child { grid-column: 1 / -1; }
     }
-    .mock { background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 14px; box-shadow: var(--shadow); }
-    .mock header { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; margin: 10px 2px 12px; }
-    .mock header p { margin: 4px 0 0; color: var(--muted); font-size: 0.92rem; }
-    .screen { border-radius: 16px; overflow: hidden; border: 1px solid var(--line); min-height: 280px; }
-    .salon { background: #161311; color: #f7efe6; padding: 18px; min-height: 280px; }
-    .salon .bar, .resto .bar, .dental .bar { display: flex; justify-content: space-between; font-size: 0.75rem; opacity: .8; }
-    .salon h3 { font-size: 2.2rem; margin: 28px 0 6px; }
-    .line { display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.12); padding: 8px 0; font-size: 0.9rem; }
-    .book { display: inline-block; margin-top: 14px; background: #e7c9a4; color: #1a1714; border-radius: 999px; padding: 7px 12px; font-size: 0.82rem; }
-    .resto { background: #2b3328; color: #f4efe4; padding: 18px; min-height: 280px; }
-    .resto h3 { font-size: 2.3rem; margin: 26px 0 4px; }
-    .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
-    .chips span { border: 1px solid rgba(255,255,255,.2); border-radius: 999px; padding: 5px 9px; font-size: 0.78rem; }
-    .dental { background: linear-gradient(#f7fbf8, #e7f0ea); color: #1d2b26; padding: 18px; min-height: 280px; }
-    .dental h3 { font-size: 2rem; margin: 22px 0 6px; color: #1d2b26; }
-    .appt { margin-top: 16px; background: #fff; border-radius: 14px; padding: 12px; display: grid; gap: 4px; font-size: 0.88rem; }
     .packages { display: grid; gap: 12px; }
     .pack { background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 20px; display: flex; flex-direction: column; gap: 8px; }
     .pack.featured { background: var(--forest); color: #f6f1e8; border-color: var(--forest); }
@@ -262,6 +246,49 @@
     .nav-links .nav-social a { width: 34px; height: 34px; color: var(--ink-soft); }
     .nav-links .nav-social a:hover, .nav-links .nav-social a:focus-visible { color: #fff; }
     @media (min-width: 1080px) { .nav-links .nav-social { display: flex; } }
+    .section-head .note { justify-self: start; }
+    .demos { gap: 18px; }
+    .demo-card { min-width: 0; }
+    .demo-link { display: flex; flex-direction: column; height: 100%; text-decoration: none; color: inherit; background: var(--paper); border: 1px solid var(--line); border-radius: 24px; padding: 10px; box-shadow: var(--shadow); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+    .demo-link:hover { transform: translateY(-3px); box-shadow: 0 24px 60px rgba(26, 23, 20, 0.14); border-color: rgba(184, 67, 31, .35); }
+    .demo-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    .frame { border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: #fff; }
+    .frame .chrome { padding: 8px 10px; }
+    .frame .url { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+    .frame img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; background: var(--bg-deep, #e9e1d4); transition: transform .5s ease; }
+    .demo-link:hover .frame img { transform: scale(1.025); }
+    .demo-meta { display: flex; flex-direction: column; gap: 6px; padding: 14px 8px 8px; flex: 1; }
+    .demo-meta .cat { color: var(--accent); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 640; }
+    .demo-meta h3 { font-size: 1.5rem; }
+    .demo-meta p { margin: 0; color: var(--ink-soft); font-size: 0.97rem; }
+    .demo-meta .go { margin-top: auto; padding-top: 8px; font-weight: 560; color: var(--ink); }
+    .demo-meta .go span { display: inline-block; color: var(--accent); transition: transform .2s ease; }
+    .demo-link:hover .go span { transform: translateX(4px); }
+    .ba-card { position: relative; transition: transform .25s ease, box-shadow .25s ease; }
+    .ba-card:hover { transform: translateY(-2px); box-shadow: 0 24px 60px rgba(26, 23, 20, 0.12); }
+    .ba-link { flex-basis: 100%; margin-top: 4px; font-weight: 560; color: var(--accent); text-decoration: none; }
+    .ba-link::after { content: ""; position: absolute; inset: 0; border-radius: 24px; }
+    .ba-link:focus-visible { outline: none; }
+    .ba-link:focus-visible::after { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .ba-card:hover .ba-link { text-decoration: underline; text-underline-offset: 3px; }
+    @media (min-width: 760px) {
+      .demos { grid-template-columns: 1fr 1fr; }
+      .demo-card.feature { grid-column: 1 / -1; }
+      .demo-card.feature .demo-link { display: grid; grid-template-columns: 1.55fr 1fr; align-items: center; gap: 10px; }
+      .demo-card.feature .demo-meta { padding: 18px 22px; justify-content: center; }
+      .demo-card.feature h3 { font-size: clamp(2rem, 3.4vw, 2.8rem); }
+      .demo-card.feature p { font-size: 1.05rem; }
+      .demo-card.feature .go { margin-top: 10px; }
+      .ba-link { flex-basis: auto; margin-left: auto; margin-top: 0; }
+    }
+    @media (min-width: 1020px) {
+      .demos { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .demo-link, .frame img, .ba-card, .demo-meta .go span { transition: none; }
+      .demo-link:hover, .ba-card:hover { transform: none; }
+      .demo-link:hover .frame img { transform: none; }
+    }
     .reveal { opacity: 0; transform: translateY(18px); }
     .reveal.in { animation: rise .7s ease forwards; }
     .delay-1.in { animation-delay: .08s; }
@@ -272,7 +299,6 @@
       .menu-btn, .menu-panel { display: none !important; }
       .hero-grid { grid-template-columns: 1.1fr .9fr; }
       .problem-grid, .services, .packages, .steps { grid-template-columns: 1fr 1fr; }
-      .work-grid { grid-template-columns: 1fr 1fr; }
       .contact-grid { grid-template-columns: .8fr 1.2fr; align-items: start; }
       .problem, .band { padding: 42px; }
     }
@@ -388,53 +414,111 @@
     <section class="section" id="work">
       <div class="wrap">
         <div class="section-head">
-          <p class="note">Concept designs</p>
-          <h2>Four directions, not client logos.</h2>
-          <p>These are original mockups built for this page — cafe, hair salon, restaurant, and dental clinic. They show the kind of layout we design. They are not real client projects.</p>
+          <p class="note">Demo builds</p>
+          <h2>Seven demo sites you can click through.</h2>
+          <p>Homepages we designed as free previews for local food trucks and bakeries, rebuilt as demos with invented names, addresses and phone numbers. Open one in a new tab and try it on your phone.</p>
         </div>
-        <div class="work-grid">
-          <article class="mock reveal">
-            <div class="screen">
-              <div class="cafe-hero">
-                <div class="cafe-top"><span class="word">Hearth &amp; Rye</span><span class="pill">Cafe concept</span></div>
-                <h3>Morning, written plainly.</h3>
-                <p>Hours, a short menu, and a map line — the things a new customer looks for.</p>
-                <div class="menu-row"><span>Batch brew</span><span>3.20</span></div>
-                <div class="menu-row"><span>Sesame bun</span><span>4</span></div>
+        <div class="work-grid demos">
+          <article class="demo-card reveal feature">
+            <a class="demo-link" href="/demo/cocina-lempira/" target="_blank" rel="noopener" aria-label="Open the Cocina Lempira demo site in a new tab">
+              <div class="frame">
+                <div class="chrome" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">brightfrontdesign.com/demo/cocina-lempira</span></div>
+                <img src="/assets/work/cocina-lempira.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Homepage of the Cocina Lempira demo: a Honduran food truck homepage in blue and white with menu, hours and a call button.">
               </div>
-            </div>
-            <header><div><strong>Cafe</strong><p>Concept design · menu and hours up front</p></div></header>
+              <div class="demo-meta">
+                <span class="cat">Food truck · Honduran</span>
+                <h3>Cocina Lempira</h3>
+                <p>Baleadas, big plates and Thursday–Sunday hours, all on one bright blue page with a call button up top.</p>
+                <span class="go">View live demo <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
           </article>
-          <article class="mock reveal">
-            <div class="screen salon">
-              <div class="bar"><span>Lumen Atelier</span><span>Salon concept</span></div>
-              <h3>Cut, colour, a chair that looks booked.</h3>
-              <div class="line"><span>Signature cut</span><span>68</span></div>
-              <div class="line"><span>Gloss colour</span><span>120</span></div>
-              <div class="line"><span>Blow-dry</span><span>45</span></div>
-              <span class="book">Book a chair</span>
-            </div>
-            <header><div><strong>Hair salon</strong><p>Concept design · services, prices, booking</p></div></header>
+          <article class="demo-card reveal">
+            <a class="demo-link" href="/demo/calenda-kitchen/" target="_blank" rel="noopener" aria-label="Open the Calenda Kitchen demo site in a new tab">
+              <div class="frame">
+                <div class="chrome" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">brightfrontdesign.com/demo/calenda-kitchen</span></div>
+                <img src="/assets/work/calenda-kitchen.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Homepage of the Calenda Kitchen demo: a colorful Oaxacan food truck homepage with folk-art illustration and menu highlights.">
+              </div>
+              <div class="demo-meta">
+                <span class="cat">Food truck · Oaxacan</span>
+                <h3>Calenda Kitchen</h3>
+                <p>Charcoal grill, house salsas and a menu that used to live in a photo post.</p>
+                <span class="go">View live demo <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
           </article>
-          <article class="mock reveal">
-            <div class="screen resto">
-              <div class="bar"><span>Marrow</span><span>Restaurant concept</span></div>
-              <h3>Dinner, with a table held.</h3>
-              <p>Tonight’s kitchen, in three lines, plus a reservation path.</p>
-              <div class="chips"><span>Wood-fired</span><span>Late seating</span><span>Reserve</span></div>
-            </div>
-            <header><div><strong>Restaurant</strong><p>Concept design · evening mood and booking</p></div></header>
+          <article class="demo-card reveal">
+            <a class="demo-link" href="/demo/sugar-bloom/" target="_blank" rel="noopener" aria-label="Open the Sugar Bloom Bakery demo site in a new tab">
+              <div class="frame">
+                <div class="chrome" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">brightfrontdesign.com/demo/sugar-bloom</span></div>
+                <img src="/assets/work/sugar-bloom.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Homepage of the Sugar Bloom Bakery demo: a pink custom cake bakery homepage with cake styles and a request button.">
+              </div>
+              <div class="demo-meta">
+                <span class="cat">Bakery · Custom cakes</span>
+                <h3>Sugar Bloom Bakery</h3>
+                <p>Cake styles, how ordering works, and a request form that writes the email for you.</p>
+                <span class="go">View live demo <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
           </article>
-          <article class="mock reveal">
-            <div class="screen dental">
-              <div class="bar"><span>Northline Dental</span><span>Clinic concept</span></div>
-              <h3>Calm, clear, easy to book.</h3>
-              <p>New patients can see what happens on a first visit.</p>
-              <div class="appt"><strong>New patient visit</strong><span>Check-up · clean · a plan you can read</span><span>Request a time</span></div>
-            </div>
-            <header><div><strong>Dental clinic</strong><p>Concept design · trust and appointment path</p></div></header>
+          <article class="demo-card reveal">
+            <a class="demo-link" href="/demo/dulce-bun/" target="_blank" rel="noopener" aria-label="Open the Dulce Bun Co. demo site in a new tab">
+              <div class="frame">
+                <div class="chrome" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">brightfrontdesign.com/demo/dulce-bun</span></div>
+                <img src="/assets/work/dulce-bun.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Homepage of the Dulce Bun Co. demo: a pastel food truck homepage for concha sandwiches with an order button.">
+              </div>
+              <div class="demo-meta">
+                <span class="cat">Food truck · Concha sandwiches</span>
+                <h3>Dulce Bun Co.</h3>
+                <p>Sweet-meets-savory menu cards, string-light mood and a clear order button.</p>
+                <span class="go">View live demo <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
+          </article>
+          <article class="demo-card reveal">
+            <a class="demo-link" href="/demo/kalimera-grill/" target="_blank" rel="noopener" aria-label="Open the Kalimera Grill demo site in a new tab">
+              <div class="frame">
+                <div class="chrome" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">brightfrontdesign.com/demo/kalimera-grill</span></div>
+                <img src="/assets/work/kalimera-grill.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Homepage of the Kalimera Grill demo: a teal gyro food truck homepage showing today’s hours.">
+              </div>
+              <div class="demo-meta">
+                <span class="cat">Food truck · Gyros &amp; breakfast</span>
+                <h3>Kalimera Grill</h3>
+                <p>Today’s hours highlighted automatically, so nobody drives to a closed window.</p>
+                <span class="go">View live demo <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
+          </article>
+          <article class="demo-card reveal">
+            <a class="demo-link" href="/demo/saguaro-dogs/" target="_blank" rel="noopener" aria-label="Open the Saguaro Dogs demo site in a new tab">
+              <div class="frame">
+                <div class="chrome" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">brightfrontdesign.com/demo/saguaro-dogs</span></div>
+                <img src="/assets/work/saguaro-dogs.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Homepage of the Saguaro Dogs demo: a dark Sonoran hot dog cart homepage with tonight’s hours and catering button.">
+              </div>
+              <div class="demo-meta">
+                <span class="cat">Hot dog cart · Sonoran</span>
+                <h3>Saguaro Dogs</h3>
+                <p>Tonight’s status, catering requests and late-night hours on a desert-dark page.</p>
+                <span class="go">View live demo <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
+          </article>
+          <article class="demo-card reveal">
+            <a class="demo-link" href="/demo/honeycrumb/" target="_blank" rel="noopener" aria-label="Open the Honeycrumb Bakery demo site in a new tab">
+              <div class="frame">
+                <div class="chrome" aria-hidden="true"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">brightfrontdesign.com/demo/honeycrumb</span></div>
+                <img src="/assets/work/honeycrumb.webp" width="1200" height="750" loading="lazy" decoding="async" alt="Homepage of the Honeycrumb Bakery demo: a soft pink celebration cake bakery homepage with an open-today card.">
+              </div>
+              <div class="demo-meta">
+                <span class="cat">Bakery · Celebration cakes</span>
+                <h3>Honeycrumb Bakery</h3>
+                <p>Themed cakes, an open-today card and a request form built around reference photos.</p>
+                <span class="go">View live demo <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
           </article>
         </div>
+        <p class="ba-privacy"><span class="note">Honest note</span><span>These are demo and preview builds, not paid client launches. Business names, addresses, phone numbers and emails on the demos are placeholders.</span></p>
       </div>
     </section>
     <section class="section" id="before-after">
@@ -442,7 +526,7 @@
         <div class="section-head">
           <p class="eyebrow">Before &amp; after</p>
           <h2>Real small businesses. Real upgrades.</h2>
-          <p>Local food trucks and bakeries whose customers could only find a social page, a bare ordering link, or a broken site. Here is the free homepage preview we built for each one: menu, hours, and a clear way to call or visit.</p>
+          <p>Local food trucks and bakeries whose customers could only find a social page, a bare ordering link, or a broken site. Here is the free homepage preview we built for each one: menu, hours, and a clear way to call or visit. Tap any card to open the clickable demo.</p>
         </div>
         <div class="ba-grid">
           <figure class="ba-card reveal">
@@ -451,7 +535,7 @@
               <img src="/assets/before-after/catrachilandia.webp" width="1200" height="700" loading="lazy" decoding="async"
                    alt="Before and after: Honduran food truck · North Carolina. Before: only a social media page. After: a new homepage preview by Brightfront Studio. Names and details hidden.">
             </picture>
-            <figcaption><strong>Honduran food truck · North Carolina</strong><span>Before: only a social media page</span></figcaption>
+            <figcaption><strong>Honduran food truck · North Carolina</strong><span>Before: only a social media page</span><a class="ba-link" href="/demo/cocina-lempira/" target="_blank" rel="noopener" aria-label="View the demo of this Honduran food truck · North Carolina homepage in a new tab">View the demo <span aria-hidden="true">→</span></a></figcaption>
           </figure>
           <figure class="ba-card reveal">
             <picture>
@@ -459,7 +543,7 @@
               <img src="/assets/before-after/alebrijes.webp" width="1200" height="700" loading="lazy" decoding="async"
                    alt="Before and after: Oaxacan food truck · Ohio. Before: only a photo feed, menu in a post. After: a new homepage preview by Brightfront Studio. Names and details hidden.">
             </picture>
-            <figcaption><strong>Oaxacan food truck · Ohio</strong><span>Before: only a photo feed, menu in a post</span></figcaption>
+            <figcaption><strong>Oaxacan food truck · Ohio</strong><span>Before: only a photo feed, menu in a post</span><a class="ba-link" href="/demo/calenda-kitchen/" target="_blank" rel="noopener" aria-label="View the demo of this Oaxacan food truck · Ohio homepage in a new tab">View the demo <span aria-hidden="true">→</span></a></figcaption>
           </figure>
           <figure class="ba-card reveal">
             <picture>
@@ -467,7 +551,7 @@
               <img src="/assets/before-after/marys-cake.webp" width="1200" height="700" loading="lazy" decoding="async"
                    alt="Before and after: Custom cake bakery · Florida. Before: only a social media page. After: a new homepage preview by Brightfront Studio. Names and details hidden.">
             </picture>
-            <figcaption><strong>Custom cake bakery · Florida</strong><span>Before: only a social media page</span></figcaption>
+            <figcaption><strong>Custom cake bakery · Florida</strong><span>Before: only a social media page</span><a class="ba-link" href="/demo/sugar-bloom/" target="_blank" rel="noopener" aria-label="View the demo of this Custom cake bakery · Florida homepage in a new tab">View the demo <span aria-hidden="true">→</span></a></figcaption>
           </figure>
           <figure class="ba-card reveal">
             <picture>
@@ -475,7 +559,7 @@
               <img src="/assets/before-after/its-concha-time.webp" width="1200" height="700" loading="lazy" decoding="async"
                    alt="Before and after: Concha sandwich food truck · Texas. Before: only a bare ordering page. After: a new homepage preview by Brightfront Studio. Names and details hidden.">
             </picture>
-            <figcaption><strong>Concha sandwich food truck · Texas</strong><span>Before: only a bare ordering page</span></figcaption>
+            <figcaption><strong>Concha sandwich food truck · Texas</strong><span>Before: only a bare ordering page</span><a class="ba-link" href="/demo/dulce-bun/" target="_blank" rel="noopener" aria-label="View the demo of this Concha sandwich food truck · Texas homepage in a new tab">View the demo <span aria-hidden="true">→</span></a></figcaption>
           </figure>
           <figure class="ba-card reveal">
             <picture>
@@ -483,7 +567,7 @@
               <img src="/assets/before-after/tee-grill.webp" width="1200" height="700" loading="lazy" decoding="async"
                    alt="Before and after: Gyro food truck · Ohio. Before: website down, hours unclear. After: a new homepage preview by Brightfront Studio. Names and details hidden.">
             </picture>
-            <figcaption><strong>Gyro food truck · Ohio</strong><span>Before: website down, hours unclear</span></figcaption>
+            <figcaption><strong>Gyro food truck · Ohio</strong><span>Before: website down, hours unclear</span><a class="ba-link" href="/demo/kalimera-grill/" target="_blank" rel="noopener" aria-label="View the demo of this Gyro food truck · Ohio homepage in a new tab">View the demo <span aria-hidden="true">→</span></a></figcaption>
           </figure>
           <figure class="ba-card reveal">
             <picture>
@@ -491,7 +575,7 @@
               <img src="/assets/before-after/son-dogos.webp" width="1200" height="700" loading="lazy" decoding="async"
                    alt="Before and after: Sonoran hot dog cart · Arizona. Before: only a social media page. After: a new homepage preview by Brightfront Studio. Names and details hidden.">
             </picture>
-            <figcaption><strong>Sonoran hot dog cart · Arizona</strong><span>Before: only a social media page</span></figcaption>
+            <figcaption><strong>Sonoran hot dog cart · Arizona</strong><span>Before: only a social media page</span><a class="ba-link" href="/demo/saguaro-dogs/" target="_blank" rel="noopener" aria-label="View the demo of this Sonoran hot dog cart · Arizona homepage in a new tab">View the demo <span aria-hidden="true">→</span></a></figcaption>
           </figure>
           <figure class="ba-card reveal">
             <picture>
@@ -499,7 +583,7 @@
               <img src="/assets/before-after/the-special-guest.webp" width="1200" height="700" loading="lazy" decoding="async"
                    alt="Before and after: Custom cake bakery · Texas. Before: only a social media page. After: a new homepage preview by Brightfront Studio. Names and details hidden.">
             </picture>
-            <figcaption><strong>Custom cake bakery · Texas</strong><span>Before: only a social media page</span></figcaption>
+            <figcaption><strong>Custom cake bakery · Texas</strong><span>Before: only a social media page</span><a class="ba-link" href="/demo/honeycrumb/" target="_blank" rel="noopener" aria-label="View the demo of this Custom cake bakery · Texas homepage in a new tab">View the demo <span aria-hidden="true">→</span></a></figcaption>
           </figure>
         </div>
         <p class="ba-privacy"><span class="note">Privacy</span><span>Names and details hidden for privacy. Business names, addresses, phone numbers and emails are placeholders, and the &ldquo;before&rdquo; panels are generic illustrations, not their real pages.</span></p>
