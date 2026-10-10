@@ -11,10 +11,16 @@ const RECEIVER_EMAIL = "chedamso@naver.com";
 const PAYPAL_API = "https://api-m.paypal.com";
 
 const PACKAGES = {
-  starter: { name: "Starter website", price: 299 },
-  business: { name: "Business website", price: 699 },
-  premium: { name: "Premium website", price: 1299 },
+  starter: { name: "Starter website", price: 299, salePrice: 149.5 },
+  business: { name: "Business website", price: 699, salePrice: 349.5 },
+  premium: { name: "Premium website", price: 1299, salePrice: 649.5 },
 };
+// 50% launch sale: ends 2026-10-31 23:59 US Eastern. Sale amounts are accepted until
+// SALE_END + SALE_GRACE_MS (covers late IPN/webhook delivery and retries).
+const SALE_END = Date.parse("2026-11-01T03:59:00Z");
+const SALE_GRACE_MS = 3 * 24 * 3600 * 1000;
+function saleAccepted() { return Date.now() < SALE_END + SALE_GRACE_MS; }
+function minPrice(pack) { const p = PACKAGES[pack]; return p ? (saleAccepted() && p.salePrice ? p.salePrice : p.price) : NaN; }
 const TIERS = {
   basic: { name: "Basic", monthly: 19 },
   standard: { name: "Standard", monthly: 39 },
@@ -31,6 +37,15 @@ const PLAN_MAP = {
   "P-83H864985W745880BNLEHO7Q": ["premium", "basic"],
   "P-6K19213792447484YNLEHO7Y": ["premium", "standard"],
   "P-2G234491388005507NLEHO7Y": ["premium", "pro"],
+  "P-4RS85756FB082311UNLE4B5Y": ["starter", "basic"], // sale50
+  "P-1CF2133630833574BNLE4B5Y": ["starter", "standard"], // sale50
+  "P-43K10290WU734083JNLE4B6A": ["starter", "pro"], // sale50
+  "P-6LE0506546269533FNLE4B6A": ["business", "basic"], // sale50
+  "P-6MR23270EM335745GNLE4B6I": ["business", "standard"], // sale50
+  "P-0CR88982JB235362BNLE4B6I": ["business", "pro"], // sale50
+  "P-91F51348VA604234KNLE4B6Q": ["premium", "basic"], // sale50
+  "P-87N37805SR510571XNLE4B6Q": ["premium", "standard"], // sale50
+  "P-1XV43892V2389972YNLE4B6Y": ["premium", "pro"], // sale50
 };
 
 function jsonResponse(obj, status = 200) {
@@ -41,7 +56,7 @@ function usd(v) { const n = num(v); return Number.isFinite(n) ? "$" + n.toLocale
 function amountText(v, cur) { const n = num(v); const s = Number.isFinite(n) ? n.toFixed(2) : String(v || "?"); return (cur === "USD" || !cur ? "$" : "") + s + " " + (cur || "USD"); }
 function sameAmount(a, b) { return Number.isFinite(num(a)) && Number.isFinite(num(b)) && Math.abs(num(a) - num(b)) < 0.005; }
 function packFromText(s) { s = String(s || "").toLowerCase(); return Object.keys(PACKAGES).find((k) => s.includes(k)) || null; }
-function packFromAmount(v) { return Object.keys(PACKAGES).find((k) => sameAmount(v, PACKAGES[k].price)) || null; }
+function packFromAmount(v) { return Object.keys(PACKAGES).find((k) => sameAmount(v, PACKAGES[k].price) || (saleAccepted() && sameAmount(v, PACKAGES[k].salePrice))) || null; }
 function parseCustomId(cid) {
   const m = /^brightfront-(starter|business|premium)-(basic|standard|pro)$/i.exec(String(cid || "").trim());
   return m ? [m[1].toLowerCase(), m[2].toLowerCase()] : null;
