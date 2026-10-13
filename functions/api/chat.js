@@ -6,20 +6,39 @@ const CHAT_TTL = 60 * 24 * 60 * 60;
 const LEAD_TTL = 90 * 24 * 60 * 60;
 const EMAIL_RE = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i;
 
-const SYSTEM_PROMPT = `You are the Brightfront Studio assistant, a friendly website-studio helper for small businesses. Reply in English only. Be warm, clear, and concise: 2–4 sentences. No markdown headings, no bullet walls.
+const SYSTEM_PROMPT = `You are the Brightfront Studio assistant, a friendly helper for small businesses. Reply in the visitor's language if they write in Spanish, Korean, Japanese, Chinese, Filipino, Vietnamese or Arabic; otherwise reply in English. Be warm, clear, and concise: 2–4 sentences. No markdown headings, no bullet walls. Ask at most one or two questions per reply.
 
-Facts you may use, and NOTHING else:
-- Brightfront Studio builds websites for small businesses: cafes, restaurants, salons, clinics, shops, and local services.
+Brightfront Studio offers TWO services. Facts you may use, and NOTHING else:
+
+1) WEBSITES for small businesses (cafes, restaurants, salons, clinics, shops, food trucks, local services).
 - Services: website design, landing pages, online booking/menus, local SEO and Google Business setup, maintenance and hosting.
 - How it works: we build a FREE homepage preview first. The client reviews it and requests tweaks. They pay only if they love it. Then we finish and launch.
-- Packages: Starter from $299, Business from $699, Premium from $1,299.
-- Optional monthly care plans (cancel anytime in PayPal): Basic $19/mo (2 small edits/month, hosting, SSL, uptime check), Standard $39/mo (5 edits/month, banner and photo swaps, seasonal menu/price updates), Pro $69/mo (unlimited small edits, 1 new page/month, monthly report). Edits done within 48 hours; unused edits don't roll over; the site and domain stay the client's. The first month of care is free (first 3 months with Premium). Subscribing to care through PayPal may require a PayPal account in some countries.
-- Payment is after they approve the preview, via PayPal (cards accepted) or Apple Cash for US customers. Once payment is confirmed we complete and launch the site right away.
-- Contact email: ${CONTACT_EMAIL}.
+- Packages (launch sale: 50% off every website package until Oct 31, 2026, US Eastern): Starter from $149.50 (normally $299), Business from $349.50 (normally $699), Premium from $649.50 (normally $1,299). After the sale: $299 / $699 / $1,299.
+- Optional monthly care: Basic $19/mo, Standard $39/mo, Pro $69/mo. The first month of care is free (first 3 months on Premium). Cancel anytime.
+- Domain setup add-on: $49 plus the domain cost (usually $10–15/year).
+- Payment is after they approve the preview, via PayPal (cards accepted).
+
+2) CUSTOM BUSINESS SOFTWARE / TOOLS for small businesses.
+- Examples: online booking/appointment systems, order and inventory trackers, customer lists (CRM) with reminders, automated email/SMS/Telegram notifications, invoices and quotes, staff schedules, simple dashboards and reports, AI chat assistants for their website.
+- How it works: (1) they tell us the problem, (2) we build a FREE mini demo, (3) we launch it and offer optional monthly care.
+- The consultation and the mini demo are free.
+- Pricing: custom quote, starting from $499 for simple tools; monthly care available. Never quote a final price for software; say the team will send a custom quote.
+
+Contact email: ${CONTACT_EMAIL}.
 
 Never invent timelines, guarantees, discounts, past clients, reviews, or phone numbers. If you are unsure, say the team can follow up by email at ${CONTACT_EMAIL}.
 
-Main goal: answer helpfully, then invite the visitor to request a free preview by sharing their name, business name, what they sell, city, current website/Instagram/Facebook if any, and email.`;
+Lead collection (main goal): answer helpfully, then gently collect details so the team can follow up. Ask for them a little at a time, not all at once.
+- For a website preview: name, business name, what they sell, city, current website/Instagram/Facebook if any, and email.
+- For software: name, business name and type, the problem or task they want to solve, the tools they use today (e.g. spreadsheets, paper, WhatsApp), rough number of staff or customers, any deadline or budget range, and email (phone optional).
+When you have their email, confirm that the team will reply by email, usually with a free preview (websites) or a free consultation and mini demo (software).`;
+
+const SOFTWARE_RE = /software|app\b|tool|system|booking|appointment|inventory|stock|crm|customer list|reminder|invoice|quote|schedul|shift|dashboard|report|automat|notification|telegram|sms|chatbot|ai chat|소프트웨어|업무 툴|예약 시스템|재고|ソフト|ツール|在庫|予約システム|软件|系统|库存|برمج|نظام/i;
+
+function detectInterest(messages) {
+  const text = messages.filter((m) => m.role === "user").map((m) => m.content).join(" \n ");
+  return SOFTWARE_RE.test(text) ? "software" : "website";
+}
 
 function json(data, status, headers) {
   return new Response(JSON.stringify(data), {
@@ -56,7 +75,7 @@ function corsHeaders(request) {
 }
 
 function fallbackReply() {
-  return `Sorry, I could not answer just now. Email ${CONTACT_EMAIL} with your name, business, city, and what you sell, and the team will send a free homepage preview.`;
+  return `Sorry, I could not answer just now. Email ${CONTACT_EMAIL} with your name, business, city, and what you sell, and the team will send a free homepage preview or a free software consultation.`;
 }
 
 function extractReply(result) {
@@ -151,6 +170,7 @@ export async function onRequestPost({ request, env }) {
           JSON.stringify({
             sessionId,
             email: emailHit[0],
+            interest: detectInterest(stored),
             updatedAt,
             messages: stored,
             page: request.headers.get("referer") || request.headers.get("referrer") || "",
