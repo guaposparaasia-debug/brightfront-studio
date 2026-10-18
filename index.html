@@ -346,6 +346,16 @@
     .care-grid strong { font-weight: 500; }
     .care-grid small { color: var(--muted); }
     .care-grid span { color: var(--muted); }
+    .lock-flag { display: inline-block; margin: 0.9rem 0 0; padding: 0.35rem 0.75rem; background: var(--pine); color: var(--paper); font-size: 0.92rem; }
+    .plan { display: grid; gap: 1.5rem; margin-top: 2rem; padding: 1.6rem; background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--pine); }
+    @media (min-width: 900px) { .plan { grid-template-columns: 0.75fr 1.25fr; gap: 2.5rem; padding: 2rem; } }
+    .plan-head .eyebrow { margin: 0; }
+    .plan-sum { font-size: 1.15rem; margin: 0.6rem 0 1.1rem; }
+    .plan-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0 2rem; }
+    @media (min-width: 700px) { .plan-list { grid-template-columns: 1fr 1fr; } }
+    .plan-list li { display: grid; gap: 0.15rem; padding: 0.8rem 0; border-top: 1px solid var(--line); }
+    .plan-list strong { font-weight: 500; }
+    .plan-list span { color: var(--muted); font-size: 0.95rem; }
     .table-wrap { margin-top: 2rem; overflow-x: auto; max-width: 100%; }
     table.compare { width: 100%; min-width: 680px; border-collapse: collapse; font-size: 0.95rem; }
     table.compare th, table.compare td { text-align: left; vertical-align: top; padding: 0.9rem 0.75rem; border-bottom: 1px solid var(--line); }
@@ -1627,6 +1637,134 @@
 
       showStep(1);
     })();
+  </script>
+  <template id="p59-hero"><p class="hero-note">$59 one-time setup, then $29 a month. Locked price. No theme to configure.</p></template>
+  <template id="p59-pricing"><section class="block rule" id="pricing">
+      <div class="wrap">
+        <p class="eyebrow">Pricing</p>
+        <div class="price-top">
+          <div>
+            <h2 class="price-num">$59 <small>one-time setup</small></h2>
+            <p class="price-num">$29 <small>a month</small></p>
+            <p class="lock-flag">Locked price. The $29 a month you start at stays $29.</p>
+          </div>
+          <p class="lede" style="margin:0">One plan, one store, everything below included. Card fees are Stripe’s, not ours. Cancel the month whenever you stop selling.</p>
+        </div>
+        <div class="plan">
+          <div class="plan-head">
+            <p class="eyebrow">What’s included</p>
+            <p class="plan-sum"><strong>$59</strong> once, when your store goes live. Then <strong>$29</strong> a month.</p>
+            <a class="btn" href="#builder">Build my store</a>
+          </div>
+          <ul class="plan-list">
+            <li><strong>Store pages</strong><span>Homepage, about, and a page for every product, built from what you enter.</span></li>
+            <li><strong>Product upload</strong><span>Photos, names, prices, and descriptions. Add or remove products whenever you like.</span></li>
+            <li><strong>AI photo cleanup</strong><span>Background removal and more even lighting, so phone photos look right on a product card.</span></li>
+            <li><strong>Payments, tax, and shipping</strong><span>Stripe checkout, U.S. sales tax on each order, USPS, UPS, and FedEx rates.</span></li>
+            <li><strong>Hosting and SSL</strong><span>Your store is hosted and served over HTTPS. We keep the certificate current.</span></li>
+            <li><strong>Unlimited edits and updates</strong><span>Change photos, prices, and page copy any time. No revision fee.</span></li>
+            <li><strong>Support from a person</strong><span>Email info@brightfrontdesign.com and a person answers.</span></li>
+            <li><strong>Cancel anytime</strong><span>Month to month, no contract. Stop paying when you stop selling.</span></li>
+          </ul>
+        </div>
+        <div class="table-wrap">
+          <table class="compare">
+            <caption class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Compare Brightfront with a freelancer and with Shopify</caption>
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col" class="hi">Brightfront Studio</th>
+                <th scope="col">Freelancer or agency</th>
+                <th scope="col">Do it yourself on Shopify</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Time to a first store</th>
+                <td class="hi">Under 5 minutes</td>
+                <td>Weeks</td>
+                <td>Hours of setup</td>
+              </tr>
+              <tr>
+                <th scope="row">To get started</th>
+                <td class="hi">$59 one-time setup</td>
+                <td>$2,000–$5,000+</td>
+                <td>Theme, apps, and a monthly Shopify plan</td>
+              </tr>
+              <tr>
+                <th scope="row">Monthly</th>
+                <td class="hi">$29, locked</td>
+                <td>Retainers, when you need changes</td>
+                <td>Shopify plan, plus apps</td>
+              </tr>
+              <tr>
+                <th scope="row">Who builds the pages</th>
+                <td class="hi">The product, from your photos and prices</td>
+                <td>A designer, on their schedule</td>
+                <td>You</td>
+              </tr>
+              <tr>
+                <th scope="row">Changes later</th>
+                <td class="hi">Unlimited edits, included</td>
+                <td>Billed as revisions</td>
+                <td>You, in the admin</td>
+              </tr>
+              <tr>
+                <th scope="row">Payments, tax, shipping</th>
+                <td class="hi">Stripe, U.S. sales tax, USPS / UPS / FedEx</td>
+                <td>Scoped and billed separately</td>
+                <td>Apps and settings</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="swipe">Swipe to compare.</p>
+      </div>
+    </section></template>
+  <template id="p59-faq"><section class="block rule" id="faq">
+      <div class="wrap">
+        <p class="eyebrow">FAQ</p>
+        <h2>Questions, answered plainly.</h2>
+        <div style="margin-top:1.5rem">
+          <details class="qa">
+            <summary>How long does it actually take? <i aria-hidden="true">+</i></summary>
+            <p>The draft — homepage, about, and product pages — is generated in this browser in a few minutes. You need a name, a category, photos, and a price for each item. Payments and shipping start after you send the publish form.</p>
+          </details>
+          <details class="qa">
+            <summary>Do I need professional photos? <i aria-hidden="true">+</i></summary>
+            <p>No. Phone photos are enough to start. On the published store we clean up the background and the lighting. You can replace any photo later.</p>
+          </details>
+          <details class="qa">
+            <summary>Can I edit the store after it is published? <i aria-hidden="true">+</i></summary>
+            <p>Yes. Product names, prices, descriptions, photos, and page copy can be edited without a revision fee. That is part of the $29 month.</p>
+          </details>
+          <details class="qa">
+            <summary>What is included in the price? <i aria-hidden="true">+</i></summary>
+            <p>$59 once, to set the store up, and $29 a month for hosting, SSL, the editor, unlimited edits, and email support. The price is locked: your $29 a month does not go up while your store stays active. Card processing fees are charged by Stripe. Shipping rates come from USPS, UPS, and FedEx at checkout. Cancel anytime.</p>
+          </details>
+          <details class="qa">
+            <summary>What does “locked price” mean? <i aria-hidden="true">+</i></summary>
+            <p>The $59 setup is charged once. The $29 a month you sign up at stays $29 for as long as your store stays active. No intro rate that jumps later.</p>
+          </details>
+          <details class="qa">
+            <summary>Who is this for? <i aria-hidden="true">+</i></summary>
+            <p>Independent businesses selling in the United States: local shops, Etsy-style sellers, side hustlers, food brands, and people who make things. The store is set up for Stripe, U.S. sales tax, and domestic shipping.</p>
+          </details>
+        </div>
+      </div>
+    </section></template>
+  <script>
+  /* Fallback: the locked $59 setup + $29/month pricing starts 2026-10-19 00:00 US Eastern. A scheduled push replaces this page's HTML at that time; this swaps it in client-side in case that push is late. */
+  (function () {
+    if (Date.now() < Date.parse("2026-10-19T04:00:00Z")) return;
+    var map = { hero: ".hero-note", pricing: "#pricing", faq: "#faq" };
+    Object.keys(map).forEach(function (k) {
+      var t = document.getElementById("p59-" + k), el = document.querySelector(map[k]);
+      if (t && el) el.replaceWith(t.content.cloneNode(true));
+    });
+    document.title = 'Brightfront Studio — AI Online Store Builder | $59 Setup, $29/Month';
+    var d = document.querySelector('meta[name="description"]'); if (d) d.setAttribute("content", "Brightfront Studio's AI builds an online store for American small businesses in under five minutes. $59 one-time setup, then $29 a month, a locked price. Stripe, U.S. sales tax, and USPS, UPS, and FedEx shipping.");
+  })();
   </script>
 </body>
 </html>
