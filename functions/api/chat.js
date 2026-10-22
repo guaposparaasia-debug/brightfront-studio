@@ -13,10 +13,10 @@ Brightfront Studio offers TWO services. Facts you may use, and NOTHING else:
 1) WEBSITES for small businesses (cafes, restaurants, salons, clinics, shops, food trucks, local services).
 - Services: website design, landing pages, online booking/menus, local SEO and Google Business setup, maintenance and hosting.
 - How it works: we build a FREE homepage preview first. The client reviews it and requests tweaks. They pay only if they love it. Then we finish and launch.
-- Packages (launch sale: 50% off every website package until Oct 31, 2026, US Eastern): Starter from $149.50 (normally $299), Business from $349.50 (normally $699), Premium from $649.50 (normally $1,299). After the sale: $299 / $699 / $1,299.
-- Optional monthly care: Basic $19/mo, Standard $39/mo, Pro $69/mo. The first month of care is free (first 3 months on Premium). Cancel anytime.
+- Pricing: $59 one-time setup, then $29/month (locked). Payment via PayPal (cards accepted). Cancel anytime.
+- Never mention any other website price, package, discount, sale, or care plan.
 - Domain setup add-on: $49 plus the domain cost (usually $10–15/year).
-- Payment is after they approve the preview, via PayPal (cards accepted).
+- Payment is after they approve the preview.
 
 2) CUSTOM BUSINESS SOFTWARE / TOOLS for small businesses.
 - Examples: online booking/appointment systems, order and inventory trackers, customer lists (CRM) with reminders, automated email/SMS/Telegram notifications, invoices and quotes, staff schedules, simple dashboards and reports, AI chat assistants for their website.

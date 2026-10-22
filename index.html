@@ -119,6 +119,9 @@
     .btn-ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
     .btn-ghost:hover { background: var(--ink); color: var(--paper); }
     .btn:disabled { opacity: 0.45; cursor: not-allowed; }
+    button.btn { font-family: inherit; }
+    .pp-sub { margin: 0.6rem 0 0; }
+    .pp-note { margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--muted); }
     .site-header {
       position: sticky;
       top: 0;
@@ -681,6 +684,27 @@
             <p class="eyebrow">What’s included</p>
             <p class="plan-sum"><strong>$59</strong> once, when your store goes live. Then <strong>$29</strong> a month.</p>
             <a class="btn" href="#builder">Build my store</a>
+            <form class="pp-sub" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+              <input type="hidden" name="cmd" value="_xclick-subscriptions">
+              <input type="hidden" name="business" value="chedamso@naver.com">
+              <input type="hidden" name="item_name" value="Brightfront Studio website - $59 setup + $29/month">
+              <input type="hidden" name="currency_code" value="USD">
+              <input type="hidden" name="a1" value="59">
+              <input type="hidden" name="p1" value="1">
+              <input type="hidden" name="t1" value="M">
+              <input type="hidden" name="a3" value="29">
+              <input type="hidden" name="p3" value="1">
+              <input type="hidden" name="t3" value="M">
+              <input type="hidden" name="src" value="1">
+              <input type="hidden" name="no_shipping" value="1">
+              <input type="hidden" name="no_note" value="1">
+              <input type="hidden" name="charset" value="UTF-8">
+              <input type="hidden" name="notify_url" value="https://brightfrontdesign.com/api/paypal-ipn">
+              <input type="hidden" name="return" value="https://brightfrontdesign.com/thanks/">
+              <input type="hidden" name="cancel_return" value="https://brightfrontdesign.com/">
+              <button type="submit" class="btn btn-ghost">Start for $59 today, then $29/month with PayPal</button>
+              <p class="pp-note">Cards accepted via PayPal checkout. Cancel anytime in your PayPal account - no contract.</p>
+            </form>
           </div>
           <ul class="plan-list">
             <li><strong>Store pages</strong><span>Homepage, about, and a page for every product, built from what you enter.</span></li>

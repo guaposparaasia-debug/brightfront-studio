@@ -26,6 +26,9 @@ const TIERS = {
   standard: { name: "Standard", monthly: 39 },
   pro: { name: "Pro", monthly: 69 },
 };
+// Locked pricing for the Standard subscription button: $59 first month (incl. setup), then $29/month.
+const SUB_FIRST = 59;
+const SUB_MONTHLY = 29;
 const TRIAL_MONTHS = { starter: 1, business: 1, premium: 3 };
 const PLAN_MAP = {
   "P-37C72428AU1150909NLEHO6Y": ["starter", "basic"],
@@ -286,6 +289,53 @@ export async function onRequestPost({ request, env }) {
   const g = (k) => (q.get(k) || "").trim();
   const txnId = g("txn_id");
   const txnType = g("txn_type");
+
+  // Brightfront subscription (PayPal Standard _xclick-subscriptions, no plan id):
+  // $59 first month (incl. setup) via a1/p1/t1, then $29/month via a3/p3/t3.
+  if (txnType === "subscr_signup" || txnType === "subscr_payment") {
+    const recv = (g("receiver_email") || g("business")).toLowerCase();
+    if (recv !== RECEIVER_EMAIL) { console.warn("ipn: wrong receiver (subscr)", g("subscr_id")); return new Response("ignored", { status: 200 }); }
+    const subId = g("subscr_id");
+    const itemName = g("item_name") || g("item_name1");
+    const isOurs = /brightfront/i.test(itemName);
+    const cur = g("mc_currency") || "USD";
+    const first = g("first_name"), last = g("last_name");
+    const payer = { payerName: [first, last].filter(Boolean).join(" "), firstName: first, payerEmail: g("payer_email") };
+    if (txnType === "subscr_signup") {
+      const termsOk = isOurs && cur === "USD" && sameAmount(g("mc_amount1") || g("amount1"), SUB_FIRST) && sameAmount(g("mc_amount3") || g("amount3"), SUB_MONTHLY);
+      if (!subId) return new Response("ignored", { status: 200 });
+      try {
+        const result = await processPayment(env, Object.assign({
+          id: "subsignup:" + subId, kind: "subscription", sendEmail: false,
+          amount: g("mc_amount1") || g("amount1"), currency: cur,
+          titleKo: termsOk ? "🎉 새 구독 신청 — $59 셋업 + $29/월 (Brightfront)" : "💳 PayPal 구독 신청 (조건 다름 — 확인 필요)",
+          amountKo: "첫 달 " + amountText(g("mc_amount1") || g("amount1"), cur) + " → 이후 " + amountText(g("mc_amount3") || g("amount3"), cur) + "/월",
+          itemKo: itemName || "-", refLabel: "PayPal 구독 ID", refId: subId, memo: "", source: "PayPal IPN subscr_signup",
+        }, payer));
+        if (result.errors.length) return new Response("retry", { status: 500 });
+        return new Response("", { status: 200 });
+      } catch (e) { console.error("ipn subscr_signup error", e && e.message); return new Response("error", { status: 500 }); }
+    }
+    // subscr_payment
+    if (g("payment_status") !== "Completed" || !txnId) { console.log("ipn: subscr_payment status", g("payment_status"), txnId); return new Response("ignored", { status: 200 }); }
+    const gross = g("mc_gross") || g("payment_gross");
+    const isFirst = sameAmount(gross, SUB_FIRST);
+    const amountOk = isOurs && cur === "USD" && (isFirst || sameAmount(gross, SUB_MONTHLY));
+    try {
+      const result = await processPayment(env, Object.assign({
+        id: txnId, kind: "subscription", sendEmail: amountOk && isFirst,
+        amount: gross, currency: cur,
+        emailItemHtml: "the <strong>Brightfront Studio website</strong> plan ($59 setup incl. first month, then $29/month)",
+        emailItemText: "the Brightfront Studio website plan ($59 setup incl. first month, then $29/month)",
+        titleKo: amountOk ? (isFirst ? "🎉 새 결제 — 구독 첫 달 $59 (셋업 포함)" : "💳 구독 월 결제 $29") : "💳 PayPal 구독 결제 (금액/상품 확인 필요)",
+        amountKo: amountText(gross, cur), itemKo: itemName || "-",
+        refLabel: "PayPal 거래 ID", refId: txnId, extraKo: [["구독 ID", subId]], memo: "",
+        source: "PayPal IPN subscr_payment",
+      }, payer));
+      if (result.errors.length) return new Response("retry", { status: 500 });
+      return new Response("", { status: 200 });
+    } catch (e) { console.error("ipn subscr_payment error", e && e.message); return new Response("error", { status: 500 }); }
+  }
   if (g("payment_status") !== "Completed") { console.log("ipn: ignored status", g("payment_status"), txnId); return new Response("ignored", { status: 200 }); }
   if (g("receiver_email").toLowerCase() !== RECEIVER_EMAIL) { console.warn("ipn: wrong receiver", txnId); return new Response("ignored", { status: 200 }); }
   if (IGNORED_TXN_TYPES.has(txnType)) { console.log("ipn: ignored txn_type", txnType, txnId); return new Response("ignored", { status: 200 }); }
