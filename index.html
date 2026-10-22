@@ -692,7 +692,11 @@
             <p class="eyebrow">What’s included</p>
             <p class="plan-sum"><strong>$59</strong> once, when your store goes live. Then <strong>$29</strong> a month.</p>
             <a class="btn" href="#builder">Build my store</a>
-            <form class="pp-sub" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+            <form class="pp-sub" id="pp-sub" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+              <label class="pp-biz-label">Business name <input class="ls-input" id="pp-biz" type="text" required maxlength="64" autocomplete="organization"></label>
+              <input type="hidden" name="custom" id="pp-custom">
+              <input type="hidden" name="on0" value="Business">
+              <input type="hidden" name="os0" id="pp-os0">
               <input type="hidden" name="cmd" value="_xclick-subscriptions">
               <input type="hidden" name="business" value="chedamso@naver.com">
               <input type="hidden" name="item_name" value="Brightfront Studio website - $59 setup + $29/month">
@@ -713,6 +717,15 @@
               <button type="submit" class="btn btn-ghost">Start for $59 today, then $29/month with PayPal</button>
               <p class="pp-note">Cards accepted via PayPal checkout. Cancel anytime in your PayPal account - no contract.</p>
             </form>
+<script>
+(function(){var f=document.getElementById('pp-sub');if(!f)return;var bi=document.getElementById('pp-biz');
+bi.addEventListener('input',function(){bi.setCustomValidity('');});
+f.addEventListener('submit',function(e){var b=bi.value.trim();
+if(!b){e.preventDefault();bi.setCustomValidity('Please enter your business name.');bi.reportValidity();return;}
+var ref=new URLSearchParams(location.search).get('ref')||((document.getElementById('ls-ref')||{}).value)||'';
+document.getElementById('pp-os0').value=b.slice(0,64);
+document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);});})();
+</script>
 <style>
   .ls-form{display:grid;gap:8px;margin:16px 0 10px}
   .ls-form label{font-size:.85rem;display:grid;gap:4px}

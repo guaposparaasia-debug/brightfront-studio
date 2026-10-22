@@ -177,6 +177,17 @@ export async function onRequestPost({ request, env }) {
           }),
           { expirationTtl: LEAD_TTL }
         );
+        const seenKey = `leadalert:${sessionId}`;
+        if (env.TELEGRAM_BOT_TOKEN && env.TELEGRAM_CHAT_ID && !(await env.LEADS.get(seenKey))) {
+          await env.LEADS.put(seenKey, "1", { expirationTtl: LEAD_TTL });
+          const lastUser = (stored.filter((m) => m.role === "user").pop() || {}).content || "";
+          await fetch("https://api.telegram.org/bot" + env.TELEGRAM_BOT_TOKEN + "/sendMessage", {
+            method: "POST", headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ chat_id: env.TELEGRAM_CHAT_ID, disable_web_page_preview: true,
+              text: ("💬 Chat lead (Brightfront): " + emailHit[0] + "\nInterest: " + detectInterest(stored) +
+                "\nPage: " + (request.headers.get("referer") || "-") + "\nLast msg: " + lastUser + "\nKV: lead:" + sessionId).slice(0, 4000) }),
+          }).catch(() => {});
+        }
       }
     }
   } catch {

@@ -310,7 +310,7 @@ export async function onRequestPost({ request, env }) {
           amount: g("mc_amount1") || g("amount1"), currency: cur,
           titleKo: termsOk ? "🎉 새 구독 신청 — $59 셋업 + $29/월 (Brightfront)" : "💳 PayPal 구독 신청 (조건 다름 — 확인 필요)",
           amountKo: "첫 달 " + amountText(g("mc_amount1") || g("amount1"), cur) + " → 이후 " + amountText(g("mc_amount3") || g("amount3"), cur) + "/월",
-          itemKo: itemName || "-", refLabel: "PayPal 구독 ID", refId: subId, memo: "", source: "PayPal IPN subscr_signup",
+          itemKo: itemName || "-", refLabel: "PayPal 구독 ID", refId: subId, memo: [g("custom"), g("option_selection1")].filter(Boolean).join(" / "), source: "PayPal IPN subscr_signup",
         }, payer));
         if (result.errors.length) return new Response("retry", { status: 500 });
         return new Response("", { status: 200 });
@@ -329,7 +329,7 @@ export async function onRequestPost({ request, env }) {
         emailItemText: "the Brightfront Studio website plan ($59 setup incl. first month, then $29/month)",
         titleKo: amountOk ? (isFirst ? "🎉 새 결제 — 구독 첫 달 $59 (셋업 포함)" : "💳 구독 월 결제 $29") : "💳 PayPal 구독 결제 (금액/상품 확인 필요)",
         amountKo: amountText(gross, cur), itemKo: itemName || "-",
-        refLabel: "PayPal 거래 ID", refId: txnId, extraKo: [["구독 ID", subId]], memo: "",
+        refLabel: "PayPal 거래 ID", refId: txnId, extraKo: [["구독 ID", subId]], memo: [g("custom"), g("option_selection1")].filter(Boolean).join(" / "),
         source: "PayPal IPN subscr_payment",
       }, payer));
       if (result.errors.length) return new Response("retry", { status: 500 });

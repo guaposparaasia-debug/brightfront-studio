@@ -78,7 +78,7 @@ export async function onRequestPost({ request, env }) {
   const createdAt = new Date().toISOString();
   const key = "lead:builder:" + createdAt + "-" + crypto.randomUUID().slice(0, 8);
   const rec = {
-    source: "builder", createdAt, name, email, storeName, category, products, photoCount,
+    source: str(b.source, 40) || "builder", message: str(b.message, 2000), createdAt, name, email, storeName, category, products, photoCount,
     page: str(b.page, 200), ua: str(request.headers.get("user-agent"), 200),
     country: (request.cf && request.cf.country) || "",
   };
@@ -94,6 +94,7 @@ export async function onRequestPost({ request, env }) {
       "이름: " + name,
       "이메일: " + email,
       "스토어: " + (storeName || "-") + " / " + (category || "-"),
+      ...(rec.message ? ["메시지: " + rec.message, "출처: " + rec.source] : []),
       "상품 " + products.length + "개 · 사진 " + photoCount + "장",
       products.slice(0, 8).map((p) => "• " + p.name + (p.price ? " — " + p.price : "")).join("\n"),
       "시간: " + kst + " (UTC+9)",
