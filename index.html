@@ -887,6 +887,7 @@
       <h3 id="lead-title">Publish my store</h3>
       <p class="help">We email the details to info@brightfrontdesign.com. Photos stay on this device — we will reply to collect them.</p>
       <form id="lead-form" class="stack" novalidate>
+        <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="lead-company">Company</label><input id="lead-company" name="company" tabindex="-1" autocomplete="off"></div>
         <div>
           <label class="lbl" for="lead-name">Your name</label>
           <input class="field" id="lead-name" name="name" autocomplete="name" required maxlength="80">
@@ -909,7 +910,7 @@
   <script>
     /* Brightfront store builder.
        Runs entirely in the browser. Photos are read with FileReader and never uploaded.
-       Publish composes a mailto to info@brightfrontdesign.com. */
+       Publish posts the details to /api/builder-lead (KV + Telegram), then composes a mailto to info@brightfrontdesign.com. */
     (function () {
       var MAX_PHOTOS = 12;
       var MAX_BYTES = 8 * 1024 * 1024;
@@ -986,6 +987,13 @@
       };
 
       var state = { step: 1, storeName: "", category: "", photos: [], products: [] };
+      var tracked = {};
+      function track(payload, once) {
+        if (once) { if (tracked[once]) return; tracked[once] = true; }
+        try {
+          fetch("/api/builder-lead", { method: "POST", keepalive: true, headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) }).catch(function () {});
+        } catch (e) {}
+      }
       var lastFocus = null;
 
       function uid() { seq += 1; return "p" + seq; }
@@ -1539,8 +1547,9 @@
           syncProducts();
           renderProducts();
         }
+        if (state.step === 1) track({ event: "started" }, "started");
         if (state.step < 4) showStep(state.step + 1);
-        else showPreview();
+        else { track({ event: "preview" }, "preview"); showPreview(); }
       });
 
       document.getElementById("edit-btn").addEventListener("click", function () {
@@ -1581,6 +1590,11 @@
         error.textContent = "";
         var body = mailBody(name, email);
         var subject = "Publish my store: " + state.storeName;
+        track({
+          event: "submit", name: name, email: email, storeName: state.storeName, category: state.category,
+          products: state.products.map(function (p) { return { name: String(p.name || "").slice(0, 100), price: String(p.price || "").slice(0, 20) }; }),
+          photoCount: state.photos.length, page: location.pathname, hp: document.getElementById("lead-company").value
+        });
         var href = "mailto:info@brightfrontdesign.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
         document.getElementById("lead-body").value = "To: info@brightfrontdesign.com\nSubject: " + subject + "\n\n" + body;
         document.getElementById("lead-sent").hidden = false;
