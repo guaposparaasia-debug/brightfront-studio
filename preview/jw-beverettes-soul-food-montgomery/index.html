@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>J.W. Beverette&#x27;s Soul Food — Oxtails, Smothered Pork Chops &amp; Catfish in Montgomery, AL</title>
+  <meta name="description" content="J.W. Beverette&#x27;s Soul Food in Montgomery, AL: Black-owned, true-blue soul food—oxtails, smothered and fried pork chops, catfish, baked chicken, greens, mac and cheese, candied yams and red velvet cake. Open Thu–Sun.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --dark: #1f2a1c; --dark2: #2f4029; --accent: #d62828; --accent2: #f2c14e;
+      --bg: #fbf8f1; --paper: #ffffff; --ink: #1f2a1c; --soft: #5a6255; --tint: #f3ead2;
+      --on-accent: #ffffff;
+      --line: rgba(0,0,0,0.1); --shadow: 0 16px 36px rgba(0,0,0,0.10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: "Lato", system-ui, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; font-size: 1.05rem; }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .skip { position: absolute; left: 12px; top: -48px; background: var(--ink); color: #fff; padding: 8px 12px; z-index: 80; }
+    .skip:focus { top: 48px; }
+    .preview-banner { display: block; background: var(--dark); color: #fff; text-align: center; text-decoration: none; font-weight: 600; font-size: 0.82rem; padding: 9px 14px; line-height: 1.35; }
+    .preview-banner:hover { background: #000; }
+    .preview-banner span { opacity: 0.75; font-weight: 500; }
+    header.site { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--paper) 94%, transparent); border-bottom: 1px solid var(--line); backdrop-filter: blur(8px); }
+    .nav { max-width: 1080px; margin: 0 auto; padding: 10px 18px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); font-weight: 700; line-height: 1.2; }
+    .brand small { display: block; font-weight: 500; color: var(--soft); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; }
+    .mark { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(135deg,#d62828,#f2c14e); flex: none; display: grid; place-items: center; font-size: 1.15rem; }
+    .nav-toggle { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 8px 14px; font: inherit; font-weight: 650; color: var(--ink); }
+    .nav-links { display: none; list-style: none; margin: 0; padding: 0 18px 14px; }
+    .nav-links.open { display: grid; }
+    .nav-links a { display: block; text-decoration: none; color: var(--ink); font-weight: 650; padding: 8px 0; }
+    @media (min-width: 760px) {
+      header.site .bar { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding-right: 18px; }
+      .nav-toggle { display: none; }
+      .nav-links { display: flex; gap: 22px; padding: 0; align-items: center; }
+      .nav-links a { padding: 0; }
+    }
+    .hero { background: radial-gradient(520px 260px at 85% 8%, color-mix(in srgb, #d62828 32%, transparent), transparent 60%), linear-gradient(160deg,#2f4029,#1f2a1c 62%); color: #fff; overflow: hidden; }
+    .strip { height: 14px; background: repeating-linear-gradient(90deg,#d62828 0 22px,#f2c14e 22px 44px,#f3ead2 44px 66px); }
+    .hero-inner { max-width: 1080px; margin: 0 auto; padding: 34px 18px 50px; display: grid; gap: 22px; }
+    .kicker { margin: 0; letter-spacing: 0.14em; text-transform: uppercase; font-size: 0.78rem; color: var(--accent); font-weight: 700; }
+    h1 { font-family: "Playfair Display", Georgia, serif; font-weight: 800; font-size: clamp(2.7rem, 9vw, 5rem); line-height: 0.95; margin: 10px 0 12px; letter-spacing: -0.02em; }
+    .lead { font-size: 1.12rem; max-width: 38rem; margin: 0; opacity: 0.92; }
+    .stars { margin: 14px 0 0; font-weight: 700; color: var(--accent); }
+    .badge { display: inline-block; background: var(--accent2); color: #fff; border-radius: 999px; padding: 6px 12px; font-size: 0.86rem; font-weight: 700; margin-top: 10px; }
+    .today { margin-top: 16px; background: rgba(255,255,255,0.09); border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); border-radius: 16px; padding: 14px 16px; max-width: 27rem; }
+    .today span { display: block; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+    .today strong { display: block; font-family: "Playfair Display", Georgia, serif; font-size: 1.4rem; line-height: 1.25; margin-top: 2px; }
+    .today small { display: block; opacity: 0.8; margin-top: 2px; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 999px; padding: 12px 18px; font-weight: 700; border: 2px solid transparent; min-height: 48px; }
+    .btn-main { background: var(--accent); color: var(--on-accent); }
+    .btn-main:hover { filter: brightness(1.08); }
+    .btn-ghost { color: inherit; border-color: color-mix(in srgb, currentColor 40%, transparent); }
+    .btn-ghost:hover { background: rgba(255,255,255,0.08); }
+    .btn-solid { background: var(--accent2); color: #fff; }
+    .art { width: min(100%, 300px); justify-self: center; }
+    @media (min-width: 760px) { .art { width: min(100%, 400px); } }
+    .art svg { width: 100%; height: auto; display: block; }
+    section { padding: 56px 18px; }
+    .wrap { max-width: 1080px; margin: 0 auto; }
+    .eyebrow { margin: 0 0 8px; color: var(--accent2); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    h2 { font-family: "Playfair Display", Georgia, serif; font-weight: 800; font-size: clamp(1.8rem, 4vw, 2.6rem); line-height: 1.1; margin: 0 0 12px; }
+    .lede { color: var(--soft); max-width: 44rem; margin-top: 0; }
+    .story { background: var(--paper); }
+    .story p { max-width: 44rem; }
+    .facts { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 18px 0 0; }
+    .facts li { background: var(--tint); border-radius: 999px; padding: 6px 12px; font-weight: 600; font-size: 0.92rem; }
+    .quotes { display: grid; gap: 12px; margin-top: 22px; }
+    blockquote { margin: 0; background: var(--tint); border-left: 5px solid var(--accent); border-radius: 0 14px 14px 0; padding: 14px 16px; font-family: "Playfair Display", Georgia, serif; font-size: 1.08rem; }
+    blockquote cite { display: block; font-family: "Lato", sans-serif; font-style: normal; font-size: 0.82rem; color: var(--soft); margin-top: 6px; }
+    .grid { display: grid; gap: 12px; }
+    .card { background: var(--paper); border: 1px solid var(--line); border-radius: 18px; padding: 16px; box-shadow: var(--shadow); }
+    .card h3 { margin: 8px 0 4px; font-size: 1.08rem; }
+    .card p { margin: 0; color: var(--soft); }
+    .emoji { font-size: 1.6rem; }
+    .note { color: var(--soft); font-size: 0.9rem; margin-top: 14px; }
+    .hours { background: linear-gradient(180deg, var(--bg), var(--tint)); }
+    .visit-grid { display: grid; gap: 12px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+    tr.today-row { background: color-mix(in srgb, var(--accent) 22%, #fff); outline: 2px solid var(--accent); }
+    tr.today-row th::after { content: " · Today"; color: var(--accent2); font-weight: 700; }
+    tr.closed th, tr.closed td { color: #9a9088; }
+    .addr { font-size: 1.12rem; font-weight: 700; margin: 0 0 8px; }
+    .card .btn { margin-top: 6px; }
+    .cta { background: var(--dark2); color: #fff; }
+    .cta .eyebrow { color: var(--accent); }
+    .cta .lede { color: rgba(255,255,255,0.86); }
+    footer { background: var(--dark); color: #eee; padding: 28px 18px 36px; }
+    footer a { color: var(--accent); }
+    .foot { max-width: 1080px; margin: 0 auto; display: grid; gap: 8px; }
+    .foot small { opacity: 0.75; }
+    @media (min-width: 760px) {
+      .hero-inner { grid-template-columns: 1.15fr 0.85fr; align-items: center; padding: 56px 18px 68px; }
+      .grid { grid-template-columns: repeat(3, 1fr); }
+      .quotes { grid-template-columns: repeat(3, 1fr); }
+      .visit-grid { grid-template-columns: 1.05fr 0.95fr; }
+    }
+
+    .art { width: min(100%, 360px); }
+    @media (min-width: 760px) { .art { width: min(100%, 430px); } }
+    .art img.hero-photo { display:block; width:100%; height:auto; aspect-ratio: 4/5; object-fit: cover; border-radius: 26px; border: 6px solid rgba(255,255,255,0.9); box-shadow: 0 24px 50px rgba(0,0,0,0.35); }
+    @media (max-width: 759px) { .art { order:-1; width:100%; } .art img.hero-photo { aspect-ratio: 16/10; border-width:4px; border-radius:18px; } .hero-inner { padding-top: 20px; } h1 { font-size: clamp(2.3rem, 11vw, 3.4rem); } }
+    .photos { background: var(--bg); }
+    .pgrid { display:grid; gap:10px; grid-template-columns: repeat(2, 1fr); margin-top: 18px; }
+    .pgrid figure { margin:0; position:relative; border-radius:16px; overflow:hidden; box-shadow: var(--shadow); background:#ddd; }
+    .pgrid img { display:block; width:100%; height:auto; aspect-ratio: 1/1; object-fit: cover; }
+    .pgrid figcaption { position:absolute; left:0; right:0; bottom:0; padding:22px 10px 8px; font-size:0.8rem; color:#fff; background:linear-gradient(transparent, rgba(0,0,0,0.65)); }
+    @media (min-width: 760px) { .pgrid { grid-template-columns: repeat(4, 1fr); } }
+
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <a class="preview-banner" href="https://brightfrontdesign.com/?ref=https://brightfrontdesign.com/preview/jw-beverettes-soul-food-montgomery/#pricing">Free preview by Brightfront Studio — made for J.W. Beverette&#x27;s Soul Food <span>· brightfrontdesign.com</span> · <strong>Make it yours — $59 setup + $29/mo →</strong></a>
+  <header class="site">
+    <div class="bar">
+      <div class="nav">
+        <a class="brand" href="#top"><span class="mark" aria-hidden="true">🍲</span><div>J.W. Beverette&#x27;s Soul Food<small>Soul food · Montgomery, AL</small></div></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      </div>
+      <ul class="nav-links" id="nav-links"><li><a href="#story">Story</a></li><li><a href="#photos">Photos</a></li><li><a href="#menu">Menu</a></li><li><a href="#visit">Hours</a></li></ul>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" style="padding:0">
+      <div class="strip" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div>
+          <p class="kicker">Montgomery, Alabama · Soul food</p>
+          <h1>J.W. Beverette's<br>Soul Food</h1>
+          <p class="lead">Legit, true-blue soul food that feels like Thanksgiving with family: oxtails over rice, smothered pork chops, perfectly seasoned baked chicken, cornbread dressing, mac and cheese and candied yams.</p>
+          <p class="stars">★ 4.5 from 826 Google reviews</p>
+          <span class="badge">Black-owned</span> 
+          <div class="today" aria-live="polite">
+            <span>Today in the kitchen</span>
+            <strong id="today-status">Checking hours…</strong>
+            <small id="today-sub"></small>
+          </div>
+          <div class="hero-actions"><a class="btn btn-main" href="tel:+1123456789">Call</a><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=123+Example+St%2C+Montgomery%2C+AL">Get directions</a><a class="btn btn-ghost" href="https://m.me/1491769810910833">Message us</a></div>
+        </div>
+        <div class="art"><img class="hero-photo" src="photo-hero.jpg" alt="The J.W. Beverette&#x27;s Soul Food sign" width="430" height="538" style="object-position:center"></div>
+      </div>
+    </section>
+    <section class="story" id="story">
+      <div class="wrap">
+        <p class="eyebrow">The kitchen</p>
+        <h2>“A place like home, away from home.”</h2>
+        <p>J.W. Beverette's is where Montgomery—and visitors from all over—come for real soul food. Ms. Teresa Jackson's cooking has guests comparing it to their own mothers', and the cooks come out to tell stories when it slows down.</p><p>Plates are made to order: oxtails with rice, smothered or fried pork chops, catfish, wings, baked chicken, collard greens, black-eyed peas, cornbread dressing, mac and cheese, candied yams and red velvet cake.</p>
+        <ul class="facts"><li>Black-owned</li><li>Made to order</li><li>Oxtails</li><li>Thu–Sun</li></ul>
+        <div class="quotes"><blockquote>“This is amazing legit, true blue soul food. I felt I was at thanksgiving with family.”<cite>Google review, Oct 2025</cite></blockquote><blockquote>“Best Catfish I&#x27;ve had. Great customer service.”<cite>Google review, 2026</cite></blockquote><blockquote>“The workers were amazing! The service was fast and the food was good.”<cite>Google review, Nov 2025</cite></blockquote></div>
+      </div>
+    </section>
+    <section class="photos" id="photos">
+      <div class="wrap">
+        <p class="eyebrow">Photos</p>
+        <h2>Plates made with soul.</h2>
+        <div class="pgrid"><figure><img src="photo-1.jpg" alt="A soul food plate" loading="lazy" width="400" height="400"><figcaption>A soul food plate</figcaption></figure><figure><img src="photo-2.jpg" alt="Fresh from the kitchen" loading="lazy" width="400" height="400"><figcaption>Fresh from the kitchen</figcaption></figure><figure><img src="photo-3.jpg" alt="A plate with Southern sides" loading="lazy" width="400" height="400"><figcaption>A plate with Southern sides</figcaption></figure><figure><img src="photo-4.jpg" alt="Soul food favorites" loading="lazy" width="400" height="400"><figcaption>Soul food favorites</figcaption></figure></div>
+        <p class="note">Photos from J.W. Beverette&#x27;s Soul Food’s public Google listing.</p>
+      </div>
+    </section>
+    <section id="menu">
+      <div class="wrap">
+        <p class="eyebrow">The menu</p>
+        <h2>Soul food the way it should be.</h2>
+        <p class="lede">Favorites from customer reviews. Call for today’s plates and prices.</p>
+        <div class="grid"><article class="card"><div class="emoji" aria-hidden="true">🍲</div><h3>Oxtails</h3><p>The house favorite, served over rice.</p></article><article class="card"><div class="emoji" aria-hidden="true">🥩</div><h3>Pork chops</h3><p>Smothered or fried, Southern style.</p></article><article class="card"><div class="emoji" aria-hidden="true">🐟</div><h3>Catfish</h3><p>Fried to order—“best catfish I’ve had.”</p></article><article class="card"><div class="emoji" aria-hidden="true">🍗</div><h3>Baked chicken &amp; wings</h3><p>Perfectly seasoned and tender.</p></article><article class="card"><div class="emoji" aria-hidden="true">🧀</div><h3>Southern sides</h3><p>Mac and cheese, greens, dressing, black-eyed peas, candied yams.</p></article><article class="card"><div class="emoji" aria-hidden="true">🍰</div><h3>Red velvet cake</h3><p>Save room for dessert.</p></article></div>
+        <p class="note">Menu based on public reviews and photos; confirm items and prices with the restaurant.</p>
+      </div>
+    </section>
+    <section class="hours" id="visit">
+      <div class="wrap">
+        <p class="eyebrow">Hours &amp; location</p>
+        <h2>Come eat with family.</h2>
+        <div class="visit-grid">
+          <div class="card">
+            <table id="hours"><caption style="position:absolute;left:-9999px;">Weekly hours, today highlighted</caption><tbody><tr data-day="0"><th scope="row">Sunday</th><td>11 AM–6 PM</td></tr><tr data-day="1" class="closed"><th scope="row">Monday</th><td>Closed</td></tr><tr data-day="2" class="closed"><th scope="row">Tuesday</th><td>Closed</td></tr><tr data-day="3" class="closed"><th scope="row">Wednesday</th><td>Closed</td></tr><tr data-day="4"><th scope="row">Thursday</th><td>11 AM–6 PM</td></tr><tr data-day="5"><th scope="row">Friday</th><td>11 AM–6 PM</td></tr><tr data-day="6"><th scope="row">Saturday</th><td>11 AM–6 PM</td></tr></tbody></table>
+            <p class="note">Hours from public listings, Central time: Thu–Sun 11 AM–6 PM; closed Mon–Wed. Sundays get busy—come early.</p>
+          </div>
+          <div class="card">
+            <h3>Find us</h3>
+            <p class="addr">123 Example St<br>Montgomery, AL</p>
+            <p>In Montgomery, Alabama. Dine in or take your plates to go.</p>
+            <p>Phone <a href="tel:+1123456789">123-456-789</a><br>Email <a href="mailto:hello@example.com">hello@example.com</a><br>Facebook <a href="https://facebook.com/1491769810910833">J.W. Beverette&#x27;s on Facebook</a></p>
+            <p><a class="btn btn-solid" href="https://www.google.com/maps/search/?api=1&amp;query=123+Example+St%2C+Montgomery%2C+AL">Get directions</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta" id="order">
+      <div class="wrap">
+        <p class="eyebrow">Dine in or carry out</p>
+        <h2>Oxtails are calling.</h2>
+        <p class="lede">Call ahead for today’s plates or a big group order—or message us on Facebook.</p>
+        <div class="hero-actions"><a class="btn btn-main" href="tel:+1123456789">Call 123-456-789</a><a class="btn btn-ghost" href="https://m.me/1491769810910833">Message on Facebook</a></div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="foot">
+      <strong>J.W. Beverette&#x27;s Soul Food</strong>
+      <div>123 Example St, Montgomery, AL</div>
+      <div><a href="tel:+1123456789">123-456-789</a> · <a href="mailto:hello@example.com">hello@example.com</a> · <a href="https://facebook.com/1491769810910833">Facebook</a></div>
+      <div>★ 4.5 from 826 Google reviews</div>
+      <small>Free preview by Brightfront Studio · <a href="https://brightfrontdesign.com">brightfrontdesign.com</a> · Details from public listings and reviews; please confirm before ordering.</small>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var btn = document.querySelector(".nav-toggle"), list = document.getElementById("nav-links");
+      btn.addEventListener("click", function () { var o = list.classList.toggle("open"); btn.setAttribute("aria-expanded", o ? "true" : "false"); });
+      list.addEventListener("click", function (e) { if (e.target.tagName === "A") { list.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); } });
+      var TZ = "America/Chicago", H = [[660, 1080], null, null, null, [660, 1080], [660, 1080], [660, 1080]], T = ["11 AM\u20136 PM", "Closed", "Closed", "Closed", "11 AM\u20136 PM", "11 AM\u20136 PM", "11 AM\u20136 PM"], H12 = true;
+      var DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      var parts = new Intl.DateTimeFormat("en-GB", { weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23", timeZone: TZ }).formatToParts(new Date());
+      var get = function (t) { for (var i = 0; i < parts.length; i++) if (parts[i].type === t) return parts[i].value; };
+      var day = {Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[get("weekday")];
+      var now = parseInt(get("hour"), 10) * 60 + parseInt(get("minute"), 10);
+      function fmt(m) { var h = Math.floor(m / 60) % 24, mm = m % 60; var s = mm ? ":" + (mm < 10 ? "0" : "") + mm : "";
+        if (H12) { var ap = h >= 12 ? "pm" : "am"; var hh = h % 12 || 12; return hh + s + ap; } return (h < 10 ? "0" : "") + h + ":" + (mm < 10 ? "0" : "") + mm; }
+      function nextOpen(d) { for (var i = 1; i <= 7; i++) { var k = (d + i) % 7; if (H[k]) return (i === 1 ? "tomorrow" : DAYS[k]) + " at " + fmt(H[k][0]); } return ""; }
+      var st = document.getElementById("today-status"), sub = document.getElementById("today-sub"), h = H[day];
+      if (!h) { st.textContent = "Closed today"; sub.textContent = "Back " + nextOpen(day); }
+      else if (now < h[0]) { st.textContent = "Opens today at " + fmt(h[0]); sub.textContent = "Today: " + T[day]; }
+      else if (now < h[1]) { st.textContent = "Open now · until " + fmt(h[1]); sub.textContent = "Today: " + T[day]; }
+      else { st.textContent = "Closed for today"; sub.textContent = "Back " + nextOpen(day); }
+      var row = document.querySelector('#hours tr[data-day="' + day + '"]'); if (row) row.classList.add("today-row");
+    })();
+  </script>
+</body>
+</html>
