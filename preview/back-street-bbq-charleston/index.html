@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back Street BBQ &amp; More | Barbecue in Charleston, Arkansas</title>
+<meta name="description" content="Pulled pork, ribs, BBQ chicken and fried okra in downtown Charleston, Arkansas.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Six+Caps&family=Bevan&family=Archivo+Narrow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · shape: Sale Bill · genre: editorial · theme: Broadside (deal manual, dealt riso/almanac/studio at seed small-town-bbq-joint-homepage-0231) · job: visit · draw: manual
+ * hero: Settled, fitted capitals beside the framed sandwich · nav: wordmark left, one action right · footer: a mast, wordmark over the small print · imagery: the shop's own photographs · signature: the menu fitted in Six Caps like a sale bill · broadside: bill
+ * axes: light/display-condensed/warm · posture: committed · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P2 H2 E2 S2 R2 V2 · weakest: photographs, kept in colour because the owner's food must read as food */
+/* theme note: photographs print in true colour, not the ink duotone, because a barbecue joint sells with what the plate looks like */
+@import url("./tokens.css");
+@import url("./base.css");
+[data-slot] > img { filter: sepia(0.12) contrast(1.04); mix-blend-mode: normal; }
+[data-slot]:has(> img)::before { content: none; }
+.bar { display: block; background: var(--color-ink); color: var(--color-accent-ink); text-decoration: none; text-align: center; font-size: var(--text-sm); padding: var(--space-xs) var(--space-md); }
+.bar:hover { color: var(--color-paper-3); }
+.bar strong { font-weight: 600; text-decoration: underline; text-underline-offset: 0.2em; }
+.top { border-bottom: var(--rule-hair) solid var(--color-ink); }
+.top .container { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); padding-block: var(--space-sm); }
+.mark { font-family: var(--font-display-2); text-transform: uppercase; font-size: var(--text-lg); text-decoration: none; line-height: 1; }
+.links { display: flex; gap: var(--space-lg); align-items: center; }
+.links a:not(.btn) { font-weight: 500; text-decoration: none; }
+.links a:not(.btn):hover { color: var(--color-accent); }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 var(--space-lg); font-family: var(--font-body); font-weight: 600; text-transform: uppercase; text-decoration: none; border: var(--rule-frame) solid var(--color-ink); transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out); }
+.btn-fill { background: var(--color-ink); color: var(--color-accent-ink); }
+.btn:active { transform: translateY(1px); }
+.btn { white-space: nowrap; }
+.bar .wide { }
+.btn-fill:hover { background: var(--color-accent); border-color: var(--color-accent); }
+.btn-line { background: transparent; color: var(--color-ink); box-shadow: inset 0 0 0 1px var(--color-paper), inset 0 0 0 2px var(--color-ink); }
+.btn-line:hover { color: var(--color-accent); }
+.btn:focus-visible, .links a:focus-visible, .mark:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+.hero .container { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: center; padding-block: var(--space-xl) var(--space-2xl); }
+.fit { container-type: inline-size; }
+.fit span { display: block; font-family: var(--font-display); text-transform: uppercase; line-height: 0.88; white-space: nowrap; letter-spacing: var(--tracking-display); }
+.fit .l1 { font-size: 30cqi; }
+.fit .l2 { font-size: 31.5cqi; color: var(--color-accent); }
+.fit .l3 { font-size: 29cqi; }
+.hero h1 { max-width: none; font-size: var(--text-display); }
+.hero .lead { margin-top: var(--space-lg); }
+.acts { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-lg); }
+.frame { border: var(--rule-frame) solid var(--color-ink); padding: var(--space-2xs); box-shadow: inset 0 0 0 1px var(--color-ink); margin: 0; }
+.frame [data-slot] { aspect-ratio: 4 / 5; }
+.frame-wide [data-slot] { aspect-ratio: 4 / 3; }
+figcaption { font-size: var(--text-sm); font-weight: 500; color: var(--color-muted); padding: var(--space-xs) var(--space-xs) var(--space-2xs); }
+.hero .frame { max-height: 600px; }
+.hero .frame [data-slot] { aspect-ratio: auto; height: min(560px, 62svh); }
+section { padding-block: var(--space-3xl); }
+.ruled { border-top: var(--rule-bar) solid var(--color-ink); padding-top: var(--space-lg); }
+h2 { font-family: var(--font-display-2); text-transform: uppercase; font-size: var(--text-section); line-height: 1; letter-spacing: 0; }
+.menu-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: start; margin-top: var(--space-xl); }
+.rows { margin: 0; padding: 0; list-style: none; border-top: var(--rule-bar) solid var(--color-ink); }
+.rows li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: var(--space-md); padding-block: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.rows b { font-family: var(--font-display-2); font-weight: 400; text-transform: uppercase; font-size: var(--text-lg); line-height: 1.1; }
+.rows span { font-weight: 600; }
+.photos { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: var(--space-xl); margin-top: var(--space-xl); }
+.paper2 { background: var(--color-paper-2); }
+.bill { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); margin-top: var(--space-xl); border-top: var(--rule-bar) solid var(--color-ink); }
+.day { padding: var(--space-md) var(--space-sm) var(--space-lg); border-right: var(--rule-bar) solid var(--color-ink); container-type: inline-size; }
+.day:last-child { border-right: 0; }
+.day .dn { display: block; font-family: var(--font-display); font-size: 46cqi; line-height: 0.9; text-transform: uppercase; }
+.day .hr { display: block; font-family: var(--font-display-2); font-size: var(--text-md); text-transform: uppercase; margin-top: var(--space-sm); border-top: var(--rule-hair) solid var(--color-ink); padding-top: var(--space-xs); }
+.day.off { color: var(--color-muted); }
+.quote { max-width: 26ch; font-family: var(--font-display-2); text-transform: uppercase; font-size: var(--text-section); line-height: 1.15; margin: var(--space-xl) 0 0; }
+.quote + p { margin-top: var(--space-md); color: var(--color-muted); font-weight: 500; font-size: var(--text-sm); }
+.visit { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: start; }
+.visit .rows { margin-top: var(--space-xl); }
+.foot { border-top: var(--rule-bar) solid var(--color-ink); padding-block: var(--space-xl); }
+.foot .mark { font-size: var(--text-2xl); display: block; white-space: nowrap; }
+.foot p { margin-top: var(--space-sm); color: var(--color-muted); font-size: var(--text-sm); }
+@media (max-width: 60rem) {
+  .hero .container, .menu-grid, .photos, .visit { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
+  .hero .frame [data-slot] { height: auto; aspect-ratio: 4 / 5; }
+  .bill { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .day:nth-child(4) { border-right: 0; }
+  .links a:not(.btn) { display: none; }
+}
+@media (max-width: 40rem) {
+  section { padding-block: var(--space-2xl); }
+  .top .btn { padding: 0 var(--space-md); }
+  .top .mark { font-size: 0.95rem; white-space: nowrap; }
+  .foot .mark { font-size: var(--text-lg); }
+  .quote { font-size: var(--text-2xl); }
+  .wide { display: none; }
+  .bill { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .day:nth-child(2n) { border-right: 0; }
+  .day:nth-child(4) { border-right: 0; }
+  .rows li { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xs); }
+}
+</style>
+</head>
+<body>
+<a class="bar" href="https://brightfrontdesign.com/?ref=back-street-bbq-charleston#pricing"><span class="wide">A free preview made for Back Street BBQ &amp; More by Brightfront Studio. </span><strong>Make it yours for $59 setup + $29/month</strong></a>
+<header class="top">
+  <div class="container">
+    <a class="mark" href="#top">Back Street BBQ &amp; More</a>
+    <nav class="links" aria-label="Main">
+      <a href="#menu">Menu</a><a href="#hours">Hours</a><a href="#visit">Visit</a>
+      <a class="btn btn-fill" href="tel:+1123456789">Call<span class="wide">&nbsp;123-456-789</span></a>
+    </nav>
+  </div>
+</header>
+<main id="top">
+  <div class="hero">
+    <div class="container">
+      <div>
+        <h1 class="fit"><span class="l1">Pulled pork,</span><span class="l2">ribs &amp; okra</span><span class="l3">in Charleston.</span></h1>
+        <p class="lead">Downtown barbecue with a full menu and friendly folks at the register.</p>
+        <div class="acts"><a class="btn btn-fill" href="tel:+1123456789">Call ahead to order</a><a class="btn btn-line" href="#hours">See today’s hours</a></div>
+      </div>
+      <figure class="frame">
+        <div data-slot="hero" data-alt="A pulled pork sandwich with barbecue sauce"><img src="photo-hero.jpg" alt="A pulled pork sandwich piled high with barbecue sauce" width="1200" height="1600"></div>
+        <figcaption>The pulled pork sandwich, sauced the house way.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <section id="menu">
+    <div class="container">
+      <h2 class="ruled">What comes off the pit</h2>
+      <div class="menu-grid">
+        <ul class="rows">
+          <li><b>Pulled pork</b><span>On a bun, on a plate, or by the pound to take home.</span></li>
+          <li><b>Ribs</b><span>Served with your pick of sides.</span></li>
+          <li><b>BBQ chicken</b><span>Call ahead; it can sell out by mid-afternoon.</span></li>
+          <li><b>Eye of the Tiger</b><span>The house special first-timers keep coming back for.</span></li>
+          <li><b>Sides</b><span>Fried okra, loaded baked potatoes, tots and fries.</span></li>
+        </ul>
+        <figure class="frame frame-wide">
+          <div data-slot="plate"><img src="photo-4.jpg" alt="Pulled pork sandwich with tater tots" loading="lazy" width="900" height="675"></div>
+          <figcaption>A sandwich and tots, the weekday lunch.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="paper2" aria-labelledby="ph">
+    <div class="container">
+      <h2 id="ph" class="ruled">The place downtown</h2>
+      <div class="photos">
+        <figure class="frame frame-wide"><div data-slot="front"><img src="photo-1.jpg" alt="The Back Street BBQ storefront lit up at night" loading="lazy" width="900" height="675"></div><figcaption>The sign stays lit for the dinner crowd.</figcaption></figure>
+        <figure class="frame"><div data-slot="fries"><img src="photo-3.jpg" alt="Fries loaded with pulled pork and cheese" loading="lazy" width="900" height="675"></div><figcaption>Loaded fries with pulled pork.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="hours">
+    <div class="container">
+      <h2 class="ruled">Open four days a week</h2>
+      <div class="bill" role="list">
+        <div class="day off" role="listitem"><span class="dn">Mon</span><span class="hr">Closed</span></div>
+        <div class="day off" role="listitem"><span class="dn">Tue</span><span class="hr">Closed</span></div>
+        <div class="day" role="listitem"><span class="dn">Wed</span><span class="hr">10:30 to 7</span></div>
+        <div class="day" role="listitem"><span class="dn">Thu</span><span class="hr">10:30 to 7</span></div>
+        <div class="day" role="listitem"><span class="dn">Fri</span><span class="hr">10:30 to 7</span></div>
+        <div class="day off" role="listitem"><span class="dn">Sat</span><span class="hr">Closed</span></div>
+        <div class="day" role="listitem"><span class="dn">Sun</span><span class="hr">10:30 to 1:30</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="paper2">
+    <div class="container">
+      <h2 class="ruled">From the regulars</h2>
+      <blockquote class="quote">“Fantastic barbecue! The pulled pork is amazing. The restaurant has the perfect BBQ joint vibe.”</blockquote>
+      <p>Google review, October 2025</p>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="container visit">
+      <div>
+        <h2 class="ruled">Come hungry</h2>
+        <ul class="rows">
+          <li><b>Address</b><span>123 Example St, Charleston, AR</span></li>
+          <li><b>Phone</b><span><a href="tel:+1123456789">123-456-789</a></span></li>
+          <li><b>Takeout</b><span>Pulled pork by the pound. Call and it will be ready.</span></li>
+        </ul>
+        <div class="acts"><a class="btn btn-fill" href="tel:+1123456789">Call 123-456-789</a><a class="btn btn-line" href="https://m.me/197297983457314">Message on Facebook</a></div>
+      </div>
+      <figure class="frame frame-wide"><div data-slot="plate2"><img src="photo-2.jpg" alt="A plate smothered in gravy with rolls" loading="lazy" width="675" height="900"></div><figcaption>Home cooking beside the barbecue.</figcaption></figure>
+    </div>
+  </section>
+</main>
+<footer class="foot">
+  <div class="container">
+    <a class="mark" href="#top">Back Street BBQ &amp; More</a>
+    <p>Charleston, Arkansas. Free website preview by <a href="https://brightfrontdesign.com/?ref=back-street-bbq-charleston">Brightfront Studio</a>. Details come from public listings and reviews; please confirm before you order.</p>
+  </div>
+</footer>
+<script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
+document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
+</body>
+</html>

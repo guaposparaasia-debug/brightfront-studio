@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ma’ Francis Kitchen | Southern home cooking in Roanoke, Alabama</title>
+<meta name="description" content="A family-run Southern kitchen in Roanoke, Alabama. Meat and two plates, plenty of sides, peach cobbler and a Sunday buffet.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Archivo:wght@400;500&family=Archivo+Narrow:wght@600&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · shape: Midsummer · genre: editorial · theme: Solstice (dealt 1/3, seed family-soul-food-kitchen-ca2f) · solstice: long-light · job: visit · draw: none
+ * hero: Stage, the head and the call left, the plate right · nav: wordmark left, one call action right · footer: a single ruled line · imagery: the kitchen’s own photographs · signature: the week on one line, the open days marked · ink: paper
+ * axes: light/high-contrast-serif/warm-vermilion · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P2 H2 E2 S2 R2 V2 · weakest: the photographs are flash-lit, warmed by the theme filter */
+@import url("./tokens.css");
+@import url("./base.css");
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1; letter-spacing: var(--tracking-display); color: var(--color-ink); }
+body { color: var(--color-ink-2); }
+figure, dd { margin: 0; }
+.small, figcaption { font: 600 13px/1.4 var(--font-outlier); color: var(--color-muted); }
+.bar { display: block; background: var(--color-ink); color: var(--color-paper); text-decoration: none; text-align: center; font-size: var(--text-sm); padding: var(--space-xs) var(--space-md); }
+.bar strong { font-weight: 500; text-decoration: underline; text-underline-offset: 0.2em; }
+.bar:hover strong { color: var(--color-gold-2); }
+.bar:focus-visible { outline: 3px solid var(--color-gold-2); outline-offset: -5px; }
+.top .container { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); padding-block: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.mark { font: 400 var(--text-xl)/1 var(--font-display); color: var(--color-ink); text-decoration: none; white-space: nowrap; }
+.links { display: flex; gap: var(--space-lg); align-items: center; }
+.links a:not(.btn) { color: var(--color-ink); text-underline-offset: 0.25em; }
+a:hover { text-decoration-color: var(--color-accent); }
+.links a:not(.btn):hover { color: var(--color-accent); }
+a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 var(--space-xl); border-radius: var(--radius-pill); background: var(--color-accent); color: var(--color-accent-ink); font: 600 var(--text-md)/1 var(--font-outlier); text-decoration: none; white-space: nowrap; transition: background-color var(--dur-short) var(--ease-out); }
+.btn:hover { background: var(--color-ink); }
+.btn:active { background: var(--color-ink-2); }
+.btn-2 { display: inline-flex; align-items: center; min-height: 48px; color: var(--color-ink); font: 600 var(--text-md)/1 var(--font-outlier); text-decoration: none; border-bottom: var(--rule-bar) solid var(--color-ink); white-space: nowrap; }
+.btn-2:hover { color: var(--color-accent); border-color: var(--color-accent); }
+.btn-2:active { color: var(--color-ink-2); }
+.hero { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-2xl); align-items: center; padding-block: var(--space-2xl); }
+.hero h1 { font-size: var(--text-display); max-width: 12ch; }
+.hero .lead { font-size: var(--text-lg); line-height: 1.55; max-width: 38ch; margin-top: var(--space-lg); }
+.acts { display: flex; flex-wrap: wrap; gap: var(--space-xl); align-items: center; margin-top: var(--space-xl); }
+.photo img { display: block; width: 100%; height: 100%; object-fit: cover; outline: var(--rule-hair) solid color-mix(in oklab, var(--color-ink) 10%, transparent); outline-offset: -1px; }
+.photo { aspect-ratio: 4 / 3; overflow: hidden; }
+.hero .photo { max-height: 66svh; }
+figcaption { margin-top: var(--space-xs); }
+.sec { padding-block: var(--section-gap-s); }
+.sec > .container { border-top: var(--rule-bar) solid var(--color-ink); padding-top: var(--space-xl); }
+.sec h2 { font-size: var(--text-display-s); max-width: 18ch; }
+.plates { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: var(--space-3xl); align-items: start; margin-top: var(--space-xl); }
+.well { background: var(--color-paper-2); border: var(--rule-bar) solid var(--color-ink); outline: var(--rule-hair) solid var(--color-gold); outline-offset: -7px; box-shadow: var(--shadow-card); padding: var(--space-xl); }
+.well h3 { font-size: var(--text-2xl); padding-bottom: var(--space-sm); border-bottom: var(--rule-hair) solid var(--color-gold); }
+.well dl div { display: grid; grid-template-columns: 8rem 1fr; gap: var(--space-md); padding-block: var(--space-sm); border-bottom: 1px dotted var(--color-gold); align-items: baseline; }
+.well dl div:last-child { border-bottom: 0; }
+.well dt { font: 600 13px/1.4 var(--font-outlier); color: var(--color-muted); }
+.well dd { font: 400 var(--text-lg)/1.25 var(--font-display); color: var(--color-ink); }
+.plates p { font-size: var(--text-lg); line-height: 1.55; max-width: 44ch; }
+.plates p + p { margin-top: var(--space-md); }
+.band { background: var(--color-ink); color: var(--color-paper); padding-block: var(--section-gap-s); }
+.band h2 { color: var(--color-paper); font-size: var(--text-display-s); }
+.week { list-style: none; margin: var(--space-2xl) 0 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); border-top: var(--rule-hair) solid var(--color-gold); }
+.week li { position: relative; padding-top: var(--space-lg); }
+.week li::before { content: ""; position: absolute; top: -6px; left: 0; width: 11px; height: 11px; border-radius: 50%; background: var(--color-ink); border: var(--rule-hair) solid var(--color-gold); }
+.week li.on::before { background: var(--color-gold); }
+.week .d { display: block; font: 600 13px/1.4 var(--font-outlier); color: var(--color-gold-2); }
+.week .s { display: block; margin-top: var(--space-2xs); font: 400 var(--text-xl)/1.1 var(--font-display); color: var(--color-paper); }
+.week li:not(.on) .s { color: color-mix(in oklab, var(--color-paper) 60%, var(--color-ink)); }
+.snaps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-lg); margin-top: var(--space-xl); }
+.say blockquote { margin: 0; }
+.say p { font: 400 var(--text-display)/1.02 var(--font-display); color: var(--color-ink); max-width: 28ch; }
+.say cite { display: block; margin-top: var(--space-md); font: 600 13px/1.4 var(--font-outlier); font-style: normal; color: var(--color-muted); }
+.visit { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); }
+.facts div { display: grid; grid-template-columns: 8rem 1fr; gap: var(--space-md); padding-block: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-rule); font-size: var(--text-lg); }
+.facts dt { font: 600 13px/1.6 var(--font-outlier); color: var(--color-muted); }
+.facts dd { color: var(--color-ink); }
+.facts a { color: var(--color-ink); text-underline-offset: 0.2em; }
+.foot .container { display: flex; justify-content: space-between; gap: var(--space-lg); align-items: center; padding-block: var(--space-xl); border-top: var(--rule-bar) solid var(--color-ink); font-size: var(--text-sm); }
+.foot a:not(.mark) { color: var(--color-ink); }
+@media (max-width: 60rem) {
+  .hero, .plates, .visit { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xl); }
+  .snaps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bar .wide { display: none; }
+}
+@media (max-width: 40rem) {
+  .links a:not(.btn) { display: none; }
+  .mark { font-size: var(--text-lg); }
+  .top .btn { padding: 0 var(--space-lg); }
+  .hero { padding-top: var(--space-xl); }
+  .well { padding: var(--space-lg); }
+  .well dl div, .facts div { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xs); }
+  .week { grid-template-columns: minmax(0, 1fr); border-top: 0; border-left: var(--rule-hair) solid var(--color-gold); margin-left: var(--space-xs); }
+  .week li { padding: 0 0 var(--space-md) var(--space-lg); }
+  .week li::before { top: var(--space-2xs); left: -6px; }
+  .week .d, .week .s { display: inline; margin: 0; }
+  .week .s { font-size: var(--text-lg); margin-left: var(--space-xs); }
+  .snaps { gap: var(--space-md); }
+  .foot .container { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<a class="bar" href="https://brightfrontdesign.com/?ref=ma-francis-kitchen-roanoke#pricing"><span class="wide">A free preview made for Ma’ Francis Kitchen by Brightfront Studio. </span><strong>Make it yours for $59 setup + $29/month</strong></a>
+<header class="top">
+  <div class="container">
+    <a class="mark" href="#top">Ma’ Francis Kitchen</a>
+    <nav class="links" aria-label="Main">
+      <a href="#plates">Plates</a><a href="#week">Hours</a><a href="#visit">Visit</a>
+      <a class="btn" href="tel:+1123456789">Call<span class="wide">&nbsp;the kitchen</span></a>
+    </nav>
+  </div>
+</header>
+<main id="top">
+  <div class="container hero">
+    <div>
+      <h1>Southern cooking, served like family.</h1>
+      <p class="lead">A family-run kitchen in Roanoke, Alabama. Fresh meats, plenty of homemade sides and peach cobbler, Thursday to Sunday.</p>
+      <div class="acts">
+        <a class="btn" href="tel:+1123456789">Call 123-456-789</a>
+        <a class="btn-2" href="#plates">See what’s cooking</a>
+      </div>
+    </div>
+    <figure>
+      <div class="photo" data-slot="hero"><img src="photo-hero.jpg" alt="A plate of pork chop, mac and cheese, greens and cornbread" width="1600" height="1200" fetchpriority="high"></div>
+      <figcaption>A plate from the walk-up buffet.</figcaption>
+    </figure>
+  </div>
+
+  <section class="sec" id="plates">
+    <div class="container">
+      <h2>A meat, two sides and cobbler.</h2>
+      <div class="plates">
+        <div>
+          <p>Pick a meat and your sides from the line. The family cooks the vegetables fresh, the way a grandmother would.</p>
+          <p>On Sundays the buffet moves to the annex out back.</p>
+        </div>
+        <div class="well">
+          <h3>From the line</h3>
+          <dl>
+            <div><dt>Meats</dt><dd>Baked chicken, meatloaf, catfish, baked pork chop</dd></div>
+            <div><dt>Sides</dt><dd>Collards, mac and cheese, black-eyed peas</dd></div>
+            <div><dt>Desserts</dt><dd>Peach cobbler, banana pudding, sweet potato soufflé</dd></div>
+            <div><dt>Sundays</dt><dd>Buffet in the annex</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="week">
+    <div class="container">
+      <h2>Open four days, 11 to 5.</h2>
+      <ol class="week">
+        <li><span class="d">Monday</span><span class="s">Closed</span></li>
+        <li><span class="d">Tuesday</span><span class="s">Closed</span></li>
+        <li><span class="d">Wednesday</span><span class="s">Closed</span></li>
+        <li class="on"><span class="d">Thursday</span><span class="s">11 to 5</span></li>
+        <li class="on"><span class="d">Friday</span><span class="s">11 to 5</span></li>
+        <li class="on"><span class="d">Saturday</span><span class="s">11 to 5</span></li>
+        <li class="on"><span class="d">Sunday</span><span class="s">Buffet, 11 to 5</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" aria-label="Photos">
+    <div class="container">
+      <h2>Come on in.</h2>
+      <div class="snaps">
+        <figure><div class="photo" data-slot="p1"><img src="photo-1.jpg" alt="Baked chicken with mac and cheese, greens and a roll" width="900" height="675" loading="lazy"></div><figcaption>Baked chicken plate.</figcaption></figure>
+        <figure><div class="photo" data-slot="p2"><img src="photo-2.jpg" alt="The kitchen’s white building with a blue awning" width="900" height="522" loading="lazy"></div><figcaption>The blue awning.</figcaption></figure>
+        <figure><div class="photo" data-slot="p3"><img src="photo-3.jpg" alt="The dining room with guests at tables" width="900" height="675" loading="lazy"></div><figcaption>The dining room.</figcaption></figure>
+        <figure><div class="photo" data-slot="p4"><img src="photo-4.jpg" alt="Guests ordering at the counter under the menu board" width="900" height="675" loading="lazy"></div><figcaption>Order at the counter.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec say">
+    <div class="container">
+      <blockquote>
+        <p>“It was delicious! It all tasted fresh.”</p>
+        <cite>From a Google review, October 2026</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="sec" id="visit">
+    <div class="container visit">
+      <div>
+        <h2>Pull up a chair.</h2>
+        <div class="acts">
+          <a class="btn" href="tel:+1123456789">Call 123-456-789</a>
+          <a class="btn-2" href="https://m.me/102462802252732">Message on Facebook</a>
+        </div>
+      </div>
+      <dl class="facts">
+        <div><dt>Address</dt><dd>123 Example St, Roanoke, AL</dd></div>
+        <div><dt>Phone</dt><dd><a href="tel:+1123456789">123-456-789</a></dd></div>
+        <div><dt>Open</dt><dd>Thursday to Sunday, 11 AM to 5 PM</dd></div>
+        <div><dt>Sundays</dt><dd>Buffet in the annex</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+<footer class="foot">
+  <div class="container">
+    <a class="mark" href="#top">Ma’ Francis Kitchen</a>
+    <span>Free website preview by <a href="https://brightfrontdesign.com/?ref=ma-francis-kitchen-roanoke" style="white-space: nowrap">Brightfront Studio</a>. Details come from public listings and reviews.</span>
+  </div>
+</footer>
+<script>
+window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
+document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
+</body>
+</html>

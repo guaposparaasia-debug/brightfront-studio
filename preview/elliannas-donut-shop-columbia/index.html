@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ellianna’s Donut Shop | Fresh donuts in Columbia, Missouri</title>
+<meta name="description" content="Fresh donuts every morning in Columbia, Missouri. Classic glazed, fritters, spicy kolaches and the strawberry split.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Sofia+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · shape: Sticker Sheet · genre: playful · theme: Sticker (dealt 1/3, seed friendly-fun-neighborhood-donut-9029) · job: visit · draw: none
+ * hero: Stage, the head and the call left, the donut case pinned right · nav: wordmark left, one call action right · footer: a single dashed line · imagery: the shop’s own photographs · signature: the counter as die-cut fills · ink: paper
+ * axes: light/display-heavy/chromatic-pink · posture: full-palette · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P2 H2 E2 S2 R2 V2 · weakest: the photographs are phone snaps, kept close and loud */
+@import url("./tokens.css");
+@import url("./base.css");
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing: var(--tracking-display); line-height: 1.02; color: var(--color-ink); }
+h1 { font-size: min(var(--text-display), 4.5rem); }
+h2 { font-size: min(var(--text-section), 3.25rem); }
+figure, dd { margin: 0; }
+body { font-variant-numeric: tabular-nums; }
+.bar { display: block; background: var(--color-ink); color: var(--color-paper); text-decoration: none; text-align: center; font-size: var(--text-sm); padding: var(--space-xs) var(--space-md); }
+.bar strong { font-weight: 700; text-decoration: underline; text-underline-offset: 0.2em; }
+.bar:hover strong { color: var(--color-accent-2); }
+.bar:focus-visible { outline: 3px solid var(--color-accent-2); outline-offset: -5px; }
+.top .container { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); padding-block: var(--space-md); border-bottom: var(--rule-bar) dashed var(--color-rule); }
+.mark { font: 400 var(--text-lg)/1 var(--font-display); color: var(--color-ink); text-decoration: none; white-space: nowrap; }
+.links { display: flex; gap: var(--space-lg); align-items: center; }
+.links a:not(.btn) { font-weight: 700; color: var(--color-ink); text-decoration: none; }
+.links a:not(.btn):hover { text-decoration: underline; text-decoration-color: var(--color-accent); }
+a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 4px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; height: 52px; padding: 0 var(--space-lg); border-radius: var(--radius-pill); font-weight: 700; font-size: var(--text-md); color: var(--color-ink); text-decoration: none; white-space: nowrap; box-shadow: inset 0 0 0 2px var(--color-ink); transition: translate var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out), background-color var(--dur-micro) var(--ease-out); }
+.btn:hover { background: var(--color-paper-2); }
+.btn:active { background: var(--color-paper-3); }
+.btn-p { background: var(--color-accent); color: var(--color-accent-ink); box-shadow: 0 0 0 5px var(--color-white), 5px 6px 0 var(--color-ink); margin: var(--space-2xs); }
+.btn-p:hover { background: var(--color-accent-deep); translate: 0 -2px; }
+.btn-p:active { translate: 4px 5px; box-shadow: 0 0 0 5px var(--color-white), var(--shadow-press); }
+.hero { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: var(--space-xl); align-items: center; padding-block: var(--space-2xl); min-height: min(760px, calc(100svh - 110px)); box-sizing: border-box; }
+.hero .lead { font-size: var(--text-lg); line-height: 1.5; max-width: 38ch; margin-top: var(--space-lg); }
+.acts { display: flex; flex-wrap: wrap; gap: var(--space-lg); align-items: center; margin-top: var(--space-xl); }
+.shot { position: relative; }
+.diecut { border: 6px solid var(--color-white); border-radius: 22px; box-shadow: var(--shadow-card); overflow: hidden; background: var(--color-slot); }
+.diecut img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.hero .diecut { aspect-ratio: 4 / 3; rotate: 2deg; max-height: 64svh; }
+.tag { position: absolute; display: inline-block; padding: var(--space-xs) var(--space-md); border: 4px solid var(--color-white); border-radius: var(--radius-pill); box-shadow: var(--shadow-card); background: var(--color-accent-2); color: var(--color-ink); font-weight: 700; font-size: var(--text-md); white-space: nowrap; }
+.hero .tag { left: calc(-1 * var(--space-md)); bottom: calc(-1 * var(--space-md)); rotate: -4deg; }
+.sec { padding-block: var(--section-gap-s); }
+.sec h2 { margin-bottom: var(--space-xl); }
+.bento { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-xl); }
+.bento .col { display: grid; gap: var(--space-xl); grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.fill { border: 6px solid var(--color-white); border-radius: var(--radius-card); box-shadow: var(--shadow-card); padding: var(--space-xl); }
+.fill b { display: block; font: 400 var(--text-2xl)/1.02 var(--font-display); }
+.col .fill b { font-size: var(--text-xl); }
+.col .fill { padding: var(--space-lg); }
+.fill span { display: block; margin-top: var(--space-xs); font-size: var(--text-md); line-height: 1.4; }
+.f-pink { background: var(--color-accent); color: var(--color-accent-ink); rotate: -1.5deg; }
+.f-pink b { font-size: clamp(5rem, 9vw, 9rem); line-height: 0.9; }
+.f-pink span { font-size: var(--text-lg); font-weight: 600; }
+.f-lime { background: var(--color-accent-2); color: var(--color-ink); rotate: 1.5deg; }
+.f-ink { background: var(--color-ink); color: var(--color-paper); rotate: -1deg; }
+.f-ink b { color: var(--color-paper); }
+.f-white { background: var(--color-white); color: var(--color-ink); rotate: 1deg; }
+.treats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-xl); }
+.treats .diecut { aspect-ratio: 3 / 4; }
+.treats figure:nth-child(2) .diecut { rotate: -2deg; }
+.treats figcaption { margin-top: var(--space-md); }
+.treats figcaption b { display: block; font: 400 var(--text-lg)/1.1 var(--font-display); }
+.treats figcaption span { display: block; margin-top: var(--space-2xs); color: var(--color-muted); font-weight: 700; font-size: var(--text-sm); }
+.say { background: var(--color-ink); color: var(--color-paper); }
+.say .container { padding-block: var(--section-gap-s); position: relative; }
+.say blockquote { margin: 0; }
+.say p { font: 400 clamp(2.25rem, 4vw + 0.5rem, 4rem)/1.05 var(--font-display); color: var(--color-paper); max-width: 28ch; }
+.say cite { display: block; margin-top: var(--space-lg); font-style: normal; font-weight: 700; color: var(--color-paper-2); }
+.say .tag { position: static; display: inline-block; margin-bottom: var(--space-lg); rotate: -3deg; }
+.visit { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: var(--space-xl); align-items: start; }
+.visit .diecut { aspect-ratio: 4 / 3; }
+.facts { margin-top: var(--space-xl); }
+.facts div { display: grid; grid-template-columns: 8rem 1fr; gap: var(--space-md); padding-block: var(--space-md); border-top: var(--rule-bar) dashed var(--color-rule); font-size: var(--text-lg); }
+.facts dt { font-weight: 700; font-size: var(--text-sm); color: var(--color-muted); padding-top: var(--space-2xs); }
+.facts a { color: var(--color-ink); }
+.facts a:hover { text-decoration-color: var(--color-accent); }
+.foot .container { display: flex; justify-content: space-between; gap: var(--space-lg); align-items: center; padding-block: var(--space-xl); border-top: var(--rule-bar) dashed var(--color-rule); font-size: var(--text-sm); }
+.foot a:not(.mark) { color: var(--color-ink); }
+@media (max-width: 60rem) {
+  .hero, .bento, .visit { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xl); }
+  .bento { gap: var(--space-lg); }
+  .bar .wide { display: none; }
+}
+@media (max-width: 40rem) {
+  .links a:not(.btn) { display: none; }
+  .top .btn { height: 44px; padding: 0 var(--space-md); }
+  .hero { padding-top: var(--space-xl); }
+  .bento .col { grid-template-columns: minmax(0, 1fr); }
+  .fill { padding: var(--space-lg); }
+  .treats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-lg); }
+  .treats figure:last-child { grid-column: 1 / -1; }
+  .treats figure:last-child .diecut { aspect-ratio: 4 / 3; }
+  .facts div { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xs); }
+  .foot .container { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<a class="bar" href="https://brightfrontdesign.com/?ref=elliannas-donut-shop-columbia#pricing"><span class="wide">A free preview made for Ellianna’s Donut Shop by Brightfront Studio. </span><strong>Make it yours for $59 setup + $29/month</strong></a>
+<header class="top">
+  <div class="container">
+    <a class="mark" href="#top">Ellianna’s Donuts</a>
+    <nav class="links" aria-label="Main">
+      <a href="#counter">Donuts</a><a href="#visit">Visit</a>
+      <a class="btn btn-p" href="tel:+1123456789">Call<span class="wide">&nbsp;to order</span></a>
+    </nav>
+  </div>
+</header>
+<main id="top">
+  <div class="container hero">
+    <div>
+      <h1>Fresh donuts every morning.</h1>
+      <p class="lead">Classic glazed, fritters, spicy kolaches and the strawberry split, made in Columbia, Missouri.</p>
+      <div class="acts">
+        <a class="btn btn-p" href="tel:+1123456789">Call 123-456-789</a>
+        <a class="btn" href="https://m.me/115450226513227">Message on Facebook</a>
+      </div>
+    </div>
+    <figure class="shot">
+      <div class="diecut" data-slot="hero"><img src="photo-hero.jpg" alt="The donut case full of glazed, sprinkled and filled donuts" width="1600" height="1200" fetchpriority="high"></div>
+      <span class="tag">Open until 1 PM</span>
+    </figure>
+  </div>
+
+  <section class="sec container" id="counter">
+    <h2>On the counter.</h2>
+    <div class="bento">
+      <div class="fill f-pink"><b>1 PM</b><span>The case empties fast. Come early for the best sellers.</span></div>
+      <div class="col">
+        <div class="fill f-lime"><b>Glazed</b><span>The classic everyone talks about.</span></div>
+        <div class="fill f-ink"><b>Fritters</b><span>A regular’s favourite.</span></div>
+        <div class="fill f-white"><b>Kolaches</b><span>Go for the spicy ones.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec container" aria-label="Photos">
+    <div class="treats">
+      <figure><div class="diecut" data-slot="p1"><img src="photo-1.jpg" alt="A strawberry split donut with fresh strawberries and cream" width="675" height="900" loading="lazy"></div><figcaption><b>Strawberry split</b><span>Fresh strawberries and whipped cream</span></figcaption></figure>
+      <figure><div class="diecut" data-slot="p2"><img src="photo-2.jpg" alt="A rack of chocolate glazed donuts" width="675" height="900" loading="lazy"></div><figcaption><b>Chocolate glazed</b><span>Straight off the rack</span></figcaption></figure>
+      <figure><div class="diecut" data-slot="p3"><img src="photo-3.jpg" alt="A biscuit breakfast sandwich with egg and a coffee cup" width="675" height="900" loading="lazy"></div><figcaption><b>Breakfast sandwiches</b><span>Biscuits and croissants</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="say">
+    <div class="container">
+      <span class="tag">Weekend special</span>
+      <blockquote>
+        <p>“You have to try the strawberry split donut!”</p>
+        <cite>From a Google review, September 2026</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="sec container visit" id="visit">
+    <div>
+      <h2>Swing by.</h2>
+      <div class="acts">
+        <a class="btn btn-p" href="tel:+1123456789">Call 123-456-789</a>
+        <a class="btn" href="https://m.me/115450226513227">Message on Facebook</a>
+      </div>
+      <dl class="facts">
+        <div><dt>Address</dt><dd>123 Example St, Columbia, MO</dd></div>
+        <div><dt>Phone</dt><dd><a href="tel:+1123456789">123-456-789</a></dd></div>
+        <div><dt>Hours</dt><dd>Mornings until 1 PM</dd></div>
+      </dl>
+    </div>
+    <figure>
+      <div class="diecut" data-slot="p4"><img src="photo-4.jpg" alt="The Ellianna’s Donut Shop storefront" width="900" height="675" loading="lazy"></div>
+    </figure>
+  </section>
+</main>
+<footer class="foot">
+  <div class="container">
+    <a class="mark" href="#top">Ellianna’s Donuts</a>
+    <span>Free website preview by <a href="https://brightfrontdesign.com/?ref=elliannas-donut-shop-columbia" style="white-space: nowrap">Brightfront Studio</a>. Details come from public listings and reviews.</span>
+  </div>
+</footer>
+<script>
+window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
+document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
+</body>
+</html>

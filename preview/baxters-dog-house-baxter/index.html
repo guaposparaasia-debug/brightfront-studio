@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Baxter’s Dog House | Dog and cat grooming in Baxter, Tennessee</title>
+<meta name="description" content="Friendly dog and cat grooming on weekdays in Baxter, Tennessee.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · shape: Catalogue · genre: editorial · theme: Ink (dealt 3/3, seed family-dog-cat-grooming-8ff4·36d3d72f·2026-10-25·r0) · job: book · draw: none
+ * hero: Settled, head and action left, the groomed dog right · nav: wordmark left, one action right · footer: a single ruled line · imagery: the shop's own photographs · signature: the week as a notice with today marked open · ink: paper
+ * axes: light/grotesk-sans/chromatic-teal · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P2 H2 E2 S2 R2 V2 · weakest: the gallery, kept to four real photographs */
+/* Hallmark · waive 22 · ink and greys at zero chroma from the Ink theme tokens · a notice board is printed in plain black */
+@import url("./tokens.css");
+@import url("./base.css");
+.bar { display: block; background: var(--color-ink); color: var(--color-paper); text-decoration: none; text-align: center; font-size: var(--text-sm); padding: var(--space-xs) var(--space-md); }
+.bar strong { font-weight: 600; text-decoration: underline; text-underline-offset: 0.2em; }
+.bar:hover strong { color: var(--color-accent-soft); }
+.top .container { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); padding-block: var(--space-md); border-bottom: 1px solid var(--color-rule); }
+.mark { font-weight: 700; font-size: var(--text-lg); letter-spacing: -0.02em; text-decoration: none; white-space: nowrap; }
+.links { display: flex; gap: var(--space-lg); align-items: center; }
+.links a:not(.btn) { font-weight: 600; text-decoration: none; color: var(--color-ink-2); }
+.links a:not(.btn):hover { color: var(--color-accent); }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 var(--space-lg); border-radius: 10px; font-weight: 600; text-decoration: none; white-space: nowrap; border: 1px solid var(--color-ink); transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out); }
+.btn-ink { background: var(--color-ink); color: var(--color-paper); }
+.btn-ink:hover { background: var(--color-ink-2); }
+.btn-soft { background: var(--color-paper-2); color: var(--color-ink); border-color: var(--color-rule); }
+.btn-soft:hover { border-color: var(--color-ink); }
+.btn:active { transform: translateY(1px); }
+a:focus-visible, .btn:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+.hero .container { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: center; padding-block: var(--space-2xl); }
+.hero h1 { line-height: 1; max-width: 12ch; }
+.hero .lead { margin-top: var(--space-lg); color: var(--color-ink-2); }
+.acts { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-xl); }
+.pic { margin: 0; }
+.pic [data-slot] { border-radius: 12px; border: 1px solid var(--color-rule); aspect-ratio: 4 / 5; }
+.hero .pic [data-slot] { aspect-ratio: auto; height: min(600px, 66svh); }
+.pic figcaption { font-size: var(--text-sm); color: var(--color-muted); padding-top: var(--space-xs); }
+section { padding-block: var(--space-3xl); }
+h2 { font-size: var(--text-section); line-height: 1.05; }
+.split { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-2xl); align-items: start; }
+.list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-ink); }
+.list li { display: flex; justify-content: space-between; align-items: center; gap: var(--space-md); padding: var(--space-md) 0; border-bottom: 1px solid var(--color-rule); }
+.list b { font-weight: 600; font-size: var(--text-lg); }
+.list p { color: var(--color-ink-2); font-size: var(--text-sm); margin-top: var(--space-2xs); }
+.tag { flex: none; font-size: var(--text-sm); font-weight: 600; border-radius: 999px; padding: var(--space-2xs) var(--space-sm); border: 1px solid var(--color-rule); color: var(--color-ink-2); }
+.tag.in { background: var(--color-accent-soft); color: var(--color-accent-soft-ink); border-color: transparent; }
+.steps { list-style: none; margin: var(--space-xl) 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap-columns); }
+.steps li { border-top: 1px solid var(--color-ink); padding-top: var(--space-md); }
+.steps .n { display: block; font-weight: 700; font-size: var(--text-display-s); line-height: 1; letter-spacing: var(--tracking-display); }
+.steps h3 { margin-top: var(--space-md); }
+.steps p { color: var(--color-ink-2); margin-top: var(--space-xs); }
+.well { background: var(--color-paper-2); border-block: 1px solid var(--color-rule); }
+.gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap-columns); margin-top: var(--space-xl); }
+.week { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--color-ink); }
+.week li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto; gap: var(--space-md); align-items: center; padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-rule); }
+.week .d { font-weight: 600; }
+.week .h { white-space: nowrap; color: var(--color-ink-2); font-variant-numeric: tabular-nums; }
+.week .today .d, .week .today .h { color: var(--color-ink); font-weight: 700; }
+.quote { font-weight: 700; font-size: var(--text-section); line-height: 1.1; letter-spacing: var(--tracking-display); max-width: 22ch; margin: 0; }
+.quote + p { margin-top: var(--space-md); color: var(--color-muted); font-size: var(--text-sm); }
+.facts { list-style: none; margin: var(--space-xl) 0 0; padding: 0; border-top: 1px solid var(--color-ink); }
+.facts li { display: grid; grid-template-columns: 8rem minmax(0, 1fr); gap: var(--space-md); padding: var(--space-sm) 0; border-bottom: 1px solid var(--color-rule); }
+.facts span:first-child { color: var(--color-muted); font-size: var(--text-sm); padding-top: var(--space-3xs); }
+.foot .container { border-top: 1px solid var(--color-ink); padding-block: var(--space-xl); display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-md); font-size: var(--text-sm); color: var(--color-muted); }
+.foot .mark { font-size: var(--text-md); color: var(--color-ink); }
+@media (max-width: 60rem) {
+  .hero .container, .split { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
+  .hero .pic [data-slot] { height: auto; aspect-ratio: 4 / 5; }
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .links a:not(.btn) { display: none; }
+  .bar .wide { display: none; }
+}
+@media (max-width: 40rem) {
+  section { padding-block: var(--space-2xl); }
+  .steps { grid-template-columns: minmax(0, 1fr); }
+  .wide { display: none; }
+  .mark { font-size: var(--text-md); }
+  .quote { font-size: var(--text-2xl); }
+  .facts li { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xs); }
+}
+</style>
+</head>
+<body>
+<a class="bar" href="https://brightfrontdesign.com/?ref=baxters-dog-house-baxter#pricing"><span class="wide">A free preview made for Baxter’s Dog House by Brightfront Studio. </span><strong>Make it yours for $59 setup + $29/month</strong></a>
+<header class="top">
+  <div class="container">
+    <a class="mark" href="#top">Baxter’s Dog House</a>
+    <nav class="links" aria-label="Main">
+      <a href="#services">Services</a><a href="#hours">Hours</a><a href="#visit">Visit</a>
+      <a class="btn btn-ink" href="tel:+1123456789">Book<span class="wide">&nbsp;a groom</span></a>
+    </nav>
+  </div>
+</header>
+<main id="top">
+  <div class="hero">
+    <div class="container">
+      <div>
+        <h1>Fresh cuts for dogs, and cats too</h1>
+        <p class="lead">A friendly grooming shop in Baxter, open early on weekdays.</p>
+        <div class="acts"><a class="btn btn-ink" href="tel:+1123456789">Call to book 123-456-789</a><a class="btn btn-soft" href="https://m.me/488439231924234">Message on Facebook</a></div>
+      </div>
+      <figure class="pic">
+        <div data-slot="hero" data-alt="A groomed dog in a bandana"><img src="photo-hero.jpg" alt="A happy groomed dog sitting in a yellow bandana" width="1200" height="1600"></div>
+        <figcaption>Fresh from the table, bandana included.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="container split">
+      <h2>What we do on the table</h2>
+      <ul class="list">
+        <li><div><b>Full haircuts</b><p>Poodles, doodles, shih tzus and more.</p></div><span class="tag in">Dogs</span></li>
+        <li><div><b>Cat grooming</b><p>Not many shops groom cats. We do.</p></div><span class="tag in">Cats</span></li>
+        <li><div><b>Baths and brush-outs</b><p>Burrs from the woods, worked out gently.</p></div><span class="tag in">Dogs</span></li>
+        <li><div><b>Nail trims</b><p>Quick and calm, with a treat after.</p></div><span class="tag in">Dogs</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="well">
+    <div class="container">
+      <h2>How a groom day goes</h2>
+      <ol class="steps">
+        <li><span class="n">1</span><h3>Call or message</h3><p>Tell us the breed and the cut you want.</p></li>
+        <li><span class="n">2</span><h3>Drop off from 7 AM</h3><p>Weekday mornings, on your way to work.</p></li>
+        <li><span class="n">3</span><h3>Pick up a happy pup</h3><p>We let you know when they are ready.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section aria-labelledby="g">
+    <div class="container">
+      <h2 id="g">Recent regulars</h2>
+      <div class="gallery">
+        <figure class="pic"><div data-slot="g1"><img src="photo-1.jpg" alt="A spaniel with a fresh cut and a green bandana" loading="lazy" width="675" height="900"></div></figure>
+        <figure class="pic"><div data-slot="g2"><img src="photo-2.jpg" alt="A fluffy grey cat after grooming" loading="lazy" width="675" height="900"></div></figure>
+        <figure class="pic"><div data-slot="g3"><img src="photo-3.jpg" alt="A brown doodle with a blue bandana" loading="lazy" width="675" height="900"></div></figure>
+        <figure class="pic"><div data-slot="g4"><img src="photo-4.jpg" alt="A black and tan dog in an autumn bandana" loading="lazy" width="836" height="900"></div></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="hours" class="well">
+    <div class="container split">
+      <h2>Open on weekdays</h2>
+      <ul class="week" id="week">
+        <li data-d="1"><span class="d">Monday</span><span class="h">7 AM to 5:30 PM</span><span class="tag in">Open</span></li>
+        <li data-d="2"><span class="d">Tuesday</span><span class="h">7 AM to 5:30 PM</span><span class="tag in">Open</span></li>
+        <li data-d="3"><span class="d">Wednesday</span><span class="h">7 AM to 5:30 PM</span><span class="tag in">Open</span></li>
+        <li data-d="4"><span class="d">Thursday</span><span class="h">7 AM to 5:30 PM</span><span class="tag in">Open</span></li>
+        <li data-d="5"><span class="d">Friday</span><span class="h">7 AM to 5:30 PM</span><span class="tag in">Open</span></li>
+        <li data-d="6"><span class="d">Saturday</span><span class="h">Closed</span><span class="tag">Closed</span></li>
+        <li data-d="0"><span class="d">Sunday</span><span class="h">Closed</span><span class="tag">Closed</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <blockquote class="quote">“They always send my dog home happy and with a fantastic cut.”</blockquote>
+      <p>Google review, August 2025</p>
+    </div>
+  </section>
+
+  <section id="visit" class="well">
+    <div class="container split">
+      <div>
+        <h2>Book your next groom</h2>
+        <div class="acts"><a class="btn btn-ink" href="tel:+1123456789">Call 123-456-789</a><a class="btn btn-soft" href="https://m.me/488439231924234">Message on Facebook</a></div>
+      </div>
+      <ul class="facts">
+        <li><span>Address</span><span>123 Example St, Baxter, TN</span></li>
+        <li><span>Phone</span><span><a href="tel:+1123456789">123-456-789</a></span></li>
+        <li><span>Hours</span><span>Monday to Friday, 7 AM to 5:30 PM</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+<footer class="foot">
+  <div class="container">
+    <a class="mark" href="#top">Baxter’s Dog House</a>
+    <span>Free website preview by <a href="https://brightfrontdesign.com/?ref=baxters-dog-house-baxter" style="white-space: nowrap">Brightfront Studio</a>. Details come from public listings and reviews.</span>
+  </div>
+</footer>
+<script>
+(function(){var d=new Date().getDay();var r=document.querySelector('#week [data-d="'+d+'"]');if(r){r.classList.add('today');}})();
+window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
+document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
+</body>
+</html>
