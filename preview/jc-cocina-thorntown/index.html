@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>J.C. Cocina | Carryout, dine-in and catering in Thorntown, Indiana</title>
+<meta name="description" content="J.C. Cocina Catering and Carryout in Thorntown, Indiana: Sunday fried chicken dinners, steaks, salmon, tacos and catering for family events.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@600&family=Hanken+Grotesk:wght@400;500&family=Newsreader:opsz,wght@6..72,400&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · shape: Kitchen Board · genre: editorial · theme: Garden (deal manual, from 1/3 of seed small-town-home-cooking-carryout-0446) · job: visit · draw: none
+ * hero: Stage, the head and a call left, the Sunday plate right · nav: wordmark left, two links and a call pill right · footer: a hairline, the wordmark and the credit · imagery: the kitchen’s own plates from its public listing · signature: the Sunday dinner set apart from the rest of the week as two ruled lists · garden: oat
+ * axes: light/roman-serif/chromatic-green · posture: committed · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P2 H2 E2 S2 R2 V2 · weakest: carryout photos are close plates, so they run small and captioned rather than as a wide hero */
+@import url("./tokens.css");
+@import url("./base.css");
+body { font-variant-numeric: oldstyle-nums; color: var(--color-ink-2); }
+h1, h2, h3 { font-weight: var(--display-weight); color: var(--color-ink); line-height: 1.04; }
+.bar { display: block; background: var(--color-ink); color: var(--color-accent-ink); text-decoration: none; text-align: center; font-size: var(--text-sm); padding: var(--space-xs) var(--space-md); }
+.bar strong { font-weight: 500; text-decoration: underline; text-underline-offset: 0.2em; }
+.bar:hover strong { text-decoration-thickness: 2px; }
+.bar:focus-visible { outline-color: var(--color-accent-ink); outline-offset: -4px; }
+.top .container { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); padding-block: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.mark { font: 600 var(--text-2xl)/1 var(--font-display); color: var(--color-ink); text-decoration: none; white-space: nowrap; }
+.links { display: flex; gap: var(--space-lg); align-items: center; }
+.links a:not(.btn) { color: var(--color-ink); }
+a:hover { text-decoration-color: var(--color-accent); }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; border-radius: var(--radius-pill); border: var(--rule-hair) solid var(--color-rule-2); padding: 0 var(--space-lg); font-weight: 500; color: var(--color-ink); background: transparent; text-decoration: none; white-space: nowrap; transition: background-color var(--dur-short) var(--ease-out), border-color var(--dur-short) var(--ease-out); }
+.btn:hover { background: var(--tint-moss); }
+.btn:active { background: var(--color-paper-3); }
+.btn--primary { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-accent-ink); }
+.btn--primary:hover { background: var(--color-ink); border-color: var(--color-ink); }
+.btn--primary:active { background: var(--color-ink-2); }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+.hero { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: var(--space-2xl); align-items: center; padding-block: var(--space-2xl); }
+.hero > div:first-child { justify-self: end; max-width: 38rem; }
+.hero h1 { font-size: clamp(3rem, 4.8vw + 1rem, 5.75rem); max-width: 12ch; }
+.lead { margin-top: var(--space-lg); font-size: var(--text-lead); max-width: 32ch; }
+.acts { display: flex; flex-wrap: wrap; gap: var(--space-md); margin-top: var(--space-xl); }
+.photo img { border-radius: var(--radius-card); outline: var(--rule-hair) solid var(--color-rule); outline-offset: -1px; }
+.photo.wide { aspect-ratio: 5 / 4; }
+.photo.sq { aspect-ratio: 1; }
+figure, dd { margin: 0; }
+figcaption { margin-top: var(--space-xs); font: 400 var(--text-sm)/1.4 var(--font-outlier); color: var(--color-muted); }
+.sec { padding-block: var(--section-gap-s); }
+.sec > h2 { font-size: var(--text-section); max-width: 18ch; margin-bottom: var(--space-2xl); }
+.menus { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3xl); }
+.menus ul { padding: 0; margin: 0; list-style: none; }
+.menus h3 { font-size: var(--text-2xl); padding-bottom: var(--space-sm); border-bottom: var(--rule-hair) solid var(--color-rule-2); }
+.menus ul li { display: flex; justify-content: space-between; gap: var(--space-md); padding-block: var(--space-sm); border-bottom: var(--rule-hair) solid var(--color-rule); font-size: var(--text-lg); }
+.menus .note { margin-top: var(--space-md); font: 400 var(--text-sm)/1.4 var(--font-outlier); color: var(--color-muted); }
+.plates { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-lg); margin-top: var(--space-3xl); }
+.band { background: var(--tint-moss); }
+.band .container { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-3xl); align-items: center; padding-block: var(--section-gap-s); }
+.band h2 { font-size: var(--text-section); max-width: 14ch; }
+.band p { margin-top: var(--space-lg); font-size: var(--text-lead); max-width: 36ch; }
+.quote { margin-top: var(--space-2xl); padding-top: var(--space-lg); border-top: var(--rule-hair) solid var(--color-rule-2); font: 600 var(--text-2xl)/1.3 var(--font-display); color: var(--color-ink); max-width: 28ch; }
+.who { display: block; margin-top: var(--space-sm); font: 400 var(--text-sm)/1.4 var(--font-outlier); color: var(--color-muted); }
+.visit { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); }
+.visit h2 { font-size: var(--text-section); }
+.facts { border-top: var(--rule-hair) solid var(--color-rule-2); }
+.facts div { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: var(--space-md); padding-block: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-rule); font-size: var(--text-lg); font-variant-numeric: lining-nums tabular-nums; }
+.facts dt { color: var(--color-muted); font-weight: 500; }
+.foot .container { display: flex; justify-content: space-between; gap: var(--space-lg); align-items: center; padding-block: var(--space-xl); border-top: var(--rule-hair) solid var(--color-rule); font-size: var(--text-sm); }
+.foot .mark { font-size: var(--text-xl); }
+@media (max-width: 60rem) {
+  .hero, .band .container, .visit, .menus { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xl); }
+  .plates { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bar .wide { display: none; }
+}
+@media (max-width: 40rem) {
+  .links a:not(.btn) { display: none; }
+  .mark { font-size: var(--text-xl); }
+  .plates { gap: var(--space-sm); }
+  .facts div { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xs); }
+  .foot .container { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<a class="bar" href="https://brightfrontdesign.com/?ref=jc-cocina-thorntown#pricing"><span class="wide">A free preview made for J.C. Cocina by Brightfront Studio. </span><strong>Make it yours for $59 setup + $29/month</strong></a>
+<header class="top">
+  <div class="container">
+    <a class="mark" href="#top">J.C. Cocina</a>
+    <nav class="links" aria-label="Main">
+      <a href="#menu">Menu</a><a href="#catering">Catering</a>
+      <a class="btn btn--primary" href="tel:+1123456789">Call to order</a>
+    </nav>
+  </div>
+</header>
+<main id="top">
+  <section class="container hero">
+    <div>
+      <h1>Sunday chicken and real home cooking.</h1>
+      <p class="lead">Carryout, dine-in and catering in Thorntown, Indiana.</p>
+      <div class="acts">
+        <a class="btn btn--primary" href="tel:+1123456789">Call 123-456-789</a>
+        <a class="btn" href="#menu">See the menu</a>
+      </div>
+    </div>
+    <figure>
+      <div class="photo wide" data-slot="hero"><img src="photo-hero.jpg" alt="Fried chicken with mashed potatoes, gravy and green beans in a carryout box" width="1600" height="1274" fetchpriority="high"></div>
+      <figcaption>Fried chicken, mashed potatoes, gravy and green beans.</figcaption>
+    </figure>
+  </section>
+
+  <section class="sec container" id="menu" style="padding-top: var(--space-2xl)">
+    <h2>Two menus, one kitchen.</h2>
+    <div class="menus">
+      <div>
+        <h3>Sunday dinner</h3>
+        <ul>
+          <li><span>Fried chicken</span></li>
+          <li><span>Chicken and noodles</span></li>
+          <li><span>Beef short ribs</span></li>
+        </ul>
+        <p class="note">Served 11 AM to 2 PM, with mashed potatoes and gravy.</p>
+      </div>
+      <div>
+        <h3>Tuesday to Saturday</h3>
+        <ul>
+          <li><span>Steaks and glazed salmon</span></li>
+          <li><span>Burgers and the breaded tenderloin</span></li>
+          <li><span>Tacos and chicken Alfredo</span></li>
+        </ul>
+        <p class="note">A full bar, and big portions.</p>
+      </div>
+    </div>
+    <div class="plates">
+      <figure><div class="photo sq" data-slot="p1"><img src="photo-1.jpg" alt="Three tacos on a plate" width="1200" height="1600" loading="lazy"></div><figcaption>Tacos.</figcaption></figure>
+      <figure><div class="photo sq" data-slot="p2"><img src="photo-2.jpg" alt="Glazed salmon with vegetables" width="1600" height="1067" loading="lazy"></div><figcaption>Glazed salmon.</figcaption></figure>
+      <figure><div class="photo sq" data-slot="p3"><img src="photo-3.jpg" alt="A steak with fries" width="1600" height="1067" loading="lazy"></div><figcaption>Steak and fries.</figcaption></figure>
+      <figure><div class="photo sq" data-slot="p4"><img src="photo-4.jpg" alt="A burger with fries" width="900" height="1600" loading="lazy"></div><figcaption>The burger.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="band" id="catering">
+    <div class="container">
+      <div>
+        <h2>Feeding the whole family.</h2>
+        <p>Birthdays, reunions and parties. Tell us the date and the headcount and we’ll plan the food.</p>
+        <div class="acts"><a class="btn btn--primary" href="https://m.me/jccocina.indy">Ask about catering</a></div>
+      </div>
+      <div>
+        <p class="quote">“I love the turkey and noodles. Really good portions, decent prices.”</p>
+        <span class="who">From a Google review, November 2025</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec container visit" id="visit">
+    <div>
+      <h2>Stop in or call ahead.</h2>
+      <div class="acts">
+        <a class="btn btn--primary" href="tel:+1123456789">Call 123-456-789</a>
+        <a class="btn" href="https://m.me/jccocina.indy">Message on Facebook</a>
+      </div>
+    </div>
+    <dl class="facts">
+      <div><dt>Address</dt><dd>123 Example St, Thorntown, IN</dd></div>
+      <div><dt>Phone</dt><dd><a href="tel:+1123456789">123-456-789</a></dd></div>
+      <div><dt>Tue to Thu</dt><dd>11 AM to 8 PM</dd></div>
+      <div><dt>Fri and Sat</dt><dd>11 AM to 9 PM</dd></div>
+      <div><dt>Sunday</dt><dd>11 AM to 2 PM</dd></div>
+      <div><dt>Monday</dt><dd>Closed</dd></div>
+    </dl>
+  </section>
+</main>
+<footer class="foot">
+  <div class="container">
+    <a class="mark" href="#top">J.C. Cocina</a>
+    <span>Free website preview by <a href="https://brightfrontdesign.com/?ref=jc-cocina-thorntown" style="white-space: nowrap">Brightfront Studio</a>. Details come from public listings and reviews.</span>
+  </div>
+</footer>
+<script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
+document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
+</body>
+</html>

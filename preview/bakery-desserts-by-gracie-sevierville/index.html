@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bakery and Desserts by Gracie | Wedding and birthday cakes in Sevierville, Tennessee</title>
+<meta name="description" content="Bakery and Desserts by Gracie in Sevierville, Tennessee: wedding cakes, birthday cakes, cupcakes and desserts, with delivery in the Smokies.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Hanken+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · shape: Pattern Book · genre: editorial · theme: Loom (deal manual) · job: book · draw: none
+ * hero: Stage, the head and an order action left, the tiered cake right · nav: wordmark left, two links and an order button right · footer: an ink rule, the wordmark and the credit · imagery: the bakery’s own cakes from its public listing · signature: the cakes as a ruled order sheet, then one indigo band for how ordering works · loom: ecru, one indigo band as the theme allows
+ * axes: light/display-serif/cool · posture: committed · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P2 H2 E2 S2 R2 V2 · weakest: four cake photos of mixed shapes, set square with one caption each */
+@import url("./tokens.css");
+@import url("./base.css");
+h1, h2 { font-weight: 400; line-height: 1.04; font-synthesis: none; }
+h3 { font: 500 var(--text-title)/1.25 var(--font-body); }
+.bar { display: block; background: var(--color-ink); color: var(--color-accent-ink); text-decoration: none; text-align: center; font-size: var(--text-sm); padding: var(--space-xs) var(--space-md); }
+.bar strong { font-weight: 500; text-decoration: underline; text-underline-offset: 0.2em; }
+.bar:hover strong { text-decoration-thickness: 2px; }
+.bar:focus-visible { outline-color: var(--color-accent-ink); outline-offset: -4px; }
+.top .container { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); padding-block: var(--space-md); border-bottom: var(--rule-ink) solid var(--color-rule-ink); }
+.mark { font: 400 var(--text-2xl)/1 var(--font-display); text-decoration: none; white-space: nowrap; }
+.links { display: flex; gap: var(--space-lg); align-items: center; }
+.links a:not(.btn), .link { font-weight: 500; padding-block: var(--space-2xs); border-bottom: 2px solid currentColor; text-decoration: none; transition: border-color var(--dur-short) var(--ease-out); }
+.links a:not(.btn):hover, .link:hover { border-color: var(--color-accent); }
+.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 var(--space-lg); font: 500 var(--text-sm)/1 var(--font-body); background: var(--color-accent); color: var(--color-accent-ink); text-decoration: none; white-space: nowrap; border: 0; transition: background-color var(--dur-short) var(--ease-out); }
+.btn:hover { background: var(--color-accent-2); }
+.btn:active { background: var(--color-ink); }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
+.hero { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-2xl); align-items: center; padding-block: var(--space-2xl); }
+.hero > div:first-child { justify-self: end; max-width: 42rem; }
+.hero h1 { font-size: clamp(3.25rem, 5vw + 1rem, 6.25rem); line-height: 1; max-width: 12ch; }
+.lead { margin-top: var(--space-lg); font-size: var(--text-lead); color: var(--color-muted); max-width: 32ch; }
+.acts { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-lg); margin-top: var(--space-xl); }
+.photo img { outline: 1px solid color-mix(in oklab, var(--color-ink) 8%, transparent); outline-offset: -1px; }
+.photo.tall { aspect-ratio: 3 / 4; max-height: 62svh; }
+.photo.sq { aspect-ratio: 1; }
+figure, dd { margin: 0; }
+figcaption { margin-top: var(--space-sm); font: 500 var(--text-sm)/1.4 var(--font-body); color: var(--color-muted); }
+.sec { padding-block: var(--section-gap-s); }
+.sec h2 { font-size: var(--text-section); max-width: 16ch; margin-bottom: var(--space-2xl); }
+.sheet { border-top: var(--rule-ink) solid var(--color-rule-ink); }
+.sheet div { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: var(--gap-columns); padding-block: var(--space-lg); border-bottom: var(--rule-hair) solid var(--color-rule); align-items: baseline; }
+.sheet dt { font: 400 var(--text-2xl)/1.1 var(--font-display); }
+.sheet dd { font-size: var(--text-lg); color: var(--color-ink-2); }
+.gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap-columns); }
+.band { background: var(--color-accent); color: var(--color-accent-ink); }
+.band .container { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 6fr); gap: var(--space-3xl); padding-block: var(--section-gap-s); }
+.band h2 { font-size: var(--text-section); max-width: 12ch; }
+.band ol { margin: 0; padding: 0; list-style: none; border-top: var(--rule-hair) solid color-mix(in oklab, var(--color-accent-ink) 40%, transparent); }
+.band li { padding-block: var(--space-md); border-bottom: var(--rule-hair) solid color-mix(in oklab, var(--color-accent-ink) 40%, transparent); font-size: var(--text-lg); }
+.band .btn { background: var(--color-paper); color: var(--color-accent); margin-top: var(--space-xl); }
+.band .btn:hover { background: var(--color-paper-2); }
+.band :focus-visible { outline-color: var(--color-accent-ink); }
+.quote { font: 400 var(--text-display-s)/1.1 var(--font-display); max-width: 24ch; }
+.who { display: block; margin-top: var(--space-lg); font-size: var(--text-sm); font-weight: 500; color: var(--color-muted); }
+.visit { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); }
+.visit h2 { margin-bottom: var(--space-lg); }
+.facts { border-top: var(--rule-ink) solid var(--color-rule-ink); }
+.facts div { display: grid; grid-template-columns: 9rem minmax(0, 1fr); gap: var(--space-md); padding-block: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-rule); font-size: var(--text-lg); }
+.facts dt { font-weight: 500; color: var(--color-muted); }
+.foot .container { display: flex; justify-content: space-between; gap: var(--space-lg); align-items: center; padding-block: var(--space-xl); border-top: var(--rule-ink) solid var(--color-rule-ink); font-size: var(--text-sm); }
+.foot .mark { font-size: var(--text-xl); }
+@media (max-width: 60rem) {
+  .hero, .band .container, .visit { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xl); }
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bar .wide { display: none; }
+}
+@media (max-width: 40rem) {
+  .links a:not(.btn) { display: none; }
+  .mark { font-size: var(--text-lg); }
+  .links .btn { padding: 0 var(--space-md); }
+  .photo.tall { max-height: none; }
+  .sheet div, .facts div { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xs); }
+  .gallery { gap: var(--space-sm); }
+  .foot .container { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+<body>
+<a class="bar" href="https://brightfrontdesign.com/?ref=bakery-desserts-by-gracie-sevierville#pricing"><span class="wide">A free preview made for Bakery and Desserts by Gracie by Brightfront Studio. </span><strong>Make it yours for $59 setup + $29/month</strong></a>
+<header class="top">
+  <div class="container">
+    <a class="mark" href="#top">Desserts by Gracie</a>
+    <nav class="links" aria-label="Main">
+      <a href="#cakes">Cakes</a><a href="#visit">Hours</a>
+      <a class="btn" href="#order">Order a cake</a>
+    </nav>
+  </div>
+</header>
+<main id="top">
+  <section class="container hero">
+    <div>
+      <h1>Wedding cakes and birthday cakes in Sevierville.</h1>
+      <p class="lead">Made to order in the Smokies, and delivered to your venue.</p>
+      <div class="acts">
+        <a class="btn" href="#order">Order a cake</a>
+        <a class="link" href="#cakes">See the cakes</a>
+      </div>
+    </div>
+    <figure>
+      <div class="photo tall" data-slot="hero"><img src="photo-hero.jpg" alt="A three-tier white wedding cake with dried flowers on a wood slice, outdoors in the mountains" width="990" height="1600" fetchpriority="high"></div>
+      <figcaption>A three-tier wedding cake on a mountain overlook.</figcaption>
+    </figure>
+  </section>
+
+  <section class="sec container" id="cakes" style="padding-top: var(--space-2xl)">
+    <h2>What Gracie bakes.</h2>
+    <dl class="sheet">
+      <div><dt>Wedding cakes</dt><dd>Tiered and delivered, even for couples planning from out of town.</dd></div>
+      <div><dt>Birthday cakes</dt><dd>German chocolate, chocolate peanut butter, drip cakes with macarons.</dd></div>
+      <div><dt>Cupcakes</dt><dd>Strawberry gourmet cupcakes for a crowd.</dd></div>
+    </dl>
+  </section>
+
+  <section class="container" aria-label="Cakes" style="padding-bottom: var(--section-gap-s)">
+    <div class="gallery">
+      <figure><div class="photo sq" data-slot="p1"><img src="photo-1.jpg" alt="A pink drip cake topped with macarons" width="1399" height="1600" loading="lazy"></div><figcaption>Drip cake with macarons.</figcaption></figure>
+      <figure><div class="photo sq" data-slot="p2"><img src="photo-2.jpg" alt="A birch bark wedding cake with initials" width="1200" height="1600" loading="lazy"></div><figcaption>Birch bark wedding cake.</figcaption></figure>
+      <figure><div class="photo sq" data-slot="p3"><img src="photo-3.jpg" alt="A birthday cake decorated with sunflowers" width="1195" height="1600" loading="lazy"></div><figcaption>Sunflower birthday cake.</figcaption></figure>
+      <figure><div class="photo sq" data-slot="p5"><img src="photo-5.jpg" alt="A white cake topped with fresh berries" width="1124" height="1405" loading="lazy"></div><figcaption>Fresh berry cake.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="band" id="order">
+    <div class="container">
+      <div>
+        <h2>Ordering a cake</h2>
+        <a class="btn" href="https://m.me/104240724928587">Message on Facebook</a>
+      </div>
+      <ol>
+        <li>Tell us the date, the guest count and the flavors you love.</li>
+        <li>We help you pick the size and the design.</li>
+        <li>Pick it up at the bakery, or we deliver it.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec container">
+    <p class="quote">“Loved our wedding cake! They communicated well, had flexible options for pickup and were easy to work with from out of town.”</p>
+    <span class="who">From a Google review, September 2025</span>
+  </section>
+
+  <section class="sec container visit" id="visit" style="padding-top: 0">
+    <div>
+      <h2>Visit the bakery.</h2>
+      <a class="btn" href="tel:+1123456789">Call 123-456-789</a>
+    </div>
+    <dl class="facts">
+      <div><dt>Address</dt><dd>123 Example St, Sevierville, TN</dd></div>
+      <div><dt>Phone</dt><dd><a href="tel:+1123456789">123-456-789</a></dd></div>
+      <div><dt>Tue to Fri</dt><dd>9 AM to 5 PM</dd></div>
+      <div><dt>Saturday</dt><dd>9 AM to noon</dd></div>
+      <div><dt>Closed</dt><dd>Sunday and Monday</dd></div>
+    </dl>
+  </section>
+</main>
+<footer class="foot">
+  <div class="container">
+    <a class="mark" href="#top">Desserts by Gracie</a>
+    <span>Free website preview by <a href="https://brightfrontdesign.com/?ref=bakery-desserts-by-gracie-sevierville" style="white-space: nowrap">Brightfront Studio</a>. Details come from public listings and reviews.</span>
+  </div>
+</footer>
+<script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
+document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
+</body>
+</html>

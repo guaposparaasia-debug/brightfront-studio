@@ -1,0 +1,15 @@
+wrote /workspace/brightfront/upload-20261027/preview/bakery-desserts-by-gracie-sevierville/tokens.css (Loom tokens plus the shared scale) and /workspace/brightfront/upload-20261027/preview/bakery-desserts-by-gracie-sevierville/base.css (the base rules the Floor already decided)
+
+start the page's stylesheet with these lines, then write only the page:
+/* Hallmark · shape: <shape> · genre: editorial · theme: Loom (deal manual) · job: <subscribe|book|visit|attend|buy|try|sign up|hire|join|listen> · draw: <seed>
+ * hero: <posture> · nav: <shape> · footer: <shape> · imagery: <photographs, the product, or none> · signature: <the one move> · loom: <the dials>
+ * axes: light/roman-serif/cool · posture: committed · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P_ H_ E_ S_ R_ V_ · weakest: _, <what you did about it> */
+@import url("./tokens.css");
+@import url("./base.css");
+
+and, only if the page has data-slot containers, once before </body>:
+<script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
+document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
+
+pictures (imagery.md): node /workspace/hallmark/skills/hallmark/scripts/theme.mjs photos "<subject>" ["<subject>" ...] --theme loom
