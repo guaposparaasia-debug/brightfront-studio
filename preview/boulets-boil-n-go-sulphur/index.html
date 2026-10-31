@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boulet's Boil-N-Go, Sulphur LA: boiled crawfish by the pound to go</title>
+<meta name="description" content="Boiled crawfish, shrimp and crabs by the pound in Sulphur, Louisiana. Call ahead and pick up at the drive-up.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:wght@400;700&family=Radio+Canada:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Hallmark v2.0.0 · theme: grid (dealt 3/3, seed crawfish-boil-seafood-takeout-9667·75519677·2026-10-31·r0) · genre editorial · job: order to go by the pound */
+/* critique: the theme's ink duotone takes the red out of the crawfish photos, so the Swiss red mark and the one red field have to carry the appetite. */
+:root {
+  --color-paper: oklch(97.5% 0.005 90); --color-paper-2: oklch(94.2% 0.006 90); --color-paper-3: oklch(90.5% 0.008 90);
+  --color-ink: oklch(19% 0.022 266); --color-ink-2: oklch(31% 0.02 266); --color-muted: oklch(47% 0.016 266);
+  --color-rule: oklch(87.5% 0.008 90);
+  --color-accent: oklch(44% 0.2 266); --color-accent-ink: oklch(97.5% 0.005 90); --color-focus: oklch(46% 0.2 266);
+  --color-field: oklch(44% 0.2 266); --color-field-ink: oklch(97.5% 0.005 90);
+  --color-mark: oklch(57% 0.215 29); --color-mark-ink: oklch(97.5% 0.005 90);
+  --color-field-rule: color-mix(in oklch, var(--color-field-ink) 38%, var(--color-field));
+  --color-field-soft: color-mix(in oklch, var(--color-field-ink) 78%, var(--color-field));
+  --color-mark-soft: color-mix(in oklch, var(--color-mark-ink) 82%, var(--color-mark));
+  --font-display: "Radio Canada Big", ui-sans-serif, system-ui, sans-serif; --font-body: "Radio Canada", ui-sans-serif, system-ui, sans-serif;
+  --font-outlier: var(--font-display);
+  --radius-card: 0; --radius-pill: 0; --rule-hair: 1px; --shadow-card: none;
+  --tracking-display: -0.035em; --display-weight: 700;
+  --text-sm: 0.9375rem; --text-md: 1.0625rem; --text-lg: 1.375rem; --text-xl: 2rem; --text-2xl: clamp(2.25rem, 4.4vw, 3.5rem); --text-3xl: clamp(2.75rem, 6vw, 5.25rem);
+  --space-xs: 0.5rem; --space-sm: 0.75rem; --space-md: 1.25rem; --space-lg: 1.75rem; --space-xl: 3rem; --space-2xl: clamp(4rem, 9vw, 7.5rem);
+  --gap-columns: clamp(16px, 2vw, 28px);
+  --wrap: 1240px;
+  --dur-short: 140ms; --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body {
+  overflow-x: clip; margin: 0; background: var(--color-paper); color: var(--color-ink);
+  font: 400 var(--text-md)/1.5 var(--font-body);
+}
+img { display: block; max-width: 100%; }
+p { margin: 0; }
+::selection { background: var(--color-mark); color: var(--color-mark-ink); }
+
+h1, h2, h3 {
+  font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: var(--tracking-display);
+  line-height: 1; text-align: start; margin: 0; overflow-wrap: break-word; min-width: 0;
+}
+
+.wrap { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: var(--space-md); }
+.cols { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap-columns); }
+.label { font: 500 var(--text-sm)/1.4 var(--font-body); color: var(--color-muted); }
+
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; transition: none; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding-inline: var(--space-lg);
+  border: 0; border-radius: var(--radius-pill); font: 500 var(--text-md)/1 var(--font-body); text-decoration: none; cursor: pointer;
+  transition: background-color var(--dur-short) var(--ease-out), color var(--dur-short) var(--ease-out);
+}
+.btn--primary { background: var(--color-ink); color: var(--color-paper); }
+.btn--primary:hover { background: var(--color-ink-2); }
+.btn--secondary { background: none; color: currentColor; padding-inline: 0; text-decoration: underline var(--rule-hair); text-underline-offset: 0.32em; }
+
+.btn--secondary:hover { color: var(--color-mark); }
+.link { text-decoration: underline var(--rule-hair); text-underline-offset: 0.28em; transition: color var(--dur-short) var(--ease-out); }
+.link:hover { color: var(--color-mark); }
+
+/* Header */
+.site-head { padding-block: var(--space-md); }
+.site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); }
+.wordmark {
+  display: inline-grid; grid-template-columns: auto auto; column-gap: var(--space-sm); align-items: center;
+  font: var(--display-weight) var(--text-md)/0.92 var(--font-display); letter-spacing: -0.01em; text-decoration: none;
+}
+.wordmark::before { content: ""; grid-row: span 2; align-self: stretch; aspect-ratio: 1; background: var(--color-mark); }
+.wordmark span + span { font-weight: 400; }
+.head-call { font: 500 var(--text-md)/1 var(--font-body); }
+
+/* Hero */
+.hero { padding-block: var(--space-md) var(--space-2xl); }
+.hero-text { grid-column: 1 / span 7; align-self: end; padding-bottom: var(--space-sm); }
+.hero h1 { font-size: var(--text-3xl); line-height: 0.92; letter-spacing: -0.045em; max-width: 11ch; }
+.hero-lede { margin-top: var(--space-lg); font-size: var(--text-lg); max-width: 30ch; color: var(--color-ink-2); }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-md) var(--space-xl); margin-top: var(--space-xl); }
+.hero-photo { grid-column: 8 / span 5; }
+
+.photo { background: var(--color-paper-2); aspect-ratio: 1; overflow: hidden; margin: 0; }
+.photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.12); mix-blend-mode: multiply; }
+
+/* Board: ultramarine field */
+.field { background: var(--color-field); color: var(--color-field-ink); --color-focus: var(--color-field-ink); }
+.field .label { color: var(--color-field-soft); }
+.board { padding-block: var(--space-2xl); }
+.board-head { grid-column: 1 / span 4; }
+.board-head h2 { font-size: var(--text-2xl); }
+
+.board-head p { margin-top: var(--space-md); max-width: 26ch; }
+.board-figure { margin-top: var(--space-xl); font: var(--display-weight) clamp(5rem, 11vw, 9rem)/0.85 var(--font-display); letter-spacing: -0.05em; }
+.board-list { grid-column: 6 / span 7; margin: 0; padding: 0; list-style: none; }
+.board-list li {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, auto); gap: var(--space-xs) var(--space-lg); align-items: baseline;
+  padding-block: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-field-rule);
+}
+.board-list li:first-child { border-top: var(--rule-hair) solid var(--color-field-rule); }
+.board-list h3 { font-size: var(--text-xl); }
+.board-list .label { text-align: end; }
+.board-note { margin-top: var(--space-lg); max-width: 46ch; }
+.board-actions { margin-top: var(--space-xl); }
+
+/* Today + hours */
+.today { padding-block: var(--space-2xl); }
+.today-box { grid-column: 1 / span 6; background: var(--color-paper-2); padding: var(--space-xl); }
+.today-status { margin-top: var(--space-sm); font-size: var(--text-2xl); }
+.today-sub { margin-top: var(--space-sm); font-size: var(--text-lg); color: var(--color-ink-2); }
+.hours { grid-column: 8 / span 5; align-self: center; }
+.hours h2 { font-size: var(--text-xl); }
+.hours table { width: 100%; margin-top: var(--space-md); border-collapse: collapse; }
+.hours th, .hours td { padding-block: var(--space-sm); border-bottom: var(--rule-hair) solid var(--color-rule); text-align: start; font-weight: 400; }
+.hours td { text-align: end; }
+.hours tr.is-today th, .hours tr.is-today td { color: var(--color-mark); font-weight: 500; }
+.hours p { margin-top: var(--space-md); }
+
+/* Photos */
+.photos { padding-bottom: var(--space-2xl); }
+.photos .cols { row-gap: var(--space-lg); }
+.photos figure { grid-column: span 4; margin: 0; }
+.photos figcaption { margin-top: var(--space-sm); }
+
+
+/* Reviews: statement hung asymmetric */
+.reviews { padding-bottom: var(--space-2xl); }
+.rating { grid-column: 1 / span 3; }
+.rating-figure { font: var(--display-weight) clamp(5rem, 10vw, 8.5rem)/0.85 var(--font-display); letter-spacing: -0.05em; }
+.rating .label { margin-top: var(--space-sm); }
+.quotes { grid-column: 5 / span 8; margin: 0; }
+.quotes blockquote { margin: 0; }
+.quotes blockquote + blockquote { margin-top: var(--space-xl); }
+.quotes p { font: 400 var(--text-2xl)/1.05 var(--font-display); letter-spacing: var(--tracking-display); }
+.quotes cite { display: block; margin-top: var(--space-sm); font: 500 var(--text-sm)/1.4 var(--font-body); font-style: normal; color: var(--color-muted); }
+
+/* Order: the one red field */
+.field--mark { background: var(--color-mark); color: var(--color-mark-ink); --color-focus: var(--color-ink); }
+.field--mark .label { color: var(--color-mark-soft); }
+.order { padding-block: var(--space-2xl); }
+.order h2 { grid-column: 1 / span 5; font-size: var(--text-2xl); }
+.order-steps { grid-column: 7 / span 6; margin: 0; padding: 0; list-style: none; counter-reset: step; }
+.order-steps li { counter-increment: step; display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: var(--space-md); padding-block: var(--space-sm); }
+.order-steps li::before { content: counter(step); font: var(--display-weight) var(--text-xl)/1 var(--font-display); }
+.order .actions { grid-column: 7 / span 6; margin-top: var(--space-lg); }
+
+/* Find us */
+.find { padding-block: var(--space-2xl); }
+.find h2 { grid-column: 1 / span 5; font-size: var(--text-2xl); }
+.find-body { grid-column: 7 / span 6; }
+.find-body address { font-style: normal; font-size: var(--text-lg); }
+.find-body p { margin-top: var(--space-md); }
+
+.site-foot { padding-block: var(--space-lg) var(--space-xl); }
+
+/* Mobile bar */
+.mobile-bar { display: none; }
+
+
+@media (max-width: 900px) {
+  .hero-text, .hero-photo, .board-head, .board-list, .today-box, .hours, .rating, .quotes,
+  .order h2, .order-steps, .order .actions, .find h2, .find-body { grid-column: 1 / -1; }
+  .hero-photo { margin-top: var(--space-xl); }
+  .board-list, .hours, .quotes, .order-steps, .find-body { margin-top: var(--space-xl); }
+  .photos figure { grid-column: span 6; }
+  .photos figure:last-child { display: none; }
+}
+
+@media (max-width: 760px) {
+  body { padding-bottom: 60px; }
+  .head-call { display: none; }
+  .today-box { padding: var(--space-lg); }
+  .mobile-bar {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px;
+    position: fixed; inset-inline: 0; bottom: 0; z-index: 10; background: var(--color-paper);
+  }
+  .mobile-bar .btn { min-height: 56px; padding-inline: var(--space-xs); }
+}
+
+@media (max-width: 480px) {
+  .photos figure { grid-column: 1 / -1; }
+  .photos figure:nth-child(2) { display: none; }
+  .board-list li { grid-template-columns: minmax(0, 1fr); }
+  .board-list .label { text-align: start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+h1, h2 { text-wrap: balance; }
+a:active, button:active { transform: translateY(1px); }
+</style>
+
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark" href="#top" aria-label="Boulet's Boil-N-Go, home"><span>Boulet's</span><span>Boil-N-Go</span></a>
+    <a class="head-call link" href="tel:123456789">Call 123-456-789</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap cols">
+      <div class="hero-text">
+        <h1 id="hero-title">Boiled crawfish by the pound, to go.</h1>
+        <p class="hero-lede">Boiled on site in Sulphur, ready for drive-up pickup.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="tel:123456789">Call to order</a>
+          <a class="btn btn--secondary" href="https://www.facebook.com/bouletsboilngo" rel="noopener">Message us on Facebook</a>
+        </div>
+      </div>
+      <figure class="photo hero-photo">
+        <img src="photo-hero.jpg" alt="A tray of boiled crawfish with red potatoes and corn" width="1200" height="1600" fetchpriority="high">
+      </figure>
+    </div>
+  </section>
+
+  <section class="board field" aria-labelledby="board-title">
+    <div class="wrap cols">
+      <div class="board-head">
+        <h2 id="board-title">Today's board</h2>
+
+        <p>Prices move with the catch. Call for today's price.</p>
+        <p class="board-figure" aria-hidden="true">lb</p>
+      </div>
+      <div class="board-list-wrap board-list">
+        <ul class="board-list" style="grid-column:auto">
+          <li><h3>Boiled crawfish</h3><span class="label">In season, market price per pound</span></li>
+          <li><h3>Boiled shrimp</h3><span class="label">Market price per pound</span></li>
+          <li><h3>Boiled crabs</h3><span class="label">Market price per pound</span></li>
+          <li><h3>Corn and potatoes</h3><span class="label">Ask when you call</span></li>
+        </ul>
+        <p class="board-note">A reviewer who asked was told the seasoning is gluten-friendly. Confirm when you order.</p>
+        <div class="board-actions">
+          <a class="btn btn--primary" href="tel:123456789">Call for today's price</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="today" aria-labelledby="today-title">
+    <div class="wrap cols">
+      <div class="today-box" aria-live="polite">
+        <h2 id="today-title" class="label">Today in Sulphur</h2>
+        <p class="today-status" id="today-status">Weekdays 4 to 8 PM</p>
+        <p class="today-sub" id="today-sub">Weekends 2 to 8 PM. Season dependent, so call to confirm.</p>
+      </div>
+      <div class="hours">
+        <h2>Hours</h2>
+        <table>
+          <tbody>
+            <tr data-days="1,2,3,4,5"><th scope="row">Monday to Friday</th><td>4 PM to 8 PM</td></tr>
+            <tr data-days="0,6"><th scope="row">Saturday and Sunday</th><td>2 PM to 8 PM</td></tr>
+          </tbody>
+
+        </table>
+        <p class="label">Hours follow the crawfish season.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="photos" aria-label="From the boil">
+    <div class="wrap cols">
+      <figure>
+        <div class="photo"><img src="photo-5.jpg" alt="Crawfish soaking in seasoned water in a steel boil tank" width="943" height="1600" loading="lazy"></div>
+        <figcaption class="label">The soak, right after the boil</figcaption>
+      </figure>
+      <figure>
+        <div class="photo"><img src="photo-3.jpg" alt="Boiled shrimp with corn and red potatoes in a to-go box" width="1200" height="1600" loading="lazy"></div>
+        <figcaption class="label">Shrimp, corn and potatoes to go</figcaption>
+      </figure>
+      <figure>
+        <div class="photo"><img src="photo-2.jpg" alt="Crawfish in foaming water during the purge" width="720" height="404" loading="lazy"></div>
+        <figcaption class="label">Washed before they go in</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="reviews" aria-labelledby="reviews-title">
+    <div class="wrap cols">
+      <div class="rating">
+        <h2 id="reviews-title" class="rating-figure">4.7</h2>
+        <p class="label">On Google, from 143 reviews</p>
+      </div>
+      <div class="quotes">
+        <blockquote>
+          <p>The best crawfish I've eaten. Big and well seasoned.</p>
+
+          <cite>A Google review</cite>
+        </blockquote>
+        <blockquote>
+          <p>Worth the drive from Lake Charles, and the owner is a class act.</p>
+          <cite>A Google review</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="order field--mark" aria-labelledby="order-title">
+    <div class="wrap cols">
+      <h2 id="order-title">Order ahead, skip the wait</h2>
+      <ol class="order-steps">
+        <li><p>Call or message with how many pounds you want.</p></li>
+        <li><p>Line busy on a rush night? A Facebook message gets through.</p></li>
+        <li><p>Pull up to the drive-up and collect it hot.</p></li>
+      </ol>
+      <div class="actions">
+        <a class="btn btn--primary" href="tel:123456789">Call 123-456-789</a>
+        <a class="btn btn--secondary" href="https://www.facebook.com/bouletsboilngo" rel="noopener">Message us on Facebook</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="find" aria-labelledby="find-title">
+    <div class="wrap cols">
+      <h2 id="find-title">Find the drive-up</h2>
+      <div class="find-body">
+        <address>123 Example St, Sulphur, LA</address>
+        <p><a class="link" href="https://maps.google.com/?q=Example+St+Sulphur,+LA" rel="noopener">Get directions</a></p>
+        <p><a class="link" href="mailto:hello@example.com">hello@example.com</a></p>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p class="label">Free preview by Brightfront Studio</p>
+  </div>
+</footer>
+
+<nav class="mobile-bar" aria-label="Quick actions">
+  <a class="btn btn--primary" href="tel:123456789">Call</a>
+  <a class="btn btn--primary" href="https://maps.google.com/?q=Example+St+Sulphur,+LA" rel="noopener">Directions</a>
+  <a class="btn btn--primary" href="https://www.facebook.com/bouletsboilngo" rel="noopener">Message</a>
+</nav>
+
+<script>
+(function () {
+  var statusEl = document.getElementById('today-status');
+  var subEl = document.getElementById('today-sub');
+  if (!statusEl || !subEl || !window.Intl) return;
+  try {
+    var parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Chicago', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23'
+    }).formatToParts(new Date());
+    var wd = '', h = 0, m = 0;
+    parts.forEach(function (p) {
+      if (p.type === 'weekday') wd = p.value;
+      if (p.type === 'hour') h = parseInt(p.value, 10) % 24;
+      if (p.type === 'minute') m = parseInt(p.value, 10);
+
+    });
+    var names = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    var full = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var d = names.indexOf(wd);
+    if (d < 0) return;
+    var openAt = function (day) { return (day === 0 || day === 6) ? 14 : 16; };
+    var close = 20;
+    var fmt = function (hr) { return (hr > 12 ? hr - 12 : hr) + ' PM'; };
+    var now = h * 60 + m;
+    var open = openAt(d);
+
+    if (now < open * 60) {
+      statusEl.textContent = 'Opens at ' + fmt(open) + ' today';
+      subEl.textContent = 'Call ahead from ' + fmt(open) + ' to order by the pound.';
+    } else if (now < close * 60) {
+      statusEl.textContent = 'Open now';
+      subEl.textContent = 'Boiling until ' + fmt(close) + ' tonight. Call to order.';
+    } else {
+      var t = (d + 1) % 7;
+      statusEl.textContent = 'Closed for tonight';
+      subEl.textContent = 'Opens ' + full[t] + ' at ' + fmt(openAt(t)) + '.';
+    }
+
+    var rows = document.querySelectorAll('.hours tr[data-days]');
+    Array.prototype.forEach.call(rows, function (row) {
+      if (row.getAttribute('data-days').split(',').indexOf(String(d)) > -1) row.classList.add('is-today');
+    });
+  } catch (e) { /* keep the static hours text */ }
+})();
+</script>
+</body>
+</html>

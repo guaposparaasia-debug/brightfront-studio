@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lulamae's Cajun Cuisine | Cajun food truck in Temple, TX</title>
+<meta name="description" content="Lulamae's Cajun Cuisine is a Cajun food truck in Temple, TX. Crawfish étouffée, boudin balls, gumbo and po'boys, Wednesday to Saturday, 5 to 8 PM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Archivo:wght@400;500&family=Archivo+Narrow:wght@600&display=swap" rel="stylesheet">
+<style>
+/* Hallmark v2.0.0 · theme: solstice (dealt 1/3, seed cajun-food-truck-temple-b318·75519677·2026-10-31·r0) · genre editorial · job: find the truck and eat / book catering */
+/* critique: solstice: long-light. The truck moves, so the page leads with "where this week" and a live Today box; vermilion is held to the one primary action, the focus ring and the open/closed figure. */
+:root {
+  --color-paper: oklch(94% 0.03 80); --color-paper-2: oklch(97% 0.02 85); --color-paper-3: oklch(89% 0.05 80);
+  --color-ink: oklch(27% 0.05 50); --color-ink-2: oklch(36% 0.05 50); --color-muted: oklch(48% 0.06 55);
+  --color-rule: oklch(84% 0.06 78);
+  --color-accent: oklch(54% 0.20 24); --color-accent-ink: oklch(97% 0.02 85); --color-focus: oklch(54% 0.20 24);
+  --color-gold: oklch(74% 0.14 75); --color-gold-2: oklch(84% 0.11 80); --color-slot: var(--color-gold);
+  --font-display: "Yeseva One", ui-serif, Georgia, serif; --font-body: "Archivo", ui-sans-serif, sans-serif;
+  --font-outlier: "Archivo Narrow", ui-sans-serif, sans-serif;
+  --radius-card: 0; --radius-pill: 999px; --rule-hair: 1px; --rule-bar: 2px;
+  --shadow-card: 10px 10px 0 var(--color-paper-3);
+  --tracking-display: -0.005em; --display-weight: 400;
+
+  --space-xs: 4px; --space-sm: 8px; --space-md: 14px; --space-lg: 20px; --space-xl: 28px; --space-2xl: 48px; --space-3xl: 88px;
+  --text-sm: 14px; --text-body: 17px; --text-h3: 24px; --text-h2: clamp(32px, 4vw, 46px); --text-h1: clamp(44px, 6vw, 76px);
+  --measure: 60ch; --container: 1160px; --gutter: clamp(20px, 4vw, 40px);
+  --dur-short: 160ms; --ease-out: cubic-bezier(.2, .7, .2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { overflow-x: clip; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--color-paper); color: var(--color-ink-2);
+  font: 400 var(--text-body)/1.55 var(--font-body);
+}
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3 {
+  font-family: var(--font-display); font-weight: var(--display-weight); line-height: 1;
+  letter-spacing: var(--tracking-display); color: var(--color-ink); margin: 0;
+  overflow-wrap: break-word; min-width: 0;
+}
+h1 { font-size: var(--text-h1); }
+h2 { font-size: var(--text-h2); }
+h3 { font-size: var(--text-h3); }
+p { margin: 0; max-width: var(--measure); }
+a { color: var(--color-ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+    transition: color var(--dur-short) var(--ease-out), text-decoration-color var(--dur-short) var(--ease-out); }
+a:hover { color: var(--color-accent); text-decoration-color: var(--color-accent); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; transition: none; }
+::selection { background: color-mix(in oklab, var(--color-gold) 40%, transparent); }
+.small, figcaption { font: 600 13px/1.4 var(--font-outlier); color: var(--color-muted); }
+
+.wrap { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+section { padding-block: var(--space-3xl); }
+.ruled { border-top: var(--rule-bar) solid var(--color-ink); padding-top: var(--space-xl); }
+
+/* controls */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-sm);
+  padding: var(--space-md) var(--space-xl); border: 0; border-radius: var(--radius-pill);
+  font: 600 15px/1 var(--font-outlier); background: var(--color-accent); color: var(--color-accent-ink);
+
+  text-decoration: none; transition: background-color var(--dur-short) var(--ease-out);
+}
+.btn:hover { background: var(--color-ink); color: var(--color-accent-ink); }
+.btn--secondary {
+  background: none; color: var(--color-ink); border-radius: 0;
+  padding: var(--space-md) 0 var(--space-xs); border-bottom: var(--rule-bar) solid var(--color-ink);
+}
+.btn--secondary:hover { background: none; color: var(--color-accent); border-bottom-color: var(--color-accent); }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-lg) var(--space-xl); margin-top: var(--space-xl); }
+
+.well {
+  background: var(--color-paper-2); border: var(--rule-bar) solid var(--color-ink);
+  outline: var(--rule-hair) solid var(--color-gold); outline-offset: -7px; box-shadow: var(--shadow-card);
+  padding: var(--space-xl);
+}
+.photo img { outline: var(--rule-hair) solid color-mix(in oklab, var(--color-ink) 10%, transparent); outline-offset: -1px; object-fit: cover; width: 100%; }
+.photo figcaption { margin-top: var(--space-sm); }
+figure { margin: 0; }
+
+/* header */
+.top { padding-block: var(--space-lg); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: var(--space-lg); }
+.brand { font: 400 22px/1 var(--font-display); color: var(--color-ink); text-decoration: none; }
+.top nav { display: flex; gap: var(--space-lg); font-size: var(--text-sm); }
+.top nav a { text-decoration: none; }
+.top nav a:hover { text-decoration: underline; }
+
+/* hero */
+.hero { padding-block: var(--space-2xl) var(--space-3xl); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: var(--space-2xl); align-items: center; }
+.hero p.lead { font-size: 19px; margin-top: var(--space-lg); color: var(--color-ink-2); }
+.hero .photo img { aspect-ratio: 1 / 1; max-height: 560px; }
+
+
+/* where + today */
+.where-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: start; }
+.where-grid p + p { margin-top: var(--space-md); }
+.today h3 { padding-bottom: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-gold); }
+.today .status { font: 400 30px/1.1 var(--font-display); color: var(--color-ink); margin-top: var(--space-lg); }
+.today .status.is-open { color: var(--color-accent); }
+.today .note { margin-top: var(--space-sm); }
+
+/* menu */
+.menu-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: start; }
+.menu { list-style: none; margin: var(--space-xl) 0 0; padding: 0; }
+.menu li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: var(--space-lg);
+  padding-block: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-rule);
+  transition: background-color var(--dur-short) var(--ease-out); }
+.menu li:first-child { border-top: var(--rule-hair) solid var(--color-rule); }
+.menu li:hover { background: var(--color-paper-2); }
+.menu .dish { font: 400 20px/1.15 var(--font-display); color: var(--color-ink); }
+.menu .desc { font-size: 15px; }
+.menu-grid .photo img { aspect-ratio: 3 / 4; max-height: 520px; }
+
+/* quotes band */
+.band--ink { background: var(--color-ink); color: var(--color-paper); }
+.band--ink h2 { color: var(--color-paper); }
+.quotes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2xl); margin-top: var(--space-xl); }
+.quotes blockquote { margin: 0; border-top: var(--rule-hair) solid var(--color-gold); padding-top: var(--space-lg); }
+.quotes blockquote p { font: 400 26px/1.2 var(--font-display); color: var(--color-paper); }
+.quotes cite { display: block; margin-top: var(--space-md); font: 600 13px/1.4 var(--font-outlier); font-style: normal; color: var(--color-gold-2); }
+.band--ink .meta { margin-top: var(--space-xl); color: var(--color-paper-3); font-size: var(--text-sm); }
+
+/* strip */
+.strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-xl); margin-top: var(--space-xl); }
+
+.strip img { aspect-ratio: 4 / 3; }
+
+/* catering */
+.catering { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: center; }
+.catering .well p + p { margin-top: var(--space-md); }
+
+/* contact */
+.contact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-2xl); margin-top: var(--space-xl); }
+.contact-grid h3 { font-size: 22px; margin-bottom: var(--space-md); }
+.hours { width: 100%; border-collapse: collapse; font-size: 15px; }
+.hours th, .hours td { text-align: left; padding: var(--space-xs) 0; border-bottom: var(--rule-hair) solid var(--color-rule); font-weight: 400; }
+.hours th { font-weight: 500; color: var(--color-ink); }
+
+footer { padding-block: var(--space-xl) var(--space-2xl); border-top: var(--rule-hair) solid var(--color-rule); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-md); }
+
+/* mobile bar */
+.bar { display: none; }
+
+@media (max-width: 860px) {
+  section { padding-block: var(--space-2xl); }
+  .hero .wrap, .where-grid, .menu-grid, .catering, .contact-grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
+  .hero { padding-top: var(--space-xl); }
+  .hero .photo { order: -1; }
+  .hero .photo img { aspect-ratio: 4 / 3; }
+  .menu-grid .photo img { aspect-ratio: 4 / 3; }
+  .quotes { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
+  .strip { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-md); }
+  .strip figure:last-child { display: none; }
+  .top nav { display: none; }
+  .menu li { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); }
+  body { padding-bottom: 76px; }
+
+  .bar {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-sm);
+    position: fixed; inset: auto 0 0 0; z-index: 10; padding: var(--space-sm) var(--space-md) calc(var(--space-sm) + env(safe-area-inset-bottom));
+    background: var(--color-paper-2); border-top: var(--rule-bar) solid var(--color-ink);
+  }
+  .bar a { display: flex; align-items: center; justify-content: center; min-height: 48px;
+    font: 600 15px/1 var(--font-outlier); text-decoration: none; color: var(--color-ink); border-radius: var(--radius-pill); }
+  .bar a.bar-call { background: var(--color-accent); color: var(--color-accent-ink); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+h1, h2 { text-wrap: balance; }
+a:active, button:active { transform: translateY(1px); }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Lulamae's Cajun Cuisine</a>
+    <nav aria-label="Page">
+      <a href="#where">This week's spot</a>
+      <a href="#menu">Menu</a>
+      <a href="#catering">Catering</a>
+      <a href="#contact">Hours</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="hero-title">
+
+    <div class="wrap">
+      <div>
+        <h1 id="hero-title">Cajun cooking, straight off the truck.</h1>
+        <p class="lead">étouffée, boudin balls and gumbo, Wednesday to Saturday evenings in Temple.</p>
+        <div class="actions">
+          <a class="btn" href="#where">Find this week's spot</a>
+          <a class="btn btn--secondary" href="tel:123456789">Call 123-456-789</a>
+        </div>
+      </div>
+      <figure class="photo">
+        <img src="photo-hero.jpg" alt="A tray of golden fried shrimp and seasoned fries with Cajun dipping sauce" width="1400" height="1400" fetchpriority="high">
+        <figcaption>Fried shrimp with Cajun dipping sauce</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="where" aria-labelledby="where-title">
+    <div class="wrap ruled where-grid">
+      <div>
+        <h2 id="where-title">Where the truck is this week</h2>
+        <p style="margin-top: var(--space-lg)">The blue truck with the fleur-de-lis moves around Temple. We post each week's spot on Facebook, or give us a call and we'll tell you where to find us.</p>
+        <div class="actions">
+          <a class="btn" href="https://www.facebook.com/LulamaesCC" rel="noopener">See this week's spot on Facebook</a>
+          <a class="btn btn--secondary" href="tel:123456789">Call 123-456-789</a>
+        </div>
+      </div>
+      <div class="well today" aria-live="polite">
+        <h3>Today</h3>
+        <p class="status" id="today-status">Open Wednesday to Saturday, 5 to 8 PM</p>
+        <p class="note small" id="today-note">Closed Sunday, Monday and Tuesday. Times are Temple time.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="menu" aria-labelledby="menu-title">
+    <div class="wrap ruled menu-grid">
+      <div>
+        <h2 id="menu-title">On the menu</h2>
+        <ul class="menu">
+          <li><span class="dish">Crawfish fries</span><span class="desc">Fries loaded with crawfish étouffée</span></li>
+          <li><span class="dish">Cheesy boudin balls</span><span class="desc">Hot from the fryer, or frozen packs to take home</span></li>
+          <li><span class="dish">Crawfish étouffée</span><span class="desc">Over white rice with green onion</span></li>
+          <li><span class="dish">Gumbo</span><span class="desc">Sausage and shrimp</span></li>
+          <li><span class="dish">Shrimp po'boy</span><span class="desc">With seasoned fries</span></li>
+          <li><span class="dish">Crawfish mac and cheese</span><span class="desc">Rich, creamy, a little heat</span></li>
+        </ul>
+      </div>
+      <figure class="photo">
+        <img src="photo-1.jpg" alt="Crawfish étouffée over rice topped with green onion, served at the truck" width="1200" height="1600" loading="lazy">
+        <figcaption>Crawfish étouffée, served at the window</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band--ink" aria-labelledby="quotes-title">
+    <div class="wrap">
+      <h2 id="quotes-title">From the line</h2>
+      <div class="quotes">
+        <blockquote>
+          <p>"The crawfish fries and boudin balls are a thousand out of ten."</p>
+          <cite>A Google review</cite>
+        </blockquote>
+        <blockquote>
+          <p>"Big portions, fair prices, and it feels like you're on the bayou."</p>
+
+          <cite>A Google review</cite>
+        </blockquote>
+      </div>
+      <p class="meta">Rated 4.7 on Google from 41 reviews.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="strip-title">
+    <div class="wrap ruled">
+      <h2 id="strip-title">Cooked low and slow</h2>
+      <div class="strip">
+        <figure class="photo">
+          <img src="photo-2.jpg" alt="A ladle of gumbo with smoked sausage, chicken and peppers" width="1440" height="1440" loading="lazy">
+          <figcaption>Gumbo with smoked sausage</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="photo-3.jpg" alt="Shrimp po'boy with lettuce, tomato and sauce beside seasoned fries" width="1440" height="1440" loading="lazy">
+          <figcaption>Shrimp po'boy and seasoned fries</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="photo-4.jpg" alt="Tender chicken in a bowl of broth with celery and green onion" width="900" height="1600" loading="lazy">
+          <figcaption>Chicken in a slow-cooked broth</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="catering" aria-labelledby="catering-title">
+    <div class="wrap ruled catering">
+      <div>
+        <h2 id="catering-title">Bring the truck to your event</h2>
+        <p style="margin-top: var(--space-lg)">Birthdays, office lunches, church dinners and block parties. We cater and roll the truck right up.</p>
+
+      </div>
+      <div class="well">
+        <p>Tell us the date, the place and how many you're feeding. We'll get back to you with a plan.</p>
+        <div class="actions">
+          <a class="btn" href="tel:123456789">Call about catering</a>
+          <a class="btn btn--secondary" href="mailto:hello@example.com?subject=Catering%20inquiry">Email us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="wrap ruled">
+      <h2 id="contact-title">Hours and contact</h2>
+      <div class="contact-grid">
+        <div>
+          <h3>Hours</h3>
+          <table class="hours">
+            <tbody>
+              <tr><th scope="row">Wednesday to Saturday</th><td>5 to 8 PM</td></tr>
+              <tr><th scope="row">Sunday to Tuesday</th><td>Closed</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h3>Find us</h3>
+          <p>123 Example St, Temple, TX</p>
+          <p class="small" style="margin-top: var(--space-sm)">The truck moves, so check Facebook first.</p>
+          <p style="margin-top: var(--space-md)"><a href="https://maps.google.com/?q=Example+St+Temple,+TX" rel="noopener">Get directions</a></p>
+        </div>
+        <div>
+          <h3>Talk to us</h3>
+
+          <p><a href="tel:123456789">123-456-789</a></p>
+          <p><a href="mailto:hello@example.com">hello@example.com</a></p>
+          <p style="margin-top: var(--space-md)"><a href="https://www.facebook.com/LulamaesCC" rel="noopener">Message us on Facebook</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="small">Lulamae's Cajun Cuisine, Temple, TX</p>
+    <p class="small">Free preview by Brightfront Studio</p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="bar-call" href="tel:123456789">Call</a>
+  <a href="https://maps.google.com/?q=Example+St+Temple,+TX" rel="noopener">Directions</a>
+  <a href="https://www.facebook.com/LulamaesCC" rel="noopener">Message</a>
+</nav>
+
+<script>
+(function () {
+  var statusEl = document.getElementById('today-status');
+  var noteEl = document.getElementById('today-note');
+  if (!statusEl || !noteEl || !window.Intl) return;
+  try {
+    var parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Chicago', weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false
+    }).formatToParts(new Date());
+
+    var get = function (t) { for (var i = 0; i < parts.length; i++) if (parts[i].type === t) return parts[i].value; return ''; };
+    var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    var names = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var day = days.indexOf(get('weekday'));
+    var hour = parseInt(get('hour'), 10) % 24;
+    var mins = hour * 60 + parseInt(get('minute'), 10);
+    var openDays = [3, 4, 5, 6];
+    var OPEN = 17 * 60, CLOSE = 20 * 60;
+    var isOpenDay = openDays.indexOf(day) !== -1;
+
+    var nextOpen = function (from) {
+      for (var i = 1; i <= 7; i++) {
+        var d = (from + i) % 7;
+        if (openDays.indexOf(d) !== -1) return i === 1 ? 'tomorrow' : names[d];
+      }
+      return '';
+    };
+
+    if (isOpenDay && mins >= OPEN && mins < CLOSE) {
+      statusEl.textContent = 'Open now until 8 PM';
+      statusEl.classList.add('is-open');
+      noteEl.textContent = 'Check Facebook for today\u2019s spot, or call 123-456-789.';
+    } else if (isOpenDay && mins < OPEN) {
+      statusEl.textContent = 'Opens today at 5 PM';
+      noteEl.textContent = 'Serving until 8 PM. Check Facebook for today\u2019s spot.';
+    } else {
+      statusEl.textContent = 'Closed now';
+      noteEl.textContent = 'Next open ' + nextOpen(day) + ' at 5 PM, Temple time.';
+    }
+  } catch (e) { /* keep the static hours text */ }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fina's Diner, Chama, New Mexico</title>
+<meta name="description" content="Fina's Diner in Chama, New Mexico. A family-owned diner serving smothered breakfast burritos, red or green chile, and a warm welcome.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&family=Spectral:ital,wght@0,400;0,500;1,400&family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
+<style>
+/* Hallmark v2.0.0 · theme: newsprint (dealt 3/3, seed small-town-new-mexican-diner-e9ee·75519677·2026-10-31·r0) · genre editorial · job: visit / eat in */
+/* critique: the menu has no prices on record, so the listings run without an agate figure column; the photo of the plate leads, not the sign, because people decide on the food. */
+:root {
+  --color-paper: oklch(94% 0.011 92); --color-paper-2: oklch(90.5% 0.015 88); --color-paper-3: oklch(87% 0.017 86);
+  --color-ink: oklch(17% 0.012 60); --color-ink-2: oklch(27% 0.012 58); --color-muted: oklch(46% 0.014 60);
+  --color-rule: oklch(68% 0.016 75); --color-rule-2: oklch(34% 0.012 60);
+  --color-accent: oklch(44% 0.13 32); --color-accent-ink: oklch(95% 0.012 90); --color-focus: oklch(48% 0.17 32);
+  --color-on-ink-muted: oklch(78% 0.012 85);
+  --font-display: "Zilla Slab", ui-serif, Georgia, serif; --font-body: "Spectral", ui-serif, Georgia, serif;
+  --font-outlier: "Libre Franklin", ui-sans-serif, sans-serif;
+  --radius-card: 0; --radius-pill: 0; --rule-hair: 1px;
+  --shadow-card: none;
+  --tracking-display: -0.02em; --display-weight: 700;
+
+  --space-2xs: 0.25rem; --space-xs: 0.5rem; --space-sm: 0.75rem; --space-md: 1rem;
+  --space-lg: 1.5rem; --space-xl: 2.25rem; --space-2xl: 3.5rem; --space-3xl: 5rem;
+  --text-sm: 0.9375rem; --text-base: 1.0625rem; --text-title: 1.375rem;
+  --text-display-s: clamp(1.875rem, 1.4rem + 1.6vw, 2.625rem);
+  --text-display-l: clamp(2.5rem, 1.6rem + 3.4vw, 4.25rem);
+  --measure: 72rem;
+  --bar-h: 3.5rem;
+
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font: 400 var(--text-base)/1.55 var(--font-body);
+  padding-bottom: calc(var(--bar-h) + env(safe-area-inset-bottom));
+}
+@media (min-width: 48rem) { body { padding-bottom: 0; } }
+
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--tracking-display);
+  line-height: 1.05;
+  margin: 0;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+p { margin: 0; }
+
+a { color: var(--color-accent); text-decoration-color: var(--color-accent); text-underline-offset: 0.16em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; transition: none; }
+::selection { background: color-mix(in oklab, var(--color-accent) 20%, transparent); }
+
+.wrap { max-width: var(--measure); margin-inline: auto; padding-inline: var(--space-lg); }
+
+@media (max-width: 30rem) { .wrap { padding-inline: var(--space-md); } }
+
+.rule { border: 0; border-top: var(--rule-hair) solid var(--color-rule); margin: 0; }
+.rule--double { box-sizing: content-box; height: 2px; border: 0; border-block: var(--rule-hair) solid var(--color-rule-2); margin: 0; }
+
+.meta { font: 500 var(--text-sm)/1.4 var(--font-body); color: var(--color-muted); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 0; background: none; border-radius: var(--radius-card);
+  padding: var(--space-md) var(--space-lg);
+  font: 700 0.9375rem/1 var(--font-display);
+  text-decoration: none; cursor: pointer; min-height: 2.875rem;
+}
+.btn--primary { background: var(--color-ink); color: var(--color-paper); }
+.btn--primary:hover { background: var(--color-ink-2); }
+.btn--secondary { border-block: var(--rule-hair) solid var(--color-ink); color: var(--color-ink); }
+.btn--secondary:hover { background: var(--color-paper-2); }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+
+figure { margin: 0; }
+figure img { border: var(--rule-hair) solid var(--color-rule); filter: grayscale(1) contrast(1.05); width: 100%; object-fit: cover; }
+figcaption { font: 500 var(--text-sm)/1.4 var(--font-body); color: var(--color-muted); padding-top: var(--space-xs); }
+
+/* Masthead */
+.masthead { padding-block: var(--space-md) var(--space-sm); display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--space-xs) var(--space-lg); }
+.masthead__name { font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.375rem); color: var(--color-ink); text-decoration: none; }
+.masthead__name:hover { text-decoration: none; }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); padding-block: var(--space-xl) var(--space-2xl); align-items: center; }
+@media (min-width: 56rem) { .hero { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); } }
+
+.hero h1 { font-size: var(--text-display-l); }
+.hero__deck { font-size: 1.25rem; line-height: 1.45; color: var(--color-ink-2); margin-block: var(--space-md) var(--space-lg); max-width: 32ch; }
+.hero figure img { aspect-ratio: 4 / 3; }
+
+/* Box score */
+.score { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding-block: var(--space-lg); }
+.score > div { padding-inline: var(--space-md); text-align: center; }
+.score > div + div { border-left: var(--rule-hair) solid var(--color-rule); }
+.score strong { display: block; font: 700 var(--text-display-s)/1.05 var(--font-display); letter-spacing: var(--tracking-display); }
+.score span { display: block; margin-top: var(--space-2xs); }
+
+/* Sections */
+.section { padding-block: var(--space-2xl); }
+.section h2 { font-size: var(--text-display-s); margin-bottom: var(--space-lg); }
+
+/* Menu listings */
+.menu { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
+@media (min-width: 56rem) { .menu { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: start; } }
+.listing { list-style: none; margin: 0; padding: 0; border-top: var(--rule-hair) solid var(--color-rule-2); }
+.listing li { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-2xs); padding-block: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-rule); }
+@media (min-width: 40rem) { .listing li { grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: var(--space-lg); align-items: baseline; } }
+.listing h3 { font-size: var(--text-title); }
+.menu__note { margin-top: var(--space-md); }
+.agate { font: 500 1em/1 var(--font-outlier); font-variant-numeric: tabular-nums; }
+.menu figure img { aspect-ratio: 3 / 4; }
+
+/* Front page columns */
+.cols { columns: 2 18rem; column-gap: var(--space-xl); column-rule: var(--rule-hair) solid var(--color-rule); text-align: justify; hyphens: auto; max-width: 52rem; }
+.cols p + p { margin-top: var(--space-sm); }
+.dropcap::first-letter { float: left; font: 700 3.4em/0.8 var(--font-display); padding-right: 0.06em; padding-top: 0.06em; color: var(--color-accent); }
+
+/* Photo pair */
+
+.pair { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-lg); padding-block: var(--space-xl); }
+@media (min-width: 40rem) { .pair { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+.pair img { aspect-ratio: 16 / 10; }
+
+/* Ink band */
+.band { background: var(--color-ink); color: var(--color-paper); }
+.band .wrap { padding-block: var(--space-2xl); }
+.quotes { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); border-top: var(--rule-hair) solid var(--color-accent); padding-top: var(--space-lg); }
+@media (min-width: 48rem) { .quotes { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+.quotes blockquote { margin: 0; }
+.quotes blockquote p { font: 700 1.5rem/1.2 var(--font-display); letter-spacing: var(--tracking-display); }
+.quotes footer { margin-top: var(--space-sm); font: 500 var(--text-sm)/1.4 var(--font-body); color: var(--color-on-ink-muted); }
+
+/* Visit */
+.visit { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
+@media (min-width: 48rem) { .visit { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+.well { background: var(--color-paper-2); border-block: var(--rule-hair) solid var(--color-rule); padding: var(--space-lg); }
+.well h3 { font-size: var(--text-title); margin-bottom: var(--space-xs); }
+.today__line { font-size: 1.1875rem; }
+.today__line + p { margin-top: var(--space-xs); }
+.facts { margin: 0 0 var(--space-lg); }
+.facts dt { font: 500 var(--text-sm)/1.4 var(--font-body); color: var(--color-muted); }
+.facts dd { margin: 0 0 var(--space-sm); }
+
+/* Footer */
+.foot { padding-block: var(--space-lg) var(--space-xl); }
+
+/* Sticky bar, phones */
+.bar {
+  position: fixed; inset-inline: 0; bottom: 0; z-index: 10;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+  background: var(--color-paper); border-top: var(--rule-hair) solid var(--color-rule-2);
+
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.bar a {
+  display: flex; align-items: center; justify-content: center; min-height: var(--bar-h);
+  font: 700 0.9375rem/1 var(--font-display); color: var(--color-ink); text-decoration: none;
+}
+.bar a:first-child { background: var(--color-ink); color: var(--color-paper); }
+.bar a + a { border-left: var(--rule-hair) solid var(--color-rule); }
+@media (min-width: 48rem) { .bar { display: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+h1, h2 { text-wrap: balance; }
+a:active, button:active { transform: translateY(1px); }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="masthead">
+    <a class="masthead__name" href="#top"><h2 style="font-size:inherit">Fina's Diner</h2></a>
+    <p class="meta">Chama, New Mexico. Family owned.</p>
+  </div>
+  <hr class="rule--double">
+</header>
+
+<main id="top">
+  <section class="wrap hero" aria-labelledby="hero-head">
+    <div>
+      <h1 id="hero-head">Friends gather here, in Chama.</h1>
+      <p class="hero__deck">Smothered burritos, red or green chile, and a warm welcome.</p>
+      <div class="actions">
+        <a class="btn btn--primary" href="https://maps.google.com/?q=Example+St+Chama,+NM">Get directions</a>
+
+        <a class="btn btn--secondary" href="tel:123456789">Call 123-456-789</a>
+      </div>
+    </div>
+    <figure>
+      <img src="photo-hero.jpg" alt="Scrambled eggs, hash browns, pinto beans and folded flour tortillas on a white plate" width="1600" height="1200" fetchpriority="high">
+      <figcaption>Huevos with hash browns, pinto beans and flour tortillas.</figcaption>
+    </figure>
+  </section>
+
+  <div class="wrap">
+    <hr class="rule--double">
+    <div class="score">
+      <div><strong>4.6</strong><span class="meta">on Google</span></div>
+      <div><strong>486</strong><span class="meta">Google reviews</span></div>
+      <div><strong>11 AM</strong><span class="meta">breakfast until</span></div>
+    </div>
+    <hr class="rule--double">
+  </div>
+
+  <section class="wrap section" id="menu" aria-labelledby="menu-head">
+    <h2 id="menu-head">What the kitchen is known for.</h2>
+    <div class="menu">
+      <div>
+        <ul class="listing">
+          <li><h3>Breakfast burrito</h3><p>Smothered in red or green chile, cheese melted over the top.</p></li>
+          <li><h3>Huevos with tortillas</h3><p>Eggs, hash browns, pinto beans and warm flour tortillas.</p></li>
+          <li><h3>Bacon and eggs</h3><p>Eggs your way, crisp bacon, hash browns and toast.</p></li>
+          <li><h3>Enchiladas</h3><p>Smothered red or green, with pinto beans on the side.</p></li>
+          <li><h3>Green chile cheeseburger</h3><p>The New Mexico lunch standard.</p></li>
+          <li><h3>Sopapillas</h3><p>Puffed and warm from the kitchen.</p></li>
+        </ul>
+        <p class="menu__note meta">Breakfast is served until <span class="agate">11 AM</span>. Ask for today's specials.</p>
+
+      </div>
+      <figure>
+        <img src="photo-4.jpg" alt="A large burrito smothered in green chile and cheese, topped with bacon, on a red plate" width="1200" height="1600" loading="lazy">
+        <figcaption>A breakfast burrito, smothered and topped with bacon.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="about-head">
+    <hr class="rule" style="margin-bottom: var(--space-2xl)">
+    <h2 id="about-head">A small-town diner, kept the old way.</h2>
+    <div class="cols">
+      <p class="dropcap">Fina's is a family-owned diner with a small, cozy room, local team photos on the walls and Coca-Cola memorabilia on every shelf. Maria is usually the one who greets you at the door.</p>
+      <p>The menu runs New Mexican and American: chile red or green, eggs any way, burgers at lunch. Travelers make it their breakfast stop for every morning of a trip.</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="pair">
+      <figure>
+        <img src="photo-2.jpg" alt="Corner table with red chairs beneath walls of framed team photos and plaques" width="1600" height="1000" loading="lazy">
+        <figcaption>The corner table, under Escalante Lobos team photos.</figcaption>
+      </figure>
+      <figure>
+        <img src="photo-3.jpg" alt="Front counter with a glass case of Coca-Cola collectibles and a vintage ice-cold Coca-Cola chest" width="1600" height="1000" loading="lazy">
+        <figcaption>The front counter and a vintage Coca-Cola chest.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <section class="band" aria-labelledby="said-head">
+    <div class="wrap">
+
+      <h2 id="said-head" style="font-size: var(--text-display-s); margin-bottom: var(--space-lg)">What guests say.</h2>
+      <div class="quotes">
+        <blockquote>
+          <p>Quick, friendly service, and just what a small-town diner should be.</p>
+          <footer>A Google review</footer>
+        </blockquote>
+        <blockquote>
+          <p>When a snowstorm cut the power, the kitchen kept cooking.</p>
+          <footer>A Google review</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section" id="visit" aria-labelledby="visit-head">
+    <h2 id="visit-head">Come in and sit down.</h2>
+    <div class="visit">
+      <div class="well" id="today" aria-live="polite">
+        <h3>Today</h3>
+        <p class="today__line" id="today-line">Breakfast and lunch.</p>
+        <p id="today-note">Breakfast until 11 AM. Call for today's hours.</p>
+        <noscript><p class="meta">Breakfast and lunch served. Call 123-456-789 for today's hours.</p></noscript>
+      </div>
+      <div>
+        <dl class="facts">
+          <dt>Address</dt>
+          <dd>123 Example St, Chama, NM</dd>
+          <dt>Phone</dt>
+          <dd><a href="tel:123456789">123-456-789</a></dd>
+          <dt>Email</dt>
+          <dd><a href="mailto:hello@example.com">hello@example.com</a></dd>
+        </dl>
+
+        <div class="actions">
+          <a class="btn btn--primary" href="https://maps.google.com/?q=Example+St+Chama,+NM">Get directions</a>
+          <a class="btn btn--secondary" href="https://www.facebook.com/FinasDiner/">Message us on Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <hr class="rule" style="margin-bottom: var(--space-md)">
+  <p class="meta">Free preview by Brightfront Studio</p>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a href="tel:123456789">Call</a>
+  <a href="https://maps.google.com/?q=Example+St+Chama,+NM">Directions</a>
+  <a href="https://www.facebook.com/FinasDiner/">Message</a>
+</nav>
+
+<script>
+(function () {
+  try {
+    var now = new Date();
+    var parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Denver', weekday: 'long', hour: 'numeric', minute: '2-digit', hour12: true
+    }).formatToParts(now);
+    var get = function (t) { var p = parts.find(function (x) { return x.type === t; }); return p ? p.value : ''; };
+    var hour24 = parseInt(new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Denver', hour: 'numeric', hour12: false
+    }).format(now), 10) % 24;
+    var time = get('hour') + ':' + get('minute') + ' ' + get('dayPeriod');
+
+    var line = document.getElementById('today-line');
+    var note = document.getElementById('today-note');
+    line.textContent = get('weekday') + ', ' + time + ' in Chama.';
+    if (hour24 >= 5 && hour24 < 11) {
+      note.textContent = 'Breakfast is served until 11 AM. Call 123-456-789 to confirm we are open.';
+    } else if (hour24 >= 11 && hour24 < 16) {
+      note.textContent = 'Breakfast has wrapped; lunch is the menu now. Call to confirm today\u2019s hours.';
+    } else {
+      note.textContent = 'Breakfast and lunch are the diner\u2019s hours. Call 123-456-789 for tomorrow.';
+    }
+  } catch (e) { /* fallback text stays */ }
+})();
+</script>
+</body>
+</html>

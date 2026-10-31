@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elida's Bakery | Custom cakes in Iowa City, IA</title>
+<meta name="description" content="Custom cakes for birthdays, weddings and showers, tres leches and cake in a cup, baked in Iowa City, IA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,500..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+/* Hallmark v2.0.0 · theme: editorial (dealt 3/3, seed custom-cake-bakery-iowa-8ebd·75519677·2026-10-31·r0) · genre editorial · job: order a custom cake */
+/* critique: the pastel cakes carry all the colour, so the page stays ink-on-stock; the risk is the gallery reading as a catalogue grid, so captions stay short and a call to order follows straight after it. */
+:root {
+  --color-paper: oklch(97% 0.007 86); --color-paper-2: oklch(94% 0.010 86); --color-paper-3: oklch(91% 0.012 84);
+  --color-ink: oklch(16% 0.012 280); --color-ink-2: oklch(29% 0.011 280); --color-muted: oklch(48% 0.010 75);
+  --color-rule: oklch(85% 0.009 85); --color-rule-2: oklch(64% 0.010 80);
+  --color-accent: oklch(49% 0.130 152); --color-accent-ink: oklch(98% 0.005 88); --color-focus: oklch(52% 0.135 152);
+  --font-display: "Bricolage Grotesque", ui-sans-serif, sans-serif; --font-body: "Source Serif 4", ui-serif, Georgia, serif;
+  --radius-card: 0; --radius-pill: 0; --rule-hair: 1px; --rule-heavy: 4px; --shadow-card: none;
+  --tracking-display: -0.012em; --display-weight: 800;
+
+  --text-small: 0.9375rem;
+  --text-body: 1.125rem;
+  --text-lead: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+  --text-display-s: clamp(1.75rem, 1.35rem + 1.6vw, 2.75rem);
+  --text-display: clamp(3rem, 1.6rem + 5vw, 6.25rem);
+  --text-row: clamp(1.75rem, 1.4rem + 1.2vw, 2.5rem);
+
+  --space-3xs: 0.25rem; --space-2xs: 0.375rem; --space-xs: 0.5rem; --space-sm: 0.75rem; --space-md: 1rem;
+  --space-lg: 1.5rem; --space-xl: 2.5rem; --space-2xl: 4rem; --space-3xl: 6rem;
+
+
+  --measure: 1200px;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --bar-height: 60px;
+
+  --dur-short: 160ms;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { overflow-x: clip; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0; overflow-x: clip;
+  background: var(--color-paper); color: var(--color-ink-2);
+  font: 400 var(--text-body)/1.55 var(--font-body);
+  font-optical-sizing: auto; font-variant-numeric: oldstyle-nums;
+}
+img { display: block; max-width: 100%; height: auto; }
+::selection { background: color-mix(in oklab, var(--color-accent) 22%, transparent); }
+
+h1, h2, h3 {
+  font-family: var(--font-display); font-weight: var(--display-weight);
+  font-variation-settings: "wdth" 75, "opsz" 96; letter-spacing: var(--tracking-display);
+  color: var(--color-ink); font-variant-numeric: lining-nums tabular-nums;
+  line-height: 1; margin: 0; overflow-wrap: break-word; min-width: 0;
+}
+h1 { font-size: var(--text-display); line-height: 0.92; }
+h2 { font-size: var(--text-display-s); }
+h3 { font-size: var(--text-row); }
+p { margin: 0; }
+
+small, figcaption, th, nav, label, .btn, .tag, .label, .bar a, .meta {
+  font-family: var(--font-display); font-weight: 500; font-variation-settings: "opsz" 12;
+
+}
+
+a { color: inherit; text-decoration-line: underline; text-decoration-thickness: 1px; text-decoration-color: var(--color-rule-2); text-underline-offset: 0.2em; transition: text-decoration-color var(--dur-short) var(--ease-out); }
+a:hover { text-decoration-color: var(--color-accent); }
+
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--color-focus); outline-offset: 2px; transition: none;
+}
+
+.wrap { max-width: var(--measure); margin-inline: auto; padding-inline: var(--gutter); }
+.section { padding-block: var(--space-2xl); }
+.opens { border-top: var(--rule-heavy) solid var(--color-ink); padding-top: var(--space-lg); }
+.standfirst { font: 400 var(--text-display-s)/1.2 var(--font-body); color: var(--color-ink); }
+.lead { font-size: var(--text-lead); line-height: 1.35; color: var(--color-ink); }
+.muted { color: var(--color-muted); }
+
+/* Controls */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 48px; padding: 0 var(--space-lg);
+  border: var(--rule-hair) solid var(--color-ink); border-radius: var(--radius-pill);
+  font-size: 1.0625rem; text-decoration: none; cursor: pointer;
+  transition: background-color var(--dur-short) var(--ease-out), color var(--dur-short) var(--ease-out);
+}
+.btn--primary { background: var(--color-ink); color: var(--color-paper); }
+.btn--primary:hover { background: var(--color-ink-2); }
+.btn--secondary { background: none; color: var(--color-ink); }
+.btn--secondary:hover { background: var(--color-paper-3); }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+.tag { display: inline-block; background: var(--color-accent); color: var(--color-accent-ink); padding: var(--space-3xs) var(--space-xs); font-size: var(--text-small); }
+
+/* Header */
+
+.site-head { border-bottom: var(--rule-hair) solid var(--color-rule); }
+.site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); min-height: 64px; }
+.brand { font-family: var(--font-display); font-weight: 800; font-variation-settings: "wdth" 75, "opsz" 48; font-size: 1.625rem; color: var(--color-ink); text-decoration: none; letter-spacing: var(--tracking-display); }
+.site-nav { display: flex; gap: var(--space-lg); font-size: 1rem; }
+.site-nav a { text-decoration-color: transparent; color: var(--color-ink); }
+.site-nav a:hover { text-decoration-color: var(--color-accent); }
+
+/* Hero */
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: var(--space-xl); align-items: center; padding-block: var(--space-xl); }
+.hero-text { display: grid; gap: var(--space-lg); }
+.hero-photo img { width: 100%; height: min(620px, calc(100svh - 160px)); min-height: 360px; object-fit: cover; object-position: center 45%; }
+
+.photo img { filter: saturate(0.9) contrast(1.04); outline: 1px solid color-mix(in oklab, var(--color-ink) 8%, transparent); outline-offset: -1px; }
+
+/* Intro + Today */
+.intro { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: var(--space-xl); align-items: start; }
+.today { background: var(--color-paper-2); border-top: var(--rule-hair) solid var(--color-rule-2); padding: var(--space-lg); display: grid; gap: var(--space-xs); }
+.today h2 { font-size: var(--text-row); }
+.today .label { font-size: var(--text-small); color: var(--color-muted); }
+.today-status { color: var(--color-ink); }
+
+/* Rows */
+.rows { list-style: none; margin: var(--space-lg) 0 0; padding: 0; }
+.rows li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) auto; gap: var(--space-lg); align-items: baseline; padding-block: var(--space-lg); border-top: var(--rule-hair) solid var(--color-rule); }
+.rows li:first-child { border-top: 0; }
+.rows .meta { font-size: var(--text-small); color: var(--color-muted); }
+
+/* Gallery */
+.gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-md); margin: var(--space-lg) 0 0; }
+.gallery figure { margin: 0; display: grid; gap: var(--space-xs); }
+.gallery img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.gallery figcaption { font-size: var(--text-small); color: var(--color-muted); }
+
+.after-gallery { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-md); margin-top: var(--space-xl); padding-top: var(--space-lg); border-top: var(--rule-hair) solid var(--color-rule); }
+
+/* Ink band */
+.band { background: var(--color-ink); color: var(--color-paper); }
+.band h2, .band .figure { color: var(--color-paper); }
+.band .opens { border-top-color: var(--color-paper); }
+.band-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-xl); margin-top: var(--space-lg); }
+.band blockquote { margin: 0; font-style: italic; font-size: var(--text-lead); line-height: 1.35; }
+.band cite { display: block; margin-top: var(--space-sm); font-style: normal; font-family: var(--font-display); font-weight: 500; font-variation-settings: "opsz" 12; font-size: var(--text-small); color: var(--color-rule); }
+.figures { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); border-left: var(--rule-hair) solid var(--color-ink-2); padding-left: var(--space-lg); gap: var(--space-md); }
+.figure { font-family: var(--font-display); font-weight: 800; font-variation-settings: "wdth" 75, "opsz" 96; font-size: var(--text-display); line-height: 0.92; font-variant-numeric: lining-nums tabular-nums; }
+.figures .label { font-size: var(--text-small); color: var(--color-rule); }
+
+/* Order */
+.well { background: var(--color-paper-2); border-top: var(--rule-hair) solid var(--color-rule-2); }
+.order-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: var(--space-xl); margin-top: var(--space-lg); align-items: start; }
+.form { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-md); }
+.field { display: grid; gap: var(--space-2xs); }
+.field--wide { grid-column: 1 / -1; }
+.field label { font-size: var(--text-small); color: var(--color-ink); }
+input, select, textarea {
+  width: 100%; min-height: 52px; padding: var(--space-sm);
+  border: var(--rule-hair) solid var(--color-rule-2); border-radius: 0;
+  background: var(--color-paper); color: var(--color-ink);
+  font: 400 1rem/1.4 var(--font-body);
+  transition: border-color var(--dur-short) var(--ease-out);
+}
+textarea { min-height: 130px; resize: vertical; }
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.form .btn { justify-self: start; }
+.spec { width: 100%; border-collapse: collapse; border-top: var(--rule-heavy) solid var(--color-ink); }
+.spec th, .spec td { text-align: left; vertical-align: top; padding: var(--space-sm) 0; border-bottom: var(--rule-hair) solid var(--color-rule); font-size: 1rem; }
+
+.spec th { width: 38%; padding-right: var(--space-md); color: var(--color-ink); font-size: var(--text-small); }
+
+/* Visit */
+.visit-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-xl); margin-top: var(--space-lg); }
+.hours { width: 100%; border-collapse: collapse; }
+.hours th, .hours td { text-align: left; padding: var(--space-xs) 0; border-bottom: var(--rule-hair) solid var(--color-rule); }
+.hours th { font-size: 1rem; color: var(--color-ink); font-weight: 500; }
+.hours td { text-align: right; font-variant-numeric: lining-nums tabular-nums; }
+.hours tr.is-today th, .hours tr.is-today td { color: var(--color-ink); font-weight: 600; }
+.visit-info { display: grid; gap: var(--space-md); align-content: start; }
+
+/* Footer */
+.site-foot { border-top: var(--rule-heavy) solid var(--color-ink); padding-block: var(--space-xl); }
+.site-foot .wrap { display: grid; gap: var(--space-xs); }
+.site-foot small { color: var(--color-muted); font-size: 0.8125rem; }
+
+/* Mobile bar */
+.bar { display: none; }
+
+@media (max-width: 900px) {
+  .hero .wrap, .intro, .order-grid, .visit-grid { grid-template-columns: minmax(0, 1fr); }
+  .hero-photo { order: -1; }
+  .hero-photo img { height: auto; min-height: 0; aspect-ratio: 1 / 1; }
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .band-grid { grid-template-columns: minmax(0, 1fr); }
+  .figures { border-left: 0; padding-left: 0; border-top: var(--rule-hair) solid var(--color-ink-2); padding-top: var(--space-lg); }
+}
+@media (max-width: 640px) {
+  .site-nav .hide-sm { display: none; }
+  .rows li { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); }
+  .form { grid-template-columns: minmax(0, 1fr); }
+  .section { padding-block: var(--space-xl); }
+
+  .actions .btn { flex: 1 1 100%; }
+  body { padding-bottom: var(--bar-height); }
+  .bar {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    position: fixed; inset: auto 0 0 0; z-index: 10; height: var(--bar-height);
+    background: var(--color-paper); border-top: var(--rule-hair) solid var(--color-ink);
+  }
+  .bar a { display: flex; align-items: center; justify-content: center; text-decoration: none; color: var(--color-ink); font-size: 1rem; border-left: var(--rule-hair) solid var(--color-rule); }
+  .bar a:first-child { border-left: 0; background: var(--color-ink); color: var(--color-paper); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+h1, h2 { text-wrap: balance; }
+a:active, button:active { transform: translateY(1px); }
+button:disabled, input:disabled, select:disabled, textarea:disabled { opacity: .5; cursor: not-allowed; }
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top">Elida's Bakery</a>
+    <nav class="site-nav" aria-label="Main">
+      <a class="hide-sm" href="#cakes">Cakes</a>
+      <a class="hide-sm" href="#visit">Visit</a>
+      <a href="#order">Order</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-text">
+        <h1 id="hero-title">Custom cakes for the days that matter</h1>
+        <p class="lead">Birthdays, weddings and showers, designed and baked by hand in Iowa City.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="#order">Order a custom cake</a>
+          <a class="btn btn--secondary" href="tel:123456789">Call 123-456-789</a>
+        </div>
+      </div>
+      <div class="hero-photo photo">
+        <img src="photo-hero.jpg" alt="Pink buttercream cake topped with macarons, fresh berries and daisies" width="1205" height="1600" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="today-title">
+    <div class="wrap intro opens">
+      <p class="standfirst">A small Iowa City bakery for custom cakes, tres leches and cake in a cup, made to order and ready for pickup.</p>
+      <div class="today" aria-live="polite">
+        <h2 id="today-title">Today</h2>
+        <p class="today-status" id="today-status">Open Tuesday to Thursday and Sunday 10 AM to 3 PM, Friday and Saturday 10 AM to 4 PM. Closed Monday.</p>
+        <p class="label">Iowa City time</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="menu" aria-labelledby="menu-title">
+    <div class="wrap opens">
+      <h2 id="menu-title">What we bake</h2>
+      <ul class="rows">
+        <li><h3>Custom cakes</h3><p>Two-tier strawberry, number cakes, heart cakes with piped shells and character cakes for kids.</p><span class="meta">By order</span></li>
+
+        <li><h3>Tres leches</h3><p>Vanilla or dulce de leche, whole for the table or in single cups.</p><span class="meta">Two flavours</span></li>
+        <li><h3>Cake in a cup</h3><p>Layers of cake and frosting in a lidded jar, easy to carry and share.</p><span class="meta">Grab and go</span></li>
+        <li><h3>Holiday market</h3><p>Find us at the Corridor Holiday Market in Coralville.</p><span class="meta">Seasonal</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="cakes" aria-labelledby="cakes-title">
+    <div class="wrap opens">
+      <h2 id="cakes-title">Recent cakes</h2>
+      <div class="gallery">
+        <figure class="photo"><img src="photo-1.jpg" alt="Two pink birthday cakes with roses and gold butterflies" width="1205" height="1600" loading="lazy"><figcaption>Roses and gold butterflies</figcaption></figure>
+        <figure class="photo"><img src="photo-2.jpg" alt="Pink two-tier first birthday cake with strawberries and daisies" width="1205" height="1600" loading="lazy"><figcaption>Strawberry two-tier for a first birthday</figcaption></figure>
+        <figure class="photo"><img src="photo-3.jpg" alt="Chocolate number cake shaped as 30 with piped cream and pink strawberries" width="1600" height="1100" loading="lazy"><figcaption>Number cake with dipped strawberries</figcaption></figure>
+        <figure class="photo"><img src="photo-4.jpg" alt="Chocolate buttercream birthday cake with chocolate strawberries and cookies" width="1301" height="1600" loading="lazy"><figcaption>Chocolate birthday cake</figcaption></figure>
+      </div>
+      <div class="after-gallery">
+        <p class="lead">Have a date and an idea? We will design the cake around it.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="#order">Start your cake order</a>
+          <a class="btn btn--secondary" href="tel:123456789">Call 123-456-789</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band" aria-labelledby="reviews-title">
+    <div class="wrap opens">
+      <h2 id="reviews-title">What customers say</h2>
+      <div class="band-grid">
+        <blockquote>The best cake I have ever tasted, and the tres leches texture is just right.<cite>A Google review</cite></blockquote>
+        <blockquote>Our wedding cake was the star of the day, and ordering through pickup was flawless.<cite>A Google review</cite></blockquote>
+
+        <div class="figures">
+          <div><p class="figure">4.9</p><p class="label">Google rating</p></div>
+          <div><p class="figure">52</p><p class="label">Google reviews</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section well" id="order" aria-labelledby="order-title">
+    <div class="wrap opens">
+      <h2 id="order-title">Order a custom cake</h2>
+      <div class="order-grid">
+        <form class="form" id="order-form" action="mailto:hello@example.com" method="post" enctype="text/plain">
+          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="Name" autocomplete="name" required></div>
+          <div class="field"><label for="f-contact">Phone or email</label><input id="f-contact" name="Contact" autocomplete="email" required></div>
+          <div class="field"><label for="f-date">Date needed</label><input id="f-date" name="Date" type="date"></div>
+          <div class="field"><label for="f-occasion">Occasion</label>
+            <select id="f-occasion" name="Occasion">
+              <option>Birthday</option><option>Wedding</option><option>Shower</option><option>Tres leches order</option><option>Something else</option>
+            </select>
+          </div>
+          <div class="field field--wide"><label for="f-idea">Your cake idea</label><textarea id="f-idea" name="Idea" placeholder="Theme, colours, flavour, how many people"></textarea></div>
+          <button class="btn btn--primary" type="submit">Send cake request</button>
+        </form>
+        <table class="spec">
+          <tbody>
+            <tr><th scope="row">Occasions</th><td>Birthdays, weddings, showers</td></tr>
+            <tr><th scope="row">Tres leches</th><td>Vanilla, dulce de leche</td></tr>
+            <tr><th scope="row">Pickup</th><td>123 Example St, Iowa City, IA</td></tr>
+            <tr><th scope="row">Questions</th><td><a href="tel:123456789">123-456-789</a></td></tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="visit" aria-labelledby="visit-title">
+    <div class="wrap opens">
+      <h2 id="visit-title">Visit and pick up</h2>
+      <div class="visit-grid">
+        <table class="hours" aria-label="Opening hours">
+          <tbody>
+            <tr data-day="1"><th scope="row">Monday</th><td>Closed</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>10 AM to 3 PM</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>10 AM to 3 PM</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>10 AM to 3 PM</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>10 AM to 4 PM</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>10 AM to 4 PM</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>10 AM to 3 PM</td></tr>
+          </tbody>
+        </table>
+        <div class="visit-info">
+          <p class="lead">123 Example St, Iowa City, IA</p>
+          <p><a href="tel:123456789">123-456-789</a><br><a href="mailto:hello@example.com">hello@example.com</a></p>
+          <div class="actions">
+            <a class="btn btn--secondary" href="https://maps.google.com/?q=Example+St+Iowa+City,+IA">Get directions</a>
+            <a class="btn btn--secondary" href="http://www.facebook.com/Elidasbakery">Message us on Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>Elida's Bakery, 123 Example St, Iowa City, IA</p>
+    <small>Free preview by Brightfront Studio</small>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a href="tel:123456789">Call</a>
+  <a href="https://maps.google.com/?q=Example+St+Iowa+City,+IA">Directions</a>
+  <a href="http://www.facebook.com/Elidasbakery">Message</a>
+</nav>
+
+<!-- photo-5.jpg intentionally not used: its jar label shows the shop's real email address. -->
+
+<script>
+(function () {
+  var HOURS = { 0: [10, 15], 1: null, 2: [10, 15], 3: [10, 15], 4: [10, 15], 5: [10, 16], 6: [10, 16] };
+  var NAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var SHORT = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+
+  function fmt(h) { var s = h >= 12 ? "PM" : "AM"; var x = h % 12 || 12; return x + " " + s; }
+
+  try {
+    var parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/Chicago", weekday: "short", hour: "numeric", minute: "numeric", hourCycle: "h23"
+    }).formatToParts(new Date());
+    var get = function (t) { for (var i = 0; i < parts.length; i++) if (parts[i].type === t) return parts[i].value; };
+    var day = SHORT[get("weekday")];
+    var mins = (parseInt(get("hour"), 10) % 24) * 60 + parseInt(get("minute"), 10);
+    var today = HOURS[day];
+
+    var msg;
+
+    if (today && mins >= today[0] * 60 && mins < today[1] * 60) {
+      msg = "Open now, until " + fmt(today[1]) + ".";
+    } else if (today && mins < today[0] * 60) {
+      msg = "Closed now. Opens today at " + fmt(today[0]) + ".";
+    } else {
+      for (var i = 1; i <= 7; i++) {
+        var d = (day + i) % 7;
+        if (HOURS[d]) {
+          msg = "Closed now. Opens " + (i === 1 ? "tomorrow" : NAMES[d]) + " at " + fmt(HOURS[d][0]) + ".";
+          break;
+        }
+      }
+    }
+    var el = document.getElementById("today-status");
+    if (el && msg) el.textContent = msg;
+
+    var row = document.querySelector('.hours tr[data-day="' + day + '"]');
+    if (row) row.classList.add("is-today");
+  } catch (e) { /* text fallback stays */ }
+
+  var form = document.getElementById("order-form");
+  if (form) {
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var f = form.elements;
+      var body = "Name: " + f["Name"].value +
+        "\nContact: " + f["Contact"].value +
+        "\nDate needed: " + f["Date"].value +
+        "\nOccasion: " + f["Occasion"].value +
+        "\n\nCake idea:\n" + f["Idea"].value;
+
+      window.location.href = "mailto:hello@example.com?subject=" +
+        encodeURIComponent("Custom cake request") + "&body=" + encodeURIComponent(body);
+    });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zelaya's Bakery, Hattiesburg: pan dulce, cakes and fruit cups</title>
+<meta name="description" content="Honduran and Mexican treats from a family counter in Hattiesburg, MS. Conchas, tres leches, fruit cups and custom cakes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@800&family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+<style>
+/* Hallmark v2.0.0 · theme: squeeze (dealt 2/3, seed honduran-mexican-bakery-hattiesburg-24f3·75519677·2026-10-31·r0) · genre editorial · job: visit the counter / order a cake */
+/* critique: the green and the big figures carry most screens; photos are kept to the hero and one strip so the pastry colour lands, and the cake card is the only white surface. */
+:root {
+  --color-paper: oklch(41% 0.100 154); --color-paper-2: oklch(47% 0.105 154); --color-paper-3: oklch(34% 0.090 156);
+  --color-ink: oklch(99% 0.005 90); --color-ink-2: oklch(94% 0.020 120); --color-muted: oklch(90% 0.030 150); --color-rule: oklch(55% 0.100 154);
+  --color-accent: oklch(83% 0.115 56); --color-accent-2: oklch(74% 0.150 46); --color-accent-ink: oklch(30% 0.070 40); --color-focus: oklch(88% 0.14 85);
+  --color-card: oklch(97% 0.012 85); --color-card-ink: oklch(24% 0.05 160);
+  --color-scrim: color-mix(in oklab, var(--color-paper-3) 55%, transparent);
+  --color-select: color-mix(in oklab, var(--color-accent) 45%, transparent);
+  --font-display: "Gabarito", ui-sans-serif, system-ui, sans-serif; --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-outlier: var(--font-display);
+  --radius-card: 24px; --radius-control: 16px; --radius-pill: 999px; --rule-hair: 1px; --rule-bar: 2px;
+  --shadow-card: 0 14px 32px -16px oklch(22% 0.05 160 / 0.5);
+  --tracking-display: -0.025em; --display-weight: 800;
+  --space-2xs: 0.25rem; --space-xs: 0.5rem; --space-sm: 0.75rem; --space-md: 1rem; --space-lg: 1.5rem; --space-xl: 2.5rem; --space-2xl: 4rem; --space-3xl: 6rem;
+  --text-sm: 0.875rem; --text-md: 1rem; --text-lg: 1.1875rem; --text-xl: clamp(1.75rem, 3.2vw, 2.5rem); --text-2xl: clamp(2.5rem, 5.6vw, 4.5rem);
+  --measure: 34rem; --container: 72rem;
+  --dur-micro: 90ms; --dur-short: 160ms; --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --photo-filter: saturate(1.12) contrast(1.04);
+}
+
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--color-paper); color: var(--color-muted);
+  font: 500 var(--text-md)/1.55 var(--font-body);
+}
+::selection { background: var(--color-select); color: var(--color-card-ink); }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3 {
+  font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: var(--tracking-display);
+  color: var(--color-ink); margin: 0; overflow-wrap: break-word; min-width: 0;
+}
+h1, h2 { line-height: 1; }
+h1 { font-size: var(--text-2xl); }
+h2 { font-size: var(--text-xl); }
+h3 { font-size: var(--text-lg); line-height: 1.15; }
+p { margin: 0; max-width: var(--measure); }
+
+a { color: var(--color-ink); font-weight: 700; text-decoration-thickness: 2px; text-underline-offset: 3px; transition: text-decoration-color var(--dur-micro) var(--ease-out); }
+a:hover { text-decoration-color: var(--color-accent); }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; transition: none; }
+
+.wrap { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--space-lg); }
+.section { padding-block: var(--space-2xl); }
+.band-deep { background: var(--color-paper-3); }
+.band-light { background: var(--color-paper-2); }
+.label { font: 700 var(--text-sm)/1.4 var(--font-body); color: var(--color-ink-2); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--space-xs);
+  min-height: 48px; border: var(--rule-bar) solid var(--color-ink); border-radius: var(--radius-control);
+
+  padding: var(--space-sm) var(--space-lg); font: 700 var(--text-md)/1.25 var(--font-body); color: var(--color-ink);
+  text-decoration: none; background: transparent;
+  transition: translate var(--dur-micro) var(--ease-out), background-color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out);
+}
+.btn--primary { background: var(--color-accent); color: var(--color-accent-ink); border-color: var(--color-accent); }
+.btn--primary:hover { background: var(--color-accent-2); border-color: var(--color-accent-2); }
+.btn:not(.btn--primary):hover { background: var(--color-paper-2); }
+.btn:active { translate: 0 1px; }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+
+/* header */
+.top { padding-block: var(--space-md); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); }
+.brand { font: var(--display-weight) 1.375rem/1 var(--font-display); letter-spacing: var(--tracking-display); color: var(--color-ink); text-decoration: none; }
+.nav { display: flex; gap: var(--space-xs); flex-wrap: wrap; }
+.nav a { background: var(--color-paper-2); border-radius: var(--radius-pill); padding: var(--space-xs) var(--space-md); font-size: var(--text-sm); text-decoration: none; transition: background-color var(--dur-micro) var(--ease-out); }
+.nav a:hover { background: var(--color-paper-3); }
+
+/* hero */
+.hero { padding-block: var(--space-lg) var(--space-2xl); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: var(--space-xl); align-items: center; }
+.hero-text { display: grid; gap: var(--space-lg); }
+.hero-text p { font-size: var(--text-lg); color: var(--color-ink-2); }
+.hero-photo img { width: 100%; aspect-ratio: 4 / 5; max-height: 600px; object-fit: cover; border-radius: var(--radius-card); filter: var(--photo-filter); }
+
+/* today + hours */
+.today .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-xl); align-items: start; }
+.figure { font: var(--display-weight) clamp(5rem, 13vw, 11rem)/0.85 var(--font-display); letter-spacing: -0.04em; font-variant-numeric: lining-nums tabular-nums; color: var(--color-ink); }
+.today-box { background: var(--color-paper-2); border-radius: var(--radius-card); padding: var(--space-lg); display: grid; gap: var(--space-sm); margin-top: var(--space-lg); }
+.today-status { font: var(--display-weight) var(--text-xl)/1.05 var(--font-display); letter-spacing: var(--tracking-display); color: var(--color-ink); }
+.hours { list-style: none; margin: 0; padding: 0; }
+.hours li { display: flex; justify-content: space-between; gap: var(--space-md); padding: var(--space-sm) var(--space-md); border-bottom: var(--rule-hair) solid var(--color-rule); border-radius: var(--radius-control); }
+
+.hours li:last-child { border-bottom: 0; }
+.hours .day { font-weight: 700; color: var(--color-ink); }
+.hours .time { font: var(--display-weight) var(--text-lg)/1.2 var(--font-display); color: var(--color-ink); font-variant-numeric: lining-nums tabular-nums; }
+.hours li.is-today { background: var(--color-paper-3); box-shadow: inset 0 0 0 3px var(--color-accent); border-bottom-color: transparent; transition: box-shadow var(--dur-short) var(--ease-out); }
+
+/* case */
+.case-head { display: grid; gap: var(--space-md); margin-bottom: var(--space-xl); }
+.chips { display: flex; flex-wrap: wrap; gap: var(--space-xs); list-style: none; padding: 0; margin: 0; }
+.chips li { background: var(--color-paper-2); border-radius: var(--radius-pill); padding: var(--space-xs) var(--space-md); font: 700 var(--text-sm)/1.4 var(--font-body); color: var(--color-ink); }
+.strip { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-md); }
+.strip img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius-card); filter: var(--photo-filter); }
+
+/* cakes */
+.cake .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: var(--space-xl); align-items: center; }
+.card { background: var(--color-card); color: var(--color-card-ink); border-radius: var(--radius-card); box-shadow: var(--shadow-card); padding: var(--space-xl); display: grid; gap: var(--space-md); }
+.card h3 { color: var(--color-card-ink); font-size: var(--text-xl); line-height: 1; }
+.card a:not(.btn) { color: var(--color-card-ink); }
+.card .btn:not(.btn--primary) { color: var(--color-card-ink); border-color: var(--color-card-ink); }
+.card .btn:not(.btn--primary):hover { background: var(--color-ink-2); }
+.card a:focus-visible, .card .btn:focus-visible { outline-color: var(--color-card-ink); }
+
+/* reviews */
+.reviews .wrap { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: var(--space-xl); align-items: center; }
+.rating { display: grid; gap: var(--space-xs); }
+.quotes { display: grid; gap: var(--space-lg); margin: 0; }
+.quotes blockquote { margin: 0; display: grid; gap: var(--space-xs); }
+.quotes blockquote p { font: var(--display-weight) var(--text-xl)/1.1 var(--font-display); letter-spacing: var(--tracking-display); color: var(--color-ink); }
+
+/* visit */
+.visit .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-xl); align-items: end; }
+.visit address { font-style: normal; display: grid; gap: var(--space-xs); color: var(--color-ink-2); }
+
+
+/* footer */
+.foot { padding-block: var(--space-xl); }
+.foot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-md); }
+.foot small { font: 500 var(--text-sm)/1.4 var(--font-body); color: var(--color-muted); }
+
+/* sticky phone bar */
+.bar { display: none; }
+@media (max-width: 760px) {
+  body { padding-bottom: 84px; }
+  .bar {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-xs);
+    position: fixed; inset: auto 0 0 0; z-index: 10; padding: var(--space-sm) var(--space-sm) calc(var(--space-sm) + env(safe-area-inset-bottom));
+    background: var(--color-paper-3);
+  }
+  .bar .btn { padding-inline: var(--space-xs); font-size: var(--text-sm); }
+  .nav { display: none; }
+  .hero .wrap, .today .wrap, .cake .wrap, .reviews .wrap, .visit .wrap { grid-template-columns: minmax(0, 1fr); }
+  .hero-photo img { aspect-ratio: 4 / 3; }
+  .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .card { padding: var(--space-lg); }
+  .section { padding-block: var(--space-xl); }
+}
+@media (max-width: 400px) { .wrap { padding-inline: var(--space-md); } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; }
+  .btn:active { translate: none; }
+}
+h1, h2 { text-wrap: balance; }
+a:active, button:active { transform: translateY(1px); }
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Zelaya's Bakery</a>
+    <nav class="nav" aria-label="Page">
+      <a href="#hours">Hours</a>
+      <a href="#cakes">Cakes</a>
+      <a href="#visit">Visit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-text">
+        <h1 id="hero-title">Fresh pan dulce and cakes, every day</h1>
+        <p>Honduran and Mexican treats from a family counter in Hattiesburg.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="https://maps.google.com/?q=Example+St+Hattiesburg,+MS">Get directions</a>
+          <a class="btn" href="tel:123456789">Call 123-456-789</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="photo-hero.jpg" alt="Treats at Zelaya's Bakery in Hattiesburg" width="1200" height="1500" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <section class="section today" id="hours" aria-labelledby="hours-title">
+    <div class="wrap">
+
+      <div>
+        <h2 id="hours-title">We open at</h2>
+        <p class="figure" aria-label="11 AM">11 AM</p>
+        <div class="today-box" aria-live="polite">
+          <span class="label">Today</span>
+          <p class="today-status" id="today-status">Open every day from 11 AM.</p>
+          <p id="today-note">Closing time changes by day, see the list.</p>
+        </div>
+      </div>
+      <ul class="hours" id="hours-list">
+        <li data-days="1"><span class="day">Monday</span><span class="time">11 AM to 8 PM</span></li>
+        <li data-days="2"><span class="day">Tuesday</span><span class="time">11 AM to 8 PM</span></li>
+        <li data-days="3"><span class="day">Wednesday</span><span class="time">11 AM to 8 PM</span></li>
+        <li data-days="4"><span class="day">Thursday</span><span class="time">11 AM to 8 PM</span></li>
+        <li data-days="5"><span class="day">Friday</span><span class="time">11 AM to 8:30 PM</span></li>
+        <li data-days="6"><span class="day">Saturday</span><span class="time">11 AM to 8:30 PM</span></li>
+        <li data-days="0"><span class="day">Sunday</span><span class="time">11 AM to 4 PM</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="case-title">
+    <div class="wrap">
+      <div class="case-head">
+        <h2 id="case-title">What's in the case</h2>
+        <p>Glass cases full of colour. Come in, look around, point at what you want.</p>
+        <ul class="chips">
+          <li>Conchas and pan dulce</li>
+          <li>Tres leches</li>
+          <li>Strawberry cream cake</li>
+          <li>Fruit cups with chamoy and taj·n</li>
+          <li>Mousse pastries</li>
+
+          <li>Cannoli-style rolls</li>
+          <li>Macarons</li>
+        </ul>
+      </div>
+      <div class="strip">
+        <img src="photo-1.jpg" alt="A treat from the Zelaya's pastry case" width="900" height="1200" loading="lazy">
+        <img src="photo-2.jpg" alt="Another treat from the Zelaya's pastry case" width="900" height="1200" loading="lazy">
+        <img src="photo-3.jpg" alt="Fresh bakes from Zelaya's Bakery" width="900" height="1200" loading="lazy">
+        <img src="photo-4.jpg" alt="Colourful pastries at Zelaya's Bakery" width="900" height="1200" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="section cake" id="cakes" aria-labelledby="cakes-title">
+    <div class="wrap">
+      <div>
+        <h2 id="cakes-title">A cake for the big day</h2>
+      </div>
+      <div class="card">
+        <h3>Order a cake</h3>
+        <p>Tres leches, strawberry cream or a birthday cake with your message piped on top. Call or message us to talk size, flavour and pickup day.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="tel:123456789">Call to order</a>
+          <a class="btn" href="https://www.facebook.com/zelayasbakeryllc">Message us on Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-deep reviews" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <div class="rating">
+
+        <h2 id="reviews-title">The best in town, according to our customers</h2>
+        <p class="figure" aria-label="4.7 out of 5">4.7</p>
+        <span class="label">from 295 Google reviews</span>
+      </div>
+      <div class="quotes">
+        <blockquote>
+          <p>·So much variety, and all of it fresh and colourful.·</p>
+          <span class="label">A Google review</span>
+        </blockquote>
+        <blockquote>
+          <p>·A friendly family behind the counter.·</p>
+          <span class="label">A Google review</span>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band-light visit" id="visit" aria-labelledby="visit-title">
+    <div class="wrap">
+      <div>
+        <h2 id="visit-title">Come see the counter</h2>
+        <address>
+          <span>123 Example St, Hattiesburg, MS</span>
+          <a href="tel:123456789">123-456-789</a>
+          <a href="mailto:hello@example.com">hello@example.com</a>
+        </address>
+      </div>
+      <div class="actions">
+        <a class="btn btn--primary" href="https://maps.google.com/?q=Example+St+Hattiesburg,+MS">Get directions</a>
+        <a class="btn" href="https://www.facebook.com/zelayasbakeryllc">Message us on Facebook</a>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <small>Zelaya's Bakery, Hattiesburg, MS</small>
+    <small>Free preview by Brightfront Studio</small>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn" href="tel:123456789">Call</a>
+  <a class="btn btn--primary" href="https://maps.google.com/?q=Example+St+Hattiesburg,+MS">Directions</a>
+  <a class="btn" href="https://www.facebook.com/zelayasbakeryllc">Message</a>
+</nav>
+
+<script>
+(function () {
+  var OPEN = 11 * 60;
+  var CLOSE = { 0: 16 * 60, 1: 20 * 60, 2: 20 * 60, 3: 20 * 60, 4: 20 * 60, 5: 20 * 60 + 30, 6: 20 * 60 + 30 };
+  var LABEL = { 0: "4 PM", 1: "8 PM", 2: "8 PM", 3: "8 PM", 4: "8 PM", 5: "8:30 PM", 6: "8:30 PM" };
+  var DAYS = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+  try {
+    var parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/Chicago", weekday: "short", hour: "numeric", minute: "numeric", hourCycle: "h23"
+    }).formatToParts(new Date());
+    var get = function (t) { for (var i = 0; i < parts.length; i++) { if (parts[i].type === t) return parts[i].value; } return ""; };
+    var day = DAYS[get("weekday")];
+    var mins = (parseInt(get("hour"), 10) % 24) * 60 + parseInt(get("minute"), 10);
+    if (day === undefined || isNaN(mins)) return;
+
+
+    var status = document.getElementById("today-status");
+    var note = document.getElementById("today-note");
+    if (mins < OPEN) {
+      status.textContent = "Opens today at 11 AM.";
+      note.textContent = "Open until " + LABEL[day] + " today.";
+    } else if (mins < CLOSE[day]) {
+      status.textContent = "Open now, until " + LABEL[day] + ".";
+      note.textContent = "Times are Hattiesburg local time.";
+    } else {
+      var next = (day + 1) % 7;
+      status.textContent = "Closed now. Opens tomorrow at 11 AM.";
+      note.textContent = "Tomorrow we close at " + LABEL[next] + ".";
+    }
+    var rows = document.querySelectorAll("#hours-list li");
+    for (var r = 0; r < rows.length; r++) {
+      if (parseInt(rows[r].getAttribute("data-days"), 10) === day) {
+        rows[r].classList.add("is-today");
+        rows[r].setAttribute("aria-current", "date");
+      }
+    }
+  } catch (e) { /* static text stays */ }
+})();
+</script>
+</body>
+</html>
