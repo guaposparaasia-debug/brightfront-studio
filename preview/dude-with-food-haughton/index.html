@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dude With Food | Smash burgers in Haughton, LA</title>
+<meta name="description" content="Roadside food truck in Haughton, LA. Smash burgers, patty melts, hand-cut fries and homemade cookies. Call ahead to order.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Hallmark v2.0.0 · theme: manifesto (dealt 2/3, seed homemade-smash-burger-food-2fef·91a5d778·2026-11-01·r0) · genre editorial · job: call in an order / come eat */
+/* critique: the hero is loud and the call is clear; the record menu leans on type alone, so the photo strip has to carry appetite without colour. */
+/* Brightfront rule: no single coloured headline word, so the hero head is one colour. waive 55b: hero head lines are nowrap spans sized in cqi, leaded at --lh-tight. */
+:root {
+  --color-paper: oklch(13% 0.01 60); --color-paper-2: oklch(17% 0.011 60); --color-paper-3: oklch(22% 0.012 60);
+  --color-ink: oklch(95% 0.014 85); --color-ink-2: oklch(84% 0.012 80); --color-muted: oklch(64% 0.016 65);
+  --color-rule: oklch(31% 0.014 60);
+  --color-accent: oklch(56% 0.228 28); --color-accent-deep: oklch(49% 0.2 28); --color-accent-text: oklch(64% 0.22 28); --color-accent-ink: oklch(98.5% 0.004 90);
+  --color-focus: oklch(64% 0.22 28);
+  --font-display: "Anton", "Impact", sans-serif; --font-body: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-outlier: var(--font-body);
+  --radius-card: 0; --radius-pill: 0; --rule-hair: 1px; --rule-bar: 4px; --shadow-card: none;
+  --tracking-display: 0.004em; --display-weight: 400; --lh-tight: 0.9; --text-display: clamp(4.5rem, 12vw, 13rem);
+  --text-sm: 0.9375rem; --text-base: 1.0625rem; --text-lead: 1.3125rem;
+  --text-h2: clamp(2.75rem, 6vw, 5rem); --text-h3: clamp(1.5rem, 2.6vw, 2.125rem);
+  --space-xs: 0.5rem; --space-sm: 0.75rem; --space-md: 1.25rem; --space-lg: 2rem; --space-xl: 3.5rem; --space-2xl: 6rem;
+  --container: 76rem; --measure: 36rem; --bar-h: 4.25rem;
+  --dur-short: 120ms; --dur-long: 700ms; --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--color-paper); color: var(--color-ink-2);
+  font-family: var(--font-body); font-size: var(--text-base); line-height: 1.55;
+}
+img { display: block; max-width: 100%; height: auto; }
+::selection { background: var(--color-accent); color: var(--color-accent-ink); }
+h1, h2, h3 {
+  font-family: var(--font-display); font-weight: var(--display-weight); text-transform: uppercase;
+  letter-spacing: var(--tracking-display); line-height: 1.02; color: var(--color-ink); margin: 0;
+  overflow-wrap: break-word; min-width: 0;
+}
+h2 { font-size: var(--text-h2); }
+h3 { font-size: var(--text-h3); }
+p { margin: 0; }
+a { color: var(--color-ink); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; transition: color var(--dur-short) ease; }
+a:hover { color: var(--color-accent-text); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; transition: none; }
+.wrap { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--space-md); }
+@media (min-width: 48rem) { .wrap { padding-inline: var(--space-lg); } }
+.section { padding-block: var(--space-xl); border-top: var(--rule-hair) solid var(--color-rule); }
+@media (min-width: 48rem) { .section { padding-block: var(--space-2xl); } }
+.section > .wrap > h2 { margin-bottom: var(--space-lg); }
+
+/* buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 3rem;
+  padding: var(--space-sm) var(--space-lg); border: var(--rule-hair) solid transparent; border-radius: var(--radius-pill);
+  font-family: var(--font-body); font-weight: 600; font-size: var(--text-base); text-decoration: none; line-height: 1.2;
+  transition: background-color var(--dur-short) ease, color var(--dur-short) ease, border-color var(--dur-short) ease;
+}
+.btn--primary { background: var(--color-accent); color: var(--color-accent-ink); }
+.btn--primary:hover { background: var(--color-accent-deep); color: var(--color-accent-ink); }
+.btn--secondary { border-color: var(--color-ink-2); color: var(--color-ink); }
+.btn--secondary:hover { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-accent-ink); }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+
+/* header */
+.top { border-bottom: var(--rule-bar) solid var(--color-ink); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); min-height: 4.25rem; }
+.brand { font-family: var(--font-display); text-transform: uppercase; font-size: 1.625rem; letter-spacing: var(--tracking-display); color: var(--color-ink); text-decoration: none; line-height: 1; }
+.brand:hover { color: var(--color-ink); }
+.nav { display: flex; align-items: center; gap: var(--space-md); font-size: var(--text-sm); font-weight: 500; }
+.nav a { text-decoration: none; color: var(--color-ink-2); }
+.nav a:hover { color: var(--color-accent-text); }
+.nav .nav-phone { color: var(--color-ink); font-weight: 600; white-space: nowrap; }
+.brand { white-space: nowrap; }
+@media (max-width: 47.99rem) { .nav .nav-link { display: none; } }
+
+/* hero */
+.hero { padding-block: var(--space-lg) var(--space-xl); }
+.hero .wrap { display: grid; gap: var(--space-lg); align-items: center; }
+@media (min-width: 60rem) {
+  .hero { padding-block: var(--space-xl); }
+  .hero .wrap { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: var(--space-xl); }
+}
+.display { line-height: var(--lh-tight); container-type: inline-size; margin-bottom: var(--space-md); }
+.display > span { display: block; white-space: nowrap; font-size: 18cqi; }
+.hero .lead { font-size: var(--text-lead); line-height: 1.4; color: var(--color-ink-2); max-width: 30rem; margin-bottom: var(--space-lg); }
+.reveal { animation: wipe var(--dur-long) var(--ease-out) both; }
+@keyframes wipe { from { clip-path: inset(100% 0 0 0); } to { clip-path: inset(0); } }
+@media (prefers-reduced-motion: reduce) { .reveal { animation: none; } html { scroll-behavior: auto; } }
+
+/* photographs: printed in the off-white ink */
+.photo { margin: 0; background: var(--color-paper); border: var(--rule-hair) solid var(--color-rule); overflow: hidden; }
+.photo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) sepia(0.14) contrast(1.24) brightness(0.98); }
+.hero .photo { aspect-ratio: 4 / 5; max-height: 34rem; }
+@media (max-width: 59.99rem) { .hero .photo { aspect-ratio: 4 / 3; } }
+
+/* the record: menu */
+.record { list-style: none; margin: 0; padding: 0; border-top: var(--rule-hair) solid var(--color-rule); }
+.record li { display: grid; grid-template-columns: 3rem minmax(0, 1fr); gap: var(--space-xs) var(--space-md); padding-block: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.record .num { font-family: var(--font-display); font-size: var(--text-h3); color: var(--color-muted); line-height: 1.02; }
+.record p { grid-column: 2; max-width: var(--measure); }
+@media (min-width: 48rem) {
+  .record li { grid-template-columns: 5rem minmax(0, 1fr) minmax(0, 1fr); align-items: baseline; }
+  .record p { grid-column: 3; }
+}
+.note { margin-top: var(--space-lg); color: var(--color-ink); font-weight: 600; }
+
+/* reviews */
+.well { background: var(--color-paper-2); }
+.quotes { display: grid; gap: var(--space-lg); margin: 0; }
+@media (min-width: 48rem) { .quotes { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-xl); } }
+.quotes blockquote { margin: 0; padding-top: var(--space-md); border-top: var(--rule-hair) solid var(--color-rule); }
+.quotes blockquote p { font-size: var(--text-lead); line-height: 1.4; color: var(--color-ink); }
+.quotes cite { display: block; margin-top: var(--space-sm); font-style: normal; font-size: var(--text-sm); font-weight: 500; color: var(--color-muted); }
+.rating { margin-top: var(--space-lg); font-size: var(--text-sm); font-weight: 500; color: var(--color-muted); }
+
+/* the truck */
+.truck-text { max-width: var(--measure); margin-bottom: var(--space-lg); }
+.strip { display: grid; gap: var(--space-sm); grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.strip .photo { aspect-ratio: 1 / 1; }
+.strip .photo:first-child { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+@media (min-width: 48rem) {
+  .strip { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr); }
+  .strip .photo:first-child { grid-column: auto; aspect-ratio: auto; }
+}
+
+/* hours */
+.hours-grid { display: grid; gap: var(--space-lg); }
+@media (min-width: 48rem) { .hours-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-xl); } }
+.today { background: var(--color-paper-2); border-top: var(--rule-bar) solid var(--color-ink); padding: var(--space-md) var(--space-md) var(--space-lg); }
+.today h3 { margin-bottom: var(--space-xs); }
+.today-state { font-size: var(--text-lead); line-height: 1.35; color: var(--color-ink); }
+.today-sub { margin-top: var(--space-xs); font-size: var(--text-sm); color: var(--color-muted); font-weight: 500; }
+.week { margin: 0; border-top: var(--rule-hair) solid var(--color-rule); }
+.week div { display: flex; justify-content: space-between; gap: var(--space-md); padding-block: var(--space-sm); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.week dt { margin: 0; }
+.week dd { margin: 0; color: var(--color-muted); }
+.week .is-today dt, .week .is-today dd { color: var(--color-ink); font-weight: 600; }
+
+/* the one red field */
+.band--red { background: var(--color-accent); color: var(--color-accent-ink); padding-block: var(--space-xl); }
+@media (min-width: 48rem) { .band--red { padding-block: var(--space-2xl); } }
+.band--red h2 { color: var(--color-accent-ink); margin-bottom: var(--space-md); }
+.band--red p { max-width: var(--measure); margin-bottom: var(--space-lg); }
+.band--red a { color: var(--color-accent-ink); }
+.band--red .btn--primary { background: var(--color-paper); color: var(--color-ink); }
+.band--red .btn--primary:hover { background: var(--color-paper-3); color: var(--color-ink); }
+.band--red .btn--secondary { border-color: var(--color-accent-ink); color: var(--color-accent-ink); }
+.band--red .btn--secondary:hover { background: var(--color-paper); border-color: var(--color-paper); color: var(--color-ink); }
+.band--red a:focus-visible { outline-color: var(--color-accent-ink); }
+.addr { margin-top: var(--space-lg); font-weight: 500; }
+
+/* footer */
+.foot { padding-block: var(--space-lg); font-size: var(--text-sm); color: var(--color-muted); }
+.foot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-sm); }
+.foot a { color: var(--color-muted); }
+
+/* sticky phone bar */
+.mbar { display: none; }
+@media (max-width: 47.99rem) {
+  body { padding-bottom: calc(var(--bar-h) + env(safe-area-inset-bottom, 0px)); }
+  .mbar {
+    display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-xs);
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+    padding: var(--space-xs) var(--space-xs) calc(var(--space-xs) + env(safe-area-inset-bottom, 0px));
+    background: var(--color-paper); border-top: var(--rule-hair) solid var(--color-rule);
+  }
+  .mbar .btn { padding-inline: var(--space-xs); font-size: var(--text-sm); min-height: 3.125rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">Dude With Food</a>
+    <nav class="nav" aria-label="Main">
+      <a class="nav-link" href="#menu">Menu</a>
+      <a class="nav-link" href="#hours">Hours</a>
+      <a class="nav-link" href="#find">Find us</a>
+      <a class="nav-phone" href="tel:123456789">123-456-789</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-head">
+    <div class="wrap">
+      <div>
+        <h1 id="hero-head" class="display reveal">
+          <span>Smash</span>
+          <span>burgers</span>
+          <span>off the I-20</span>
+        </h1>
+        <p class="lead">Homemade burgers, hand-cut fries and cookies from a roadside truck.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="tel:123456789">Call to order</a>
+          <a class="btn btn--secondary" href="https://maps.google.com/?q=Example+St+Haughton,+LA">Directions</a>
+        </div>
+      </div>
+      <figure class="photo">
+        <img src="photo-hero.jpg" alt="A bacon cheeseburger piled on hand-cut fries" width="960" height="1200" fetchpriority="high">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="menu" aria-labelledby="menu-head">
+    <div class="wrap">
+      <h2 id="menu-head">Off the flat-top</h2>
+      <ol class="record">
+        <li><span class="num">01</span><h3>Smash burgers</h3><p>Bacon cheeseburgers, smashed thin and stacked high.</p></li>
+        <li><span class="num">02</span><h3>Patty melts</h3><p>Griddled, cheesy and built to fill you up.</p></li>
+        <li><span class="num">03</span><h3>Loaded sandwiches</h3><p>Stacked tall. Bring an appetite.</p></li>
+        <li><span class="num">04</span><h3>Hand-cut fries</h3><p>Homemade, cut by hand, never from a bag.</p></li>
+        <li><span class="num">05</span><h3>Homemade sweets</h3><p>Cookies, brownies and oatmeal cream pies, baked by his wife.</p></li>
+      </ol>
+      <p class="note">The menu moves with the day. <a href="tel:123456789">Call for today's menu</a>.</p>
+    </div>
+  </section>
+
+  <section class="section well" aria-labelledby="say-head">
+    <div class="wrap">
+      <h2 id="say-head">Better than the drive-thru</h2>
+      <div class="quotes">
+        <blockquote>
+          <p>"The best bacon cheeseburger around, with real homemade fries."</p>
+          <cite>A Google review</cite>
+        </blockquote>
+        <blockquote>
+          <p>"Big portions, fair prices and friendly service. Beats fast food on a road trip, and we'll stop again."</p>
+          <cite>A Google review</cite>
+        </blockquote>
+      </div>
+      <p class="rating">Rated 4.9 from 116 Google reviews.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="truck-head">
+    <div class="wrap">
+      <h2 id="truck-head">Eat under the awning</h2>
+      <p class="truck-text">One black trailer, one owner at the grill. Take it to go, or sit at the picnic tables under the covered awning.</p>
+      <div class="strip">
+        <figure class="photo"><img src="photo-1.jpg" alt="A smash burger, hand-cut fries and a homemade cookie in a to-go box" width="1200" height="800" loading="lazy"></figure>
+        <figure class="photo"><img src="photo-2.jpg" alt="Grilled loaded sandwiches, cut and stacked high" width="600" height="600" loading="lazy"></figure>
+        <figure class="photo"><img src="photo-3.jpg" alt="A smash cheeseburger with bacon, up close" width="600" height="600" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="hours" aria-labelledby="hours-head">
+    <div class="wrap">
+      <h2 id="hours-head">Weekdays only</h2>
+      <div class="hours-grid">
+        <div class="today" aria-live="polite">
+          <h3>Today</h3>
+          <p class="today-state" id="today-state">Open Monday to Friday, 10 AM to 7 PM. Closed weekends.</p>
+          <p class="today-sub" id="today-sub">Times are Haughton local time.</p>
+        </div>
+        <dl class="week" id="week">
+          <div data-day="1"><dt>Monday</dt><dd>10 AM to 7 PM</dd></div>
+          <div data-day="2"><dt>Tuesday</dt><dd>10 AM to 7 PM</dd></div>
+          <div data-day="3"><dt>Wednesday</dt><dd>10 AM to 7 PM</dd></div>
+          <div data-day="4"><dt>Thursday</dt><dd>10 AM to 7 PM</dd></div>
+          <div data-day="5"><dt>Friday</dt><dd>10 AM to 7 PM</dd></div>
+          <div data-day="6"><dt>Saturday</dt><dd>Closed</dd></div>
+          <div data-day="0"><dt>Sunday</dt><dd>Closed</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="band--red" id="find" aria-labelledby="find-head">
+    <div class="wrap">
+      <h2 id="find-head">Call ahead. It gets busy.</h2>
+      <p>Phone your order in and it'll be ready when you pull up. Handy stop off the I-20.</p>
+      <div class="actions">
+        <a class="btn btn--primary" href="tel:123456789">Call 123-456-789</a>
+        <a class="btn btn--secondary" href="https://www.facebook.com/326622618156347">Message us on Facebook</a>
+      </div>
+      <p class="addr">123 Example St, Haughton, LA. <a href="https://maps.google.com/?q=Example+St+Haughton,+LA">Get directions</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Dude With Food, Haughton, LA. <a href="mailto:hello@example.com">hello@example.com</a></span>
+    <span>Free preview by Brightfront Studio</span>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a class="btn btn--primary" href="tel:123456789">Call</a>
+  <a class="btn btn--secondary" href="https://maps.google.com/?q=Example+St+Haughton,+LA">Directions</a>
+  <a class="btn btn--secondary" href="https://www.facebook.com/326622618156347">Message</a>
+</nav>
+
+<script>
+(function () {
+  var state = document.getElementById('today-state');
+  var sub = document.getElementById('today-sub');
+  if (!state || !window.Intl) return;
+  try {
+    var parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Chicago', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23'
+    }).formatToParts(new Date());
+    var get = function (t) { for (var i = 0; i < parts.length; i++) { if (parts[i].type === t) return parts[i].value; } return ''; };
+    var day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(get('weekday'));
+    var mins = (parseInt(get('hour'), 10) % 24) * 60 + parseInt(get('minute'), 10);
+    if (day < 0 || isNaN(mins)) return;
+    var weekday = day >= 1 && day <= 5;
+    var open = 10 * 60, close = 19 * 60;
+    if (weekday && mins >= open && mins < close) {
+      state.textContent = 'Open now, until 7 PM.';
+      sub.textContent = close - mins <= 60 ? 'Closing soon. Call your order in now.' : 'Call ahead and skip the wait.';
+    } else if (weekday && mins < open) {
+      state.textContent = 'Closed now. Opens today at 10 AM.';
+      sub.textContent = 'Times are Haughton local time.';
+    } else if (day >= 1 && day <= 4) {
+      state.textContent = 'Closed now. Opens tomorrow at 10 AM.';
+      sub.textContent = 'Times are Haughton local time.';
+    } else {
+      state.textContent = 'Closed for the weekend. Opens Monday at 10 AM.';
+      sub.textContent = 'Times are Haughton local time.';
+    }
+    var row = document.querySelector('#week [data-day="' + day + '"]');
+    if (row) { row.classList.add('is-today'); row.setAttribute('aria-current', 'date'); }
+  } catch (e) { /* keep the text fallback */ }
+})();
+</script>
+</body>
+</html>

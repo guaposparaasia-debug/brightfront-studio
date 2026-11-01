@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crossroads 46 Diner | Breakfast, lunch and dinner in Spencer, IN</title>
+<meta name="description" content="Small-town diner in Spencer, Indiana: big breakfasts, patty melts, burgers, meatloaf and coconut pie. Seat yourself.">
+<link href="https://fonts.googleapis.com/css2?family=Six+Caps&family=Bevan&family=Archivo+Narrow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Hallmark v2.0.0 · theme: broadside (dealt 3/3, seed route-diner-indiana-breakfast-2c97·91a5d778·2026-11-01·r1) · genre editorial · job: visit / eat in */
+/* Critique: Six Caps fitting uses cqi clamp rather than runtime measurement; grain is CSS turbulence. */
+:root {
+  --color-paper: oklch(92% 0.028 88);
+  --color-paper-2: oklch(88.5% 0.032 88);
+  --color-paper-3: oklch(85% 0.036 86);
+  --color-ink: oklch(18% 0.01 50);
+  --color-ink-2: oklch(30% 0.012 50);
+  --color-muted: oklch(43% 0.02 62);
+  --color-rule: oklch(75% 0.028 82);
+  --color-accent: oklch(53% 0.19 33);
+  --color-accent-ink: oklch(95.5% 0.018 88);
+  --color-focus: oklch(53% 0.19 33);
+  --font-display: "Six Caps", "Impact", sans-serif;
+  --font-display-2: "Bevan", Georgia, serif;
+  --font-body: "Archivo Narrow", "Arial Narrow", ui-sans-serif, sans-serif;
+  --font-outlier: var(--font-body);
+  --radius-card: 0;
+  --radius-pill: 0;
+  --rule-hair: 1px;
+  --rule-bar: 5px;
+  --rule-frame: 3px;
+  --shadow-card: none;
+  --tracking-display: 0.02em;
+  --display-weight: 400;
+  --grain: 0.08;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --text-sm: 0.875rem;
+  --text-base: 1.125rem;
+  --text-lg: 1.25rem;
+  --container: 72rem;
+}
+html, body {
+  overflow-x: clip;
+  margin: 0;
+  padding: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: var(--text-base);
+  line-height: 1.5;
+}
+body {
+  position: relative;
+}
+.grained {
+  position: relative;
+  isolation: isolate;
+}
+.grained::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: var(--grain);
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+h1, .display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: var(--tracking-display);
+  margin: 0;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+.hero-text { container-type: inline-size; min-width: 0; }
+img { max-width: 100%; height: auto; display: block; }
+figure { margin: 0; }
+.hero .frame--photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.fit {
+  display: block;
+  white-space: nowrap;
+  font-size: clamp(2.5rem, 18cqi, 8rem);
+}
+h2, h3, .wordmark {
+  font-family: var(--font-display-2);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0;
+  margin: 0 0 var(--space-md);
+}
+.container {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--space-lg);
+}
+@media (min-width: 1200px) {
+  .container { padding-inline: var(--space-2xl); }
+}
+.rule-bar {
+  border-top: var(--rule-bar) solid var(--color-ink);
+}
+.frame, .btn--frame {
+  border: var(--rule-frame) solid var(--color-ink);
+  box-shadow: inset 0 0 0 3px var(--color-paper), inset 0 0 0 4px var(--color-ink);
+}
+.frame { padding: var(--space-lg); }
+.frame--photo { padding: var(--space-2xs); }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 var(--space-xl);
+  border: 3px solid var(--color-ink);
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font: 600 var(--text-base)/1 var(--font-body);
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn--frame {
+  background: transparent;
+  color: var(--color-ink);
+}
+a {
+  color: var(--color-ink);
+  text-decoration: underline;
+}
+a:hover, a:focus-visible {
+  color: var(--color-accent);
+}
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+::selection {
+  background: color-mix(in oklab, var(--color-accent) 30%, transparent);
+}
+.hero {
+  padding-block: var(--space-xl) var(--space-2xl);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+  gap: var(--space-xl);
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr); }
+}
+.hero-text p {
+  font-size: var(--text-lg);
+  margin: var(--space-md) 0 var(--space-lg);
+  max-width: 28em;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+.today {
+  background: var(--color-paper-2);
+  padding-block: var(--space-xl);
+}
+.today h2 {
+  margin-bottom: var(--space-sm);
+}
+#status {
+  font-family: var(--font-display-2);
+  font-size: var(--text-lg);
+}
+.menu {
+  padding-block: var(--space-2xl);
+}
+.menu-list {
+  display: grid;
+  gap: var(--space-md);
+  max-width: 40rem;
+}
+.menu-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-md);
+  padding-block: var(--space-sm);
+  border-bottom: var(--rule-hair) solid var(--color-rule);
+}
+.menu-item h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.menu-item p {
+  margin: var(--space-2xs) 0 0;
+  color: var(--color-ink-2);
+  font-size: var(--text-sm);
+}
+.photos {
+  padding-block: var(--space-xl);
+  background: var(--color-paper-2);
+}
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: var(--space-md);
+}
+.photo-grid figure {
+  margin: 0;
+}
+.photo-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+figcaption {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  margin-top: var(--space-xs);
+  font-weight: 500;
+}
+.reviews {
+  padding-block: var(--space-2xl);
+}
+.quote {
+  max-width: 36rem;
+  margin-bottom: var(--space-lg);
+  padding-left: var(--space-md);
+  border-left: var(--rule-bar) solid var(--color-ink);
+}
+.quote p {
+  margin: 0 0 var(--space-xs);
+  font-size: var(--text-lg);
+}
+.quote cite {
+  font-style: normal;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+.location {
+  padding-block: var(--space-xl);
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+.location h2, .location p, .location a {
+  color: var(--color-accent-ink);
+}
+.location :focus-visible { outline-color: var(--color-accent-ink); }
+.btn:active { transform: translateY(1px); }
+.location a:hover {
+  color: var(--color-paper);
+}
+.cta {
+  padding-block: var(--space-2xl);
+  text-align: center;
+}
+.footer {
+  padding-block: var(--space-lg);
+  border-top: var(--rule-hair) solid var(--color-rule);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+  text-align: center;
+}
+.sticky-bar {
+  display: none;
+}
+@media (max-width: 767px) {
+  .sticky-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: var(--color-paper);
+    border-top: var(--rule-bar) solid var(--color-ink);
+  }
+  .sticky-bar a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    font: 600 var(--text-base)/1 var(--font-body);
+    text-decoration: none;
+    color: var(--color-ink);
+    border-right: var(--rule-hair) solid var(--color-rule);
+  }
+  .sticky-bar a:last-child { border-right: none; }
+  .sticky-bar a:first-child {
+    background: var(--color-ink);
+    color: var(--color-paper);
+  }
+  body { padding-bottom: 56px; }
+}
+.btn:hover, .btn:focus-visible, .sticky-bar a:first-child:hover { color: var(--color-paper); }
+.btn--frame:hover, .btn--frame:focus-visible { color: var(--color-ink); }
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+</style>
+</head>
+<body class="grained">
+<header class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1><span class="fit">Crossroads 46</span><span class="fit">Diner</span></h1>
+        <p>Big plates of eggs, bacon and biscuits in Spencer.</p>
+        <div class="actions">
+          <a class="btn" href="tel:123456789">Call</a>
+          <a class="btn btn--frame" href="https://maps.google.com/?q=Example+St+Spencer,+IN">Directions</a>
+        </div>
+      </div>
+      <figure class="frame frame--photo">
+        <img src="photo-hero.jpg" alt="A breakfast plate: fried egg on hash browns, rye toast and gravy">
+        <figcaption>Eggs, hash browns and rye toast</figcaption>
+      </figure>
+    </div>
+  </div>
+</header>
+
+<section class="today grained">
+  <div class="container">
+    <h2>Today</h2>
+    <div id="status">Hours: Mon to Sat 6 AM to 8 PM, Sun 8 AM to 2 PM. Call to confirm.</div>
+  </div>
+</section>
+
+<section class="menu">
+  <div class="container">
+    <h2>On the menu</h2>
+    <div class="menu-list">
+      <div class="menu-item">
+        <div>
+          <h3>Breakfast</h3>
+          <p>Eggs, bacon, fried potatoes, hash browns, biscuits and gravy, French toast. Generous sides.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <h3>Reuben</h3>
+          <p>Classic sandwich with the usual sides.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <h3>Patty melt</h3>
+          <p>On Texas toast with onion rings.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <h3>Bacon cheeseburger</h3>
+          <p>With crinkle fries.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <h3>Meatloaf</h3>
+          <p>With mashed potatoes and corn.</p>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <h3>Coconut pie</h3>
+          <p>House dessert.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="photos grained">
+  <div class="container">
+    <h2>From the kitchen</h2>
+    <div class="photo-grid">
+      <figure class="frame frame--photo">
+        <img src="photo-1.jpg" alt="A bacon cheeseburger with crinkle fries">
+        <figcaption>Bacon cheeseburger and crinkle fries</figcaption>
+      </figure>
+      <figure class="frame frame--photo">
+        <img src="photo-2.jpg" alt="A patty melt on grilled Texas toast">
+        <figcaption>Patty melt on Texas toast</figcaption>
+      </figure>
+      <figure class="frame frame--photo">
+        <img src="photo-3.jpg" alt="A patty melt with onion rings">
+        <figcaption>Patty melt with onion rings</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="container">
+    <h2>What people say</h2>
+    <div class="quote">
+      <p>Huge portions at fair prices, worth the drive.</p>
+      <cite>a Google review</cite>
+    </div>
+    <div class="quote">
+      <p>Quick friendly service. Our regular spot.</p>
+      <cite>a Google review</cite>
+    </div>
+  </div>
+</section>
+
+<section class="location grained">
+  <div class="container">
+    <h2>Find us</h2>
+    <p>123 Example St, Spencer, IN</p>
+    <p>Mon to Sat 6 AM to 8 PM, Sun 8 AM to 2 PM</p>
+    <p><a href="tel:123456789">123-456-789</a> <a href="mailto:hello@example.com">hello@example.com</a></p>
+    <p><a href="https://www.facebook.com/crossroad46dine">Message us on Facebook</a></p>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2>Come eat</h2>
+    <p>Seat yourself. Big breakfasts, fair prices, friendly service.</p>
+    <div class="actions" style="justify-content: center;">
+      <a class="btn" href="tel:123456789">Call</a>
+      <a class="btn btn--frame" href="https://maps.google.com/?q=Example+St+Spencer,+IN">Directions</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>Free preview by Brightfront Studio</p>
+    <p>123 Example St, Spencer, IN 123-456-789</p>
+  </div>
+</footer>
+
+<div class="sticky-bar">
+  <a href="tel:123456789">Call</a>
+  <a href="https://maps.google.com/?q=Example+St+Spencer,+IN">Directions</a>
+  <a href="https://www.facebook.com/crossroad46dine">Message</a>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var el = document.getElementById('status');
+  if (!el) return;
+  try {
+    var now = new Date();
+    var fmt = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Indiana/Indianapolis',
+      weekday: 'short',
+      hour: 'numeric',
+      minute: 'numeric',
+      hourCycle: 'h23'
+    });
+    var parts = fmt.formatToParts(now);
+    var dayName = '';
+    var hour = 0;
+    var minute = 0;
+    for (var i = 0; i < parts.length; i++) {
+      var p = parts[i];
+      if (p.type === 'weekday') dayName = p.value;
+      if (p.type === 'hour') hour = parseInt(p.value, 10);
+      if (p.type === 'minute') minute = parseInt(p.value, 10);
+    }
+    var days = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+    var day = days[dayName] || 0;
+    var time = hour + minute / 60;
+    var isOpen = false;
+    if (day === 0) {
+      isOpen = time >= 8 && time < 14;
+    } else {
+      isOpen = time >= 6 && time < 20;
+    }
+    var status = isOpen ? 'Open now' : 'Closed now';
+    el.textContent = status + '. Mon to Sat 6 AM to 8 PM, Sun 8 AM to 2 PM.';
+  } catch (e) {
+    /* keep fallback */
+  }
+});
+</script>
+</body>
+</html>
