@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RC's Southern Cooking, Marietta, GA</title>
+<meta name="description" content="Soul food plates in East Marietta. Fried chicken, turkey wings, catfish, greens and mac and cheese, to stay or to go.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Archivo:wght@400;500&family=Archivo+Narrow:wght@600&display=swap" rel="stylesheet">
+<style>
+/* Hallmark v2.0.0 · theme: solstice (dealt 1/3, seed black-owned-soul-food-restaurant-79bd·36d3d72f·2026-11-02·r0) · genre editorial · job: come eat or pick up a plate */
+/* critique: solstice long-light; the plates list carries the page, photos stay small and square so daylight takeout shots sit quietly on the cream, vermilion only on Call and the focus ring. */
+:root {
+  --color-paper: oklch(94% 0.03 80); --color-paper-2: oklch(97% 0.02 85); --color-paper-3: oklch(89% 0.05 80);
+  --color-ink: oklch(27% 0.05 50); --color-ink-2: oklch(36% 0.05 50); --color-muted: oklch(48% 0.06 55);
+  --color-rule: oklch(84% 0.06 78);
+  --color-accent: oklch(54% 0.20 24); --color-accent-ink: oklch(97% 0.02 85); --color-focus: oklch(54% 0.20 24);
+  --color-gold: oklch(74% 0.14 75); --color-gold-2: oklch(84% 0.11 80); --color-slot: var(--color-gold);
+  --font-display: "Yeseva One", ui-serif, Georgia, serif; --font-body: "Archivo", ui-sans-serif, sans-serif;
+  --font-outlier: "Archivo Narrow", ui-sans-serif, sans-serif;
+  --radius-card: 0; --radius-pill: 999px; --rule-hair: 1px; --rule-bar: 2px;
+  --shadow-card: 10px 10px 0 var(--color-paper-3);
+  --tracking-display: -0.005em; --display-weight: 400;
+
+  --space-xs: 4px; --space-sm: 8px; --space-md: 12px; --space-lg: 16px; --space-xl: 24px;
+  --space-2xl: 40px; --space-3xl: 64px; --space-4xl: 96px;
+  --text-sm: 14px; --text-base: 17px; --text-lg: 20px;
+  --text-h3: 26px; --text-h2: clamp(32px, 4.2vw, 46px); --text-h1: clamp(42px, 6vw, 72px);
+  --measure: 62ch; --container: 1120px;
+  --dur-short: 140ms; --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --bar-h: 64px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink-2);
+  font: 400 var(--text-base)/1.55 var(--font-body);
+}
+img { display: block; max-width: 100%; height: auto; }
+::selection { background: color-mix(in oklab, var(--color-gold) 40%, transparent); }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  line-height: 1;
+  letter-spacing: var(--tracking-display);
+  color: var(--color-ink);
+  margin: 0;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+h1 { font-size: var(--text-h1); }
+h2 { font-size: var(--text-h2); }
+h3 { font-size: var(--text-h3); }
+p { margin: 0; max-width: var(--measure); }
+
+a { color: var(--color-ink); text-decoration: underline; text-decoration-color: var(--color-ink); text-underline-offset: 3px; transition: color var(--dur-short) var(--ease-out), text-decoration-color var(--dur-short) var(--ease-out); }
+a:hover { color: var(--color-accent); text-decoration-color: var(--color-accent); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; transition: none; }
+
+.wrap { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--space-xl); }
+.small, figcaption { font: 600 13px/1.4 var(--font-outlier); color: var(--color-muted); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 48px; padding: var(--space-md) var(--space-xl);
+  border: 0; border-radius: var(--radius-pill);
+  font: 600 16px/1 var(--font-outlier);
+  background: var(--color-accent); color: var(--color-accent-ink);
+  text-decoration: none;
+  transition: background-color var(--dur-short) var(--ease-out);
+}
+.btn:hover { color: var(--color-accent-ink); background: color-mix(in oklab, var(--color-accent) 88%, var(--color-ink)); }
+.btn:active { transform: translateY(1px); }
+.btn--secondary {
+  background: none; color: var(--color-ink); border-radius: 0;
+  min-height: 0; padding: var(--space-lg) 0 var(--space-xs);
+  border-bottom: var(--rule-bar) solid var(--color-ink);
+}
+.btn--secondary:hover { background: none; color: var(--color-accent); border-bottom-color: var(--color-accent); }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-xl); }
+
+/* header */
+.top { border-bottom: var(--rule-hair) solid var(--color-rule); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: var(--space-lg); min-height: 64px; }
+.brand { font: 400 22px/1 var(--font-display); color: var(--color-ink); text-decoration: none; }
+.top a.tel { font: 500 var(--text-sm)/1 var(--font-body); }
+
+/* hero */
+.hero { padding-block: var(--space-2xl) var(--space-3xl); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: var(--space-2xl); align-items: center; }
+.hero-text { display: grid; gap: var(--space-xl); }
+.hero-text p { font-size: var(--text-lg); color: var(--color-ink-2); }
+.hero .rating { font: 500 var(--text-sm)/1.4 var(--font-body); color: var(--color-muted); }
+.photo { margin: 0; display: grid; gap: var(--space-sm); }
+.photo img { border-radius: 0; outline: var(--rule-hair) solid color-mix(in oklab, var(--color-ink) 10%, transparent); outline-offset: -1px; object-fit: cover; width: 100%; }
+.hero .photo img { aspect-ratio: 4 / 3; max-height: 560px; }
+
+/* sections */
+section.block { border-top: var(--rule-bar) solid var(--color-ink); padding-block: var(--space-3xl); }
+.head { display: grid; gap: var(--space-md); margin-bottom: var(--space-2xl); }
+.band { background: var(--color-paper-2); }
+
+/* plates */
+.menu { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: var(--space-2xl); }
+.menu h3 { padding-bottom: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-gold); margin-bottom: var(--space-sm); }
+.list { list-style: none; margin: 0; padding: 0; }
+.list li { padding-block: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-rule); color: var(--color-ink); font-weight: 500; }
+.list li span { display: block; font-weight: 400; font-size: var(--text-sm); color: var(--color-muted); }
+
+/* kitchen photos */
+.pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-xl); }
+.pair .photo img { aspect-ratio: 3 / 2; }
+
+/* today */
+.today { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: start; }
+.well {
+  background: var(--color-paper-2);
+  border: var(--rule-bar) solid var(--color-ink);
+  outline: var(--rule-hair) solid var(--color-gold); outline-offset: -7px;
+  box-shadow: var(--shadow-card);
+  padding: var(--space-xl) var(--space-xl) var(--space-lg);
+}
+.status { font: 400 var(--text-h3)/1.1 var(--font-display); color: var(--color-ink); padding-bottom: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-gold); margin-bottom: var(--space-sm); }
+.hours { width: 100%; border-collapse: collapse; }
+.hours caption { caption-side: bottom; text-align: left; padding-top: var(--space-sm); }
+.hours th, .hours td { text-align: left; padding: var(--space-sm) 0; border-bottom: var(--rule-hair) solid var(--color-rule); font-size: 16px; }
+.hours th { font-weight: 500; color: var(--color-ink); }
+.hours td { text-align: right; color: var(--color-ink-2); }
+.hours tr:last-child th, .hours tr:last-child td { border-bottom: 0; }
+.hours tr.is-today th, .hours tr.is-today td { color: var(--color-accent); font-weight: 500; }
+
+/* room */
+.room { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: center; }
+.room .photo img { aspect-ratio: 4 / 3; }
+.room-text { display: grid; gap: var(--space-lg); }
+
+/* reviews, ink band */
+.band--ink { background: var(--color-ink); color: var(--color-paper); border-top-color: var(--color-ink); }
+.band--ink h2 { color: var(--color-paper); }
+.band--ink .small { color: var(--color-gold-2); }
+.quotes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2xl); margin: 0; }
+.quotes blockquote { margin: 0; display: grid; gap: var(--space-md); padding-top: var(--space-lg); border-top: var(--rule-hair) solid var(--color-gold); }
+.quotes p { font: 400 26px/1.2 var(--font-display); color: var(--color-paper); }
+.quotes cite { font: 600 13px/1.4 var(--font-outlier); font-style: normal; color: var(--color-paper-3); }
+
+/* visit */
+.visit { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: start; }
+.facts { display: grid; gap: var(--space-lg); margin: 0; }
+.facts dt { font: 500 var(--text-sm)/1.3 var(--font-body); color: var(--color-muted); }
+.facts dd { margin: var(--space-xs) 0 0; color: var(--color-ink); font-size: var(--text-lg); }
+
+footer { border-top: var(--rule-hair) solid var(--color-rule); padding-block: var(--space-xl); }
+footer p { font: 600 13px/1.4 var(--font-outlier); color: var(--color-muted); }
+
+/* phone bar */
+.bar { display: none; }
+
+@media (max-width: 860px) {
+  .hero .wrap, .menu, .today, .room, .visit, .quotes { grid-template-columns: minmax(0, 1fr); }
+  .hero { padding-top: var(--space-xl); }
+  section.block { padding-block: var(--space-2xl); }
+}
+@media (max-width: 720px) {
+  .wrap { padding-inline: var(--space-lg); }
+  .pair { grid-template-columns: minmax(0, 1fr); }
+  .top a.tel { display: none; }
+  body { padding-bottom: calc(var(--bar-h) + env(safe-area-inset-bottom, 0px)); }
+  .bar {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; gap: var(--space-sm);
+    position: fixed; inset-inline: 0; bottom: 0; z-index: 10;
+    min-height: var(--bar-h);
+    padding: var(--space-sm) var(--space-lg) calc(var(--space-sm) + env(safe-area-inset-bottom, 0px));
+    background: var(--color-paper-2);
+    border-top: var(--rule-bar) solid var(--color-ink);
+  }
+  .bar a { text-align: center; font: 600 15px/1 var(--font-outlier); }
+  .bar .btn { min-height: 44px; padding-inline: var(--space-md); }
+  .bar .plain { display: flex; align-items: center; justify-content: center; min-height: 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">RC's Southern Cooking</a>
+    <a class="tel" href="tel:123456789">Call 123-456-789</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-text">
+        <h1 id="hero-title">Soul food plates, made in Marietta</h1>
+        <p>Fried chicken, turkey wings, catfish and greens, to stay or to go.</p>
+        <div class="actions">
+          <a class="btn" href="tel:123456789">Call to order</a>
+          <a class="btn btn--secondary" href="https://maps.google.com/?q=123+Example+St+Marietta+GA" target="_blank" rel="noopener">Get directions</a>
+        </div>
+        <p class="rating">4.5 from 581 Google reviews</p>
+      </div>
+      <figure class="photo">
+        <img src="photo-hero.jpg" width="1200" height="900" alt="Golden fried chicken pieces in a takeout box, with mac and cheese and another side behind." fetchpriority="high">
+      </figure>
+    </div>
+  </section>
+
+  <section class="block band" aria-labelledby="plates-title">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="plates-title">Plates and sides</h2>
+        <p>Every plate comes with two sides. Call ahead and it will be ready at the counter.</p>
+      </div>
+      <div class="menu">
+        <div>
+          <h3>Plates</h3>
+          <ul class="list">
+            <li>Fried or baked chicken</li>
+            <li>Turkey wings <span>with a scoop of dressing</span></li>
+            <li>Fried catfish or whiting</li>
+            <li>Pork chops</li>
+            <li>Meatloaf</li>
+            <li>Salisbury steak</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Sides</h3>
+          <ul class="list">
+            <li>Mac and cheese</li>
+            <li>Collard greens</li>
+            <li>Yams</li>
+            <li>Cabbage</li>
+            <li>Baked beans</li>
+            <li>Potato salad</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="kitchen-title">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="kitchen-title">Straight from the kitchen</h2>
+      </div>
+      <div class="pair">
+        <figure class="photo">
+          <img src="photo-1.jpg" width="900" height="600" loading="lazy" alt="A smothered entree in brown gravy with potato salad and mac and cheese in a takeout box.">
+          <figcaption>Smothered plate with potato salad and mac and cheese</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="photo-2.jpg" width="900" height="600" loading="lazy" alt="A saucy barbecue style meat plate with collard greens and potato salad in a takeout box.">
+          <figcaption>Saucy plate with collard greens and potato salad</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="today-title">
+    <div class="wrap today">
+      <div class="head">
+        <h2 id="today-title">Open today?</h2>
+        <p>The hours are short and the kitchen rests Monday and Tuesday, so check before you drive over.</p>
+      </div>
+      <div class="well">
+        <p class="status" id="status" aria-live="polite">Closed Monday and Tuesday. Hours below.</p>
+        <table class="hours">
+          <caption class="small">Eastern time</caption>
+          <tbody>
+            <tr data-day="3"><th scope="row">Wednesday</th><td>12 PM to 7 PM</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td>12 PM to 7 PM</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td>12 PM to 7 PM</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td>12 PM to 6 PM</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>1 PM to 5 PM</td></tr>
+            <tr data-day="1"><th scope="row">Monday</th><td>Closed</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="room-title">
+    <div class="wrap room">
+      <div class="room-text">
+        <h2 id="room-title">A small room with a big kitchen</h2>
+        <p>About eight tables in a strip center in East Marietta. Plenty of folks take a plate home. Order at the counter, and the owner may come out to say hello.</p>
+      </div>
+      <figure class="photo">
+        <img src="photo-3.jpg" width="900" height="675" loading="lazy" alt="The small dining room with a wood look floor, wooden chairs and a chalkboard menu on the wall.">
+        <figcaption>The dining room</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block band--ink" aria-labelledby="said-title">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="said-title">What guests say</h2>
+        <p class="small">4.5 from 581 Google reviews</p>
+      </div>
+      <div class="quotes">
+        <blockquote>
+          <p>A real hidden gem, and the owner came out to introduce himself.</p>
+          <cite>(a Google review)</cite>
+        </blockquote>
+        <blockquote>
+          <p>The greens and baked beans were the best part, with enough left for tomorrow.</p>
+          <cite>(a Google review)</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="visit-title">
+    <div class="wrap visit">
+      <div class="head">
+        <h2 id="visit-title">Come by or call ahead</h2>
+        <p>Call to order a plate, or send a message on Facebook.</p>
+        <div class="actions">
+          <a class="btn" href="tel:123456789">Call to order</a>
+          <a class="btn btn--secondary" href="https://www.facebook.com/rcssoutherncooking/" target="_blank" rel="noopener">Message us on Facebook</a>
+        </div>
+      </div>
+      <dl class="facts">
+        <div><dt>Address</dt><dd><a href="https://maps.google.com/?q=123+Example+St+Marietta+GA" target="_blank" rel="noopener">123 Example St, Marietta, GA</a></dd></div>
+        <div><dt>Phone</dt><dd><a href="tel:123456789">123-456-789</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:hello@example.com">hello@example.com</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap"><p>Free preview by Brightfront Studio</p></div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn" href="tel:123456789">Call</a>
+  <a class="plain" href="https://maps.google.com/?q=123+Example+St+Marietta+GA" target="_blank" rel="noopener">Directions</a>
+  <a class="plain" href="https://www.facebook.com/rcssoutherncooking/" target="_blank" rel="noopener">Message</a>
+</nav>
+
+<script>
+(function () {
+  var HOURS = { 0: [13, 17], 3: [12, 19], 4: [12, 19], 5: [12, 19], 6: [12, 18] };
+  var NAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var KEYS = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+  function fmt(h) { return h === 12 ? "12 PM" : h > 12 ? (h - 12) + " PM" : h + " AM"; }
+  try {
+    var parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/New_York", weekday: "short", hour: "numeric", minute: "numeric", hourCycle: "h23"
+    }).formatToParts(new Date());
+    var p = {};
+    parts.forEach(function (x) { p[x.type] = x.value; });
+    var day = KEYS[p.weekday];
+    var mins = (parseInt(p.hour, 10) % 24) * 60 + parseInt(p.minute, 10);
+    var today = HOURS[day];
+    var text;
+    if (today && mins >= today[0] * 60 && mins < today[1] * 60) {
+      text = "Open now, until " + fmt(today[1]) + ".";
+    } else if (today && mins < today[0] * 60) {
+      text = "Closed now. Opens today at " + fmt(today[0]) + ".";
+    } else {
+      for (var i = 1; i <= 7; i++) {
+        var d = (day + i) % 7;
+        if (HOURS[d]) {
+          text = "Closed now. Opens " + (i === 1 ? "tomorrow" : NAMES[d]) + " at " + fmt(HOURS[d][0]) + ".";
+          break;
+        }
+      }
+    }
+    document.getElementById("status").textContent = text;
+    var row = document.querySelector('.hours tr[data-day="' + day + '"]');
+    if (row) { row.className = "is-today"; row.setAttribute("aria-current", "date"); }
+  } catch (e) { /* fallback text stays */ }
+})();
+</script>
+</body>
+</html>

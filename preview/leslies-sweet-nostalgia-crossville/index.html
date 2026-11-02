@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leslie's Sweet Nostalgia, gluten-free bakery in Crossville, TN</title>
+<meta name="description" content="A dedicated gluten-free, dairy-free and oat-free bakery near Crossville, TN. Pies, whole cakes, cinnamon rolls and cookies. Open Thursday to Saturday, 11 AM to 6 PM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400&family=Geist:wght@400;500&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+/* Hallmark v2.0.0 · theme: specimen (dealt 3/3, seed gluten-free-dairy-free-small-bakery-9dba·36d3d72f·2026-11-02·r0) · genre editorial · job: visit the bakery */
+/* critique: the photos stay in natural colour rather than the ink duotone, because a bakery case printed in grey sells nothing; everything else is oat, ink and hairlines. */
+:root {
+  --color-paper: oklch(96.5% 0.016 82); --color-paper-2: oklch(93.5% 0.02 80); --color-paper-3: oklch(89% 0.024 78);
+  --color-ink: oklch(17% 0.012 60); --color-ink-2: oklch(28% 0.014 60); --color-muted: oklch(49% 0.014 65);
+  --color-rule: oklch(80% 0.018 75); --color-rule-2: oklch(66% 0.02 72);
+  --color-accent: oklch(45% 0.18 262); --color-accent-ink: oklch(97% 0.012 82); --color-focus: oklch(50% 0.18 262);
+  --color-guide: oklch(55% 0.16 262 / 0.5);
+  --color-band-muted: oklch(78% 0.018 75);
+  --font-display: "Bodoni Moda", ui-serif, Georgia, serif; --font-body: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-outlier: "Geist Mono", ui-monospace, monospace;
+  --radius-card: 0; --radius-pill: 0; --rule-hair: 1px;
+  --shadow-card: none;
+  --tracking-display: -0.02em; --display-weight: 400; --display-optical: 96;
+  --space-2xs: 0.25rem; --space-xs: 0.5rem; --space-sm: 0.75rem; --space-md: 1rem; --space-lg: 1.5rem; --space-xl: 2.5rem; --space-2xl: 4rem; --space-3xl: 6rem;
+  --container: 70rem;
+  --text-small: 0.9375rem;
+  --bar-height: 4.5rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.55;
+}
+img { display: block; max-width: 100%; height: auto; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--tracking-display);
+  line-height: 1.02;
+  margin: 0;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+h1, h2 { font-variation-settings: "opsz" var(--display-optical); }
+h3 { font-optical-sizing: auto; line-height: 1.15; font-size: 1.5rem; }
+h1 { font-size: clamp(2.5rem, 5.2vw, 4.25rem); }
+h2 { font-size: clamp(2rem, 3.6vw, 3rem); }
+p { margin: 0; }
+
+a { color: inherit; text-decoration-color: var(--color-accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, .btn:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+  transition: none;
+}
+
+.container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--space-lg); }
+
+.label { font-family: var(--font-body); font-weight: 500; font-size: var(--text-small); color: var(--color-muted); }
+
+/* header */
+.site-header { border-bottom: var(--rule-hair) solid var(--color-rule); }
+.site-header .container { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); min-height: 4rem; }
+.wordmark { font-family: var(--font-display); font-size: 1.375rem; letter-spacing: var(--tracking-display); text-decoration: none; }
+.site-nav { display: flex; gap: var(--space-lg); font-size: var(--text-small); }
+.site-nav a { text-decoration-line: underline; }
+
+/* buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 48px;
+  padding: 0 var(--space-lg);
+  border: var(--rule-hair) solid var(--color-ink);
+  border-radius: var(--radius-card);
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+.btn--primary { background: var(--color-ink); color: var(--color-paper); }
+.btn--primary:hover { background: var(--color-ink-2); }
+.btn:active { transform: translateY(1px); }
+.btn--secondary { background: transparent; color: var(--color-ink); }
+.btn--secondary:hover { background: var(--color-paper-2); }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+
+/* hero */
+.hero { padding-block: var(--space-xl) var(--space-2xl); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: var(--space-2xl); align-items: center; }
+.hero-text { display: grid; gap: var(--space-lg); min-width: 0; }
+.hero-text .lede { font-size: 1.1875rem; max-width: 30ch; color: var(--color-ink-2); }
+
+.today {
+  border: var(--rule-hair) solid var(--color-rule);
+  background: var(--color-paper-2);
+  padding: var(--space-md) var(--space-lg);
+  max-width: 26rem;
+  display: grid;
+  gap: var(--space-2xs);
+}
+.today-status { font-family: var(--font-display); font-size: 1.375rem; line-height: 1.2; }
+.today-status[hidden] { display: none; }
+
+.photo { margin: 0; min-width: 0; }
+.photo img { width: 100%; object-fit: cover; outline: var(--rule-hair) solid var(--color-rule); outline-offset: -1px; }
+.photo figcaption { margin-top: var(--space-xs); }
+.hero .photo img { aspect-ratio: 4 / 5; max-height: 34rem; }
+
+/* sections */
+.section { padding-block: var(--space-3xl); border-top: var(--rule-hair) solid var(--color-rule); }
+.band { background: var(--color-paper-2); }
+.band-ink { background: var(--color-ink); color: var(--color-paper); border-top: 0; }
+.band-ink .label { color: var(--color-band-muted); }
+
+.split { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-2xl); align-items: start; }
+.prose { display: grid; gap: var(--space-md); max-width: 38rem; }
+
+.case-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: start; }
+.case-list { list-style: none; margin: var(--space-lg) 0 0; padding: 0; border-top: 3px double var(--color-rule-2); }
+.case-list li { display: grid; grid-template-columns: minmax(0, 9rem) minmax(0, 1fr); gap: var(--space-md); padding-block: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.case-list .note { margin-top: var(--space-md); }
+.case-grid .photo img { aspect-ratio: 4 / 3; }
+
+.rating { font-family: var(--font-display); font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.05; font-variation-settings: "opsz" var(--display-optical); }
+.quotes { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); margin-top: var(--space-xl); }
+.quotes blockquote { margin: 0; border-top: var(--rule-hair) solid var(--color-ink-2); padding-top: var(--space-md); display: grid; gap: var(--space-xs); }
+.quotes blockquote p:first-child { font-size: 1.25rem; line-height: 1.45; }
+
+.hours { width: 100%; border-collapse: collapse; margin-top: var(--space-lg); }
+.hours th, .hours td { text-align: left; padding: var(--space-sm) 0; border-bottom: var(--rule-hair) solid var(--color-rule); font-weight: 400; }
+.hours thead th { font-weight: 500; font-size: var(--text-small); color: var(--color-muted); border-bottom-color: var(--color-rule-2); }
+.hours td { font-family: var(--font-outlier); font-size: var(--text-small); }
+.visit-details { display: grid; gap: var(--space-md); margin-top: var(--space-lg); }
+.visit .photo img { aspect-ratio: 1 / 1; }
+
+.site-footer { border-top: var(--rule-hair) solid var(--color-rule); padding-block: var(--space-xl); }
+.site-footer .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-md); }
+
+/* phone bar */
+.mobile-bar { display: none; }
+
+@media (max-width: 860px) {
+  .hero-grid, .split, .case-grid, .quotes { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
+  .hero .photo img { aspect-ratio: 4 / 3; max-height: none; }
+  .section { padding-block: var(--space-2xl); }
+}
+
+@media (max-width: 640px) {
+  .container { padding-inline: var(--space-md); }
+  .site-nav { display: none; }
+  .hero { padding-block: var(--space-lg) var(--space-xl); }
+  .case-list li { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xs); }
+  body { padding-bottom: var(--bar-height); }
+  .mobile-bar {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-xs);
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+    padding: var(--space-xs) var(--space-md) calc(var(--space-xs) + env(safe-area-inset-bottom));
+    background: var(--color-paper);
+    border-top: var(--rule-hair) solid var(--color-rule-2);
+  }
+  .mobile-bar .btn { padding: 0 var(--space-xs); font-size: var(--text-small); background-color: var(--color-paper); }
+  .mobile-bar .btn--primary { background: var(--color-ink); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="wordmark" href="#top">Leslie's Sweet Nostalgia</a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="#case">The case</a>
+      <a href="#visit">Visit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1 id="hero-title">Gluten-free baking by a real pastry chef</h1>
+        <p class="lede">Pies, cakes and cookies without gluten, dairy or oats.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="https://maps.google.com/?q=123+Example+St+Crossville+TN">Get directions</a>
+          <a class="btn btn--secondary" href="https://facebook.com/136726446404369">Message us on Facebook</a>
+        </div>
+        <div class="today" aria-live="polite">
+          <p class="label">Today</p>
+          <p class="today-status" id="today-status" hidden></p>
+          <p>Thursday to Saturday, 11 AM to 6 PM. Closed Sunday to Wednesday.</p>
+        </div>
+      </div>
+      <figure class="photo">
+        <img src="photo-hero.jpg" alt="A tray of crumb-topped pies" width="900" height="1125" fetchpriority="high">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section band" aria-labelledby="kitchen-title">
+    <div class="container split">
+      <h2 id="kitchen-title">A kitchen with nothing to worry about</h2>
+      <div class="prose">
+        <p>Everything here is free of gluten, dairy and oats, so you can choose from the whole case without asking twice.</p>
+        <p>Leslie is a pastry chef by trade. She bakes with fruit and eggs from local farms, so the case changes with the season, and she is happy to explain every ingredient.</p>
+        <p>Walk in only. Leslie does not take advance or phone orders.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="case" aria-labelledby="case-title">
+    <div class="container case-grid">
+      <div>
+        <h2 id="case-title">What you might find in the case</h2>
+        <ul class="case-list">
+          <li><span class="label">Pies</span><span>Strawberry rhubarb, chocolate with Bavarian cream</span></li>
+          <li><span class="label">Whole cakes</span><span>Orange, carrot, and a nostalgic chocolate snack cake</span></li>
+          <li><span class="label">Sweet bakes</span><span>Cinnamon rolls, whoopie pies, snickerdoodles, baklava</span></li>
+          <li><span class="label">Savory</span><span>Pizza pinwheels</span></li>
+          <li><span class="label">Seasonal</span><span>Decorated cookies for the holidays</span></li>
+        </ul>
+        <p class="label note">The selection changes with the season and sells out.</p>
+      </div>
+      <figure class="photo">
+        <img src="photo-1.jpg" alt="A full glass bakery case with cookies, tarts and cakes" width="1200" height="900" loading="lazy">
+        <figcaption class="label">The bakery case</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section band-ink" aria-labelledby="reviews-title">
+    <div class="container">
+      <h2 id="reviews-title" class="rating">4.8 from 61 Google reviews</h2>
+      <div class="quotes">
+        <blockquote>
+          <p>Every single bite is gluten free, so every bite is worry free.</p>
+          <p class="label">(a Google review)</p>
+        </blockquote>
+        <blockquote>
+          <p>We drove over an hour and went home with a whole cake. Worth every mile.</p>
+          <p class="label">(a Google review)</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section visit" id="visit" aria-labelledby="visit-title">
+    <div class="container split">
+      <figure class="photo">
+        <img src="photo-6.jpg" alt="A grey cottage-style shop with a red roof, a white chair out front and a sign reading Leslie's Sweet Nostalgia" width="1000" height="1000" loading="lazy">
+        <figcaption class="label">Look for the grey cottage with the red roof</figcaption>
+      </figure>
+      <div>
+        <h2 id="visit-title">Come by the cottage</h2>
+        <table class="hours">
+          <thead><tr><th scope="col">Day</th><th scope="col">Hours</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Thursday</th><td>11 AM to 6 PM</td></tr>
+            <tr><th scope="row">Friday</th><td>11 AM to 6 PM</td></tr>
+            <tr><th scope="row">Saturday</th><td>11 AM to 6 PM</td></tr>
+            <tr><th scope="row">Sunday to Wednesday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+        <div class="visit-details">
+          <p>123 Example St, Crossville, TN</p>
+          <p><a href="tel:123456789">123-456-789</a> <span class="label">or</span> <a href="mailto:hello@example.com">hello@example.com</a></p>
+          <div class="actions">
+            <a class="btn btn--primary" href="https://maps.google.com/?q=123+Example+St+Crossville+TN">Get directions</a>
+            <a class="btn btn--secondary" href="https://facebook.com/136726446404369">Message us on Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Leslie's Sweet Nostalgia, Crossville, TN</p>
+    <p class="label">Free preview by Brightfront Studio</p>
+  </div>
+</footer>
+
+<nav class="mobile-bar" aria-label="Quick actions">
+  <a class="btn btn--secondary" href="tel:123456789">Call</a>
+  <a class="btn btn--primary" href="https://maps.google.com/?q=123+Example+St+Crossville+TN">Directions</a>
+  <a class="btn btn--secondary" href="https://facebook.com/136726446404369">Message</a>
+</nav>
+
+<script>
+(function () {
+  var el = document.getElementById('today-status');
+  if (!el || !window.Intl) return;
+  var hours = { 4: [11, 18], 5: [11, 18], 6: [11, 18] };
+  var names = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var short = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  function fmt(h) { return (h > 12 ? h - 12 : h) + (h >= 12 ? ' PM' : ' AM'); }
+  try {
+    var parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Chicago', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23'
+    }).formatToParts(new Date());
+    var o = {};
+    parts.forEach(function (p) { o[p.type] = p.value; });
+    var day = short.indexOf(o.weekday);
+    var mins = (parseInt(o.hour, 10) % 24) * 60 + parseInt(o.minute, 10);
+    if (day < 0 || isNaN(mins)) return;
+    var t = hours[day], msg = '';
+    if (t && mins >= t[0] * 60 && mins < t[1] * 60) {
+      msg = 'Open now, until ' + fmt(t[1]) + '.';
+    } else if (t && mins < t[0] * 60) {
+      msg = 'Closed now. Opens today at ' + fmt(t[0]) + '.';
+    } else {
+      for (var i = 1; i <= 7; i++) {
+        var d = (day + i) % 7;
+        if (hours[d]) { msg = 'Closed now. Opens ' + (i === 1 ? 'tomorrow' : names[d]) + ' at ' + fmt(hours[d][0]) + '.'; break; }
+      }
+    }
+    el.textContent = msg;
+    el.hidden = false;
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>

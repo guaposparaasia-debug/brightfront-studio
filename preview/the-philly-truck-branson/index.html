@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Philly Truck | Cheesesteaks and gyros in Branson, MO</title>
+<meta name="description" content="Food truck at the Branson Food Truck Park: Philly cheesesteaks, lamb and beef gyros, burgers and sweet potato tots. Call to order.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Archivo:wght@400;500;600&family=Archivo+Narrow:wght@500&display=swap" rel="stylesheet">
+<style>
+/* Hallmark v2.0.0 · theme: formwork (dealt 2/3, seed food-truck-philly-cheesesteaks-194d·97e5bf08·2026-11-02·r1) · genre editorial · job: order a cheesesteak */
+/* critique: cast pour on warm grey; the menu plate carries the page, food photos stay in true colour per the brief, orange only on Call and the focus ring. */
+:root {
+  --color-paper: oklch(74% 0.008 80); --color-paper-2: oklch(69% 0.009 80); --color-paper-3: oklch(64% 0.01 80);
+  --color-plate: oklch(82% 0.007 80); --color-plate-ink: oklch(95% 0.006 80);
+  --color-ink: oklch(18% 0.005 270); --color-ink-2: oklch(28% 0.006 80); --color-muted: oklch(31.5% 0.008 80);
+  --color-rule: oklch(64% 0.01 80);
+  --color-accent: oklch(66% 0.21 38); --color-accent-ink: oklch(18% 0.005 270); --color-focus: oklch(42% 0.15 38);
+  --color-accent-deep: oklch(48% 0.17 38);
+  --font-display: "Oswald", ui-sans-serif, sans-serif; --font-body: "Archivo", ui-sans-serif, sans-serif;
+  --font-outlier: "Archivo Narrow", ui-sans-serif, sans-serif;
+  --radius-card: 0; --radius-pill: 0; --rule-hair: 1px; --rule-bar: 3px;
+  --shadow-card: 6px 6px 0 var(--color-ink);
+  --tracking-display: -0.005em; --display-weight: 700;
+  --space-xs: 4px; --space-sm: 8px; --space-md: 12px; --space-lg: 16px; --space-xl: 24px;
+  --space-2xl: 40px; --space-3xl: 64px;
+  --text-sm: 15px; --text-base: 17px; --text-lg: 20px;
+  --text-h3: 22px; --text-h2: clamp(34px, 4.4vw, 52px); --text-h1: clamp(44px, 6.4vw, 84px);
+  --measure: 60ch; --container: 1120px;
+  --dur-micro: 90ms; --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --bar-h: 64px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--color-paper); color: var(--color-ink-2); font: 400 var(--text-base)/1.5 var(--font-body); }
+img { display: block; max-width: 100%; height: auto; }
+::selection { background: color-mix(in oklab, var(--color-accent) 35%, transparent); }
+h1, h2, h3 {
+  font-family: var(--font-display); font-weight: var(--display-weight); text-transform: uppercase;
+  letter-spacing: var(--tracking-display); line-height: 1.02; color: var(--color-ink);
+  margin: 0; overflow-wrap: break-word; min-width: 0;
+}
+h1 { font-size: var(--text-h1); }
+h2 { font-size: var(--text-h2); }
+h3 { font-size: var(--text-h3); }
+p { margin: 0; max-width: var(--measure); }
+a { color: var(--color-ink); text-decoration: underline; text-underline-offset: 3px; transition: color var(--dur-micro) var(--ease-out); }
+a:hover { color: var(--color-accent-deep); }
+a:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; transition: none; }
+.wrap { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--space-xl); }
+figcaption, .small { font: 500 var(--text-sm)/1.4 var(--font-body); color: var(--color-muted); }
+.num { font-family: var(--font-outlier); font-variant-numeric: tabular-nums; font-weight: 500; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 48px;
+  padding: var(--space-md) var(--space-xl); border-radius: var(--radius-pill);
+  font: 600 var(--text-base)/1 var(--font-body); text-decoration: none; cursor: pointer;
+  background: var(--color-accent); color: var(--color-accent-ink); box-shadow: 0 3px 0 var(--color-accent-deep);
+  transition: translate var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out);
+}
+.btn:hover { color: var(--color-accent-ink); }
+.btn:active { transform: translateY(1px); }
+.btn:active { translate: 0 3px; box-shadow: 0 0 0 var(--color-accent-deep); }
+.btn--secondary {
+  background: var(--color-paper-2); color: var(--color-ink); border: 2px solid var(--color-ink);
+  box-shadow: inset 0 2px 3px color-mix(in oklab, var(--color-ink) 30%, transparent);
+}
+.btn--secondary:hover { color: var(--color-ink); background: var(--color-plate); }
+.btn--secondary:active { translate: none; box-shadow: inset 0 3px 4px color-mix(in oklab, var(--color-ink) 40%, transparent); }
+.btn:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; transition: none; }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-lg); }
+
+.top { border-bottom: var(--rule-bar) solid var(--color-ink); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: var(--space-lg); min-height: 64px; }
+.brand { font: 700 24px/1 var(--font-display); text-transform: uppercase; color: var(--color-ink); text-decoration: none; }
+.top .tel { font-weight: 500; }
+
+.hero { padding-block: var(--space-2xl) var(--space-3xl); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: center; }
+.hero-text { display: grid; gap: var(--space-xl); }
+.hero-text > p { font-size: var(--text-lg); }
+.photo { margin: 0; display: grid; gap: var(--space-sm); }
+.photo img { width: 100%; object-fit: cover; outline: 2px solid var(--color-ink); outline-offset: -2px; }
+.hero .photo img { aspect-ratio: 4 / 3; }
+
+section.block { border-top: var(--rule-bar) solid var(--color-ink); padding-block: var(--space-3xl); }
+.head { display: grid; gap: var(--space-md); margin-bottom: var(--space-2xl); }
+.band { background: var(--color-paper-2); }
+
+.menu { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: start; }
+.plate { background: var(--color-plate); border: var(--rule-bar) solid var(--color-ink); box-shadow: var(--shadow-card); padding: var(--space-xl); }
+.plate h3 { margin-bottom: var(--space-sm); }
+.list { list-style: none; margin: 0 0 var(--space-xl); padding: 0; }
+.list:last-child { margin-bottom: 0; }
+.list li { padding-block: var(--space-sm); border-bottom: var(--rule-hair) solid var(--color-paper-3); color: var(--color-ink); font-weight: 500; }
+.list li span { display: block; font-weight: 400; font-size: var(--text-sm); color: var(--color-muted); }
+.stack { display: grid; gap: var(--space-xl); }
+.stack .photo img { aspect-ratio: 4 / 3; }
+
+.today { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: start; }
+.status { font: 600 var(--text-lg)/1.3 var(--font-body); color: var(--color-ink); padding-bottom: var(--space-md); border-bottom: var(--rule-bar) solid var(--color-ink); margin-bottom: var(--space-sm); }
+.hours { width: 100%; border-collapse: collapse; }
+.hours caption { caption-side: bottom; text-align: left; padding-top: var(--space-sm); }
+.hours th, .hours td { text-align: left; padding: var(--space-sm) 0; border-bottom: var(--rule-hair) solid var(--color-paper-3); }
+.hours th { font-weight: 500; color: var(--color-ink); }
+.hours td { text-align: right; }
+.hours tr:last-child th, .hours tr:last-child td { border-bottom: 0; }
+.hours tr.is-today th, .hours tr.is-today td { color: var(--color-ink); font-weight: 600; text-decoration: underline; text-decoration-color: var(--color-accent-deep); text-underline-offset: 4px; }
+
+.stand { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: center; }
+.stand .photo img { aspect-ratio: 4 / 3; }
+.stand-text { display: grid; gap: var(--space-lg); }
+
+.band--ink { background: var(--color-ink); color: var(--color-plate-ink); border-top-color: var(--color-ink); }
+.band--ink h2 { color: var(--color-plate-ink); }
+.band--ink .small { color: var(--color-plate); }
+.quotes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2xl); }
+.quotes blockquote { margin: 0; display: grid; gap: var(--space-md); padding-top: var(--space-lg); border-top: var(--rule-hair) solid var(--color-paper-3); }
+.quotes p { font: 500 var(--text-lg)/1.4 var(--font-body); color: var(--color-plate-ink); }
+.quotes cite { font: 500 var(--text-sm)/1.4 var(--font-body); font-style: normal; color: var(--color-plate); }
+
+.visit { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: start; }
+.facts { display: grid; gap: var(--space-lg); margin: 0; }
+.facts dt { font: 500 var(--text-sm)/1.3 var(--font-body); color: var(--color-muted); }
+.facts dd { margin: var(--space-xs) 0 0; color: var(--color-ink); font-size: var(--text-lg); }
+
+footer { border-top: var(--rule-bar) solid var(--color-ink); padding-block: var(--space-xl); }
+.bar { display: none; }
+
+@media (max-width: 860px) {
+  .hero .wrap, .menu, .today, .stand, .visit, .quotes { grid-template-columns: minmax(0, 1fr); }
+  .hero { padding-top: var(--space-xl); }
+  section.block { padding-block: var(--space-2xl); }
+}
+@media (max-width: 720px) {
+  .wrap { padding-inline: var(--space-lg); }
+  .top .tel { display: none; }
+  .plate { box-shadow: 4px 4px 0 var(--color-ink); }
+  body { padding-bottom: calc(var(--bar-h) + env(safe-area-inset-bottom, 0px)); }
+  .bar {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-sm); align-items: center;
+    position: fixed; inset-inline: 0; bottom: 0; z-index: 10; min-height: var(--bar-h);
+    padding: var(--space-sm) var(--space-lg) calc(var(--space-sm) + env(safe-area-inset-bottom, 0px));
+    background: var(--color-plate); border-top: var(--rule-bar) solid var(--color-ink);
+  }
+  .bar a { text-align: center; font: 600 var(--text-sm)/1 var(--font-body); }
+  .bar .btn { min-height: 44px; padding-inline: var(--space-md); }
+  .bar .plain { display: flex; align-items: center; justify-content: center; min-height: 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">The Philly Truck</a>
+    <a class="tel" href="tel:123456789">Call 123-456-789</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-text">
+        <h1 id="hero-title">Crispy chopped cheesesteaks in Branson</h1>
+        <p>Cheesesteaks, gyros and sweet potato tots at the Branson Food Truck Park.</p>
+        <div class="actions">
+          <a class="btn" href="tel:123456789">Call to order</a>
+          <a class="btn btn--secondary" href="https://maps.google.com/?q=123+Example+St+Branson+MO" target="_blank" rel="noopener">Get directions</a>
+        </div>
+        <p class="small"><span class="num">4.9</span> from <span class="num">158</span> Google reviews</p>
+      </div>
+      <figure class="photo">
+        <img src="photo-hero.jpg" width="1600" height="1200" alt="A Philly cheesesteak on a long roll with fries in a takeout box, a drink behind it." fetchpriority="high">
+      </figure>
+    </div>
+  </section>
+
+  <section class="block band" aria-labelledby="menu-title">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="menu-title">The favorites</h2>
+        <p>The steak is chopped fine and crisped on the flat top, then piled on a soft roll. Regular or large, and the regular is plenty.</p>
+      </div>
+      <div class="menu">
+        <div class="plate">
+          <h3>Cheesesteaks</h3>
+          <ul class="list">
+            <li>Original Philly</li>
+            <li>Mushroom, pepper or super</li>
+            <li>Chicken bacon ranch</li>
+          </ul>
+          <h3>Gyros and more</h3>
+          <ul class="list">
+            <li>Lamb and beef gyro <span>or chicken gyro, or falafel</span></li>
+            <li>Burgers</li>
+            <li>Gyro fries, fries and sweet potato tots</li>
+            <li>Baklava</li>
+          </ul>
+        </div>
+        <div class="stack">
+          <figure class="photo">
+            <img src="photo-1.jpg" width="1600" height="1600" loading="lazy" alt="A lamb and beef gyro piled with meat, with sweet potato tots behind it.">
+            <figcaption>Lamb and beef gyro with sweet potato tots</figcaption>
+          </figure>
+          <figure class="photo">
+            <img src="photo-2.jpg" width="1200" height="1600" loading="lazy" alt="A burger topped with a fried egg in a clam-shell box.">
+            <figcaption>A burger with a fried egg on top</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="today-title">
+    <div class="wrap today">
+      <div class="head">
+        <h2 id="today-title">Open today?</h2>
+        <p>Lunch through dinner, six days a week. Sunday the truck rests.</p>
+      </div>
+      <div class="plate">
+        <p class="status" id="status" aria-live="polite">Monday to Saturday from 11:30 AM. Hours below.</p>
+        <table class="hours">
+          <caption class="small">Branson time</caption>
+          <tbody>
+            <tr data-day="1"><th scope="row">Monday</th><td class="num">11:30 AM to 8 PM</td></tr>
+            <tr data-day="2"><th scope="row">Tuesday</th><td class="num">11:30 AM to 8 PM</td></tr>
+            <tr data-day="3"><th scope="row">Wednesday</th><td class="num">11:30 AM to 8 PM</td></tr>
+            <tr data-day="4"><th scope="row">Thursday</th><td class="num">11:30 AM to 8 PM</td></tr>
+            <tr data-day="5"><th scope="row">Friday</th><td class="num">11:30 AM to 8:30 PM</td></tr>
+            <tr data-day="6"><th scope="row">Saturday</th><td class="num">11:30 AM to 8 PM</td></tr>
+            <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="stand-title">
+    <div class="wrap stand">
+      <div class="stand-text">
+        <h2 id="stand-title">Find the banner</h2>
+        <p>The truck sits at the Branson Food Truck Park under a covered stand, with tables outside. Look for the Philly Cheesesteak and Lamb and Beef Gyro banner. Orders come up fast.</p>
+      </div>
+      <figure class="photo">
+        <img src="photo-3.jpg" width="1600" height="1312" loading="lazy" alt="The covered stand with a Philly Cheesesteak, Lamb and Beef Gyro banner, hedge panels and a gravel lot under a blue sky.">
+        <figcaption>The covered stand at the food truck park</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="block band--ink" aria-labelledby="said-title">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="said-title">What people say</h2>
+        <p class="small"><span class="num">4.9</span> from <span class="num">158</span> Google reviews</p>
+      </div>
+      <div class="quotes">
+        <blockquote>
+          <p>Fine chopped, crispy meat, just like the classic spots in Philadelphia.</p>
+          <cite>(a Google review)</cite>
+        </blockquote>
+        <blockquote>
+          <p>The regular is so big it looks like a large, and the sweet potato tots are the best around.</p>
+          <cite>(a Google review)</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="visit-title">
+    <div class="wrap visit">
+      <div class="head">
+        <h2 id="visit-title">Call ahead or walk up</h2>
+        <p>Call your order in and it will be ready when you pull up, or send a message on Facebook.</p>
+        <div class="actions">
+          <a class="btn" href="tel:123456789">Call to order</a>
+          <a class="btn btn--secondary" href="https://facebook.com/271108282762275" target="_blank" rel="noopener">Message us on Facebook</a>
+        </div>
+      </div>
+      <dl class="facts">
+        <div><dt>Address</dt><dd><a href="https://maps.google.com/?q=123+Example+St+Branson+MO" target="_blank" rel="noopener">123 Example St, Branson, MO</a></dd></div>
+        <div><dt>Phone</dt><dd><a href="tel:123456789">123-456-789</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:hello@example.com">hello@example.com</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap"><p class="small">Free preview by Brightfront Studio</p></div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn" href="tel:123456789">Call</a>
+  <a class="plain" href="https://maps.google.com/?q=123+Example+St+Branson+MO" target="_blank" rel="noopener">Directions</a>
+  <a class="plain" href="https://facebook.com/271108282762275" target="_blank" rel="noopener">Message</a>
+</nav>
+
+<script>
+(function () {
+  var HOURS = { 1: [690, 1200], 2: [690, 1200], 3: [690, 1200], 4: [690, 1200], 5: [690, 1230], 6: [690, 1200] };
+  var NAMES = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var KEYS = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+  function fmt(m) { var h = Math.floor(m / 60), mm = m % 60, ap = h >= 12 ? " PM" : " AM"; h = h % 12 || 12; return h + (mm ? ":" + (mm < 10 ? "0" : "") + mm : "") + ap; }
+  try {
+    var parts = new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", weekday: "short", hour: "numeric", minute: "numeric", hourCycle: "h23" }).formatToParts(new Date());
+    var p = {}; parts.forEach(function (x) { p[x.type] = x.value; });
+    var day = KEYS[p.weekday], mins = (parseInt(p.hour, 10) % 24) * 60 + parseInt(p.minute, 10), t = HOURS[day], text;
+    if (t && mins >= t[0] && mins < t[1]) { text = "Open now, until " + fmt(t[1]) + "."; }
+    else if (t && mins < t[0]) { text = "Closed now. Opens today at " + fmt(t[0]) + "."; }
+    else { for (var i = 1; i <= 7; i++) { var d = (day + i) % 7; if (HOURS[d]) { text = "Closed now. Opens " + (i === 1 ? "tomorrow" : NAMES[d]) + " at " + fmt(HOURS[d][0]) + "."; break; } } }
+    document.getElementById("status").textContent = text;
+    var row = document.querySelector('.hours tr[data-day="' + day + '"]');
+    if (row) { row.className = "is-today"; row.setAttribute("aria-current", "date"); }
+  } catch (e) { /* fallback text stays */ }
+})();
+</script>
+</body>
+</html>
