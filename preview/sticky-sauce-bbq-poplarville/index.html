@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Sticky Sauce BBQ, Poplarville, MS</title>
+<meta name="description" content="Roadside barbecue in Poplarville, Mississippi. Brisket, ribs, pulled pork and smoked chicken, Wednesday to Saturday.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:wght@400;700&family=Radio+Canada:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Hallmark v2.0.0 · theme: grid (dealt 3/3, seed small-town-barbecue-joint-990c·5170bfde·2026-11-03·r0) · genre editorial · job: come eat or grab barbecue to go */
+/* critique: the theme prints every photo as a blue-black duotone, so the food loses its colour; the single red field and the red mark carry the warmth, and the Today field makes the four open days impossible to miss. */
+:root {
+  --color-paper: oklch(97.5% 0.005 90); --color-paper-2: oklch(94.2% 0.006 90); --color-paper-3: oklch(90.5% 0.008 90);
+  --color-ink: oklch(19% 0.022 266); --color-ink-2: oklch(31% 0.02 266); --color-muted: oklch(47% 0.016 266);
+  --color-rule: oklch(87.5% 0.008 90);
+  --color-accent: oklch(44% 0.2 266); --color-accent-ink: oklch(97.5% 0.005 90); --color-focus: oklch(46% 0.2 266);
+  --color-field: oklch(44% 0.2 266); --color-field-ink: oklch(97.5% 0.005 90);
+  --color-field-line: oklch(97.5% 0.005 90 / 0.4);
+  --color-mark: oklch(57% 0.215 29); --color-mark-ink: oklch(97.5% 0.005 90);
+  --font-display: "Radio Canada Big", ui-sans-serif, system-ui, sans-serif; --font-body: "Radio Canada", ui-sans-serif, system-ui, sans-serif;
+  --font-outlier: var(--font-display);
+  --radius-card: 0; --radius-pill: 0; --rule-hair: 1px; --shadow-card: none;
+  --tracking-display: -0.035em; --display-weight: 700;
+
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.3125rem;
+  --text-xl: 1.625rem;
+  --text-3xl: clamp(2.25rem, 4.4vw, 3.5rem);
+  --text-hero: clamp(3rem, 6vw, 5.5rem);
+  --text-poster: clamp(3rem, 6.5vw, 6rem);
+  --text-figure: clamp(5rem, 12vw, 10rem);
+
+  --space-2xs: 4px; --space-xs: 8px; --space-sm: 12px; --space-md: 20px; --space-lg: 28px;
+  --space-xl: 48px; --space-2xl: clamp(48px, 7vw, 80px); --space-3xl: clamp(64px, 10vw, 128px);
+
+  --measure: 1200px;
+  --gutter: clamp(20px, 4vw, 48px);
+  --gap-columns: clamp(16px, 2vw, 24px);
+
+  --dur-short: 120ms;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { overflow-x: clip; -webkit-text-size-adjust: 100%; }
+body {
+  overflow-x: clip;
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.5;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+p { margin: 0; }
+::selection { background: var(--color-mark); color: var(--color-mark-ink); }
+:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+.wrap { width: 100%; max-width: var(--measure); margin-inline: auto; padding-inline: var(--gutter); }
+.cols {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap-columns);
+  row-gap: var(--space-xl);
+}
+
+h1, h2, h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--tracking-display);
+  line-height: 1;
+  text-align: start;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+h2 { font-size: var(--text-3xl); }
+
+/* Header */
+.site-header { padding-block: var(--space-lg); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); }
+.wordmark {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  column-gap: var(--space-sm);
+  font: var(--display-weight) var(--text-md)/0.92 var(--font-display);
+  letter-spacing: var(--tracking-display);
+  color: var(--color-ink);
+  text-decoration: none;
+}
+.wordmark::before {
+  content: "";
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  width: 1.84em;
+  height: 1.84em;
+  background: var(--color-mark);
+}
+.wordmark span { grid-column: 2; }
+.wordmark span + span { font-weight: 400; }
+.site-nav { display: flex; gap: var(--space-lg); }
+.site-nav a {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--dur-short) var(--ease-out);
+}
+.site-nav a:hover { color: var(--color-mark); }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 52px;
+  padding-inline: var(--space-lg);
+  border: 0;
+  border-radius: var(--radius-pill);
+  font: 500 var(--text-base)/1 var(--font-body);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--dur-short) var(--ease-out), color var(--dur-short) var(--ease-out);
+}
+.btn--primary { background: var(--color-ink); color: var(--color-paper); }
+.btn--primary:hover { background: var(--color-ink-2); }
+.btn:active { transform: translateY(1px); }
+.btn--secondary {
+  padding-inline: 0;
+  background: none;
+  color: currentColor;
+  text-decoration: underline var(--rule-hair);
+  text-underline-offset: 0.32em;
+}
+.btn--secondary:hover { color: var(--color-mark); }
+.field .btn--secondary:hover { color: var(--color-field-ink); text-decoration-thickness: 2px; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-md) var(--space-lg); }
+
+/* Photos: blue-black duotone on paper-2 */
+.photo {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 1;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--color-paper-2);
+  min-width: 0;
+}
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.12);
+  mix-blend-mode: multiply;
+}
+.photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-ink);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+/* Sections */
+.section { padding-block: var(--space-3xl); }
+.field { background: var(--color-field); color: var(--color-field-ink); --color-focus: var(--color-field-ink); }
+.field--mark { background: var(--color-mark); color: var(--color-mark-ink); --color-focus: var(--color-ink); }
+
+/* Hero */
+.hero { padding-block: var(--space-md) var(--space-2xl); }
+.hero-text { grid-column: 1 / span 7; display: grid; gap: var(--space-lg); align-content: center; }
+.hero h1 { font-size: var(--text-hero); line-height: 0.95; letter-spacing: -0.045em; }
+.hero-lede { max-width: 32ch; font-size: var(--text-lg); color: var(--color-ink-2); }
+.hero-photo { grid-column: 8 / span 5; align-self: center; }
+
+/* Today */
+.today-head { grid-column: 1 / span 6; display: grid; gap: var(--space-md); align-content: start; }
+.today-head h2 { font-size: var(--text-xl); }
+.status {
+  font: var(--display-weight) var(--text-poster)/0.9 var(--font-display);
+  letter-spacing: -0.045em;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+.today-detail { font-size: var(--text-lg); }
+.hours { grid-column: 7 / span 6; align-self: end; width: 100%; border-collapse: collapse; }
+.hours th, .hours td {
+  padding-block: var(--space-sm);
+  border-bottom: var(--rule-hair) solid var(--color-field-line);
+  font-weight: 400;
+  text-align: start;
+}
+.hours td { text-align: end; }
+.hours tr.is-today th, .hours tr.is-today td { font-weight: 700; }
+.today-tag { margin-inline-start: var(--space-xs); font-size: var(--text-sm); font-weight: 500; }
+
+/* Menu */
+.menu-head { grid-column: 1 / span 4; display: grid; gap: var(--space-md); align-content: start; justify-items: start; }
+.menu-head p { color: var(--color-ink-2); }
+.menu-groups {
+  grid-column: 5 / span 8;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-xl) var(--gap-columns);
+}
+.menu-groups h3 { margin-bottom: var(--space-sm); font-size: var(--text-xl); }
+.menu-groups ul { display: grid; gap: var(--space-2xs); margin: 0; padding: 0; list-style: none; }
+
+/* Photo strip */
+.strip { padding-block: 0 var(--space-3xl); }
+.strip-head { grid-column: 1 / span 12; }
+.strip-photos {
+  grid-column: 1 / span 12;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--gap-columns);
+}
+
+/* Reviews */
+.reviews-head { grid-column: 1 / span 5; }
+.reviews-head .figure { display: block; font-size: var(--text-figure); line-height: 0.85; letter-spacing: -0.05em; }
+.quotes { grid-column: 7 / span 6; display: grid; gap: var(--space-xl); align-content: end; }
+blockquote { margin: 0; }
+blockquote p { font: 400 var(--text-xl)/1.25 var(--font-display); letter-spacing: -0.01em; }
+blockquote cite { display: block; margin-top: var(--space-sm); font: 500 var(--text-sm)/1.4 var(--font-body); font-style: normal; }
+
+/* Place */
+.place-text { grid-column: 1 / span 5; display: grid; gap: var(--space-md); align-content: start; }
+.place-text p { max-width: 40ch; color: var(--color-ink-2); }
+.place-photos {
+  grid-column: 7 / span 6;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--gap-columns);
+}
+
+/* Visit */
+.visit-head { grid-column: 1 / span 5; display: grid; gap: var(--space-lg); align-content: start; }
+.contact { grid-column: 7 / span 6; display: grid; gap: var(--space-md); margin: 0; }
+.contact div { display: grid; grid-template-columns: minmax(0, 8rem) minmax(0, 1fr); gap: var(--gap-columns); }
+.contact dt { font-size: var(--text-sm); font-weight: 500; padding-top: 2px; }
+.contact dd { margin: 0; font-size: var(--text-lg); overflow-wrap: break-word; min-width: 0; }
+.contact a { text-underline-offset: 0.25em; }
+
+/* Footer */
+.site-footer { padding-block: var(--space-xl); }
+.site-footer p { font-size: var(--text-sm); color: var(--color-muted); }
+
+/* Phone action bar */
+.action-bar { display: none; }
+
+@media (max-width: 800px) {
+  .cols > * { grid-column: 1 / -1; }
+  .cols { row-gap: var(--space-lg); }
+  .hero-photo { max-width: 520px; }
+  .menu-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .reviews-head .figure { font-size: clamp(4.5rem, 22vw, 7rem); }
+}
+
+@media (max-width: 720px) {
+  body { padding-bottom: calc(60px + env(safe-area-inset-bottom)); }
+  .action-bar {
+    display: grid;
+    position: fixed;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 10;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2px;
+    padding-bottom: env(safe-area-inset-bottom);
+    background: var(--color-paper);
+    --color-focus: var(--color-paper);
+  }
+  .action-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 58px;
+    background: var(--color-ink);
+    color: var(--color-paper);
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color var(--dur-short) var(--ease-out);
+  }
+  .action-bar a:hover { background: var(--color-ink-2); }
+  .action-bar a:focus-visible { outline-offset: -5px; }
+}
+
+@media (max-width: 600px) {
+  .site-nav { display: none; }
+  .menu-groups { grid-template-columns: minmax(0, 1fr); gap: var(--space-lg); }
+  .contact div { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xs); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+</style>
+</head>
+<body id="top">
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="wordmark" href="#top" aria-label="Sticky Sauce BBQ, back to top"><span>Sticky Sauce</span><span>BBQ</span></a>
+    <nav class="site-nav" aria-label="Sections">
+      <a href="#menu">Menu</a>
+      <a href="#hours">Hours</a>
+      <a href="#visit">Visit</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap cols">
+      <div class="hero-text">
+        <h1 id="hero-title">Roadside barbecue in Poplarville, Mississippi.</h1>
+        <p class="hero-lede">Brisket, ribs and pulled pork, smoked here and served Wednesday to Saturday.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="tel:123456789">Call to order</a>
+          <a class="btn btn--secondary" href="https://maps.google.com/?q=123+Example+St+Poplarville+MS" target="_blank" rel="noopener">Directions</a>
+        </div>
+      </div>
+      <figure class="photo hero-photo">
+        <img src="photo-hero.jpg" width="900" height="900" alt="A takeout box of smoked ribs, burnt ends, mac and cheese, green beans and a roll, with a cup of sauce and a sauce bottle.">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section field" id="hours" aria-labelledby="today-title">
+    <div class="wrap cols">
+      <div class="today-head">
+        <h2 id="today-title">Today</h2>
+        <p class="status" id="today-status">Wednesday to Saturday</p>
+        <p class="today-detail" id="today-detail">10:30 AM to 7 PM. Closed Sunday to Tuesday.</p>
+      </div>
+      <table class="hours">
+        <caption class="sr-only">Opening hours</caption>
+        <tbody>
+          <tr data-day="1"><th scope="row">Monday</th><td>Closed</td></tr>
+          <tr data-day="2"><th scope="row">Tuesday</th><td>Closed</td></tr>
+          <tr data-day="3"><th scope="row">Wednesday</th><td>10:30 AM to 7 PM</td></tr>
+          <tr data-day="4"><th scope="row">Thursday</th><td>10:30 AM to 7 PM</td></tr>
+          <tr data-day="5"><th scope="row">Friday</th><td>10:30 AM to 7 PM</td></tr>
+          <tr data-day="6"><th scope="row">Saturday</th><td>10:30 AM to 7 PM</td></tr>
+          <tr data-day="0"><th scope="row">Sunday</th><td>Closed</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section" id="menu" aria-labelledby="menu-title">
+    <div class="wrap cols">
+      <div class="menu-head">
+        <h2 id="menu-title">Smoked meats and plates</h2>
+        <p>Eat on the porch or take it home. The sauce is Tim's, made in house.</p>
+        <a class="btn btn--secondary" href="tel:123456789">Call ahead to order</a>
+      </div>
+      <div class="menu-groups">
+        <div>
+          <h3>Smoked meats</h3>
+          <ul>
+            <li>Brisket, as a plate or by the pound</li>
+            <li>Ribs</li>
+            <li>Pulled pork</li>
+            <li>Smoked chicken</li>
+            <li>Wings</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Plates and more</h3>
+          <ul>
+            <li>BBQ nachos</li>
+            <li>Pulled pork potato</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Sides</h3>
+          <ul>
+            <li>Greens</li>
+            <li>Cheesy potatoes</li>
+            <li>Baked beans</li>
+            <li>Potato salad</li>
+            <li>Coleslaw</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Homemade desserts</h3>
+          <ul>
+            <li>Bread pudding</li>
+            <li>Chocolate cake</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip" aria-labelledby="strip-title">
+    <div class="wrap cols">
+      <h2 class="strip-head" id="strip-title">From the smoker to the box</h2>
+      <div class="strip-photos">
+        <figure class="photo">
+          <img src="photo-1.jpg" width="800" height="800" loading="lazy" alt="Racks of whole smoked chickens and meats with dark bark inside the smoker.">
+        </figure>
+        <figure class="photo">
+          <img src="photo-2.jpg" width="800" height="800" loading="lazy" alt="A foam takeout box of pulled pork with cheesy potatoes and a cup of beans.">
+        </figure>
+        <figure class="photo">
+          <img src="photo-3.jpg" width="800" height="800" loading="lazy" alt="A party tray of glazed chicken wings with carrots, celery and ranch.">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section field field--mark" aria-labelledby="reviews-title">
+    <div class="wrap cols">
+      <h2 class="reviews-head" id="reviews-title"><span class="figure">4.7</span> from 166 Google reviews</h2>
+      <div class="quotes">
+        <blockquote>
+          <p>“Easily the best barbecue I have found in Mississippi.”</p>
+          <cite>(a Google review)</cite>
+        </blockquote>
+        <blockquote>
+          <p>“The brisket was so good we took an extra pound home to New Orleans.”</p>
+          <cite>(a Google review)</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="place-title">
+    <div class="wrap cols">
+      <div class="place-text">
+        <h2 id="place-title">Owner-run, on the side of the road</h2>
+        <p>Sit at the long tables inside or out on the back porch. Reviewers say the owner is friendly and loves a joke.</p>
+      </div>
+      <div class="place-photos">
+        <figure class="photo">
+          <img src="photo-4.jpg" width="800" height="800" loading="lazy" alt="The outside of the wooden building with red doors and the Sticky Sauce BBQ sign.">
+        </figure>
+        <figure class="photo">
+          <img src="photo-5.jpg" width="800" height="800" loading="lazy" alt="A simple dining room with long white tables and benches under wood paneling, with no people.">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section field" id="visit" aria-labelledby="visit-title">
+    <div class="wrap cols">
+      <div class="visit-head">
+        <h2 id="visit-title">Call ahead or come by</h2>
+        <p>Grab a plate to go, or a pound of brisket for later.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="tel:123456789">Call to order</a>
+          <a class="btn btn--secondary" href="https://maps.google.com/?q=123+Example+St+Poplarville+MS" target="_blank" rel="noopener">Directions</a>
+          <a class="btn btn--secondary" href="https://www.facebook.com/106916114013977" target="_blank" rel="noopener">Message us on Facebook</a>
+        </div>
+      </div>
+      <dl class="contact">
+        <div><dt>Phone</dt><dd><a href="tel:123456789">123-456-789</a></dd></div>
+        <div><dt>Address</dt><dd>123 Example St, Poplarville, MS</dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:hello@example.com">hello@example.com</a></dd></div>
+        <div><dt>Hours</dt><dd>Wednesday to Saturday, 10:30 AM to 7 PM</dd></div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Free preview by Brightfront Studio</p>
+  </div>
+</footer>
+
+<nav class="action-bar" aria-label="Quick actions">
+  <a href="tel:123456789">Call</a>
+  <a href="https://maps.google.com/?q=123+Example+St+Poplarville+MS" target="_blank" rel="noopener">Directions</a>
+  <a href="https://www.facebook.com/106916114013977" target="_blank" rel="noopener">Message</a>
+</nav>
+
+<script>
+(function () {
+  var statusEl = document.getElementById('today-status');
+  var detailEl = document.getElementById('today-detail');
+  if (!statusEl || !detailEl || !window.Intl) return;
+  try {
+    var parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Chicago',
+      weekday: 'short',
+      hour: 'numeric',
+      minute: 'numeric',
+      hourCycle: 'h23'
+    }).formatToParts(new Date());
+    var map = {};
+    for (var i = 0; i < parts.length; i++) { map[parts[i].type] = parts[i].value; }
+    var shortDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    var names = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var day = shortDays.indexOf(map.weekday);
+    if (day < 0) return;
+    var now = (parseInt(map.hour, 10) % 24) * 60 + parseInt(map.minute, 10);
+    var openAt = 10 * 60 + 30;
+    var closeAt = 19 * 60;
+    var openDays = [3, 4, 5, 6];
+    var isOpenDay = openDays.indexOf(day) > -1;
+
+    if (isOpenDay && now >= openAt && now < closeAt) {
+      statusEl.textContent = 'Open now';
+      detailEl.textContent = 'Until 7 PM today.';
+    } else if (isOpenDay && now < openAt) {
+      statusEl.textContent = 'Closed now';
+      detailEl.textContent = 'Opens today at 10:30 AM.';
+    } else {
+      var label = '';
+      for (var n = 1; n <= 7; n++) {
+        var next = (day + n) % 7;
+        if (openDays.indexOf(next) > -1) { label = n === 1 ? 'tomorrow' : names[next]; break; }
+      }
+      statusEl.textContent = 'Closed now';
+      detailEl.textContent = 'Opens ' + label + ' at 10:30 AM.';
+    }
+
+    var row = document.querySelector('.hours tr[data-day="' + day + '"]');
+    if (row) {
+      row.className = 'is-today';
+      var tag = document.createElement('span');
+      tag.className = 'today-tag';
+      tag.textContent = 'today';
+      row.querySelector('th').appendChild(tag);
+    }
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>

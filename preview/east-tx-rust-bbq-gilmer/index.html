@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>East TX Rust BBQ, Gilmer, TX</title>
+<meta name="description" content="Family and veteran owned craft barbecue in downtown Gilmer, Texas. Brisket, ribs, house sausage, sides and banana pudding.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800&family=Golos+Text:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Hallmark v2.0.0 · theme: carnival (dealt 1/3, seed veteran-owned-craft-texas-barbecue-0047·5170bfde·2026-11-03·r2) · genre editorial · job: come eat or pick up barbecue */
+/* critique: carnival drop diner-sign (cherry and navy) reads roadside more than the real red and yellow marquee; the meats live in ruled rows so photos stay small, and the reviews band leans on one big figure to stay loud. */
+
+:root {
+  --color-paper: oklch(95% 0.035 90);
+  --color-paper-2: oklch(91% 0.035 90);
+  --color-paper-3: oklch(85% 0.040 90);
+  --color-ink: oklch(16% 0.040 30);
+  --color-ink-2: oklch(26% 0.040 30);
+  --color-muted: oklch(40% 0.040 30);
+  --color-rule: oklch(30% 0.16 250);
+  --color-accent: oklch(63% 0.21 25);
+  --color-accent-2: oklch(30% 0.16 250);
+  --color-accent-ink: oklch(16% 0.040 30);
+  --color-focus: oklch(30% 0.16 250);
+  --color-focus-on-dark: oklch(95% 0.035 90);
+
+  --font-display: "Big Shoulders Display", Impact, sans-serif;
+  --font-body: "Golos Text", system-ui, sans-serif;
+  --font-outlier: var(--font-body);
+
+  --radius-card: 2px;
+  --radius-pill: 2px;
+  --rule-hair: 1px;
+  --rule-bar: 2px;
+  --shadow-card: 4px 4px 0 var(--color-ink);
+  --shadow-press: 1px 1px 0 var(--color-ink);
+  --tracking-display: 0.015em;
+  --display-weight: 800;
+
+  --text-sm: 0.875rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-display-s: clamp(2.5rem, 5.5vw, 4.5rem);
+  --text-hero: clamp(3.5rem, 8vw, 8rem);
+  --text-figure: clamp(6rem, 14vw, 11rem);
+
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+
+  --measure: 62ch;
+  --container: 75rem;
+  --bar-height: 4.5rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { overflow-x: clip; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none; transition: none; }
+}
+
+body {
+  margin: 0;
+  overflow-x: clip;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: 1.55;
+  padding-bottom: calc(var(--bar-height) + env(safe-area-inset-bottom, 0px));
+}
+@media (min-width: 900px) {
+  body { padding-bottom: 0; }
+}
+
+img { display: block; max-width: 100%; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
+  line-height: 1;
+  margin: 0;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+h1 { font-size: var(--text-hero); }
+h2 { font-size: var(--text-display-s); }
+h3 { font-size: var(--text-2xl); }
+
+p { margin: 0; max-width: var(--measure); }
+
+a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent-2);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+a:hover { color: var(--color-accent-2); }
+a:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 5vw, 3rem);
+}
+
+.skip {
+  position: absolute;
+  left: var(--space-md);
+  top: var(--space-md);
+  transform: translateY(-200%);
+  background: var(--color-paper);
+  padding: var(--space-xs) var(--space-md);
+  border: var(--rule-bar) solid var(--color-ink);
+  z-index: 20;
+}
+.skip:focus-visible { transform: none; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  min-height: 3rem;
+  padding: var(--space-sm) var(--space-lg);
+  border: var(--rule-bar) solid var(--color-ink);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-card);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font: var(--display-weight) var(--text-lg)/1 var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover { background: var(--color-paper-3); color: var(--color-ink); }
+.btn:active { box-shadow: var(--shadow-press); }
+.btn--primary { background: var(--color-accent); color: var(--color-accent-ink); }
+.btn--primary:hover { background: var(--color-ink); color: var(--color-paper); }
+
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-md); }
+
+/* Header */
+.top {
+  border-bottom: var(--rule-bar) solid var(--color-accent-2);
+}
+.top .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm) var(--space-lg);
+  padding-block: var(--space-md);
+}
+.wordmark {
+  font: var(--display-weight) var(--text-xl)/1 var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-display);
+  text-decoration: none;
+}
+.nav { display: flex; gap: var(--space-lg); }
+.nav a {
+  font-size: var(--text-sm);
+  font-weight: 500;
+}
+
+/* Hero */
+.hero .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-xl);
+  align-items: center;
+  padding-block: var(--space-xl) var(--space-2xl);
+}
+@media (min-width: 900px) {
+  .hero .wrap { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); padding-block: var(--space-xl); }
+}
+.hero h1 { margin-bottom: var(--space-lg); }
+.hero .lead {
+  font-size: var(--text-lg);
+  font-weight: 500;
+  margin-bottom: var(--space-xl);
+  max-width: 34ch;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: var(--rule-bar) solid var(--color-ink);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  background: var(--color-paper-2);
+}
+.photo--hero { aspect-ratio: 4 / 3; transform: rotate(1deg); }
+.photo--tall { aspect-ratio: 4 / 5; }
+.photo--wide { aspect-ratio: 3 / 2; }
+.photo--tilt { transform: rotate(-1deg); }
+
+/* Sections */
+.section {
+  border-top: var(--rule-bar) solid var(--color-accent-2);
+  padding-block: var(--space-2xl);
+}
+.section h2 { margin-bottom: var(--space-xl); }
+
+/* Today */
+.today-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-xl);
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .today-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+.well {
+  border: var(--rule-bar) solid var(--color-ink);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  background: var(--color-paper-2);
+  padding: var(--space-lg);
+}
+.today-label { font-size: var(--text-sm); font-weight: 500; margin-bottom: var(--space-xs); }
+.today-status {
+  font: var(--display-weight) var(--text-display-s)/1 var(--font-display);
+  margin-bottom: var(--space-sm);
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+.today-detail { font-size: var(--text-lg); font-weight: 500; }
+.today-note { margin-top: var(--space-lg); color: var(--color-muted); }
+
+.hours { margin: 0; padding: 0; list-style: none; }
+.hours li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-sm);
+  border-top: var(--rule-bar) solid var(--color-accent-2);
+  font-variant-numeric: tabular-nums;
+}
+.hours li:last-child { border-bottom: var(--rule-bar) solid var(--color-accent-2); }
+.hours .day { font-weight: 500; }
+.hours li.is-today { background: var(--color-ink); color: var(--color-paper); }
+
+/* Menu rows */
+.menu-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-xl);
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .menu-grid { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
+}
+.rows { margin: 0; padding: 0; list-style: none; }
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-xs) var(--space-lg);
+  padding-block: var(--space-md);
+  border-top: var(--rule-bar) solid var(--color-accent-2);
+  align-items: baseline;
+}
+.row:last-child { border-bottom: var(--rule-bar) solid var(--color-accent-2); }
+@media (min-width: 640px) {
+  .row { grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); }
+}
+.row p { font-size: var(--text-lg); }
+
+/* Statement band */
+.band--b {
+  background: var(--color-accent-2);
+  color: var(--color-paper);
+  padding-block: var(--space-2xl);
+}
+.band--b .wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-lg) var(--space-xl);
+  align-items: end;
+}
+@media (min-width: 900px) {
+  .band--b .wrap { grid-template-columns: minmax(0, 1fr) auto; }
+}
+.band--b h2 { font-size: var(--text-hero); margin-bottom: var(--space-md); }
+.band--b p { font-size: var(--text-lg); font-weight: 500; }
+.band--b .btn:focus-visible,
+.band--b a:focus-visible { outline-color: var(--color-focus-on-dark); }
+
+/* Sides */
+.sides-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-xl);
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .sides-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); }
+}
+.groups {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-lg);
+}
+@media (min-width: 640px) {
+  .groups { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.groups h3 { margin-bottom: var(--space-xs); }
+.groups p { font-size: var(--text-lg); }
+
+/* Reviews band */
+.band--a {
+  position: relative;
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+  padding-block: var(--space-2xl);
+}
+.band--a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(12rem, 35%);
+  height: 10rem;
+  background-image: radial-gradient(var(--color-ink) 1.5px, transparent 1.5px);
+  background-size: 12px 12px;
+  pointer-events: none;
+}
+.band--a .wrap { position: relative; z-index: 1; }
+.figure-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-xs);
+  margin-bottom: var(--space-xl);
+}
+.figure {
+  font: var(--display-weight) var(--text-figure)/0.9 var(--font-display);
+  letter-spacing: -0.005em;
+  font-variant-numeric: tabular-nums;
+}
+.figure-line { font-size: var(--text-xl); font-weight: 500; }
+.quotes {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-lg);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 760px) {
+  .quotes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.quote {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  border: var(--rule-bar) solid var(--color-ink);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-lg);
+}
+.quote blockquote { margin: 0 0 var(--space-sm); font-size: var(--text-lg); font-weight: 500; }
+.quote p { font-size: var(--text-sm); color: var(--color-muted); }
+
+/* Visit */
+.visit-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-xl);
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .visit-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+.visit-grid .lead { font-size: var(--text-lg); margin-bottom: var(--space-lg); }
+.contact { font-style: normal; margin-bottom: var(--space-xl); font-size: var(--text-lg); }
+.contact span { display: block; }
+
+/* Footer */
+.foot {
+  border-top: var(--rule-bar) solid var(--color-accent-2);
+  padding-block: var(--space-lg);
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+/* Phone bar */
+.bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-xs) calc(var(--space-xs) + env(safe-area-inset-bottom, 0px));
+  background: var(--color-paper);
+  border-top: var(--rule-bar) solid var(--color-ink);
+}
+.bar .btn {
+  min-height: 3.25rem;
+  padding: var(--space-xs);
+  font-size: var(--text-lg);
+  box-shadow: none;
+}
+.bar .btn:active { box-shadow: none; background: var(--color-paper-3); }
+@media (min-width: 900px) {
+  .bar { display: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="wordmark" href="#main">East TX Rust BBQ</a>
+    <nav class="nav" aria-label="Page">
+      <a href="#menu">Menu</a>
+      <a href="#hours">Hours</a>
+      <a href="#visit">Visit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div>
+        <h1 id="hero-title">Brisket, ribs and house sausage.</h1>
+        <p class="lead">Family and veteran owned craft barbecue in downtown Gilmer, Texas.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="https://maps.google.com/?q=123+Example+St+Gilmer+TX">Get directions</a>
+          <a class="btn" href="tel:123456789">Call 123-456-789</a>
+        </div>
+      </div>
+      <img class="photo photo--hero" src="photo-hero.jpg" width="1200" height="900" alt="A tray of sliced brisket, ribs, red sausage links, mac and cheese and pickled onions on butcher paper.">
+    </div>
+  </section>
+
+  <section class="section" id="hours" aria-labelledby="hours-title">
+    <div class="wrap">
+      <h2 id="hours-title">Check the hours first.</h2>
+      <div class="today-grid">
+        <div class="well" aria-live="polite">
+          <p class="today-label" id="today-label">Today in Gilmer</p>
+          <p class="today-status" id="today-status">Wed to Sat.</p>
+          <p class="today-detail" id="today-detail">Doors open at 11 AM, Central Time. Closed Sunday to Tuesday.</p>
+        </div>
+        <div>
+          <ul class="hours">
+            <li data-day="0"><span class="day">Sunday</span><span>Closed</span></li>
+            <li data-day="1"><span class="day">Monday</span><span>Closed</span></li>
+            <li data-day="2"><span class="day">Tuesday</span><span>Closed</span></li>
+            <li data-day="3"><span class="day">Wednesday</span><span>11 AM to 5 PM</span></li>
+            <li data-day="4"><span class="day">Thursday</span><span>11 AM to 5 PM</span></li>
+            <li data-day="5"><span class="day">Friday</span><span>11 AM to 7:30 PM</span></li>
+            <li data-day="6"><span class="day">Saturday</span><span>11 AM to 7:30 PM</span></li>
+          </ul>
+          <p class="today-note">Or until the meat sells out. Call ahead if you are coming late.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="menu" aria-labelledby="menu-title">
+    <div class="wrap">
+      <h2 id="menu-title">Off the smoker.</h2>
+      <div class="menu-grid">
+        <ul class="rows">
+          <li class="row">
+            <h3>Brisket</h3>
+            <p>Sliced or chopped, with a black bark and a middle that melts as you eat it.</p>
+          </li>
+          <li class="row">
+            <h3>Pork ribs</h3>
+            <p>Smoked pork ribs, on their own or on a tray with everything else.</p>
+          </li>
+          <li class="row">
+            <h3>House sausage</h3>
+            <p>Made here. Jalapeno cheddar and hot links, plus brisket boudin.</p>
+          </li>
+          <li class="row">
+            <h3>Pork and turkey</h3>
+            <p>Pulled pork and smoked turkey for the table that wants a bit of everything.</p>
+          </li>
+          <li class="row">
+            <h3>Sandwiches</h3>
+            <p>The sibling sandwich and a chopped beef sandwich.</p>
+          </li>
+        </ul>
+        <img class="photo photo--tall photo--tilt" src="photo-5.jpg" width="960" height="1200" loading="lazy" alt="A whole smoked brisket with a black bark on a cutting board, held by gloved hands.">
+      </div>
+    </div>
+  </section>
+
+  <section class="band--b" aria-labelledby="tm-title">
+    <div class="wrap">
+      <div>
+        <h2 id="tm-title">As seen in Texas Monthly.</h2>
+        <p>An East Texas pitmaster who moved back home to cook.</p>
+      </div>
+      <a class="btn" href="https://www.facebook.com/107167191800373">Message us on Facebook</a>
+    </div>
+  </section>
+
+  <section class="section" id="sides" aria-labelledby="sides-title">
+    <div class="wrap">
+      <div class="sides-grid">
+        <img class="photo photo--wide" src="photo-2.jpg" width="1200" height="800" loading="lazy" alt="Sliced brisket, sausage and sides with pickled red onions on butcher paper.">
+        <div>
+          <h2 id="sides-title">Sides, sweets and pickles.</h2>
+          <div class="groups">
+            <div>
+              <h3>Sides</h3>
+              <p>Beans, potato salad, coleslaw, mac and cheese.</p>
+            </div>
+            <div>
+              <h3>Sweets</h3>
+              <p>Banana pudding and blackberry cobbler.</p>
+            </div>
+            <div>
+              <h3>On the house</h3>
+              <p>Pickled onions and pickles, made here and free.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band--a" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <h2 id="reviews-title" class="figure-row">
+        <span class="figure">4.6</span>
+        <span class="figure-line">from 152 Google reviews.</span>
+      </h2>
+      <ul class="quotes">
+        <li class="quote">
+          <blockquote>“Easily one of the best barbecue joints anywhere in Texas.”</blockquote>
+          <p>(a Google review)</p>
+        </li>
+        <li class="quote">
+          <blockquote>“Brisket with a gorgeous bark, sausages you will not forget, and a friendly owner who makes it the whole package.”</blockquote>
+          <p>(a Google review)</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="visit" aria-labelledby="visit-title">
+    <div class="wrap">
+      <div class="visit-grid">
+        <div>
+          <h2 id="visit-title">Eat on the patio.</h2>
+          <p class="lead">Picnic tables under red umbrellas, or grab it to go.</p>
+          <address class="contact">
+            <span>123 Example St, Gilmer, TX</span>
+            <span><a href="tel:123456789">123-456-789</a></span>
+            <span><a href="mailto:hello@example.com">hello@example.com</a></span>
+          </address>
+          <div class="actions">
+            <a class="btn btn--primary" href="https://maps.google.com/?q=123+Example+St+Gilmer+TX">Get directions</a>
+            <a class="btn" href="https://www.facebook.com/107167191800373">Message us on Facebook</a>
+          </div>
+        </div>
+        <img class="photo photo--wide" src="photo-8.jpg" width="1200" height="800" loading="lazy" alt="The patio with picnic tables under red umbrellas.">
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Free preview by Brightfront Studio</p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn" href="tel:123456789">Call</a>
+  <a class="btn btn--primary" href="https://maps.google.com/?q=123+Example+St+Gilmer+TX">Directions</a>
+  <a class="btn" href="https://www.facebook.com/107167191800373">Message</a>
+</nav>
+
+<script>
+(function () {
+  var statusEl = document.getElementById('today-status');
+  var detailEl = document.getElementById('today-detail');
+  var labelEl = document.getElementById('today-label');
+  if (!statusEl || !detailEl || !window.Intl || !Intl.DateTimeFormat) return;
+
+  var hours = { 3: [660, 1020], 4: [660, 1020], 5: [660, 1170], 6: [660, 1170] };
+  var names = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var short = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+  function fmt(m) {
+    var h = Math.floor(m / 60), mm = m % 60;
+    var ap = h >= 12 ? 'PM' : 'AM';
+    var h12 = h % 12 || 12;
+    return h12 + (mm ? ':' + (mm < 10 ? '0' : '') + mm : '') + ' ' + ap;
+  }
+
+  try {
+    var parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/Chicago',
+      weekday: 'short',
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: false
+    }).formatToParts(new Date());
+    var map = {};
+    for (var i = 0; i < parts.length; i++) map[parts[i].type] = parts[i].value;
+    var day = short.indexOf(map.weekday);
+    if (day < 0) return;
+    var mins = (parseInt(map.hour, 10) % 24) * 60 + parseInt(map.minute, 10);
+    var t = hours[day];
+    var soldOut = (day === 5 || day === 6) ? ', or until sold out.' : '.';
+
+    labelEl.textContent = 'Today in Gilmer, ' + names[day];
+
+    if (t && mins < t[0]) {
+      statusEl.textContent = 'Opens at ' + fmt(t[0]) + '.';
+      detailEl.textContent = 'Open today until ' + fmt(t[1]) + soldOut;
+    } else if (t && mins < t[1]) {
+      statusEl.textContent = 'Open now.';
+      detailEl.textContent = 'Until ' + fmt(t[1]) + soldOut;
+    } else {
+      var d = 1, next = (day + 1) % 7;
+      while (!hours[next] && d < 7) { d++; next = (day + d) % 7; }
+      statusEl.textContent = 'Closed now.';
+      detailEl.textContent = 'Opens ' + (d === 1 ? 'tomorrow' : names[next]) + ' at ' + fmt(hours[next][0]) + '.';
+    }
+
+    var row = document.querySelector('.hours [data-day="' + day + '"]');
+    if (row) row.className = 'is-today';
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>

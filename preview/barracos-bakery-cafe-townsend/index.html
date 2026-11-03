@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Barraco's Bakery &amp; Cafe, Townsend, GA</title>
+<meta name="description" content="Bakery and cafe in a blue cottage near Townsend, GA. Lunch and dinner Wednesday to Saturday, custom cakes and catering.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Hanken+Grotesk:wght@400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Hallmark v2.0.0 · theme: loom (dealt 3/3, seed coastal-bakery-cafe-empanadas-3764·5170bfde·2026-11-03·r1) · genre editorial · job: visit for lunch or dinner, or order a cake */
+/* critique: ruled menu rows and one indigo band carry the page; photos stay small and alternate with text so food leads without becoming a gallery. loom: ecru */
+:root {
+  --color-paper: oklch(95.5% 0.014 85); --color-paper-2: oklch(92% 0.022 84); --color-paper-3: oklch(85% 0.032 80);
+  --color-ink: oklch(21% 0.012 60); --color-ink-2: oklch(31% 0.012 60); --color-muted: oklch(46% 0.014 62);
+  --color-rule: oklch(83% 0.022 84); --color-rule-ink: oklch(21% 0.012 60);
+  --color-accent: oklch(34% 0.115 267); --color-accent-2: oklch(43% 0.125 267); --color-accent-ink: oklch(95.5% 0.014 85); --color-focus: oklch(43% 0.15 267);
+  --font-display: "Libre Caslon Display", "Libre Caslon Text", ui-serif, Georgia, serif; --font-body: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-outlier: "DM Mono", ui-monospace, monospace;
+  --radius-card: 0; --radius-pill: 0; --rule-hair: 1px; --rule-ink: 2px;
+  --shadow-card: none;
+  --tracking-display: -0.01em; --display-weight: 400;
+  --text-sm: 0.9375rem; --text-base: 1.0625rem; --text-title: 1.1875rem;
+  --text-h2: clamp(2rem, 3.4vw, 2.75rem); --text-h1: clamp(2.5rem, 5.2vw, 4.25rem);
+  --space-2xs: 0.25rem; --space-xs: 0.5rem; --space-sm: 0.75rem; --space-md: 1rem; --space-lg: 1.5rem; --space-xl: 2.5rem; --space-2xl: 4rem; --space-3xl: 6rem;
+  --container: 72rem; --measure: 36rem; --bar-h: 4rem;
+  --dur-short: 160ms; --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body { margin: 0; background: var(--color-paper); color: var(--color-ink); font: 400 var(--text-base)/1.5 var(--font-body); }
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3 { font-weight: 400; line-height: 1.04; font-synthesis: none; margin: 0; }
+h1, h2 { font-family: var(--font-display); font-weight: var(--display-weight); letter-spacing: var(--tracking-display); overflow-wrap: break-word; min-width: 0; }
+h1 { font-size: var(--text-h1); line-height: 1.0; }
+h2 { font-size: var(--text-h2); }
+h3 { font: 500 var(--text-title)/1.25 var(--font-body); color: var(--color-ink); }
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; transition: none; }
+.wrap { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--space-lg); }
+.lead { color: var(--color-muted); max-width: var(--measure); }
+.label { font: 500 var(--text-sm)/1.4 var(--font-body); color: var(--color-muted); }
+.num { font-family: var(--font-outlier); font-variant-numeric: tabular-nums; }
+
+/* controls */
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: var(--space-md) var(--space-lg); font: 500 var(--text-sm)/1 var(--font-body); background: var(--color-accent); color: var(--color-accent-ink); text-decoration: none; border-radius: var(--radius-pill); transition: background-color var(--dur-short) var(--ease-out); }
+.btn:hover { background: var(--color-accent-2); }
+.btn:active { transform: translateY(1px); }
+.link { font-weight: 500; padding-block: var(--space-2xs); border-bottom: 2px solid currentColor; text-decoration: none; transition: border-color var(--dur-short) var(--ease-out); }
+.link:hover { border-color: var(--color-accent); }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-lg); margin-top: var(--space-xl); }
+
+/* header */
+.site-head { border-bottom: var(--rule-ink) solid var(--color-rule-ink); }
+.site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); padding-block: var(--space-md); }
+.brand { font: 500 var(--text-title)/1.2 var(--font-body); text-decoration: none; }
+.nav { display: flex; gap: var(--space-lg); font: 500 var(--text-sm)/1 var(--font-body); }
+.nav a { text-decoration: none; border-bottom: 2px solid transparent; padding-block: var(--space-2xs); transition: border-color var(--dur-short) var(--ease-out); }
+.nav a:hover { border-color: var(--color-accent); }
+
+/* hero */
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: var(--space-2xl); align-items: center; padding-block: var(--space-2xl); }
+.hero p.lead { margin-top: var(--space-lg); font-size: var(--text-title); }
+.photo { margin: 0; }
+.photo img { width: 100%; object-fit: cover; border-radius: var(--radius-card); filter: saturate(0.88) contrast(0.96); outline: 1px solid color-mix(in oklab, var(--color-ink) 8%, transparent); outline-offset: -1px; }
+.photo figcaption { margin-top: var(--space-sm); font: 500 var(--text-sm)/1.4 var(--font-body); color: var(--color-muted); }
+.hero .photo img { aspect-ratio: 5 / 4; max-height: 34rem; }
+
+/* sections */
+section { padding-block: var(--space-3xl); }
+section + section { border-top: var(--rule-hair) solid var(--color-rule); }
+.band { background: var(--color-paper-2); border-top: 0 !important; }
+.band + section { border-top: 0; }
+.band--indigo { background: var(--color-accent); color: var(--color-accent-ink); border-top: 0 !important; }
+.band--indigo + section { border-top: 0; }
+.band--indigo .lead { color: var(--color-accent-ink); }
+.band--indigo .btn { background: var(--color-paper); color: var(--color-accent); }
+.band--indigo .btn:hover { background: var(--color-paper-2); }
+.band--indigo .link:hover { border-color: var(--color-paper-3); }
+.band--indigo :focus-visible { outline-color: var(--color-accent-ink); }
+.split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: start; }
+.split--center { align-items: center; }
+.stack > * + * { margin-top: var(--space-lg); }
+
+/* today box */
+.today { background: var(--color-paper-3); padding: var(--space-xl); }
+.today h3 { margin-bottom: var(--space-xs); }
+.today-status { font: 500 var(--text-title)/1.35 var(--font-body); color: var(--color-ink); }
+.today[data-state="open"] .today-status { color: var(--color-accent); }
+
+/* ruled rows */
+.rows { list-style: none; margin: 0; padding: 0; border-top: var(--rule-ink) solid var(--color-rule-ink); }
+.rows li { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: var(--space-md); padding-block: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.rows li > span:first-child { font: 500 var(--text-sm)/1.5 var(--font-body); color: var(--color-muted); }
+.today .rows { margin-top: var(--space-lg); }
+.today .rows li { border-bottom-color: var(--color-paper-2); }
+
+/* quotes */
+.quotes { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); margin-top: var(--space-xl); }
+.quotes blockquote { margin: 0; padding-top: var(--space-md); border-top: var(--rule-ink) solid var(--color-rule-ink); }
+.quotes p { font-size: var(--text-title); line-height: 1.45; }
+.quotes cite { display: block; margin-top: var(--space-sm); font: 500 var(--text-sm)/1.4 var(--font-body); font-style: normal; color: var(--color-muted); }
+
+.small-photo img { aspect-ratio: 4 / 3; }
+
+/* footer */
+.site-foot { border-top: var(--rule-hair) solid var(--color-rule); padding-block: var(--space-xl); }
+.site-foot p { font: 400 var(--text-sm)/1.4 var(--font-body); color: var(--color-muted); }
+
+/* sticky phone bar */
+.bar { display: none; }
+
+@media (max-width: 860px) {
+  .hero .wrap, .split, .quotes { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
+  .hero .wrap { padding-block: var(--space-xl); }
+  section { padding-block: var(--space-2xl); }
+  .nav { display: none; }
+  .rows li { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xs); }
+  .today { padding: var(--space-lg); }
+}
+@media (max-width: 720px) {
+  .wrap { padding-inline: var(--space-md); }
+  body { padding-bottom: var(--bar-h); }
+  .bar { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); position: fixed; inset-inline: 0; bottom: 0; z-index: 10; height: var(--bar-h); background: var(--color-paper); border-top: var(--rule-ink) solid var(--color-rule-ink); }
+  .bar a { display: flex; align-items: center; justify-content: center; font: 500 var(--text-sm)/1 var(--font-body); text-decoration: none; color: var(--color-ink); }
+  .bar a + a { border-left: var(--rule-hair) solid var(--color-rule); }
+  .bar a.bar-main { background: var(--color-accent); color: var(--color-accent-ink); }
+  .bar a:focus-visible { outline-offset: -4px; }
+  .bar a.bar-main:focus-visible { outline-color: var(--color-accent-ink); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn, .link, .nav a { transition: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top">Barraco's Bakery &amp; Cafe</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#menu">Menu</a>
+      <a href="#cakes">Cakes</a>
+      <a href="#catering">Catering</a>
+      <a href="#visit">Visit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="hero-title" style="padding-block:0;border-top:0">
+    <div class="wrap">
+      <div>
+        <h1 id="hero-title">Lunch and dinner under the live oaks</h1>
+        <p class="lead">A blue cottage bakery and cafe, minutes off I-95.</p>
+        <div class="actions">
+          <a class="btn" href="https://maps.google.com/?q=123+Example+St+Townsend+GA" target="_blank" rel="noopener">Get directions</a>
+          <a class="link" href="tel:123456789">Call 123-456-789</a>
+        </div>
+      </div>
+      <figure class="photo">
+        <img src="photo-hero.jpg" alt="Blue cottage-style cafe with a white railing and a patio table under a big live oak." width="1200" height="960">
+      </figure>
+    </div>
+  </section>
+
+  <section id="hours" aria-labelledby="hours-title">
+    <div class="wrap split split--center">
+      <div class="stack">
+        <h2 id="hours-title">Open Wednesday to Saturday</h2>
+        <p class="lead">Chef Stephanie and her team cook lunch and dinner and bake fresh bread, scones and banana bread. Sit in the quaint dining room or out on the patio.</p>
+      </div>
+      <div class="today" id="today" data-state="unknown">
+        <h3>Today</h3>
+        <p class="today-status" id="today-status">Lunch and dinner, Wednesday to Saturday.</p>
+        <ul class="rows">
+          <li><span>Wednesday to Saturday</span><span>Lunch 11 AM to 3 PM<br>Dinner 5 PM to 9 PM</span></li>
+          <li><span>Sunday to Tuesday</span><span>Closed</span></li>
+        </ul>
+        <p class="label" style="margin-top:var(--space-md)">Times are Eastern time.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" aria-labelledby="menu-title">
+    <div class="wrap split">
+      <div class="stack">
+        <h2 id="menu-title">On the menu</h2>
+        <ul class="rows">
+          <li><span>Lunch</span><span>Beef and chicken empanadas, burgers, hot honey chicken tenders, croissant sandwiches and salads</span></li>
+          <li><span>Dinner specials</span><span>Meatloaf with mashed potatoes and dark gravy, lemon chicken, salmon, ribeye</span></li>
+          <li><span>From the bakery</span><span>Fresh bread, scones, banana bread and desserts like the Snickers cake</span></li>
+          <li><span>The bar</span><span>Drinks to go with lunch or dinner</span></li>
+        </ul>
+      </div>
+      <figure class="photo small-photo">
+        <img src="photo-1.jpg" alt="Three golden baked empanadas on a white plate with a salad behind." width="900" height="675" loading="lazy">
+        <figcaption>Empanadas, baked golden</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <h2 id="reviews-title">4.8 from 186 Google reviews</h2>
+      <div class="quotes">
+        <blockquote>
+          <p>“Sit out on the patio under the oaks. A true local gem worth the stop.”</p>
+          <cite>(a Google review)</cite>
+        </blockquote>
+        <blockquote>
+          <p>“Exquisite empanadas, and a Snickers cake unlike any other.”</p>
+          <cite>(a Google review)</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="cakes" aria-labelledby="cakes-title">
+    <div class="wrap split split--center">
+      <figure class="photo small-photo">
+        <img src="photo-3.jpg" alt="White birthday cake with sprinkles, strawberries and a Happy Birthday topper." width="900" height="675" loading="lazy">
+        <figcaption>A custom birthday cake</figcaption>
+      </figure>
+      <div class="stack">
+        <h2 id="cakes-title">Custom cakes for birthdays</h2>
+        <p class="lead">Tell us the date, the flavor and who it is for. Each cake is made by hand with care.</p>
+        <div class="actions">
+          <a class="btn" href="tel:123456789">Call to order a cake</a>
+          <a class="link" href="https://www.facebook.com/106371015663307" target="_blank" rel="noopener">Message us on Facebook</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="catering" class="band--indigo" aria-labelledby="catering-title">
+    <div class="wrap stack">
+      <h2 id="catering-title">Catering and private events</h2>
+      <p class="lead">Charcuterie spreads and catered food for your gathering, planned with you.</p>
+      <div class="actions">
+        <a class="btn" href="tel:123456789">Ask about catering</a>
+        <a class="link" href="mailto:hello@example.com">hello@example.com</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit" aria-labelledby="visit-title">
+    <div class="wrap split split--center">
+      <div class="stack">
+        <h2 id="visit-title">Find the blue cottage</h2>
+        <p class="lead">123 Example St, Townsend, GA. A few minutes off I-95 in coastal McIntosh County. Dogs are welcome on the patio.</p>
+        <div class="actions">
+          <a class="btn" href="https://maps.google.com/?q=123+Example+St+Townsend+GA" target="_blank" rel="noopener">Get directions</a>
+          <a class="link" href="tel:123456789">Call 123-456-789</a>
+        </div>
+      </div>
+      <figure class="photo small-photo">
+        <img src="photo-8.jpg" alt="Porch and white picket fence of the cottage under hanging oak branches." width="900" height="675" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>Free preview by Brightfront Studio</p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a href="tel:123456789">Call</a>
+  <a class="bar-main" href="https://maps.google.com/?q=123+Example+St+Townsend+GA" target="_blank" rel="noopener">Directions</a>
+  <a href="https://www.facebook.com/106371015663307" target="_blank" rel="noopener">Message</a>
+</nav>
+
+<script>
+(function () {
+  var el = document.getElementById('today-status');
+  var box = document.getElementById('today');
+  if (!el || !box || !window.Intl) return;
+  try {
+    var parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/New_York', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23'
+    }).formatToParts(new Date());
+    var o = {};
+    parts.forEach(function (p) { o[p.type] = p.value; });
+    var d = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(o.weekday);
+    var m = (parseInt(o.hour, 10) % 24) * 60 + parseInt(o.minute, 10);
+    if (d < 0 || isNaN(m)) return;
+    var openDay = d >= 3 && d <= 6;
+    var msg, state = 'closed';
+    if (openDay && m >= 660 && m < 900) { msg = 'Open now for lunch, until 3 PM.'; state = 'open'; }
+    else if (openDay && m >= 1020 && m < 1260) { msg = 'Open now for dinner, until 9 PM.'; state = 'open'; }
+    else if (openDay && m < 660) { msg = 'Closed now. Lunch starts at 11 AM today.'; }
+    else if (openDay && m >= 900 && m < 1020) { msg = 'Closed between lunch and dinner. Dinner starts at 5 PM.'; }
+    else {
+      var next = ((d >= 3 && d <= 5) || d === 2) ? 'tomorrow' : 'Wednesday';
+      msg = 'Closed now. Opens ' + next + ' at 11 AM.';
+    }
+    el.textContent = msg;
+    box.setAttribute('data-state', state);
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>

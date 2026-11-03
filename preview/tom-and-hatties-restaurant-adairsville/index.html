@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tom &amp; Hattie's Restaurant, Adairsville, GA</title>
+<meta name="description" content="Family-run Southern cafeteria in Adairsville, GA. Fried chicken, catfish, mac and cheese, collard greens and peach cobbler. Open Thursday to Sunday.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@600&family=Hanken+Grotesk:wght@400;500&family=Newsreader:opsz,wght@6..72,400&display=swap" rel="stylesheet">
+<style>
+/* Hallmark v2.0.0 · theme: garden (dealt 3/3, seed family-soul-food-cafeteria-0a8a·5170bfde·2026-11-03·r0) · genre editorial · job: come eat */
+/* critique: the line and the plates carry the page; risk is too many photos, so plates stay small and the menu stays text only. */
+:root {
+  --color-paper: oklch(95.8% 0.024 90); --color-paper-2: oklch(92.6% 0.030 90); --color-paper-3: oklch(89% 0.034 90);
+  --color-ink: oklch(23% 0.050 152); --color-ink-2: oklch(33% 0.048 150); --color-muted: oklch(46% 0.034 142);
+  --color-rule: oklch(83% 0.024 112); --color-rule-2: oklch(68% 0.042 138);
+  --color-accent: oklch(46% 0.135 142); --color-accent-hover: oklch(40% 0.130 142); --color-accent-2: oklch(86% 0.075 128); --color-accent-ink: oklch(97% 0.015 95);
+  --color-focus: oklch(46% 0.135 142); --color-focus-on-ink: oklch(86% 0.075 128);
+  --color-on-ink: oklch(95.8% 0.024 90); --color-on-ink-muted: oklch(83% 0.030 112);
+  --color-select: oklch(46% 0.135 142 / 0.22);
+  --tint-moss: oklch(46% 0.135 142 / 0.11); --tint-clay: oklch(54% 0.140 46 / 0.10);
+  --font-display: "Vollkorn", ui-serif, Georgia, serif; --font-body: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-outlier: "Newsreader", ui-serif, Georgia, serif;
+  --radius-card: 4px; --radius-pill: 999px; --rule-hair: 1px; --shadow-card: none;
+  --tracking-display: -0.012em; --display-weight: 600;
+  --text-sm: 0.875rem; --text-base: 1.0625rem; --text-lg: 1.25rem;
+  --space-xs: 0.375rem; --space-sm: 0.625rem; --space-md: 1rem; --space-lg: 1.5rem; --space-xl: 2.5rem; --space-2xl: 4.5rem;
+  --measure: 34rem; --container: 70rem;
+  --dur-short: 140ms; --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink-2);
+  font: 400 var(--text-base)/1.6 var(--font-body);
+  font-variant-numeric: oldstyle-nums;
+}
+img { display: block; max-width: 100%; height: auto; }
+::selection { background: var(--color-select); }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--tracking-display);
+  line-height: 1.04;
+  color: var(--color-ink);
+  margin: 0;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+h1 { font-size: clamp(2.5rem, 5.2vw, 4.1rem); }
+h2 { font-size: clamp(1.9rem, 3.4vw, 2.75rem); }
+h3 { font-size: var(--text-lg); line-height: 1.2; }
+p { margin: 0; }
+
+a { color: var(--color-ink); text-decoration: underline; text-decoration-color: var(--color-rule-2); text-underline-offset: 0.18em; text-decoration-thickness: 1px; transition: text-decoration-color var(--dur-short) var(--ease-out); }
+a:hover { text-decoration-color: var(--color-accent); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; border-radius: var(--radius-card); transition: none; }
+
+.wrap { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--space-md); }
+@media (min-width: 700px) { .wrap { padding-inline: var(--space-xl); } }
+.section { padding-block: var(--space-2xl); border-top: var(--rule-hair) solid var(--color-rule); }
+.label { font: 500 var(--text-sm)/1.4 var(--font-body); color: var(--color-muted); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 2.9rem;
+  border-radius: var(--radius-pill);
+  border: var(--rule-hair) solid var(--color-rule-2);
+  padding: var(--space-sm) var(--space-lg);
+  font: 500 var(--text-base)/1.2 var(--font-body);
+  color: var(--color-ink);
+  text-decoration: none;
+  background: var(--color-paper);
+  transition: background-color var(--dur-short) var(--ease-out), border-color var(--dur-short) var(--ease-out);
+}
+.btn:hover { background: var(--color-paper-2); }
+.btn--primary { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-accent-ink); }
+.btn--primary:hover { background: var(--color-accent-hover); border-color: var(--color-accent-hover); }
+.btn:active { transform: translateY(1px); }
+.btn-row { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+
+/* header */
+.top { border-bottom: var(--rule-hair) solid var(--color-rule); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); min-height: 4rem; }
+.brand { font: var(--display-weight) 1.35rem/1 var(--font-display); color: var(--color-ink); text-decoration: none; letter-spacing: var(--tracking-display); }
+.nav { display: flex; gap: var(--space-lg); font: 500 var(--text-sm)/1 var(--font-body); }
+.nav a { text-decoration-color: transparent; }
+.nav a:hover { text-decoration-color: var(--color-accent); }
+
+/* hero */
+.hero { padding-block: var(--space-xl) var(--space-2xl); }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: var(--space-xl); align-items: center; }
+.hero-text { display: grid; gap: var(--space-lg); max-width: var(--measure); }
+.hero-text p { font-size: var(--text-lg); color: var(--color-ink-2); }
+.hero-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius-card); outline: var(--rule-hair) solid var(--color-rule); outline-offset: -1px; }
+
+/* today */
+.today { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: var(--space-xl); align-items: start; }
+.today-head { display: grid; gap: var(--space-md); }
+.status { font: 500 var(--text-lg)/1.35 var(--font-body); color: var(--color-ink); }
+.week { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); border-top: var(--rule-hair) solid var(--color-rule-2); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.week li { padding: var(--space-md) var(--space-xs); border-left: var(--rule-hair) solid var(--color-rule); display: grid; gap: var(--space-xs); min-width: 0; }
+.week li:first-child { border-left: 0; }
+.week .day { font: 500 var(--text-sm)/1.2 var(--font-body); color: var(--color-ink); }
+.week .hrs { font: 400 var(--text-sm)/1.3 var(--font-body); color: var(--color-muted); overflow-wrap: break-word; }
+.week .open { background: var(--tint-moss); }
+.week .open .hrs { color: var(--color-ink-2); }
+.week .is-today { box-shadow: inset 0 -3px 0 var(--color-accent); }
+.note { margin-top: var(--space-md); color: var(--color-muted); font-size: var(--text-sm); }
+
+/* the line */
+.line { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: var(--space-xl); align-items: center; }
+.steps { list-style: none; margin: var(--space-lg) 0 0; padding: 0; counter-reset: step; }
+.steps li { counter-increment: step; display: grid; grid-template-columns: 2.4rem minmax(0, 1fr); gap: var(--space-md); padding-block: var(--space-md); border-top: var(--rule-hair) solid var(--color-rule); }
+.steps li:last-child { border-bottom: var(--rule-hair) solid var(--color-rule); }
+.steps li::before { content: counter(step); font: var(--display-weight) 1.9rem/1 var(--font-display); color: var(--color-ink); font-variant-numeric: oldstyle-nums; }
+.photo { margin: 0; display: grid; gap: var(--space-xs); }
+.photo img { width: 100%; object-fit: cover; border-radius: var(--radius-card); outline: var(--rule-hair) solid var(--color-rule); outline-offset: -1px; }
+.photo figcaption { font: 400 var(--text-sm)/1.4 var(--font-outlier); color: var(--color-muted); }
+.line .photo img { aspect-ratio: 4 / 3; }
+
+/* menu */
+.band { background: var(--color-paper-2); border-top: 0; }
+.menu-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-xl); margin-top: var(--space-xl); }
+.menu-grid h3 { padding-bottom: var(--space-sm); border-bottom: var(--rule-hair) solid var(--color-rule-2); }
+.menu-grid ul { list-style: none; margin: 0; padding: 0; }
+.menu-grid li { padding-block: var(--space-sm); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.menu-grid li span { display: block; font: 400 var(--text-sm)/1.4 var(--font-outlier); color: var(--color-muted); }
+
+/* plates */
+.plates { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-lg); align-items: end; }
+.plates .photo img { aspect-ratio: 1 / 1; }
+
+/* reviews on green ink */
+.ink { background: var(--color-ink); color: var(--color-on-ink); border-top: 0; }
+.ink h2 { color: var(--color-on-ink); max-width: 18ch; }
+.reviews { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: var(--space-xl); align-items: start; }
+.ink .label { color: var(--color-on-ink-muted); margin-top: var(--space-md); }
+.quotes { display: grid; gap: var(--space-lg); }
+.quotes blockquote { margin: 0; padding-top: var(--space-md); border-top: var(--rule-hair) solid var(--color-on-ink-muted); }
+.quotes p { font: var(--display-weight) 1.4rem/1.3 var(--font-display); color: var(--color-on-ink); }
+.quotes cite { display: block; margin-top: var(--space-xs); font: 500 var(--text-sm)/1.4 var(--font-body); font-style: normal; color: var(--color-on-ink-muted); }
+.ink a { color: var(--color-accent-2); text-decoration-color: var(--color-accent-2); }
+.ink a:focus-visible { outline-color: var(--color-focus-on-ink); }
+
+/* visit */
+.visit { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-xl); align-items: start; }
+.visit .photo img { aspect-ratio: 3 / 2; }
+.rows { margin: var(--space-lg) 0; display: grid; }
+.rows div { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: var(--space-md); padding-block: var(--space-sm); border-top: var(--rule-hair) solid var(--color-rule); }
+.rows div:last-child { border-bottom: var(--rule-hair) solid var(--color-rule); }
+.rows dt { font: 500 var(--text-sm)/1.6 var(--font-body); color: var(--color-muted); }
+.rows dd { margin: 0; color: var(--color-ink); }
+
+/* footer */
+.foot { border-top: var(--rule-hair) solid var(--color-rule); padding-block: var(--space-lg); }
+.foot p { font: 400 var(--text-sm)/1.4 var(--font-body); color: var(--color-muted); }
+
+/* phone bar */
+.bar { display: none; }
+
+@media (max-width: 900px) {
+  .hero .wrap, .today, .line, .reviews, .visit { grid-template-columns: minmax(0, 1fr); }
+  .menu-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .plates { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .plates .photo:nth-child(3) { display: none; }
+}
+@media (max-width: 760px) {
+  .nav { display: none; }
+  .section { padding-block: var(--space-xl); }
+  .hero { padding-block: var(--space-lg) var(--space-xl); }
+  .menu-grid { grid-template-columns: minmax(0, 1fr); gap: var(--space-lg); }
+  .week li { padding: var(--space-sm) 2px; text-align: center; }
+  .week .hrs { font-size: 0.75rem; }
+  body { padding-bottom: calc(4.75rem + env(safe-area-inset-bottom)); }
+  .bar {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-xs);
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+    padding: var(--space-sm) var(--space-sm) calc(var(--space-sm) + env(safe-area-inset-bottom));
+    background: var(--color-paper);
+    border-top: var(--rule-hair) solid var(--color-rule-2);
+  }
+  .bar .btn { padding-inline: var(--space-xs); font-size: var(--text-sm); min-width: 0; }
+}
+@media (max-width: 420px) {
+  .rows div { grid-template-columns: 5.5rem minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">Tom &amp; Hattie's</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#today">Hours</a>
+      <a href="#line">The line</a>
+      <a href="#menu">Menu</a>
+      <a href="#visit">Visit</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <h1>Southern cooking, served down the line.</h1>
+        <p>Grab a tray, pick your meat and sides, then sit down.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="https://maps.google.com/?q=123+Example+St+Adairsville+GA">Get directions</a>
+          <a class="btn" href="tel:123456789">Call 123-456-789</a>
+        </div>
+      </div>
+      <figure class="hero-photo" style="margin:0">
+        <img src="photo-hero.jpg" width="1200" height="900" alt="A plate of fried chicken and a smothered piece of chicken with mac and cheese and collard greens, a cup of gravy behind, on a wooden table.">
+      </figure>
+    </div>
+  </section>
+
+  <section class="section" id="today" aria-labelledby="today-h">
+    <div class="wrap today">
+      <div class="today-head">
+        <h2 id="today-h">Open Thursday to Sunday</h2>
+        <p class="status" id="status" aria-live="polite">Thursday to Saturday 11 AM to 7 PM, Sunday 11 AM to 5 PM.</p>
+      </div>
+      <div>
+        <ul class="week" aria-label="Weekly hours, Adairsville time">
+          <li data-day="1"><span class="day">Mon</span><span class="hrs">Closed</span></li>
+          <li data-day="2"><span class="day">Tue</span><span class="hrs">Closed</span></li>
+          <li data-day="3"><span class="day">Wed</span><span class="hrs">Closed</span></li>
+          <li data-day="4" class="open"><span class="day">Thu</span><span class="hrs">11 AM to 7 PM</span></li>
+          <li data-day="5" class="open"><span class="day">Fri</span><span class="hrs">11 AM to 7 PM</span></li>
+          <li data-day="6" class="open"><span class="day">Sat</span><span class="hrs">11 AM to 7 PM</span></li>
+          <li data-day="0" class="open"><span class="day">Sun</span><span class="hrs">11 AM to 5 PM</span></li>
+        </ul>
+        <p class="note">Sunday gets busiest around 1 PM.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="line" aria-labelledby="line-h">
+    <div class="wrap line">
+      <div>
+        <h2 id="line-h">How the line works</h2>
+        <ol class="steps">
+          <li><p>One of the brothers greets you at the door and explains how it goes.</p></li>
+          <li><p>Grab a tray and slide it down the line.</p></li>
+          <li><p>The ladies fill your plate with a meat and two or three sides.</p></li>
+          <li><p>Take a seat, and someone comes by for your drink order.</p></li>
+        </ol>
+      </div>
+      <figure class="photo">
+        <img src="photo-3.jpg" width="1000" height="750" loading="lazy" alt="The hot food line with trays of fried chicken and other dishes under a heat lamp.">
+        <figcaption>The hot line, under the lamps.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section band" id="menu" aria-labelledby="menu-h">
+    <div class="wrap">
+      <h2 id="menu-h">What's on the line</h2>
+      <div class="menu-grid">
+        <div>
+          <h3>Meats</h3>
+          <ul>
+            <li>Fried chicken<span>Dark or white meat</span></li>
+            <li>Baked chicken</li>
+            <li>BBQ chicken</li>
+            <li>Catfish<span>Fried to order</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Sides</h3>
+          <ul>
+            <li>Homemade mac and cheese</li>
+            <li>Collard greens</li>
+            <li>Fried okra</li>
+            <li>Yams</li>
+            <li>Mashed potatoes and gravy</li>
+            <li>Baked beans</li>
+          </ul>
+        </div>
+        <div>
+          <h3>And to finish</h3>
+          <ul>
+            <li>Cornbread and rolls</li>
+            <li>Peach cobbler</li>
+            <li>Sweet tea</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="plates-h">
+    <div class="wrap">
+      <h2 id="plates-h" style="margin-bottom:var(--space-lg)">A few plates</h2>
+      <div class="plates">
+        <figure class="photo">
+          <img src="photo-1.jpg" width="800" height="800" loading="lazy" alt="Fried chicken, fried okra, mac and cheese and a dinner roll on a plate, with mashed potatoes in a cup behind.">
+          <figcaption>Fried chicken, okra, mac and cheese.</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="photo-2.jpg" width="800" height="800" loading="lazy" alt="A lunch tray with fried chicken, a biscuit, a creamy side, a cup of gravy and a glass of sweet tea.">
+          <figcaption>A full tray with sweet tea.</figcaption>
+        </figure>
+        <figure class="photo">
+          <img src="photo-6.jpg" width="800" height="800" loading="lazy" alt="The glass sneeze guard serving line with warm trays of food.">
+          <figcaption>The serving line behind the glass.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ink" aria-labelledby="reviews-h">
+    <div class="wrap reviews">
+      <div>
+        <h2 id="reviews-h">Like eating at a family reunion.</h2>
+        <p class="label">4.7 from 428 Google reviews</p>
+      </div>
+      <div class="quotes">
+        <blockquote>
+          <p>“It felt like a family get together, with an auntie making sure everybody ate.”</p>
+          <cite>(a Google review)</cite>
+        </blockquote>
+        <blockquote>
+          <p>“The fried chicken was crisp outside and juicy inside, and the place was spotless.”</p>
+          <cite>(a Google review)</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="visit" aria-labelledby="visit-h">
+    <div class="wrap visit">
+      <div>
+        <h2 id="visit-h">Come eat with us</h2>
+        <dl class="rows">
+          <div><dt>Address</dt><dd>123 Example St, Adairsville, GA</dd></div>
+          <div><dt>Thu to Sat</dt><dd>11 AM to 7 PM</dd></div>
+          <div><dt>Sunday</dt><dd>11 AM to 5 PM</dd></div>
+          <div><dt>Mon to Wed</dt><dd>Closed</dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:123456789">123-456-789</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:hello@example.com">hello@example.com</a></dd></div>
+        </dl>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="https://maps.google.com/?q=123+Example+St+Adairsville+GA">Get directions</a>
+          <a class="btn" href="https://www.facebook.com/profile.php?id=61560568213581">Message us on Facebook</a>
+        </div>
+      </div>
+      <figure class="photo">
+        <img src="photo-4.jpg" width="1200" height="800" loading="lazy" alt="The clean dining room with wooden tables and chairs and the Tom and Hattie logo on the back wall.">
+        <figcaption>The dining room.</figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p>Free preview by Brightfront Studio</p>
+  </div>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn" href="tel:123456789">Call</a>
+  <a class="btn btn--primary" href="https://maps.google.com/?q=123+Example+St+Adairsville+GA">Directions</a>
+  <a class="btn" href="https://www.facebook.com/profile.php?id=61560568213581">Message</a>
+</nav>
+
+<script>
+(function () {
+  var hours = { 4: [11, 19], 5: [11, 19], 6: [11, 19], 0: [11, 17] };
+  var names = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var map = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+  function label(h) { if (h === 12) return "12 PM"; return h > 12 ? (h - 12) + " PM" : h + " AM"; }
+  try {
+    var parts = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", weekday: "short", hour: "numeric", minute: "numeric", hourCycle: "h23" }).formatToParts(new Date());
+    var get = function (t) { for (var i = 0; i < parts.length; i++) { if (parts[i].type === t) return parts[i].value; } return ""; };
+    var d = map[get("weekday")];
+    var now = (parseInt(get("hour"), 10) % 24) + parseInt(get("minute"), 10) / 60;
+    var today = hours[d];
+    var msg;
+    if (today && now >= today[0] && now < today[1]) {
+      msg = "Open now, until " + label(today[1]) + " today.";
+    } else if (today && now < today[0]) {
+      msg = "Closed right now. Opens today at " + label(today[0]) + ".";
+    } else {
+      for (var i = 1; i <= 7; i++) {
+        var nd = (d + i) % 7;
+        if (hours[nd]) {
+          msg = "Closed right now. Opens " + (i === 1 ? "tomorrow" : names[nd]) + " at " + label(hours[nd][0]) + ".";
+          break;
+        }
+      }
+    }
+    var el = document.getElementById("status");
+    if (el && msg) el.textContent = msg;
+    var cell = document.querySelector('.week [data-day="' + d + '"]');
+    if (cell) { cell.classList.add("is-today"); cell.setAttribute("aria-current", "date"); }
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>

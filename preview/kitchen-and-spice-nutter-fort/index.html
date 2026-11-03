@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kitchen and Spice, Nutter Fort, WV</title>
+<meta name="description" content="Fresh, never frozen smash burgers, big spicy chicken sandwiches, hoagies, wings and hand cut fries in Nutter Fort, West Virginia.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@700&family=Spectral:ital,wght@0,400;0,500;1,400&family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
+<style>
+/* Hallmark v2.0.0 · theme: newsprint (dealt 3/3, seed smash-burger-hoagie-lunch-a23d·5170bfde·2026-11-03·r1) · genre editorial · job: order lunch */
+/* critique: a lunch counter in broadsheet clothes risks reading stiff, so heads stay short and plain, the specials get the one ink band, and agate is kept to the hours alone. */
+
+:root {
+  --color-paper: oklch(94% 0.011 92); --color-paper-2: oklch(90.5% 0.015 88); --color-paper-3: oklch(87% 0.017 86);
+  --color-ink: oklch(17% 0.012 60); --color-ink-2: oklch(27% 0.012 58); --color-muted: oklch(46% 0.014 60);
+  --color-rule: oklch(68% 0.016 75); --color-rule-2: oklch(34% 0.012 60);
+  --color-accent: oklch(44% 0.13 32); --color-accent-ink: oklch(95% 0.012 90); --color-focus: oklch(48% 0.17 32);
+  --font-display: "Zilla Slab", ui-serif, Georgia, serif; --font-body: "Spectral", ui-serif, Georgia, serif;
+  --font-outlier: "Libre Franklin", ui-sans-serif, sans-serif;
+  --radius-card: 0; --radius-pill: 0; --rule-hair: 1px;
+  --shadow-card: none;
+  --tracking-display: -0.02em; --display-weight: 700;
+
+  --space-xs: 0.25rem; --space-sm: 0.5rem; --space-md: 0.875rem; --space-lg: 1.25rem;
+  --space-xl: 2rem; --space-2xl: 3.5rem; --space-3xl: 5rem;
+  --text-sm: 0.9375rem; --text-base: 1.0625rem; --text-title: 1.375rem;
+  --text-display-s: clamp(1.75rem, 1.35rem + 1.5vw, 2.5rem);
+  --text-display: clamp(2.375rem, 1.5rem + 3.2vw, 4rem);
+  --measure: 72rem;
+  --bar-h: 4.25rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: clip; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font: 400 var(--text-base)/1.55 var(--font-body);
+}
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--tracking-display);
+  line-height: 1.05;
+  margin: 0;
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+h1 { font-size: var(--text-display); }
+h2 { font-size: var(--text-display-s); }
+h3 { font-size: var(--text-title); line-height: 1.15; }
+p { margin: 0; }
+
+a { color: var(--color-accent); text-decoration-color: var(--color-accent); text-decoration-thickness: 1px; text-underline-offset: 0.16em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+::selection { background: color-mix(in oklab, var(--color-accent) 20%, transparent); }
+
+.wrap { max-width: var(--measure); margin-inline: auto; padding-inline: var(--space-lg); }
+.rule--double { box-sizing: content-box; height: 2px; border: 0; border-block: var(--rule-hair) solid var(--color-rule-2); margin: 0; }
+.rule--hair { height: 0; border: 0; border-top: var(--rule-hair) solid var(--color-rule); margin: 0; }
+.muted { color: var(--color-muted); font-weight: 500; font-size: var(--text-sm); }
+
+/* masthead */
+.mast { padding-block: var(--space-lg) var(--space-md); display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: var(--space-sm) var(--space-xl); }
+.mast__name { font: var(--display-weight) var(--text-display-s)/1 var(--font-display); letter-spacing: var(--tracking-display); color: var(--color-ink); text-decoration: none; }
+.mast__name:hover { text-decoration: underline; text-decoration-thickness: 2px; text-decoration-color: var(--color-accent); }
+.mast__meta { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-lg); }
+
+/* buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 3rem; border: 0; background: none; border-radius: var(--radius-pill);
+  padding: var(--space-md) var(--space-lg);
+  font: 700 0.9375rem/1 var(--font-display);
+  text-decoration: none; cursor: pointer;
+}
+.btn--primary { background: var(--color-ink); color: var(--color-paper); }
+.btn--primary:hover { background: var(--color-ink-2); }
+.btn--secondary { border-block: var(--rule-hair) solid var(--color-ink); color: var(--color-ink); }
+.btn--secondary:hover { background: var(--color-paper-2); }
+.btn:active { transform: translateY(1px); }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-md); }
+
+/* hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: var(--space-xl); align-items: center; padding-block: var(--space-xl) var(--space-2xl); }
+.hero__text { display: grid; gap: var(--space-lg); align-content: center; }
+.hero__lede { font-size: 1.25rem; line-height: 1.45; color: var(--color-ink-2); max-width: 30ch; }
+.hero figure img { aspect-ratio: 4 / 3; max-height: 30rem; }
+
+figure { margin: 0; min-width: 0; }
+figure img {
+  width: 100%; object-fit: cover;
+  border: var(--rule-hair) solid var(--color-rule);
+  border-radius: var(--radius-card);
+  filter: grayscale(1) contrast(1.06);
+  background: var(--color-paper-3);
+}
+figcaption { font: 500 var(--text-sm)/1.4 var(--font-body); color: var(--color-muted); padding-top: var(--space-xs); }
+
+section { padding-block: var(--space-2xl); }
+.head { display: grid; gap: var(--space-sm); margin-bottom: var(--space-xl); max-width: 40rem; }
+
+/* today */
+.well { background: var(--color-paper-2); border-block: var(--rule-hair) solid var(--color-rule); }
+.today { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-xl) var(--space-2xl); align-items: start; }
+.today__status { font: var(--display-weight) var(--text-title)/1.25 var(--font-display); letter-spacing: var(--tracking-display); margin-top: var(--space-md); }
+.today__note { margin-top: var(--space-sm); color: var(--color-ink-2); }
+.hours { list-style: none; margin: 0; padding: 0; border-top: var(--rule-hair) solid var(--color-rule-2); }
+.hours li { display: flex; justify-content: space-between; gap: var(--space-lg); padding-block: var(--space-md); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.hours li.is-today { font-weight: 500; }
+.hours li.is-today .hours__day { text-decoration: underline; text-decoration-color: var(--color-accent); text-underline-offset: 0.22em; }
+.agate { font: 500 1em/1.55 var(--font-outlier); font-variant-numeric: tabular-nums; text-align: right; }
+
+/* menu */
+.menu { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: start; }
+.listing { list-style: none; margin: 0; padding: 0; border-top: var(--rule-hair) solid var(--color-rule-2); }
+.listing li { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); gap: var(--space-xs) var(--space-xl); padding-block: var(--space-lg); border-bottom: var(--rule-hair) solid var(--color-rule); }
+.menu__pics { display: grid; gap: var(--space-xl); }
+.menu__pics img { aspect-ratio: 1 / 1; }
+
+/* ink band */
+.band { background: var(--color-ink); color: var(--color-paper); border-top: 2px solid var(--color-accent); }
+.band .head { margin-bottom: var(--space-lg); }
+.band p { color: var(--color-accent-ink); max-width: 42ch; }
+.band .btn--secondary { border-color: var(--color-paper); color: var(--color-paper); margin-top: var(--space-lg); }
+.band .btn--secondary:hover { background: var(--color-ink-2); }
+.band :focus-visible { outline-color: var(--color-paper); }
+
+/* reviews */
+.quotes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: var(--rule-hair) solid var(--color-rule-2); }
+.quotes blockquote { margin: 0; padding: var(--space-lg) var(--space-xl) var(--space-lg) 0; }
+.quotes blockquote + blockquote { border-left: var(--rule-hair) solid var(--color-rule); padding-left: var(--space-xl); }
+.quotes p { font: var(--display-weight) var(--text-title)/1.3 var(--font-display); letter-spacing: var(--tracking-display); }
+.quotes cite { display: block; margin-top: var(--space-sm); font: 500 var(--text-sm)/1.4 var(--font-body); font-style: normal; color: var(--color-muted); }
+
+/* visit */
+.visit { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-2xl); align-items: center; }
+.visit figure img { aspect-ratio: 1 / 1; max-height: 26rem; }
+.visit__body { display: grid; gap: var(--space-md); }
+.visit address { font-style: normal; }
+
+footer { padding-block: var(--space-lg) var(--space-xl); }
+footer p { font-size: var(--text-sm); color: var(--color-muted); }
+
+/* phone bar */
+.bar { display: none; }
+
+@media (max-width: 760px) {
+  .wrap { padding-inline: var(--space-md); }
+  .hero, .today, .menu, .visit { grid-template-columns: minmax(0, 1fr); }
+  .hero { gap: var(--space-lg); padding-top: var(--space-lg); }
+  .listing li { grid-template-columns: minmax(0, 1fr); }
+  .menu__pics { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-md); }
+  .quotes { grid-template-columns: minmax(0, 1fr); }
+  .quotes blockquote { padding-right: 0; }
+  .quotes blockquote + blockquote { border-left: 0; border-top: var(--rule-hair) solid var(--color-rule); padding-left: 0; }
+  section { padding-block: var(--space-xl); }
+  body { padding-bottom: calc(var(--bar-h) + env(safe-area-inset-bottom)); }
+  .bar {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-sm);
+    position: fixed; inset-inline: 0; bottom: 0; z-index: 10;
+    padding: var(--space-sm) var(--space-md) calc(var(--space-sm) + env(safe-area-inset-bottom));
+    background: var(--color-paper);
+    border-top: 3px double var(--color-rule-2);
+  }
+  .bar .btn { min-height: 2.875rem; padding-inline: var(--space-sm); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none; transition: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="mast">
+    <a class="mast__name" href="#top">Kitchen and Spice</a>
+    <div class="mast__meta">
+      <span class="muted">Burgers and sandwiches in Nutter Fort, West Virginia</span>
+      <a class="muted" href="tel:123456789">123-456-789</a>
+    </div>
+  </div>
+  <hr class="rule--double">
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <div class="hero">
+      <div class="hero__text">
+        <h1>Smash burgers, cooked to order.</h1>
+        <p class="hero__lede">Fresh, never frozen burgers and big sandwiches, right in Nutter Fort.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="tel:123456789">Call to order</a>
+          <a class="btn btn--secondary" href="https://maps.google.com/?q=123+Example+St+Nutter+Fort+WV">Directions</a>
+        </div>
+      </div>
+      <figure>
+        <img src="photo-hero.jpg" width="1200" height="900" alt="A tall bacon cheeseburger with a glossy sauce on a wooden board." fetchpriority="high">
+        <figcaption>A bacon cheeseburger on a wooden board.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <section class="well" aria-labelledby="today-h">
+    <div class="wrap today">
+      <div>
+        <h2 id="today-h">Open today?</h2>
+        <p class="today__status" id="today-status" aria-live="polite">Hours are listed here, in Eastern time.</p>
+        <p class="today__note">We close at 6 PM, and at 2 PM on Saturday. Call ahead and it will be ready.</p>
+      </div>
+      <ul class="hours">
+        <li data-days="2 3 4 5"><span class="hours__day">Tuesday to Friday</span><span class="agate">10 AM to 6 PM</span></li>
+        <li data-days="6"><span class="hours__day">Saturday</span><span class="agate">10 AM to 2 PM</span></li>
+        <li data-days="0 1"><span class="hours__day">Sunday and Monday</span><span class="agate">Closed</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="menu-h">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="menu-h">Burgers, hoagies and hot fries.</h2>
+        <p>Everything is cooked to order, so it comes out quick and hot.</p>
+      </div>
+      <div class="menu">
+        <ul class="listing">
+          <li><h3>Smash burgers</h3><p>Fresh, never frozen beef with the house seasoning. Try the bacon cheeseburger or the deviled egg burger.</p></li>
+          <li><h3>Spicy chicken sandwich</h3><p>Big, butterflied and spicy. Come hungry.</p></li>
+          <li><h3>Hoagies</h3><p>Red pepper and portobello sausage, or chicken cheese.</p></li>
+          <li><h3>Wings</h3><p>Sweet Heat, sauced to order.</p></li>
+          <li><h3>Fries</h3><p>Thin and hand cut fresh with a spicy rub, or go Cajun.</p></li>
+        </ul>
+        <div class="menu__pics">
+          <figure>
+            <img src="photo-1.jpg" width="800" height="800" loading="lazy" alt="A burger and thin seasoned fries in a checkered paper basket on a wooden table.">
+            <figcaption>A burger and fries in a paper basket.</figcaption>
+          </figure>
+          <figure>
+            <img src="photo-2.jpg" width="800" height="800" loading="lazy" alt="A gloved hand holding a halved hoagie stuffed with meat and cheese.">
+            <figcaption>A hoagie, halved and stuffed.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="specials-h">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="specials-h">The specials change every week.</h2>
+      </div>
+      <p>Weekly specials, and some days a daily one, go up on Facebook first. Check before you call.</p>
+      <a class="btn btn--secondary" href="https://www.facebook.com/kitchenandspiceco">See the specials on Facebook</a>
+    </div>
+  </section>
+
+  <section aria-labelledby="reviews-h">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="reviews-h">Nutter Fort needed a spot like this.</h2>
+        <p class="muted">5.0 from 270 Google reviews.</p>
+      </div>
+      <div class="quotes">
+        <blockquote>
+          <p>Fresh, never frozen, with their own seasoning. The best hamburger I have had.</p>
+          <cite>(a Google review)</cite>
+        </blockquote>
+        <blockquote>
+          <p>Food comes out quick and hot, the owners are super friendly, and the specials make every visit a treat.</p>
+          <cite>(a Google review)</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule--double">
+
+  <section aria-labelledby="visit-h">
+    <div class="wrap visit">
+      <figure>
+        <img src="photo-6.jpg" width="800" height="800" loading="lazy" alt="The storefront with white siding, a banner reading Burgers and the Kitchen and Spice Restaurant sign.">
+        <figcaption>The front of the shop in Nutter Fort.</figcaption>
+      </figure>
+      <div class="visit__body">
+        <h2 id="visit-h">Find us in Nutter Fort.</h2>
+        <p>A small family restaurant run by Jason and his family, in the Clarksburg area.</p>
+        <address>123 Example St, Nutter Fort, WV<br><a href="tel:123456789">123-456-789</a><br><a href="mailto:hello@example.com">hello@example.com</a></address>
+        <div class="actions">
+          <a class="btn btn--primary" href="tel:123456789">Call to order</a>
+          <a class="btn btn--secondary" href="https://maps.google.com/?q=123+Example+St+Nutter+Fort+WV">Directions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <hr class="rule--hair">
+  <p style="padding-top: var(--space-md);">Free preview by Brightfront Studio</p>
+</footer>
+
+<nav class="bar" aria-label="Quick actions">
+  <a class="btn btn--primary" href="tel:123456789">Call</a>
+  <a class="btn btn--secondary" href="https://maps.google.com/?q=123+Example+St+Nutter+Fort+WV">Directions</a>
+  <a class="btn btn--secondary" href="https://www.facebook.com/kitchenandspiceco">Message</a>
+</nav>
+
+<script>
+(function () {
+  var el = document.getElementById('today-status');
+  if (!el || !window.Intl) return;
+  var hours = { 2: [10, 18], 3: [10, 18], 4: [10, 18], 5: [10, 18], 6: [10, 14] };
+  var names = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var short = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  function fmt(h) { return (h % 12 || 12) + (h < 12 ? ' AM' : ' PM'); }
+  function update() {
+    var parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: 'America/New_York', weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: false
+    }).formatToParts(new Date());
+    var m = {};
+    parts.forEach(function (p) { m[p.type] = p.value; });
+    var d = short.indexOf(m.weekday);
+    if (d < 0) return;
+    var t = (parseInt(m.hour, 10) % 24) + parseInt(m.minute, 10) / 60;
+    var today = hours[d];
+    var msg;
+    if (today && t >= today[0] && t < today[1]) {
+      msg = 'Open now, until ' + fmt(today[1]) + ' today.';
+    } else if (today && t < today[0]) {
+      msg = 'Closed now. Opens today at ' + fmt(today[0]) + '.';
+    } else {
+      for (var i = 1; i <= 7; i++) {
+        var n = (d + i) % 7;
+        if (hours[n]) {
+          msg = 'Closed now. Opens ' + (i === 1 ? 'tomorrow' : names[n]) + ' at ' + fmt(hours[n][0]) + '.';
+          break;
+        }
+      }
+    }
+    el.textContent = msg;
+    var rows = document.querySelectorAll('.hours li');
+    for (var r = 0; r < rows.length; r++) {
+      var days = rows[r].getAttribute('data-days').split(' ');
+      rows[r].classList.toggle('is-today', days.indexOf(String(d)) > -1);
+    }
+  }
+  update();
+  setInterval(update, 60000);
+})();
+</script>
+</body>
+</html>
