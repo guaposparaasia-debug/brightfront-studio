@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy — Brightfront Studio</title>
+  <meta name="description" content="How Brightfront Studio handles information on brightfrontdesign.com: the publish form, payments, browser storage, hosting, and our AdSense preparation.">
+  <meta name="theme-color" content="#F6F3EC">
+  <link rel="canonical" href="https://brightfrontdesign.com/privacy/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231C3D34'/%3E%3Cpath fill='%23F6F3EC' d='M6 22.6V12.2L16 5.6l10 6.6v10.4H6z'/%3E%3Crect x='13.2' y='15.2' width='5.6' height='7.4' fill='%231C3D34'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #F6F3EC;
+      --paper-2: #EFEAE1;
+      --ink: #1A1916;
+      --muted: #5E5A53;
+      --line: #DDD6C8;
+      --pine: #1C3D34;
+      --pine-2: #142E27;
+      --serif: "Instrument Serif", Georgia, serif;
+      --sans: "Instrument Sans", "Source Sans 3", system-ui, sans-serif;
+      --max: 1120px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 1.0625rem;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 { text-wrap: balance; }
+    p { text-wrap: pretty; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--pine); outline-offset: 3px; }
+    .wrap { width: min(var(--max), calc(100% - 2.5rem)); margin-inline: auto; }
+    .eyebrow {
+      margin: 0 0 0.8rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    h1, h2 { font-family: var(--serif); font-weight: 400; }
+    h1 {
+      font-size: clamp(2.65rem, 6.2vw, 4.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.025em;
+      margin: 0;
+    }
+    h2 {
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+      margin: 0 0 0.75rem;
+    }
+    .lede { font-size: 1.125rem; color: var(--muted); max-width: 38rem; margin: 1.15rem 0 0; }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: color-mix(in srgb, var(--paper) 90%, transparent);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+    .bar { height: 4.25rem; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
+    .brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; letter-spacing: -0.01em; }
+    .brand svg { width: 28px; height: 28px; flex: none; }
+    .back { text-decoration: none; font-size: 0.95rem; }
+    .back:hover { text-decoration: underline; text-underline-offset: 0.28em; }
+    main { padding: 3.5rem 0 4rem; }
+    .doc { max-width: 42rem; }
+    .doc section { border-top: 1px solid var(--line); padding: 1.8rem 0 0.4rem; margin-top: 1.8rem; }
+    .doc p, .doc li { color: var(--ink); }
+    .doc p { margin: 0 0 0.9rem; }
+    .doc ul { margin: 0 0 0.9rem; padding-left: 1.15rem; }
+    .doc li { margin: 0 0 0.45rem; }
+    .doc code { font-size: 0.9em; background: var(--paper-2); padding: 0.05rem 0.3rem; }
+    .note { color: var(--muted); }
+    .site-footer { border-top: 1px solid var(--line); padding: 2.4rem 0 3rem; }
+    .foot { display: grid; gap: 1.4rem; }
+    @media (min-width: 800px) { .foot { grid-template-columns: 1.5fr 1fr; } }
+    .foot a { color: inherit; }
+    .fine { color: var(--muted); font-size: 0.85rem; margin: 0.4rem 0 0; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="/">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="6" fill="#1C3D34"/>
+          <path fill="#F6F3EC" d="M6 22.6V12.2L16 5.6l10 6.6v10.4H6z"/>
+          <rect x="13.2" y="15.2" width="5.6" height="7.4" fill="#1C3D34"/>
+        </svg>
+        <span>Brightfront Studio</span>
+      </a>
+      <a class="back" href="/">Back to home</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap doc">
+      <p class="eyebrow">Privacy</p>
+      <h1>How we handle your information</h1>
+      <p class="lede">Brightfront Studio runs brightfrontdesign.com. This page explains, in plain terms, what the site collects today, why, and who else is involved.</p>
+
+      <section aria-labelledby="who">
+        <h2 id="who">Who we are</h2>
+        <p>Brightfront Studio — <a href="https://brightfrontdesign.com">brightfrontdesign.com</a>. You can reach us at <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>.</p>
+      </section>
+
+      <section aria-labelledby="publish">
+        <h2 id="publish">The publish form</h2>
+        <p>When you publish a store from the builder on our homepage, the form asks for your name, email, store name, category, and the product names, prices, and descriptions you typed. We also note how many photos you selected.</p>
+        <p>The photos themselves stay in your browser. They are read locally to show the preview and are not uploaded when you publish.</p>
+        <p>On submit, the details above are sent to our server (a Cloudflare Pages Function at <code>/api/builder-lead</code>), stored so we can follow up, and passed to an internal alert so our team sees the request. Your browser also opens a pre-filled email draft to info@brightfrontdesign.com, which you can choose to send or not. Along with the request we record the page it came from, your browser's user agent, and your IP address, which we use to limit abuse.</p>
+      </section>
+
+      <section aria-labelledby="payments">
+        <h2 id="payments">Payments</h2>
+        <ul>
+          <li><strong>PayPal.</strong> The subscription button takes you to PayPal's own checkout. PayPal may send us payment notifications that include your name, email, and transaction IDs. We use these to send a thank-you email and to help with support.</li>
+          <li><strong>Lemon Squeezy.</strong> The card checkout is an embedded Lemon Squeezy form. Lemon Squeezy handles your card details; we do not see or store them.</li>
+        </ul>
+        <p>The <code>/thanks/</code> page is only a confirmation screen after payment. Our homepage may mention Stripe as a payment option for the stores we build for you; checkout on this site itself is PayPal and Lemon Squeezy.</p>
+      </section>
+
+      <section aria-labelledby="storage">
+        <h2 id="storage">Browser storage and chat</h2>
+        <p>The site may save a small note in your browser's local storage (key <code>bf_builder_lead</code>) to remember a referral or lead hint and prefill the form for you. It stays on your device.</p>
+        <p>An AI chat assistant is not currently shown on the homepage. The files for it (<code>/chat-widget.js</code> and <code>/api/chat</code>) exist on this site and may be turned on later. If it is enabled and you use it, your messages and a session ID are processed to answer you, and an email address you type into the chat may be saved as a lead.</p>
+      </section>
+
+      <section aria-labelledby="hosting">
+        <h2 id="hosting">Hosting and third parties</h2>
+        <p>The site is hosted on Cloudflare, which may process your IP address, user agent, and standard request logs to deliver and protect the site.</p>
+        <p>Pages load a few outside resources: Google Fonts for typography, the Tailwind CSS CDN for styling, and Lemon Squeezy's script for checkout. These providers receive standard request information when your browser fetches their files. We do not use Google Analytics on the homepage.</p>
+      </section>
+
+      <section aria-labelledby="ads">
+        <h2 id="ads">Advertising (Google AdSense)</h2>
+        <p>This site is registered with Google AdSense under publisher ID <code>ca-pub-1521418120439711</code>. For now that registration is only being prepared: we publish an <code>ads.txt</code> file and an account meta tag so Google can confirm we own the site and review it.</p>
+        <p>No ads are shown on the site at this time. The AdSense advertising script is not loaded on our pages, so AdSense does not set advertising cookies here. If we turn ads on later, we will do so only with an appropriate consent mechanism, such as a Google-certified consent tool, and we will update this page first.</p>
+      </section>
+
+      <section aria-labelledby="choices">
+        <h2 id="choices">Your choices</h2>
+        <ul>
+          <li>You can browse the site without filling in the form or paying.</li>
+          <li>You can remove anything stored in your browser by clearing this site's data in your browser settings.</li>
+          <li>To ask what we hold about you, or to have it deleted, email <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>.</li>
+        </ul>
+        <p class="note">If how we handle information changes, we will update this page.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <div>
+        <strong>Brightfront Studio</strong>
+        <p class="fine"><a href="https://brightfrontdesign.com">brightfrontdesign.com</a></p>
+        <p class="fine">Online stores for American small businesses.</p>
+      </div>
+      <div>
+        <p class="eyebrow">Email</p>
+        <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>
+        <p class="fine" style="margin-top:0.75rem"><a href="/privacy/" aria-current="page">Privacy</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
