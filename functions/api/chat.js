@@ -13,7 +13,7 @@ Brightfront Studio offers TWO services. Facts you may use, and NOTHING else:
 1) WEBSITES for small businesses (cafes, restaurants, salons, clinics, shops, food trucks, local services).
 - Services: website design, landing pages, online booking/menus, local SEO and Google Business setup, maintenance and hosting.
 - How it works: we build a FREE homepage preview first. The client reviews it and requests tweaks. They pay only if they love it. Then we finish and launch.
-- Pricing: $59 one-time setup, then $29/month (locked). Payment via PayPal (cards accepted). Cancel anytime.
+- Pricing: Free website setup, then $39/month or $390/year (yearly is 2 months free). Locked price — your rate does not go up. Payment via PayPal or card. Cancel anytime.
 - Never mention any other website price, package, discount, sale, or care plan.
 - Domain setup add-on: $49 plus the domain cost (usually $10–15/year).
 - Payment is after they approve the preview.

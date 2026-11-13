@@ -26,9 +26,9 @@ const TIERS = {
   standard: { name: "Standard", monthly: 39 },
   pro: { name: "Pro", monthly: 69 },
 };
-// Locked pricing for the Standard subscription button: $59 first month (incl. setup), then $29/month.
-const SUB_FIRST = 59;
-const SUB_MONTHLY = 29;
+// Locked pricing for the Standard subscription button: free setup, then $39/month or $390/year.
+const SUB_MONTHLY = 39;
+const SUB_YEARLY = 390;
 const TRIAL_MONTHS = { starter: 1, business: 1, premium: 3 };
 const PLAN_MAP = {
   "P-37C72428AU1150909NLEHO6Y": ["starter", "basic"],
@@ -291,7 +291,7 @@ export async function onRequestPost({ request, env }) {
   const txnType = g("txn_type");
 
   // Brightfront subscription (PayPal Standard _xclick-subscriptions, no plan id):
-  // $59 first month (incl. setup) via a1/p1/t1, then $29/month via a3/p3/t3.
+  // Free setup (no trial / amount1 absent or 0), then $39/month (period3 "1 M") or $390/year (period3 "1 Y").
   if (txnType === "subscr_signup" || txnType === "subscr_payment") {
     const recv = (g("receiver_email") || g("business")).toLowerCase();
     if (recv !== RECEIVER_EMAIL) { console.warn("ipn: wrong receiver (subscr)", g("subscr_id")); return new Response("ignored", { status: 200 }); }
@@ -301,15 +301,23 @@ export async function onRequestPost({ request, env }) {
     const cur = g("mc_currency") || "USD";
     const first = g("first_name"), last = g("last_name");
     const payer = { payerName: [first, last].filter(Boolean).join(" "), firstName: first, payerEmail: g("payer_email") };
+    const amt1 = g("mc_amount1") || g("amount1");
+    const noTrial = !amt1 || sameAmount(amt1, 0);
+    const amt3 = g("mc_amount3") || g("amount3");
+    const period3 = (g("period3") || "").trim();
+    const isMonthly = sameAmount(amt3, SUB_MONTHLY) && period3 === "1 M";
+    const isYearly = sameAmount(amt3, SUB_YEARLY) && period3 === "1 Y";
+    const planOk = noTrial && (isMonthly || isYearly);
     if (txnType === "subscr_signup") {
-      const termsOk = isOurs && cur === "USD" && sameAmount(g("mc_amount1") || g("amount1"), SUB_FIRST) && sameAmount(g("mc_amount3") || g("amount3"), SUB_MONTHLY);
+      const termsOk = isOurs && cur === "USD" && planOk;
       if (!subId) return new Response("ignored", { status: 200 });
+      const planLabel = isYearly ? "$390/년" : "$39/월";
       try {
         const result = await processPayment(env, Object.assign({
           id: "subsignup:" + subId, kind: "subscription", sendEmail: false,
-          amount: g("mc_amount1") || g("amount1"), currency: cur,
-          titleKo: termsOk ? "🎉 새 구독 신청 — $59 셋업 + $29/월 (Brightfront)" : "💳 PayPal 구독 신청 (조건 다름 — 확인 필요)",
-          amountKo: "첫 달 " + amountText(g("mc_amount1") || g("amount1"), cur) + " → 이후 " + amountText(g("mc_amount3") || g("amount3"), cur) + "/월",
+          amount: amt3, currency: cur,
+          titleKo: termsOk ? ("🎉 새 구독 신청 — 무료 셋업 + " + planLabel + " (Brightfront)") : "💳 PayPal 구독 신청 (조건 다름 — 확인 필요)",
+          amountKo: "무료 셋업 → " + amountText(amt3, cur) + (isYearly ? "/년" : "/월"),
           itemKo: itemName || "-", refLabel: "PayPal 구독 ID", refId: subId, memo: [g("custom"), g("option_selection1")].filter(Boolean).join(" / "), source: "PayPal IPN subscr_signup",
         }, payer));
         if (result.errors.length) return new Response("retry", { status: 500 });
@@ -319,20 +327,42 @@ export async function onRequestPost({ request, env }) {
     // subscr_payment
     if (g("payment_status") !== "Completed" || !txnId) { console.log("ipn: subscr_payment status", g("payment_status"), txnId); return new Response("ignored", { status: 200 }); }
     const gross = g("mc_gross") || g("payment_gross");
-    const isFirst = sameAmount(gross, SUB_FIRST);
-    const amountOk = isOurs && cur === "USD" && (isFirst || sameAmount(gross, SUB_MONTHLY));
+    const isMonthlyPay = sameAmount(gross, SUB_MONTHLY);
+    const isYearlyPay = sameAmount(gross, SUB_YEARLY);
+    const amountOk = isOurs && cur === "USD" && (isMonthlyPay || isYearlyPay);
+    // First payment for this subscr_id: marker in KV (not inferred from the payment amount).
+    let isFirst = false;
+    if (amountOk && subId) {
+      const markerKey = "subfirst:" + subId;
+      try {
+        if (env.LEADS) {
+          const existing = await env.LEADS.get(markerKey);
+          if (!existing) isFirst = true;
+        } else {
+          isFirst = true;
+        }
+      } catch (e) {
+        isFirst = true;
+      }
+    }
+    const planText = isYearlyPay ? "free setup, $390/year" : "free setup, $39/month";
+    const planKo = isYearlyPay ? "$390/년" : "$39/월";
     try {
       const result = await processPayment(env, Object.assign({
         id: txnId, kind: "subscription", sendEmail: amountOk && isFirst,
         amount: gross, currency: cur,
-        emailItemHtml: "the <strong>Brightfront Studio website</strong> plan ($59 setup incl. first month, then $29/month)",
-        emailItemText: "the Brightfront Studio website plan ($59 setup incl. first month, then $29/month)",
-        titleKo: amountOk ? (isFirst ? "🎉 새 결제 — 구독 첫 달 $59 (셋업 포함)" : "💳 구독 월 결제 $29") : "💳 PayPal 구독 결제 (금액/상품 확인 필요)",
+        emailItemHtml: "the <strong>Brightfront Studio website</strong> plan (" + planText + ")",
+        emailItemText: "the Brightfront Studio website plan (" + planText + ")",
+        titleKo: amountOk ? (isFirst ? ("🎉 새 결제 — 구독 첫 결제 " + planKo + " (무료 셋업)") : ("💳 구독 결제 " + planKo)) : "💳 PayPal 구독 결제 (금액/상품 확인 필요)",
         amountKo: amountText(gross, cur), itemKo: itemName || "-",
         refLabel: "PayPal 거래 ID", refId: txnId, extraKo: [["구독 ID", subId]], memo: [g("custom"), g("option_selection1")].filter(Boolean).join(" / "),
         source: "PayPal IPN subscr_payment",
       }, payer));
       if (result.errors.length) return new Response("retry", { status: 500 });
+      // Mark this subscr_id as having had its first payment only after successful processing.
+      if (isFirst && amountOk && subId && env.LEADS) {
+        try { await env.LEADS.put("subfirst:" + subId, nowIso()); } catch (e) { console.error("subfirst marker put failed", e && e.message); }
+      }
       return new Response("", { status: 200 });
     } catch (e) { console.error("ipn subscr_payment error", e && e.message); return new Response("error", { status: 500 }); }
   }
