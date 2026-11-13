@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Brightfront Studio — AI Online Store Builder | $59 Setup, $29/Month</title>
-  <meta name="description" content="Brightfront Studio's AI builds an online store for American small businesses in under five minutes. $59 one-time setup, then $29 a month, a locked price. Stripe, U.S. sales tax, and USPS, UPS, and FedEx shipping.">
+  <title>Brightfront Studio — AI Online Store Builder | Free Setup, $39/Month or $390/Year</title>
+  <meta name="description" content="Brightfront Studio's AI builds an online store for American small businesses in under five minutes. Free setup, then $39 a month or $390 a year (2 months free), a locked price. Stripe, U.S. sales tax, and USPS, UPS, and FedEx shipping.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Brightfront Studio">
   <meta property="og:url" content="https://brightfrontdesign.com/">
   <meta property="og:title" content="Your online store, built by AI in under 5 minutes — Brightfront Studio">
-  <meta property="og:description" content="Enter a store name, a category, photos, and prices. AI builds the homepage, about, and product pages. $59 one-time setup, then $29 a month, locked.">
+  <meta property="og:description" content="Enter a store name, a category, photos, and prices. AI builds the homepage, about, and product pages. Free setup, then $39 a month or $390 a year, locked.">
   <meta property="og:image" content="https://brightfrontdesign.com/img/hero.webp">
   <meta property="og:image:width" content="1792">
   <meta property="og:image:height" content="1008">
   <meta property="og:image:alt" content="Sunlit oak counter in a small shop, with glass jars and a clay pitcher.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Your online store, built by AI in under 5 minutes — Brightfront Studio">
-  <meta name="twitter:description" content="AI online store builder for U.S. small businesses. $59 one-time setup, then $29 a month, locked.">
+  <meta name="twitter:description" content="AI online store builder for U.S. small businesses. Free setup, then $39 a month or $390 a year, locked.">
   <meta name="twitter:image" content="https://brightfrontdesign.com/img/hero.webp">
   <meta name="theme-color" content="#F6F3EC">
   <link rel="canonical" href="https://brightfrontdesign.com/">
@@ -390,6 +390,32 @@
     .preview-tools { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; align-items: center; margin-bottom: 0.8rem; }
     .preview-tools p { margin: 0; color: var(--muted); font-size: 0.92rem; }
     .skip { position: absolute; left: 0.8rem; top: -4rem; background: var(--pine); color: var(--paper); padding: 0.6rem 0.8rem; z-index: 90; }
+
+    .billing-toggle {
+      display: inline-flex;
+      gap: 0.35rem;
+      margin: 0 0 0.9rem;
+      background: var(--paper-2, #EFEAE1);
+      padding: 0.28rem;
+      border-radius: 999px;
+    }
+    .billing-btn {
+      border: 0;
+      background: transparent;
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      font: inherit;
+      font-size: 0.9rem;
+      cursor: pointer;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .billing-btn small { display: block; font-size: 11px; opacity: 0.75; letter-spacing: 0; }
+    .billing-btn.active {
+      background: var(--pine);
+      color: #F6F3EC;
+    }
+    .price-setup { margin: 0.4rem 0 0.3rem; color: var(--muted); font-size: 0.95rem; }
     .skip:focus { top: 0.6rem; }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -398,12 +424,20 @@
   </style>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Service","name":"Brightfront Studio — AI Online Store Builder","serviceType":"Online store builder","provider":{"@type":"Organization","name":"Brightfront Studio","url":"https://brightfrontdesign.com/","email":"info@brightfrontdesign.com"},"areaServed":"US",
-   "offers":{"@type":"Offer","name":"Brightfront store plan","price":"59","priceCurrency":"USD","description":"$59 one-time setup, then $29 a month. Locked price. Cancel anytime.",
-    "priceSpecification":[
-     {"@type":"UnitPriceSpecification","name":"One-time setup","price":"59","priceCurrency":"USD"},
-     {"@type":"UnitPriceSpecification","name":"Monthly","price":"29","priceCurrency":"USD","unitCode":"MON","referenceQuantity":{"@type":"QuantitativeValue","value":1,"unitCode":"MON"}}
-    ]}}
+   "offers":[
+    {"@type":"Offer","name":"Brightfront store plan — monthly","price":"39","priceCurrency":"USD","description":"Free setup, then $39 a month. Locked price. Cancel anytime.",
+     "priceSpecification":[
+      {"@type":"UnitPriceSpecification","name":"Setup","price":"0","priceCurrency":"USD"},
+      {"@type":"UnitPriceSpecification","name":"Monthly","price":"39","priceCurrency":"USD","unitCode":"MON","referenceQuantity":{"@type":"QuantitativeValue","value":1,"unitCode":"MON"}}
+     ]},
+    {"@type":"Offer","name":"Brightfront store plan — yearly","price":"390","priceCurrency":"USD","description":"Free setup, then $390 a year (2 months free). Locked price. Cancel anytime.",
+     "priceSpecification":[
+      {"@type":"UnitPriceSpecification","name":"Setup","price":"0","priceCurrency":"USD"},
+      {"@type":"UnitPriceSpecification","name":"Yearly","price":"390","priceCurrency":"USD","unitCode":"ANN","referenceQuantity":{"@type":"QuantitativeValue","value":1,"unitCode":"ANN"}}
+     ]}
+   ]}
   </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1521418120439711" crossorigin="anonymous"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -454,7 +488,7 @@
             <a class="btn" href="#builder">Build my store</a>
             <a class="btn-ghost" href="#example">See an example</a>
           </div>
-          <p class="hero-note">$59 one-time setup, then $29 a month. Locked price. No theme to configure.</p>
+          <p class="hero-note">Free setup, then $39 a month or $390 a year. Locked price. No theme to configure.</p>
         </div>
       </div>
       <div class="hero-photo">
@@ -683,16 +717,20 @@
         <p class="eyebrow">Pricing</p>
         <div class="price-top">
           <div>
-            <h2 class="price-num">$59 <small>one-time setup</small></h2>
-            <p class="price-num">$29 <small>a month</small></p>
-            <p class="lock-flag">Locked price. The $29 a month you start at stays $29.</p>
+            <div class="billing-toggle" role="tablist" aria-label="Billing period">
+              <button type="button" class="billing-btn active" data-plan="monthly" aria-pressed="true">Monthly</button>
+              <button type="button" class="billing-btn" data-plan="yearly" aria-pressed="false">Yearly <small>2 months free</small></button>
+            </div>
+            <h2 class="price-num" id="price-display">$39 <small>a month</small></h2>
+            <p class="price-setup">Website setup: <strong>Free</strong></p>
+            <p class="lock-flag" id="lock-flag">Locked price. The $39 a month you start at stays $39.</p>
           </div>
-          <p class="lede" style="margin:0">One plan, one store, everything below included. Card fees are Stripe’s, not ours. Cancel the month whenever you stop selling.</p>
+          <p class="lede" style="margin:0">One plan, one store, everything below included. Card fees are Stripe’s, not ours. Cancel anytime.</p>
         </div>
         <div class="plan">
           <div class="plan-head">
             <p class="eyebrow">What’s included</p>
-            <p class="plan-sum"><strong>$59</strong> once, when your store goes live. Then <strong>$29</strong> a month.</p>
+            <p class="plan-sum" id="plan-sum"><strong>Free</strong> setup. Then <strong>$39</strong> a month.</p>
             <a class="btn" href="#builder">Build my store</a>
             <form class="pp-sub" id="pp-sub" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
               <label class="pp-biz-label">Business name <input class="ls-input" id="pp-biz" type="text" required maxlength="64" autocomplete="organization"></label>
@@ -701,14 +739,11 @@
               <input type="hidden" name="os0" id="pp-os0">
               <input type="hidden" name="cmd" value="_xclick-subscriptions">
               <input type="hidden" name="business" value="chedamso@naver.com">
-              <input type="hidden" name="item_name" value="Brightfront Studio website - $59 setup + $29/month">
+              <input type="hidden" name="item_name" id="pp-item-name" value="Brightfront Studio website - free setup, $39/month">
               <input type="hidden" name="currency_code" value="USD">
-              <input type="hidden" name="a1" value="59">
-              <input type="hidden" name="p1" value="1">
-              <input type="hidden" name="t1" value="M">
-              <input type="hidden" name="a3" value="29">
+              <input type="hidden" name="a3" id="pp-a3" value="39">
               <input type="hidden" name="p3" value="1">
-              <input type="hidden" name="t3" value="M">
+              <input type="hidden" name="t3" id="pp-t3" value="M">
               <input type="hidden" name="src" value="1">
               <input type="hidden" name="no_shipping" value="1">
               <input type="hidden" name="no_note" value="1">
@@ -716,7 +751,7 @@
               <input type="hidden" name="notify_url" value="https://brightfrontdesign.com/api/paypal-ipn">
               <input type="hidden" name="return" value="https://brightfrontdesign.com/thanks/">
               <input type="hidden" name="cancel_return" value="https://brightfrontdesign.com/">
-              <button type="submit" class="btn btn-ghost">Start for $59 today, then $29/month with PayPal</button>
+              <button type="submit" class="btn btn-ghost" id="pp-submit">Start free — $39/month with PayPal</button>
               <p class="pp-note">Cards accepted via PayPal checkout. Cancel anytime in your PayPal account - no contract.</p>
             </form>
 <script>
@@ -728,13 +763,61 @@ var ref=new URLSearchParams(location.search).get('ref')||((document.getElementBy
 document.getElementById('pp-os0').value=b.slice(0,64);
 document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);});})();
 </script>
+<script>
+(function () {
+  window.BF_PLAN = "monthly";
+  var priceDisplay = document.getElementById("price-display");
+  var lockFlag = document.getElementById("lock-flag");
+  var planSum = document.getElementById("plan-sum");
+  var ppA3 = document.getElementById("pp-a3");
+  var ppT3 = document.getElementById("pp-t3");
+  var ppItem = document.getElementById("pp-item-name");
+  var ppSubmit = document.getElementById("pp-submit");
+  var buttons = document.querySelectorAll(".billing-btn");
+
+  function setPlan(plan) {
+    window.BF_PLAN = plan;
+    var yearly = plan === "yearly";
+    var lsSubmit = document.getElementById("ls-submit");
+    if (priceDisplay) priceDisplay.innerHTML = yearly ? "$390 <small>a year</small>" : "$39 <small>a month</small>";
+    if (lockFlag) lockFlag.textContent = yearly
+      ? "Locked price. The $390 a year you start at stays $390."
+      : "Locked price. The $39 a month you start at stays $39.";
+    if (planSum) planSum.innerHTML = yearly
+      ? "<strong>Free</strong> setup. Then <strong>$390</strong> a year (2 months free)."
+      : "<strong>Free</strong> setup. Then <strong>$39</strong> a month.";
+    if (ppA3) ppA3.value = yearly ? "390" : "39";
+    if (ppT3) ppT3.value = yearly ? "Y" : "M";
+    if (ppItem) ppItem.value = yearly
+      ? "Brightfront Studio website - free setup, $390/year"
+      : "Brightfront Studio website - free setup, $39/month";
+    if (ppSubmit) ppSubmit.textContent = yearly
+      ? "Start free — $390/year with PayPal"
+      : "Start free — $39/month with PayPal";
+    if (lsSubmit) lsSubmit.textContent = yearly
+      ? "Start free — $390/year by card"
+      : "Start free — $39/month by card";
+    buttons.forEach(function (btn) {
+      var on = btn.getAttribute("data-plan") === plan;
+      btn.classList.toggle("active", on);
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+  }
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener("click", function () { setPlan(btn.getAttribute("data-plan")); });
+  });
+  setPlan("monthly");
+})();
+</script>
 <style>
   .ls-form{display:grid;gap:8px;margin:16px 0 10px}
   .ls-form label{font-size:.85rem;display:grid;gap:4px}
   .ls-input{width:100%;padding:9px 11px;border:1px solid #ccc;border-radius:8px;font:inherit;box-sizing:border-box}
   .ls-input:focus{outline:2px solid #6b5bff33;border-color:#6b5bff}
 </style>
-<form id="ls-form" class="ls-form" novalidate>
+<!-- re-enable when LS $39/$390 variants exist -->
+<form id="ls-form" class="ls-form" hidden novalidate>
   <label>Business name
     <input id="ls-biz" class="ls-input" type="text" required autocomplete="organization">
   </label>
@@ -744,14 +827,16 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
   <label>Your name (optional)
     <input id="ls-name" class="ls-input" type="text" autocomplete="name">
   </label>
-  <button type="submit" class="btn btn-primary">Pay by card — $59 setup + $29/month</button>
+  <button type="submit" class="btn btn-primary" id="ls-submit">Start free — $39/month by card</button>
 </form>
-<p class="pp-note">Secure card checkout by Lemon Squeezy. Cancel anytime.</p>
+<p class="pp-note" hidden>Secure card checkout by Lemon Squeezy. Cancel anytime.</p>
 <script src="https://assets.lemonsqueezy.com/lemon.js" defer
         onload="window.createLemonSqueezy && window.createLemonSqueezy()"></script>
 <script>
 (function () {
-  var BASE = 'https://chedlab.lemonsqueezy.com/checkout/buy/37fb2c40-075a-4d33-a318-417e56fd8357?embed=1';
+  // TODO: set LS_YEARLY to the real yearly Lemon Squeezy checkout URL when the yearly product is created.
+  var LS_MONTHLY = 'https://chedlab.lemonsqueezy.com/checkout/buy/37fb2c40-075a-4d33-a318-417e56fd8357?embed=1';
+  var LS_YEARLY = 'https://chedlab.lemonsqueezy.com/checkout/buy/37fb2c40-075a-4d33-a318-417e56fd8357?embed=1';
   var form = document.getElementById('ls-form');
   var biz = document.getElementById('ls-biz');
   var ref = document.getElementById('ls-ref');
@@ -778,7 +863,9 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
       biz.reportValidity();
       return;
     }
-    var u = new URL(BASE);
+    var plan = (window.BF_PLAN === 'yearly') ? 'yearly' : 'monthly';
+    var baseUrl = (plan === 'yearly') ? LS_YEARLY : LS_MONTHLY;
+    var u = new URL(baseUrl);
     u.searchParams.set('checkout[custom][business_name]', b);
     var r = ref.value.trim();
     if (r) u.searchParams.set('checkout[custom][preview_ref]', r);
@@ -826,13 +913,13 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
               </tr>
               <tr>
                 <th scope="row">To get started</th>
-                <td class="hi">$59 one-time setup</td>
+                <td class="hi">Free setup</td>
                 <td>$2,000–$5,000+</td>
                 <td>Theme, apps, and a monthly Shopify plan</td>
               </tr>
               <tr>
                 <th scope="row">Monthly</th>
-                <td class="hi">$29, locked</td>
+                <td class="hi">$39/month or $390/year, locked</td>
                 <td>Retainers, when you need changes</td>
                 <td>Shopify plan, plus apps</td>
               </tr>
@@ -908,15 +995,15 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
           </details>
           <details class="qa">
             <summary>Can I edit the store after it is published? <i aria-hidden="true">+</i></summary>
-            <p>Yes. Product names, prices, descriptions, photos, and page copy can be edited without a revision fee. That is part of the $29 month.</p>
+            <p>Yes. Product names, prices, descriptions, photos, and page copy can be edited without a revision fee. That is part of the $39 month (or the yearly plan).</p>
           </details>
           <details class="qa">
             <summary>What is included in the price? <i aria-hidden="true">+</i></summary>
-            <p>$59 once, to set the store up, and $29 a month for hosting, SSL, the editor, unlimited edits, and email support. The price is locked: your $29 a month does not go up while your store stays active. Card processing fees are charged by Stripe. Shipping rates come from USPS, UPS, and FedEx at checkout. Cancel anytime.</p>
+            <p>Free setup, then $39 a month or $390 a year (2 months free) for hosting, SSL, the editor, unlimited edits, and email support. The price is locked: the rate you start at does not go up while your store stays active. Card processing fees are charged by Stripe. Shipping rates come from USPS, UPS, and FedEx at checkout. Cancel anytime.</p>
           </details>
           <details class="qa">
             <summary>What does “locked price” mean? <i aria-hidden="true">+</i></summary>
-            <p>The $59 setup is charged once. The $29 a month you sign up at stays $29 for as long as your store stays active. No intro rate that jumps later.</p>
+            <p>The rate you start at — $39 a month or $390 a year — stays the same for as long as your store stays active. No intro rate that jumps later. Setup is free.</p>
           </details>
           <details class="qa">
             <summary>Who is this for? <i aria-hidden="true">+</i></summary>
