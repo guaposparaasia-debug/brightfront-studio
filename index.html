@@ -816,8 +816,7 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
   .ls-input{width:100%;padding:9px 11px;border:1px solid #ccc;border-radius:8px;font:inherit;box-sizing:border-box}
   .ls-input:focus{outline:2px solid #6b5bff33;border-color:#6b5bff}
 </style>
-<!-- re-enable when LS $39/$390 variants exist -->
-<form id="ls-form" class="ls-form" hidden novalidate>
+<form id="ls-form" class="ls-form" novalidate>
   <label>Business name
     <input id="ls-biz" class="ls-input" type="text" required autocomplete="organization">
   </label>
@@ -829,14 +828,13 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
   </label>
   <button type="submit" class="btn btn-primary" id="ls-submit">Start free — $39/month by card</button>
 </form>
-<p class="pp-note" hidden>Secure card checkout by Lemon Squeezy. Cancel anytime.</p>
+<p class="pp-note">Secure card checkout by Lemon Squeezy. Cancel anytime.</p>
 <script src="https://assets.lemonsqueezy.com/lemon.js" defer
         onload="window.createLemonSqueezy && window.createLemonSqueezy()"></script>
 <script>
 (function () {
-  // TODO: set LS_YEARLY to the real yearly Lemon Squeezy checkout URL when the yearly product is created.
-  var LS_MONTHLY = 'https://chedlab.lemonsqueezy.com/checkout/buy/37fb2c40-075a-4d33-a318-417e56fd8357?embed=1';
-  var LS_YEARLY = 'https://chedlab.lemonsqueezy.com/checkout/buy/37fb2c40-075a-4d33-a318-417e56fd8357?embed=1';
+  var LS_MONTHLY = 'https://chedlab.lemonsqueezy.com/checkout/buy/37fb2c40-075a-4d33-a318-417e56fd8357?enabled=2280377&embed=1';
+  var LS_YEARLY = 'https://chedlab.lemonsqueezy.com/checkout/buy/43238a4e-5dac-4609-bd3f-3c7681f4b394?enabled=2370997&embed=1';
   var form = document.getElementById('ls-form');
   var biz = document.getElementById('ls-biz');
   var ref = document.getElementById('ls-ref');
@@ -866,6 +864,7 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
     var plan = (window.BF_PLAN === 'yearly') ? 'yearly' : 'monthly';
     var baseUrl = (plan === 'yearly') ? LS_YEARLY : LS_MONTHLY;
     var u = new URL(baseUrl);
+    u.searchParams.set('embed', '1');
     u.searchParams.set('checkout[custom][business_name]', b);
     var r = ref.value.trim();
     if (r) u.searchParams.set('checkout[custom][preview_ref]', r);
