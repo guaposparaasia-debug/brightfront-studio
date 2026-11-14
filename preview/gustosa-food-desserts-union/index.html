@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Gustosa Food & Desserts — Venezuelan Food Truck in Union, NJ</title>
+<meta name="description" content="Gustosa Food & Desserts — Venezuelan street food truck in Union Township, New Jersey. Arepas, cachapas, tequeños, empanadas, desserts and catering. Made with love.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #FFF8F0;
+  --cream-2: #F7EDE0;
+  --yellow: #E9B44C;
+  --yellow-deep: #C9962A;
+  --red: #B7410E;
+  --red-dark: #8C310A;
+  --brown: #3E2723;
+  --brown-soft: #5D4037;
+  --text: #2C1810;
+  --muted: #6D5346;
+  --rule: #E6D5C3;
+  --focus: #C9962A;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --space: clamp(1.25rem, 4vw, 2.5rem);
+  --max: 72rem;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; }
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 650;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.6em;
+}
+h1 { font-size: clamp(2.4rem, 8vw, 4.2rem); }
+h2 { font-size: clamp(1.8rem, 5vw, 2.6rem); }
+h3 { font-size: 1.35rem; }
+.wrap { width: min(100% - 2rem, var(--max)); margin-inline: auto; }
+.section { padding-block: clamp(3rem, 8vw, 5.5rem); }
+.label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.5rem;
+}
+
+/* Nav */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 248, 240, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  min-height: 3.6rem;
+}
+.logo {
+  font-family: var(--font-display);
+  font-weight: 650;
+  font-size: 1.35rem;
+  text-decoration: none;
+  color: var(--brown);
+}
+.nav-links {
+  display: flex;
+  gap: 1.1rem;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.nav-links a { text-decoration: none; }
+.nav-links a:hover { color: var(--red); }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary {
+  background: var(--red);
+  color: white;
+  border-color: var(--red);
+}
+.btn-primary:hover { background: var(--red-dark); }
+.btn-outline {
+  background: transparent;
+  color: var(--brown);
+  border-color: var(--brown);
+}
+.btn-outline:hover { background: var(--cream-2); }
+.btn-whatsapp {
+  background: #25D366;
+  color: white;
+  border-color: #25D366;
+}
+.btn-whatsapp:hover { background: #1DA851; }
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: grid;
+  place-items: end start;
+  color: white;
+  overflow: hidden;
+}
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(43, 27, 23, 0.82) 0%, rgba(43, 27, 23, 0.35) 45%, rgba(43, 27, 23, 0.15) 100%);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: clamp(2rem, 6vw, 4rem) 0 3rem;
+  max-width: 38rem;
+}
+.hero .tagline {
+  font-size: 1.15rem;
+  margin: 0.4rem 0 1.5rem;
+  opacity: 0.95;
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.spanish-accent {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--yellow);
+  font-weight: 500;
+}
+
+/* Menu */
+.menu-grid {
+  display: grid;
+  gap: 2.5rem;
+}
+@media (min-width: 700px) {
+  .menu-grid { grid-template-columns: 1fr 1fr; gap: 3rem 4rem; }
+}
+.menu-group h3 {
+  border-bottom: 2px solid var(--yellow);
+  padding-bottom: 0.35rem;
+  margin-bottom: 1rem;
+  color: var(--brown);
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px dashed var(--rule);
+}
+.item-name { font-weight: 500; }
+.item-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.15rem;
+}
+.price { font-weight: 600; color: var(--red); white-space: nowrap; }
+
+/* Catering / Desserts cards */
+.cards {
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 640px) { .cards { grid-template-columns: 1fr 1fr; } }
+.card {
+  background: white;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  padding: 1.4rem;
+}
+.card h3 { margin-top: 0; }
+.price-lg { font-size: 1.5rem; font-weight: 650; color: var(--red); font-family: var(--font-display); }
+
+/* Quote strip */
+.quote-strip {
+  background: var(--brown);
+  color: var(--cream);
+  text-align: center;
+  padding: clamp(2.5rem, 6vw, 4rem) 1.5rem;
+}
+.quote-strip blockquote {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 4vw, 1.9rem);
+  font-weight: 500;
+  margin: 0 auto 0.8rem;
+  max-width: 36rem;
+  line-height: 1.3;
+}
+.quote-strip cite {
+  font-style: normal;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.6rem;
+}
+.gallery img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.gallery .wide { aspect-ratio: 16/10; grid-column: span 2; }
+@media (max-width: 500px) {
+  .gallery { grid-template-columns: 1fr 1fr; }
+  .gallery .wide { grid-column: span 2; }
+}
+
+/* Locations / Contact */
+.two-col {
+  display: grid;
+  gap: 2.5rem;
+}
+@media (min-width: 760px) { .two-col { grid-template-columns: 1fr 1fr; } }
+.contact-list { list-style: none; padding: 0; margin: 1rem 0 0; }
+.contact-list li { margin-bottom: 0.7rem; }
+.contact-list a { color: var(--red); font-weight: 500; text-decoration: none; }
+.contact-list a:hover { text-decoration: underline; }
+
+/* Footer */
+footer {
+  background: var(--dark, #1A120B);
+  color: #EDE0D4;
+  padding: 2.5rem 0 1.5rem;
+  font-size: 0.9rem;
+}
+.footer-note {
+  border-top: 1px solid #4A372E;
+  margin-top: 1.5rem;
+  padding-top: 1.2rem;
+  font-size: 0.8rem;
+  opacity: 0.85;
+}
+.footer-note a { color: var(--yellow); }
+
+/* Focus */
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+@media (max-width: 700px) {
+  .nav-inner { flex-wrap: wrap; }
+  .nav-links {
+    flex: 1 1 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.55rem 0.85rem;
+    font-size: 0.88rem;
+    padding-bottom: 0.15rem;
+  }
+  .btn { padding: 0.55rem 1rem; font-size: 0.95rem; }
+}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="logo">Gustosa</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#menu">Menu</a>
+      <a href="#catering">Catering</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="https://wa.me/123456789" class="btn btn-whatsapp" style="min-height:2.4rem;padding:0.45rem 0.9rem;">Order</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <img src="food-2.jpg" alt="Grilled Venezuelan arepas and fresh toppings on the Gustosa truck" width="1600" height="1066">
+    <div class="hero-overlay"></div>
+    <div class="wrap hero-content">
+      <p class="label" style="color:var(--yellow);">Union Township, New Jersey</p>
+      <h1>Gustosa Food & Desserts</h1>
+      <p class="tagline">Venezuelan street food, made with love.</p>
+      <p class="spanish-accent">¡Buen provecho!</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/123456789" class="btn btn-whatsapp">Order on WhatsApp</a>
+        <a href="#menu" class="btn btn-outline" style="color:white;border-color:white;">See the menu</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="section">
+    <div class="wrap">
+      <p class="label">The Menu</p>
+      <h2>Arepas, Cachapas & More</h2>
+      <p style="max-width:36rem;margin-bottom:2.5rem;">Everything is made fresh in the truck — corn-flour arepas and empanadas, homemade sauces, and the picanha that put us on the map.</p>
+      <div class="menu-grid">
+        <div class="menu-group">
+          <h3>Tequeños</h3>
+          <div class="item"><div><div class="item-name">5 pieces</div><div class="item-desc">Latin cheese in thin dough, fried, with homemade sauce</div></div><span class="price">$8</span></div>
+          <div class="item"><div><div class="item-name">10 pieces</div></div><span class="price">$15</span></div>
+        </div>
+        <div class="menu-group">
+          <h3>Empanadas</h3>
+          <p class="item-desc" style="margin-bottom:0.6rem;">Venezuelan style, corn flour</p>
+          <div class="item"><div class="item-name">Cheese</div><span class="price">$4</span></div>
+          <div class="item"><div class="item-name">Shredded Beef</div><span class="price">$5</span></div>
+          <div class="item"><div class="item-name">Shredded Chicken</div><span class="price">$5</span></div>
+          <div class="item"><div class="item-name">Ground Beef</div><span class="price">$5</span></div>
+          <div class="item"><div><div class="item-name">Pabellón</div><div class="item-desc">Sweet plantain, black beans, shredded beef & cheese</div></div><span class="price">$6</span></div>
+        </div>
+        <div class="menu-group">
+          <h3>Venezuelan Arepas</h3>
+          <div class="item"><div><div class="item-name">Clásicas</div><div class="item-desc">Shredded beef, chicken or pulled pork, cheese, ketchup & homemade sauce</div></div><span class="price">$14</span></div>
+          <div class="item"><div><div class="item-name">Arepa Picanha</div><div class="item-desc">Grilled picanha, pico de gallo, shredded cheese & homemade sauce</div></div><span class="price">$16</span></div>
+          <div class="item"><div><div class="item-name">Morochas (Twins)</div><div class="item-desc">Two fried arepas with queso de mano, cole slaw & mixed proteins</div></div><span class="price">$18</span></div>
+          <div class="item"><div><div class="item-name">Morochas Picanha</div></div><span class="price">$20</span></div>
+          <div class="item"><div><div class="item-name">Aguita d’ Sapo</div><div class="item-desc">Pulled roasted pork, fried cheese, pork-leg juices</div></div><span class="price">$18</span></div>
+          <div class="item"><div><div class="item-name">Cheese Arepa</div><div class="item-desc">Shredded cheese & queso de mano</div></div><span class="price">$8</span></div>
+          <div class="item"><div><div class="item-name">Arepa La 10</div><div class="item-desc">Sweet plantains, avocado & shredded cheese</div></div><span class="price">$10</span></div>
+          <div class="item"><div><div class="item-name">Picadita</div><div class="item-desc">Grilled picanha chorizo arepa with pico de gallo & cheese</div></div><span class="price">$20</span></div>
+        </div>
+        <div class="menu-group">
+          <h3>Cabimera (Arepa Bowl)</h3>
+          <div class="item"><div class="item-name">Picanha</div><span class="price">$22</span></div>
+          <div class="item"><div class="item-name">Shredded Beef</div><span class="price">$19</span></div>
+          <div class="item"><div class="item-name">Shredded Chicken</div><span class="price">$19</span></div>
+          <p class="item-desc" style="margin-top:0.5rem;">Two fried arepas cut into squares with cole slaw, smoked ham, cheeses, egg & cilantro sauce.</p>
+        </div>
+        <div class="menu-group">
+          <h3>Cachapas</h3>
+          <div class="item"><div><div class="item-name">Cachapa</div><div class="item-desc">Semi-sweet corn pancake with queso de mano, cream & white cheese</div></div><span class="price">$14</span></div>
+          <div class="item"><div class="item-name">+ Shredded beef or chicken</div><span class="price">$4</span></div>
+          <div class="item"><div class="item-name">+ Grilled picanha</div><span class="price">$6</span></div>
+        </div>
+        <div class="menu-group">
+          <h3>Patacones</h3>
+          <p class="item-desc" style="margin-bottom:0.6rem;">Smashed plantain sandwich with queso de mano, yellow cheese, cole slaw & sauces</p>
+          <div class="item"><div class="item-name">Shredded beef / chicken / pulled pork</div><span class="price">$19</span></div>
+          <div class="item"><div class="item-name">Grilled Picanha</div><span class="price">$21</span></div>
+        </div>
+        <div class="menu-group">
+          <h3>Burgers</h3>
+          <div class="item"><div><div class="item-name">Gustosa Special Burger</div><div class="item-desc">Beef, bacon, smoked ham, American cheese, queso de mano, cole slaw & sauces</div></div><span class="price">$17</span></div>
+          <div class="item"><div class="item-name">Picanha Burger</div><span class="price">$20</span></div>
+          <div class="item"><div class="item-name">Add fries</div><span class="price">$5</span></div>
+        </div>
+        <div class="menu-group">
+          <h3>Sides & Drinks</h3>
+          <div class="item"><div class="item-name">Yuca fries (cheese & sauce)</div><span class="price">$7</span></div>
+          <div class="item"><div class="item-name">Sweet plantains (cream & cheese)</div><span class="price">$7</span></div>
+          <div class="item"><div class="item-name">Gustosa fries (cheese & sauce)</div><span class="price">$7</span></div>
+          <div class="item"><div class="item-name">Soda</div><span class="price">$3</span></div>
+          <div class="item"><div class="item-name">Water</div><span class="price">$2.50</span></div>
+          <div class="item"><div class="item-name">Malta / Frescolita</div><span class="price">$4</span></div>
+          <div class="item"><div class="item-name">Nestea</div><span class="price">$6</span></div>
+          <div class="item"><div class="item-name">Chicha</div><span class="price">$8</span></div>
+        </div>
+      </div>
+      <p style="margin-top:2rem;font-style:italic;color:var(--muted);">Ask about our dessert of the day.</p>
+    </div>
+  </section>
+
+  <section id="catering" class="section" style="background:var(--cream-2);">
+    <div class="wrap">
+      <p class="label">Catering & Party Boxes</p>
+      <h2>Feed the whole crowd</h2>
+      <p style="max-width:38rem;margin-bottom:2rem;">Hallacas, pernil, pasticho and more for holidays and parties. Orders placed at least one week in advance. Travel charges may apply.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Party Box</h3>
+          <p>40 mini pieces (empanaditas y tequeños)</p>
+          <div class="price-lg">$60</div>
+        </div>
+        <div class="card">
+          <h3>Combo Gustoso</h3>
+          <p>10 hallacas, 6 lb lomo negro, pan de jamón, 4 lb ensalada de gallina, tres leches, ponche crema + 10 free tequeños</p>
+          <div class="price-lg">$490</div>
+        </div>
+        <div class="card">
+          <h3>Holiday Favorites</h3>
+          <div class="item"><div class="item-name">Hallacas</div><span class="price">$10</span></div>
+          <div class="item"><div class="item-name">Pernil (1 lb)</div><span class="price">$22</span></div>
+          <div class="item"><div class="item-name">Lomo Negro (1 lb)</div><span class="price">$28</span></div>
+          <div class="item"><div class="item-name">Ensalada de Gallina (1 lb)</div><span class="price">$16</span></div>
+          <div class="item"><div class="item-name">Pan de Jamón</div><span class="price">$35</span></div>
+          <div class="item"><div class="item-name">Ponche Crema</div><span class="price">$30</span></div>
+        </div>
+        <div class="card">
+          <h3>Trays</h3>
+          <div class="item"><div class="item-name">Pasticho de carne (half tray)</div><span class="price">$95</span></div>
+          <div class="item"><div class="item-name">Macarronada de Pollo (half tray)</div><span class="price">$90</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="desserts" class="section">
+    <div class="wrap">
+      <p class="label">Desserts</p>
+      <h2>Dulce de casa</h2>
+      <p style="max-width:36rem;margin-bottom:2rem;">Classic Venezuelan sweets for the end of the meal or the center of the party.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Tres Leches</h3>
+          <div class="item"><div class="item-name">3 Leches cake</div><span class="price">$80</span></div>
+          <div class="item"><div class="item-name">3 Leches with fruit</div><span class="price">$100</span></div>
+        </div>
+        <div class="card">
+          <h3>More Sweets</h3>
+          <div class="item"><div class="item-name">Enrollados ×12 (crema pastelera y dulce de leche)</div><span class="price">$40</span></div>
+          <div class="item"><div class="item-name">Quesillo</div><span class="price">$45</span></div>
+          <div class="item"><div class="item-name">Torta de Piña</div><span class="price">$70</span></div>
+          <div class="item"><div class="item-name">Torta Negra / Dulce de lechosa y piña</div><span class="price">Ask</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-strip">
+    <div class="wrap">
+      <p class="label" style="color:var(--yellow);">As featured on NJ.com</p>
+      <blockquote>“Named among the five best things we ate at Jersey Eats.”</blockquote>
+      <cite>Arepa Picanha — NJ.com, October 2024</cite>
+    </div>
+  </section>
+
+  <section id="gallery" class="section">
+    <div class="wrap">
+      <p class="label">From the truck</p>
+      <h2>Real food, real photos</h2>
+      <div class="gallery" style="margin-top:1.5rem;">
+        <img src="arepa-picanha.jpg" alt="Arepa Picanha with grilled steak, pico de gallo and cheese — the NJ.com favorite" width="1280" height="960" class="wide" loading="lazy">
+        <img src="food-1.jpg" alt="Fresh Venezuelan arepa filled with shredded meat and cheese" width="1080" height="1080" loading="lazy">
+        <img src="food-3.jpg" alt="Crispy tequeños with homemade dipping sauce" width="1080" height="1080" loading="lazy">
+        <img src="food-4.jpg" alt="Golden empanadas made with corn flour" width="1080" height="1080" loading="lazy">
+        <img src="food-5.jpg" alt="Cachapa with melted queso de mano and cream" width="1080" height="1080" loading="lazy">
+        <img src="food-6.jpg" alt="Patacones smashed plantain sandwich loaded with fillings" width="1600" height="1067" class="wide" loading="lazy">
+        <img src="food-7.jpg" alt="Gustosa fries topped with cheese and sauce" width="1080" height="1080" loading="lazy">
+        <img src="food-8.jpg" alt="Holiday hallacas and traditional Venezuelan dishes" width="1600" height="1066" class="wide" loading="lazy">
+        <img src="food-9.jpg" alt="Tres leches cake and Venezuelan desserts" width="1168" height="1752" loading="lazy">
+        <img src="food-10.jpg" alt="Party box of mini empanadas and tequeños" width="1080" height="1080" loading="lazy">
+        <img src="food-11.jpg" alt="Close-up of grilled picanha arepa" width="1080" height="1080" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section id="locations" class="section" style="background:var(--cream-2);">
+    <div class="wrap two-col">
+      <div>
+        <p class="label">Where to find the truck</p>
+        <h2>We move with the weekends</h2>
+        <p>Based in Union Township, New Jersey. The truck travels to festivals, private events and pop-ups across the state.</p>
+        <p style="margin-top:1rem;font-weight:500;">Follow us for this week’s locations.</p>
+        <p class="spanish-accent" style="margin-top:0.5rem;">Nos vemos en la calle.</p>
+      </div>
+      <div id="contact">
+        <p class="label">Contact</p>
+        <h2>Order or book catering</h2>
+        <ul class="contact-list">
+          <li>WhatsApp: <a href="https://wa.me/123456789">123-456-789</a></li>
+          <li>Phone: <a href="tel:123456789">123-456-789</a></li>
+          <li>Email: <a href="mailto:hello@example.com">hello@example.com</a></li>
+          <li>Address: 123 Example Street, Union, NJ</li>
+        </ul>
+        <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:0.75rem;">
+          <a href="https://wa.me/123456789" class="btn btn-whatsapp">Message on WhatsApp</a>
+          <a href="mailto:hello@example.com" class="btn btn-outline">Email us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;align-items:center;">
+      <div>
+        <strong>Gustosa Food & Desserts</strong><br>
+        Venezuelan street food · Union Township, NJ<br>
+        Owner: Maria Delgado
+      </div>
+      <div>¡Buen provecho!</div>
+    </div>
+    <div class="footer-note">
+      Free preview by Brightfront Studio — this site can go live for $0 setup, $39/month or $390/year. <a href="https://brightfrontdesign.com/?ref=https://brightfrontdesign.com/preview/gustosa-food-desserts-union/">brightfrontdesign.com</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
