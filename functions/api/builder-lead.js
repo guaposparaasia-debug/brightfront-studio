@@ -1,10 +1,15 @@
 // Brightfront Studio — website lead capture (Cloudflare Pages Function)
 // POST /api/builder-lead
-//   { event: "started" | "preview" }                      -> bumps stat:builder:<YYYY-MM-DD> counters
-//   { event: "submit", email, message?, name?, page, hp } -> saves lead:builder:<ISO>-<rand>, Telegram alert, Resend email
+//   { event: "started" | "preview" } -> bumps stat:builder:<YYYY-MM-DD> counters
+//   { event: "submit", email, message, photos?, name?, page, hp, source? }
+//     -> saves lead:builder:<ISO>-<rand> (no photo bytes), Telegram alert, Resend email with photo attachments
 // Env (secrets only from env): TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID, RESEND_API_KEY, LEAD_NOTIFY_EMAIL (optional). KV binding: LEADS.
 
-const MAX_BODY = 16 * 1024;
+const MAX_BODY = 10 * 1024 * 1024;     // 10 MB (photos arrive as base64 JSON)
+const MAX_PHOTOS = 5;
+const MAX_PHOTO_BYTES = 2 * 1024 * 1024;
+const MAX_ATTACH_BYTES = 8 * 1024 * 1024;
+const ALLOWED_TYPES = new Set(["image/jpeg", "image/png", "image/webp", "image/gif"]);
 const RATE_LIMIT = 5;            // submits per IP per window
 const RATE_WINDOW_S = 3600;
 const LEAD_TTL_S = 365 * 24 * 3600;
@@ -18,6 +23,73 @@ function str(v, max) { return String(v == null ? "" : v).replace(/[\u0000-\u001f
 function text(v, max) { return String(v == null ? "" : v).replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/g, " ").trim().slice(0, max); }
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
+function sniffImageType(bytes) {
+  if (!bytes || bytes.length < 12) return "";
+  if (bytes[0] === 0xFF && bytes[1] === 0xD8 && bytes[2] === 0xFF) return "image/jpeg";
+  if (bytes[0] === 0x89 && bytes[1] === 0x50 && bytes[2] === 0x4E && bytes[3] === 0x47) return "image/png";
+  if (bytes[0] === 0x47 && bytes[1] === 0x49 && bytes[2] === 0x46 && bytes[3] === 0x38) return "image/gif";
+  if (bytes[0] === 0x52 && bytes[1] === 0x49 && bytes[2] === 0x46 && bytes[3] === 0x46 &&
+      bytes[8] === 0x57 && bytes[9] === 0x45 && bytes[10] === 0x42 && bytes[11] === 0x50) return "image/webp";
+  return "";
+}
+
+function extForType(type) {
+  if (type === "image/png") return "png";
+  if (type === "image/webp") return "webp";
+  if (type === "image/gif") return "gif";
+  return "jpg";
+}
+
+function safeFilename(name, index, type) {
+  const ext = extForType(type);
+  const raw = String(name || "photo-" + (index + 1));
+  const base = raw.replace(/\.[^.]+$/, "").replace(/[^A-Za-z0-9._-]+/g, "-").replace(/^\.+/, "").replace(/-+/g, "-").slice(0, 60);
+  return (base || ("photo-" + (index + 1))) + "." + ext;
+}
+
+function decodeBase64(s) {
+  let raw = String(s == null ? "" : s).trim();
+  const dataUrl = /^data:([a-z0-9.+/-]+);base64,/i.exec(raw);
+  if (dataUrl) raw = raw.slice(dataUrl[0].length);
+  raw = raw.replace(/\s+/g, "");
+  if (!raw || raw.length > Math.ceil(MAX_PHOTO_BYTES * 4 / 3) + 8) return null;
+  if (!/^[A-Za-z0-9+/]+={0,2}$/.test(raw)) return null;
+  try {
+    const bin = atob(raw);
+    const bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return { b64: raw, bytes };
+  } catch (e) {
+    return null;
+  }
+}
+
+function parsePhotos(input) {
+  if (input == null) return { photos: [], error: null };
+  if (!Array.isArray(input)) return { photos: [], error: "photos" };
+  if (input.length > MAX_PHOTOS) return { photos: [], error: "too many photos" };
+  const photos = [];
+  let total = 0;
+  for (let i = 0; i < input.length; i++) {
+    const p = input[i];
+    if (!p || typeof p !== "object") return { photos: [], error: "photos" };
+    const decoded = decodeBase64(p.content);
+    if (!decoded) return { photos: [], error: "photo" };
+    if (decoded.bytes.length < 24 || decoded.bytes.length > MAX_PHOTO_BYTES) return { photos: [], error: "photo too large" };
+    const type = sniffImageType(decoded.bytes);
+    if (!ALLOWED_TYPES.has(type)) return { photos: [], error: "photo type" };
+    total += decoded.bytes.length;
+    if (total > MAX_ATTACH_BYTES) return { photos: [], error: "photos too large" };
+    photos.push({
+      filename: safeFilename(p.filename, i, type),
+      type: type,
+      content: decoded.b64,
+      size: decoded.bytes.length,
+    });
+  }
+  return { photos, error: null };
+}
+
 async function sendTelegram(env, msg) {
   if (!env.TELEGRAM_BOT_TOKEN || !env.TELEGRAM_CHAT_ID) throw new Error("telegram env missing");
   const r = await fetch("https://api.telegram.org/bot" + env.TELEGRAM_BOT_TOKEN + "/sendMessage", {
@@ -29,7 +101,7 @@ async function sendTelegram(env, msg) {
   if (!r.ok) throw new Error("telegram failed: " + r.status); // never include the URL (contains token)
 }
 
-async function sendResend(env, rec) {
+async function sendResend(env, rec, photos) {
   if (!env.RESEND_API_KEY) throw new Error("resend env missing");
   const to = str(env.LEAD_NOTIFY_EMAIL, 200) || DEFAULT_NOTIFY;
   const body = [
@@ -37,21 +109,30 @@ async function sendResend(env, rec) {
     "",
     "Email: " + rec.email,
     rec.name ? "Name: " + rec.name : "",
-    "Message: " + (rec.message || "-"),
+    "Message:",
+    rec.message || "-",
+    "",
+    "Photos: " + (rec.photoCount || 0) + (photos.length ? " (attached)" : ""),
+    photos.length ? photos.map((p) => "- " + p.filename + " (" + p.type + ", " + p.size + " bytes)").join("\n") : "",
     "Page: " + (rec.page || "-"),
+    "Source: " + (rec.source || "-"),
     "Time: " + rec.createdAt + " (UTC)",
   ].filter((l, i) => l !== "" || i === 1).join("\n");
+  const payload = {
+    from: "Brightfront Studio <info@brightfrontdesign.com>",
+    to: [to],
+    reply_to: rec.email,
+    subject: "New website request: " + rec.email,
+    text: body,
+  };
+  if (photos.length) {
+    payload.attachments = photos.map((p) => ({ filename: p.filename, content: p.content, content_type: p.type }));
+  }
   const r = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { "Authorization": "Bearer " + env.RESEND_API_KEY, "Content-Type": "application/json" },
-    body: JSON.stringify({
-      from: "Brightfront Studio <info@brightfrontdesign.com>",
-      to: [to],
-      reply_to: rec.email,
-      subject: "New website request: " + rec.email,
-      text: body,
-    }),
-    signal: AbortSignal.timeout(8000),
+    body: JSON.stringify(payload),
+    signal: AbortSignal.timeout(20000),
   });
   if (!r.ok) throw new Error("resend failed: " + r.status); // status only, never the key or response body
 }
@@ -90,12 +171,16 @@ export async function onRequestPost({ request, env }) {
 
   const name = str(b.name, 80);                 // optional
   const email = str(b.email, 120);
-  const message = text(b.message, 2000);        // optional, max 2000 chars
+  const message = text(b.message, 2000);        // required
   const storeName = str(b.storeName, 120);      // optional (legacy)
   const category = str(b.category, 40);         // optional (legacy)
   if (!EMAIL_RE.test(email)) return json({ ok: false, error: "email" }, 400);
+  if (!message) return json({ ok: false, error: "message" }, 400);
   const products = (Array.isArray(b.products) ? b.products : []).slice(0, 30).map((p) => ({ name: str(p && p.name, 100), price: str(p && p.price, 20) }));
-  const photoCount = Math.max(0, Math.min(100, parseInt(b.photoCount, 10) || 0));
+  const parsed = parsePhotos(b.photos);
+  if (parsed.error) return json({ ok: false, error: parsed.error }, 400);
+  const photos = parsed.photos;
+  const photoCount = photos.length;
 
   // Per-IP rate limit (KV counter with TTL).
   const ip = request.headers.get("cf-connecting-ip") || "unknown";
@@ -109,6 +194,7 @@ export async function onRequestPost({ request, env }) {
   const key = "lead:builder:" + createdAt + "-" + crypto.randomUUID().slice(0, 8);
   const rec = {
     source: str(b.source, 40) || "website", message, createdAt, name, email, storeName, category, products, photoCount,
+    photoNames: photos.map((p) => p.filename),
     page: str(b.page, 200), ua: str(request.headers.get("user-agent"), 200),
     country: (request.cf && request.cf.country) || "",
   };
@@ -124,18 +210,20 @@ export async function onRequestPost({ request, env }) {
     name ? "이름: " + name : "",
     "메시지: " + (message || "-"),
     storeName ? "스토어: " + storeName + " / " + (category || "-") : "",
-    products.length || photoCount ? "상품 " + products.length + "개 · 사진 " + photoCount + "장" : "",
+    "사진: " + photoCount + "장",
+    products.length ? "상품 " + products.length + "개" : "",
     products.slice(0, 8).map((p) => "• " + p.name + (p.price ? " — " + p.price : "")).join("\n"),
     "페이지: " + (rec.page || "-"),
+    "출처: " + (rec.source || "-"),
     "시간: " + kst + " (UTC+9)",
     "KV: " + key,
   ].filter(Boolean).join("\n");
 
   const [tg, mail] = await Promise.all([
     sendTelegram(env, tgText).then(() => "ok", (e) => { console.error("builder telegram", e && e.message); return "failed"; }),
-    sendResend(env, rec).then(() => "ok", (e) => { console.error("builder resend", e && e.message); return "failed"; }),
+    sendResend(env, rec, photos).then(() => "ok", (e) => { console.error("builder resend", e && e.message); return "failed"; }),
   ]);
-  return json({ ok: true, key, telegram: tg, email: mail });
+  return json({ ok: true, key, telegram: tg, email: mail, photoCount: photoCount });
 }
 
 export function onRequest() { return json({ ok: false, error: "method" }, 405); }
