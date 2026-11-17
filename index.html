@@ -136,6 +136,12 @@
     .error { color:#7A2E24; min-height:1.3rem; margin:0; font-size:.92rem; }
     .thanks h3, .pay-step h3 { font-family:var(--serif); font-weight:400; font-size:2rem; margin:0 0 .5rem; }
     .hint { margin:.35rem 0 0; font-size:.85rem; color:var(--muted); }
+    .sr-file { position:absolute; width:1px; height:1px; opacity:0; overflow:hidden; }
+    .file-field { position:relative; }
+    .file-btn { display:inline-block; margin:.5rem .75rem 0 0; padding:.55rem 1rem; border:1px solid var(--ink); background:var(--paper); color:var(--ink); cursor:pointer; font-size:.95rem; }
+    .file-btn:hover { background:var(--ink); color:var(--paper); }
+    .sr-file:focus-visible + .file-btn { outline:2px solid var(--pine); outline-offset:2px; }
+    .file-status { color:var(--muted); font-size:.95rem; }
     .photo-row { display:flex; flex-wrap:wrap; gap:.5rem; margin:.65rem 0 0; }
     .photo-thumb { margin:0; position:relative; width:72px; height:72px; }
     .photo-thumb img { width:72px; height:72px; object-fit:cover; border:1px solid var(--line); background:var(--paper-2); }
@@ -314,7 +320,7 @@
               <div><label class="lbl" for="pricing-message">Describe the website you want</label><textarea class="field lead-message" id="pricing-message" name="message" required maxlength="2000" placeholder="What do you sell or offer? Where are you? What should the website include?"></textarea></div>
               <div>
                 <label class="lbl file-field" for="pricing-photos">Photos of your shop <span style="color:var(--muted)">(optional, up to 5)</span>
-                  <input class="lead-photos" id="pricing-photos" name="photos" type="file" accept="image/*" multiple>
+                  <input class="lead-photos sr-file" id="pricing-photos" name="photos" type="file" accept="image/*" multiple><span class="file-btn" aria-hidden="true">Choose photos</span><span class="file-status" aria-live="polite">No photos selected</span>
                 </label>
                 <p class="hint">Phone photos are fine. We'll resize them before sending.</p>
                 <div class="photo-row lead-thumbs" hidden></div>
@@ -473,7 +479,7 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
               <div><label class="lbl" for="contact-message">Describe the website you want</label><textarea class="field lead-message" id="contact-message" name="message" required maxlength="2000" placeholder="What do you sell or offer? Where are you? What should the website include?"></textarea></div>
               <div>
                 <label class="lbl file-field" for="contact-photos">Photos of your shop <span style="color:var(--muted)">(optional, up to 5)</span>
-                  <input class="lead-photos" id="contact-photos" name="photos" type="file" accept="image/*" multiple>
+                  <input class="lead-photos sr-file" id="contact-photos" name="photos" type="file" accept="image/*" multiple><span class="file-btn" aria-hidden="true">Choose photos</span><span class="file-status" aria-live="polite">No photos selected</span>
                 </label>
                 <p class="hint">Phone photos are fine. We'll resize them before sending.</p>
                 <div class="photo-row lead-thumbs" hidden></div>
@@ -629,6 +635,8 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
 
         function renderThumbs() {
           thumbs.innerHTML = "";
+          var st = form.querySelector(".file-status");
+          if (st) st.textContent = photos.length ? (photos.length + (photos.length === 1 ? " photo" : " photos") + " selected") : "No photos selected";
           if (!photos.length) { thumbs.hidden = true; return; }
           thumbs.hidden = false;
           photos.forEach(function (p, i) {
