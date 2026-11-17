@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brightfront Studio — 为小店量身打造的现代化网站｜启动 $250，每月 $39</title>
+  <meta name="description" content="Brightfront Studio 为您的咖啡店、美发沙龙、烘焙店、餐车或本地小店制作美观、适配手机的现代化网站。启动时支付 $250，您确认通过后再付 $250，之后每月 $39，包含托管、更新与修改。">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Brightfront Studio">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:url" content="https://brightfrontdesign.com/zh/">
+  <meta property="og:title" content="为您的小店量身制作网站，省心省力 — Brightfront Studio">
+  <meta property="og:description" content="启动 $250，确认通过后 $250，之后每月 $39。托管、更新与修改，全部交给我们。">
+  <meta property="og:image" content="https://brightfrontdesign.com/img/01-hero.webp">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta property="og:image:alt" content="阳光洒落的小店柜台，陈列温暖诱人。">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="为您的小店量身制作网站，省心省力 — Brightfront Studio">
+  <meta name="twitter:description" content="启动 $250，确认通过后 $250，之后每月 $39。托管、更新与修改，全部交给我们。">
+  <meta name="twitter:image" content="https://brightfrontdesign.com/img/01-hero.webp">
+  <meta name="theme-color" content="#F6F3EC">
+  <link rel="canonical" href="https://brightfrontdesign.com/zh/">
+  <link rel="alternate" hreflang="en" href="https://brightfrontdesign.com/">
+  <link rel="alternate" hreflang="ja" href="https://brightfrontdesign.com/ja/">
+  <link rel="alternate" hreflang="zh-CN" href="https://brightfrontdesign.com/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://brightfrontdesign.com/">
+  <meta name="google-site-verification" content="Z6PUefHZO7V9Sy_QXlVkeG-LuAtX7JoYj8ZBTwhOXmY">
+  <meta name="google-adsense-account" content="ca-pub-1521418120439711">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231C3D34'/%3E%3Cpath fill='%23F6F3EC' d='M6 22.6V12.2L16 5.6l10 6.6v10.4H6z'/%3E%3Crect x='13.2' y='15.2' width='5.6' height='7.4' fill='%231C3D34'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    if (typeof tailwind !== "undefined") {
+      tailwind.config = { theme: { extend: {
+        colors: { paper: "#F6F3EC", ink: "#1A1916", muted: "#5E5A53", line: "#DDD6C8", pine: "#1C3D34" },
+        fontFamily: { serif: ['"Instrument Serif"', "Georgia", "serif"], sans: ['"Instrument Sans"', "system-ui", "sans-serif"] }
+      } } };
+    }
+  </script>
+  <style>
+    :root { --paper:#F6F3EC; --paper-2:#EFEAE1; --ink:#1A1916; --muted:#5E5A53; --line:#DDD6C8; --pine:#1C3D34; --pine-2:#142E27;
+      --serif:"Instrument Serif",Georgia,"Noto Serif CJK SC","Noto Serif SC","Songti SC","Hiragino Mincho ProN","Noto Serif CJK JP","Noto Serif JP",serif; --sans:"Instrument Sans","Source Sans 3","Noto Sans CJK SC","Noto Sans SC","PingFang SC","Microsoft YaHei","Hiragino Sans","Noto Sans CJK JP","Noto Sans JP",system-ui,sans-serif; --max:1120px; }
+    *,*::before,*::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); font-size:1.0625rem; line-height:1.55; -webkit-font-smoothing:antialiased; }
+    img { max-width:100%; height:auto; display:block; }
+    button,input,textarea { font:inherit; color:inherit; }
+    h1,h2,h3 { text-wrap:balance; } p { text-wrap:pretty; } a { color:inherit; }
+    :focus-visible { outline:2px solid var(--pine); outline-offset:3px; }
+    [hidden] { display:none !important; }
+    .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+    .wrap { width:min(var(--max),calc(100% - 2.5rem)); margin-inline:auto; }
+    .eyebrow { margin:0 0 .8rem; font-size:.75rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+    h1,h2,.serif { font-family:var(--serif); font-weight:400; }
+    html h1 { font-size:clamp(2.35rem,5vw,3.6rem); line-height:1.06; letter-spacing:-.025em; margin:0; }
+    html h2 { font-size:clamp(2.05rem,4vw,3.35rem); line-height:1.05; letter-spacing:-.02em; margin:0; }
+    .lede { font-size:1.125rem; color:var(--muted); max-width:38rem; margin:1.15rem 0 0; }
+    .btn,.btn-ghost { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 1.15rem; text-decoration:none; border:1px solid transparent; cursor:pointer; background:var(--pine); color:var(--paper); font-size:.95rem; }
+    .btn:hover { background:var(--pine-2); }
+    .btn-ghost { background:transparent; color:var(--ink); border-color:var(--ink); }
+    .btn-ghost:hover { background:var(--ink); color:var(--paper); }
+    .btn:disabled { opacity:.45; cursor:not-allowed; }
+    .pp-note { margin:.5rem 0 0; font-size:.85rem; color:var(--muted); }
+    .site-header { position:sticky; top:0; z-index:30; background:color-mix(in srgb,var(--paper) 90%,transparent); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+    .bar { min-height:4.25rem; display:flex; align-items:center; justify-content:space-between; gap:.75rem; }
+    .header-cta { display:none; }
+    @media (min-width:1180px) { .header-cta { display:inline-flex; } }
+    .brand { display:flex; align-items:center; gap:.6rem; text-decoration:none; letter-spacing:-.01em; }
+    .brand svg { width:28px; height:28px; flex:none; }
+    .desk-nav { display:none; } .desk-nav a { text-decoration:none; font-size:.95rem; }
+    .desk-nav a:hover { text-decoration:underline; text-underline-offset:.28em; }
+    .mob-nav { border-top:1px solid var(--line); background:var(--paper); padding:.35rem 1.25rem .9rem; }
+    .mob-nav summary { list-style:none; min-height:48px; display:flex; align-items:center; cursor:pointer; width:100%; max-width:var(--max); margin-inline:auto; }
+    .mob-nav summary::-webkit-details-marker { display:none; }
+    .mob-nav nav { width:100%; max-width:var(--max); margin:0 auto; display:grid; }
+    .mob-nav a { text-decoration:none; padding:.75rem 0; border-top:1px solid var(--line); }
+    @media (min-width:1180px) { .desk-nav { display:flex; align-items:center; gap:1.75rem; } .mob-nav { display:none; } }
+    .hero-grid { display:grid; }
+    .hero-copy { display:flex; align-items:center; }
+    .hero-copy-inner { width:min(580px,calc(100% - 2.5rem)); margin:0 auto; padding:3.25rem 0 2.75rem; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:.7rem; margin-top:1.75rem; }
+    .hero-note { margin:1.4rem 0 0; color:var(--muted); font-size:.95rem; }
+    .hero-photo { position:relative; min-height:70vw; }
+    .hero-photo img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+    @media (min-width:960px) {
+      .hero-grid { grid-template-columns:1fr 1fr; min-height:calc(100vh - 4.25rem); }
+      .hero-copy-inner { width:min(560px,88%); margin:0 5vw 0 auto; padding:4rem 2rem 4rem 0; }
+      .hero-photo { min-height:100%; }
+    }
+    .block { padding:4.75rem 0; } @media (min-width:800px) { .block { padding:6.5rem 0; } }
+    .rule { border-top:1px solid var(--line); }
+    .tiles { display:grid; grid-template-columns:1fr 1fr; gap:.8rem; margin-top:2rem; }
+    @media (min-width:800px) { .tiles { grid-template-columns:repeat(3,1fr); gap:1.1rem; } }
+    .tile { margin:0; } .tile img { width:100%; aspect-ratio:4/3; object-fit:cover; background:var(--paper-2); }
+    .tile figcaption { margin-top:.5rem; font-size:.95rem; }
+    .steps { margin-top:2.25rem; }
+    .step { display:grid; grid-template-columns:auto 1fr; gap:.35rem 1.1rem; padding:1.35rem 0; border-top:1px solid var(--line); }
+    .step h3 { margin:0; font-family:var(--serif); font-size:1.45rem; font-weight:400; }
+    .step p { margin:.3rem 0 0; color:var(--muted); grid-column:2; }
+    .step-num { font-family:var(--serif); font-size:1.7rem; line-height:1; padding-top:.15rem; }
+    @media (min-width:860px) { .steps { display:grid; grid-template-columns:1fr 1fr; } .step { padding:1.5rem 1.75rem 1.5rem 0; } .step:nth-child(even) { border-left:1px solid var(--line); padding-left:1.75rem; } }
+    .wide-photo { margin-top:2.25rem; } .wide-photo img { width:100%; height:min(60vw,520px); object-fit:cover; }
+    .caption { margin:.65rem 0 0; color:var(--muted); font-size:.9rem; }
+    .split { display:grid; gap:2rem; margin-top:2rem; }
+    @media (min-width:900px) { .split { grid-template-columns:1.05fr .95fr; gap:3rem; align-items:center; } }
+    .split-photo img { width:100%; height:min(80vw,640px); object-fit:cover; }
+    .checks { list-style:none; padding:0; margin:1.2rem 0 0; }
+    .checks li { padding:.85rem 0; border-top:1px solid var(--line); } .checks li:last-child { border-bottom:1px solid var(--line); }
+    .checks strong { display:block; font-weight:500; } .checks span { color:var(--muted); }
+    .shot { margin:0; } .shot img { width:100%; aspect-ratio:3/2; object-fit:cover; object-position:top; }
+    .shot figcaption { margin-top:.45rem; color:var(--muted); font-size:.88rem; }
+    .shots { display:grid; gap:1rem; margin-top:2rem; } @media (min-width:700px) { .shots { grid-template-columns:repeat(3,1fr); } }
+    .price-steps { list-style:none; padding:0; margin:2rem 0 0; display:grid; gap:1rem; }
+    @media (min-width:860px) { .price-steps { grid-template-columns:repeat(3,1fr); } }
+    .price-steps li { background:#fff; border:1px solid var(--line); border-top:3px solid var(--pine); padding:1.4rem; }
+    .price-steps b { font-family:var(--serif); font-weight:400; font-size:1.3rem; display:block; color:var(--muted); }
+    .price-steps .amt { font-family:var(--serif); font-size:2.6rem; line-height:1; margin:.3rem 0 .5rem; display:block; }
+    .price-steps .amt small { font-family:var(--sans); font-size:.4em; color:var(--muted); }
+    .price-steps p { margin:0; color:var(--muted); }
+    .plan { display:grid; gap:1.5rem; margin-top:2rem; padding:1.6rem; background:#fff; border:1px solid var(--line); border-top:3px solid var(--pine); }
+    @media (min-width:900px) { .plan { grid-template-columns:1fr 1fr; gap:2.5rem; padding:2rem; } }
+    .plan h3 { font-family:var(--serif); font-weight:400; font-size:1.7rem; margin:0 0 .4rem; }
+    .plan-list { list-style:none; padding:0; margin:0; display:grid; gap:0 2rem; } @media (min-width:700px) { .plan-list { grid-template-columns:1fr 1fr; } }
+    .plan-list li { display:grid; gap:.15rem; padding:.8rem 0; border-top:1px solid var(--line); }
+    .plan-list strong { font-weight:500; } .plan-list span { color:var(--muted); font-size:.95rem; }
+    .pp-sub { margin:.8rem 0 0; display:grid; gap:8px; }
+    .ls-form { display:grid; gap:8px; margin:16px 0 10px } .ls-form label,.pp-biz-label { font-size:.85rem; display:grid; gap:4px }
+    .ls-input { width:100%; padding:9px 11px; border:1px solid #ccc; border-radius:8px; font:inherit; box-sizing:border-box }
+    .ls-input:focus { outline:2px solid #6b5bff33; border-color:#6b5bff }
+    .pay-note { margin-top:1.5rem; padding:1rem 1.2rem; background:var(--paper-2); max-width:42rem; }
+    .contact { display:grid; gap:2rem; } @media (min-width:900px) { .contact { grid-template-columns:.9fr 1.1fr; gap:3.5rem; align-items:start; } }
+    .panel { background:#fff; border:1px solid var(--line); padding:1.3rem; } @media (min-width:700px) { .panel { padding:1.8rem; } }
+    .lbl { display:block; font-size:.92rem; margin:0 0 .35rem; }
+    .field { width:100%; border:1px solid var(--line); background:#fff; padding:.75rem .8rem; min-height:48px; border-radius:0; }
+    .field::placeholder, .ls-input::placeholder { color:var(--muted); opacity:1; }
+    textarea.field { min-height:130px; resize:vertical; }
+    .stack { display:grid; gap:1rem; }
+    .error { color:#7A2E24; min-height:1.3rem; margin:0; font-size:.92rem; }
+    .thanks h3, .pay-step h3 { font-family:var(--serif); font-weight:400; font-size:2rem; margin:0 0 .5rem; }
+    .hint { margin:.35rem 0 0; font-size:.85rem; color:var(--muted); }
+    .sr-file { position:absolute; left:0; top:0; width:1px; height:1px; margin:0; padding:0; border:0; opacity:0; overflow:hidden; clip:rect(0 0 0 0); clip-path:inset(50%); }
+    .file-field { position:relative; }
+    .file-btn { display:inline-block; margin:.5rem .75rem 0 0; padding:.55rem 1rem; border:1px solid var(--ink); background:var(--paper); color:var(--ink); cursor:pointer; font-size:.95rem; }
+    .file-btn:hover { background:var(--ink); color:var(--paper); }
+    .sr-file:focus-visible + .file-btn { outline:2px solid var(--pine); outline-offset:2px; }
+    .file-status { color:var(--muted); font-size:.95rem; display:inline-block; white-space:nowrap; }
+    .photo-row { display:flex; flex-wrap:wrap; gap:.5rem; margin:.65rem 0 0; }
+    .photo-thumb { margin:0; position:relative; width:72px; height:72px; }
+    .photo-thumb img { width:72px; height:72px; object-fit:cover; border:1px solid var(--line); background:var(--paper-2); }
+    .photo-thumb button { position:absolute; top:2px; right:2px; width:24px; height:24px; border:0; background:var(--ink); color:var(--paper); cursor:pointer; font-size:1rem; line-height:1; padding:0; }
+    .photo-thumb button:hover { background:var(--pine); }
+    .file-field { display:block; }
+    .file-field input[type=file].sr-file { width:1px; min-height:0; padding:0; }
+    .pay-step p { margin:0 0 1rem; color:var(--muted); }
+    .pay-step form { margin:0; }
+    .pay-step .btn { width:100%; }
+    details.maint-later { margin-top:1.5rem; border:1px solid var(--line); background:#fff; padding:0 1.2rem 1rem; }
+    details.maint-later summary { cursor:pointer; list-style:none; min-height:52px; display:flex; align-items:center; font-weight:500; }
+    details.maint-later summary::-webkit-details-marker { display:none; }
+    details.maint-later .pp-sub, details.maint-later .ls-form { max-width:28rem; }
+    details.qa { border-top:1px solid var(--line); } details.qa:last-of-type { border-bottom:1px solid var(--line); }
+    details.qa summary { cursor:pointer; list-style:none; display:flex; justify-content:space-between; gap:1rem; align-items:center; min-height:64px; padding:.7rem 0; font-size:1.12rem; }
+    details.qa summary::-webkit-details-marker { display:none; }
+    details.qa summary i { font-family:var(--serif); font-style:normal; font-size:1.7rem; line-height:1; }
+    details.qa[open] summary i { transform:rotate(45deg); }
+    details.qa p { margin:0 0 1.1rem; max-width:42rem; color:var(--muted); }
+    .site-footer { border-top:1px solid var(--line); padding:2.4rem 0 3rem; }
+    .foot { display:grid; gap:1.4rem; } @media (min-width:800px) { .foot { grid-template-columns:1.5fr 1fr; } }
+    .fine { color:var(--muted); font-size:.85rem; margin:.4rem 0 0; }
+    .skip { position:absolute; left:.8rem; top:-4rem; background:var(--pine); color:var(--paper); padding:.6rem .8rem; z-index:90; } .skip:focus { top:.6rem; }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
+
+    /* Language switcher */
+    .lang { display:flex; align-items:center; flex:none; font-size:.82rem; line-height:1; }
+    .lang a { display:inline-flex; align-items:center; justify-content:center; min-height:40px; min-width:40px; padding:0 .6rem; margin-left:-1px; text-decoration:none; color:var(--muted); border:1px solid var(--line); white-space:nowrap; }
+    .lang a:first-child { margin-left:0; }
+    .lang a:hover { color:var(--ink); border-color:var(--ink); position:relative; }
+    .lang a[aria-current="page"] { position:relative; background:var(--pine); border-color:var(--pine); color:var(--paper); }
+    .brand { min-width:0; } .brand span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    @media (min-width:1180px) { .lang { margin-right:.25rem; } }
+    @media (max-width:400px) { .bar { gap:.5rem; } .brand { gap:.4rem; } .brand span { font-size:.9rem; } .lang a { min-width:34px; padding:0 .45rem; } }
+
+    /* Simplified Chinese typography */
+    :root { --sans:"Instrument Sans","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC",system-ui,sans-serif; --serif:"Instrument Serif","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",Georgia,sans-serif; }
+    body { line-height:1.8; }
+    html h1, html h2, .step h3, .plan h3, .thanks h3, .pay-step h3 { font-weight:600; }
+    html h1 { font-size:clamp(1.9rem,4.4vw,3rem); line-height:1.35; letter-spacing:0; }
+    html h2 { font-size:clamp(1.6rem,3.4vw,2.5rem); line-height:1.35; letter-spacing:0; }
+    .eyebrow { letter-spacing:.08em; }
+    .step h3 { font-size:1.25rem; line-height:1.4; }
+    .plan h3, .thanks h3, .pay-step h3 { line-height:1.4; }
+    .plan h3 { font-size:1.45rem; } .pay-step h3 { font-size:1.5rem; }
+    .price-steps .amt small { font-size:.45em; }
+    .btn, .btn-ghost { line-height:1.4; padding-top:.55rem; padding-bottom:.55rem; text-align:center; }
+    details.qa summary { font-size:1.05rem; line-height:1.5; }
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Service","name":"Brightfront Studio — 小店网站设计制作","serviceType":"网站设计制作与维护","provider":{"@type":"Organization","name":"Brightfront Studio","url":"https://brightfrontdesign.com/","email":"info@brightfrontdesign.com"},"areaServed":["US","JP","CN"],
+   "offers":[
+    {"@type":"Offer","name":"网站制作 — 预付款","price":"250","priceCurrency":"USD","description":"预付 $250，我们开始制作您的网站。"},
+    {"@type":"Offer","name":"网站制作 — 确认后付款","price":"250","priceCurrency":"USD","description":"网站完成并经您确认通过后，支付 $250。"},
+    {"@type":"Offer","name":"网站维护 — 按月","price":"39","priceCurrency":"USD","description":"每月 $39，包含托管、更新与修改。",
+     "priceSpecification":{"@type":"UnitPriceSpecification","price":"39","priceCurrency":"USD","unitCode":"MON","referenceQuantity":{"@type":"QuantitativeValue","value":1,"unitCode":"MON"}}}
+   ]}
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1521418120439711" crossorigin="anonymous"></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="#top">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#1C3D34"/><path fill="#F6F3EC" d="M6 22.6V12.2L16 5.6l10 6.6v10.4H6z"/><rect x="13.2" y="15.2" width="5.6" height="7.4" fill="#1C3D34"/></svg>
+        <span>Brightfront Studio</span>
+      </a>
+      <nav class="desk-nav" aria-label="主导航">
+        <a href="#shops">适合哪些小店</a><a href="#how">合作流程</a><a href="#examples">案例展示</a><a href="#pricing">价格</a><a href="#faq">常见问题</a>
+      </nav>
+      <nav class="lang" aria-label="语言 / Language"><a href="/" hreflang="en" lang="en">EN</a><a href="/ja/" hreflang="ja" lang="ja">日本語</a><a href="/zh/" hreflang="zh-CN" lang="zh-CN" aria-current="page">中文</a></nav>
+      <a class="btn header-cta" href="#contact">我要做网站</a>
+    </div>
+    <details class="mob-nav">
+      <summary>菜单</summary>
+      <nav aria-label="移动端菜单">
+        <a href="#shops">适合哪些小店</a><a href="#how">合作流程</a><a href="#examples">案例展示</a><a href="#pricing">价格</a><a href="#faq">常见问题</a><a href="#contact">我要做网站</a>
+      </nav>
+    </details>
+  </header>
+
+  <main id="main">
+    <!-- 1. Hero: website building -->
+    <section class="hero-grid" id="top">
+      <div class="hero-copy">
+        <div class="hero-copy-inner">
+          <p class="eyebrow">专为小店打造的网站</p>
+          <h1>您的小店，值得一个和您一样拼的网站。</h1>
+          <p class="lede">咖啡店、美发沙龙、烘焙店、餐车、本地小店……顾客在进店之前，往往先用手机搜一搜。我们为您制作一个美观、适配手机的现代化网站，展示您最好的一面，并负责托管、更新，随时按您的需求修改。您专心经营生意，网站交给我们。</p>
+          <div class="hero-actions">
+            <a class="btn" href="#contact">我要做网站</a>
+            <a class="btn-ghost" href="#pricing">查看价格</a>
+          </div>
+          <p class="hero-note"><strong>$250</strong> 启动制作，您确认成品后再付 <strong>$250</strong>，之后每月仅需 <strong>$39</strong>，包含托管、更新与修改。费用透明，没有隐藏收费。</p>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img fetchpriority="high" decoding="async" src="/img/01-hero.webp" width="1600" height="900" alt="阳光洒落的小店柜台，摆放着玻璃罐和陶土水壶——这正是我们为之制作网站的那类小店。">
+      </div>
+    </section>
+
+    <!-- 2. Who it's for -->
+    <section class="block rule" id="shops">
+      <div class="wrap">
+        <p class="eyebrow">适合哪些小店</p>
+        <h2>为街角的小店而做。</h2>
+        <p class="lede">如果您的顾客需要到店消费，希望让人容易找到、值得信赖、愿意上门，一个清爽的网站就能替您说话——营业时间、菜单、地址，一应俱全。</p>
+        <div class="tiles">
+          <figure class="tile"><img src="/img/04-cafe.webp" width="1600" height="900" loading="lazy" decoding="async" alt="木质柜台与咖啡杯，温馨惬意的咖啡店内景。"><figcaption>咖啡店</figcaption></figure>
+          <figure class="tile"><img src="/img/05-salon.webp" width="1600" height="900" loading="lazy" decoding="async" alt="摆放着造型椅和镜子的明亮美发沙龙。"><figcaption>美发沙龙与理发店</figcaption></figure>
+          <figure class="tile"><img src="/img/06-foodtruck.webp" width="1600" height="900" loading="lazy" decoding="async" alt="餐车在街边窗口为顾客出餐。"><figcaption>餐车</figcaption></figure>
+          <figure class="tile"><img src="/img/store-food.webp" width="1728" height="1152" loading="lazy" decoding="async" alt="赤陶色亚麻布上摆放着乡村面包、橄榄油、无花果和一罐果酱。"><figcaption>烘焙店与食品店</figcaption></figure>
+          <figure class="tile"><img src="/img/store-beauty.webp" width="1728" height="1152" loading="lazy" decoding="async" alt="货架上摆放着柔和玫瑰色调的护肤产品。"><figcaption>美容与健康</figcaption></figure>
+          <figure class="tile"><img src="/img/store-crafts.webp" width="1728" height="1152" loading="lazy" decoding="async" alt="木桌上陈列着手工陶器与手作工艺品。"><figcaption>本地小店与手作人</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. How it works -->
+    <section class="block rule" id="how">
+      <div class="wrap">
+        <p class="eyebrow">合作流程</p>
+        <h2>您介绍小店，其余交给我们。</h2>
+        <div class="steps">
+          <article class="step"><div class="step-num">01</div><h3>告诉我们您的需求</h3><p>留下您的邮箱，描述您想要的网站，再上传几张小店的照片。我们将据此开始制作。</p></article>
+          <article class="step"><div class="step-num">02</div><h3>支付 $250 启动制作</h3><p>首笔 $250 为预付款，请在提交需求后支付，付款后我们即开始制作您的网站。</p></article>
+          <article class="step"><div class="step-num">03</div><h3>我们为您制作网站</h3><p>用您的照片、营业时间、菜单或服务项目，排版清晰，在手机上同样好看。</p></article>
+          <article class="step"><div class="step-num">04</div><h3>您确认通过，我们上线</h3><p>我们会用 info@brightfrontdesign.com 把成品网站发给您。您确认通过后，再支付剩余的 $250，之后每月 $39 即可享受托管与更新。</p></article>
+        </div>
+        <figure class="wide-photo">
+          <img src="/img/02-websites.webp" width="1600" height="900" loading="lazy" decoding="async" alt="笔记本电脑和手机并排展示着一个简洁的小店网站。">
+          <figcaption class="caption">一个网站，同时适配电脑和顾客手中的手机。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 4. Examples -->
+    <section class="block rule" id="examples">
+      <div class="wrap">
+        <p class="eyebrow">我们的作品</p>
+        <h2>真实的小店，真实的网站。</h2>
+        <p class="lede">每个案例都围绕店铺自己的照片制作。点击即可打开在线预览。</p>
+        <div class="shots">
+          <figure class="shot"><a href="https://brightfrontdesign.com/preview/luxe-paws-grooming-bristol/" target="_blank" rel="noopener"><img src="/assets/examples/real/luxe-paws-grooming-bristol.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Luxe Paws Grooming 网站预览，使用了店里为一只卷毛犬美容后的真实照片。"></a><figcaption>宠物美容 — Luxe Paws Grooming</figcaption></figure>
+          <figure class="shot"><a href="https://brightfrontdesign.com/preview/rhodes-barber-shop-anderson/" target="_blank" rel="noopener"><img src="/assets/examples/real/rhodes-barber-shop-anderson.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Rhodes Barber Shop 网站预览，使用了店内的真实照片。"></a><figcaption>理发店 — Rhodes Barber Shop</figcaption></figure>
+          <figure class="shot"><a href="https://brightfrontdesign.com/preview/bettinas-soulfood-kitchen-jackson/" target="_blank" rel="noopener"><img src="/assets/examples/real/bettinas-soulfood-kitchen-jackson.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Bettina's Soulfood Kitchen 网站预览，使用了店面的真实照片。"></a><figcaption>餐厅 — Bettina's Soulfood Kitchen</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. What you get -->
+    <section class="block rule" id="included">
+      <div class="wrap">
+        <div class="split">
+          <div>
+            <p class="eyebrow">您将获得</p>
+            <h2>您的网站背后，有一支小而用心的团队。</h2>
+            <ul class="checks">
+              <li><strong>适配手机的设计</strong><span>您的大多数访客都在用手机，所以我们优先为手机设计。</span></li>
+              <li><strong>托管全包</strong><span>安全、快速、全天在线。无需操心服务器，也不用记各种登录账号。</span></li>
+              <li><strong>更新与修改</strong><span>营业时间变了、上新了季节菜单、有新照片？发邮件告诉我们，我们来改。</span></li>
+              <li><strong>真人对接</strong><span>给 info@brightfrontdesign.com 写信，我们团队的真人会回复您。</span></li>
+            </ul>
+          </div>
+          <div class="split-photo">
+            <img src="/img/08-phone.webp" width="752" height="941" loading="lazy" decoding="async" alt="木质柜台上的手机显示着一家小店的网站，旁边是一只陶瓷杯。">
+          </div>
+        </div>
+        <figure class="wide-photo">
+          <img src="/img/07-team.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Brightfront 团队围坐在摆着笔记本电脑和草图的桌旁一起工作。">
+          <figcaption class="caption">小而精的工作室，贴心的服务。从制作、托管到后续维护，我们全程负责。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 6. Pricing -->
+    <section class="block rule" id="pricing">
+      <div class="wrap">
+        <p class="eyebrow">价格</p>
+        <h2>简单明了，只需三步。</h2>
+        <p class="lede">网站制作费用合计 $500，分两次支付；之后每月 $39，包含托管、更新和随时修改。先告诉我们您的需求，并支付首笔 $250 即可开始。所有费用均以美元（USD）结算。</p>
+        <ol class="price-steps">
+          <li><b>第 1 步</b><span class="amt">$250</span><p>启动时先支付 $250，我们随即开始制作您的网站。</p></li>
+          <li><b>第 2 步</b><span class="amt">$250</span><p>网站制作完成、您确认通过后，再支付剩余的 $250。</p></li>
+          <li><b>第 3 步</b><span class="amt">$39 <small>/ 月</small></span><p>之后每月 $39 维护费：包含托管、更新与修改。</p></li>
+        </ol>
+        <div class="pay-note">
+          <strong>如何付款。</strong> 在下方提交需求后，请先支付首笔 $250，我们即可开始制作。网站完成后，我们会用 <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a> 把网站发给您，并请您支付剩余的 $250。您确认通过后，每月 $39 涵盖托管、更新与修改。
+        </div>
+
+        <div class="plan">
+          <div>
+            <h3>开始制作我的网站</h3>
+            <p style="margin:0 0 1rem;color:var(--muted)">留下您的邮箱，描述您想要的网站，再上传几张照片。然后支付首笔 $250，我们即可开始制作。</p>
+            <form class="lead-form stack" data-source="pricing" novalidate>
+              <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="pricing-hp">公司</label><input id="pricing-hp" class="lead-hp" name="hp" tabindex="-1" autocomplete="off"></div>
+              <div><label class="lbl" for="pricing-email">您的邮箱</label><input class="field lead-email" id="pricing-email" name="email" type="email" autocomplete="email" required maxlength="120" placeholder="you@yourshop.com"></div>
+              <div><label class="lbl" for="pricing-message">描述您想要的网站</label><textarea class="field lead-message" id="pricing-message" name="message" required maxlength="2000" placeholder="您卖什么、提供什么服务？店铺在哪里？网站需要包含哪些内容？"></textarea></div>
+              <div>
+                <label class="lbl file-field" for="pricing-photos">小店照片 <span style="color:var(--muted)">（选填，最多 5 张）</span>
+                  <input class="lead-photos sr-file" id="pricing-photos" name="photos" type="file" accept="image/*" multiple><span class="file-btn" aria-hidden="true">选择照片</span><span class="file-status" aria-live="polite">未选择照片</span>
+                </label>
+                <p class="hint">手机拍的照片就可以，我们会在发送前自动调整尺寸。</p>
+                <div class="photo-row lead-thumbs" hidden></div>
+              </div>
+              <p class="error lead-error" role="alert" aria-live="polite"></p>
+              <button class="btn lead-submit" type="submit">提交我的需求</button>
+            </form>
+            <div class="pay-step lead-pay" hidden>
+              <h3>支付首笔 $250，开始制作您的网站</h3>
+              <p>支付 $250 后，我们将制作您的网站，并通过 <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a> 发给您。剩余的 $250 在您确认通过后支付，之后为每月 $39 的维护费。</p>
+              <form class="pp-first" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="chedamso@naver.com">
+                <input type="hidden" name="item_name" value="Brightfront website — first payment (start build)">
+                <input type="hidden" name="amount" value="250.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="custom" class="pp-first-custom" value="">
+                <input type="hidden" name="no_shipping" value="1">
+                <input type="hidden" name="no_note" value="1">
+                <input type="hidden" name="charset" value="UTF-8">
+                <input type="hidden" name="notify_url" value="https://brightfrontdesign.com/api/paypal-ipn">
+                <input type="hidden" name="return" value="https://brightfrontdesign.com/thanks/">
+                <input type="hidden" name="cancel_return" value="https://brightfrontdesign.com/zh/">
+                <button type="submit" class="btn">支付 $250，开始制作我的网站</button>
+              </form>
+              <p class="pp-note">您将通过 PayPal 付款。在 PayPal 结账页面可使用银行卡支付。</p>
+            </div>
+            <noscript><p class="fine">此表单需要启用 JavaScript。请直接发送邮件至 <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>。</p></noscript>
+          </div>
+          <div>
+            <h3>维护计划：每月 $39</h3>
+            <p style="margin:0 0 1rem;color:var(--muted)">网站的托管、更新与修改，上线后按月收费。可随时取消。</p>
+            <ul class="plan-list">
+            <li><strong>托管与 SSL</strong><span>您的网站由我们托管，并通过 HTTPS 访问。我们会持续保持其最新状态。</span></li>
+            <li><strong>内容更新</strong><span>营业时间、菜单、价格、照片和文字，我们都会为您及时更新。</span></li>
+            <li><strong>按需修改</strong><span>把想改的地方发邮件告诉我们，我们来修改。</span></li>
+            <li><strong>适配手机</strong><span>在手机、平板和电脑上都能正常显示。</span></li>
+            <li><strong>真人支持</strong><span>发邮件至 info@brightfrontdesign.com，会有真人回复。</span></li>
+            <li><strong>随时取消</strong><span>按月付费，没有合同束缚。</span></li>
+          </ul>
+          </div>
+        </div>
+
+        <details class="maint-later">
+          <summary>维护费（网站上线后）— 每月 $39</summary>
+            <p class="hint" style="margin:0 0 1rem">请在网站确认通过并上线后再开通。包含托管、更新与修改，按月计费，可随时取消。</p>
+            <form class="pp-sub" id="pp-sub" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+              <label class="pp-biz-label">店铺名称 <input class="ls-input" id="pp-biz" type="text" required maxlength="64" autocomplete="organization"></label>
+              <input type="hidden" name="custom" id="pp-custom">
+              <input type="hidden" name="on0" value="Business">
+              <input type="hidden" name="os0" id="pp-os0">
+              <input type="hidden" name="cmd" value="_xclick-subscriptions">
+              <input type="hidden" name="business" value="chedamso@naver.com">
+              <input type="hidden" name="item_name" value="Brightfront Studio website maintenance - $39/month">
+              <input type="hidden" name="currency_code" value="USD">
+              <input type="hidden" name="a3" value="39">
+              <input type="hidden" name="p3" value="1">
+              <input type="hidden" name="t3" value="M">
+              <input type="hidden" name="src" value="1">
+              <input type="hidden" name="no_shipping" value="1">
+              <input type="hidden" name="no_note" value="1">
+              <input type="hidden" name="charset" value="UTF-8">
+              <input type="hidden" name="notify_url" value="https://brightfrontdesign.com/api/paypal-ipn">
+              <input type="hidden" name="return" value="https://brightfrontdesign.com/thanks/">
+              <input type="hidden" name="cancel_return" value="https://brightfrontdesign.com/zh/">
+              <button type="submit" class="btn btn-ghost" id="pp-submit">维护费 — 每月 $39，使用 PayPal 支付</button>
+              <p class="pp-note">可通过 PayPal 结账页面使用银行卡支付。可随时在您的 PayPal 账户中取消，没有合同约束。</p>
+            </form>
+<script>
+(function(){var f=document.getElementById('pp-sub');if(!f)return;var bi=document.getElementById('pp-biz');
+bi.addEventListener('input',function(){bi.setCustomValidity('');});
+f.addEventListener('submit',function(e){var b=bi.value.trim();
+if(!b){e.preventDefault();bi.setCustomValidity('请输入您的店铺名称。');bi.reportValidity();return;}
+var ref=new URLSearchParams(location.search).get('ref')||((document.getElementById('ls-ref')||{}).value)||'';
+document.getElementById('pp-os0').value=b.slice(0,64);
+document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);});})();
+</script>
+<form id="ls-form" class="ls-form" novalidate>
+  <label>店铺名称
+    <input id="ls-biz" class="ls-input" type="text" required maxlength="64" autocomplete="organization">
+  </label>
+  <label>您的预览链接或网站（选填）
+    <input id="ls-ref" class="ls-input" type="text" inputmode="url">
+  </label>
+  <label>您的姓名（选填）
+    <input id="ls-name" class="ls-input" type="text" autocomplete="name">
+  </label>
+  <button type="submit" class="btn btn-primary" id="ls-submit">维护费 — 每月 $39，银行卡支付</button>
+</form>
+<p class="pp-note">银行卡支付由 Lemon Squeezy 提供安全结账。可随时取消。</p>
+<script src="https://assets.lemonsqueezy.com/lemon.js" defer
+        onload="window.createLemonSqueezy && window.createLemonSqueezy()"></script>
+<script>
+(function () {
+  var LS_MONTHLY = 'https://chedlab.lemonsqueezy.com/checkout/buy/37fb2c40-075a-4d33-a318-417e56fd8357?enabled=2280377&embed=1';
+  var form = document.getElementById('ls-form');
+  var biz = document.getElementById('ls-biz');
+  var ref = document.getElementById('ls-ref');
+  var name = document.getElementById('ls-name');
+  var pre = new URLSearchParams(location.search).get('ref');
+  if (!pre) {
+    try {
+      var raw = localStorage.getItem('bf_builder_lead');
+      if (raw) {
+        try {
+          var o = JSON.parse(raw);
+          pre = typeof o === 'string' ? o : (o && (o.url || o.link || o.ref || o.preview)) || raw;
+        } catch (e) { pre = raw; }
+      }
+    } catch (e) {}
+  }
+  if (pre && !ref.value) ref.value = String(pre);
+  biz.addEventListener('input', function () { biz.setCustomValidity(''); });
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var b = biz.value.trim();
+    if (!b) {
+      biz.setCustomValidity('请输入您的店铺名称。');
+      biz.reportValidity();
+      return;
+    }
+    var u = new URL(LS_MONTHLY);
+    u.searchParams.set('embed', '1');
+    u.searchParams.set('checkout[custom][business_name]', b);
+    var r = ref.value.trim();
+    if (r) u.searchParams.set('checkout[custom][preview_ref]', r);
+    var n = name.value.trim();
+    if (n) u.searchParams.set('checkout[name]', n);
+    u.searchParams.set('checkout[custom][source]', 'brightfrontdesign.com');
+    var url = u.toString();
+    if (window.LemonSqueezy && window.LemonSqueezy.Url && typeof window.LemonSqueezy.Url.Open === 'function') {
+      window.LemonSqueezy.Url.Open(url);
+    } else {
+      window.open(url, '_blank', 'noopener');
+    }
+  });
+})();
+</script>
+        </details>
+      </div>
+    </section>
+
+    <!-- 7. Contact -->
+    <section class="block rule" id="contact">
+      <div class="wrap contact">
+        <div>
+          <p class="eyebrow">联系我们</p>
+          <h2>一起来做您的网站吧。</h2>
+          <p class="lede">留下您的邮箱，描述您想要的网站，再上传几张照片。然后支付首笔 $250，我们即可开始制作。</p>
+          <p class="lede" style="margin-top:.8rem">付款后，我们将制作您的网站，并通过 <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a> 发给您。剩余的 $250 在您确认通过后支付，之后为每月 $39 的维护费。您也可以随时通过该邮箱联系我们。</p>
+        </div>
+        <div class="panel">
+            <form class="lead-form stack" data-source="contact" novalidate>
+              <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="contact-hp">公司</label><input id="contact-hp" class="lead-hp" name="hp" tabindex="-1" autocomplete="off"></div>
+              <div><label class="lbl" for="contact-email">您的邮箱</label><input class="field lead-email" id="contact-email" name="email" type="email" autocomplete="email" required maxlength="120" placeholder="you@yourshop.com"></div>
+              <div><label class="lbl" for="contact-message">描述您想要的网站</label><textarea class="field lead-message" id="contact-message" name="message" required maxlength="2000" placeholder="您卖什么、提供什么服务？店铺在哪里？网站需要包含哪些内容？"></textarea></div>
+              <div>
+                <label class="lbl file-field" for="contact-photos">小店照片 <span style="color:var(--muted)">（选填，最多 5 张）</span>
+                  <input class="lead-photos sr-file" id="contact-photos" name="photos" type="file" accept="image/*" multiple><span class="file-btn" aria-hidden="true">选择照片</span><span class="file-status" aria-live="polite">未选择照片</span>
+                </label>
+                <p class="hint">手机拍的照片就可以，我们会在发送前自动调整尺寸。</p>
+                <div class="photo-row lead-thumbs" hidden></div>
+              </div>
+              <p class="error lead-error" role="alert" aria-live="polite"></p>
+              <button class="btn lead-submit" type="submit">提交我的需求</button>
+            </form>
+            <div class="pay-step lead-pay" hidden>
+              <h3>支付首笔 $250，开始制作您的网站</h3>
+              <p>支付 $250 后，我们将制作您的网站，并通过 <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a> 发给您。剩余的 $250 在您确认通过后支付，之后为每月 $39 的维护费。</p>
+              <form class="pp-first" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="chedamso@naver.com">
+                <input type="hidden" name="item_name" value="Brightfront website — first payment (start build)">
+                <input type="hidden" name="amount" value="250.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="custom" class="pp-first-custom" value="">
+                <input type="hidden" name="no_shipping" value="1">
+                <input type="hidden" name="no_note" value="1">
+                <input type="hidden" name="charset" value="UTF-8">
+                <input type="hidden" name="notify_url" value="https://brightfrontdesign.com/api/paypal-ipn">
+                <input type="hidden" name="return" value="https://brightfrontdesign.com/thanks/">
+                <input type="hidden" name="cancel_return" value="https://brightfrontdesign.com/zh/">
+                <button type="submit" class="btn">支付 $250，开始制作我的网站</button>
+              </form>
+              <p class="pp-note">您将通过 PayPal 付款。在 PayPal 结账页面可使用银行卡支付。</p>
+            </div>
+            <noscript><p class="fine">此表单需要启用 JavaScript。请直接发送邮件至 <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>。</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FAQ -->
+    <section class="block rule" id="faq">
+      <div class="wrap">
+        <p class="eyebrow">常见问题</p>
+        <h2>常见问题，直接回答。</h2>
+        <div style="margin-top:1.5rem">
+          <details class="qa"><summary>费用是多少？ <i aria-hidden="true">+</i></summary><p>启动时预付 $250，网站制作完成并经您确认通过后再付 $250，之后每月 $39 维护费（含托管、更新与修改）。首笔 $250 在您提交需求后，直接在本页面支付。</p></details>
+          <details class="qa"><summary>什么时候付哪笔款？ <i aria-hidden="true">+</i></summary><p>首笔 $250 在您提交需求后，立即在本页面支付，我们随即开始制作。第二笔 $250 要等您看过成品网站并确认通过后才支付。每月 $39 的维护费在网站确认通过并上线后开始。我们会用 info@brightfrontdesign.com 把成品网站发给您。</p></details>
+          <details class="qa"><summary>每月 $39 包含什么？ <i aria-hidden="true">+</i></summary><p>包含托管、保障网站安全并保持最新，以及您提出的各类修改，比如新的营业时间、新菜单或新照片。按月付费，没有合同，可随时取消。</p></details>
+          <details class="qa"><summary>我需要自己提供照片或文字吗？ <i aria-hidden="true">+</i></summary><p>刚开始用手机拍的照片就够了。告诉我们您做什么生意，把手头有的素材发给我们，我们会整理成清晰美观的页面。之后您也可以随时补充或替换。</p></details>
+          <details class="qa"><summary>手机上能正常使用吗？ <i aria-hidden="true">+</i></summary><p>可以。我们制作的每个网站都适配手机，并且优先在小屏幕上测试，因为大多数本地顾客正是通过手机找到您的。</p></details>
+          <details class="qa"><summary>适合哪些人？ <i aria-hidden="true">+</i></summary><p>咖啡店、美发沙龙、烘焙店、餐车、本地小店等小型独立商家，以及所有希望拥有一个简洁专业的网站、又不想自己动手的人。</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <div>
+        <strong>Brightfront Studio</strong>
+        <p class="fine"><a href="https://brightfrontdesign.com">brightfrontdesign.com</a></p>
+        <p class="fine">为小店打造的现代化网站。</p>
+      </div>
+      <div>
+        <p class="eyebrow">邮箱</p>
+        <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>
+        <p class="fine" style="margin-top:.75rem"><a href="/privacy/">隐私政策</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var MAX_PHOTOS = 5;
+      var MAX_DIM = 1600;
+      var MAX_TOTAL = 8 * 1024 * 1024;
+      var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+      function blobToBase64(blob) {
+        return new Promise(function (resolve, reject) {
+          var reader = new FileReader();
+          reader.onload = function () {
+            var dataUrl = String(reader.result || "");
+            var comma = dataUrl.indexOf(",");
+            resolve({ dataUrl: dataUrl, b64: comma >= 0 ? dataUrl.slice(comma + 1) : "" });
+          };
+          reader.onerror = function () { reject(new Error("无法读取这张照片。")); };
+          reader.readAsDataURL(blob);
+        });
+      }
+
+      function canvasToBlob(canvas, quality) {
+        return new Promise(function (resolve) {
+          canvas.toBlob(function (blob) { resolve(blob || null); }, "image/jpeg", quality);
+        });
+      }
+
+      function resizeImage(file) {
+        return new Promise(function (resolve, reject) {
+          if (!file) { reject(new Error("请选择图片文件。")); return; }
+          if (file.type && file.type.indexOf("image/") !== 0) {
+            reject(new Error("请只选择图片文件。"));
+            return;
+          }
+          var url = URL.createObjectURL(file);
+          var img = new Image();
+          img.onload = function () {
+            var w = img.naturalWidth || img.width;
+            var h = img.naturalHeight || img.height;
+            var scale = Math.min(1, MAX_DIM / Math.max(w || 1, h || 1));
+            var cw = Math.max(1, Math.round(w * scale));
+            var ch = Math.max(1, Math.round(h * scale));
+            var canvas = document.createElement("canvas");
+            canvas.width = cw;
+            canvas.height = ch;
+            var ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0, cw, ch);
+            URL.revokeObjectURL(url);
+            (async function () {
+              var quality = 0.8;
+              var blob = await canvasToBlob(canvas, quality);
+              if (blob && blob.size > 1.2 * 1024 * 1024) {
+                quality = 0.6;
+                blob = await canvasToBlob(canvas, quality);
+              }
+              if (!blob) { reject(new Error("无法处理这张照片。")); return; }
+              var encoded = await blobToBase64(blob);
+              var base = String(file.name || "photo").replace(/\.[^.]+$/, "").replace(/[^A-Za-z0-9._-]+/g, "-") || "photo";
+              resolve({
+                filename: base.slice(0, 60) + ".jpg",
+                type: "image/jpeg",
+                content: encoded.b64,
+                preview: encoded.dataUrl,
+                size: blob.size
+              });
+            })().catch(function (e) { reject(e); });
+          };
+          img.onerror = function () {
+            URL.revokeObjectURL(url);
+            reject(new Error("无法打开这张照片，请尝试 JPG、PNG 等常见格式的图片。"));
+          };
+          img.src = url;
+        });
+      }
+
+      function totalBytes(photos) {
+        var n = 0;
+        for (var i = 0; i < photos.length; i++) n += photos[i].size || 0;
+        return n;
+      }
+
+      function bindLeadForm(form) {
+        var root = form.parentNode;
+        var err = form.querySelector(".lead-error");
+        var btn = form.querySelector(".lead-submit");
+        var fileInput = form.querySelector(".lead-photos");
+        var thumbs = form.querySelector(".lead-thumbs");
+        var pay = root.querySelector(".lead-pay");
+        var photos = [];
+
+        function renderThumbs() {
+          thumbs.innerHTML = "";
+          var st = form.querySelector(".file-status");
+          if (st) st.textContent = photos.length ? ("已选择 " + photos.length + " 张照片") : "未选择照片";
+          if (!photos.length) { thumbs.hidden = true; return; }
+          thumbs.hidden = false;
+          photos.forEach(function (p, i) {
+            var fig = document.createElement("figure");
+            fig.className = "photo-thumb";
+            var img = document.createElement("img");
+            img.src = p.preview;
+            img.alt = p.filename || ("照片 " + (i + 1));
+            var rm = document.createElement("button");
+            rm.type = "button";
+            rm.setAttribute("aria-label", "删除 " + (p.filename || "照片"));
+            rm.textContent = "×";
+            rm.addEventListener("click", function () {
+              photos.splice(i, 1);
+              renderThumbs();
+            });
+            fig.appendChild(img);
+            fig.appendChild(rm);
+            thumbs.appendChild(fig);
+          });
+        }
+
+        fileInput.addEventListener("change", function () {
+          var files = Array.prototype.slice.call(fileInput.files || []);
+          fileInput.value = "";
+          err.textContent = "";
+          if (!files.length) return;
+          var room = MAX_PHOTOS - photos.length;
+          if (room <= 0) { err.textContent = "最多可添加 5 张照片。"; return; }
+          if (files.length > room) {
+            files = files.slice(0, room);
+            err.textContent = "仅添加了前 " + room + " 张照片（最多 5 张）。";
+          }
+          btn.disabled = true;
+          var tasks = files.map(function (f) { return resizeImage(f); });
+          Promise.all(tasks).then(function (added) {
+            var next = photos.concat(added);
+            if (totalBytes(next) > MAX_TOTAL) {
+              err.textContent = "照片总体积过大，请减少数量或选择更小的图片。";
+            } else {
+              photos = next;
+              renderThumbs();
+            }
+          }).catch(function (e) {
+            err.textContent = (e && e.message) || "无法添加这些照片。";
+          }).then(function () { btn.disabled = false; });
+        });
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var email = form.querySelector(".lead-email").value.trim();
+          var message = form.querySelector(".lead-message").value.trim().slice(0, 2000);
+          if (!EMAIL_RE.test(email)) { err.textContent = "请输入有效的邮箱地址。"; return; }
+          if (!message) { err.textContent = "请描述您想要的网站。"; form.querySelector(".lead-message").focus(); return; }
+          if (totalBytes(photos) > MAX_TOTAL) { err.textContent = "照片总体积过大，请删除一张后重试。"; return; }
+          err.textContent = "";
+          btn.disabled = true;
+          var body = {
+            event: "submit",
+            email: email,
+            message: message,
+            page: location.pathname,
+            source: form.getAttribute("data-source") || "website",
+            hp: (form.querySelector(".lead-hp") || {}).value || "",
+            photos: photos.map(function (p) { return { filename: p.filename, type: p.type, content: p.content }; })
+          };
+          fetch("/api/builder-lead", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(body)
+          }).then(function (r) {
+            if (!r.ok) {
+              return r.json().then(function (j) {
+                var code = j && j.error;
+                var msg = "抱歉，提交未能成功。请重试，或发送邮件至 info@brightfrontdesign.com。";
+                if (r.status === 429) msg = "请稍等片刻后再试。该网络的请求次数过多。";
+                else if (code === "too large" || code === "photos too large" || code === "photo too large") msg = "照片体积过大，请删除一张后重试。";
+                else if (code === "photo type") msg = "请上传常规照片（JPG、PNG、WEBP 或 GIF）。";
+                else if (code === "email") msg = "请输入有效的邮箱地址。";
+                else if (code === "message") msg = "请描述您想要的网站。";
+                throw new Error(msg);
+              }, function () { throw new Error("抱歉，提交未能成功。请重试，或发送邮件至 info@brightfrontdesign.com。"); });
+            }
+            form.hidden = true;
+            if (pay) {
+              var custom = pay.querySelector(".pp-first-custom");
+              if (custom) custom.value = email.slice(0, 255);
+              pay.hidden = false;
+              pay.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            }
+          }).catch(function (e) {
+            btn.disabled = false;
+            var fallback = '抱歉，提交未能成功。请重试，或发送邮件至 <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>。';
+            if (e && e.message && e.message.indexOf("info@brightfrontdesign.com") === -1) {
+              err.textContent = e.message;
+            } else {
+              err.innerHTML = fallback;
+            }
+          });
+        });
+      }
+
+      document.querySelectorAll("form.lead-form").forEach(bindLeadForm);
+      document.querySelectorAll(".mob-nav a").forEach(function (a) {
+        a.addEventListener("click", function () { document.querySelector(".mob-nav").open = false; });
+      });
+    })();
+  </script>
+
+</body>
+</html>
