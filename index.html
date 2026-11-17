@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Brightfront Studio — AI Online Store Builder | Free Setup, $39/Month or $390/Year</title>
-  <meta name="description" content="Brightfront Studio's AI builds an online store for American small businesses in under five minutes. Free setup, then $39 a month or $390 a year (2 months free), a locked price. Stripe, U.S. sales tax, and USPS, UPS, and FedEx shipping.">
+  <title>Brightfront Studio — Modern Websites for Small Shops | $250 to Start, $39/Month</title>
+  <meta name="description" content="Brightfront Studio builds a modern, mobile-friendly website for your cafe, salon, bakery, food truck or local store. $250 to start, $250 when you approve it, then $39 a month for hosting, updates and changes.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Brightfront Studio">
   <meta property="og:url" content="https://brightfrontdesign.com/">
-  <meta property="og:title" content="Your online store, built by AI in under 5 minutes — Brightfront Studio">
-  <meta property="og:description" content="Enter a store name, a category, photos, and prices. AI builds the homepage, about, and product pages. Free setup, then $39 a month or $390 a year, locked.">
-  <meta property="og:image" content="https://brightfrontdesign.com/img/hero.webp">
-  <meta property="og:image:width" content="1792">
-  <meta property="og:image:height" content="1008">
-  <meta property="og:image:alt" content="Sunlit oak counter in a small shop, with glass jars and a clay pitcher.">
+  <meta property="og:title" content="A website for your small shop, built for you — Brightfront Studio">
+  <meta property="og:description" content="$250 to start, $250 when you approve it, then $39 a month. We handle hosting, updates and changes.">
+  <meta property="og:image" content="https://brightfrontdesign.com/img/01-hero.webp">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta property="og:image:alt" content="A small shop counter with a welcoming, sunlit display.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Your online store, built by AI in under 5 minutes — Brightfront Studio">
-  <meta name="twitter:description" content="AI online store builder for U.S. small businesses. Free setup, then $39 a month or $390 a year, locked.">
-  <meta name="twitter:image" content="https://brightfrontdesign.com/img/hero.webp">
+  <meta name="twitter:title" content="A website for your small shop, built for you — Brightfront Studio">
+  <meta name="twitter:description" content="$250 to start, $250 when you approve it, then $39 a month. We handle hosting, updates and changes.">
+  <meta name="twitter:image" content="https://brightfrontdesign.com/img/01-hero.webp">
   <meta name="theme-color" content="#F6F3EC">
   <link rel="canonical" href="https://brightfrontdesign.com/">
   <meta name="google-site-verification" content="Z6PUefHZO7V9Sy_QXlVkeG-LuAtX7JoYj8ZBTwhOXmY">
@@ -25,416 +25,135 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231C3D34'/%3E%3Cpath fill='%23F6F3EC' d='M6 22.6V12.2L16 5.6l10 6.6v10.4H6z'/%3E%3Crect x='13.2' y='15.2' width='5.6' height='7.4' fill='%231C3D34'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif&family=Jost:wght@400;500&family=Karla:wght@400;500&family=Libre+Baskerville:wght@400;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Nunito+Sans:wght@400;600&family=Outfit:wght@400;500&family=Playfair+Display:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-  <!-- Tailwind is the utility layer. Component CSS below is the layout, so the page still holds if the CDN is slow. -->
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    /* Config runs after the CDN defines `tailwind`. Guarded so a blocked CDN cannot throw. */
     if (typeof tailwind !== "undefined") {
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              paper: "#F6F3EC",
-              ink: "#1A1916",
-              muted: "#5E5A53",
-              line: "#DDD6C8",
-              pine: "#1C3D34"
-            },
-            fontFamily: {
-              serif: ['"Instrument Serif"', "Georgia", "serif"],
-              sans: ['"Instrument Sans"', "system-ui", "sans-serif"]
-            }
-          }
-        }
-      };
+      tailwind.config = { theme: { extend: {
+        colors: { paper: "#F6F3EC", ink: "#1A1916", muted: "#5E5A53", line: "#DDD6C8", pine: "#1C3D34" },
+        fontFamily: { serif: ['"Instrument Serif"', "Georgia", "serif"], sans: ['"Instrument Sans"', "system-ui", "sans-serif"] }
+      } } };
     }
   </script>
   <style>
-    :root {
-      --paper: #F6F3EC;
-      --paper-2: #EFEAE1;
-      --ink: #1A1916;
-      --muted: #5E5A53;
-      --line: #DDD6C8;
-      --pine: #1C3D34;
-      --pine-2: #142E27;
-      --serif: "Instrument Serif", Georgia, serif;
-      --sans: "Instrument Sans", "Source Sans 3", system-ui, sans-serif;
-      --max: 1120px;
-    }
-    *, *::before, *::after { box-sizing: border-box; }
+    :root { --paper:#F6F3EC; --paper-2:#EFEAE1; --ink:#1A1916; --muted:#5E5A53; --line:#DDD6C8; --pine:#1C3D34; --pine-2:#142E27;
+      --serif:"Instrument Serif",Georgia,serif; --sans:"Instrument Sans","Source Sans 3",system-ui,sans-serif; --max:1120px; }
+    *,*::before,*::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
-    body {
-      margin: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: var(--sans);
-      font-size: 1.0625rem;
-      line-height: 1.55;
-      -webkit-font-smoothing: antialiased;
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); font-size:1.0625rem; line-height:1.55; -webkit-font-smoothing:antialiased; }
+    img { max-width:100%; height:auto; display:block; }
+    button,input,textarea { font:inherit; color:inherit; }
+    h1,h2,h3 { text-wrap:balance; } p { text-wrap:pretty; } a { color:inherit; }
+    :focus-visible { outline:2px solid var(--pine); outline-offset:3px; }
+    [hidden] { display:none !important; }
+    .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+    .wrap { width:min(var(--max),calc(100% - 2.5rem)); margin-inline:auto; }
+    .eyebrow { margin:0 0 .8rem; font-size:.75rem; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+    h1,h2,.serif { font-family:var(--serif); font-weight:400; }
+    html h1 { font-size:clamp(2.35rem,5vw,3.6rem); line-height:1.06; letter-spacing:-.025em; margin:0; }
+    html h2 { font-size:clamp(2.05rem,4vw,3.35rem); line-height:1.05; letter-spacing:-.02em; margin:0; }
+    .lede { font-size:1.125rem; color:var(--muted); max-width:38rem; margin:1.15rem 0 0; }
+    .btn,.btn-ghost { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:0 1.15rem; text-decoration:none; border:1px solid transparent; cursor:pointer; background:var(--pine); color:var(--paper); font-size:.95rem; }
+    .btn:hover { background:var(--pine-2); }
+    .btn-ghost { background:transparent; color:var(--ink); border-color:var(--ink); }
+    .btn-ghost:hover { background:var(--ink); color:var(--paper); }
+    .btn:disabled { opacity:.45; cursor:not-allowed; }
+    .pp-note { margin:.5rem 0 0; font-size:.85rem; color:var(--muted); }
+    .site-header { position:sticky; top:0; z-index:30; background:color-mix(in srgb,var(--paper) 90%,transparent); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+    .bar { height:4.25rem; display:flex; align-items:center; justify-content:space-between; gap:.75rem; }
+    .header-cta { display:none; }
+    @media (min-width:860px) { .header-cta { display:inline-flex; } }
+    .brand { display:flex; align-items:center; gap:.6rem; text-decoration:none; letter-spacing:-.01em; }
+    .brand svg { width:28px; height:28px; flex:none; }
+    .desk-nav { display:none; } .desk-nav a { text-decoration:none; font-size:.95rem; }
+    .desk-nav a:hover { text-decoration:underline; text-underline-offset:.28em; }
+    .mob-nav { border-top:1px solid var(--line); background:var(--paper); padding:.35rem 1.25rem .9rem; }
+    .mob-nav summary { list-style:none; min-height:48px; display:flex; align-items:center; cursor:pointer; width:100%; max-width:var(--max); margin-inline:auto; }
+    .mob-nav summary::-webkit-details-marker { display:none; }
+    .mob-nav nav { width:100%; max-width:var(--max); margin:0 auto; display:grid; }
+    .mob-nav a { text-decoration:none; padding:.75rem 0; border-top:1px solid var(--line); }
+    @media (min-width:860px) { .desk-nav { display:flex; align-items:center; gap:1.75rem; } .mob-nav { display:none; } }
+    .hero-grid { display:grid; }
+    .hero-copy { display:flex; align-items:center; }
+    .hero-copy-inner { width:min(580px,calc(100% - 2.5rem)); margin:0 auto; padding:3.25rem 0 2.75rem; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:.7rem; margin-top:1.75rem; }
+    .hero-note { margin:1.4rem 0 0; color:var(--muted); font-size:.95rem; }
+    .hero-photo { position:relative; min-height:70vw; }
+    .hero-photo img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+    @media (min-width:960px) {
+      .hero-grid { grid-template-columns:1fr 1fr; min-height:calc(100vh - 4.25rem); }
+      .hero-copy-inner { width:min(560px,88%); margin:0 5vw 0 auto; padding:4rem 2rem 4rem 0; }
+      .hero-photo { min-height:100%; }
     }
-    img { max-width: 100%; display: block; }
-    button, input, textarea, select { font: inherit; color: inherit; }
-    h1, h2, h3 { text-wrap: balance; }
-    p { text-wrap: pretty; }
-    a { color: inherit; }
-    :focus-visible { outline: 2px solid var(--pine); outline-offset: 3px; }
-    [hidden] { display: none !important; }
-    .wrap { width: min(var(--max), calc(100% - 2.5rem)); margin-inline: auto; }
-    .eyebrow {
-      margin: 0 0 0.8rem;
-      font-size: 0.75rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    h1, h2, .serif { font-family: var(--serif); font-weight: 400; }
-    /* "html" prefix: the Tailwind CDN injects its preflight after this block and would reset heading sizes. */
-    html h1 {
-      font-size: clamp(2.65rem, 6.2vw, 5.05rem);
-      line-height: 0.98;
-      letter-spacing: -0.025em;
-      margin: 0;
-    }
-    html h2 {
-      font-size: clamp(2.05rem, 4vw, 3.35rem);
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      margin: 0;
-    }
-    .lede { font-size: 1.125rem; color: var(--muted); max-width: 38rem; margin: 1.15rem 0 0; }
-    .btn, .btn-ghost, .sf-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 0 1.15rem;
-      text-decoration: none;
-      border: 1px solid transparent;
-      cursor: pointer;
-      background: var(--pine);
-      color: var(--paper);
-      font-size: 0.95rem;
-    }
-    .btn:hover { background: var(--pine-2); }
-    .btn-ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
-    .btn-ghost:hover { background: var(--ink); color: var(--paper); }
-    .btn:disabled { opacity: 0.45; cursor: not-allowed; }
-    button.btn { font-family: inherit; }
-    .pp-sub { margin: 0.6rem 0 0; }
-    .pp-note { margin: 0.5rem 0 0; font-size: 0.85rem; color: var(--muted); }
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 30;
-      background: color-mix(in srgb, var(--paper) 90%, transparent);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--line);
-    }
-    .bar { height: 4.25rem; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
-    .brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; letter-spacing: -0.01em; }
-    .brand svg { width: 28px; height: 28px; flex: none; }
-    .desk-nav { display: none; }
-    .desk-nav a { text-decoration: none; font-size: 0.95rem; }
-    .desk-nav a:hover { text-decoration: underline; text-underline-offset: 0.28em; }
-    .header-actions { display: flex; align-items: center; gap: 0.4rem; }
-    .mob-nav { border-top: 1px solid var(--line); background: var(--paper); }
-    .mob-nav summary {
-      list-style: none;
-      min-height: 48px;
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      width: min(var(--max), calc(100% - 2.5rem));
-      margin-inline: auto;
-    }
-    .mob-nav summary::-webkit-details-marker { display: none; }
-    .mob-nav nav { width: min(var(--max), calc(100% - 2.5rem)); margin: 0 auto 0.75rem; display: grid; }
-    .mob-nav a { text-decoration: none; padding: 0.75rem 0; border-top: 1px solid var(--line); }
-    .brand-full { display: none; }
-    @media (min-width: 860px) {
-      .desk-nav { display: flex; align-items: center; gap: 1.75rem; }
-      .mob-nav { display: none; }
-      .brand-short { display: none; }
-      .brand-full { display: inline; }
-    }
-    .hero-grid { display: grid; }
-    .hero-copy { display: flex; align-items: center; }
-    .hero-copy-inner { width: min(560px, calc(100% - 2.5rem)); margin: 0 auto; padding: 3.25rem 0 2.75rem; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.75rem; }
-    .hero-note { margin: 1.4rem 0 0; color: var(--muted); font-size: 0.92rem; }
-    .hero-photo { position: relative; min-height: 70vw; }
-    .hero-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-    @media (min-width: 960px) {
-      .hero-grid { grid-template-columns: 1fr 1fr; min-height: calc(100vh - 4.25rem); }
-      .hero-copy-inner { width: min(540px, 88%); margin: 0 6vw 0 auto; padding: 4rem 2.5rem 4rem 0; }
-      .hero-photo { min-height: 100%; }
-    }
-    .block { padding: 4.75rem 0; }
-    @media (min-width: 800px) { .block { padding: 6.75rem 0; } }
-    .rule { border-top: 1px solid var(--line); }
-    .steps { margin-top: 2.25rem; }
-    .step {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 0.35rem 1.1rem;
-      padding: 1.35rem 0;
-      border-top: 1px solid var(--line);
-    }
-    .step h3 { margin: 0; font-family: var(--serif); font-size: 1.45rem; font-weight: 400; }
-    .step p { margin: 0.3rem 0 0; color: var(--muted); grid-column: 2; }
-    .step-num { font-family: var(--serif); font-size: 1.7rem; line-height: 1; padding-top: 0.15rem; }
-    @media (min-width: 860px) {
-      .steps { display: grid; grid-template-columns: 1fr 1fr; }
-      .step { padding: 1.5rem 1.75rem 1.5rem 0; }
-      .step:nth-child(even) { border-left: 1px solid var(--line); padding-left: 1.75rem; }
-      .step:nth-child(1), .step:nth-child(2) { border-top: 1px solid var(--line); }
-      .step:nth-child(n + 3) { border-top: 1px solid var(--line); }
-    }
-    .wide-photo { margin-top: 2.25rem; }
-    .wide-photo img { width: 100%; height: min(68vw, 620px); object-fit: cover; }
-    .caption { margin: 0.65rem 0 0; color: var(--muted); font-size: 0.9rem; }
-    /* Generated storefront. Colors and type come from the category. */
-    .sf { background: var(--bg); color: var(--ink); font-family: var(--body), var(--sans); }
-    .sf-bar, .sf-about, .sf-hero-copy, .sf-end { padding: 1.25rem 1.25rem; }
-    .sf-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      border-bottom: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
-    }
-    .sf-brand { font-family: var(--display), var(--serif); font-size: 1.4rem; text-decoration: none; color: inherit; }
-    .sf-hero { display: grid; }
-    .sf-hero-copy { display: flex; flex-direction: column; justify-content: flex-end; min-height: 220px; padding-top: 2.5rem; padding-bottom: 2rem; }
-    .sf-kicker { letter-spacing: 0.16em; text-transform: uppercase; font-size: 0.72rem; color: var(--accent); margin: 0 0 0.65rem; }
-    .sf-name {
-      font-family: var(--display), var(--serif);
-      font-size: clamp(2.7rem, 6vw, 4.6rem);
-      line-height: 0.92;
-      margin: 0;
-      font-weight: 500;
-    }
-    .sf-hero-copy p { max-width: 28rem; color: var(--muted); margin: 1rem 0 1.25rem; }
-    .sf-hero-media { position: relative; min-height: 280px; }
-    .sf-hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-    @media (min-width: 800px) {
-      .sf-hero { grid-template-columns: 1.12fr 0.88fr; min-height: 500px; }
-      .sf-hero-media { min-height: 100%; }
-      .sf-bar, .sf-about, .sf-hero-copy, .sf-end, .sf-grid { padding-left: 2rem; padding-right: 2rem; }
-    }
-    .sf-about { max-width: 42rem; padding-top: 2.25rem; padding-bottom: 0.25rem; }
-    .sf-about h3 { font-family: var(--display), var(--serif); font-size: 2rem; font-weight: 500; margin: 0 0 0.55rem; }
-    .sf-about p { margin: 0; }
-    .sf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem 0.7rem; padding: 1.35rem 1.25rem 1.6rem; }
-    @media (min-width: 800px) { .sf-grid { grid-template-columns: repeat(3, 1fr); gap: 1.2rem; } }
-    .sf-card { background: #fff; border: 0; padding: 0; margin: 0; text-align: left; cursor: pointer; color: var(--ink); width: 100%; font-family: inherit; }
-    .sf-card img { width: 100%; aspect-ratio: 1; object-fit: cover; background: #f4f1ea; }
-    .sf-card .meta { padding: 0.7rem 0.1rem 0.35rem; }
-    .sf-card strong { display: block; font-weight: 500; }
-    .sf-card .price { display: block; margin-top: 0.15rem; color: var(--muted); font-variant-numeric: tabular-nums; font-size: 0.92rem; }
-    .sf-card:hover strong { text-decoration: underline; text-underline-offset: 0.2em; }
-    .sf-end {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem 1rem;
-      align-items: center;
-      justify-content: space-between;
-      border-top: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
-    }
-    .sf-end p { margin: 0; color: var(--muted); font-size: 0.92rem; max-width: 34rem; }
-    .sf-btn { background: var(--accent); color: var(--on); border: 0; font-family: var(--body), var(--sans); }
-    .frame { border: 1px solid var(--line); }
-    .builder-grid { display: grid; gap: 1.25rem; margin-top: 2rem; }
-    @media (min-width: 980px) {
-      .builder-grid { grid-template-columns: minmax(0, 1fr) 280px; gap: 2rem; align-items: start; }
-    }
-    .panel { background: #fff; border: 1px solid var(--line); padding: 1.15rem; }
-    @media (min-width: 700px) { .panel { padding: 1.6rem; } }
-    .stepper { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.45rem; list-style: none; margin: 0 0 1.35rem; padding: 0; }
-    .stepper li { border-top: 2px solid var(--line); padding-top: 0.5rem; color: var(--muted); font-size: 0.78rem; }
-    .stepper li b { display: block; font-weight: 500; letter-spacing: 0.08em; font-size: 0.68rem; }
-    .stepper li[data-on="true"] { border-color: var(--ink); color: var(--ink); }
-    .stepper li[data-done="true"] { border-color: var(--pine); color: var(--pine); }
-    .cats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem; }
-    @media (min-width: 720px) { .cats { grid-template-columns: repeat(3, 1fr); } }
-    .cat { position: relative; border: 1px solid var(--line); background: var(--paper); padding: 0.85rem; min-height: 96px; cursor: pointer; display: block; }
-    .cat[data-on="true"] { border-color: var(--ink); background: #fff; }
-    .cat input { position: absolute; opacity: 0; }
-    .cat .sw { display: block; width: 1.6rem; height: 0.35rem; margin-bottom: 0.55rem; }
-    .cat strong { display: block; font-weight: 500; }
-    .cat em { display: block; margin-top: 0.15rem; font-style: normal; color: var(--muted); font-size: 0.84rem; }
-    .lbl { display: block; font-size: 0.92rem; margin: 0 0 0.35rem; }
-    .field { width: 100%; border: 1px solid var(--line); background: #fff; padding: 0.75rem 0.8rem; min-height: 48px; border-radius: 0; }
-    textarea.field { min-height: 104px; resize: vertical; }
-    .help { color: var(--muted); font-size: 0.9rem; margin: 0 0 0.8rem; }
-    .error { color: #7A2E24; min-height: 1.3rem; margin: 0.8rem 0 0; font-size: 0.92rem; }
-    .row-actions { display: flex; justify-content: space-between; gap: 0.75rem; margin-top: 1.2rem; }
-    .drop {
-      border: 1px dashed #b7b0a4;
-      background: var(--paper);
-      min-height: 148px;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 1.2rem;
-    }
-    .drop.is-over { border-color: var(--pine); background: #fff; }
-    .drop p { margin: 0; }
-    .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin-top: 0.75rem; }
-    @media (min-width: 720px) { .photo-grid { grid-template-columns: repeat(4, 1fr); } }
-    .photo-grid figure { position: relative; margin: 0; }
-    .photo-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; }
-    .photo-grid button {
-      position: absolute; top: 0.3rem; right: 0.3rem;
-      min-height: 36px; padding: 0 0.45rem; border: 0; background: #fff; cursor: pointer; font-size: 0.75rem;
-    }
-    .product { display: grid; gap: 0.75rem; padding: 1.1rem 0; border-top: 1px solid var(--line); }
-    @media (min-width: 720px) { .product { grid-template-columns: 76px minmax(0, 1fr); } }
-    .thumb { width: 76px; height: 76px; object-fit: cover; background: var(--paper-2); }
-    .pair { display: grid; gap: 0.75rem; }
-    @media (min-width: 720px) { .pair { grid-template-columns: 1.4fr 0.8fr; } }
-    .linkish {
-      background: none; border: 0; padding: 0; cursor: pointer; color: var(--muted);
-      text-decoration: underline; text-underline-offset: 0.2em; min-height: 44px;
-    }
-    .summary { border: 1px solid var(--line); padding: 1.15rem 1.2rem 1.3rem; }
-    @media (min-width: 980px) { .summary { position: sticky; top: 5.75rem; } }
-    .summary h3 { font-family: var(--serif); font-size: 2rem; line-height: 1.05; margin: 0.35rem 0 0.9rem; font-weight: 400; }
-    .sum-row { display: flex; justify-content: space-between; gap: 1rem; padding: 0.55rem 0; border-top: 1px solid var(--line); font-size: 0.95rem; }
-    .sum-row span { color: var(--muted); }
-    .sum-sw { height: 8px; margin-top: 1rem; background: var(--line); }
-    .feature-grid { display: grid; gap: 2.25rem; margin-top: 2rem; }
-    @media (min-width: 960px) { .feature-grid { grid-template-columns: 0.92fr 1.08fr; gap: 3.5rem; align-items: start; } }
-    .feat { display: grid; grid-template-columns: auto 1fr; gap: 0.85rem 1rem; padding: 1rem 0; border-top: 1px solid var(--line); }
-    .feat:last-child { border-bottom: 1px solid var(--line); }
-    .feat b { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; }
-    .feat h3 { margin: 0 0 0.25rem; font-family: var(--serif); font-size: 1.3rem; font-weight: 400; }
-    .feat p { margin: 0; color: var(--muted); }
-    .shot { margin: 0; }
-    .shot img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
-    .shot figcaption { margin-top: 0.45rem; color: var(--muted); font-size: 0.88rem; }
-    .pair-shots { display: grid; gap: 0.8rem; margin-top: 0.8rem; }
-    @media (min-width: 640px) { .pair-shots { grid-template-columns: 1fr 1fr; } }
-    .manage { display: grid; gap: 1.75rem; }
-    @media (min-width: 900px) { .manage { grid-template-columns: 1.05fr 0.95fr; gap: 3rem; align-items: center; } }
-    .manage-photo img { width: 100%; height: min(78vw, 720px); object-fit: cover; }
-    .checks { list-style: none; padding: 0; margin: 1.4rem 0 0; }
-    .checks li { padding: 0.85rem 0; border-top: 1px solid var(--line); }
-    .checks li:last-child { border-bottom: 1px solid var(--line); }
-    .checks strong { display: block; font-weight: 500; }
-    .checks span { color: var(--muted); }
-    .price-top { display: grid; gap: 0.75rem; }
-    @media (min-width: 800px) { .price-top { grid-template-columns: 1.3fr 0.7fr; align-items: end; } }
-    .price-num { font-family: var(--serif); font-size: clamp(2.8rem, 6vw, 4.4rem); line-height: 0.95; margin: 0.4rem 0 0; font-variant-numeric: tabular-nums; }
-    .price-num small { font-family: var(--sans); font-size: 0.34em; letter-spacing: 0; color: var(--muted); }
-    .lock-flag { display: inline-block; margin: 0.9rem 0 0; padding: 0.35rem 0.75rem; background: var(--pine); color: var(--paper); font-size: 0.92rem; }
-    .plan { display: grid; gap: 1.5rem; margin-top: 2rem; padding: 1.6rem; background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--pine); }
-    @media (min-width: 900px) { .plan { grid-template-columns: 0.75fr 1.25fr; gap: 2.5rem; padding: 2rem; } }
-    .plan-head .eyebrow { margin: 0; }
-    .plan-sum { font-size: 1.15rem; margin: 0.6rem 0 1.1rem; }
-    .plan-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0 2rem; }
-    @media (min-width: 700px) { .plan-list { grid-template-columns: 1fr 1fr; } }
-    .plan-list li { display: grid; gap: 0.15rem; padding: 0.8rem 0; border-top: 1px solid var(--line); }
-    .plan-list strong { font-weight: 500; }
-    .plan-list span { color: var(--muted); font-size: 0.95rem; }
-    .table-wrap { margin-top: 2rem; overflow-x: auto; max-width: 100%; }
-    table.compare { width: 100%; min-width: 680px; border-collapse: collapse; font-size: 0.95rem; }
-    table.compare th, table.compare td { text-align: left; vertical-align: top; padding: 0.9rem 0.75rem; border-bottom: 1px solid var(--line); }
-    table.compare th { font-weight: 500; }
-    table.compare .hi { background: #fff; }
-    table.compare thead .hi { border-top: 2px solid var(--pine); }
-    .swipe { color: var(--muted); font-size: 0.85rem; margin: 0.55rem 0 0; }
-    @media (min-width: 800px) { .swipe { display: none; } }
-    .us { margin: 1.75rem 0 0; }
-    .us div { display: grid; gap: 0.2rem; padding: 1.05rem 0; border-top: 1px solid var(--line); }
-    .us div:last-child { border-bottom: 1px solid var(--line); }
-    @media (min-width: 800px) { .us div { grid-template-columns: 0.7fr 1.3fr; gap: 2rem; align-items: baseline; } }
-    .us dt { font-weight: 500; }
-    .us dd { margin: 0; color: var(--muted); }
-    details.qa { border-top: 1px solid var(--line); }
-    details.qa:last-of-type { border-bottom: 1px solid var(--line); }
-    details.qa summary {
-      cursor: pointer; list-style: none; display: flex; justify-content: space-between;
-      gap: 1rem; align-items: center; min-height: 64px; padding: 0.7rem 0; font-size: 1.12rem;
-    }
-    details.qa summary::-webkit-details-marker { display: none; }
-    details.qa summary i { font-family: var(--serif); font-style: normal; font-size: 1.7rem; line-height: 1; }
-    details.qa[open] summary i { transform: rotate(45deg); }
-    details.qa p { margin: 0 0 1.1rem; max-width: 42rem; color: var(--muted); }
-    .site-footer { border-top: 1px solid var(--line); padding: 2.4rem 0 3rem; }
-    .foot { display: grid; gap: 1.4rem; }
-    @media (min-width: 800px) { .foot { grid-template-columns: 1.5fr 1fr; } }
-    .foot a { color: inherit; }
-    .fine { color: var(--muted); font-size: 0.85rem; margin: 0.4rem 0 0; }
-    .modal { position: fixed; inset: 0; z-index: 70; display: grid; align-items: end; }
-    @media (min-width: 720px) { .modal { align-items: center; justify-content: center; padding: 1.5rem; } }
-    .modal-bg { position: absolute; inset: 0; background: rgba(26, 25, 22, 0.5); border: 0; padding: 0; cursor: pointer; }
-    .modal-panel { position: relative; background: var(--paper); width: min(960px, 100%); max-height: min(92vh, 860px); overflow: auto; }
-    .modal-grid { display: grid; }
-    @media (min-width: 760px) { .modal-grid { grid-template-columns: 1.05fr 0.95fr; } }
-    .modal-grid img { width: 100%; height: 320px; object-fit: cover; background: #ece7de; }
-    @media (min-width: 760px) { .modal-grid img { height: 100%; min-height: 480px; } }
-    .modal-copy { padding: 1.4rem 1.25rem 1.6rem; }
-    .modal-copy h3 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.6rem); line-height: 1.02; margin: 0.2rem 0; font-weight: 400; }
-    .modal-price { font-variant-numeric: tabular-nums; margin: 0.2rem 0 0.8rem; }
-    .x {
-      position: absolute; top: 0.55rem; right: 0.55rem; z-index: 2;
-      width: 44px; height: 44px; border: 0; background: #fff; cursor: pointer;
-    }
-    .lead-panel { width: min(480px, 100%); margin-inline: auto; padding: 1.4rem 1.2rem 1.3rem; background: var(--paper); position: relative; }
-    .lead-panel h3 { font-family: var(--serif); font-size: 2.1rem; margin: 0 0 0.35rem; font-weight: 400; }
-    .stack { display: grid; gap: 0.8rem; margin-top: 1rem; }
-    .note-box { width: 100%; min-height: 140px; border: 1px solid var(--line); background: #fff; padding: 0.75rem; font-size: 0.85rem; }
-    .preview-tools { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; align-items: center; margin-bottom: 0.8rem; }
-    .preview-tools p { margin: 0; color: var(--muted); font-size: 0.92rem; }
-    .skip { position: absolute; left: 0.8rem; top: -4rem; background: var(--pine); color: var(--paper); padding: 0.6rem 0.8rem; z-index: 90; }
-
-    .billing-toggle {
-      display: inline-flex;
-      gap: 0.35rem;
-      margin: 0 0 0.9rem;
-      background: var(--paper-2, #EFEAE1);
-      padding: 0.28rem;
-      border-radius: 999px;
-    }
-    .billing-btn {
-      border: 0;
-      background: transparent;
-      padding: 0.45rem 1rem;
-      border-radius: 999px;
-      font: inherit;
-      font-size: 0.9rem;
-      cursor: pointer;
-      color: var(--ink);
-      line-height: 1.2;
-    }
-    .billing-btn small { display: block; font-size: 11px; opacity: 0.75; letter-spacing: 0; }
-    .billing-btn.active {
-      background: var(--pine);
-      color: #F6F3EC;
-    }
-    .price-setup { margin: 0.4rem 0 0.3rem; color: var(--muted); font-size: 0.95rem; }
-    .skip:focus { top: 0.6rem; }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      * { transition: none !important; }
-    }
+    .block { padding:4.75rem 0; } @media (min-width:800px) { .block { padding:6.5rem 0; } }
+    .rule { border-top:1px solid var(--line); }
+    .tiles { display:grid; grid-template-columns:1fr 1fr; gap:.8rem; margin-top:2rem; }
+    @media (min-width:800px) { .tiles { grid-template-columns:repeat(3,1fr); gap:1.1rem; } }
+    .tile { margin:0; } .tile img { width:100%; aspect-ratio:4/3; object-fit:cover; background:var(--paper-2); }
+    .tile figcaption { margin-top:.5rem; font-size:.95rem; }
+    .steps { margin-top:2.25rem; }
+    .step { display:grid; grid-template-columns:auto 1fr; gap:.35rem 1.1rem; padding:1.35rem 0; border-top:1px solid var(--line); }
+    .step h3 { margin:0; font-family:var(--serif); font-size:1.45rem; font-weight:400; }
+    .step p { margin:.3rem 0 0; color:var(--muted); grid-column:2; }
+    .step-num { font-family:var(--serif); font-size:1.7rem; line-height:1; padding-top:.15rem; }
+    @media (min-width:860px) { .steps { display:grid; grid-template-columns:1fr 1fr; } .step { padding:1.5rem 1.75rem 1.5rem 0; } .step:nth-child(even) { border-left:1px solid var(--line); padding-left:1.75rem; } }
+    .wide-photo { margin-top:2.25rem; } .wide-photo img { width:100%; height:min(60vw,520px); object-fit:cover; }
+    .caption { margin:.65rem 0 0; color:var(--muted); font-size:.9rem; }
+    .split { display:grid; gap:2rem; margin-top:2rem; }
+    @media (min-width:900px) { .split { grid-template-columns:1.05fr .95fr; gap:3rem; align-items:center; } }
+    .split-photo img { width:100%; height:min(80vw,640px); object-fit:cover; }
+    .checks { list-style:none; padding:0; margin:1.2rem 0 0; }
+    .checks li { padding:.85rem 0; border-top:1px solid var(--line); } .checks li:last-child { border-bottom:1px solid var(--line); }
+    .checks strong { display:block; font-weight:500; } .checks span { color:var(--muted); }
+    .shot { margin:0; } .shot img { width:100%; aspect-ratio:3/2; object-fit:cover; object-position:top; }
+    .shot figcaption { margin-top:.45rem; color:var(--muted); font-size:.88rem; }
+    .shots { display:grid; gap:1rem; margin-top:2rem; } @media (min-width:700px) { .shots { grid-template-columns:repeat(3,1fr); } }
+    .price-steps { list-style:none; padding:0; margin:2rem 0 0; display:grid; gap:1rem; }
+    @media (min-width:860px) { .price-steps { grid-template-columns:repeat(3,1fr); } }
+    .price-steps li { background:#fff; border:1px solid var(--line); border-top:3px solid var(--pine); padding:1.4rem; }
+    .price-steps b { font-family:var(--serif); font-weight:400; font-size:1.3rem; display:block; color:var(--muted); }
+    .price-steps .amt { font-family:var(--serif); font-size:2.6rem; line-height:1; margin:.3rem 0 .5rem; display:block; }
+    .price-steps .amt small { font-family:var(--sans); font-size:.4em; color:var(--muted); }
+    .price-steps p { margin:0; color:var(--muted); }
+    .plan { display:grid; gap:1.5rem; margin-top:2rem; padding:1.6rem; background:#fff; border:1px solid var(--line); border-top:3px solid var(--pine); }
+    @media (min-width:900px) { .plan { grid-template-columns:.8fr 1.2fr; gap:2.5rem; padding:2rem; } }
+    .plan h3 { font-family:var(--serif); font-weight:400; font-size:1.7rem; margin:0 0 .4rem; }
+    .plan-list { list-style:none; padding:0; margin:0; display:grid; gap:0 2rem; } @media (min-width:700px) { .plan-list { grid-template-columns:1fr 1fr; } }
+    .plan-list li { display:grid; gap:.15rem; padding:.8rem 0; border-top:1px solid var(--line); }
+    .plan-list strong { font-weight:500; } .plan-list span { color:var(--muted); font-size:.95rem; }
+    .pp-sub { margin:.8rem 0 0; display:grid; gap:8px; }
+    .ls-form { display:grid; gap:8px; margin:16px 0 10px } .ls-form label,.pp-biz-label { font-size:.85rem; display:grid; gap:4px }
+    .ls-input { width:100%; padding:9px 11px; border:1px solid #ccc; border-radius:8px; font:inherit; box-sizing:border-box }
+    .ls-input:focus { outline:2px solid #6b5bff33; border-color:#6b5bff }
+    .pay-note { margin-top:1.5rem; padding:1rem 1.2rem; background:var(--paper-2); max-width:42rem; }
+    .contact { display:grid; gap:2rem; } @media (min-width:900px) { .contact { grid-template-columns:.9fr 1.1fr; gap:3.5rem; align-items:start; } }
+    .panel { background:#fff; border:1px solid var(--line); padding:1.3rem; } @media (min-width:700px) { .panel { padding:1.8rem; } }
+    .lbl { display:block; font-size:.92rem; margin:0 0 .35rem; }
+    .field { width:100%; border:1px solid var(--line); background:#fff; padding:.75rem .8rem; min-height:48px; border-radius:0; }
+    .field::placeholder, .ls-input::placeholder { color:var(--muted); opacity:1; }
+    textarea.field { min-height:130px; resize:vertical; }
+    .stack { display:grid; gap:1rem; }
+    .error { color:#7A2E24; min-height:1.3rem; margin:0; font-size:.92rem; }
+    .thanks h3 { font-family:var(--serif); font-weight:400; font-size:2rem; margin:0 0 .5rem; }
+    details.qa { border-top:1px solid var(--line); } details.qa:last-of-type { border-bottom:1px solid var(--line); }
+    details.qa summary { cursor:pointer; list-style:none; display:flex; justify-content:space-between; gap:1rem; align-items:center; min-height:64px; padding:.7rem 0; font-size:1.12rem; }
+    details.qa summary::-webkit-details-marker { display:none; }
+    details.qa summary i { font-family:var(--serif); font-style:normal; font-size:1.7rem; line-height:1; }
+    details.qa[open] summary i { transform:rotate(45deg); }
+    details.qa p { margin:0 0 1.1rem; max-width:42rem; color:var(--muted); }
+    .site-footer { border-top:1px solid var(--line); padding:2.4rem 0 3rem; }
+    .foot { display:grid; gap:1.4rem; } @media (min-width:800px) { .foot { grid-template-columns:1.5fr 1fr; } }
+    .fine { color:var(--muted); font-size:.85rem; margin:.4rem 0 0; }
+    .skip { position:absolute; left:.8rem; top:-4rem; background:var(--pine); color:var(--paper); padding:.6rem .8rem; z-index:90; } .skip:focus { top:.6rem; }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
   </style>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Service","name":"Brightfront Studio — AI Online Store Builder","serviceType":"Online store builder","provider":{"@type":"Organization","name":"Brightfront Studio","url":"https://brightfrontdesign.com/","email":"info@brightfrontdesign.com"},"areaServed":"US",
+  {"@context":"https://schema.org","@type":"Service","name":"Brightfront Studio — Website Design for Small Shops","serviceType":"Website design and maintenance","provider":{"@type":"Organization","name":"Brightfront Studio","url":"https://brightfrontdesign.com/","email":"info@brightfrontdesign.com"},"areaServed":"US",
    "offers":[
-    {"@type":"Offer","name":"Brightfront store plan — monthly","price":"39","priceCurrency":"USD","description":"Free setup, then $39 a month. Locked price. Cancel anytime.",
-     "priceSpecification":[
-      {"@type":"UnitPriceSpecification","name":"Setup","price":"0","priceCurrency":"USD"},
-      {"@type":"UnitPriceSpecification","name":"Monthly","price":"39","priceCurrency":"USD","unitCode":"MON","referenceQuantity":{"@type":"QuantitativeValue","value":1,"unitCode":"MON"}}
-     ]},
-    {"@type":"Offer","name":"Brightfront store plan — yearly","price":"390","priceCurrency":"USD","description":"Free setup, then $390 a year (2 months free). Locked price. Cancel anytime.",
-     "priceSpecification":[
-      {"@type":"UnitPriceSpecification","name":"Setup","price":"0","priceCurrency":"USD"},
-      {"@type":"UnitPriceSpecification","name":"Yearly","price":"390","priceCurrency":"USD","unitCode":"ANN","referenceQuantity":{"@type":"QuantitativeValue","value":1,"unitCode":"ANN"}}
-     ]}
+    {"@type":"Offer","name":"Website build — upfront payment","price":"250","priceCurrency":"USD","description":"$250 upfront so we start building your website."},
+    {"@type":"Offer","name":"Website build — payment after approval","price":"250","priceCurrency":"USD","description":"$250 after the website is finished and you approve it."},
+    {"@type":"Offer","name":"Website maintenance — monthly","price":"39","priceCurrency":"USD","description":"$39 a month for hosting, updates and changes.",
+     "priceSpecification":{"@type":"UnitPriceSpecification","price":"39","priceCurrency":"USD","unitCode":"MON","referenceQuantity":{"@type":"QuantitativeValue","value":1,"unitCode":"MON"}}}
    ]}
   </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1521418120439711" crossorigin="anonymous"></script>
@@ -442,296 +161,139 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <!-- ========== Header ========== -->
   <header class="site-header">
     <div class="wrap bar">
       <a class="brand" href="#top">
-        <svg viewBox="0 0 32 32" aria-hidden="true">
-          <rect width="32" height="32" rx="6" fill="#1C3D34"/>
-          <path fill="#F6F3EC" d="M6 22.6V12.2L16 5.6l10 6.6v10.4H6z"/>
-          <rect x="13.2" y="15.2" width="5.6" height="7.4" fill="#1C3D34"/>
-        </svg>
-        <span class="brand-short">Brightfront</span>
-        <span class="brand-full">Brightfront Studio</span>
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#1C3D34"/><path fill="#F6F3EC" d="M6 22.6V12.2L16 5.6l10 6.6v10.4H6z"/><rect x="13.2" y="15.2" width="5.6" height="7.4" fill="#1C3D34"/></svg>
+        <span>Brightfront Studio</span>
       </a>
       <nav class="desk-nav" aria-label="Primary">
-        <a href="#how">How it works</a>
-        <a href="#example">Example</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
+        <a href="#shops">Who it's for</a><a href="#how">How it works</a><a href="#examples">Examples</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
       </nav>
-      <div class="header-actions">
-        <a class="btn" href="#builder">Build my store</a>
-      </div>
+      <a class="btn header-cta" href="#contact">Get my website</a>
     </div>
     <details class="mob-nav">
-      <summary class="wrap">Menu</summary>
+      <summary>Menu</summary>
       <nav aria-label="Mobile">
-        <a href="#how">How it works</a>
-        <a href="#example">Example</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a href="#builder">Build my store</a>
+        <a href="#shops">Who it's for</a><a href="#how">How it works</a><a href="#examples">Examples</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#contact">Get my website</a>
       </nav>
     </details>
   </header>
 
   <main id="main">
-    <!-- ========== 1. Hero ========== -->
+    <!-- 1. Hero: website building -->
     <section class="hero-grid" id="top">
       <div class="hero-copy">
         <div class="hero-copy-inner">
-          <p class="eyebrow">Brightfront Studio</p>
-          <h1>Your online store, built by AI in under 5 minutes.</h1>
-          <p class="lede">For local shops, Etsy-style sellers, side hustlers, food brands, and craft makers in the United States. You enter the name, the category, the photos, and the prices. The pages are assembled from that.</p>
+          <p class="eyebrow">Websites for small shops</p>
+          <h1>Your shop deserves a website that works as hard as you do.</h1>
+          <p class="lede">Cafes, salons, bakeries, food trucks and local stores: customers look you up on their phones before they ever walk in. We build you a modern, mobile-friendly website that shows off your best work, then we host it, update it and change it whenever you ask. You run your business. We run your website.</p>
           <div class="hero-actions">
-            <a class="btn" href="#builder">Build my store</a>
-            <a class="btn-ghost" href="#example">See an example</a>
+            <a class="btn" href="#contact">Get my website</a>
+            <a class="btn-ghost" href="#pricing">See pricing</a>
           </div>
-          <p class="hero-note">Free setup, then $39 a month or $390 a year. Locked price. No theme to configure.</p>
+          <p class="hero-note"><strong>$250</strong> to start, <strong>$250</strong> when you've approved the finished site, then just <strong>$39/month</strong> for hosting, updates and changes. No surprises.</p>
         </div>
       </div>
       <div class="hero-photo">
-        <img src="img/hero.webp" width="1792" height="1008" alt="Sunlit oak counter in a small shop, with glass jars, a clay pitcher, and linen curtains.">
+        <img fetchpriority="high" decoding="async" src="/img/01-hero.webp" width="1600" height="900" alt="A sunlit small-shop counter with glass jars and a clay pitcher, the kind of business we build websites for.">
       </div>
     </section>
 
-    <!-- ========== 2. How it works ========== -->
+    <!-- 2. Who it's for -->
+    <section class="block rule" id="shops">
+      <div class="wrap">
+        <p class="eyebrow">Who it's for</p>
+        <h2>Made for the shops on your corner.</h2>
+        <p class="lede">If you serve customers in person and want to be easy to find, easy to trust and easy to visit, a clean website does the talking for you, hours, menu, location and all.</p>
+        <div class="tiles">
+          <figure class="tile"><img src="/img/04-cafe.webp" width="1600" height="900" loading="lazy" decoding="async" alt="A cozy cafe interior with a wooden counter and coffee cups."><figcaption>Cafes</figcaption></figure>
+          <figure class="tile"><img src="/img/05-salon.webp" width="1600" height="900" loading="lazy" decoding="async" alt="A bright hair salon with styling chairs and mirrors."><figcaption>Salons &amp; barbershops</figcaption></figure>
+          <figure class="tile"><img src="/img/06-foodtruck.webp" width="1600" height="900" loading="lazy" decoding="async" alt="A food truck serving customers at a street window."><figcaption>Food trucks</figcaption></figure>
+          <figure class="tile"><img src="/img/store-food.webp" width="1728" height="1152" loading="lazy" decoding="async" alt="A country loaf, olive oil, figs and a jar of preserves on terracotta linen."><figcaption>Bakeries &amp; food shops</figcaption></figure>
+          <figure class="tile"><img src="/img/store-beauty.webp" width="1728" height="1152" loading="lazy" decoding="async" alt="Soft rose-toned skincare products arranged on a shelf."><figcaption>Beauty &amp; wellness</figcaption></figure>
+          <figure class="tile"><img src="/img/store-crafts.webp" width="1728" height="1152" loading="lazy" decoding="async" alt="Handmade ceramics and crafts displayed on a wooden table."><figcaption>Local stores &amp; makers</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. How it works -->
     <section class="block rule" id="how">
       <div class="wrap">
         <p class="eyebrow">How it works</p>
-        <h2>Four steps. Then you have a store.</h2>
+        <h2>You tell us about your shop. We do the rest.</h2>
         <div class="steps">
-          <article class="step">
-            <div class="step-num">01</div>
-            <h3>Name the store</h3>
-            <p>The name on the homepage, the browser tab, and the receipt.</p>
-          </article>
-          <article class="step">
-            <div class="step-num">02</div>
-            <h3>Choose a category</h3>
-            <p>Food, fashion, home goods, beauty, crafts, or other. The colors and the type follow from this.</p>
-          </article>
-          <article class="step">
-            <div class="step-num">03</div>
-            <h3>Upload product photos</h3>
-            <p>As many as you have. They go on the product grid and on each product page.</p>
-          </article>
-          <article class="step">
-            <div class="step-num">04</div>
-            <h3>Name, price, and description</h3>
-            <p>Plain facts for each item. The product page is written from what you enter.</p>
-          </article>
+          <article class="step"><div class="step-num">01</div><h3>Leave your email</h3><p>Send us your email and a few words about your business. That's all we need to begin. We'll reply from info@brightfrontdesign.com.</p></article>
+          <article class="step"><div class="step-num">02</div><h3>We contact you and invoice the start</h3><p>We get in touch, learn what you need, and email you the invoice for the first $250 so we can start building.</p></article>
+          <article class="step"><div class="step-num">03</div><h3>We build your website</h3><p>Your photos, your hours, your menu or services, laid out cleanly and made to look great on a phone.</p></article>
+          <article class="step"><div class="step-num">04</div><h3>You approve, we launch</h3><p>We email you the finished site along with the payment link for the second $250. Once you approve it, we put it live and keep it running.</p></article>
         </div>
         <figure class="wide-photo">
-          <img src="img/step.webp" width="1728" height="1152" alt="Hands at a linen table with a ceramic bowl, a phone, a pencil, and a blank card.">
-          <figcaption class="caption">You bring the name, the category, and the photos. The pages are assembled from that.</figcaption>
+          <img src="/img/02-websites.webp" width="1600" height="900" loading="lazy" decoding="async" alt="A laptop and phone showing a clean small-business website side by side.">
+          <figcaption class="caption">One site, laid out for desktop and for the phone in your customer's hand.</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- ========== Sample storefront, static so it is visible without the builder ========== -->
-    <section class="block rule" id="example">
+    <!-- 4. Examples -->
+    <section class="block rule" id="examples">
       <div class="wrap">
-        <p class="eyebrow">See an example</p>
-        <h2>A store, as a customer would open it.</h2>
-        <p class="lede">Hearth & Rye is a sample food shop. Yours is built from the photos and prices you enter below. Click a product to open it.</p>
-        <div class="frame" style="margin-top:2rem">
-          <article class="sf" style="--bg:#F8F1EA;--ink:#3C241C;--accent:#8C3E22;--on:#FFF8F3;--muted:#8C6756;--display:'Fraunces', Georgia, serif;--body:'Source Sans 3', sans-serif">
-            <div class="sf-bar">
-              <a class="sf-brand" href="#example-products">Hearth & Rye</a>
-              <a class="sf-link" href="#example-products">Shop</a>
-            </div>
-            <div class="sf-hero">
-              <div class="sf-hero-copy">
-                <p class="sf-kicker">Small-batch pantry</p>
-                <h2 class="sf-name">Hearth & Rye</h2>
-                <p>Baked and jarred in small batches. Packed by us and shipped in the United States.</p>
-                <a class="sf-btn" href="#example-products">View products</a>
-              </div>
-              <div class="sf-hero-media">
-                <img src="img/store-food.webp" width="1728" height="1152" alt="Country loaf, olive oil, figs, and a jar of preserves on terracotta linen.">
-              </div>
-            </div>
-            <div class="sf-about">
-              <h3>About</h3>
-              <p>Hearth & Rye is a small-batch food brand. The recipes started at home and stayed small on purpose. What you see here is what we make, label, and ship ourselves, across the United States.</p>
-            </div>
-            <div class="sf-grid" id="example-products">
-              <button type="button" class="sf-card" data-product-card data-name="Brown Butter Shortbread" data-price="$14.00" data-description="A tin of six. Butter, rye flour, sugar, and salt. Baked on Thursdays." data-img="img/store-food.webp" data-pos="18% 40%" data-note="Sample product. A store you build uses the photos you upload.">
-                <img src="img/store-food.webp" alt="" style="object-position:18% 40%">
-                <span class="meta"><strong>Brown Butter Shortbread</strong><span class="price">$14.00</span></span>
-              </button>
-              <button type="button" class="sf-card" data-product-card data-name="Olive Oil, 250 ml" data-price="$22.00" data-description="A small bottle for finishing, not for frying. Peppery and green." data-img="img/store-food.webp" data-pos="46% 78%" data-note="Sample product. A store you build uses the photos you upload.">
-                <img src="img/store-food.webp" alt="" style="object-position:46% 78%">
-                <span class="meta"><strong>Olive Oil, 250 ml</strong><span class="price">$22.00</span></span>
-              </button>
-              <button type="button" class="sf-card" data-product-card data-name="Fig & Rye Preserves" data-price="$12.00" data-description="One jar. Figs, rye, and lemon. Good on the shortbread, or on toast." data-img="img/store-food.webp" data-pos="78% 32%" data-note="Sample product. A store you build uses the photos you upload.">
-                <img src="img/store-food.webp" alt="" style="object-position:78% 32%">
-                <span class="meta"><strong>Fig & Rye Preserves</strong><span class="price">$12.00</span></span>
-              </button>
-            </div>
-          </article>
+        <p class="eyebrow">Our work</p>
+        <h2>Real shops, real websites.</h2>
+        <p class="lede">Each of these was built around the shop's own photos. Click one to open the live preview.</p>
+        <div class="shots">
+          <figure class="shot"><a href="https://brightfrontdesign.com/preview/luxe-paws-grooming-bristol/" target="_blank" rel="noopener"><img src="/assets/examples/real/luxe-paws-grooming-bristol.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Luxe Paws Grooming website preview with the salon's real photo of a groomed doodle."></a><figcaption>Pet grooming — Luxe Paws Grooming</figcaption></figure>
+          <figure class="shot"><a href="https://brightfrontdesign.com/preview/rhodes-barber-shop-anderson/" target="_blank" rel="noopener"><img src="/assets/examples/real/rhodes-barber-shop-anderson.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Rhodes Barber Shop website preview with a real photo of the shop interior."></a><figcaption>Barbershop — Rhodes Barber Shop</figcaption></figure>
+          <figure class="shot"><a href="https://brightfrontdesign.com/preview/bettinas-soulfood-kitchen-jackson/" target="_blank" rel="noopener"><img src="/assets/examples/real/bettinas-soulfood-kitchen-jackson.webp" width="1440" height="900" loading="lazy" decoding="async" alt="Bettina's Soulfood Kitchen website preview with a real photo of the storefront."></a><figcaption>Restaurant — Bettina's Soulfood Kitchen</figcaption></figure>
         </div>
       </div>
     </section>
 
-    <!-- ========== 3. Interactive builder ========== -->
-    <section class="block rule" id="builder">
+    <!-- 5. What you get -->
+    <section class="block rule" id="included">
       <div class="wrap">
-        <p class="eyebrow">Build my store</p>
-        <h2>Try it here. Nothing is uploaded.</h2>
-        <p class="lede">Photos stay in this browser. When you publish, an email opens to Brightfront with the store name, category, and product list.</p>
-
-        <div class="builder-grid" id="wizard-block">
-          <div class="panel">
-            <ol class="stepper" id="stepper" aria-label="Progress">
-              <li data-step="1" data-on="true"><b>01</b> Name</li>
-              <li data-step="2"><b>02</b> Category</li>
-              <li data-step="3"><b>03</b> Photos</li>
-              <li data-step="4"><b>04</b> Products</li>
-            </ol>
-
-            <div data-panel="1">
-              <label class="lbl" for="store-name">Store name</label>
-              <input class="field" id="store-name" name="storeName" autocomplete="organization" maxlength="80" placeholder="Hearth & Rye" required>
-            </div>
-
-            <div data-panel="2" hidden>
-              <p class="help" id="cat-label">Business category. This sets the color and the type.</p>
-              <div class="cats" role="radiogroup" aria-labelledby="cat-label">
-                <label class="cat"><input type="radio" name="category" value="food"><i class="sw" style="background:#C4623A"></i><strong>Food</strong><em>Warm terracotta</em></label>
-                <label class="cat"><input type="radio" name="category" value="fashion"><i class="sw" style="background:#111"></i><strong>Fashion</strong><em>Black and cream</em></label>
-                <label class="cat"><input type="radio" name="category" value="home"><i class="sw" style="background:#1B2A4A"></i><strong>Home goods</strong><em>Oak and navy</em></label>
-                <label class="cat"><input type="radio" name="category" value="beauty"><i class="sw" style="background:#C98992"></i><strong>Beauty</strong><em>Soft rose</em></label>
-                <label class="cat"><input type="radio" name="category" value="crafts"><i class="sw" style="background:#7D9A84"></i><strong>Crafts</strong><em>Sage</em></label>
-                <label class="cat"><input type="radio" name="category" value="other"><i class="sw" style="background:#1C3D34"></i><strong>Other</strong><em>Ink and paper</em></label>
-              </div>
-            </div>
-
-            <div data-panel="3" hidden>
-              <p class="help">JPG, PNG, WEBP, or GIF. Up to 12 photos, 8 MB each. They are previewed on this device only.</p>
-              <div class="drop" id="dropzone">
-                <input id="file-input" type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">
-                <p>Drop photos here, or <button type="button" class="linkish" id="browse-btn">browse</button>.</p>
-              </div>
-              <div class="photo-grid" id="photo-grid"></div>
-            </div>
-
-            <div data-panel="4" hidden>
-              <p class="help">One row per photo. Add a name, a price in dollars, and a short description.</p>
-              <div id="product-list"></div>
-              <button type="button" class="linkish" id="add-product">Add another product</button>
-            </div>
-
-            <p class="error" id="wizard-error" role="alert" aria-live="polite"></p>
-            <div class="row-actions">
-              <button type="button" class="btn-ghost" id="back-btn" hidden>Back</button>
-              <button type="button" class="btn" id="next-btn">Continue</button>
-            </div>
-          </div>
-
-          <aside class="summary" aria-live="polite">
-            <p class="eyebrow">Draft</p>
-            <h3 id="sum-name">Untitled store</h3>
-            <div class="sum-row"><span>Category</span><b id="sum-cat">Not chosen</b></div>
-            <div class="sum-row"><span>Photos</span><b id="sum-photos">0</b></div>
-            <div class="sum-row"><span>Products</span><b id="sum-products">0</b></div>
-            <div class="sum-sw" id="sum-sw"></div>
-          </aside>
-        </div>
-
-        <div id="preview-block" hidden>
-          <div class="preview-tools">
-            <p>Generated in this browser from what you entered.</p>
-            <button type="button" class="btn-ghost" id="edit-btn">Edit details</button>
-          </div>
-          <div id="preview-mount" class="frame"></div>
-        </div>
-        <noscript><p>The builder needs JavaScript. The sample store above is still here to look at.</p></noscript>
-      </div>
-    </section>
-
-    <!-- ========== 4. AI features ========== -->
-    <section class="block rule" id="work">
-      <div class="wrap">
-        <p class="eyebrow">What the AI does</p>
-        <h2>The pages, the photos, and the palette.</h2>
-        <div class="feature-grid">
+        <div class="split">
           <div>
-            <article class="feat"><b>01</b><div><h3>Photo cleanup</h3><p>Background removal and more even lighting, so a phone photo can sit on a white product card.</p></div></article>
-            <article class="feat"><b>02</b><div><h3>Product pages</h3><p>A page for each item, built from the name, the price, and the description you typed.</p></div></article>
-            <article class="feat"><b>03</b><div><h3>Homepage, about, and grid</h3><p>A homepage with your store name, a short about written for your category, and a product grid.</p></div></article>
-            <article class="feat"><b>04</b><div><h3>Layout and color</h3><p>Terracotta for food, soft rose for beauty, sage for crafts, black and cream for fashion, oak and navy for home goods.</p></div></article>
+            <p class="eyebrow">What you get</p>
+            <h2>A small team behind your website.</h2>
+            <ul class="checks">
+              <li><strong>Mobile-friendly design</strong><span>Most of your visitors are on a phone. Your site is built for that first.</span></li>
+              <li><strong>Hosting handled</strong><span>Secure, fast and always on. No servers, no logins to remember.</span></li>
+              <li><strong>Updates and changes</strong><span>New hours, a seasonal menu, a new photo? Email us and we make the change.</span></li>
+              <li><strong>A real person to talk to</strong><span>Write to info@brightfrontdesign.com and someone from our team answers.</span></li>
+            </ul>
           </div>
-          <div>
-            <figure class="shot">
-                <a href="https://brightfrontdesign.com/preview/luxe-paws-grooming-bristol/" target="_blank" rel="noopener"><img src="assets/examples/real/luxe-paws-grooming-bristol.webp" width="1440" height="900" loading="lazy" decoding="async" style="object-position:top" alt="Luxe Paws Grooming website preview with the salon&#39;s real photo of a groomed doodle."></a>
-                <figcaption>Pet grooming. Luxe Paws Grooming, built with the shop&#39;s own photos.</figcaption>
-              </figure>
-              <div class="pair-shots">
-                <figure class="shot">
-                  <a href="https://brightfrontdesign.com/preview/rhodes-barber-shop-anderson/" target="_blank" rel="noopener"><img src="assets/examples/real/rhodes-barber-shop-anderson.webp" width="1440" height="900" loading="lazy" decoding="async" style="object-position:top" alt="Rhodes Barber Shop website preview with a real photo of the shop interior."></a>
-                  <figcaption>Barbershop. Rhodes Barber Shop.</figcaption>
-                </figure>
-                <figure class="shot">
-                  <a href="https://brightfrontdesign.com/preview/bettinas-soulfood-kitchen-jackson/" target="_blank" rel="noopener"><img src="assets/examples/real/bettinas-soulfood-kitchen-jackson.webp" width="1440" height="900" loading="lazy" decoding="async" style="object-position:top" alt="Bettina&#39;s Soulfood Kitchen website preview with a real photo of the storefront."></a>
-                  <figcaption>Soul food restaurant. Bettina&#39;s Soulfood Kitchen.</figcaption>
-                </figure>
-                <figure class="shot">
-                  <a href="https://brightfrontdesign.com/preview/lees-heavenly-bbq-edwards/" target="_blank" rel="noopener"><img src="assets/examples/real/lees-heavenly-bbq-edwards.webp" width="1440" height="900" loading="lazy" decoding="async" style="object-position:top" alt="Lee&#39;s Heavenly BBQ website preview with a real photo of the building."></a>
-                  <figcaption>BBQ restaurant. Lee&#39;s Heavenly BBQ.</figcaption>
-                </figure>
-                <figure class="shot">
-                  <a href="https://brightfrontdesign.com/preview/lil-shack-by-the-trax-fitzgerald/" target="_blank" rel="noopener"><img src="assets/examples/real/lil-shack-by-the-trax-fitzgerald.webp" width="1440" height="900" loading="lazy" decoding="async" style="object-position:top" alt="Lil Shack by the Trax website preview with a real photo of the shop window."></a>
-                  <figcaption>Restaurant &amp; catering. Lil Shack by the Trax.</figcaption>
-                </figure>
-              </div>
+          <div class="split-photo">
+            <img src="/img/08-phone.webp" width="752" height="941" loading="lazy" decoding="async" alt="A phone on a wooden counter showing a small shop's website beside a ceramic cup.">
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ========== 5. Store management ========== -->
-    <section class="block rule" id="manage">
-      <div class="wrap manage">
-        <div>
-          <p class="eyebrow">After you publish</p>
-          <h2>You still run the store.</h2>
-          <ul class="checks">
-            <li><strong>Unlimited edits</strong><span>Change photos, prices, names, and page copy whenever you want. No revision fee.</span></li>
-            <li><strong>Orders and customers</strong><span>See who bought, what they ordered, and how to reach them.</span></li>
-            <li><strong>Preview, then publish</strong><span>Look at the store the way a customer will. Publish when it is right.</span></li>
-            <li><strong>Mobile-ready</strong><span>The same store is laid out for a phone. Most orders will come from one.</span></li>
-          </ul>
-        </div>
-        <figure class="manage-photo">
-          <img src="img/phone.webp" width="1200" height="1600" alt="A phone on an oak counter beside a shipping box and a ceramic cup.">
+        <figure class="wide-photo">
+          <img src="/img/07-team.webp" width="1600" height="900" loading="lazy" decoding="async" alt="The Brightfront team working together at a table with laptops and sketches.">
+          <figcaption class="caption">Small studio, personal service. We build it, we host it, we look after it.</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- ========== 6. Pricing ========== -->
+    <!-- 6. Pricing -->
     <section class="block rule" id="pricing">
       <div class="wrap">
         <p class="eyebrow">Pricing</p>
-        <div class="price-top">
-          <div>
-            <div class="billing-toggle" role="tablist" aria-label="Billing period">
-              <button type="button" class="billing-btn active" data-plan="monthly" aria-pressed="true">Monthly</button>
-              <button type="button" class="billing-btn" data-plan="yearly" aria-pressed="false">Yearly <small>2 months free</small></button>
-            </div>
-            <h2 class="price-num" id="price-display">$39 <small>a month</small></h2>
-            <p class="price-setup">Website setup: <strong>Free</strong></p>
-            <p class="lock-flag" id="lock-flag">Locked price. The $39 a month you start at stays $39.</p>
-          </div>
-          <p class="lede" style="margin:0">One plan, one store, everything below included. Card fees are Stripe’s, not ours. Cancel anytime.</p>
+        <h2>Simple, in three steps.</h2>
+        <p class="lede">Total to get your website built is $500, paid in two halves, then $39 a month to keep it hosted, updated and changed whenever you need. The two $250 payments are invoiced by email after we contact you.</p>
+        <ol class="price-steps">
+          <li><b>Step 1</b><span class="amt">$250</span><p>Pay $250 upfront so we start building your website.</p></li>
+          <li><b>Step 2</b><span class="amt">$250</span><p>Pay the remaining $250 after the website is built and you approve it.</p></li>
+          <li><b>Step 3</b><span class="amt">$39 <small>/ month</small></span><p>Then $39/month maintenance: hosting, updates and changes.</p></li>
+        </ol>
+        <div class="pay-note">
+          <strong>How you'll pay.</strong> After we contact you, we email the two $250 invoices from <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>. When the website is built, we also email you the finished site and the payment links. The $39/month maintenance plan is the checkout below. Start it once your site is approved.
         </div>
+
         <div class="plan">
-          <div class="plan-head">
-            <p class="eyebrow">What’s included</p>
-            <p class="plan-sum" id="plan-sum"><strong>Free</strong> setup. Then <strong>$39</strong> a month.</p>
-            <a class="btn" href="#builder">Build my store</a>
+          <div>
+            <h3>Maintenance plan: $39/month</h3>
+            <p style="margin:0 0 1rem;color:var(--muted)">Hosting, updates and changes for your website, billed monthly. Cancel anytime.</p>
+            <a class="btn" href="#contact">Start with my email</a>
             <form class="pp-sub" id="pp-sub" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
               <label class="pp-biz-label">Business name <input class="ls-input" id="pp-biz" type="text" required maxlength="64" autocomplete="organization"></label>
               <input type="hidden" name="custom" id="pp-custom">
@@ -739,11 +301,11 @@
               <input type="hidden" name="os0" id="pp-os0">
               <input type="hidden" name="cmd" value="_xclick-subscriptions">
               <input type="hidden" name="business" value="chedamso@naver.com">
-              <input type="hidden" name="item_name" id="pp-item-name" value="Brightfront Studio website - free setup, $39/month">
+              <input type="hidden" name="item_name" value="Brightfront Studio website maintenance - $39/month">
               <input type="hidden" name="currency_code" value="USD">
-              <input type="hidden" name="a3" id="pp-a3" value="39">
+              <input type="hidden" name="a3" value="39">
               <input type="hidden" name="p3" value="1">
-              <input type="hidden" name="t3" id="pp-t3" value="M">
+              <input type="hidden" name="t3" value="M">
               <input type="hidden" name="src" value="1">
               <input type="hidden" name="no_shipping" value="1">
               <input type="hidden" name="no_note" value="1">
@@ -751,8 +313,8 @@
               <input type="hidden" name="notify_url" value="https://brightfrontdesign.com/api/paypal-ipn">
               <input type="hidden" name="return" value="https://brightfrontdesign.com/thanks/">
               <input type="hidden" name="cancel_return" value="https://brightfrontdesign.com/">
-              <button type="submit" class="btn btn-ghost" id="pp-submit">Start free — $39/month with PayPal</button>
-              <p class="pp-note">Cards accepted via PayPal checkout. Cancel anytime in your PayPal account - no contract.</p>
+              <button type="submit" class="btn btn-ghost" id="pp-submit">Maintenance — $39/month with PayPal</button>
+              <p class="pp-note">Cards accepted via PayPal checkout. Cancel anytime in your PayPal account, no contract.</p>
             </form>
 <script>
 (function(){var f=document.getElementById('pp-sub');if(!f)return;var bi=document.getElementById('pp-biz');
@@ -763,62 +325,9 @@ var ref=new URLSearchParams(location.search).get('ref')||((document.getElementBy
 document.getElementById('pp-os0').value=b.slice(0,64);
 document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);});})();
 </script>
-<script>
-(function () {
-  window.BF_PLAN = "monthly";
-  var priceDisplay = document.getElementById("price-display");
-  var lockFlag = document.getElementById("lock-flag");
-  var planSum = document.getElementById("plan-sum");
-  var ppA3 = document.getElementById("pp-a3");
-  var ppT3 = document.getElementById("pp-t3");
-  var ppItem = document.getElementById("pp-item-name");
-  var ppSubmit = document.getElementById("pp-submit");
-  var buttons = document.querySelectorAll(".billing-btn");
-
-  function setPlan(plan) {
-    window.BF_PLAN = plan;
-    var yearly = plan === "yearly";
-    var lsSubmit = document.getElementById("ls-submit");
-    if (priceDisplay) priceDisplay.innerHTML = yearly ? "$390 <small>a year</small>" : "$39 <small>a month</small>";
-    if (lockFlag) lockFlag.textContent = yearly
-      ? "Locked price. The $390 a year you start at stays $390."
-      : "Locked price. The $39 a month you start at stays $39.";
-    if (planSum) planSum.innerHTML = yearly
-      ? "<strong>Free</strong> setup. Then <strong>$390</strong> a year (2 months free)."
-      : "<strong>Free</strong> setup. Then <strong>$39</strong> a month.";
-    if (ppA3) ppA3.value = yearly ? "390" : "39";
-    if (ppT3) ppT3.value = yearly ? "Y" : "M";
-    if (ppItem) ppItem.value = yearly
-      ? "Brightfront Studio website - free setup, $390/year"
-      : "Brightfront Studio website - free setup, $39/month";
-    if (ppSubmit) ppSubmit.textContent = yearly
-      ? "Start free — $390/year with PayPal"
-      : "Start free — $39/month with PayPal";
-    if (lsSubmit) lsSubmit.textContent = yearly
-      ? "Start free — $390/year by card"
-      : "Start free — $39/month by card";
-    buttons.forEach(function (btn) {
-      var on = btn.getAttribute("data-plan") === plan;
-      btn.classList.toggle("active", on);
-      btn.setAttribute("aria-pressed", on ? "true" : "false");
-    });
-  }
-
-  buttons.forEach(function (btn) {
-    btn.addEventListener("click", function () { setPlan(btn.getAttribute("data-plan")); });
-  });
-  setPlan("monthly");
-})();
-</script>
-<style>
-  .ls-form{display:grid;gap:8px;margin:16px 0 10px}
-  .ls-form label{font-size:.85rem;display:grid;gap:4px}
-  .ls-input{width:100%;padding:9px 11px;border:1px solid #ccc;border-radius:8px;font:inherit;box-sizing:border-box}
-  .ls-input:focus{outline:2px solid #6b5bff33;border-color:#6b5bff}
-</style>
 <form id="ls-form" class="ls-form" novalidate>
   <label>Business name
-    <input id="ls-biz" class="ls-input" type="text" required autocomplete="organization">
+    <input id="ls-biz" class="ls-input" type="text" required maxlength="64" autocomplete="organization">
   </label>
   <label>Your preview link or website (optional)
     <input id="ls-ref" class="ls-input" type="text" inputmode="url">
@@ -826,7 +335,7 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
   <label>Your name (optional)
     <input id="ls-name" class="ls-input" type="text" autocomplete="name">
   </label>
-  <button type="submit" class="btn btn-primary" id="ls-submit">Start free — $39/month by card</button>
+  <button type="submit" class="btn btn-primary" id="ls-submit">Maintenance — $39/month by card</button>
 </form>
 <p class="pp-note">Secure card checkout by Lemon Squeezy. Cancel anytime.</p>
 <script src="https://assets.lemonsqueezy.com/lemon.js" defer
@@ -834,7 +343,6 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
 <script>
 (function () {
   var LS_MONTHLY = 'https://chedlab.lemonsqueezy.com/checkout/buy/37fb2c40-075a-4d33-a318-417e56fd8357?enabled=2280377&embed=1';
-  var LS_YEARLY = 'https://chedlab.lemonsqueezy.com/checkout/buy/43238a4e-5dac-4609-bd3f-3c7681f4b394?enabled=2370997&embed=1';
   var form = document.getElementById('ls-form');
   var biz = document.getElementById('ls-biz');
   var ref = document.getElementById('ls-ref');
@@ -861,9 +369,7 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
       biz.reportValidity();
       return;
     }
-    var plan = (window.BF_PLAN === 'yearly') ? 'yearly' : 'monthly';
-    var baseUrl = (plan === 'yearly') ? LS_YEARLY : LS_MONTHLY;
-    var u = new URL(baseUrl);
+    var u = new URL(LS_MONTHLY);
     u.searchParams.set('embed', '1');
     u.searchParams.set('checkout[custom][business_name]', b);
     var r = ref.value.trim();
@@ -882,916 +388,108 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
 </script>
           </div>
           <ul class="plan-list">
-            <li><strong>Store pages</strong><span>Homepage, about, and a page for every product, built from what you enter.</span></li>
-            <li><strong>Product upload</strong><span>Photos, names, prices, and descriptions. Add or remove products whenever you like.</span></li>
-            <li><strong>AI photo cleanup</strong><span>Background removal and more even lighting, so phone photos look right on a product card.</span></li>
-            <li><strong>Payments, tax, and shipping</strong><span>Stripe checkout, U.S. sales tax on each order, USPS, UPS, and FedEx rates.</span></li>
-            <li><strong>Hosting and SSL</strong><span>Your store is hosted and served over HTTPS. We keep the certificate current.</span></li>
-            <li><strong>Unlimited edits and updates</strong><span>Change photos, prices, and page copy any time. No revision fee.</span></li>
+            <li><strong>Hosting and SSL</strong><span>Your website is hosted and served over HTTPS. We keep it current.</span></li>
+            <li><strong>Updates</strong><span>Hours, menus, prices, photos and text, kept up to date for you.</span></li>
+            <li><strong>Changes on request</strong><span>Email us what you'd like different and we make the change.</span></li>
+            <li><strong>Mobile-friendly</strong><span>Looks right on phones, tablets and desktops.</span></li>
             <li><strong>Support from a person</strong><span>Email info@brightfrontdesign.com and a person answers.</span></li>
-            <li><strong>Cancel anytime</strong><span>Month to month, no contract. Stop paying when you stop selling.</span></li>
+            <li><strong>Cancel anytime</strong><span>Month to month, no contract.</span></li>
           </ul>
         </div>
-        <div class="table-wrap">
-          <table class="compare">
-            <caption class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Compare Brightfront with a freelancer and with Shopify</caption>
-            <thead>
-              <tr>
-                <th scope="col"></th>
-                <th scope="col" class="hi">Brightfront Studio</th>
-                <th scope="col">Freelancer or agency</th>
-                <th scope="col">Do it yourself on Shopify</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Time to a first store</th>
-                <td class="hi">Under 5 minutes</td>
-                <td>Weeks</td>
-                <td>Hours of setup</td>
-              </tr>
-              <tr>
-                <th scope="row">To get started</th>
-                <td class="hi">Free setup</td>
-                <td>$2,000–$5,000+</td>
-                <td>Theme, apps, and a monthly Shopify plan</td>
-              </tr>
-              <tr>
-                <th scope="row">Monthly</th>
-                <td class="hi">$39/month or $390/year, locked</td>
-                <td>Retainers, when you need changes</td>
-                <td>Shopify plan, plus apps</td>
-              </tr>
-              <tr>
-                <th scope="row">Who builds the pages</th>
-                <td class="hi">The product, from your photos and prices</td>
-                <td>A designer, on their schedule</td>
-                <td>You</td>
-              </tr>
-              <tr>
-                <th scope="row">Changes later</th>
-                <td class="hi">Unlimited edits, included</td>
-                <td>Billed as revisions</td>
-                <td>You, in the admin</td>
-              </tr>
-              <tr>
-                <th scope="row">Payments, tax, shipping</th>
-                <td class="hi">Stripe, U.S. sales tax, USPS / UPS / FedEx</td>
-                <td>Scoped and billed separately</td>
-                <td>Apps and settings</td>
-              </tr>
-            </tbody>
-          </table>
+      </div>
+    </section>
+
+    <!-- 7. Contact -->
+    <section class="block rule" id="contact">
+      <div class="wrap contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Let's build your website.</h2>
+          <p class="lede">Leave your email — we'll build your website and contact you at this address.</p>
+          <p class="lede" style="margin-top:.8rem">After we build it, we email you the finished site and the payment links and invoices from <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>. You can also write to us there anytime.</p>
         </div>
-        <p class="swipe">Swipe to compare.</p>
+        <div class="panel">
+          <form id="contact-form" class="stack" novalidate>
+            <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="hp">Company</label><input id="hp" name="hp" tabindex="-1" autocomplete="off"></div>
+            <div><label class="lbl" for="email">Your email</label><input class="field" id="email" name="email" type="email" autocomplete="email" required maxlength="120" placeholder="you@yourshop.com"></div>
+            <div><label class="lbl" for="message">Tell us about your business <span style="color:var(--muted)">(optional)</span></label><textarea class="field" id="message" name="message" maxlength="2000" placeholder="What do you sell or offer? Where are you? Do you have photos or a current site?"></textarea></div>
+            <p class="error" id="form-error" role="alert" aria-live="polite"></p>
+            <button class="btn" type="submit" id="send-btn">Send my email</button>
+          </form>
+          <div class="thanks" id="thanks" hidden>
+            <h3>Thank you!</h3>
+            <p style="margin:0;color:var(--muted)">We've got your email and will contact you at that address soon. Questions meanwhile? Write to <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>.</p>
+          </div>
+          <noscript><p class="fine">This form needs JavaScript. Please email us at <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>.</p></noscript>
+        </div>
       </div>
     </section>
 
-    <!-- ========== 7. Built for the U.S. ========== -->
-    <section class="block rule" id="united-states">
-      <div class="wrap">
-        <p class="eyebrow">United States</p>
-        <h2>Built for selling here.</h2>
-        <p class="lede">The published store is set up for American payments, tax, and shipping. Not a pile of apps you have to wire together.</p>
-        <dl class="us">
-          <div>
-            <dt>Stripe payments</dt>
-            <dd>Cards and wallets through Stripe. Customers pay on your store. Funds settle to your Stripe account.</dd>
-          </div>
-          <div>
-            <dt>Sales tax</dt>
-            <dd>U.S. sales tax is calculated on the order, so you are not doing it by hand in a spreadsheet.</dd>
-          </div>
-          <div>
-            <dt>Shipping rates</dt>
-            <dd>USPS, UPS, and FedEx rates at checkout, from the package and the destination.</dd>
-          </div>
-          <div>
-            <dt>SSL</dt>
-            <dd>Every store is served over HTTPS, with a certificate we keep current.</dd>
-          </div>
-          <div>
-            <dt>ADA-friendly</dt>
-            <dd>Readable type, contrast that holds, keyboard access, and labels on every field. A store should work without a mouse.</dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- ========== 8. FAQ ========== -->
+    <!-- 8. FAQ -->
     <section class="block rule" id="faq">
       <div class="wrap">
         <p class="eyebrow">FAQ</p>
         <h2>Questions, answered plainly.</h2>
         <div style="margin-top:1.5rem">
-          <details class="qa">
-            <summary>How long does it actually take? <i aria-hidden="true">+</i></summary>
-            <p>The draft — homepage, about, and product pages — is generated in this browser in a few minutes. You need a name, a category, photos, and a price for each item. Payments and shipping start after you send the publish form.</p>
-          </details>
-          <details class="qa">
-            <summary>Do I need professional photos? <i aria-hidden="true">+</i></summary>
-            <p>No. Phone photos are enough to start. On the published store we clean up the background and the lighting. You can replace any photo later.</p>
-          </details>
-          <details class="qa">
-            <summary>Can I edit the store after it is published? <i aria-hidden="true">+</i></summary>
-            <p>Yes. Product names, prices, descriptions, photos, and page copy can be edited without a revision fee. That is part of the $39 month (or the yearly plan).</p>
-          </details>
-          <details class="qa">
-            <summary>What is included in the price? <i aria-hidden="true">+</i></summary>
-            <p>Free setup, then $39 a month or $390 a year (2 months free) for hosting, SSL, the editor, unlimited edits, and email support. The price is locked: the rate you start at does not go up while your store stays active. Card processing fees are charged by Stripe. Shipping rates come from USPS, UPS, and FedEx at checkout. Cancel anytime.</p>
-          </details>
-          <details class="qa">
-            <summary>What does “locked price” mean? <i aria-hidden="true">+</i></summary>
-            <p>The rate you start at — $39 a month or $390 a year — stays the same for as long as your store stays active. No intro rate that jumps later. Setup is free.</p>
-          </details>
-          <details class="qa">
-            <summary>Who is this for? <i aria-hidden="true">+</i></summary>
-            <p>Independent businesses selling in the United States: local shops, Etsy-style sellers, side hustlers, food brands, and people who make things. The store is set up for Stripe, U.S. sales tax, and domestic shipping.</p>
-          </details>
+          <details class="qa"><summary>What does it cost? <i aria-hidden="true">+</i></summary><p>$250 upfront so we start building, $250 after the website is built and you approve it, then $39 a month for maintenance (hosting, updates and changes). The two $250 payments are invoiced by email after we contact you.</p></details>
+          <details class="qa"><summary>When do I pay what? <i aria-hidden="true">+</i></summary><p>First $250 to begin. Second $250 only after you've seen the finished website and approved it. The $39/month maintenance starts once the site is approved and live. We email the finished site and the payment links from info@brightfrontdesign.com.</p></details>
+          <details class="qa"><summary>What does the $39 a month cover? <i aria-hidden="true">+</i></summary><p>Hosting, keeping your site secure and up to date, and changes you request, like new hours, a new menu or fresh photos. It's month to month with no contract, and you can cancel anytime.</p></details>
+          <details class="qa"><summary>Do I need to supply photos or text? <i aria-hidden="true">+</i></summary><p>Phone photos are enough to start. Tell us what you do, send what you have, and we'll shape it into clear, good-looking pages. You can send more or replace anything later.</p></details>
+          <details class="qa"><summary>Will it work on phones? <i aria-hidden="true">+</i></summary><p>Yes. Every website we build is mobile-friendly and tested on small screens first, because that's where most local customers will find you.</p></details>
+          <details class="qa"><summary>Who is this for? <i aria-hidden="true">+</i></summary><p>Small, independent businesses such as cafes, salons, bakeries, food trucks and local stores, and anyone who wants a simple, professional website without doing the work themselves.</p></details>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ========== 9. Footer ========== -->
   <footer class="site-footer">
     <div class="wrap foot">
       <div>
         <strong>Brightfront Studio</strong>
         <p class="fine"><a href="https://brightfrontdesign.com">brightfrontdesign.com</a></p>
-        <p class="fine">Online stores for American small businesses.</p>
+        <p class="fine">Modern websites for small shops.</p>
       </div>
       <div>
         <p class="eyebrow">Email</p>
         <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>
-        <p class="fine" style="margin-top:0.75rem"><a href="/privacy/">Privacy</a></p>
+        <p class="fine" style="margin-top:.75rem"><a href="/privacy/">Privacy</a></p>
       </div>
     </div>
   </footer>
 
-  <!-- Product detail -->
-  <div class="modal" id="product-modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <button type="button" class="modal-bg" data-close aria-label="Close product"></button>
-    <div class="modal-panel">
-      <button type="button" class="x" data-close data-close-focus aria-label="Close">Close</button>
-      <div class="modal-grid">
-        <img id="modal-img" alt="">
-        <div class="modal-copy">
-          <p class="eyebrow" id="modal-kicker">Product</p>
-          <h3 id="modal-title"></h3>
-          <p class="modal-price" id="modal-price"></p>
-          <p id="modal-desc"></p>
-          <p class="fine" id="modal-note"></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Publish lead form. Submit opens mailto. -->
-  <div class="modal" id="lead-modal" hidden role="dialog" aria-modal="true" aria-labelledby="lead-title">
-    <button type="button" class="modal-bg" data-close aria-label="Close form"></button>
-    <div class="lead-panel">
-      <button type="button" class="x" data-close data-close-focus aria-label="Close">Close</button>
-      <h3 id="lead-title">Publish my store</h3>
-      <p class="help">We email the details to info@brightfrontdesign.com. Photos stay on this device — we will reply to collect them.</p>
-      <form id="lead-form" class="stack" novalidate>
-        <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="lead-company">Company</label><input id="lead-company" name="company" tabindex="-1" autocomplete="off"></div>
-        <div>
-          <label class="lbl" for="lead-name">Your name</label>
-          <input class="field" id="lead-name" name="name" autocomplete="name" required maxlength="80">
-        </div>
-        <div>
-          <label class="lbl" for="lead-email">Email</label>
-          <input class="field" id="lead-email" name="email" type="email" autocomplete="email" required maxlength="120">
-        </div>
-        <p class="error" id="lead-error" role="alert"></p>
-        <button class="btn" type="submit">Email Brightfront</button>
-        <div id="lead-sent" hidden>
-          <p class="help">If your email app did not open, copy this and send it to info@brightfrontdesign.com.</p>
-          <textarea class="note-box" id="lead-body" readonly></textarea>
-          <button type="button" class="btn-ghost" id="copy-btn" style="margin-top:0.6rem">Copy details</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
   <script>
-    /* Brightfront store builder.
-       Runs entirely in the browser. Photos are read with FileReader and never uploaded.
-       Publish posts the details to /api/builder-lead (KV + Telegram), then composes a mailto to info@brightfrontdesign.com. */
     (function () {
-      var MAX_PHOTOS = 12;
-      var MAX_BYTES = 8 * 1024 * 1024;
-      var seq = 0;
-
-      /* Category sets color, type, and the about paragraph. */
-      var THEMES = {
-        food: {
-          label: "Food",
-          kicker: "Small-batch pantry",
-          bg: "#F8F1EA", ink: "#3C241C", accent: "#8C3E22", on: "#FFF8F3", muted: "#8C6756",
-          swatch: "#C4623A",
-          display: "'Fraunces', Georgia, serif",
-          body: "'Source Sans 3', sans-serif",
-          about: function (n) {
-            return n + " is a small-batch food brand. The recipes started at home and stayed small on purpose. What you see here is what we make, label, and ship ourselves, across the United States.";
-          }
-        },
-        beauty: {
-          label: "Beauty",
-          kicker: "Studio beauty",
-          bg: "#FBF7F7", ink: "#3A2428", accent: "#7A4450", on: "#FFF8F8", muted: "#8E6A70",
-          swatch: "#C98992",
-          display: "'Cormorant Garamond', Georgia, serif",
-          body: "'Nunito Sans', sans-serif",
-          about: function (n) {
-            return n + " is a small beauty brand with short ingredient lists and labels you can actually read. We sell what we use, in quantities a studio can stand behind.";
-          }
-        },
-        crafts: {
-          label: "Crafts",
-          kicker: "Handmade studio",
-          bg: "#F3F6F2", ink: "#1C2A22", accent: "#3E5C49", on: "#F4F7F3", muted: "#5E7266",
-          swatch: "#7D9A84",
-          display: "'Libre Baskerville', Georgia, serif",
-          body: "'Karla', sans-serif",
-          about: function (n) {
-            return n + " is a working studio. Each piece is made by hand, one at a time, and leaves the bench only when it is finished. We ship from the studio.";
-          }
-        },
-        fashion: {
-          label: "Fashion",
-          kicker: "Small-run clothing",
-          bg: "#F7F4EE", ink: "#111111", accent: "#111111", on: "#F7F4EE", muted: "#5C5852",
-          swatch: "#111111",
-          display: "'Playfair Display', Georgia, serif",
-          body: "'Jost', sans-serif",
-          about: function (n) {
-            return n + " makes clothing meant to be worn, not just photographed. Small runs, careful fits, and pieces that stay in rotation longer than a season.";
-          }
-        },
-        home: {
-          label: "Home goods",
-          kicker: "For the house",
-          bg: "#F5F1EA", ink: "#1B2A4A", accent: "#1B2A4A", on: "#F6F1E8", muted: "#5C6A82",
-          swatch: "#A67C52",
-          display: "'Newsreader', Georgia, serif",
-          body: "'Outfit', sans-serif",
-          about: function (n) {
-            return n + " makes goods for rooms you actually live in. Oak, linen, and quiet color — objects that earn a place and stay there.";
-          }
-        },
-        other: {
-          label: "Other",
-          kicker: "Independent shop",
-          bg: "#F7F6F3", ink: "#1A1916", accent: "#1C3D34", on: "#F6F3EC", muted: "#5E5A53",
-          swatch: "#1C3D34",
-          display: "'Instrument Serif', Georgia, serif",
-          body: "'Instrument Sans', sans-serif",
-          about: function (n) {
-            return n + " is an independent American shop. A short list of products, described plainly, packed by us, and shipped to you.";
-          }
-        }
-      };
-
-      var state = { step: 1, storeName: "", category: "", photos: [], products: [] };
-      var tracked = {};
-      function track(payload, once) {
-        if (once) { if (tracked[once]) return; tracked[once] = true; }
-        try {
-          fetch("/api/builder-lead", { method: "POST", keepalive: true, headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) }).catch(function () {});
-        } catch (e) {}
-      }
-      var lastFocus = null;
-
-      function uid() { seq += 1; return "p" + seq; }
-
-      function money(value) {
-        var n = Number(String(value).replace(/[^0-9.]/g, ""));
-        if (!isFinite(n)) return "";
-        return new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(n);
-      }
-
-      function setError(msg) {
-        document.getElementById("wizard-error").textContent = msg || "";
-      }
-
-      function blankProduct(photoId) {
-        return { id: uid(), photoId: photoId, name: "", price: "", description: "" };
-      }
-
-      /* ----- Step navigation ----- */
-      function showStep(n) {
-        state.step = n;
-        document.querySelectorAll("[data-panel]").forEach(function (panel) {
-          panel.hidden = Number(panel.getAttribute("data-panel")) !== n;
-        });
-        document.getElementById("back-btn").hidden = n === 1;
-        document.getElementById("next-btn").textContent = n === 4 ? "Preview my store" : "Continue";
-        document.querySelectorAll("#stepper li").forEach(function (li) {
-          var s = Number(li.getAttribute("data-step"));
-          li.setAttribute("data-on", s === n ? "true" : "false");
-          li.setAttribute("data-done", s < n ? "true" : "false");
-        });
-        setError("");
-        updateSummary();
-      }
-
-      function paintCategories() {
-        document.querySelectorAll(".cat").forEach(function (label) {
-          var input = label.querySelector("input");
-          label.setAttribute("data-on", input.checked ? "true" : "false");
-        });
-      }
-
-      function updateSummary() {
-        var theme = THEMES[state.category];
-        document.getElementById("sum-name").textContent = state.storeName || "Untitled store";
-        document.getElementById("sum-cat").textContent = theme ? theme.label : "Not chosen";
-        document.getElementById("sum-photos").textContent = String(state.photos.length);
-        document.getElementById("sum-products").textContent = String(state.products.length);
-        document.getElementById("sum-sw").style.background = theme ? theme.swatch : "var(--line)";
-      }
-
-      function validate(step) {
-        if (step === 1) {
-          state.storeName = document.getElementById("store-name").value.trim();
-          if (state.storeName.length < 2) return "Enter a store name.";
-        }
-        if (step === 2) {
-          var picked = document.querySelector('input[name="category"]:checked');
-          if (!picked) return "Choose a category.";
-          state.category = picked.value;
-        }
-        if (step === 3) {
-          if (!state.photos.length) return "Add at least one product photo.";
-        }
-        if (step === 4) {
-          readProductsFromDom();
-          if (!state.products.length) return "Add at least one product.";
-          for (var i = 0; i < state.products.length; i++) {
-            var item = state.products[i];
-            if (item.name.trim().length < 2) return "Every product needs a name.";
-            var price = Number(String(item.price).replace(/[^0-9.]/g, ""));
-            if (!isFinite(price) || price <= 0) return "Every product needs a price greater than zero.";
-            if (item.description.trim().length < 4) return "Every product needs a short description.";
-          }
-        }
-        return "";
-      }
-
-      /* One product row per photo. Existing text is kept. */
-      function syncProducts() {
-        var ids = {};
-        state.photos.forEach(function (photo) { ids[photo.id] = true; });
-        state.products = state.products.filter(function (item) { return ids[item.photoId]; });
-        state.photos.forEach(function (photo) {
-          var exists = state.products.some(function (item) { return item.photoId === photo.id; });
-          if (!exists) state.products.push(blankProduct(photo.id));
-        });
-      }
-
-      /* ----- Photos ----- */
-      function renderPhotos() {
-        var grid = document.getElementById("photo-grid");
-        grid.replaceChildren();
-        state.photos.forEach(function (photo) {
-          var fig = document.createElement("figure");
-          var img = document.createElement("img");
-          img.src = photo.dataUrl;
-          img.alt = "";
-          var btn = document.createElement("button");
-          btn.type = "button";
-          btn.textContent = "Remove";
-          btn.setAttribute("aria-label", "Remove " + photo.name);
-          btn.addEventListener("click", function () {
-            state.photos = state.photos.filter(function (p) { return p.id !== photo.id; });
-            state.products = state.products.filter(function (item) { return item.photoId !== photo.id; });
-            renderPhotos();
-          });
-          fig.append(img, btn);
-          grid.append(fig);
-        });
-        updateSummary();
-      }
-
-      function addFiles(fileList) {
-        var incoming = Array.prototype.slice.call(fileList || []);
-        var images = incoming.filter(function (file) {
-          return /^image\/(jpeg|png|webp|gif)$/.test(file.type);
-        });
-        if (!images.length) {
-          setError("Use a JPG, PNG, WEBP, or GIF.");
-          return;
-        }
-        if (state.photos.length >= MAX_PHOTOS) {
-          setError("You can add up to 12 photos.");
-          return;
-        }
-        var rejectedSize = false;
-        var room = MAX_PHOTOS - state.photos.length;
-        var batch = [];
-        images.forEach(function (file) {
-          if (batch.length >= room) return;
-          if (file.size > MAX_BYTES) { rejectedSize = true; return; }
-          batch.push(file);
-        });
-        if (!batch.length) {
-          setError("Those photos are over 8 MB.");
-          return;
-        }
-        var left = batch.length;
-        batch.forEach(function (file) {
-          var reader = new FileReader();
-          reader.onload = function () {
-            state.photos.push({ id: uid(), name: file.name, dataUrl: String(reader.result || "") });
-            left -= 1;
-            if (left === 0) {
-              renderPhotos();
-              setError(rejectedSize ? "Skipped a photo larger than 8 MB." : "");
-            }
-          };
-          reader.onerror = function () {
-            left -= 1;
-            if (left === 0) renderPhotos();
-          };
-          reader.readAsDataURL(file);
-        });
-      }
-
-      /* ----- Product rows ----- */
-      function photoById(id) {
-        return state.photos.filter(function (photo) { return photo.id === id; })[0];
-      }
-
-      function readProductsFromDom() {
-        document.querySelectorAll("[data-product-id]").forEach(function (row) {
-          var item = state.products.filter(function (p) { return p.id === row.getAttribute("data-product-id"); })[0];
-          if (!item) return;
-          item.name = row.querySelector('[name="name"]').value;
-          item.price = row.querySelector('[name="price"]').value;
-          item.description = row.querySelector('[name="description"]').value;
-          var select = row.querySelector('[name="photo"]');
-          if (select) item.photoId = select.value;
-        });
-      }
-
-      function renderProducts() {
-        var list = document.getElementById("product-list");
-        list.replaceChildren();
-        state.products.forEach(function (item) {
-          var row = document.createElement("div");
-          row.className = "product";
-          row.setAttribute("data-product-id", item.id);
-          var photo = photoById(item.photoId) || state.photos[0];
-          var img = document.createElement("img");
-          img.className = "thumb";
-          img.alt = "";
-          if (photo) img.src = photo.dataUrl;
-
-          var fields = document.createElement("div");
-          var pair = document.createElement("div");
-          pair.className = "pair";
-          pair.append(fieldBlock("Product name", "text", "name", item.name, "80"), fieldBlock("Price, USD", "text", "price", item.price, "12", "0.00"));
-          fields.append(pair);
-          fields.append(areaBlock("Description", item.description));
-          if (state.photos.length > 1) fields.append(photoSelect(item.photoId));
-          if (state.products.length > 1) {
-            var remove = document.createElement("button");
-            remove.type = "button";
-            remove.className = "linkish";
-            remove.textContent = "Remove product";
-            remove.addEventListener("click", function () {
-              readProductsFromDom();
-              state.products = state.products.filter(function (p) { return p.id !== item.id; });
-              renderProducts();
-              updateSummary();
-            });
-            fields.append(remove);
-          }
-          row.append(img, fields);
-          list.append(row);
-        });
-        updateSummary();
-      }
-
-      function fieldBlock(label, type, name, value, max, placeholder) {
-        var wrap = document.createElement("div");
-        var lab = document.createElement("label");
-        lab.className = "lbl";
-        lab.textContent = label;
-        var input = document.createElement("input");
-        input.className = "field";
-        input.type = type;
-        input.name = name;
-        input.value = value || "";
-        input.maxLength = Number(max);
-        input.required = true;
-        if (name === "price") input.inputMode = "decimal";
-        if (placeholder) input.placeholder = placeholder;
-        var id = uid();
-        input.id = id;
-        lab.htmlFor = id;
-        wrap.append(lab, input);
-        return wrap;
-      }
-
-      function areaBlock(label, value) {
-        var wrap = document.createElement("div");
-        wrap.style.marginTop = "0.75rem";
-        var lab = document.createElement("label");
-        lab.className = "lbl";
-        lab.textContent = label;
-        var area = document.createElement("textarea");
-        area.className = "field";
-        area.name = "description";
-        area.maxLength = 600;
-        area.required = true;
-        area.value = value || "";
-        var id = uid();
-        area.id = id;
-        lab.htmlFor = id;
-        wrap.append(lab, area);
-        return wrap;
-      }
-
-      function photoSelect(selected) {
-        var wrap = document.createElement("div");
-        wrap.style.marginTop = "0.75rem";
-        var lab = document.createElement("label");
-        lab.className = "lbl";
-        lab.textContent = "Photo";
-        var select = document.createElement("select");
-        select.className = "field";
-        select.name = "photo";
-        state.photos.forEach(function (photo, index) {
-          var opt = document.createElement("option");
-          opt.value = photo.id;
-          opt.textContent = photo.name || "Photo " + (index + 1);
-          if (photo.id === selected) opt.selected = true;
-          select.append(opt);
-        });
-        var id = uid();
-        select.id = id;
-        lab.htmlFor = id;
-        select.addEventListener("change", function () {
-          readProductsFromDom();
-          var row = select.closest("[data-product-id]");
-          var found = photoById(select.value);
-          var thumb = row.querySelector("img");
-          if (found && thumb) thumb.src = found.dataUrl;
-        });
-        wrap.append(lab, select);
-        return wrap;
-      }
-
-      /* ----- Storefront preview ----- */
-      function applyTheme(node, theme) {
-        node.style.setProperty("--bg", theme.bg);
-        node.style.setProperty("--ink", theme.ink);
-        node.style.setProperty("--accent", theme.accent);
-        node.style.setProperty("--on", theme.on);
-        node.style.setProperty("--muted", theme.muted);
-        node.style.setProperty("--display", theme.display);
-        node.style.setProperty("--body", theme.body);
-      }
-
-      function safeSrc(src) {
-        if (typeof src !== "string") return "";
-        if (src.indexOf("img/") === 0 && src.indexOf("..") === -1) return src;
-        if (/^data:image\/(jpeg|png|webp|gif);base64,/i.test(src)) return src;
-        return "";
-      }
-
-      function renderStore(mount, model) {
-        var theme = THEMES[model.category] || THEMES.other;
-        mount.replaceChildren();
-        var root = document.createElement("article");
-        root.className = "sf";
-        applyTheme(root, theme);
-
-        var bar = document.createElement("div");
-        bar.className = "sf-bar";
-        var brand = document.createElement("span");
-        brand.className = "sf-brand";
-        brand.textContent = model.storeName;
-        var shop = document.createElement("a");
-        shop.className = "sf-link";
-        shop.href = "#preview-products";
-        shop.textContent = "Shop";
-        bar.append(brand, shop);
-
-        var hero = document.createElement("div");
-        hero.className = "sf-hero";
-        var copy = document.createElement("div");
-        copy.className = "sf-hero-copy";
-        var kicker = document.createElement("p");
-        kicker.className = "sf-kicker";
-        kicker.textContent = theme.kicker;
-        var title = document.createElement("h2");
-        title.className = "sf-name";
-        title.textContent = model.storeName;
-        var blurb = document.createElement("p");
-        blurb.textContent = "Made in small quantity. Packed by us and shipped in the United States.";
-        var view = document.createElement("a");
-        view.className = "sf-btn";
-        view.href = "#preview-products";
-        view.textContent = "View products";
-        copy.append(kicker, title, blurb, view);
-        var media = document.createElement("div");
-        media.className = "sf-hero-media";
-        var heroImg = document.createElement("img");
-        heroImg.alt = model.storeName;
-        heroImg.src = safeSrc(model.products[0] && model.products[0].img);
-        media.append(heroImg);
-        hero.append(copy, media);
-
-        var about = document.createElement("div");
-        about.className = "sf-about";
-        var aboutH = document.createElement("h3");
-        aboutH.textContent = "About";
-        var aboutP = document.createElement("p");
-        aboutP.textContent = theme.about(model.storeName);
-        about.append(aboutH, aboutP);
-
-        var grid = document.createElement("div");
-        grid.className = "sf-grid";
-        grid.id = "preview-products";
-        model.products.forEach(function (item) {
-          var card = document.createElement("button");
-          card.type = "button";
-          card.className = "sf-card";
-          var img = document.createElement("img");
-          img.alt = "";
-          img.src = safeSrc(item.img);
-          var meta = document.createElement("span");
-          meta.className = "meta";
-          var name = document.createElement("strong");
-          name.textContent = item.name;
-          var price = document.createElement("span");
-          price.className = "price";
-          price.textContent = money(item.price);
-          meta.append(name, price);
-          card.append(img, meta);
-          card.addEventListener("click", function () {
-            openProduct({
-              name: item.name,
-              price: money(item.price),
-              description: item.description,
-              img: safeSrc(item.img),
-              note: "This is a preview. Checkout, tax, and shipping turn on after the store is published."
-            });
-          });
-          grid.append(card);
-        });
-
-        var end = document.createElement("div");
-        end.className = "sf-end";
-        var endNote = document.createElement("p");
-        endNote.textContent = "Ready when you are. Publishing emails the store details to Brightfront. Photos are not attached.";
-        var publish = document.createElement("button");
-        publish.type = "button";
-        publish.className = "sf-btn";
-        publish.textContent = "Publish my store";
-        publish.addEventListener("click", openLead);
-        end.append(endNote, publish);
-
-        root.append(bar, hero, about, grid, end);
-        mount.append(root);
-      }
-
-      function modelFromState() {
-        return {
-          storeName: state.storeName,
-          category: state.category,
-          products: state.products.map(function (item) {
-            var photo = photoById(item.photoId);
-            return {
-              name: item.name.trim(),
-              price: item.price,
-              description: item.description.trim(),
-              img: photo ? photo.dataUrl : "",
-              file: photo ? photo.name : ""
-            };
+      var form = document.getElementById("contact-form");
+      var err = document.getElementById("form-error");
+      var btn = document.getElementById("send-btn");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var email = document.getElementById("email").value.trim();
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { err.textContent = "Please enter a valid email address."; return; }
+        err.textContent = "";
+        btn.disabled = true;
+        fetch("/api/builder-lead", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            event: "submit",
+            email: email,
+            message: document.getElementById("message").value.trim().slice(0, 2000),
+            page: location.pathname,
+            hp: document.getElementById("hp").value
           })
-        };
-      }
-
-      function showPreview() {
-        var err = validate(4);
-        if (err) { setError(err); return; }
-        document.getElementById("wizard-block").hidden = true;
-        document.getElementById("preview-block").hidden = false;
-        renderStore(document.getElementById("preview-mount"), modelFromState());
-        document.getElementById("preview-block").scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-
-      /* ----- Modals ----- */
-      function shell(on) {
-        ["header", "main", "footer"].forEach(function (sel) {
-          var node = document.querySelector(sel);
-          if (node) node.inert = on;
-        });
-      }
-
-      function openProduct(item) {
-        lastFocus = document.activeElement;
-        document.getElementById("modal-title").textContent = item.name;
-        document.getElementById("modal-price").textContent = item.price;
-        document.getElementById("modal-desc").textContent = item.description;
-        document.getElementById("modal-note").textContent = item.note || "";
-        var img = document.getElementById("modal-img");
-        img.src = safeSrc(item.img);
-        img.alt = item.name;
-        img.style.objectPosition = item.pos || "center";
-        document.getElementById("product-modal").hidden = false;
-        shell(true);
-        document.querySelector("#product-modal [data-close-focus]").focus();
-      }
-
-      function closeModals() {
-        document.getElementById("product-modal").hidden = true;
-        document.getElementById("lead-modal").hidden = true;
-        shell(false);
-        if (lastFocus && lastFocus.focus) lastFocus.focus();
-      }
-
-      function openLead() {
-        lastFocus = document.activeElement;
-        document.getElementById("lead-error").textContent = "";
-        document.getElementById("lead-sent").hidden = true;
-        document.getElementById("lead-modal").hidden = false;
-        shell(true);
-        document.getElementById("lead-name").focus();
-      }
-
-      function mailBody(contactName, email) {
-        var model = modelFromState();
-        var theme = THEMES[model.category] || THEMES.other;
-        var lines = [
-          "New store request — Brightfront Studio",
-          "",
-          "Contact",
-          "Name: " + contactName,
-          "Email: " + email,
-          "",
-          "Store",
-          "Name: " + model.storeName,
-          "Category: " + theme.label,
-          "",
-          "Products"
-        ];
-        model.products.forEach(function (item, index) {
-          var desc = item.description.length > 400 ? item.description.slice(0, 400) + "…" : item.description;
-          lines.push((index + 1) + ". " + item.name + " — " + money(item.price));
-          lines.push("   " + desc);
-          if (item.file) lines.push("   Photo file: " + item.file);
-        });
-        lines.push("");
-        lines.push("Photos uploaded in the preview are not attached. Please reply to arrange the image files.");
-        lines.push("");
-        lines.push("— Sent from the store builder at brightfrontdesign.com");
-        return lines.join("\n");
-      }
-
-      /* ----- Wire events ----- */
-      document.getElementById("store-name").addEventListener("input", function (event) {
-        state.storeName = event.target.value.trim();
-        updateSummary();
-      });
-
-      document.querySelectorAll('input[name="category"]').forEach(function (input) {
-        input.addEventListener("change", function () {
-          state.category = input.value;
-          paintCategories();
-          updateSummary();
+        }).then(function (r) {
+          if (!r.ok) throw new Error("status " + r.status);
+          form.hidden = true;
+          document.getElementById("thanks").hidden = false;
+        }).catch(function () {
+          btn.disabled = false;
+          err.innerHTML = 'Sorry, that did not go through. Please try again or email <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>.';
         });
       });
-
-      document.getElementById("product-list").addEventListener("input", readProductsFromDom);
-
-      var drop = document.getElementById("dropzone");
-      var fileInput = document.getElementById("file-input");
-      document.getElementById("browse-btn").addEventListener("click", function () { fileInput.click(); });
-      drop.addEventListener("click", function (event) {
-        if (event.target.closest("button")) return;
-        fileInput.click();
+      document.querySelectorAll(".mob-nav a").forEach(function (a) {
+        a.addEventListener("click", function () { document.querySelector(".mob-nav").open = false; });
       });
-      drop.addEventListener("dragover", function (event) {
-        event.preventDefault();
-        drop.classList.add("is-over");
-      });
-      drop.addEventListener("dragleave", function () { drop.classList.remove("is-over"); });
-      drop.addEventListener("drop", function (event) {
-        event.preventDefault();
-        drop.classList.remove("is-over");
-        addFiles(event.dataTransfer.files);
-      });
-      fileInput.addEventListener("change", function () {
-        addFiles(fileInput.files);
-        fileInput.value = "";
-      });
-
-      document.getElementById("add-product").addEventListener("click", function () {
-        if (!state.photos.length) return;
-        if (state.products.length >= MAX_PHOTOS) {
-          setError("Twelve products is the limit in this preview.");
-          return;
-        }
-        readProductsFromDom();
-        state.products.push(blankProduct(state.photos[0].id));
-        renderProducts();
-      });
-
-      document.getElementById("back-btn").addEventListener("click", function () {
-        if (state.step === 4) readProductsFromDom();
-        if (state.step > 1) showStep(state.step - 1);
-      });
-
-      document.getElementById("next-btn").addEventListener("click", function () {
-        var err = validate(state.step);
-        if (err) { setError(err); return; }
-        if (state.step === 3) {
-          syncProducts();
-          renderProducts();
-        }
-        if (state.step === 1) track({ event: "started" }, "started");
-        if (state.step < 4) showStep(state.step + 1);
-        else { track({ event: "preview" }, "preview"); showPreview(); }
-      });
-
-      document.getElementById("edit-btn").addEventListener("click", function () {
-        document.getElementById("preview-block").hidden = true;
-        document.getElementById("wizard-block").hidden = false;
-        showStep(4);
-        renderProducts();
-        document.getElementById("builder").scrollIntoView({ behavior: "smooth", block: "start" });
-      });
-
-      document.body.addEventListener("click", function (event) {
-        var card = event.target.closest("[data-product-card]");
-        if (!card) return;
-        openProduct({
-          name: card.getAttribute("data-name"),
-          price: card.getAttribute("data-price"),
-          description: card.getAttribute("data-description"),
-          img: card.getAttribute("data-img"),
-          pos: card.getAttribute("data-pos") || "center",
-          note: card.getAttribute("data-note") || ""
-        });
-      });
-
-      document.querySelectorAll("[data-close]").forEach(function (node) {
-        node.addEventListener("click", closeModals);
-      });
-      document.addEventListener("keydown", function (event) {
-        if (event.key === "Escape") closeModals();
-      });
-
-      document.getElementById("lead-form").addEventListener("submit", function (event) {
-        event.preventDefault();
-        var name = document.getElementById("lead-name").value.trim();
-        var email = document.getElementById("lead-email").value.trim();
-        var error = document.getElementById("lead-error");
-        if (name.length < 2) { error.textContent = "Enter your name."; return; }
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { error.textContent = "Enter a valid email."; return; }
-        error.textContent = "";
-        var body = mailBody(name, email);
-        var subject = "Publish my store: " + state.storeName;
-        track({
-          event: "submit", name: name, email: email, storeName: state.storeName, category: state.category,
-          products: state.products.map(function (p) { return { name: String(p.name || "").slice(0, 100), price: String(p.price || "").slice(0, 20) }; }),
-          photoCount: state.photos.length, page: location.pathname, hp: document.getElementById("lead-company").value
-        });
-        var href = "mailto:info@brightfrontdesign.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-        document.getElementById("lead-body").value = "To: info@brightfrontdesign.com\nSubject: " + subject + "\n\n" + body;
-        document.getElementById("lead-sent").hidden = false;
-        window.location.href = href;
-      });
-
-      document.getElementById("copy-btn").addEventListener("click", function () {
-        var text = document.getElementById("lead-body");
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text.value).then(function () {
-            document.getElementById("copy-btn").textContent = "Copied";
-          }).catch(function () {
-            text.focus();
-            text.select();
-          });
-        } else {
-          text.focus();
-          text.select();
-        }
-      });
-
-      /* Mobile menu closes after a choice. */
-      document.querySelectorAll(".mob-nav a").forEach(function (link) {
-        link.addEventListener("click", function () {
-          document.querySelector(".mob-nav").open = false;
-        });
-      });
-
-      showStep(1);
     })();
   </script>
 </body>
