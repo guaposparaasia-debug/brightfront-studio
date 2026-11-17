@@ -116,7 +116,7 @@
     .price-steps .amt small { font-family:var(--sans); font-size:.4em; color:var(--muted); }
     .price-steps p { margin:0; color:var(--muted); }
     .plan { display:grid; gap:1.5rem; margin-top:2rem; padding:1.6rem; background:#fff; border:1px solid var(--line); border-top:3px solid var(--pine); }
-    @media (min-width:900px) { .plan { grid-template-columns:.8fr 1.2fr; gap:2.5rem; padding:2rem; } }
+    @media (min-width:900px) { .plan { grid-template-columns:1fr 1fr; gap:2.5rem; padding:2rem; } }
     .plan h3 { font-family:var(--serif); font-weight:400; font-size:1.7rem; margin:0 0 .4rem; }
     .plan-list { list-style:none; padding:0; margin:0; display:grid; gap:0 2rem; } @media (min-width:700px) { .plan-list { grid-template-columns:1fr 1fr; } }
     .plan-list li { display:grid; gap:.15rem; padding:.8rem 0; border-top:1px solid var(--line); }
@@ -134,7 +134,22 @@
     textarea.field { min-height:130px; resize:vertical; }
     .stack { display:grid; gap:1rem; }
     .error { color:#7A2E24; min-height:1.3rem; margin:0; font-size:.92rem; }
-    .thanks h3 { font-family:var(--serif); font-weight:400; font-size:2rem; margin:0 0 .5rem; }
+    .thanks h3, .pay-step h3 { font-family:var(--serif); font-weight:400; font-size:2rem; margin:0 0 .5rem; }
+    .hint { margin:.35rem 0 0; font-size:.85rem; color:var(--muted); }
+    .photo-row { display:flex; flex-wrap:wrap; gap:.5rem; margin:.65rem 0 0; }
+    .photo-thumb { margin:0; position:relative; width:72px; height:72px; }
+    .photo-thumb img { width:72px; height:72px; object-fit:cover; border:1px solid var(--line); background:var(--paper-2); }
+    .photo-thumb button { position:absolute; top:2px; right:2px; width:24px; height:24px; border:0; background:var(--ink); color:var(--paper); cursor:pointer; font-size:1rem; line-height:1; padding:0; }
+    .photo-thumb button:hover { background:var(--pine); }
+    .file-field { display:block; }
+    .file-field input[type=file] { width:100%; min-height:48px; padding:.55rem 0; }
+    .pay-step p { margin:0 0 1rem; color:var(--muted); }
+    .pay-step form { margin:0; }
+    .pay-step .btn { width:100%; }
+    details.maint-later { margin-top:1.5rem; border:1px solid var(--line); background:#fff; padding:0 1.2rem 1rem; }
+    details.maint-later summary { cursor:pointer; list-style:none; min-height:52px; display:flex; align-items:center; font-weight:500; }
+    details.maint-later summary::-webkit-details-marker { display:none; }
+    details.maint-later .pp-sub, details.maint-later .ls-form { max-width:28rem; }
     details.qa { border-top:1px solid var(--line); } details.qa:last-of-type { border-bottom:1px solid var(--line); }
     details.qa summary { cursor:pointer; list-style:none; display:flex; justify-content:space-between; gap:1rem; align-items:center; min-height:64px; padding:.7rem 0; font-size:1.12rem; }
     details.qa summary::-webkit-details-marker { display:none; }
@@ -223,10 +238,10 @@
         <p class="eyebrow">How it works</p>
         <h2>You tell us about your shop. We do the rest.</h2>
         <div class="steps">
-          <article class="step"><div class="step-num">01</div><h3>Leave your email</h3><p>Send us your email and a few words about your business. That's all we need to begin. We'll reply from info@brightfrontdesign.com.</p></article>
-          <article class="step"><div class="step-num">02</div><h3>We contact you and invoice the start</h3><p>We get in touch, learn what you need, and email you the invoice for the first $250 so we can start building.</p></article>
+          <article class="step"><div class="step-num">01</div><h3>Tell us what you want</h3><p>Leave your email, describe the website you want, and add a few photos of your shop. We'll use that to start the build.</p></article>
+          <article class="step"><div class="step-num">02</div><h3>Pay $250 to start</h3><p>The first $250 is due up front, right after you send your request, so we can begin building your website.</p></article>
           <article class="step"><div class="step-num">03</div><h3>We build your website</h3><p>Your photos, your hours, your menu or services, laid out cleanly and made to look great on a phone.</p></article>
-          <article class="step"><div class="step-num">04</div><h3>You approve, we launch</h3><p>We email you the finished site along with the payment link for the second $250. Once you approve it, we put it live and keep it running.</p></article>
+          <article class="step"><div class="step-num">04</div><h3>You approve, we launch</h3><p>We email you the finished site from info@brightfrontdesign.com. The remaining $250 is due after you approve it, then $39/month keeps it hosted and updated.</p></article>
         </div>
         <figure class="wide-photo">
           <img src="/img/02-websites.webp" width="1600" height="900" loading="lazy" decoding="async" alt="A laptop and phone showing a clean small-business website side by side.">
@@ -279,21 +294,73 @@
       <div class="wrap">
         <p class="eyebrow">Pricing</p>
         <h2>Simple, in three steps.</h2>
-        <p class="lede">Total to get your website built is $500, paid in two halves, then $39 a month to keep it hosted, updated and changed whenever you need. The two $250 payments are invoiced by email after we contact you.</p>
+        <p class="lede">Total to get your website built is $500, paid in two halves, then $39 a month to keep it hosted, updated and changed whenever you need. Start by telling us what you want and paying the first $250.</p>
         <ol class="price-steps">
           <li><b>Step 1</b><span class="amt">$250</span><p>Pay $250 upfront so we start building your website.</p></li>
           <li><b>Step 2</b><span class="amt">$250</span><p>Pay the remaining $250 after the website is built and you approve it.</p></li>
           <li><b>Step 3</b><span class="amt">$39 <small>/ month</small></span><p>Then $39/month maintenance: hosting, updates and changes.</p></li>
         </ol>
         <div class="pay-note">
-          <strong>How you'll pay.</strong> After we contact you, we email the two $250 invoices from <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>. When the website is built, we also email you the finished site and the payment links. The $39/month maintenance plan is the checkout below. Start it once your site is approved.
+          <strong>How you'll pay.</strong> After you send your request below, pay the first $250 so we can start building. When the website is ready, we email it to you from <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a> with the request for the remaining $250. After you approve it, $39/month covers hosting, updates and changes.
         </div>
 
         <div class="plan">
           <div>
+            <h3>Start your website</h3>
+            <p style="margin:0 0 1rem;color:var(--muted)">Leave your email, describe the website you want, and add a few photos. Then pay the first $250 so we can start building.</p>
+            <form class="lead-form stack" data-source="pricing" novalidate>
+              <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="pricing-hp">Company</label><input id="pricing-hp" class="lead-hp" name="hp" tabindex="-1" autocomplete="off"></div>
+              <div><label class="lbl" for="pricing-email">Your email</label><input class="field lead-email" id="pricing-email" name="email" type="email" autocomplete="email" required maxlength="120" placeholder="you@yourshop.com"></div>
+              <div><label class="lbl" for="pricing-message">Describe the website you want</label><textarea class="field lead-message" id="pricing-message" name="message" required maxlength="2000" placeholder="What do you sell or offer? Where are you? What should the website include?"></textarea></div>
+              <div>
+                <label class="lbl file-field" for="pricing-photos">Photos of your shop <span style="color:var(--muted)">(optional, up to 5)</span>
+                  <input class="lead-photos" id="pricing-photos" name="photos" type="file" accept="image/*" multiple>
+                </label>
+                <p class="hint">Phone photos are fine. We'll resize them before sending.</p>
+                <div class="photo-row lead-thumbs" hidden></div>
+              </div>
+              <p class="error lead-error" role="alert" aria-live="polite"></p>
+              <button class="btn lead-submit" type="submit">Send my request</button>
+            </form>
+            <div class="pay-step lead-pay" hidden>
+              <h3>Pay the first $250 to start your website</h3>
+              <p>After your $250 payment we build your website and email it to you from <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>. The remaining $250 is due after you approve it, then $39/month maintenance.</p>
+              <form class="pp-first" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="chedamso@naver.com">
+                <input type="hidden" name="item_name" value="Brightfront website — first payment (start build)">
+                <input type="hidden" name="amount" value="250.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="custom" class="pp-first-custom" value="">
+                <input type="hidden" name="no_shipping" value="1">
+                <input type="hidden" name="no_note" value="1">
+                <input type="hidden" name="charset" value="UTF-8">
+                <input type="hidden" name="notify_url" value="https://brightfrontdesign.com/api/paypal-ipn">
+                <input type="hidden" name="return" value="https://brightfrontdesign.com/thanks/">
+                <input type="hidden" name="cancel_return" value="https://brightfrontdesign.com/">
+                <button type="submit" class="btn">Pay $250 to start my website</button>
+              </form>
+              <p class="pp-note">You'll pay through PayPal. Cards are accepted at PayPal checkout.</p>
+            </div>
+            <noscript><p class="fine">This form needs JavaScript. Please email us at <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>.</p></noscript>
+          </div>
+          <div>
             <h3>Maintenance plan: $39/month</h3>
-            <p style="margin:0 0 1rem;color:var(--muted)">Hosting, updates and changes for your website, billed monthly. Cancel anytime.</p>
-            <a class="btn" href="#contact">Start with my email</a>
+            <p style="margin:0 0 1rem;color:var(--muted)">Hosting, updates and changes for your website, billed monthly after your site is live. Cancel anytime.</p>
+            <ul class="plan-list">
+            <li><strong>Hosting and SSL</strong><span>Your website is hosted and served over HTTPS. We keep it current.</span></li>
+            <li><strong>Updates</strong><span>Hours, menus, prices, photos and text, kept up to date for you.</span></li>
+            <li><strong>Changes on request</strong><span>Email us what you'd like different and we make the change.</span></li>
+            <li><strong>Mobile-friendly</strong><span>Looks right on phones, tablets and desktops.</span></li>
+            <li><strong>Support from a person</strong><span>Email info@brightfrontdesign.com and a person answers.</span></li>
+            <li><strong>Cancel anytime</strong><span>Month to month, no contract.</span></li>
+          </ul>
+          </div>
+        </div>
+
+        <details class="maint-later">
+          <summary>Maintenance (after your site is live) — $39/month</summary>
+            <p class="hint" style="margin:0 0 1rem">Start this once your website is approved and live. Hosting, updates and changes, billed monthly. Cancel anytime.</p>
             <form class="pp-sub" id="pp-sub" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
               <label class="pp-biz-label">Business name <input class="ls-input" id="pp-biz" type="text" required maxlength="64" autocomplete="organization"></label>
               <input type="hidden" name="custom" id="pp-custom">
@@ -386,16 +453,7 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
   });
 })();
 </script>
-          </div>
-          <ul class="plan-list">
-            <li><strong>Hosting and SSL</strong><span>Your website is hosted and served over HTTPS. We keep it current.</span></li>
-            <li><strong>Updates</strong><span>Hours, menus, prices, photos and text, kept up to date for you.</span></li>
-            <li><strong>Changes on request</strong><span>Email us what you'd like different and we make the change.</span></li>
-            <li><strong>Mobile-friendly</strong><span>Looks right on phones, tablets and desktops.</span></li>
-            <li><strong>Support from a person</strong><span>Email info@brightfrontdesign.com and a person answers.</span></li>
-            <li><strong>Cancel anytime</strong><span>Month to month, no contract.</span></li>
-          </ul>
-        </div>
+        </details>
       </div>
     </section>
 
@@ -405,22 +463,45 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
         <div>
           <p class="eyebrow">Contact</p>
           <h2>Let's build your website.</h2>
-          <p class="lede">Leave your email — we'll build your website and contact you at this address.</p>
-          <p class="lede" style="margin-top:.8rem">After we build it, we email you the finished site and the payment links and invoices from <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>. You can also write to us there anytime.</p>
+          <p class="lede">Leave your email, describe the website you want, and add a few photos. Then pay the first $250 so we can start building.</p>
+          <p class="lede" style="margin-top:.8rem">After your payment, we build your website and email it to you from <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>. The remaining $250 is due after you approve it, then $39/month maintenance. You can also write to us there anytime.</p>
         </div>
         <div class="panel">
-          <form id="contact-form" class="stack" novalidate>
-            <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="hp">Company</label><input id="hp" name="hp" tabindex="-1" autocomplete="off"></div>
-            <div><label class="lbl" for="email">Your email</label><input class="field" id="email" name="email" type="email" autocomplete="email" required maxlength="120" placeholder="you@yourshop.com"></div>
-            <div><label class="lbl" for="message">Tell us about your business <span style="color:var(--muted)">(optional)</span></label><textarea class="field" id="message" name="message" maxlength="2000" placeholder="What do you sell or offer? Where are you? Do you have photos or a current site?"></textarea></div>
-            <p class="error" id="form-error" role="alert" aria-live="polite"></p>
-            <button class="btn" type="submit" id="send-btn">Send my email</button>
-          </form>
-          <div class="thanks" id="thanks" hidden>
-            <h3>Thank you!</h3>
-            <p style="margin:0;color:var(--muted)">We've got your email and will contact you at that address soon. Questions meanwhile? Write to <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>.</p>
-          </div>
-          <noscript><p class="fine">This form needs JavaScript. Please email us at <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>.</p></noscript>
+            <form class="lead-form stack" data-source="contact" novalidate>
+              <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="contact-hp">Company</label><input id="contact-hp" class="lead-hp" name="hp" tabindex="-1" autocomplete="off"></div>
+              <div><label class="lbl" for="contact-email">Your email</label><input class="field lead-email" id="contact-email" name="email" type="email" autocomplete="email" required maxlength="120" placeholder="you@yourshop.com"></div>
+              <div><label class="lbl" for="contact-message">Describe the website you want</label><textarea class="field lead-message" id="contact-message" name="message" required maxlength="2000" placeholder="What do you sell or offer? Where are you? What should the website include?"></textarea></div>
+              <div>
+                <label class="lbl file-field" for="contact-photos">Photos of your shop <span style="color:var(--muted)">(optional, up to 5)</span>
+                  <input class="lead-photos" id="contact-photos" name="photos" type="file" accept="image/*" multiple>
+                </label>
+                <p class="hint">Phone photos are fine. We'll resize them before sending.</p>
+                <div class="photo-row lead-thumbs" hidden></div>
+              </div>
+              <p class="error lead-error" role="alert" aria-live="polite"></p>
+              <button class="btn lead-submit" type="submit">Send my request</button>
+            </form>
+            <div class="pay-step lead-pay" hidden>
+              <h3>Pay the first $250 to start your website</h3>
+              <p>After your $250 payment we build your website and email it to you from <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>. The remaining $250 is due after you approve it, then $39/month maintenance.</p>
+              <form class="pp-first" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="chedamso@naver.com">
+                <input type="hidden" name="item_name" value="Brightfront website — first payment (start build)">
+                <input type="hidden" name="amount" value="250.00">
+                <input type="hidden" name="currency_code" value="USD">
+                <input type="hidden" name="custom" class="pp-first-custom" value="">
+                <input type="hidden" name="no_shipping" value="1">
+                <input type="hidden" name="no_note" value="1">
+                <input type="hidden" name="charset" value="UTF-8">
+                <input type="hidden" name="notify_url" value="https://brightfrontdesign.com/api/paypal-ipn">
+                <input type="hidden" name="return" value="https://brightfrontdesign.com/thanks/">
+                <input type="hidden" name="cancel_return" value="https://brightfrontdesign.com/">
+                <button type="submit" class="btn">Pay $250 to start my website</button>
+              </form>
+              <p class="pp-note">You'll pay through PayPal. Cards are accepted at PayPal checkout.</p>
+            </div>
+            <noscript><p class="fine">This form needs JavaScript. Please email us at <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>.</p></noscript>
         </div>
       </div>
     </section>
@@ -431,8 +512,8 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
         <p class="eyebrow">FAQ</p>
         <h2>Questions, answered plainly.</h2>
         <div style="margin-top:1.5rem">
-          <details class="qa"><summary>What does it cost? <i aria-hidden="true">+</i></summary><p>$250 upfront so we start building, $250 after the website is built and you approve it, then $39 a month for maintenance (hosting, updates and changes). The two $250 payments are invoiced by email after we contact you.</p></details>
-          <details class="qa"><summary>When do I pay what? <i aria-hidden="true">+</i></summary><p>First $250 to begin. Second $250 only after you've seen the finished website and approved it. The $39/month maintenance starts once the site is approved and live. We email the finished site and the payment links from info@brightfrontdesign.com.</p></details>
+          <details class="qa"><summary>What does it cost? <i aria-hidden="true">+</i></summary><p>$250 upfront so we start building, $250 after the website is built and you approve it, then $39 a month for maintenance (hosting, updates and changes). You pay the first $250 on this page after you send your request.</p></details>
+          <details class="qa"><summary>When do I pay what? <i aria-hidden="true">+</i></summary><p>First $250 on this page, right after you send your request, so we can begin. Second $250 only after you've seen the finished website and approved it. The $39/month maintenance starts once the site is approved and live. We email the finished site from info@brightfrontdesign.com.</p></details>
           <details class="qa"><summary>What does the $39 a month cover? <i aria-hidden="true">+</i></summary><p>Hosting, keeping your site secure and up to date, and changes you request, like new hours, a new menu or fresh photos. It's month to month with no contract, and you can cancel anytime.</p></details>
           <details class="qa"><summary>Do I need to supply photos or text? <i aria-hidden="true">+</i></summary><p>Phone photos are enough to start. Tell us what you do, send what you have, and we'll shape it into clear, good-looking pages. You can send more or replace anything later.</p></details>
           <details class="qa"><summary>Will it work on phones? <i aria-hidden="true">+</i></summary><p>Yes. Every website we build is mobile-friendly and tested on small screens first, because that's where most local customers will find you.</p></details>
@@ -459,38 +540,203 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
 
   <script>
     (function () {
-      var form = document.getElementById("contact-form");
-      var err = document.getElementById("form-error");
-      var btn = document.getElementById("send-btn");
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        var email = document.getElementById("email").value.trim();
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { err.textContent = "Please enter a valid email address."; return; }
-        err.textContent = "";
-        btn.disabled = true;
-        fetch("/api/builder-lead", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
+      var MAX_PHOTOS = 5;
+      var MAX_DIM = 1600;
+      var MAX_TOTAL = 8 * 1024 * 1024;
+      var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+      function blobToBase64(blob) {
+        return new Promise(function (resolve, reject) {
+          var reader = new FileReader();
+          reader.onload = function () {
+            var dataUrl = String(reader.result || "");
+            var comma = dataUrl.indexOf(",");
+            resolve({ dataUrl: dataUrl, b64: comma >= 0 ? dataUrl.slice(comma + 1) : "" });
+          };
+          reader.onerror = function () { reject(new Error("Could not read that photo.")); };
+          reader.readAsDataURL(blob);
+        });
+      }
+
+      function canvasToBlob(canvas, quality) {
+        return new Promise(function (resolve) {
+          canvas.toBlob(function (blob) { resolve(blob || null); }, "image/jpeg", quality);
+        });
+      }
+
+      function resizeImage(file) {
+        return new Promise(function (resolve, reject) {
+          if (!file) { reject(new Error("Please choose an image file.")); return; }
+          if (file.type && file.type.indexOf("image/") !== 0) {
+            reject(new Error("Please choose image files only."));
+            return;
+          }
+          var url = URL.createObjectURL(file);
+          var img = new Image();
+          img.onload = function () {
+            var w = img.naturalWidth || img.width;
+            var h = img.naturalHeight || img.height;
+            var scale = Math.min(1, MAX_DIM / Math.max(w || 1, h || 1));
+            var cw = Math.max(1, Math.round(w * scale));
+            var ch = Math.max(1, Math.round(h * scale));
+            var canvas = document.createElement("canvas");
+            canvas.width = cw;
+            canvas.height = ch;
+            var ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0, cw, ch);
+            URL.revokeObjectURL(url);
+            (async function () {
+              var quality = 0.8;
+              var blob = await canvasToBlob(canvas, quality);
+              if (blob && blob.size > 1.2 * 1024 * 1024) {
+                quality = 0.6;
+                blob = await canvasToBlob(canvas, quality);
+              }
+              if (!blob) { reject(new Error("Could not process that photo.")); return; }
+              var encoded = await blobToBase64(blob);
+              var base = String(file.name || "photo").replace(/\.[^.]+$/, "").replace(/[^A-Za-z0-9._-]+/g, "-") || "photo";
+              resolve({
+                filename: base.slice(0, 60) + ".jpg",
+                type: "image/jpeg",
+                content: encoded.b64,
+                preview: encoded.dataUrl,
+                size: blob.size
+              });
+            })().catch(function (e) { reject(e); });
+          };
+          img.onerror = function () {
+            URL.revokeObjectURL(url);
+            reject(new Error("Could not open that photo. Please try a JPG, PNG, or similar image."));
+          };
+          img.src = url;
+        });
+      }
+
+      function totalBytes(photos) {
+        var n = 0;
+        for (var i = 0; i < photos.length; i++) n += photos[i].size || 0;
+        return n;
+      }
+
+      function bindLeadForm(form) {
+        var root = form.parentNode;
+        var err = form.querySelector(".lead-error");
+        var btn = form.querySelector(".lead-submit");
+        var fileInput = form.querySelector(".lead-photos");
+        var thumbs = form.querySelector(".lead-thumbs");
+        var pay = root.querySelector(".lead-pay");
+        var photos = [];
+
+        function renderThumbs() {
+          thumbs.innerHTML = "";
+          if (!photos.length) { thumbs.hidden = true; return; }
+          thumbs.hidden = false;
+          photos.forEach(function (p, i) {
+            var fig = document.createElement("figure");
+            fig.className = "photo-thumb";
+            var img = document.createElement("img");
+            img.src = p.preview;
+            img.alt = p.filename || ("Photo " + (i + 1));
+            var rm = document.createElement("button");
+            rm.type = "button";
+            rm.setAttribute("aria-label", "Remove " + (p.filename || "photo"));
+            rm.textContent = "×";
+            rm.addEventListener("click", function () {
+              photos.splice(i, 1);
+              renderThumbs();
+            });
+            fig.appendChild(img);
+            fig.appendChild(rm);
+            thumbs.appendChild(fig);
+          });
+        }
+
+        fileInput.addEventListener("change", function () {
+          var files = Array.prototype.slice.call(fileInput.files || []);
+          fileInput.value = "";
+          err.textContent = "";
+          if (!files.length) return;
+          var room = MAX_PHOTOS - photos.length;
+          if (room <= 0) { err.textContent = "You can add up to 5 photos."; return; }
+          if (files.length > room) {
+            files = files.slice(0, room);
+            err.textContent = "Only the first " + room + " photo(s) were added (maximum 5).";
+          }
+          btn.disabled = true;
+          var tasks = files.map(function (f) { return resizeImage(f); });
+          Promise.all(tasks).then(function (added) {
+            var next = photos.concat(added);
+            if (totalBytes(next) > MAX_TOTAL) {
+              err.textContent = "Those photos are too large together. Please choose fewer or smaller images.";
+            } else {
+              photos = next;
+              renderThumbs();
+            }
+          }).catch(function (e) {
+            err.textContent = (e && e.message) || "Could not add those photos.";
+          }).then(function () { btn.disabled = false; });
+        });
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var email = form.querySelector(".lead-email").value.trim();
+          var message = form.querySelector(".lead-message").value.trim().slice(0, 2000);
+          if (!EMAIL_RE.test(email)) { err.textContent = "Please enter a valid email address."; return; }
+          if (!message) { err.textContent = "Please describe the website you want."; form.querySelector(".lead-message").focus(); return; }
+          if (totalBytes(photos) > MAX_TOTAL) { err.textContent = "Those photos are too large together. Please remove one and try again."; return; }
+          err.textContent = "";
+          btn.disabled = true;
+          var body = {
             event: "submit",
             email: email,
-            message: document.getElementById("message").value.trim().slice(0, 2000),
+            message: message,
             page: location.pathname,
-            hp: document.getElementById("hp").value
-          })
-        }).then(function (r) {
-          if (!r.ok) throw new Error("status " + r.status);
-          form.hidden = true;
-          document.getElementById("thanks").hidden = false;
-        }).catch(function () {
-          btn.disabled = false;
-          err.innerHTML = 'Sorry, that did not go through. Please try again or email <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>.';
+            source: form.getAttribute("data-source") || "website",
+            hp: (form.querySelector(".lead-hp") || {}).value || "",
+            photos: photos.map(function (p) { return { filename: p.filename, type: p.type, content: p.content }; })
+          };
+          fetch("/api/builder-lead", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(body)
+          }).then(function (r) {
+            if (!r.ok) {
+              return r.json().then(function (j) {
+                var code = j && j.error;
+                var msg = "Sorry, that did not go through. Please try again or email info@brightfrontdesign.com.";
+                if (r.status === 429) msg = "Please wait a bit and try again. Too many requests came from this connection.";
+                else if (code === "too large" || code === "photos too large" || code === "photo too large") msg = "Those photos are too large. Please remove one and try again.";
+                else if (code === "photo type") msg = "Please upload regular photos (JPG, PNG, WEBP or GIF).";
+                else if (code === "email") msg = "Please enter a valid email address.";
+                else if (code === "message") msg = "Please describe the website you want.";
+                throw new Error(msg);
+              }, function () { throw new Error("Sorry, that did not go through. Please try again or email info@brightfrontdesign.com."); });
+            }
+            form.hidden = true;
+            if (pay) {
+              var custom = pay.querySelector(".pp-first-custom");
+              if (custom) custom.value = email.slice(0, 255);
+              pay.hidden = false;
+              pay.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            }
+          }).catch(function (e) {
+            btn.disabled = false;
+            var fallback = 'Sorry, that did not go through. Please try again or email <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>.';
+            if (e && e.message && e.message.indexOf("info@brightfrontdesign.com") === -1) {
+              err.textContent = e.message;
+            } else {
+              err.innerHTML = fallback;
+            }
+          });
         });
-      });
+      }
+
+      document.querySelectorAll("form.lead-form").forEach(bindLeadForm);
       document.querySelectorAll(".mob-nav a").forEach(function (a) {
         a.addEventListener("click", function () { document.querySelector(".mob-nav").open = false; });
       });
     })();
   </script>
+
 </body>
 </html>

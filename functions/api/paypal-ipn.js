@@ -377,23 +377,27 @@ export async function onRequestPost({ request, env }) {
   const pack = packFromText(itemName) || packFromAmount(gross);
   const isOurs = /brightfront/i.test(itemName) || (!itemName && !!pack);
   const amountOk = !!pack && cur === "USD" && num(gross) >= minPrice(pack) - 0.005;
+  // One-time $250 start-build payment from the homepage request form (_xclick).
+  // Just log/notify the owner; do not treat it as a subscription or a package mismatch.
+  const isFirstBuild = /brightfront/i.test(itemName) && /first payment|start build/i.test(itemName) && cur === "USD" && sameAmount(gross, 250);
   const first = g("first_name"), last = g("last_name");
-  const warn = pack && !amountOk ? ` ⚠️ 정가 ${usd(minPrice(pack))} USD와 다름 — 감사 이메일 보류` : "";
+  const warn = pack && !amountOk && !isFirstBuild ? ` ⚠️ 정가 ${usd(minPrice(pack))} USD와 다름 — 감사 이메일 보류` : "";
+  const visitorEmail = g("custom");
 
   try {
     const result = await processPayment(env, {
-      id: txnId, kind: "onetime", sendEmail: isOurs && amountOk,
+      id: txnId, kind: "onetime", sendEmail: isOurs && amountOk && !isFirstBuild,
       amount: gross, currency: cur,
       payerName: [first, last].filter(Boolean).join(" "), firstName: first, payerEmail: g("payer_email"),
       emailItemHtml: pack ? `the <strong>${PACKAGES[pack].name}</strong> package (${usd(gross)}, one-time)` : esc(itemName),
       emailItemText: pack ? `the ${PACKAGES[pack].name} package (${usd(gross)}, one-time)` : itemName,
-      titleKo: isOurs ? "💳 새 결제 — 일회성 (PayPal 링크)" : "💳 PayPal 결제 (Brightfront 상품 아님)",
+      titleKo: isFirstBuild ? "🎉 새 결제 — 웹사이트 선금 $250" : (isOurs ? "💳 새 결제 — 일회성 (PayPal 링크)" : "💳 PayPal 결제 (Brightfront 상품 아님)"),
       amountKo: amountText(gross, cur) + warn,
       itemKo: itemName || (pack ? PACKAGES[pack].name : "-"),
       refLabel: "PayPal 거래 ID", refId: txnId,
-      extraKo: [["상호(PayPal)", g("payer_business_name")]],
-      memo: g("memo"),
-      source: "PayPal IPN",
+      extraKo: [["상호(PayPal)", g("payer_business_name")], ["요청 이메일", visitorEmail]],
+      memo: [g("memo"), visitorEmail].filter(Boolean).join(" / "),
+      source: isFirstBuild ? "PayPal IPN first-build $250" : "PayPal IPN",
     });
     console.log("paypal-ipn", txnId, JSON.stringify(result));
     if (result.errors.length) return new Response("retry", { status: 500 }); // IPN will retry
