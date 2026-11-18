@@ -12,11 +12,11 @@ Brightfront Studio offers TWO services. Facts you may use, and NOTHING else:
 
 1) WEBSITES for small businesses (cafes, restaurants, salons, clinics, shops, food trucks, local services).
 - Services: website design, landing pages, online booking/menus, local SEO and Google Business setup, maintenance and hosting.
-- How it works: we build a FREE homepage preview first. The client reviews it and requests tweaks. They pay only if they love it. Then we finish and launch.
-- Pricing: Free website setup, then $39/month or $390/year (yearly is 2 months free). Locked price — your rate does not go up. Payment via PayPal or card. Cancel anytime.
+- How it works: the client tells us about their business and pays $250 to start. We build the website and email it to them. They review it and request tweaks. When they approve the finished website, they pay the remaining $250 and we launch it.
+- Pricing: $250 upfront to start the build, $250 after the client approves the finished website, then $39/month maintenance (hosting, updates and changes). Locked price — the $39/month rate does not go up. Cancel the maintenance anytime. Payment via PayPal. There is no free setup and no yearly plan; never offer either.
 - Never mention any other website price, package, discount, sale, or care plan.
 - Domain setup add-on: $49 plus the domain cost (usually $10–15/year).
-- Payment is after they approve the preview.
+- The first $250 is due before we start building; the second $250 is due only after they approve the finished website.
 
 2) CUSTOM BUSINESS SOFTWARE / TOOLS for small businesses.
 - Examples: online booking/appointment systems, order and inventory trackers, customer lists (CRM) with reminders, automated email/SMS/Telegram notifications, invoices and quotes, staff schedules, simple dashboards and reports, AI chat assistants for their website.
@@ -29,9 +29,9 @@ Contact email: ${CONTACT_EMAIL}.
 Never invent timelines, guarantees, discounts, past clients, reviews, or phone numbers. If you are unsure, say the team can follow up by email at ${CONTACT_EMAIL}.
 
 Lead collection (main goal): answer helpfully, then gently collect details so the team can follow up. Ask for them a little at a time, not all at once.
-- For a website preview: name, business name, what they sell, city, current website/Instagram/Facebook if any, and email.
+- For a website: name, business name, what they sell, city, current website/Instagram/Facebook if any, and email.
 - For software: name, business name and type, the problem or task they want to solve, the tools they use today (e.g. spreadsheets, paper, WhatsApp), rough number of staff or customers, any deadline or budget range, and email (phone optional).
-When you have their email, confirm that the team will reply by email, usually with a free preview (websites) or a free consultation and mini demo (software).`;
+When you have their email, confirm that the team will reply by email, usually with next steps to start the build (websites) or a free consultation and mini demo (software).`;
 
 const SOFTWARE_RE = /software|app\b|tool|system|booking|appointment|inventory|stock|crm|customer list|reminder|invoice|quote|schedul|shift|dashboard|report|automat|notification|telegram|sms|chatbot|ai chat|소프트웨어|업무 툴|예약 시스템|재고|ソフト|ツール|在庫|予約システム|软件|系统|库存|برمج|نظام/i;
 
@@ -75,7 +75,7 @@ function corsHeaders(request) {
 }
 
 function fallbackReply() {
-  return `Sorry, I could not answer just now. Email ${CONTACT_EMAIL} with your name, business, city, and what you sell, and the team will send a free homepage preview or a free software consultation.`;
+  return `Sorry, I could not answer just now. Email ${CONTACT_EMAIL} with your name, business, city, and what you sell, and the team will reply with next steps for your website or a free software consultation.`;
 }
 
 function extractReply(result) {
