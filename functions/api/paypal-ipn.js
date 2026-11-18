@@ -26,7 +26,7 @@ const TIERS = {
   standard: { name: "Standard", monthly: 39 },
   pro: { name: "Pro", monthly: 69 },
 };
-// Locked pricing for the Standard subscription button: free setup, then $39/month or $390/year.
+// Current pricing: $250 upfront, $250 after approval, then $39/month maintenance.
 const SUB_MONTHLY = 39;
 const SUB_YEARLY = 390;
 const TRIAL_MONTHS = { starter: 1, business: 1, premium: 3 };
@@ -289,6 +289,17 @@ export async function onRequestPost({ request, env }) {
   const g = (k) => (q.get(k) || "").trim();
   const txnId = g("txn_id");
   const txnType = g("txn_type");
+
+  // Subscription cancelled / ended: alert the owner (Telegram, text only), then 200.
+  if (txnType === "subscr_cancel" || txnType === "subscr_eot") {
+    const recv = (g("receiver_email") || g("business")).toLowerCase();
+    if (recv !== RECEIVER_EMAIL) { console.warn("ipn: wrong receiver (subscr end)", g("subscr_id")); return new Response("ignored", { status: 200 }); }
+    const label = txnType === "subscr_cancel" ? "PayPal 구독 해지: " : "PayPal 구독 종료: ";
+    try {
+      await sendTelegram(env, label + (g("subscr_id") || "-") + " / " + (g("payer_email") || "-"));
+      return new Response("", { status: 200 });
+    } catch (e) { console.error("ipn " + txnType + " telegram error", e && e.message); return new Response("retry", { status: 500 }); }
+  }
 
   // Brightfront subscription (PayPal Standard _xclick-subscriptions, no plan id):
   // Free setup (no trial / amount1 absent or 0), then $39/month (period3 "1 M") or $390/year (period3 "1 Y").

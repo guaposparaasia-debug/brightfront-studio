@@ -416,7 +416,7 @@
               <input type="hidden" name="notify_url" value="https://brightfrontdesign.com/api/paypal-ipn">
               <input type="hidden" name="return" value="https://brightfrontdesign.com/thanks/">
               <input type="hidden" name="cancel_return" value="https://brightfrontdesign.com/zh/">
-              <button type="submit" class="btn btn-ghost" id="pp-submit">维护费 — 每月 $39，使用 PayPal 支付</button>
+              <button type="submit" class="btn btn-primary" id="pp-submit">维护费 — 每月 $39，使用 PayPal 支付</button>
               <p class="pp-note">可通过 PayPal 结账页面使用银行卡支付。可随时在您的 PayPal 账户中取消，没有合同约束。</p>
             </form>
 <script>
@@ -427,67 +427,6 @@ if(!b){e.preventDefault();bi.setCustomValidity('请输入您的店铺名称。')
 var ref=new URLSearchParams(location.search).get('ref')||((document.getElementById('ls-ref')||{}).value)||'';
 document.getElementById('pp-os0').value=b.slice(0,64);
 document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);});})();
-</script>
-<form id="ls-form" class="ls-form" novalidate>
-  <label>店铺名称
-    <input id="ls-biz" class="ls-input" type="text" required maxlength="64" autocomplete="organization">
-  </label>
-  <label>您的预览链接或网站（选填）
-    <input id="ls-ref" class="ls-input" type="text" inputmode="url">
-  </label>
-  <label>您的姓名（选填）
-    <input id="ls-name" class="ls-input" type="text" autocomplete="name">
-  </label>
-  <button type="submit" class="btn btn-primary" id="ls-submit">维护费 — 每月 $39，银行卡支付</button>
-</form>
-<p class="pp-note">银行卡支付由 Lemon Squeezy 提供安全结账。可随时取消。</p>
-<script src="https://assets.lemonsqueezy.com/lemon.js" defer
-        onload="window.createLemonSqueezy && window.createLemonSqueezy()"></script>
-<script>
-(function () {
-  var LS_MONTHLY = 'https://chedlab.lemonsqueezy.com/checkout/buy/37fb2c40-075a-4d33-a318-417e56fd8357?enabled=2280377&embed=1';
-  var form = document.getElementById('ls-form');
-  var biz = document.getElementById('ls-biz');
-  var ref = document.getElementById('ls-ref');
-  var name = document.getElementById('ls-name');
-  var pre = new URLSearchParams(location.search).get('ref');
-  if (!pre) {
-    try {
-      var raw = localStorage.getItem('bf_builder_lead');
-      if (raw) {
-        try {
-          var o = JSON.parse(raw);
-          pre = typeof o === 'string' ? o : (o && (o.url || o.link || o.ref || o.preview)) || raw;
-        } catch (e) { pre = raw; }
-      }
-    } catch (e) {}
-  }
-  if (pre && !ref.value) ref.value = String(pre);
-  biz.addEventListener('input', function () { biz.setCustomValidity(''); });
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var b = biz.value.trim();
-    if (!b) {
-      biz.setCustomValidity('请输入您的店铺名称。');
-      biz.reportValidity();
-      return;
-    }
-    var u = new URL(LS_MONTHLY);
-    u.searchParams.set('embed', '1');
-    u.searchParams.set('checkout[custom][business_name]', b);
-    var r = ref.value.trim();
-    if (r) u.searchParams.set('checkout[custom][preview_ref]', r);
-    var n = name.value.trim();
-    if (n) u.searchParams.set('checkout[name]', n);
-    u.searchParams.set('checkout[custom][source]', 'brightfrontdesign.com');
-    var url = u.toString();
-    if (window.LemonSqueezy && window.LemonSqueezy.Url && typeof window.LemonSqueezy.Url.Open === 'function') {
-      window.LemonSqueezy.Url.Open(url);
-    } else {
-      window.open(url, '_blank', 'noopener');
-    }
-  });
-})();
 </script>
         </details>
       </div>

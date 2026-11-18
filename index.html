@@ -401,7 +401,7 @@
               <input type="hidden" name="notify_url" value="https://brightfrontdesign.com/api/paypal-ipn">
               <input type="hidden" name="return" value="https://brightfrontdesign.com/thanks/">
               <input type="hidden" name="cancel_return" value="https://brightfrontdesign.com/">
-              <button type="submit" class="btn btn-ghost" id="pp-submit">Maintenance — $39/month with PayPal</button>
+              <button type="submit" class="btn btn-primary" id="pp-submit">Maintenance — $39/month with PayPal</button>
               <p class="pp-note">Cards accepted via PayPal checkout. Cancel anytime in your PayPal account, no contract.</p>
             </form>
 <script>
@@ -412,67 +412,6 @@ if(!b){e.preventDefault();bi.setCustomValidity('Please enter your business name.
 var ref=new URLSearchParams(location.search).get('ref')||((document.getElementById('ls-ref')||{}).value)||'';
 document.getElementById('pp-os0').value=b.slice(0,64);
 document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);});})();
-</script>
-<form id="ls-form" class="ls-form" novalidate>
-  <label>Business name
-    <input id="ls-biz" class="ls-input" type="text" required maxlength="64" autocomplete="organization">
-  </label>
-  <label>Your preview link or website (optional)
-    <input id="ls-ref" class="ls-input" type="text" inputmode="url">
-  </label>
-  <label>Your name (optional)
-    <input id="ls-name" class="ls-input" type="text" autocomplete="name">
-  </label>
-  <button type="submit" class="btn btn-primary" id="ls-submit">Maintenance — $39/month by card</button>
-</form>
-<p class="pp-note">Secure card checkout by Lemon Squeezy. Cancel anytime.</p>
-<script src="https://assets.lemonsqueezy.com/lemon.js" defer
-        onload="window.createLemonSqueezy && window.createLemonSqueezy()"></script>
-<script>
-(function () {
-  var LS_MONTHLY = 'https://chedlab.lemonsqueezy.com/checkout/buy/37fb2c40-075a-4d33-a318-417e56fd8357?enabled=2280377&embed=1';
-  var form = document.getElementById('ls-form');
-  var biz = document.getElementById('ls-biz');
-  var ref = document.getElementById('ls-ref');
-  var name = document.getElementById('ls-name');
-  var pre = new URLSearchParams(location.search).get('ref');
-  if (!pre) {
-    try {
-      var raw = localStorage.getItem('bf_builder_lead');
-      if (raw) {
-        try {
-          var o = JSON.parse(raw);
-          pre = typeof o === 'string' ? o : (o && (o.url || o.link || o.ref || o.preview)) || raw;
-        } catch (e) { pre = raw; }
-      }
-    } catch (e) {}
-  }
-  if (pre && !ref.value) ref.value = String(pre);
-  biz.addEventListener('input', function () { biz.setCustomValidity(''); });
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var b = biz.value.trim();
-    if (!b) {
-      biz.setCustomValidity('Please enter your business name.');
-      biz.reportValidity();
-      return;
-    }
-    var u = new URL(LS_MONTHLY);
-    u.searchParams.set('embed', '1');
-    u.searchParams.set('checkout[custom][business_name]', b);
-    var r = ref.value.trim();
-    if (r) u.searchParams.set('checkout[custom][preview_ref]', r);
-    var n = name.value.trim();
-    if (n) u.searchParams.set('checkout[name]', n);
-    u.searchParams.set('checkout[custom][source]', 'brightfrontdesign.com');
-    var url = u.toString();
-    if (window.LemonSqueezy && window.LemonSqueezy.Url && typeof window.LemonSqueezy.Url.Open === 'function') {
-      window.LemonSqueezy.Url.Open(url);
-    } else {
-      window.open(url, '_blank', 'noopener');
-    }
-  });
-})();
 </script>
         </details>
       </div>
