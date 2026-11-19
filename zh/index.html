@@ -64,6 +64,8 @@
     .btn-ghost:hover { background:var(--ink); color:var(--paper); }
     .btn:disabled { opacity:.45; cursor:not-allowed; }
     .pp-note { margin:.5rem 0 0; font-size:.85rem; color:var(--muted); }
+    .stripe-pay { width:100%; margin-top:.6rem; }
+    details.maint-later .stripe-pay { width:auto; }
     .site-header { position:sticky; top:0; z-index:30; background:color-mix(in srgb,var(--paper) 90%,transparent); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
     .bar { min-height:4.25rem; display:flex; align-items:center; justify-content:space-between; gap:.75rem; }
     .header-cta { display:none; }
@@ -377,6 +379,8 @@
                 <button type="submit" class="btn">支付 $250，开始制作我的网站</button>
               </form>
               <p class="pp-note">您将通过 PayPal 付款。在 PayPal 结账页面可使用银行卡支付。</p>
+              <button type="button" class="btn-ghost stripe-pay" data-plan="start">通过 Stripe 用银行卡支付 $250</button>
+              <p class="pp-note stripe-err" role="alert" aria-live="polite"></p>
             </div>
             <noscript><p class="fine">此表单需要启用 JavaScript。请直接发送邮件至 <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>。</p></noscript>
           </div>
@@ -419,6 +423,9 @@
               <button type="submit" class="btn btn-primary" id="pp-submit">维护费 — 每月 $39，使用 PayPal 支付</button>
               <p class="pp-note">可通过 PayPal 结账页面使用银行卡支付。可随时在您的 PayPal 账户中取消，没有合同约束。</p>
             </form>
+            <button type="button" class="btn-ghost stripe-pay" data-plan="maintenance">维护费 — 每月 $39，使用 Stripe 支付</button>
+            <p class="pp-note">也可通过 Stripe 用银行卡支付。可随时取消，没有合同约束。</p>
+            <p class="pp-note stripe-err" role="alert" aria-live="polite"></p>
 <script>
 (function(){var f=document.getElementById('pp-sub');if(!f)return;var bi=document.getElementById('pp-biz');
 bi.addEventListener('input',function(){bi.setCustomValidity('');});
@@ -475,6 +482,8 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
                 <button type="submit" class="btn">支付 $250，开始制作我的网站</button>
               </form>
               <p class="pp-note">您将通过 PayPal 付款。在 PayPal 结账页面可使用银行卡支付。</p>
+              <button type="button" class="btn-ghost stripe-pay" data-plan="start">通过 Stripe 用银行卡支付 $250</button>
+              <p class="pp-note stripe-err" role="alert" aria-live="polite"></p>
             </div>
             <noscript><p class="fine">此表单需要启用 JavaScript。请直接发送邮件至 <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>。</p></noscript>
         </div>
@@ -713,6 +722,31 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
         a.addEventListener("click", function () { document.querySelector(".mob-nav").open = false; });
       });
     })();
+  </script>
+
+  <script>
+  /* Stripe Checkout buttons (PayPal forms above stay unchanged). */
+  (function(){
+    var MSG_BIZ='请输入您的店铺名称。', MSG_ERR='无法打开银行卡支付页面。请改用 PayPal，或发邮件至 info@brightfrontdesign.com。';
+    document.querySelectorAll('.stripe-pay').forEach(function(b){
+      b.addEventListener('click',function(){
+        var plan=b.getAttribute('data-plan'), err=b.parentNode.querySelector('.stripe-err'), body={plan:plan};
+        if(plan==='maintenance'){
+          var bi=document.getElementById('pp-biz'), biz=bi?bi.value.trim():'';
+          if(!biz){if(bi){bi.setCustomValidity(MSG_BIZ);bi.reportValidity();}return;}
+          body.business=biz.slice(0,64);
+          body.ref=new URLSearchParams(location.search).get('ref')||((document.getElementById('ls-ref')||{}).value)||'';
+        } else {
+          var pay=b.closest('.lead-pay'), c=pay&&pay.querySelector('.pp-first-custom');
+          body.email=c?c.value:'';
+        }
+        b.disabled=true; if(err)err.textContent='';
+        fetch('/api/stripe-checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})
+          .then(function(r){return r.json().then(function(j){if(!r.ok||!j||!j.url)throw new Error('stripe');location.href=j.url;});})
+          .catch(function(){b.disabled=false;if(err)err.textContent=MSG_ERR;});
+      });
+    });
+  })();
   </script>
 
 </body>
