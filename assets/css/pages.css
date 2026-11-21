@@ -1,0 +1,89 @@
+/* Shared styles for the simple content pages (404, /for/*, /resources/*).
+   Same palette, fonts and type scale as the homepage. Linked as pages.css?v=N:
+   bump N when this file changes, because /assets/* is cached for 30 days. */
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url(/assets/fonts/instrument-sans-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400 600;font-display:swap;src:url(/assets/fonts/instrument-sans-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Instrument Serif';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/instrument-serif-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:'Instrument Serif';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/instrument-serif-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+:root{--paper:#F6F3EC;--paper-2:#EFEAE1;--ink:#1A1916;--muted:#5E5A53;--line:#DDD6C8;--pine:#1C3D34;--pine-2:#142E27;
+  --serif:"Instrument Serif",Georgia,serif;--sans:"Instrument Sans",system-ui,sans-serif;--max:1120px;--read:44rem}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:5rem;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-underline-offset:.2em}
+:focus-visible{outline:2px solid var(--pine);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;text-wrap:balance;margin:0}
+p{text-wrap:pretty}
+.wrap{width:min(var(--max),calc(100% - 2.5rem));margin-inline:auto}
+.read{max-width:var(--read)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:absolute;left:.8rem;top:-4rem;background:var(--pine);color:var(--paper);padding:.6rem .8rem;z-index:90}.skip:focus{top:.6rem}
+
+.site-header{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.bar{min-height:4.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:.5rem 0}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;letter-spacing:-.01em}
+.brand svg{width:28px;height:28px;flex:none}
+.top-nav{display:flex;flex-wrap:wrap;align-items:center;gap:.25rem 1.25rem;font-size:.95rem}
+.top-nav a{text-decoration:none;min-height:40px;display:inline-flex;align-items:center}
+.top-nav a:hover{text-decoration:underline}
+
+main{padding:3rem 0 4.5rem}
+@media (min-width:800px){main{padding:4.5rem 0 6rem}}
+.crumbs{font-size:.85rem;color:var(--muted);margin:0 0 1.25rem}
+.crumbs a{color:var(--muted)}
+.eyebrow{margin:0 0 .8rem;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:clamp(2.2rem,5vw,3.4rem);line-height:1.06;letter-spacing:-.025em}
+h2{font-size:clamp(1.6rem,3vw,2.15rem);line-height:1.12;letter-spacing:-.015em;margin:2.6rem 0 .7rem}
+h3{font-size:1.35rem;line-height:1.2;margin:1.6rem 0 .4rem}
+.lede{font-size:1.15rem;color:var(--muted);margin:1.1rem 0 0}
+main p,main li{color:#2E2B26}
+main p{margin:.85rem 0 0}
+main ul,main ol{padding-left:1.25rem;margin:.85rem 0 0}
+main li{margin:.35rem 0}
+.meta{font-size:.88rem;color:var(--muted);margin-top:1rem}
+
+.hero-photo{margin:2rem 0 0}
+.hero-photo img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--paper-2)}
+.hero-photo figcaption{margin-top:.55rem;color:var(--muted);font-size:.9rem}
+
+.price-box{margin:2rem 0 0;background:#fff;border:1px solid var(--line);border-top:3px solid var(--pine);padding:1.3rem 1.4rem}
+.price-box h2{margin-top:0}
+.price-list{list-style:none;padding:0;margin:.6rem 0 0;display:grid;gap:.5rem}
+.price-list li{display:flex;justify-content:space-between;gap:1rem;border-top:1px solid var(--line);padding:.6rem 0 0;margin:0}
+.price-list b{font-family:var(--serif);font-weight:400;font-size:1.35rem;white-space:nowrap}
+
+.table-wrap{overflow-x:auto;margin:1.2rem 0 0;border:1px solid var(--line);background:#fff}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.95rem}
+th,td{text-align:left;vertical-align:top;padding:.7rem .8rem;border-bottom:1px solid var(--line)}
+thead th{background:var(--paper-2);font-weight:600}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}
+
+.note{margin:1.6rem 0 0;padding:1rem 1.2rem;background:var(--paper-2)}
+.note p:first-child{margin-top:0}
+
+.cta{margin:2.8rem 0 0;padding:1.5rem;border:1px solid var(--line);background:#fff}
+.cta h2{margin-top:0}
+.actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.1rem}
+.btn,.btn-ghost{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 1.15rem;text-decoration:none;border:1px solid transparent;background:var(--pine);color:var(--paper);font-size:.95rem}
+.btn:hover{background:var(--pine-2)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:var(--paper)}
+
+.cards{list-style:none;padding:0;margin:1.6rem 0 0;display:grid;gap:1rem}
+@media (min-width:760px){.cards{grid-template-columns:1fr 1fr}}
+.cards li{margin:0;background:#fff;border:1px solid var(--line);padding:1.2rem 1.3rem}
+.cards h2,.cards h3{margin:0 0 .35rem;font-size:1.35rem}
+.cards a{text-decoration:none}
+.cards a:hover{text-decoration:underline}
+.cards p{margin:0;color:var(--muted)}
+
+.related{margin:2.8rem 0 0;border-top:1px solid var(--line);padding-top:1.4rem}
+.related h2{margin-top:0;font-size:1.5rem}
+
+.site-footer{border-top:1px solid var(--line);padding:2.4rem 0 3rem}
+.foot{display:grid;gap:1.4rem}
+@media (min-width:800px){.foot{grid-template-columns:1.5fr 1fr}}
+.foot nav{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;font-size:.95rem}
+.fine{color:var(--muted);font-size:.85rem;margin:.4rem 0 0}

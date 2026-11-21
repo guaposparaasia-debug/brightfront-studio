@@ -1,0 +1,15 @@
+# Cloudflare Pages response headers.
+
+# Preview pages are outreach mock-ups for individual shops, not portfolio pages.
+# Keep them out of search results. robots.txt no longer blocks /preview/ so
+# crawlers can actually fetch these pages and see this header and the meta tag.
+/preview/*
+  X-Robots-Tag: noindex, nofollow
+
+# Static images, fonts and example screenshots. Files are overwritten in place
+# (names are not content-hashed), so cache for 30 days but do not use "immutable".
+/img/*
+  Cache-Control: public, max-age=2592000
+
+/assets/*
+  Cache-Control: public, max-age=2592000

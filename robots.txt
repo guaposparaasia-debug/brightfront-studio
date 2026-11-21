@@ -2,5 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /cdn-cgi/
-Disallow: /preview/
 Sitemap: https://brightfrontdesign.com/sitemap.xml
