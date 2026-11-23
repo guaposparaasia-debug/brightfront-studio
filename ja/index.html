@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Remember a manual language choice from the switcher (localStorage "bf_lang") so / never auto-redirects. -->
+  <script>document.addEventListener("click",function(e){var a=e.target&&e.target.closest&&e.target.closest("nav.lang a[hreflang]");if(!a)return;try{localStorage.setItem("bf_lang",a.getAttribute("hreflang").slice(0,2).toLowerCase())}catch(x){}});</script>
   <title>小さなお店のホームページ制作｜制作開始$250｜Brightfront Studio</title>
   <meta name="description" content="カフェ、美容室、ベーカリー、キッチンカーなど地域のお店向けに、スマートフォンで見やすいホームページを制作。制作開始時$250、ご承認後$250、その後は月額$39でホスティング・更新・修正まで対応します。">
   <meta property="og:type" content="website">

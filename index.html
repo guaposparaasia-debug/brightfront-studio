@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Language: send ja/zh browsers to /ja/ or /zh/ unless the visitor picked a language in the switcher (localStorage "bf_lang").
+       Client-side only, skipped for bots, so crawlers and hreflang are unaffected. -->
+  <script>(function(){try{if(navigator.webdriver||/bot|crawl|spider|Googlebot|bingbot/i.test(navigator.userAgent||""))return;var p=location.pathname;if(p!=="/"&&p!=="/index.html")return;var s=null;try{s=localStorage.getItem("bf_lang")}catch(x){}if(s)return;var l=String((navigator.languages&&navigator.languages[0])||navigator.language||"").toLowerCase();var t=l.indexOf("ja")===0?"/ja/":l.indexOf("zh")===0?"/zh/":"";if(t)location.replace(t+location.search+location.hash)}catch(x){}})();document.addEventListener("click",function(e){var a=e.target&&e.target.closest&&e.target.closest("nav.lang a[hreflang]");if(!a)return;try{localStorage.setItem("bf_lang",a.getAttribute("hreflang").slice(0,2).toLowerCase())}catch(x){}});</script>
   <title>Small Business Websites: $250 to Start | Brightfront Studio</title>
   <meta name="description" content="Affordable small business websites for cafes, salons, bakeries and food trucks: $250 to start, $250 when you approve it, then $39/month for hosting and updates.">
   <meta property="og:type" content="website">
