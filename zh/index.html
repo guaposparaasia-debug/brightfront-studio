@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Remember a manual language choice from the switcher (localStorage "bf_lang") so / never auto-redirects. -->
+  <script>document.addEventListener("click",function(e){var a=e.target&&e.target.closest&&e.target.closest("nav.lang a[hreflang]");if(!a)return;try{localStorage.setItem("bf_lang",a.getAttribute("hreflang").slice(0,2).toLowerCase())}catch(x){}});</script>
   <title>小店网站制作｜启动 $250，每月 $39｜Brightfront Studio</title>
   <meta name="description" content="为咖啡店、美发沙龙、烘焙店、餐车等本地小店制作适配手机的网站。启动时 $250，确认通过后再付 $250，之后每月 $39，含托管、更新与修改。">
   <meta property="og:type" content="website">
