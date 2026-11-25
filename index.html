@@ -170,6 +170,46 @@
     .skip { position:absolute; left:.8rem; top:-4rem; background:var(--pine); color:var(--paper); padding:.6rem .8rem; z-index:90; } .skip:focus { top:.6rem; }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
 
+    /* ---- Polish and new sections (timeline, included, maintenance) ---- */
+    .btn,.btn-ghost { transition:background .15s ease,color .15s ease,transform .15s ease; }
+    .btn:hover,.btn-ghost:hover { transform:translateY(-1px); }
+    .hero-note { padding:.85rem 1rem; background:#fff; border:1px solid var(--line); border-left:3px solid var(--pine); max-width:34rem; color:var(--ink); }
+    .hero-points { list-style:none; padding:0; margin:1.1rem 0 0; display:grid; gap:.45rem; font-size:.95rem; color:var(--muted); }
+    .hero-points li { display:flex; gap:.6rem; align-items:baseline; }
+    .hero-points li::before { content:""; flex:none; width:.5rem; height:.5rem; border-radius:50%; background:var(--pine); }
+    .alt { background:var(--paper-2); }
+    .step { transition:background .15s ease; }
+    .tl { list-style:none; padding:0; margin:2rem 0 0; max-width:52rem; }
+    .tl li { display:grid; grid-template-columns:9.5rem 1fr; gap:.25rem 1.4rem; padding:1.15rem 0; border-top:1px solid var(--line); }
+    .tl li:last-child { border-bottom:1px solid var(--line); }
+    .tl .when { font-family:var(--serif); font-size:1.3rem; line-height:1.2; color:var(--pine); }
+    .tl h3 { margin:0; font-size:1.08rem; font-weight:600; }
+    .tl p { margin:.25rem 0 0; color:var(--muted); }
+    @media (max-width:600px) { .tl li { grid-template-columns:1fr; } }
+    .callout { margin-top:1.6rem; padding:1rem 1.2rem; background:#fff; border:1px solid var(--line); border-left:3px solid var(--pine); max-width:46rem; }
+    .incl { display:grid; gap:1rem; margin-top:2rem; }
+    @media (min-width:900px) { .incl { grid-template-columns:repeat(3,1fr); } }
+    .incl-col { background:#fff; border:1px solid var(--line); padding:1.4rem 1.4rem 1rem; }
+    .incl-col h3 { margin:0 0 .5rem; font-family:var(--serif); font-weight:400; font-size:1.5rem; }
+    .incl-col ul { list-style:none; padding:0; margin:0; }
+    .incl-col li { position:relative; padding:.6rem 0 .6rem 1.6rem; border-top:1px solid var(--line); font-size:.97rem; }
+    .incl-col li::before { position:absolute; left:0; top:.6rem; font-weight:700; }
+    .incl-col.yes { border-top:3px solid var(--pine); } .incl-col.yes li::before { content:"✓"; color:var(--pine); }
+    .incl-col.doc li::before { content:"→"; color:var(--pine); }
+    .incl-col.no { background:transparent; border-style:dashed; } .incl-col.no li { color:var(--muted); } .incl-col.no li::before { content:"—"; color:var(--muted); }
+    .mgrid { display:grid; gap:1rem; margin-top:2rem; }
+    @media (min-width:700px) { .mgrid { grid-template-columns:1fr 1fr; } }
+    @media (min-width:1000px) { .mgrid { grid-template-columns:repeat(3,1fr); } }
+    .mcard { background:#fff; border:1px solid var(--line); padding:1.3rem; }
+    .mcard h3 { margin:0 0 .35rem; font-size:1.08rem; font-weight:600; }
+    .mcard p { margin:0; color:var(--muted); font-size:.97rem; }
+    .howto { display:grid; gap:1.5rem; margin-top:2.4rem; }
+    @media (min-width:900px) { .howto { grid-template-columns:1fr 1fr; align-items:start; } }
+    .howto h3 { font-family:var(--serif); font-weight:400; font-size:1.7rem; margin:0 0 .6rem; }
+    .howto ol { list-style:decimal; margin:0; padding-left:1.3rem; }
+    .howto li { margin:.5rem 0; }
+    .howto .callout { margin-top:0; }
+
     /* Language switcher */
     .lang { display:flex; align-items:center; flex:none; font-size:.82rem; line-height:1; }
     .lang a { display:inline-flex; align-items:center; justify-content:center; min-height:40px; min-width:40px; padding:0 .6rem; margin-left:-1px; text-decoration:none; color:var(--muted); border:1px solid var(--line); white-space:nowrap; }
@@ -272,6 +312,94 @@
       "@type": "Answer",
       "text": "Small, independent businesses such as cafes, salons, bakeries, food trucks and local stores, and anyone who wants a simple, professional website without doing the work themselves."
      }
+    },
+    {
+     "@type": "Question",
+     "name": "How long does it take?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Once we have your photos and details, we aim to email you the first version within about 3 business days. After that it depends on how quickly you review it and send changes."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I ask for changes before I approve?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. That's the point of approval. Look at the finished site on your phone and tell us what you'd like different. You pay the second $250 only once you're happy with it."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Who writes the text?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We do. Send us notes in your own words, even a few lines about what you sell, what makes you different and who you serve, and we turn them into clear, friendly text for the site."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "I don't have a logo. Is that a problem?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Not at all. Many small shops don't. We set your shop's name in clean type that matches the site, and you can send a logo later if you get one."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I need my own domain name?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "If you already have one, tell us in your request. If you'd like a new one, ask us how to set it up. The domain's yearly registration fee is separate from our prices."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can my website take bookings or online orders?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "We can link your site to the booking or ordering service you already use, so customers can tap straight through. Those services have their own fees. Taking payments directly on your website isn't part of this offer."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I pay?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Through PayPal. Cards are accepted at PayPal checkout. The first $250 is paid on this page after you send your request; we send the request for the second $250 with your finished site."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I ask for an update after launch?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Email info@brightfrontdesign.com with the change and any new photos or files. Changes are covered by your $39/month. More detail: what the $39/month covers."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is there a contract?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Maintenance is month to month, and you can cancel anytime."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Will a website get me to the top of Google?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No one can honestly promise rankings. A website with your real hours, services and location written as text gives search engines more to work with, and it pairs well with a complete Google Business Profile. We set clear titles and descriptions; we don't sell ranking guarantees."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do I still need a website if I'm on Instagram?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Instagram is great for showing new work. A website gives everyone, with or without an app, one reliable place for your hours, prices and location. We wrote more in Do I need a website if I already have Instagram?"
+     }
     }
    ]
   }
@@ -290,7 +418,7 @@
         <span>Brightfront Studio</span>
       </a>
       <nav class="desk-nav" aria-label="Primary">
-        <a href="#shops">Who it's for</a><a href="#how">How it works</a><a href="#examples">Examples</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
+        <a href="#shops">Who it's for</a><a href="#how">How it works</a><a href="#examples">Examples</a><a href="#whats-included">What's included</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a>
       </nav>
       <nav class="lang" aria-label="Language"><a href="/" hreflang="en" lang="en" aria-current="page">EN</a><a href="/ja/" hreflang="ja" lang="ja">日本語</a><a href="/zh/" hreflang="zh-CN" lang="zh-CN">中文</a></nav>
       <a class="btn header-cta" href="#contact">Get my website</a>
@@ -298,7 +426,7 @@
     <details class="mob-nav">
       <summary>Menu</summary>
       <nav aria-label="Mobile">
-        <a href="#shops">Who it's for</a><a href="#how">How it works</a><a href="#examples">Examples</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#contact">Get my website</a>
+        <a href="#shops">Who it's for</a><a href="#how">How it works</a><a href="#examples">Examples</a><a href="#whats-included">What's included</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="#contact">Get my website</a>
       </nav>
     </details>
   </header>
@@ -316,6 +444,7 @@
             <a class="btn-ghost" href="#pricing">See pricing</a>
           </div>
           <p class="hero-note"><strong>$250</strong> to start, <strong>$250</strong> when you've approved the finished site, then just <strong>$39/month</strong> for hosting, updates and changes. No surprises.</p>
+          <ul class="hero-points"><li>Phone photos are enough to start</li><li>You approve before the second $250</li><li>Month to month, cancel anytime</li></ul>
         </div>
       </div>
       <div class="hero-photo">
@@ -358,12 +487,29 @@
       </div>
     </section>
 
+    <!-- 3b. Timeline -->
+    <section class="block rule alt" id="timeline">
+      <div class="wrap">
+        <p class="eyebrow">Timeline</p>
+        <h2>What happens, and when.</h2>
+        <p class="lede">A realistic picture of the build, from the first message to the site going live. Most of the waiting is on gathering your photos and details, so the sooner you send them, the sooner you see your site.</p>
+        <ol class="tl">
+          <li><span class="when">Day 1</span><div><h3>You send your request and pay $250</h3><p>Tell us about the shop with the form on this page, add up to five photos, and pay the first $250. That starts the build.</p></div></li>
+          <li><span class="when">About 3 business days</span><div><h3>We email you the first version</h3><p>Once we have your photos and details, we aim to send the first version within about 3 business days, from info@brightfrontdesign.com.</p></div></li>
+          <li><span class="when">Your pace</span><div><h3>You review it and ask for changes</h3><p>Open it on your phone, show it to someone you trust, and reply with anything you'd like changed. We adjust it until it's right.</p></div></li>
+          <li><span class="when">Approval</span><div><h3>You approve and pay the remaining $250</h3><p>When you're happy with the finished site, you pay the second $250 and the website goes live.</p></div></li>
+          <li><span class="when">Every month</span><div><h3>$39 keeps it running</h3><p>Hosting, updates and changes. Email us whenever your hours, menu, prices or photos change.</p></div></li>
+        </ol>
+        <p class="callout">Missing a few photos or your menu? Send what you have. We can start with it, and the clock really starts once we have what we need.</p>
+      </div>
+    </section>
+
     <!-- 4. Examples -->
     <section class="block rule" id="examples">
       <div class="wrap">
-        <p class="eyebrow">Our work</p>
-        <h2>Real shops, real websites.</h2>
-        <p class="lede">Each of these was built around the shop's own photos. Click one to open the live preview.</p>
+        <p class="eyebrow">Example previews</p>
+        <h2>Sample sites for real local shops.</h2>
+        <p class="lede">We design free sample sites for local shops to show what their website could look like, built around each shop's own public photos. Click one to open the sample.</p>
         <div class="shots">
           <figure class="shot"><a href="https://brightfrontdesign.com/preview/luxe-paws-grooming-bristol/" target="_blank" rel="noopener nofollow"><img src="/assets/examples/real/luxe-paws-grooming-bristol.webp" srcset="/assets/examples/real/luxe-paws-grooming-bristol-480w.webp 480w, /assets/examples/real/luxe-paws-grooming-bristol-800w.webp 800w, /assets/examples/real/luxe-paws-grooming-bristol.webp 1440w" sizes="(min-width: 1160px) 363px, (min-width: 700px) calc((100vw - 72px) / 3), calc(100vw - 40px)" width="1440" height="900" loading="lazy" decoding="async" alt="Luxe Paws Grooming website preview with the salon's real photo of a groomed doodle."></a><figcaption>Pet grooming — Luxe Paws Grooming</figcaption></figure>
           <figure class="shot"><a href="https://brightfrontdesign.com/preview/rhodes-barber-shop-anderson/" target="_blank" rel="noopener nofollow"><img src="/assets/examples/real/rhodes-barber-shop-anderson.webp" srcset="/assets/examples/real/rhodes-barber-shop-anderson-480w.webp 480w, /assets/examples/real/rhodes-barber-shop-anderson-800w.webp 800w, /assets/examples/real/rhodes-barber-shop-anderson.webp 1440w" sizes="(min-width: 1160px) 363px, (min-width: 700px) calc((100vw - 72px) / 3), calc(100vw - 40px)" width="1440" height="900" loading="lazy" decoding="async" alt="Rhodes Barber Shop website preview with a real photo of the shop interior."></a><figcaption>Barbershop — Rhodes Barber Shop</figcaption></figure>
@@ -394,6 +540,42 @@
           <img src="/img/07-team.webp" srcset="/img/07-team-800w.webp 800w, /img/07-team-1200w.webp 1200w, /img/07-team.webp 1600w" sizes="(min-width: 1160px) 1120px, calc(100vw - 40px)" width="1600" height="900" loading="lazy" decoding="async" alt="The Brightfront team working together at a table with laptops and sketches.">
           <figcaption class="caption">Small studio, personal service. We build it, we host it, we look after it.</figcaption>
         </figure>
+      </div>
+    </section>
+
+    <!-- 5b. Exactly what's included -->
+    <section class="block rule alt" id="whats-included">
+      <div class="wrap">
+        <p class="eyebrow">What's included</p>
+        <h2>Exactly what you get, and what you don't.</h2>
+        <p class="lede">No fine print. Here is what the $250 + $250 build covers, what you receive, and the things that are separate so nothing surprises you later.</p>
+        <div class="incl">
+          <div class="incl-col yes"><h3>Included in the build</h3><ul><li>A website designed around your shop: your photos, hours, menu or services, location and contact details</li><li>A layout made for phones first, and checked on small screens before you see it</li><li>Writing: you send notes, we turn them into clear, friendly text</li><li>Your photos cropped and sized so the page loads quickly</li><li>Tap-to-call, a directions link, and links to your Instagram, booking or ordering pages</li><li>Changes before approval: tell us what isn't right and we fix it before you pay the second $250</li></ul></div>
+          <div class="incl-col doc"><h3>What you receive</h3><ul><li>A link to review the finished site, emailed from info@brightfrontdesign.com</li><li>The live website, hosted by us and served over HTTPS</li><li>Basic search set-up: a clear page title and description and real, readable text</li><li>One email address for every later change: info@brightfrontdesign.com</li></ul></div>
+          <div class="incl-col no"><h3>Not included in the price</h3><ul><li>Your domain name's yearly registration fee, if you want a new domain</li><li>Fees for third-party services you choose, such as booking apps, online ordering or delivery platforms (we link to them)</li><li>An online shop or taking payments on your website</li><li>Professional photo shoots or logo design</li><li>Paid advertising or running your social media accounts</li></ul></div>
+        </div>
+        <p class="callout">Need one of the things in the last column? Ask before you start, and we'll tell you honestly what's possible.</p>
+      </div>
+    </section>
+
+    <!-- 5c. Maintenance in detail -->
+    <section class="block rule" id="maintenance">
+      <div class="wrap">
+        <p class="eyebrow">Maintenance</p>
+        <h2>What $39 a month covers, in detail.</h2>
+        <p class="lede">Maintenance starts once your site is approved and live. It keeps the website online, secure and accurate, and it covers the changes you ask for, month to month, with no contract.</p>
+        <div class="mgrid">
+          <article class="mcard"><h3>Hosting and HTTPS</h3><p>Your site stays online and is served over HTTPS, the padlock in the browser. No hosting account, server or password for you to manage.</p></article>
+          <article class="mcard"><h3>Kept secure and up to date</h3><p>We keep the site working and current, so it keeps loading quickly and looking right on new phones and browsers.</p></article>
+          <article class="mcard"><h3>Updates to your information</h3><p>New hours, holiday closures, a seasonal menu, price changes, staff changes, fresh photos or new text.</p></article>
+          <article class="mcard"><h3>Changes on request</h3><p>Want a new section, a different photo up top or a link to your new booking app? Email us what you'd like and we make the change.</p></article>
+          <article class="mcard"><h3>A real person</h3><p>Every request goes to info@brightfrontdesign.com and a person from our team reads it and replies.</p></article>
+          <article class="mcard"><h3>Cancel anytime</h3><p>Month to month, no contract. If your plans change, you can cancel.</p></article>
+        </div>
+        <div class="howto">
+          <div><h3>How to ask for a change</h3><ol><li>Email info@brightfrontdesign.com with what you'd like changed. Attach new photos or your new menu if you have them.</li><li>We make the change and check it on a phone.</li><li>We reply to let you know it's live. That's it.</li></ol></div>
+          <p class="callout">Planning something much bigger than an update, like a complete redesign? Email us first and we'll tell you up front what's involved.</p>
+        </div>
       </div>
     </section>
 
@@ -554,7 +736,7 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
     </section>
 
     <!-- 8. FAQ -->
-    <section class="block rule" id="faq">
+    <section class="block rule alt" id="faq">
       <div class="wrap">
         <p class="eyebrow">FAQ</p>
         <h2>Questions, answered plainly.</h2>
@@ -565,6 +747,17 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
           <details class="qa"><summary>Do I need to supply photos or text? <i aria-hidden="true">+</i></summary><p>Phone photos are enough to start. Tell us what you do, send what you have, and we'll shape it into clear, good-looking pages. You can send more or replace anything later. See <a href="/resources/how-to-get-a-website-without-diy/">how to get a website without doing it yourself</a>.</p></details>
           <details class="qa"><summary>Will it work on phones? <i aria-hidden="true">+</i></summary><p>Yes. Every website we build is mobile-friendly and tested on small screens first, because that's where most local customers will find you.</p></details>
           <details class="qa"><summary>Who is this for? <i aria-hidden="true">+</i></summary><p>Small, independent businesses such as cafes, salons, bakeries, food trucks and local stores, and anyone who wants a simple, professional website without doing the work themselves.</p></details>
+          <details class="qa"><summary>How long does it take? <i aria-hidden="true">+</i></summary><p>Once we have your photos and details, we aim to email you the first version within about 3 business days. After that it depends on how quickly you review it and send changes.</p></details>
+          <details class="qa"><summary>Can I ask for changes before I approve? <i aria-hidden="true">+</i></summary><p>Yes. That's the point of approval. Look at the finished site on your phone and tell us what you'd like different. You pay the second $250 only once you're happy with it.</p></details>
+          <details class="qa"><summary>Who writes the text? <i aria-hidden="true">+</i></summary><p>We do. Send us notes in your own words, even a few lines about what you sell, what makes you different and who you serve, and we turn them into clear, friendly text for the site.</p></details>
+          <details class="qa"><summary>I don't have a logo. Is that a problem? <i aria-hidden="true">+</i></summary><p>Not at all. Many small shops don't. We set your shop's name in clean type that matches the site, and you can send a logo later if you get one.</p></details>
+          <details class="qa"><summary>Do I need my own domain name? <i aria-hidden="true">+</i></summary><p>If you already have one, tell us in your request. If you'd like a new one, ask us how to set it up. The domain's yearly registration fee is separate from our prices.</p></details>
+          <details class="qa"><summary>Can my website take bookings or online orders? <i aria-hidden="true">+</i></summary><p>We can link your site to the booking or ordering service you already use, so customers can tap straight through. Those services have their own fees. Taking payments directly on your website isn't part of this offer.</p></details>
+          <details class="qa"><summary>How do I pay? <i aria-hidden="true">+</i></summary><p>Through PayPal. Cards are accepted at PayPal checkout. The first $250 is paid on this page after you send your request; we send the request for the second $250 with your finished site.</p></details>
+          <details class="qa"><summary>How do I ask for an update after launch? <i aria-hidden="true">+</i></summary><p>Email info@brightfrontdesign.com with the change and any new photos or files. Changes are covered by your $39/month. More detail: <a href="/resources/what-maintenance-covers/">what the $39/month covers</a>.</p></details>
+          <details class="qa"><summary>Is there a contract? <i aria-hidden="true">+</i></summary><p>No. Maintenance is month to month, and you can cancel anytime.</p></details>
+          <details class="qa"><summary>Will a website get me to the top of Google? <i aria-hidden="true">+</i></summary><p>No one can honestly promise rankings. A website with your real hours, services and location written as text gives search engines more to work with, and it pairs well with a complete Google Business Profile. We set clear titles and descriptions; we don't sell ranking guarantees.</p></details>
+          <details class="qa"><summary>Do I still need a website if I'm on Instagram? <i aria-hidden="true">+</i></summary><p>Instagram is great for showing new work. A website gives everyone, with or without an app, one reliable place for your hours, prices and location. We wrote more in <a href="/resources/instagram-or-website/">Do I need a website if I already have Instagram?</a></p></details>
         </div>
       </div>
     </section>
