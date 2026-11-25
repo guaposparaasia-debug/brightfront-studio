@@ -169,6 +169,46 @@
     .skip { position:absolute; left:.8rem; top:-4rem; background:var(--pine); color:var(--paper); padding:.6rem .8rem; z-index:90; } .skip:focus { top:.6rem; }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
 
+    /* ---- Polish and new sections (timeline, included, maintenance) ---- */
+    .btn,.btn-ghost { transition:background .15s ease,color .15s ease,transform .15s ease; }
+    .btn:hover,.btn-ghost:hover { transform:translateY(-1px); }
+    .hero-note { padding:.85rem 1rem; background:#fff; border:1px solid var(--line); border-left:3px solid var(--pine); max-width:34rem; color:var(--ink); }
+    .hero-points { list-style:none; padding:0; margin:1.1rem 0 0; display:grid; gap:.45rem; font-size:.95rem; color:var(--muted); }
+    .hero-points li { display:flex; gap:.6rem; align-items:baseline; }
+    .hero-points li::before { content:""; flex:none; width:.5rem; height:.5rem; border-radius:50%; background:var(--pine); }
+    .alt { background:var(--paper-2); }
+    .step { transition:background .15s ease; }
+    .tl { list-style:none; padding:0; margin:2rem 0 0; max-width:52rem; }
+    .tl li { display:grid; grid-template-columns:9.5rem 1fr; gap:.25rem 1.4rem; padding:1.15rem 0; border-top:1px solid var(--line); }
+    .tl li:last-child { border-bottom:1px solid var(--line); }
+    .tl .when { font-family:var(--serif); font-size:1.3rem; line-height:1.2; color:var(--pine); }
+    .tl h3 { margin:0; font-size:1.08rem; font-weight:600; }
+    .tl p { margin:.25rem 0 0; color:var(--muted); }
+    @media (max-width:600px) { .tl li { grid-template-columns:1fr; } }
+    .callout { margin-top:1.6rem; padding:1rem 1.2rem; background:#fff; border:1px solid var(--line); border-left:3px solid var(--pine); max-width:46rem; }
+    .incl { display:grid; gap:1rem; margin-top:2rem; }
+    @media (min-width:900px) { .incl { grid-template-columns:repeat(3,1fr); } }
+    .incl-col { background:#fff; border:1px solid var(--line); padding:1.4rem 1.4rem 1rem; }
+    .incl-col h3 { margin:0 0 .5rem; font-family:var(--serif); font-weight:400; font-size:1.5rem; }
+    .incl-col ul { list-style:none; padding:0; margin:0; }
+    .incl-col li { position:relative; padding:.6rem 0 .6rem 1.6rem; border-top:1px solid var(--line); font-size:.97rem; }
+    .incl-col li::before { position:absolute; left:0; top:.6rem; font-weight:700; }
+    .incl-col.yes { border-top:3px solid var(--pine); } .incl-col.yes li::before { content:"✓"; color:var(--pine); }
+    .incl-col.doc li::before { content:"→"; color:var(--pine); }
+    .incl-col.no { background:transparent; border-style:dashed; } .incl-col.no li { color:var(--muted); } .incl-col.no li::before { content:"—"; color:var(--muted); }
+    .mgrid { display:grid; gap:1rem; margin-top:2rem; }
+    @media (min-width:700px) { .mgrid { grid-template-columns:1fr 1fr; } }
+    @media (min-width:1000px) { .mgrid { grid-template-columns:repeat(3,1fr); } }
+    .mcard { background:#fff; border:1px solid var(--line); padding:1.3rem; }
+    .mcard h3 { margin:0 0 .35rem; font-size:1.08rem; font-weight:600; }
+    .mcard p { margin:0; color:var(--muted); font-size:.97rem; }
+    .howto { display:grid; gap:1.5rem; margin-top:2.4rem; }
+    @media (min-width:900px) { .howto { grid-template-columns:1fr 1fr; align-items:start; } }
+    .howto h3 { font-family:var(--serif); font-weight:400; font-size:1.7rem; margin:0 0 .6rem; }
+    .howto ol { list-style:decimal; margin:0; padding-left:1.3rem; }
+    .howto li { margin:.5rem 0; }
+    .howto .callout { margin-top:0; }
+
     /* Language switcher */
     .lang { display:flex; align-items:center; flex:none; font-size:.82rem; line-height:1; }
     .lang a { display:inline-flex; align-items:center; justify-content:center; min-height:40px; min-width:40px; padding:0 .6rem; margin-left:-1px; text-decoration:none; color:var(--muted); border:1px solid var(--line); white-space:nowrap; }
@@ -284,6 +324,94 @@
       "@type": "Answer",
       "text": "カフェ、美容室、ベーカリー、キッチンカー、地域の店舗など、小規模な個人経営の事業者の方、そしてご自身で作業せずに、シンプルで信頼感のあるホームページを持ちたい方が対象です。"
      }
+    },
+    {
+     "@type": "Question",
+     "name": "どれくらいの期間でできますか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "写真と情報がそろってから、約3営業日を目安に最初の版をメールでお送りします。その後は、ご確認と修正のご依頼のペース次第です。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "承認する前に修正をお願いできますか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "はい、そのためのご承認です。完成したサイトをスマートフォンでご覧いただき、気になる点をお知らせください。2回目の$250は、ご納得いただいてからのお支払いです。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "文章は誰が書くのですか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "私たちが書きます。何を扱っているか、お店の特徴、どんなお客様が多いかなど、数行のメモをいただければ、わかりやすい文章に仕上げます。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ロゴがなくても大丈夫ですか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "まったく問題ありません。店名をサイトに合った書体で整えます。あとからロゴができたら差し替えも可能です。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "独自ドメインは必要ですか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "すでにお持ちの場合は、ご依頼時にお知らせください。新しく取得したい場合は、設定方法をご相談ください。ドメインの年間登録料は当社の料金とは別です。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "予約やオンライン注文はできますか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "お使いの予約サービスや注文サービスへのリンクを設置し、ワンタップで移動できるようにします。各サービスの利用料は別です。サイト上での決済機能はこのプランには含まれません。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "支払い方法は？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "PayPalでのお支払いです。PayPalの画面でクレジットカードもご利用いただけます。最初の$250はご依頼の送信後にこのページで、2回目の$250は完成サイトと一緒にご請求のご案内をお送りします。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "公開後の更新はどう依頼しますか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "変更内容と、新しい写真やファイルを info@brightfrontdesign.com にお送りください。修正は月額$39に含まれます。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "契約期間の縛りはありますか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ありません。保守プランは月単位で、いつでも解約できます。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Googleで上位に表示されますか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "検索順位を正直に約束できる人はいません。営業時間やサービス、場所がテキストで書かれたサイトは、検索エンジンに伝わる情報が増え、Googleビジネスプロフィールとの相性も良くなります。タイトルや説明文は整えますが、順位の保証はしていません。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Instagramがあればホームページは不要では？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Instagramは新しい作品や商品を見せるのに最適です。ホームページは、アプリの有無にかかわらず、営業時間・価格・場所を確実に確認できる場所になります。"
+     }
     }
    ]
   }
@@ -302,7 +430,7 @@
         <span>Brightfront Studio</span>
       </a>
       <nav class="desk-nav" aria-label="メインナビゲーション">
-        <a href="#shops">こんなお店に</a><a href="#how">ご利用の流れ</a><a href="#examples">制作事例</a><a href="#pricing">料金</a><a href="#faq">よくある質問</a>
+        <a href="#shops">こんなお店に</a><a href="#how">ご利用の流れ</a><a href="#examples">制作事例</a><a href="#whats-included">含まれるもの</a><a href="#pricing">料金</a><a href="#faq">よくある質問</a>
       </nav>
       <nav class="lang" aria-label="言語 / Language"><a href="/" hreflang="en" lang="en">EN</a><a href="/ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a><a href="/zh/" hreflang="zh-CN" lang="zh-CN">中文</a></nav>
       <a class="btn header-cta" href="#contact">ホームページを依頼する</a>
@@ -310,7 +438,7 @@
     <details class="mob-nav">
       <summary>メニュー</summary>
       <nav aria-label="モバイルメニュー">
-        <a href="#shops">こんなお店に</a><a href="#how">ご利用の流れ</a><a href="#examples">制作事例</a><a href="#pricing">料金</a><a href="#faq">よくある質問</a><a href="#contact">ホームページを依頼する</a>
+        <a href="#shops">こんなお店に</a><a href="#how">ご利用の流れ</a><a href="#examples">制作事例</a><a href="#whats-included">含まれるもの</a><a href="#pricing">料金</a><a href="#faq">よくある質問</a><a href="#contact">ホームページを依頼する</a>
       </nav>
     </details>
   </header>
@@ -328,6 +456,7 @@
             <a class="btn-ghost" href="#pricing">料金を見る</a>
           </div>
           <p class="hero-note"><strong>$250</strong>で制作スタート、完成したサイトをご承認いただいたら<strong>$250</strong>、その後はホスティング・更新・修正込みで<strong>月額$39</strong>。想定外の費用はありません。</p>
+          <ul class="hero-points"><li>スマートフォンの写真で始められます</li><li>2回目の$250はご承認後</li><li>月単位の契約・いつでも解約可</li></ul>
         </div>
       </div>
       <div class="hero-photo">
@@ -370,12 +499,29 @@
       </div>
     </section>
 
+    <!-- 3b. Timeline -->
+    <section class="block rule alt" id="timeline">
+      <div class="wrap">
+        <p class="eyebrow">スケジュール</p>
+        <h2>いつ、何が進むのか。</h2>
+        <p class="lede">ご依頼から公開までの、実際の流れです。待ち時間の多くは写真や情報を集める時間なので、早めにお送りいただくほど早くサイトをご覧いただけます。</p>
+        <ol class="tl">
+          <li><span class="when">1日目</span><div><h3>ご依頼と、最初の$250のお支払い</h3><p>このページのフォームからお店のことを教えていただき、写真を最大5枚まで添えて、最初の$250をお支払いください。これで制作が始まります。</p></div></li>
+          <li><span class="when">約3営業日</span><div><h3>最初の版をメールでお送りします</h3><p>写真と情報がそろってから、約3営業日を目安に最初の版を info@brightfrontdesign.com からお送りします。</p></div></li>
+          <li><span class="when">お客様のペースで</span><div><h3>確認と修正のご依頼</h3><p>スマートフォンで開いて、気になる点があれば返信でお知らせください。納得いただけるまで調整します。</p></div></li>
+          <li><span class="when">ご承認</span><div><h3>ご承認後に残りの$250</h3><p>完成したサイトにご納得いただけたら、2回目の$250をお支払いいただき、サイトを公開します。</p></div></li>
+          <li><span class="when">毎月</span><div><h3>月額$39で運用</h3><p>ホスティング・更新・修正。営業時間やメニュー、価格、写真が変わったら、メールでお知らせください。</p></div></li>
+        </ol>
+        <p class="callout">写真やメニューがまだそろっていなくても大丈夫です。お手元のものから始め、必要な情報がそろった時点から制作を進めます。</p>
+      </div>
+    </section>
+
     <!-- 4. Examples -->
     <section class="block rule" id="examples">
       <div class="wrap">
-        <p class="eyebrow">制作事例</p>
-        <h2>実在のお店の、実際のホームページ。</h2>
-        <p class="lede">いずれも、お店ご自身の写真をもとに制作しました。クリックすると実際のプレビューをご覧いただけます。</p>
+        <p class="eyebrow">プレビュー事例</p>
+        <h2>地域のお店のための、サンプルサイト。</h2>
+        <p class="lede">地域のお店に向けて、ホームページの完成イメージをお見せする無料のサンプルサイトを制作しています。いずれも各店舗が公開している写真をもとに作りました。クリックするとサンプルをご覧いただけます。</p>
         <div class="shots">
           <figure class="shot"><a href="https://brightfrontdesign.com/preview/luxe-paws-grooming-bristol/" target="_blank" rel="noopener nofollow"><img src="/assets/examples/real/luxe-paws-grooming-bristol.webp" srcset="/assets/examples/real/luxe-paws-grooming-bristol-480w.webp 480w, /assets/examples/real/luxe-paws-grooming-bristol-800w.webp 800w, /assets/examples/real/luxe-paws-grooming-bristol.webp 1440w" sizes="(min-width: 1160px) 363px, (min-width: 700px) calc((100vw - 72px) / 3), calc(100vw - 40px)" width="1440" height="900" loading="lazy" decoding="async" alt="Luxe Paws Groomingのウェブサイトのプレビュー。トリミング後のドゥードルの、お店の実際の写真を使用。"></a><figcaption>ペットサロン — Luxe Paws Grooming</figcaption></figure>
           <figure class="shot"><a href="https://brightfrontdesign.com/preview/rhodes-barber-shop-anderson/" target="_blank" rel="noopener nofollow"><img src="/assets/examples/real/rhodes-barber-shop-anderson.webp" srcset="/assets/examples/real/rhodes-barber-shop-anderson-480w.webp 480w, /assets/examples/real/rhodes-barber-shop-anderson-800w.webp 800w, /assets/examples/real/rhodes-barber-shop-anderson.webp 1440w" sizes="(min-width: 1160px) 363px, (min-width: 700px) calc((100vw - 72px) / 3), calc(100vw - 40px)" width="1440" height="900" loading="lazy" decoding="async" alt="Rhodes Barber Shopのウェブサイトのプレビュー。店内の実際の写真を使用。"></a><figcaption>理容室 — Rhodes Barber Shop</figcaption></figure>
@@ -406,6 +552,42 @@
           <img src="/img/07-team.webp" srcset="/img/07-team-800w.webp 800w, /img/07-team-1200w.webp 1200w, /img/07-team.webp 1600w" sizes="(min-width: 1160px) 1120px, calc(100vw - 40px)" width="1600" height="900" loading="lazy" decoding="async" alt="Brightfrontのチームが、ノートパソコンとスケッチを広げたテーブルで一緒に作業している様子。">
           <figcaption class="caption">小さなスタジオだからこそ、一人ひとりに丁寧に。制作から公開、運用まで私たちが担当します。</figcaption>
         </figure>
+      </div>
+    </section>
+
+    <!-- 5b. Exactly what's included -->
+    <section class="block rule alt" id="whats-included">
+      <div class="wrap">
+        <p class="eyebrow">含まれるもの</p>
+        <h2>含まれるもの、含まれないもの。</h2>
+        <p class="lede">小さな文字の注意書きはありません。制作費（$250＋$250）に含まれるもの、お渡しするもの、別料金になるものをすべて書き出しました。</p>
+        <div class="incl">
+          <div class="incl-col yes"><h3>制作に含まれるもの</h3><ul><li>お店に合わせたホームページのデザイン（写真、営業時間、メニューやサービス、場所、連絡先）</li><li>スマートフォンを優先したレイアウト。お見せする前に小さな画面で確認します</li><li>文章作成：メモをいただければ、わかりやすい文章に仕上げます</li><li>写真のトリミングとサイズ調整で、表示を軽く</li><li>電話ボタン、道順リンク、Instagram・予約・注文ページへのリンク</li><li>ご承認前の修正：気になる点は、2回目のお支払いの前に直します</li></ul></div>
+          <div class="incl-col doc"><h3>お渡しするもの</h3><ul><li>完成サイトを確認できるリンク（info@brightfrontdesign.com からメールでお送りします）</li><li>公開したホームページ（当社でホスティング、HTTPS対応）</li><li>検索の基本設定：わかりやすいページタイトルと説明文、読みやすいテキスト</li><li>公開後の修正依頼の窓口：info@brightfrontdesign.com</li></ul></div>
+          <div class="incl-col no"><h3>料金に含まれないもの</h3><ul><li>新しく独自ドメインを取得する場合の、ドメインの年間登録料</li><li>予約アプリ、オンライン注文、デリバリーなど、お客様が選ぶ外部サービスの利用料（サイトからはリンクします）</li><li>ネットショップ機能や、サイト上での決済</li><li>プロのカメラマンによる撮影やロゴデザイン</li><li>広告運用やSNSアカウントの運用代行</li></ul></div>
+        </div>
+        <p class="callout">右の列のものが必要な場合は、ご依頼の前にご相談ください。できること・できないことを正直にお伝えします。</p>
+      </div>
+    </section>
+
+    <!-- 5c. Maintenance in detail -->
+    <section class="block rule" id="maintenance">
+      <div class="wrap">
+        <p class="eyebrow">保守プラン</p>
+        <h2>月額$39に含まれるもの、くわしく。</h2>
+        <p class="lede">保守プランは、サイトのご承認・公開後に始まります。サイトを公開し続け、安全で正確な状態に保ち、ご依頼いただく修正にも対応します。月単位で、長期の契約はありません。</p>
+        <div class="mgrid">
+          <article class="mcard"><h3>ホスティングとHTTPS</h3><p>サイトを公開し続け、HTTPS（ブラウザの鍵マーク）で配信します。サーバーやパスワードの管理は不要です。</p></article>
+          <article class="mcard"><h3>安全で最新の状態に</h3><p>サイトが問題なく動き、新しいスマートフォンやブラウザでも正しく表示されるよう保ちます。</p></article>
+          <article class="mcard"><h3>情報の更新</h3><p>営業時間、臨時休業、季節のメニュー、価格、スタッフ、写真や文章の変更。</p></article>
+          <article class="mcard"><h3>修正のご依頼</h3><p>新しいセクション、トップ写真の差し替え、新しい予約アプリへのリンクなど。メールでお知らせいただければ対応します。</p></article>
+          <article class="mcard"><h3>人が対応します</h3><p>ご依頼はすべて info@brightfrontdesign.com に届き、スタッフが読んで返信します。</p></article>
+          <article class="mcard"><h3>いつでも解約可</h3><p>月単位のご契約で、長期の縛りはありません。</p></article>
+        </div>
+        <div class="howto">
+          <div><h3>修正の依頼方法</h3><ol><li>info@brightfrontdesign.com に、変更したい内容をお送りください。新しい写真やメニューがあれば添付してください。</li><li>修正し、スマートフォンで表示を確認します。</li><li>公開したらメールでお知らせします。それだけです。</li></ol></div>
+          <p class="callout">全面的なリニューアルなど、更新の範囲を大きく超える内容は、まずメールでご相談ください。必要な内容を事前にお伝えします。</p>
+        </div>
       </div>
     </section>
 
@@ -566,7 +748,7 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
     </section>
 
     <!-- 8. FAQ -->
-    <section class="block rule" id="faq">
+    <section class="block rule alt" id="faq">
       <div class="wrap">
         <p class="eyebrow">よくある質問</p>
         <h2>疑問に、わかりやすくお答えします。</h2>
@@ -577,6 +759,17 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
           <details class="qa"><summary>写真や文章は用意する必要がありますか？ <i aria-hidden="true">+</i></summary><p>最初はスマートフォンで撮った写真で十分です。お店のことをお聞かせいただき、お手元の素材をお送りください。見やすくきれいなページに仕上げます。写真の追加や差し替えも、後からいつでも可能です。</p></details>
           <details class="qa"><summary>スマートフォンでも見られますか？ <i aria-hidden="true">+</i></summary><p>はい。私たちが制作するホームページはすべてスマートフォン対応で、地域のお客様の多くが利用する小さな画面での見え方を最優先に確認しています。</p></details>
           <details class="qa"><summary>どんな方が対象ですか？ <i aria-hidden="true">+</i></summary><p>カフェ、美容室、ベーカリー、キッチンカー、地域の店舗など、小規模な個人経営の事業者の方、そしてご自身で作業せずに、シンプルで信頼感のあるホームページを持ちたい方が対象です。</p></details>
+          <details class="qa"><summary>どれくらいの期間でできますか？ <i aria-hidden="true">+</i></summary><p>写真と情報がそろってから、約3営業日を目安に最初の版をメールでお送りします。その後は、ご確認と修正のご依頼のペース次第です。</p></details>
+          <details class="qa"><summary>承認する前に修正をお願いできますか？ <i aria-hidden="true">+</i></summary><p>はい、そのためのご承認です。完成したサイトをスマートフォンでご覧いただき、気になる点をお知らせください。2回目の$250は、ご納得いただいてからのお支払いです。</p></details>
+          <details class="qa"><summary>文章は誰が書くのですか？ <i aria-hidden="true">+</i></summary><p>私たちが書きます。何を扱っているか、お店の特徴、どんなお客様が多いかなど、数行のメモをいただければ、わかりやすい文章に仕上げます。</p></details>
+          <details class="qa"><summary>ロゴがなくても大丈夫ですか？ <i aria-hidden="true">+</i></summary><p>まったく問題ありません。店名をサイトに合った書体で整えます。あとからロゴができたら差し替えも可能です。</p></details>
+          <details class="qa"><summary>独自ドメインは必要ですか？ <i aria-hidden="true">+</i></summary><p>すでにお持ちの場合は、ご依頼時にお知らせください。新しく取得したい場合は、設定方法をご相談ください。ドメインの年間登録料は当社の料金とは別です。</p></details>
+          <details class="qa"><summary>予約やオンライン注文はできますか？ <i aria-hidden="true">+</i></summary><p>お使いの予約サービスや注文サービスへのリンクを設置し、ワンタップで移動できるようにします。各サービスの利用料は別です。サイト上での決済機能はこのプランには含まれません。</p></details>
+          <details class="qa"><summary>支払い方法は？ <i aria-hidden="true">+</i></summary><p>PayPalでのお支払いです。PayPalの画面でクレジットカードもご利用いただけます。最初の$250はご依頼の送信後にこのページで、2回目の$250は完成サイトと一緒にご請求のご案内をお送りします。</p></details>
+          <details class="qa"><summary>公開後の更新はどう依頼しますか？ <i aria-hidden="true">+</i></summary><p>変更内容と、新しい写真やファイルを info@brightfrontdesign.com にお送りください。修正は月額$39に含まれます。</p></details>
+          <details class="qa"><summary>契約期間の縛りはありますか？ <i aria-hidden="true">+</i></summary><p>ありません。保守プランは月単位で、いつでも解約できます。</p></details>
+          <details class="qa"><summary>Googleで上位に表示されますか？ <i aria-hidden="true">+</i></summary><p>検索順位を正直に約束できる人はいません。営業時間やサービス、場所がテキストで書かれたサイトは、検索エンジンに伝わる情報が増え、Googleビジネスプロフィールとの相性も良くなります。タイトルや説明文は整えますが、順位の保証はしていません。</p></details>
+          <details class="qa"><summary>Instagramがあればホームページは不要では？ <i aria-hidden="true">+</i></summary><p>Instagramは新しい作品や商品を見せるのに最適です。ホームページは、アプリの有無にかかわらず、営業時間・価格・場所を確実に確認できる場所になります。</p></details>
         </div>
       </div>
     </section>

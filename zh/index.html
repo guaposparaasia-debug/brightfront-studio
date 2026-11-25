@@ -169,6 +169,46 @@
     .skip { position:absolute; left:.8rem; top:-4rem; background:var(--pine); color:var(--paper); padding:.6rem .8rem; z-index:90; } .skip:focus { top:.6rem; }
     @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; } }
 
+    /* ---- Polish and new sections (timeline, included, maintenance) ---- */
+    .btn,.btn-ghost { transition:background .15s ease,color .15s ease,transform .15s ease; }
+    .btn:hover,.btn-ghost:hover { transform:translateY(-1px); }
+    .hero-note { padding:.85rem 1rem; background:#fff; border:1px solid var(--line); border-left:3px solid var(--pine); max-width:34rem; color:var(--ink); }
+    .hero-points { list-style:none; padding:0; margin:1.1rem 0 0; display:grid; gap:.45rem; font-size:.95rem; color:var(--muted); }
+    .hero-points li { display:flex; gap:.6rem; align-items:baseline; }
+    .hero-points li::before { content:""; flex:none; width:.5rem; height:.5rem; border-radius:50%; background:var(--pine); }
+    .alt { background:var(--paper-2); }
+    .step { transition:background .15s ease; }
+    .tl { list-style:none; padding:0; margin:2rem 0 0; max-width:52rem; }
+    .tl li { display:grid; grid-template-columns:9.5rem 1fr; gap:.25rem 1.4rem; padding:1.15rem 0; border-top:1px solid var(--line); }
+    .tl li:last-child { border-bottom:1px solid var(--line); }
+    .tl .when { font-family:var(--serif); font-size:1.3rem; line-height:1.2; color:var(--pine); }
+    .tl h3 { margin:0; font-size:1.08rem; font-weight:600; }
+    .tl p { margin:.25rem 0 0; color:var(--muted); }
+    @media (max-width:600px) { .tl li { grid-template-columns:1fr; } }
+    .callout { margin-top:1.6rem; padding:1rem 1.2rem; background:#fff; border:1px solid var(--line); border-left:3px solid var(--pine); max-width:46rem; }
+    .incl { display:grid; gap:1rem; margin-top:2rem; }
+    @media (min-width:900px) { .incl { grid-template-columns:repeat(3,1fr); } }
+    .incl-col { background:#fff; border:1px solid var(--line); padding:1.4rem 1.4rem 1rem; }
+    .incl-col h3 { margin:0 0 .5rem; font-family:var(--serif); font-weight:400; font-size:1.5rem; }
+    .incl-col ul { list-style:none; padding:0; margin:0; }
+    .incl-col li { position:relative; padding:.6rem 0 .6rem 1.6rem; border-top:1px solid var(--line); font-size:.97rem; }
+    .incl-col li::before { position:absolute; left:0; top:.6rem; font-weight:700; }
+    .incl-col.yes { border-top:3px solid var(--pine); } .incl-col.yes li::before { content:"✓"; color:var(--pine); }
+    .incl-col.doc li::before { content:"→"; color:var(--pine); }
+    .incl-col.no { background:transparent; border-style:dashed; } .incl-col.no li { color:var(--muted); } .incl-col.no li::before { content:"—"; color:var(--muted); }
+    .mgrid { display:grid; gap:1rem; margin-top:2rem; }
+    @media (min-width:700px) { .mgrid { grid-template-columns:1fr 1fr; } }
+    @media (min-width:1000px) { .mgrid { grid-template-columns:repeat(3,1fr); } }
+    .mcard { background:#fff; border:1px solid var(--line); padding:1.3rem; }
+    .mcard h3 { margin:0 0 .35rem; font-size:1.08rem; font-weight:600; }
+    .mcard p { margin:0; color:var(--muted); font-size:.97rem; }
+    .howto { display:grid; gap:1.5rem; margin-top:2.4rem; }
+    @media (min-width:900px) { .howto { grid-template-columns:1fr 1fr; align-items:start; } }
+    .howto h3 { font-family:var(--serif); font-weight:400; font-size:1.7rem; margin:0 0 .6rem; }
+    .howto ol { list-style:decimal; margin:0; padding-left:1.3rem; }
+    .howto li { margin:.5rem 0; }
+    .howto .callout { margin-top:0; }
+
     /* Language switcher */
     .lang { display:flex; align-items:center; flex:none; font-size:.82rem; line-height:1; }
     .lang a { display:inline-flex; align-items:center; justify-content:center; min-height:40px; min-width:40px; padding:0 .6rem; margin-left:-1px; text-decoration:none; color:var(--muted); border:1px solid var(--line); white-space:nowrap; }
@@ -285,6 +325,94 @@
       "@type": "Answer",
       "text": "咖啡店、美发沙龙、烘焙店、餐车、本地小店等小型独立商家，以及所有希望拥有一个简洁专业的网站、又不想自己动手的人。"
      }
+    },
+    {
+     "@type": "Question",
+     "name": "需要多长时间？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "收到照片和资料后，我们争取在约 3 个工作日内通过邮件发送第一版。之后取决于您查看和反馈修改的速度。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "确认之前可以要求修改吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "可以，这正是“确认”的意义。请用手机查看成品网站，告诉我们想调整的地方。您满意之后才支付第二笔 $250。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "文字由谁来写？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "由我们来写。您只需发几行要点，比如卖什么、店的特色、主要顾客是谁，我们会整理成清楚易读的文字。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "没有 Logo 可以吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "完全没问题。我们会用与网站风格相配的字体呈现店名，之后有了 Logo 也可以替换。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "需要自己的域名吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "如果已有域名，请在提交需求时告诉我们。如果想注册新域名，可以问我们如何设置。域名每年的注册费与我们的价格分开计算。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "网站可以接受预约或在线点餐吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "我们可以链接到您正在使用的预约或点餐服务，顾客一点即可跳转。这些服务有各自的费用。在网站上直接收款不包含在本方案中。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "如何付款？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "通过 PayPal 付款，PayPal 结账页面也可使用银行卡。首笔 $250 在提交需求后于本页支付；第二笔 $250 的付款通知会随成品网站一起发给您。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "上线后如何申请更新？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "把修改内容以及新照片或文件发到 info@brightfrontdesign.com 即可。修改包含在每月 $39 中。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "有合同期限吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "没有。维护按月付费，可随时取消。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "做了网站就能排到 Google 前面吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "没有人能诚实地保证排名。把营业时间、服务和地址以文字写在网站上，能让搜索引擎获得更多信息，也和完善的 Google 商家资料相辅相成。我们会设置清楚的标题和描述，但不承诺排名。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "有 Instagram 还需要网站吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Instagram 很适合展示新作品和新品。网站则为所有人（无论是否使用 App）提供一个查看营业时间、价格和地址的可靠地方。"
+     }
     }
    ]
   }
@@ -303,7 +431,7 @@
         <span>Brightfront Studio</span>
       </a>
       <nav class="desk-nav" aria-label="主导航">
-        <a href="#shops">适合哪些小店</a><a href="#how">合作流程</a><a href="#examples">案例展示</a><a href="#pricing">价格</a><a href="#faq">常见问题</a>
+        <a href="#shops">适合哪些小店</a><a href="#how">合作流程</a><a href="#examples">案例展示</a><a href="#whats-included">包含内容</a><a href="#pricing">价格</a><a href="#faq">常见问题</a>
       </nav>
       <nav class="lang" aria-label="语言 / Language"><a href="/" hreflang="en" lang="en">EN</a><a href="/ja/" hreflang="ja" lang="ja">日本語</a><a href="/zh/" hreflang="zh-CN" lang="zh-CN" aria-current="page">中文</a></nav>
       <a class="btn header-cta" href="#contact">我要做网站</a>
@@ -311,7 +439,7 @@
     <details class="mob-nav">
       <summary>菜单</summary>
       <nav aria-label="移动端菜单">
-        <a href="#shops">适合哪些小店</a><a href="#how">合作流程</a><a href="#examples">案例展示</a><a href="#pricing">价格</a><a href="#faq">常见问题</a><a href="#contact">我要做网站</a>
+        <a href="#shops">适合哪些小店</a><a href="#how">合作流程</a><a href="#examples">案例展示</a><a href="#whats-included">包含内容</a><a href="#pricing">价格</a><a href="#faq">常见问题</a><a href="#contact">我要做网站</a>
       </nav>
     </details>
   </header>
@@ -329,6 +457,7 @@
             <a class="btn-ghost" href="#pricing">查看价格</a>
           </div>
           <p class="hero-note"><strong>$250</strong> 启动制作，您确认成品后再付 <strong>$250</strong>，之后每月仅需 <strong>$39</strong>，包含托管、更新与修改。费用透明，没有隐藏收费。</p>
+          <ul class="hero-points"><li>手机照片就能开始</li><li>确认满意后才付第二笔 $250</li><li>按月付费，可随时取消</li></ul>
         </div>
       </div>
       <div class="hero-photo">
@@ -371,12 +500,29 @@
       </div>
     </section>
 
+    <!-- 3b. Timeline -->
+    <section class="block rule alt" id="timeline">
+      <div class="wrap">
+        <p class="eyebrow">时间安排</p>
+        <h2>什么时候，会发生什么。</h2>
+        <p class="lede">从第一次联系到网站上线的真实流程。大部分等待时间花在收集照片和资料上，所以资料发得越早，您就越早看到网站。</p>
+        <ol class="tl">
+          <li><span class="when">第 1 天</span><div><h3>提交需求并支付 $250</h3><p>通过本页表单介绍您的店，上传最多 5 张照片，并支付首笔 $250，即开始制作。</p></div></li>
+          <li><span class="when">约 3 个工作日</span><div><h3>通过邮件发送第一版</h3><p>收到您的照片和资料后，我们争取在约 3 个工作日内，从 info@brightfrontdesign.com 发送第一版。</p></div></li>
+          <li><span class="when">按您的节奏</span><div><h3>查看并提出修改</h3><p>用手机打开看看，有想调整的地方直接回复邮件，我们改到您满意为止。</p></div></li>
+          <li><span class="when">确认通过</span><div><h3>确认后支付剩余 $250</h3><p>您对成品满意后，支付第二笔 $250，网站随即上线。</p></div></li>
+          <li><span class="when">每个月</span><div><h3>每月 $39 持续维护</h3><p>托管、更新与修改。营业时间、菜单、价格或照片有变化时，发邮件告诉我们即可。</p></div></li>
+        </ol>
+        <p class="callout">照片或菜单还没准备齐？先把手头有的发给我们，资料齐全后就正式推进。</p>
+      </div>
+    </section>
+
     <!-- 4. Examples -->
     <section class="block rule" id="examples">
       <div class="wrap">
-        <p class="eyebrow">我们的作品</p>
-        <h2>真实的小店，真实的网站。</h2>
-        <p class="lede">每个案例都围绕店铺自己的照片制作。点击即可打开在线预览。</p>
+        <p class="eyebrow">预览案例</p>
+        <h2>为本地小店制作的示例网站。</h2>
+        <p class="lede">我们为本地小店免费制作示例网站，展示他们的网站可以是什么样子，每个示例都使用店铺自己公开的照片。点击即可打开示例。</p>
         <div class="shots">
           <figure class="shot"><a href="https://brightfrontdesign.com/preview/luxe-paws-grooming-bristol/" target="_blank" rel="noopener nofollow"><img src="/assets/examples/real/luxe-paws-grooming-bristol.webp" srcset="/assets/examples/real/luxe-paws-grooming-bristol-480w.webp 480w, /assets/examples/real/luxe-paws-grooming-bristol-800w.webp 800w, /assets/examples/real/luxe-paws-grooming-bristol.webp 1440w" sizes="(min-width: 1160px) 363px, (min-width: 700px) calc((100vw - 72px) / 3), calc(100vw - 40px)" width="1440" height="900" loading="lazy" decoding="async" alt="Luxe Paws Grooming 网站预览，使用了店里为一只卷毛犬美容后的真实照片。"></a><figcaption>宠物美容 — Luxe Paws Grooming</figcaption></figure>
           <figure class="shot"><a href="https://brightfrontdesign.com/preview/rhodes-barber-shop-anderson/" target="_blank" rel="noopener nofollow"><img src="/assets/examples/real/rhodes-barber-shop-anderson.webp" srcset="/assets/examples/real/rhodes-barber-shop-anderson-480w.webp 480w, /assets/examples/real/rhodes-barber-shop-anderson-800w.webp 800w, /assets/examples/real/rhodes-barber-shop-anderson.webp 1440w" sizes="(min-width: 1160px) 363px, (min-width: 700px) calc((100vw - 72px) / 3), calc(100vw - 40px)" width="1440" height="900" loading="lazy" decoding="async" alt="Rhodes Barber Shop 网站预览，使用了店内的真实照片。"></a><figcaption>理发店 — Rhodes Barber Shop</figcaption></figure>
@@ -407,6 +553,42 @@
           <img src="/img/07-team.webp" srcset="/img/07-team-800w.webp 800w, /img/07-team-1200w.webp 1200w, /img/07-team.webp 1600w" sizes="(min-width: 1160px) 1120px, calc(100vw - 40px)" width="1600" height="900" loading="lazy" decoding="async" alt="Brightfront 团队围坐在摆着笔记本电脑和草图的桌旁一起工作。">
           <figcaption class="caption">小而精的工作室，贴心的服务。从制作、托管到后续维护，我们全程负责。</figcaption>
         </figure>
+      </div>
+    </section>
+
+    <!-- 5b. Exactly what's included -->
+    <section class="block rule alt" id="whats-included">
+      <div class="wrap">
+        <p class="eyebrow">包含内容</p>
+        <h2>包含什么，不包含什么。</h2>
+        <p class="lede">没有隐藏条款。这里列出 $250＋$250 制作费包含的内容、您会收到的东西，以及需要另外付费的项目。</p>
+        <div class="incl">
+          <div class="incl-col yes"><h3>制作费包含</h3><ul><li>围绕您的店设计的网站：照片、营业时间、菜单或服务、地址和联系方式</li><li>手机优先的版面，给您看之前先在小屏幕上检查</li><li>文案撰写：您发要点，我们写成清楚易读的文字</li><li>照片裁剪和尺寸优化，让页面加载更快</li><li>一键拨号、导航链接，以及 Instagram、预约或点餐页面的链接</li><li>确认前的修改：在支付第二笔 $250 之前，把您不满意的地方改好</li></ul></div>
+          <div class="incl-col doc"><h3>您会收到</h3><ul><li>查看成品网站的链接（由 info@brightfrontdesign.com 发送）</li><li>上线的网站，由我们托管并通过 HTTPS 访问</li><li>基础搜索设置：清楚的页面标题和描述，以及可读的文字内容</li><li>上线后所有修改的联系邮箱：info@brightfrontdesign.com</li></ul></div>
+          <div class="incl-col no"><h3>费用不包含</h3><ul><li>如需新域名，域名每年的注册费用</li><li>您选择的第三方服务费用，例如预约软件、在线点餐或外卖平台（我们会在网站上链接过去）</li><li>网上商店功能或在网站上直接收款</li><li>专业摄影或标志（Logo）设计</li><li>广告投放或社交媒体账号代运营</li></ul></div>
+        </div>
+        <p class="callout">需要最右一栏的内容？请在开始前先问我们，我们会如实告诉您能做什么。</p>
+      </div>
+    </section>
+
+    <!-- 5c. Maintenance in detail -->
+    <section class="block rule" id="maintenance">
+      <div class="wrap">
+        <p class="eyebrow">维护</p>
+        <h2>每月 $39 包含什么，详细说明。</h2>
+        <p class="lede">维护费在网站确认通过并上线后开始。它让网站保持在线、安全和准确，也包含您提出的修改。按月付费，没有合同。</p>
+        <div class="mgrid">
+          <article class="mcard"><h3>托管与 HTTPS</h3><p>网站持续在线，并通过 HTTPS（浏览器里的小锁）访问。您不需要管理任何服务器或密码。</p></article>
+          <article class="mcard"><h3>保持安全和最新</h3><p>我们让网站正常运行并保持最新，在新手机和新浏览器上也能正确显示。</p></article>
+          <article class="mcard"><h3>信息更新</h3><p>新的营业时间、临时休息、季节菜单、价格、员工变动、新照片或新文字。</p></article>
+          <article class="mcard"><h3>按需修改</h3><p>想加一个新板块、换首页照片，或链接到新的预约软件？发邮件告诉我们，我们来改。</p></article>
+          <article class="mcard"><h3>真人回复</h3><p>所有需求都发到 info@brightfrontdesign.com，由我们团队的人阅读并回复。</p></article>
+          <article class="mcard"><h3>随时取消</h3><p>按月付费，没有合同约束。</p></article>
+        </div>
+        <div class="howto">
+          <div><h3>如何提出修改</h3><ol><li>发邮件到 info@brightfrontdesign.com，写明想改的内容；有新照片或新菜单请一并附上。</li><li>我们完成修改，并在手机上检查显示效果。</li><li>上线后我们回复通知您。就这么简单。</li></ol></div>
+          <p class="callout">如果是远超日常更新的大改动，例如整体改版，请先发邮件咨询，我们会事先说明需要做哪些工作。</p>
+        </div>
       </div>
     </section>
 
@@ -567,7 +749,7 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
     </section>
 
     <!-- 8. FAQ -->
-    <section class="block rule" id="faq">
+    <section class="block rule alt" id="faq">
       <div class="wrap">
         <p class="eyebrow">常见问题</p>
         <h2>常见问题，直接回答。</h2>
@@ -578,6 +760,17 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
           <details class="qa"><summary>我需要自己提供照片或文字吗？ <i aria-hidden="true">+</i></summary><p>刚开始用手机拍的照片就够了。告诉我们您做什么生意，把手头有的素材发给我们，我们会整理成清晰美观的页面。之后您也可以随时补充或替换。</p></details>
           <details class="qa"><summary>手机上能正常使用吗？ <i aria-hidden="true">+</i></summary><p>可以。我们制作的每个网站都适配手机，并且优先在小屏幕上测试，因为大多数本地顾客正是通过手机找到您的。</p></details>
           <details class="qa"><summary>适合哪些人？ <i aria-hidden="true">+</i></summary><p>咖啡店、美发沙龙、烘焙店、餐车、本地小店等小型独立商家，以及所有希望拥有一个简洁专业的网站、又不想自己动手的人。</p></details>
+          <details class="qa"><summary>需要多长时间？ <i aria-hidden="true">+</i></summary><p>收到照片和资料后，我们争取在约 3 个工作日内通过邮件发送第一版。之后取决于您查看和反馈修改的速度。</p></details>
+          <details class="qa"><summary>确认之前可以要求修改吗？ <i aria-hidden="true">+</i></summary><p>可以，这正是“确认”的意义。请用手机查看成品网站，告诉我们想调整的地方。您满意之后才支付第二笔 $250。</p></details>
+          <details class="qa"><summary>文字由谁来写？ <i aria-hidden="true">+</i></summary><p>由我们来写。您只需发几行要点，比如卖什么、店的特色、主要顾客是谁，我们会整理成清楚易读的文字。</p></details>
+          <details class="qa"><summary>没有 Logo 可以吗？ <i aria-hidden="true">+</i></summary><p>完全没问题。我们会用与网站风格相配的字体呈现店名，之后有了 Logo 也可以替换。</p></details>
+          <details class="qa"><summary>需要自己的域名吗？ <i aria-hidden="true">+</i></summary><p>如果已有域名，请在提交需求时告诉我们。如果想注册新域名，可以问我们如何设置。域名每年的注册费与我们的价格分开计算。</p></details>
+          <details class="qa"><summary>网站可以接受预约或在线点餐吗？ <i aria-hidden="true">+</i></summary><p>我们可以链接到您正在使用的预约或点餐服务，顾客一点即可跳转。这些服务有各自的费用。在网站上直接收款不包含在本方案中。</p></details>
+          <details class="qa"><summary>如何付款？ <i aria-hidden="true">+</i></summary><p>通过 PayPal 付款，PayPal 结账页面也可使用银行卡。首笔 $250 在提交需求后于本页支付；第二笔 $250 的付款通知会随成品网站一起发给您。</p></details>
+          <details class="qa"><summary>上线后如何申请更新？ <i aria-hidden="true">+</i></summary><p>把修改内容以及新照片或文件发到 info@brightfrontdesign.com 即可。修改包含在每月 $39 中。</p></details>
+          <details class="qa"><summary>有合同期限吗？ <i aria-hidden="true">+</i></summary><p>没有。维护按月付费，可随时取消。</p></details>
+          <details class="qa"><summary>做了网站就能排到 Google 前面吗？ <i aria-hidden="true">+</i></summary><p>没有人能诚实地保证排名。把营业时间、服务和地址以文字写在网站上，能让搜索引擎获得更多信息，也和完善的 Google 商家资料相辅相成。我们会设置清楚的标题和描述，但不承诺排名。</p></details>
+          <details class="qa"><summary>有 Instagram 还需要网站吗？ <i aria-hidden="true">+</i></summary><p>Instagram 很适合展示新作品和新品。网站则为所有人（无论是否使用 App）提供一个查看营业时间、价格和地址的可靠地方。</p></details>
         </div>
       </div>
     </section>
