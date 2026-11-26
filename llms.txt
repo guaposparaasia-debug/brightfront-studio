@@ -1,0 +1,26 @@
+# Brightfront Studio
+
+> Brightfront Studio builds and looks after websites for small independent businesses. Its English blog, Second Act, publishes plain-English guides for people 40 and over who are starting a side business, consulting practice or small shop.
+
+The blog is written and edited by the Brightfront Studio team. Articles are general information, not legal, tax or financial advice.
+
+## Second Act blog
+
+- [Second Act blog index](https://brightfrontdesign.com/blog/): All articles, grouped by topic
+- [How to write a simple business plan (one page is enough)](https://brightfrontdesign.com/blog/how-to-write-a-simple-business-plan/): No 30-page document needed. How to write a one-page business plan for a small business after 40, with a template, an example and simple break-even maths.
+- [How to start a business after 40: a calm, step-by-step guide](https://brightfrontdesign.com/blog/how-to-start-a-business-after-40/): A practical, no-hype guide to starting a business in your 40s, 50s or 60s: choosing an idea, testing it cheaply, money, paperwork and your first customers.
+- [Is 50 too old to start a business? An honest answer](https://brightfrontdesign.com/blog/is-50-too-old-to-start-a-business/): Thinking about starting a business at 50 or 60? The real advantages, the real risks, and how to decide whether it makes sense for you, without hype.
+- [How to start a side business without quitting your job](https://brightfrontdesign.com/blog/start-a-business-while-working-full-time/): A realistic plan for building a side business on evenings and weekends: finding the time, staying on the right side of your employer, and knowing when to leave.
+- [How much does it really cost to start a small business? A plain-English breakdown](https://brightfrontdesign.com/blog/how-much-does-it-cost-to-start-a-small-business/): One-off and monthly start-up costs explained simply, with typical ranges for a service business and a shop, the costs people forget, and how to start lean.
+- [How to price your services when you're just starting out](https://brightfrontdesign.com/blog/how-to-price-your-services/): A plain-English method for pricing a new service business: work out your minimum rate, check the market, price on value, and raise prices with confidence.
+- [How to get your first 10 customers (without being pushy)](https://brightfrontdesign.com/blog/how-to-get-your-first-customers/): A practical, low-pressure plan for finding the first customers for a new small business: your network, referrals, local visibility, reviews and follow-up.
+- [How to set up a Google Business Profile: a step-by-step guide for non-tech people](https://brightfrontdesign.com/blog/google-business-profile-guide/): Set up your free Google Business Profile so customers find you on Google Search and Maps. Plain-English steps to sign up, verify, add photos and get reviews.
+- [25 side business ideas for people over 40, using skills you already have](https://brightfrontdesign.com/blog/side-business-ideas-over-40/): 25 realistic side business ideas for people in their 40s, 50s and 60s, grouped by the skills you already have, with start-up costs, pros and cons for each.
+- [How to turn your career experience into a consulting business](https://brightfrontdesign.com/blog/turn-your-career-into-a-consulting-business/): Leaving a corporate or public-sector job? Turn decades of experience into a consulting business: choose a niche, package your offer, set fees and find clients.
+- [How to use AI in your small business: a beginner's guide (no tech skills needed)](https://brightfrontdesign.com/blog/ai-tools-for-small-business-beginners/): A plain-English guide to AI assistants such as ChatGPT, Claude, Gemini and Copilot for small business owners: what they do well, prompts and mistakes to avoid.
+- [10 scams that target new small business owners, and how to spot them](https://brightfrontdesign.com/blog/small-business-scams/): New business owners are a favourite scam target. The 10 most common small business scams, from fake domain renewals to invoice fraud, and how to stay safe.
+
+## About
+
+- [About Second Act and our editorial policy](https://brightfrontdesign.com/blog/about/): Who writes the blog, how articles are checked, and how it is funded
+- [Brightfront Studio](https://brightfrontdesign.com/): Websites for small businesses

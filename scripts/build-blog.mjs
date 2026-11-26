@@ -15,7 +15,7 @@ const SITE = "https://brightfrontdesign.com";
 const BLOG = "Second Act";
 const BLOG_TAG = "Starting and running a small business after 40";
 const ADSENSE = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1521418120439711" crossorigin="anonymous"></script>`;
-const CSS_V = { pages: 3, blog: 2 };
+const CSS_V = { pages: 3, blog: 3 };
 
 const IMAGES = {
   "/img/07-team.webp": { w: 1200, h: 675, set: "/img/07-team-800w.webp 800w, /img/07-team-1200w.webp 1200w", src: "/img/07-team-1200w.webp" },
@@ -133,7 +133,15 @@ const posts = readdirSync(SRC).filter((f) => f.endsWith(".html")).map((f) => {
 }).sort((a, b) => b.date.localeCompare(a.date) || (a.order ?? 99) - (b.order ?? 99));
 
 const bySlug = Object.fromEntries(posts.map((p) => [p.slug, p]));
-const cats = [...new Set(posts.map((p) => p.category))];
+// Topic clusters for the /blog/ index. Each post names its cluster in front matter ("cluster");
+// a post without one is listed under the fallback so it is never dropped from the index.
+const CLUSTERS = ["Starting out", "Money, costs and pricing", "Getting customers and going online", "Skills, tools and staying safe"];
+const FALLBACK_CLUSTER = "More guides";
+for (const p of posts) {
+  if (p.cluster && !CLUSTERS.includes(p.cluster)) throw new Error(`${p.slug}: unknown cluster "${p.cluster}"`);
+  p.cluster ||= FALLBACK_CLUSTER;
+}
+const clusters = [...CLUSTERS, FALLBACK_CLUSTER].filter((c) => posts.some((p) => p.cluster === c));
 
 // Real photos for posts: /img/blog/<slug>-{800,1200}w.webp (16:9 crops of the Pexels originals in img/blog/*.jpg).
 const imgInfo = (image) => image.startsWith("/img/blog/")
@@ -192,6 +200,11 @@ ${p.faq?.length ? `<h2 id="faq">Common questions</h2>
 <div class="faq">
 ${p.faq.map((q) => `<details><summary>${esc(q.q)}</summary><p>${q.a}</p></details>`).join("\n")}
 </div>` : ""}
+<aside class="author-box" aria-labelledby="author-h">
+  <h2 id="author-h">Written and edited by the Brightfront Studio team</h2>
+  <p>Brightfront Studio builds and looks after websites for small independent businesses: cafes, salons, food trucks, makers and consultants. We write ${BLOG} from the questions owners ask us when they start a business after 40, and every article is edited by a person before it is published.</p>
+  <p><a href="/blog/about/">Read our editorial policy</a></p>
+</aside>
 <section class="cta" aria-labelledby="cta-h">
   <h2 id="cta-h">${esc(p.ctaTitle || "Need a simple website for your new business?")}</h2>
   <p>${p.ctaText || "Brightfront Studio builds and looks after websites for small businesses, so you don't have to learn the tech. $250 to start, $250 after you approve the finished site, then $39/month for hosting, updates and changes."}</p>
@@ -219,7 +232,7 @@ const indexSchema = [
 ];
 const indexHtml = head({
   title: `${BLOG}: Starting a Small Business After 40 | Brightfront Studio`,
-  description: "Plain-English guides for people 40 and over who want to start a side business, freelance or open a small shop: ideas, first steps, pricing, getting customers and simple tech.",
+  description: "Plain-English guides for people 40 and over starting a side business, consulting practice or small shop: ideas, first steps, costs, pricing, customers and tech.",
   url: SITE + "/blog/", image: "/img/blog/how-to-start-a-business-after-40", imageAlt: "A woman in her fifties working on a laptop at a wooden desk in her office.", schema: indexSchema,
 }) + `
     <div class="page-head">
@@ -228,14 +241,14 @@ const indexHtml = head({
         <p class="eyebrow">The ${BLOG} blog</p>
         <h1>Starting a small business after 40, explained without the jargon</h1>
         <p class="lede">You have decades of skills, contacts and common sense. These guides show you how to turn them into a side business, a consulting practice or a small shop, one calm step at a time.</p>
-        <ul class="cat-nav" aria-label="Topics">${cats.map((c) => `<li><a href="#${slugify(c)}">${esc(c)}</a></li>`).join("")}</ul>
+        <ul class="cat-nav" aria-label="Topics">${clusters.map((c) => `<li><a href="#${slugify(c)}">${esc(c)}</a></li>`).join("")}</ul>
       </div>
     </div>
     <div class="wrap">
       <h2 class="sr-only">Latest article</h2>
-      <article class="featured"><a href="/blog/${feat.slug}/" tabindex="-1" aria-hidden="true">${picture(feat.image, "", true)}</a><div class="pl-body"><p class="cat">Start here · ${esc(feat.category)}</p><h2><a href="/blog/${feat.slug}/">${esc(feat.h1)}</a></h2><p>${esc(feat.description)}</p><p class="pl-meta">${feat.minutes} min read</p></div></article>
-${cats.map((c) => {
-  const list = posts.filter((p) => p.category === c && p !== feat);
+      <article class="featured"><a href="/blog/${feat.slug}/" tabindex="-1" aria-hidden="true">${picture(feat.image, "", true)}</a><div class="pl-body"><p class="cat">Start here · ${esc(feat.cluster)}</p><h2><a href="/blog/${feat.slug}/">${esc(feat.h1)}</a></h2><p>${esc(feat.description)}</p><p class="pl-meta">${feat.minutes} min read</p></div></article>
+${clusters.map((c) => {
+  const list = posts.filter((p) => p.cluster === c && p !== feat);
   if (!list.length) return "";
   return `      <section aria-labelledby="${slugify(c)}"><h2 id="${slugify(c)}">${esc(c)}</h2><ul class="post-list">${list.map((p) => card(p)).join("")}</ul></section>`;
 }).join("\n")}
@@ -311,6 +324,25 @@ ${posts.map((p) => `  <item><title>${esc(p.h1)}</title><link>${p.url}</link><gui
 </rss>
 `;
 writeFileSync(join(OUT, "feed.xml"), rss);
+
+// ---------- llms.txt (site root; https://llmstxt.org format) ----------
+const llms = `# Brightfront Studio
+
+> Brightfront Studio builds and looks after websites for small independent businesses. Its English blog, ${BLOG}, publishes plain-English guides for people 40 and over who are starting a side business, consulting practice or small shop.
+
+The blog is written and edited by the Brightfront Studio team. Articles are general information, not legal, tax or financial advice.
+
+## ${BLOG} blog
+
+- [${BLOG} blog index](${SITE}/blog/): All articles, grouped by topic
+${clusters.map((c) => posts.filter((p) => p.cluster === c).map((p) => `- [${p.h1}](${p.url}): ${p.description}`).join("\n")).join("\n")}
+
+## About
+
+- [About ${BLOG} and our editorial policy](${aboutUrl}): Who writes the blog, how articles are checked, and how it is funded
+- [Brightfront Studio](${SITE}/): Websites for small businesses
+`;
+writeFileSync(join(root, "llms.txt"), llms);
 
 // ---------- sitemap ----------
 const smPath = join(root, "sitemap.xml");
