@@ -15,7 +15,7 @@ const SITE = "https://brightfrontdesign.com";
 const BLOG = "Second Act";
 const BLOG_TAG = "Starting and running a small business after 40";
 const ADSENSE = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1521418120439711" crossorigin="anonymous"></script>`;
-const CSS_V = { pages: 2, blog: 2 };
+const CSS_V = { pages: 3, blog: 2 };
 
 const IMAGES = {
   "/img/07-team.webp": { w: 1200, h: 675, set: "/img/07-team-800w.webp 800w, /img/07-team-1200w.webp 1200w", src: "/img/07-team-1200w.webp" },
@@ -209,7 +209,7 @@ ${p.faq.map((q) => `<details><summary>${esc(q.q)}</summary><p>${q.a}</p></detail
 
 // ---------- index ----------
 const card = (p, tag = "h3") => `<li><a href="/blog/${p.slug}/" tabindex="-1" aria-hidden="true">${picture(p.image, "", false)}</a><div class="pl-body"><p class="cat">${esc(p.category)}</p><${tag}><a href="/blog/${p.slug}/">${esc(p.h1)}</a></${tag}><p>${esc(p.description)}</p><p class="pl-meta">${p.minutes} min read</p></div></li>`;
-const [feat, ...rest] = posts;
+const feat = posts.find((p) => p.featured) || posts[0];
 const indexSchema = [
   { "@context": "https://schema.org", "@type": "Blog", name: BLOG, description: BLOG_TAG, url: SITE + "/blog/", inLanguage: "en", publisher: ORG,
     blogPost: posts.map((p) => ({ "@type": "BlogPosting", headline: p.h1, url: p.url, datePublished: p.date })) },
