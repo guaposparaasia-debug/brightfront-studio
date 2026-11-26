@@ -142,3 +142,8 @@ blockquote.sample{margin:1rem 0 0;padding:1rem 1.2rem;background:#fff;border:1px
   .top-nav .btn{min-height:40px;padding:0 .9rem}
 }
 .layout>*{min-width:0}
+/* v3: guide hero photos and photo cards */
+.guide-hero{margin:0 0 1.8rem}
+.guide-hero img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:var(--paper-2)}
+.cards .card-photo{display:block;margin:-1.2rem -1.3rem .95rem}
+.cards .card-photo img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:var(--paper-2)}
