@@ -49,3 +49,7 @@ body.blog .article a:not(.btn):not(.btn-ghost):hover{text-decoration-thickness:2
 
 .about-box{margin:3rem 0 0;padding:1.4rem 1.5rem;background:var(--paper-2);border:1px solid var(--line)}
 .about-box h2{margin-top:0;font-size:1.5rem}
+
+.author-box{margin:2.8rem 0 0;padding:1.3rem 1.5rem;background:var(--paper-2);border:1px solid var(--line);border-left:3px solid var(--pine)}
+body.blog .article .author-box h2{margin:0 0 .3rem;font-size:1.4rem}
+.author-box p{margin:.5rem 0 0}
