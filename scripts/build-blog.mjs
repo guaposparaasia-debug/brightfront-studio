@@ -39,7 +39,7 @@ const json = (o) => JSON.stringify(o).replace(/</g, "\\u003c");
 const ICON = `<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231C3D34'/%3E%3Cpath fill='%23F6F3EC' d='M6 22.6V12.2L16 5.6l10 6.6v10.4H6z'/%3E%3Crect x='13.2' y='15.2' width='5.6' height='7.4' fill='%231C3D34'/%3E%3C/svg%3E">`;
 const LOGO = `<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#1C3D34"/><path fill="#F6F3EC" d="M6 22.6V12.2L16 5.6l10 6.6v10.4H6z"/><rect x="13.2" y="15.2" width="5.6" height="7.4" fill="#1C3D34"/></svg>`;
 
-function head({ title, description, url, type = "website", image, imageAlt, schema = [] }) {
+function head({ title, description, url, type = "website", image, imageAlt, schema = [], noImage = false }) {
   const img = SITE + (image ? imgInfo(image).src : "/img/blog/how-to-start-a-business-after-40-1200w.webp");
   return `<!DOCTYPE html>
 <html lang="en">
@@ -57,9 +57,9 @@ function head({ title, description, url, type = "website", image, imageAlt, sche
   <meta property="og:url" content="${url}">
   <meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(description)}">
-  <meta property="og:image" content="${img}">
+${noImage ? "" : `  <meta property="og:image" content="${img}">
   <meta property="og:image:alt" content="${esc(imageAlt || "Brightfront Studio")}">
-  <meta name="twitter:card" content="summary_large_image">
+`}  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#F6F3EC">
   ${ICON}
   <link rel="preload" href="/assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -162,7 +162,7 @@ for (const p of posts) {
     {
       "@context": "https://schema.org", "@type": "BlogPosting", headline: p.h1, description: p.description,
       datePublished: p.date, dateModified: p.updated, inLanguage: "en", wordCount: p.words,
-      mainEntityOfPage: p.url, image: SITE + imgInfo(p.image).src, articleSection: p.category,
+      mainEntityOfPage: p.url, ...(p.image ? { image: SITE + imgInfo(p.image).src } : {}), articleSection: p.category,
       author: ORG, publisher: ORG, isPartOf: { "@type": "Blog", name: BLOG, url: SITE + "/blog/" },
     },
     {
@@ -178,7 +178,7 @@ for (const p of posts) {
     mainEntity: p.faq.map((q) => ({ "@type": "Question", name: q.q, acceptedAnswer: { "@type": "Answer", text: strip(q.a) } })),
   });
 
-  const html = head({ title: p.title, description: p.description, url: p.url, type: "article", image: p.image, imageAlt: p.imageAlt, schema }) + `
+  const html = head({ title: p.title, description: p.description, url: p.url, type: "article", image: p.image, imageAlt: p.imageAlt, schema, noImage: !p.image }) + `
     <div class="page-head">
       <div class="wrap">
         <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / <span>${esc(p.category)}</span></nav>
@@ -191,7 +191,7 @@ for (const p of posts) {
     <div class="wrap layout">
       <nav class="toc" aria-label="On this page"><p>On this page</p><ol>${p.toc.map((t) => `<li><a href="#${t.id}">${esc(t.t)}</a></li>`).join("")}</ol></nav>
       <article class="article">
-<figure class="post-hero">${picture(p.image, p.imageAlt, true)}</figure>
+${p.image ? `<figure class="post-hero">${picture(p.image, p.imageAlt, true)}</figure>` : ""}
 <div class="takeaways"><h2 class="tk">In short</h2><ul>
 ${p.takeaways.map((t) => `  <li>${t}</li>`).join("\n")}
 </ul></div>
@@ -221,7 +221,7 @@ ${p.faq.map((q) => `<details><summary>${esc(q.q)}</summary><p>${q.a}</p></detail
 }
 
 // ---------- index ----------
-const card = (p, tag = "h3") => `<li><a href="/blog/${p.slug}/" tabindex="-1" aria-hidden="true">${picture(p.image, "", false)}</a><div class="pl-body"><p class="cat">${esc(p.category)}</p><${tag}><a href="/blog/${p.slug}/">${esc(p.h1)}</a></${tag}><p>${esc(p.description)}</p><p class="pl-meta">${p.minutes} min read</p></div></li>`;
+const card = (p, tag = "h3") => `<li>${p.image ? `<a href="/blog/${p.slug}/" tabindex="-1" aria-hidden="true">${picture(p.image, "", false)}</a>` : ""}<div class="pl-body"><p class="cat">${esc(p.category)}</p><${tag}><a href="/blog/${p.slug}/">${esc(p.h1)}</a></${tag}><p>${esc(p.description)}</p><p class="pl-meta">${p.minutes} min read</p></div></li>`;
 const feat = posts.find((p) => p.featured) || posts[0];
 const indexSchema = [
   { "@context": "https://schema.org", "@type": "Blog", name: BLOG, description: BLOG_TAG, url: SITE + "/blog/", inLanguage: "en", publisher: ORG,
