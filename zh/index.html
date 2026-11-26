@@ -16,12 +16,12 @@
   <meta property="og:image" content="https://brightfrontdesign.com/img/01-hero.webp">
   <meta property="og:image:width" content="1600">
   <meta property="og:image:height" content="900">
-  <meta property="og:image:alt" content="阳光洒落的小店柜台，陈列温暖诱人。">
+  <meta property="og:image:alt" content="站在柜台后面、面带微笑的小咖啡店店主夫妇。">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="为您的小店量身制作网站，省心省力 — Brightfront Studio">
   <meta name="twitter:description" content="启动 $250，确认通过后 $250，之后每月 $39。托管、更新与修改，全部交给我们。">
   <meta name="twitter:image" content="https://brightfrontdesign.com/img/01-hero.webp">
-  <meta name="twitter:image:alt" content="阳光洒落的小店柜台，陈列温暖诱人。">
+  <meta name="twitter:image:alt" content="站在柜台后面、面带微笑的小咖啡店店主夫妇。">
   <meta name="theme-color" content="#F6F3EC">
   <link rel="canonical" href="https://brightfrontdesign.com/zh/">
   <link rel="alternate" hreflang="en" href="https://brightfrontdesign.com/">
@@ -218,6 +218,17 @@
     .brand { min-width:0; } .brand span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
     @media (min-width:1180px) { .lang { margin-right:.25rem; } }
     @media (max-width:400px) { .bar { gap:.5rem; } .brand { gap:.4rem; } .brand span { font-size:.9rem; } .lang a { min-width:34px; padding:0 .45rem; } }
+
+    /* Desktop header: keep every label on one line, vertically centred, brand name never truncated */
+    @media (min-width:1180px) {
+      .bar { gap:1rem; }
+      .brand { flex:none; } .brand span { overflow:visible; text-overflow:clip; }
+      .desk-nav { gap:1.15rem; flex:1 1 auto; justify-content:center; }
+      .desk-nav a { font-size:.88rem; white-space:nowrap; line-height:1.2; }
+      .header-cta { white-space:nowrap; font-size:.88rem; min-height:42px; padding:0 .95rem; flex:none; }
+      .lang { flex:none; }
+    }
+    @media (min-width:1180px) and (max-width:1319px) { .desk-nav { gap:.85rem; } .desk-nav a, .header-cta { font-size:.84rem; } }
 
     /* Simplified Chinese typography */
     :root { --sans:"Instrument Sans","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC",system-ui,sans-serif; --serif:"Instrument Serif","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",Georgia,sans-serif; }
@@ -431,7 +442,7 @@
         <span>Brightfront Studio</span>
       </a>
       <nav class="desk-nav" aria-label="主导航">
-        <a href="#shops">适合哪些小店</a><a href="#how">合作流程</a><a href="#examples">案例展示</a><a href="#whats-included">包含内容</a><a href="#pricing">价格</a><a href="#faq">常见问题</a>
+        <a href="#shops">适合哪些小店</a><a href="#how">合作流程</a><a href="#examples">案例展示</a><a href="#whats-included">包含内容</a><a href="#pricing">价格</a><a href="#faq">常见问题</a><a href="/blog/" hreflang="en">博客</a>
       </nav>
       <nav class="lang" aria-label="语言 / Language"><a href="/" hreflang="en" lang="en">EN</a><a href="/ja/" hreflang="ja" lang="ja">日本語</a><a href="/zh/" hreflang="zh-CN" lang="zh-CN" aria-current="page">中文</a></nav>
       <a class="btn header-cta" href="#contact">我要做网站</a>
@@ -439,7 +450,7 @@
     <details class="mob-nav">
       <summary>菜单</summary>
       <nav aria-label="移动端菜单">
-        <a href="#shops">适合哪些小店</a><a href="#how">合作流程</a><a href="#examples">案例展示</a><a href="#whats-included">包含内容</a><a href="#pricing">价格</a><a href="#faq">常见问题</a><a href="#contact">我要做网站</a>
+        <a href="#shops">适合哪些小店</a><a href="#how">合作流程</a><a href="#examples">案例展示</a><a href="#whats-included">包含内容</a><a href="#pricing">价格</a><a href="#faq">常见问题</a><a href="/blog/" hreflang="en">博客</a><a href="#contact">我要做网站</a>
       </nav>
     </details>
   </header>
@@ -461,7 +472,7 @@
         </div>
       </div>
       <div class="hero-photo">
-        <img fetchpriority="high" decoding="async" src="/img/01-hero.webp" srcset="/img/01-hero-800w.webp 800w, /img/01-hero-1200w.webp 1200w, /img/01-hero.webp 1600w" sizes="(min-width: 960px) 50vw, 100vw" width="1600" height="900" alt="阳光洒落的小店柜台，摆放着玻璃罐和陶土水壶——这正是我们为之制作网站的那类小店。">
+        <img fetchpriority="high" decoding="async" src="/img/01-hero.webp" srcset="/img/01-hero-800w.webp 800w, /img/01-hero-1200w.webp 1200w, /img/01-hero.webp 1600w" sizes="(min-width: 960px) 50vw, 100vw" width="1600" height="900" alt="经营一家小咖啡店的夫妇面带微笑，站在摆着收银机的柜台后面。">
       </div>
     </section>
 
@@ -472,12 +483,12 @@
         <h2>为街角的小店而做。</h2>
         <p class="lede">如果您的顾客需要到店消费，希望让人容易找到、值得信赖、愿意上门，一个清爽的网站就能替您说话——营业时间、菜单、地址，一应俱全。</p>
         <div class="tiles">
-          <figure class="tile"><img src="/img/04-cafe.webp" srcset="/img/04-cafe-480w.webp 480w, /img/04-cafe-800w.webp 800w, /img/04-cafe.webp 1600w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1600" height="900" loading="lazy" decoding="async" alt="木质柜台与咖啡杯，温馨惬意的咖啡店内景。"><figcaption>咖啡店</figcaption></figure>
-          <figure class="tile"><img src="/img/05-salon.webp" srcset="/img/05-salon-480w.webp 480w, /img/05-salon-800w.webp 800w, /img/05-salon.webp 1600w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1600" height="900" loading="lazy" decoding="async" alt="摆放着造型椅和镜子的明亮美发沙龙。"><figcaption>美发沙龙与理发店</figcaption></figure>
-          <figure class="tile"><img src="/img/06-foodtruck.webp" srcset="/img/06-foodtruck-480w.webp 480w, /img/06-foodtruck-800w.webp 800w, /img/06-foodtruck.webp 1600w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1600" height="900" loading="lazy" decoding="async" alt="餐车在街边窗口为顾客出餐。"><figcaption>餐车</figcaption></figure>
-          <figure class="tile"><img src="/img/store-food.webp" srcset="/img/store-food-480w.webp 480w, /img/store-food-800w.webp 800w, /img/store-food.webp 1728w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1728" height="1152" loading="lazy" decoding="async" alt="赤陶色亚麻布上摆放着乡村面包、橄榄油、无花果和一罐果酱。"><figcaption>烘焙店与食品店</figcaption></figure>
-          <figure class="tile"><img src="/img/store-beauty.webp" srcset="/img/store-beauty-480w.webp 480w, /img/store-beauty-800w.webp 800w, /img/store-beauty.webp 1728w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1728" height="1152" loading="lazy" decoding="async" alt="货架上摆放着柔和玫瑰色调的护肤产品。"><figcaption>美容与健康</figcaption></figure>
-          <figure class="tile"><img src="/img/store-crafts.webp" srcset="/img/store-crafts-480w.webp 480w, /img/store-crafts-800w.webp 800w, /img/store-crafts.webp 1728w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1728" height="1152" loading="lazy" decoding="async" alt="木桌上陈列着手工陶器与手作工艺品。"><figcaption>本地小店与手作人</figcaption></figure>
+          <figure class="tile"><img src="/img/04-cafe.webp" srcset="/img/04-cafe-480w.webp 480w, /img/04-cafe-800w.webp 800w, /img/04-cafe.webp 1600w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1600" height="900" loading="lazy" decoding="async" alt="温暖的咖啡店内景，质朴的木质柜台和柔和的灯光。"><figcaption>咖啡店</figcaption></figure>
+          <figure class="tile"><img src="/img/05-salon.webp" srcset="/img/05-salon-480w.webp 480w, /img/05-salon-800w.webp 800w, /img/05-salon.webp 1600w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1600" height="900" loading="lazy" decoding="async" alt="明亮的美发沙龙内景，配有圆形镜子和现代灯光。"><figcaption>美发沙龙与理发店</figcaption></figure>
+          <figure class="tile"><img src="/img/06-foodtruck.webp" srcset="/img/06-foodtruck-480w.webp 480w, /img/06-foodtruck-800w.webp 800w, /img/06-foodtruck.webp 1600w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1600" height="900" loading="lazy" decoding="async" alt="晴天里，餐车店主在窗口为两位顾客出餐。"><figcaption>餐车</figcaption></figure>
+          <figure class="tile"><img src="/img/store-food.webp" srcset="/img/store-food-480w.webp 480w, /img/store-food-800w.webp 800w, /img/store-food.webp 1728w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1728" height="1152" loading="lazy" decoding="async" alt="面包店木架上陈列的新鲜手工面包。"><figcaption>烘焙店与食品店</figcaption></figure>
+          <figure class="tile"><img src="/img/store-beauty.webp" srcset="/img/store-beauty-480w.webp 480w, /img/store-beauty-800w.webp 800w, /img/store-beauty.webp 1728w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1728" height="1152" loading="lazy" decoding="async" alt="美容沙龙货架上摆放的护肤产品。"><figcaption>美容与健康</figcaption></figure>
+          <figure class="tile"><img src="/img/store-crafts.webp" srcset="/img/store-crafts-480w.webp 480w, /img/store-crafts-800w.webp 800w, /img/store-crafts.webp 1728w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1728" height="1152" loading="lazy" decoding="async" alt="手工艺人工作室里摆满手工陶器的架子。"><figcaption>本地小店与手作人</figcaption></figure>
         </div>
       </div>
     </section>
@@ -494,7 +505,7 @@
           <article class="step"><div class="step-num">04</div><h3>您确认通过，我们上线</h3><p>我们会用 info@brightfrontdesign.com 把成品网站发给您。您确认通过后，再支付剩余的 $250，之后每月 $39 即可享受托管与更新。</p></article>
         </div>
         <figure class="wide-photo">
-          <img src="/img/02-websites.webp" srcset="/img/02-websites-800w.webp 800w, /img/02-websites-1200w.webp 1200w, /img/02-websites.webp 1600w" sizes="(min-width: 1160px) 1120px, calc(100vw - 40px)" width="1600" height="900" loading="lazy" decoding="async" alt="笔记本电脑和手机并排展示着一个简洁的小店网站。">
+          <img src="/img/02-websites.webp" srcset="/img/02-websites-800w.webp 800w, /img/02-websites-1200w.webp 1200w, /img/02-websites.webp 1600w" sizes="(min-width: 1160px) 1120px, calc(100vw - 40px)" width="1600" height="900" loading="lazy" decoding="async" alt="咖啡店木桌上的笔记本电脑和智能手机，旁边是一罐冰咖啡。">
           <figcaption class="caption">一个网站，同时适配电脑和顾客手中的手机。</figcaption>
         </figure>
       </div>
@@ -546,11 +557,11 @@
             </ul>
           </div>
           <div class="split-photo">
-            <img src="/img/08-phone.webp" srcset="/img/08-phone-480w.webp 480w, /img/08-phone.webp 752w" sizes="(min-width: 1160px) 520px, (min-width: 900px) 46vw, calc(100vw - 40px)" width="752" height="941" loading="lazy" decoding="async" alt="木质柜台上的手机显示着一家小店的网站，旁边是一只陶瓷杯。">
+            <img src="/img/08-phone.webp" srcset="/img/08-phone-480w.webp 480w, /img/08-phone.webp 752w" sizes="(min-width: 1160px) 520px, (min-width: 900px) 46vw, calc(100vw - 40px)" width="752" height="941" loading="lazy" decoding="async" alt="温馨的咖啡店里，一只手拿着智能手机，旁边是一杯咖啡。">
           </div>
         </div>
         <figure class="wide-photo">
-          <img src="/img/07-team.webp" srcset="/img/07-team-800w.webp 800w, /img/07-team-1200w.webp 1200w, /img/07-team.webp 1600w" sizes="(min-width: 1160px) 1120px, calc(100vw - 40px)" width="1600" height="900" loading="lazy" decoding="async" alt="Brightfront 团队围坐在摆着笔记本电脑和草图的桌旁一起工作。">
+          <img src="/img/07-team.webp" srcset="/img/07-team-800w.webp 800w, /img/07-team-1200w.webp 1200w, /img/07-team.webp 1600w" sizes="(min-width: 1160px) 1120px, calc(100vw - 40px)" width="1600" height="900" loading="lazy" decoding="async" alt="小工作室里，三个人围着木桌上的电脑一起工作。">
           <figcaption class="caption">小而精的工作室，贴心的服务。从制作、托管到后续维护，我们全程负责。</figcaption>
         </figure>
       </div>
@@ -787,6 +798,7 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
         <p class="eyebrow">邮箱</p>
         <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>
         <p class="fine" style="margin-top:.75rem"><a href="/privacy/">隐私政策</a></p>
+        <p class="fine photo-credit">图片：<a href="https://www.pexels.com/" rel="nofollow noopener">Pexels</a>（依据 Pexels 免费许可使用的真实照片；照片中的人物并非 Brightfront 员工或客户）</p>
       </div>
     </div>
   </footer>

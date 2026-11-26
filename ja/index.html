@@ -16,12 +16,12 @@
   <meta property="og:image" content="https://brightfrontdesign.com/img/01-hero.webp">
   <meta property="og:image:width" content="1600">
   <meta property="og:image:height" content="900">
-  <meta property="og:image:alt" content="あたたかな日差しの差し込む、居心地のよい小さなお店のカウンター。">
+  <meta property="og:image:alt" content="カウンターの奥に立つ、小さなカフェを営む笑顔の夫婦。">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="お店のためのホームページを、まるごとお任せ — Brightfront Studio">
   <meta name="twitter:description" content="制作開始時に$250、ご承認後に$250、その後は月額$39。ホスティング・更新・修正まで私たちが対応します。">
   <meta name="twitter:image" content="https://brightfrontdesign.com/img/01-hero.webp">
-  <meta name="twitter:image:alt" content="あたたかな日差しの差し込む、居心地のよい小さなお店のカウンター。">
+  <meta name="twitter:image:alt" content="カウンターの奥に立つ、小さなカフェを営む笑顔の夫婦。">
   <meta name="theme-color" content="#F6F3EC">
   <link rel="canonical" href="https://brightfrontdesign.com/ja/">
   <link rel="alternate" hreflang="en" href="https://brightfrontdesign.com/">
@@ -218,6 +218,19 @@
     .brand { min-width:0; } .brand span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
     @media (min-width:1180px) { .lang { margin-right:.25rem; } }
     @media (max-width:400px) { .bar { gap:.5rem; } .brand { gap:.4rem; } .brand span { font-size:.9rem; } .lang a { min-width:34px; padding:0 .45rem; } }
+
+    /* Desktop header: keep every label on one line, vertically centred, brand name never truncated */
+    @media (min-width:1180px) {
+      .bar { gap:1rem; }
+      .brand { flex:none; } .brand span { overflow:visible; text-overflow:clip; }
+      .desk-nav { gap:1.15rem; flex:1 1 auto; justify-content:center; }
+      .desk-nav a { font-size:.88rem; white-space:nowrap; line-height:1.2; }
+      .header-cta { white-space:nowrap; font-size:.88rem; min-height:42px; padding:0 .95rem; flex:none; }
+      .lang { flex:none; }
+    }
+    @media (min-width:1180px) and (max-width:1319px) { .desk-nav { gap:.85rem; } .desk-nav a, .header-cta { font-size:.84rem; } }
+    /* Japanese labels and button are longer: keep the compact size at every desktop width */
+    @media (min-width:1180px) { .desk-nav { gap:.85rem; } .desk-nav a, .header-cta { font-size:.84rem; } }
 
     /* Japanese typography */
     :root { --sans:"Instrument Sans","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic UI","Yu Gothic","Meiryo",system-ui,sans-serif; --serif:"Instrument Serif","Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",Georgia,serif; }
@@ -430,7 +443,7 @@
         <span>Brightfront Studio</span>
       </a>
       <nav class="desk-nav" aria-label="メインナビゲーション">
-        <a href="#shops">こんなお店に</a><a href="#how">ご利用の流れ</a><a href="#examples">制作事例</a><a href="#whats-included">含まれるもの</a><a href="#pricing">料金</a><a href="#faq">よくある質問</a>
+        <a href="#shops">こんなお店に</a><a href="#how">ご利用の流れ</a><a href="#examples">制作事例</a><a href="#whats-included">含まれるもの</a><a href="#pricing">料金</a><a href="#faq">よくある質問</a><a href="/blog/" hreflang="en">ブログ</a>
       </nav>
       <nav class="lang" aria-label="言語 / Language"><a href="/" hreflang="en" lang="en">EN</a><a href="/ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a><a href="/zh/" hreflang="zh-CN" lang="zh-CN">中文</a></nav>
       <a class="btn header-cta" href="#contact">ホームページを依頼する</a>
@@ -438,7 +451,7 @@
     <details class="mob-nav">
       <summary>メニュー</summary>
       <nav aria-label="モバイルメニュー">
-        <a href="#shops">こんなお店に</a><a href="#how">ご利用の流れ</a><a href="#examples">制作事例</a><a href="#whats-included">含まれるもの</a><a href="#pricing">料金</a><a href="#faq">よくある質問</a><a href="#contact">ホームページを依頼する</a>
+        <a href="#shops">こんなお店に</a><a href="#how">ご利用の流れ</a><a href="#examples">制作事例</a><a href="#whats-included">含まれるもの</a><a href="#pricing">料金</a><a href="#faq">よくある質問</a><a href="/blog/" hreflang="en">ブログ</a><a href="#contact">ホームページを依頼する</a>
       </nav>
     </details>
   </header>
@@ -460,7 +473,7 @@
         </div>
       </div>
       <div class="hero-photo">
-        <img fetchpriority="high" decoding="async" src="/img/01-hero.webp" srcset="/img/01-hero-800w.webp 800w, /img/01-hero-1200w.webp 1200w, /img/01-hero.webp 1600w" sizes="(min-width: 960px) 50vw, 100vw" width="1600" height="900" alt="ガラス瓶と素焼きのピッチャーが並ぶ、日の差し込む小さなお店のカウンター。私たちがホームページを制作しているお店のイメージです。">
+        <img fetchpriority="high" decoding="async" src="/img/01-hero.webp" srcset="/img/01-hero-800w.webp 800w, /img/01-hero-1200w.webp 1200w, /img/01-hero.webp 1600w" sizes="(min-width: 960px) 50vw, 100vw" width="1600" height="900" alt="小さなカフェを営む笑顔の夫婦。レジのあるカウンターの奥に立っています。">
       </div>
     </section>
 
@@ -471,12 +484,12 @@
         <h2>街角のお店のために。</h2>
         <p class="lede">対面でお客様をお迎えするお店にとって、見つけやすく、信頼でき、足を運びやすいことは大切です。営業時間、メニュー、場所まで、すっきりとしたホームページがお店の代わりにご案内します。</p>
         <div class="tiles">
-          <figure class="tile"><img src="/img/04-cafe.webp" srcset="/img/04-cafe-480w.webp 480w, /img/04-cafe-800w.webp 800w, /img/04-cafe.webp 1600w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1600" height="900" loading="lazy" decoding="async" alt="木のカウンターとコーヒーカップのある、居心地のよいカフェの店内。"><figcaption>カフェ</figcaption></figure>
-          <figure class="tile"><img src="/img/05-salon.webp" srcset="/img/05-salon-480w.webp 480w, /img/05-salon-800w.webp 800w, /img/05-salon.webp 1600w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1600" height="900" loading="lazy" decoding="async" alt="スタイリングチェアと鏡が並ぶ、明るい美容室。"><figcaption>美容室・理容室</figcaption></figure>
-          <figure class="tile"><img src="/img/06-foodtruck.webp" srcset="/img/06-foodtruck-480w.webp 480w, /img/06-foodtruck-800w.webp 800w, /img/06-foodtruck.webp 1600w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1600" height="900" loading="lazy" decoding="async" alt="窓口でお客様に提供しているキッチンカー。"><figcaption>キッチンカー</figcaption></figure>
-          <figure class="tile"><img src="/img/store-food.webp" srcset="/img/store-food-480w.webp 480w, /img/store-food-800w.webp 800w, /img/store-food.webp 1728w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1728" height="1152" loading="lazy" decoding="async" alt="テラコッタ色のリネンの上に置かれた、カンパーニュ、オリーブオイル、いちじく、ジャムの瓶。"><figcaption>ベーカリー・食品店</figcaption></figure>
-          <figure class="tile"><img src="/img/store-beauty.webp" srcset="/img/store-beauty-480w.webp 480w, /img/store-beauty-800w.webp 800w, /img/store-beauty.webp 1728w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1728" height="1152" loading="lazy" decoding="async" alt="棚に並ぶ、やさしいローズ系のスキンケア用品。"><figcaption>ビューティー・ウェルネス</figcaption></figure>
-          <figure class="tile"><img src="/img/store-crafts.webp" srcset="/img/store-crafts-480w.webp 480w, /img/store-crafts-800w.webp 800w, /img/store-crafts.webp 1728w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1728" height="1152" loading="lazy" decoding="async" alt="木のテーブルに飾られた、手作りの陶器とクラフト作品。"><figcaption>地域のお店・作り手</figcaption></figure>
+          <figure class="tile"><img src="/img/04-cafe.webp" srcset="/img/04-cafe-480w.webp 480w, /img/04-cafe-800w.webp 800w, /img/04-cafe.webp 1600w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1600" height="900" loading="lazy" decoding="async" alt="素朴な木のカウンターとやわらかな照明の、あたたかな雰囲気のコーヒーショップの店内。"><figcaption>カフェ</figcaption></figure>
+          <figure class="tile"><img src="/img/05-salon.webp" srcset="/img/05-salon-480w.webp 480w, /img/05-salon-800w.webp 800w, /img/05-salon.webp 1600w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1600" height="900" loading="lazy" decoding="async" alt="丸い鏡とモダンな照明のある、明るい美容室の店内。"><figcaption>美容室・理容室</figcaption></figure>
+          <figure class="tile"><img src="/img/06-foodtruck.webp" srcset="/img/06-foodtruck-480w.webp 480w, /img/06-foodtruck-800w.webp 800w, /img/06-foodtruck.webp 1600w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1600" height="900" loading="lazy" decoding="async" alt="晴れた日に、キッチンカーの窓口で2人のお客様に料理を出す店主。"><figcaption>キッチンカー</figcaption></figure>
+          <figure class="tile"><img src="/img/store-food.webp" srcset="/img/store-food-480w.webp 480w, /img/store-food-800w.webp 800w, /img/store-food.webp 1728w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1728" height="1152" loading="lazy" decoding="async" alt="ベーカリーの木の棚に並ぶ、職人の手による焼きたてのパン。"><figcaption>ベーカリー・食品店</figcaption></figure>
+          <figure class="tile"><img src="/img/store-beauty.webp" srcset="/img/store-beauty-480w.webp 480w, /img/store-beauty-800w.webp 800w, /img/store-beauty.webp 1728w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1728" height="1152" loading="lazy" decoding="async" alt="美容サロンの棚に並ぶスキンケア用品。"><figcaption>ビューティー・ウェルネス</figcaption></figure>
+          <figure class="tile"><img src="/img/store-crafts.webp" srcset="/img/store-crafts-480w.webp 480w, /img/store-crafts-800w.webp 800w, /img/store-crafts.webp 1728w" sizes="(min-width: 1160px) 362px, (min-width: 800px) calc((100vw - 75px) / 3), calc((100vw - 53px) / 2)" width="1728" height="1152" loading="lazy" decoding="async" alt="職人の工房の棚いっぱいに並ぶ手作りの陶器。"><figcaption>地域のお店・作り手</figcaption></figure>
         </div>
       </div>
     </section>
@@ -493,7 +506,7 @@
           <article class="step"><div class="step-num">04</div><h3>ご承認いただいたら公開します</h3><p>完成したサイトを info@brightfrontdesign.com からメールでお送りします。残りの$250はご承認後のお支払いとなり、その後は月額$39でホスティングと更新をお任せいただけます。</p></article>
         </div>
         <figure class="wide-photo">
-          <img src="/img/02-websites.webp" srcset="/img/02-websites-800w.webp 800w, /img/02-websites-1200w.webp 1200w, /img/02-websites.webp 1600w" sizes="(min-width: 1160px) 1120px, calc(100vw - 40px)" width="1600" height="900" loading="lazy" decoding="async" alt="パソコンとスマートフォンに並んで表示された、すっきりとした小規模事業者のホームページ。">
+          <img src="/img/02-websites.webp" srcset="/img/02-websites-800w.webp 800w, /img/02-websites-1200w.webp 1200w, /img/02-websites.webp 1600w" sizes="(min-width: 1160px) 1120px, calc(100vw - 40px)" width="1600" height="900" loading="lazy" decoding="async" alt="カフェの木のテーブルに置かれたノートパソコンとスマートフォン、メイソンジャーに入ったアイスコーヒー。">
           <figcaption class="caption">ひとつのサイトを、パソコンにも、お客様が手にするスマートフォンにも最適なレイアウトで。</figcaption>
         </figure>
       </div>
@@ -545,11 +558,11 @@
             </ul>
           </div>
           <div class="split-photo">
-            <img src="/img/08-phone.webp" srcset="/img/08-phone-480w.webp 480w, /img/08-phone.webp 752w" sizes="(min-width: 1160px) 520px, (min-width: 900px) 46vw, calc(100vw - 40px)" width="752" height="941" loading="lazy" decoding="async" alt="木のカウンターに置かれたスマートフォンに、小さなお店のホームページが表示されている様子。隣には陶器のカップ。">
+            <img src="/img/08-phone.webp" srcset="/img/08-phone-480w.webp 480w, /img/08-phone.webp 752w" sizes="(min-width: 1160px) 520px, (min-width: 900px) 46vw, calc(100vw - 40px)" width="752" height="941" loading="lazy" decoding="async" alt="居心地のよいカフェで、コーヒーカップの横でスマートフォンを手に持つ様子。">
           </div>
         </div>
         <figure class="wide-photo">
-          <img src="/img/07-team.webp" srcset="/img/07-team-800w.webp 800w, /img/07-team-1200w.webp 1200w, /img/07-team.webp 1600w" sizes="(min-width: 1160px) 1120px, calc(100vw - 40px)" width="1600" height="900" loading="lazy" decoding="async" alt="Brightfrontのチームが、ノートパソコンとスケッチを広げたテーブルで一緒に作業している様子。">
+          <img src="/img/07-team.webp" srcset="/img/07-team-800w.webp 800w, /img/07-team-1200w.webp 1200w, /img/07-team.webp 1600w" sizes="(min-width: 1160px) 1120px, calc(100vw - 40px)" width="1600" height="900" loading="lazy" decoding="async" alt="小さなスタジオの木のテーブルで、パソコンを囲んで一緒に作業する3人。">
           <figcaption class="caption">小さなスタジオだからこそ、一人ひとりに丁寧に。制作から公開、運用まで私たちが担当します。</figcaption>
         </figure>
       </div>
@@ -786,6 +799,7 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
         <p class="eyebrow">メール</p>
         <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>
         <p class="fine" style="margin-top:.75rem"><a href="/privacy/">プライバシーポリシー</a></p>
+        <p class="fine photo-credit">写真：<a href="https://www.pexels.com/" rel="nofollow noopener">Pexels</a>（Pexelsの無料ライセンスで使用している実際の写真です。写っている方はBrightfrontのスタッフやお客様ではありません）</p>
       </div>
     </div>
   </footer>
