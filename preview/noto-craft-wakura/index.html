@@ -48,6 +48,12 @@
     .btn-ghost { color:inherit; border-color:color-mix(in srgb,currentColor 40%,transparent); } .btn-ghost:hover { background:rgba(127,127,127,.12); }
     .btn-solid { background:var(--accent2); color:#fff; }
     .art { width:min(100%,280px); justify-self:center; } .art svg { width:100%; height:auto; display:block; }
+    .art.photo { width:min(100%,380px); } .art.photo img { display:block; width:100%; height:auto; max-height:480px; object-fit:cover; border-radius:22px; box-shadow:0 18px 40px rgba(0,0,0,.28); margin:0 auto; }
+    .card-photos { display:grid; grid-auto-flow:column; grid-auto-columns:1fr; gap:6px; margin:-4px -4px 6px; }
+    .card-photos img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:12px; }
+    .gallery { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:22px 0 0; max-width:44rem; } .gallery figure { margin:0; }
+    .gallery img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:16px; }
+    .access-photo img { display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; border-radius:14px; margin-bottom:10px; }
     section { padding:52px 18px; }
     .wrap { max-width:1080px; margin:0 auto; }
     .eyebrow { margin:0 0 6px; color:var(--accent2); font-size:.8rem; font-weight:700; letter-spacing:.12em; }
@@ -122,14 +128,14 @@
           </div>
           <div class="hero-actions"><a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=%E8%83%BD%E7%99%BB%E3%82%AF%E3%83%A9%E3%83%95%E3%83%88%20%E4%B8%83%E5%B0%BE%E5%B8%82%E5%92%8C%E5%80%89%E7%94%BA" rel="noopener">道順を見る</a><a class="btn btn-ghost" href="https://www.instagram.com/noto.craft/" rel="noopener">Instagram</a></div>
         </div>
-        <div class="art" aria-hidden="true"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><ellipse cx="200" cy="256" rx="150" ry="14" fill="#ffffff" opacity=".25"/><path d="M84 150h120l-12 90a14 14 0 0 1-14 12h-68a14 14 0 0 1-14-12z" fill="#ffffff"/><path d="M204 170c30 0 30 46 0 46" stroke="#ffffff" stroke-width="10" fill="none"/><path d="M118 130c-8-14 8-20 0-34M150 126c-8-14 8-20 0-34" stroke="#ffffff" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/><ellipse cx="292" cy="214" rx="54" ry="34" fill="#d1603d"/><path d="M262 196c8-30 50-36 62-6" fill="#f2c14e"/><path d="M292 180v-26m0 0c-10-16-26-14-30-8m30 8c10-16 26-14 30-8" stroke="#f2c14e" stroke-width="6" fill="none" stroke-linecap="round"/><circle cx="320" cy="72" r="28" fill="#f2c14e" opacity=".6"/></svg></div>
+        <div class="art photo"><img src="photo-hero.jpg" alt="改装したカフェの店内" width="1200" height="800" fetchpriority="high" decoding="async" style="max-width:1200px"></div>
       </div>
     </section>
     <section class="story" id="story">
       <div class="wrap">
         <p class="eyebrow">お店について</p>
         <h2>和倉に、集まれる場所を。</h2>
-        <p>2024年の能登半島地震のあと、和倉温泉の旅館はすべて休業しました。能登クラフトは、元薬局の店舗を改装してひらいた、地元の人と観光で訪れる人が集まれる場所。能登の復興を応援する拠点です。</p><p>朝は能登の食材を使った和と洋のモーニングセット。お昼は能登豚のカレーや地鶏の唐揚げ。スムージーやアイスクリーム、とれたての能登の野菜も並びます。</p>
+        <p>2024年の能登半島地震のあと、和倉温泉の旅館はすべて休業しました。能登クラフトは、元薬局の店舗を改装してひらいた、地元の人と観光で訪れる人が集まれる場所。能登の復興を応援する拠点です。</p><p>朝は能登の食材を使った和と洋のモーニングセット。お昼は能登豚のカレーや地鶏の唐揚げ。スムージーやアイスクリーム、とれたての能登の野菜も並びます。</p><div class="gallery"><figure><img src="photo-3.jpg" alt="地域の人が集まる食事のひととき" width="1200" height="800" loading="lazy" decoding="async" style="max-width:1200px"></figure></div>
         <ul class="facts"><li>朝8:00から</li><li>能登の野菜を販売</li><li>2026年12月19日 グランドオープン</li><li>元薬局の店舗を改装</li></ul>
       </div>
     </section>
@@ -137,7 +143,7 @@
       <div class="wrap">
         <p class="eyebrow">メニュー・おすすめ</p>
         <h2>能登の食材を、朝から。</h2>
-        <div class="grid"><article class="card"><div class="emoji" aria-hidden="true">🍳</div><h3>モーニングセット（和・洋）</h3><p>能登の食材を使って、朝8:00から。</p></article><article class="card"><div class="emoji" aria-hidden="true">🍛</div><h3>能登豚のカレー</h3><p>お昼の看板メニュー。</p></article><article class="card"><div class="emoji" aria-hidden="true">🍗</div><h3>地鶏の唐揚げ</h3><p>地元の鶏を、唐揚げで。</p></article><article class="card"><div class="emoji" aria-hidden="true">🥤</div><h3>スムージー・アイスクリーム</h3><p>ひと休みのおともに。</p></article><article class="card"><div class="emoji" aria-hidden="true">🥬</div><h3>能登の野菜</h3><p>とれたての野菜を店頭で販売しています。</p></article></div>
+        <div class="grid"><article class="card"><div class="card-photos"><img src="photo-1.jpg" alt="和のモーニングセット" width="1200" height="800" loading="lazy" decoding="async" style="max-width:1200px"><img src="photo-2.jpg" alt="洋のモーニングセット" width="1200" height="800" loading="lazy" decoding="async" style="max-width:1200px"></div><h3>モーニングセット（和・洋）</h3><p>能登の食材を使って、朝8:00から。</p></article><article class="card"><div class="emoji" aria-hidden="true">🍛</div><h3>能登豚のカレー</h3><p>お昼の看板メニュー。</p></article><article class="card"><div class="emoji" aria-hidden="true">🍗</div><h3>地鶏の唐揚げ</h3><p>地元の鶏を、唐揚げで。</p></article><article class="card"><div class="emoji" aria-hidden="true">🥤</div><h3>スムージー・アイスクリーム</h3><p>ひと休みのおともに。</p></article><article class="card"><div class="emoji" aria-hidden="true">🥬</div><h3>能登の野菜</h3><p>とれたての野菜を店頭で販売しています。</p></article></div>
         <p class="note">メニューや野菜の内容は日によって変わります。</p>
       </div>
     </section>
@@ -157,6 +163,7 @@
         <h2>お店への行き方</h2>
         <div class="visit-grid">
           <div class="card">
+            
             <h3>能登クラフト</h3>
             <p class="addr">石川県七尾市和倉町</p>
             <p>和倉温泉にある、元薬局の店舗です。</p>

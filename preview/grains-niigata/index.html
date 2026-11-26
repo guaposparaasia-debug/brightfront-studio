@@ -48,6 +48,12 @@
     .btn-ghost { color:inherit; border-color:color-mix(in srgb,currentColor 40%,transparent); } .btn-ghost:hover { background:rgba(127,127,127,.12); }
     .btn-solid { background:var(--accent2); color:#fff; }
     .art { width:min(100%,280px); justify-self:center; } .art svg { width:100%; height:auto; display:block; }
+    .art.photo { width:min(100%,380px); } .art.photo img { display:block; width:100%; height:auto; max-height:480px; object-fit:cover; border-radius:22px; box-shadow:0 18px 40px rgba(0,0,0,.28); margin:0 auto; }
+    .card-photos { display:grid; grid-auto-flow:column; grid-auto-columns:1fr; gap:6px; margin:-4px -4px 6px; }
+    .card-photos img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:12px; }
+    .gallery { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:22px 0 0; max-width:44rem; } .gallery figure { margin:0; }
+    .gallery img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:16px; }
+    .access-photo img { display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; border-radius:14px; margin-bottom:10px; }
     section { padding:52px 18px; }
     .wrap { max-width:1080px; margin:0 auto; }
     .eyebrow { margin:0 0 6px; color:var(--accent2); font-size:.8rem; font-weight:700; letter-spacing:.12em; }
@@ -122,14 +128,14 @@
           </div>
           <div class="hero-actions"><a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=grains.%20%E3%82%B0%E3%83%AC%E3%82%A4%E3%83%B3%E3%82%BA%20%E6%96%B0%E6%BD%9F%E5%B8%82%E8%A5%BF%E5%8C%BA%E9%9D%92%E5%B1%B1" rel="noopener">道順を見る</a><a class="btn btn-ghost" href="https://www.instagram.com/grains_niigata/" rel="noopener">Instagram</a></div>
         </div>
-        <div class="art" aria-hidden="true"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><ellipse cx="200" cy="250" rx="140" ry="16" fill="#ffffff" opacity=".25"/><path d="M90 230V150c0-40 50-62 110-62s110 22 110 62v80z" fill="#e2b66b"/><path d="M90 150c0-40 50-62 110-62s110 22 110 62c0 14-12 20-26 20H116c-14 0-26-6-26-20z" fill="#a8572e"/><path d="M150 112c8 14 8 30 0 44M200 104c8 16 8 34 0 50M250 112c8 14 8 30 0 44" stroke="#ffffff" stroke-width="7" stroke-linecap="round" fill="none" opacity=".7"/><circle cx="318" cy="70" r="30" fill="#e2b66b" opacity=".35"/></svg></div>
+        <div class="art photo"><img src="photo-hero.jpg" alt="grains.の看板のパン" width="1600" height="2400" fetchpriority="high" decoding="async" style="max-width:1600px"></div>
       </div>
     </section>
     <section class="story" id="story">
       <div class="wrap">
         <p class="eyebrow">お店について</p>
         <h2>この土地の味を、パンにする。</h2>
-        <p>店主でシェフの西方健さんは、パリ、ベルリン、ミラノとヨーロッパで約10年修業を重ねてきました。grains.のテーマは「土地を表現するパン」です。</p><p>天然酵母を使い、フランス式の薪窯で焼くパンには、新潟県産の小麦と地元の素材を使っています。カンパーニュや食パン、ライ麦や古代穀物のパンが看板です。</p>
+        <p>店主でシェフの西方健さんは、パリ、ベルリン、ミラノとヨーロッパで約10年修業を重ねてきました。grains.のテーマは「土地を表現するパン」です。</p><p>天然酵母を使い、フランス式の薪窯で焼くパンには、新潟県産の小麦と地元の素材を使っています。カンパーニュや食パン、ライ麦や古代穀物のパンが看板です。</p><div class="gallery"><figure><img src="photo-2.jpg" alt="オリーブのパン" width="1200" height="1800" loading="lazy" decoding="async" style="max-width:1200px"></figure><figure><img src="photo-3.jpg" alt="くるみのパン" width="1200" height="1800" loading="lazy" decoding="async" style="max-width:1200px"></figure></div>
         <ul class="facts"><li>フランス式の薪窯</li><li>天然酵母</li><li>新潟県産の小麦</li><li>地元の素材</li></ul>
       </div>
     </section>
@@ -137,7 +143,7 @@
       <div class="wrap">
         <p class="eyebrow">メニュー・おすすめ</p>
         <h2>看板のパンと、新作。</h2>
-        <div class="grid"><article class="card"><div class="emoji" aria-hidden="true">🥖</div><h3>カンパーニュ</h3><p>薪窯で焼き上げる、看板のパン。</p></article><article class="card"><div class="emoji" aria-hidden="true">🍞</div><h3>食パン</h3><p>毎日の食卓に。</p></article><article class="card"><div class="emoji" aria-hidden="true">🌾</div><h3>ライ麦のパン</h3><p>ライ麦を使った、ヨーロッパのパン。</p></article><article class="card"><div class="emoji" aria-hidden="true">🌱</div><h3>古代穀物のパン</h3><p>古代穀物を使ったパン。</p></article><article class="card"><div class="emoji" aria-hidden="true">🎄</div><h3>パネットーネ・クラシコ（新作）</h3><p>胎内市「中条たまご」の全卵、レーズン、オレンジピールを使い、天然酵母で2〜3日かけて仕上げます。</p></article></div>
+        <div class="grid"><article class="card"><div class="emoji" aria-hidden="true">🥖</div><h3>カンパーニュ</h3><p>薪窯で焼き上げる、看板のパン。</p></article><article class="card"><div class="emoji" aria-hidden="true">🍞</div><h3>食パン</h3><p>毎日の食卓に。</p></article><article class="card"><div class="emoji" aria-hidden="true">🌾</div><h3>ライ麦のパン</h3><p>ライ麦を使った、ヨーロッパのパン。</p></article><article class="card"><div class="emoji" aria-hidden="true">🌱</div><h3>古代穀物のパン</h3><p>古代穀物を使ったパン。</p></article><article class="card"><div class="card-photos"><img src="photo-1.jpg" alt="パネットーネ・クラシコ" width="1200" height="1800" loading="lazy" decoding="async" style="max-width:1200px"></div><h3>パネットーネ・クラシコ（新作）</h3><p>胎内市「中条たまご」の全卵、レーズン、オレンジピールを使い、天然酵母で2〜3日かけて仕上げます。</p></article></div>
         <p class="note">商品の種類や価格は店頭・Instagramでご確認ください。</p>
       </div>
     </section>
@@ -157,6 +163,7 @@
         <h2>お店への行き方</h2>
         <div class="visit-grid">
           <div class="card">
+            
             <h3>grains.（グレインズ）</h3>
             <p class="addr">新潟県新潟市西区青山</p>
             

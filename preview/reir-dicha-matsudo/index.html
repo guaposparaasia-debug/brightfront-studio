@@ -48,6 +48,12 @@
     .btn-ghost { color:inherit; border-color:color-mix(in srgb,currentColor 40%,transparent); } .btn-ghost:hover { background:rgba(127,127,127,.12); }
     .btn-solid { background:var(--accent2); color:#fff; }
     .art { width:min(100%,280px); justify-self:center; } .art svg { width:100%; height:auto; display:block; }
+    .art.photo { width:min(100%,380px); } .art.photo img { display:block; width:100%; height:auto; max-height:480px; object-fit:cover; border-radius:22px; box-shadow:0 18px 40px rgba(0,0,0,.28); margin:0 auto; }
+    .card-photos { display:grid; grid-auto-flow:column; grid-auto-columns:1fr; gap:6px; margin:-4px -4px 6px; }
+    .card-photos img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:12px; }
+    .gallery { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:22px 0 0; max-width:44rem; } .gallery figure { margin:0; }
+    .gallery img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:16px; }
+    .access-photo img { display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; border-radius:14px; margin-bottom:10px; }
     section { padding:52px 18px; }
     .wrap { max-width:1080px; margin:0 auto; }
     .eyebrow { margin:0 0 6px; color:var(--accent2); font-size:.8rem; font-weight:700; letter-spacing:.12em; }
@@ -122,14 +128,14 @@
           </div>
           <div class="hero-actions"><a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=REIR%20dicha%20%E3%83%AC%E3%82%A4%E3%83%BC%E3%83%AB%E3%83%87%E3%82%A3%E3%83%83%E3%83%81%E3%83%A3%20%E6%9D%BE%E6%88%B8%E5%B8%82%E4%BA%94%E9%A6%99" rel="noopener">道順を見る</a><a class="btn btn-ghost" href="https://www.instagram.com/reir.dicha/" rel="noopener">Instagram</a></div>
         </div>
-        <div class="art" aria-hidden="true"><svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg"><ellipse cx="200" cy="254" rx="140" ry="14" fill="#ffffff" opacity=".25"/><circle cx="150" cy="200" r="26" fill="none" stroke="#ffffff" stroke-width="10"/><circle cx="150" cy="120" r="26" fill="none" stroke="#ffffff" stroke-width="10"/><path d="M170 186l110-90M170 134l110 90" stroke="#ffffff" stroke-width="10" stroke-linecap="round"/><rect x="292" y="70" width="22" height="160" rx="11" fill="#e8c4b8"/><path d="M292 96h-14M292 122h-14M292 148h-14M292 174h-14M292 200h-14" stroke="#e8c4b8" stroke-width="6" stroke-linecap="round"/><circle cx="96" cy="78" r="16" fill="#b0607a"/><circle cx="74" cy="104" r="10" fill="#e8c4b8"/></svg></div>
+        <div class="art photo"><img src="photo-hero.jpg" alt="REIR dichaのヘアサロンの店内" width="400" height="268" fetchpriority="high" decoding="async" style="max-width:400px"></div>
       </div>
     </section>
     <section class="story" id="story">
       <div class="wrap">
         <p class="eyebrow">お店について</p>
         <h2>ヘアもネイルも、ひとつのサロンで。</h2>
-        <p>REIR dichaは、2004年から五香で営むサロンです。2026年で22周年を迎えます。得意なのは、ショートヘアと髪質改善。</p><p>ヘアに加えて、ネイルケア・フットケア、まつげパーマ、メイク、ヘッドスパまで。ひとつのお店で、トータルにきれいを叶えます。セット面は6席、駐車場もあります。</p><p>少人数制のネイルスクールも運営しています。講師は、JNA本部認定講師の Emiko Itou さんです。</p>
+        <p>REIR dichaは、2004年から五香で営むサロンです。2026年で22周年を迎えます。得意なのは、ショートヘアと髪質改善。</p><p>ヘアに加えて、ネイルケア・フットケア、まつげパーマ、メイク、ヘッドスパまで。ひとつのお店で、トータルにきれいを叶えます。セット面は6席、駐車場もあります。</p><p>少人数制のネイルスクールも運営しています。講師は、JNA本部認定講師の Emiko Itou さんです。</p><div class="gallery"><figure><img src="photo-2.jpg" alt="ネイルスクールのレッスンの様子" width="400" height="583" loading="lazy" decoding="async" style="max-width:400px"></figure></div>
         <ul class="facts"><li>五香駅 徒歩1分</li><li>2004年オープン</li><li>セット面6席</li><li>駐車場あり</li></ul>
       </div>
     </section>
@@ -137,7 +143,7 @@
       <div class="wrap">
         <p class="eyebrow">メニュー・おすすめ</p>
         <h2>メニュー</h2>
-        <div class="grid"><article class="card"><div class="emoji" aria-hidden="true">✂️</div><h3>カット</h3><p>¥5,280</p></article><article class="card"><div class="emoji" aria-hidden="true">💧</div><h3>水素トリートメント</h3><p>¥8,800〜¥13,200（髪の長さによります）</p></article><article class="card"><div class="emoji" aria-hidden="true">💅</div><h3>ネイルケア・フットケア</h3><p>ハンドもフットも。</p></article><article class="card"><div class="emoji" aria-hidden="true">👁️</div><h3>まつげパーマ</h3><p>目元のメニュー。</p></article><article class="card"><div class="emoji" aria-hidden="true">💄</div><h3>メイク</h3><p>ヘアと合わせて。</p></article><article class="card"><div class="emoji" aria-hidden="true">🌿</div><h3>ヘッドスパ</h3><p>頭皮のケア。</p></article></div>
+        <div class="grid"><article class="card"><div class="emoji" aria-hidden="true">✂️</div><h3>カット</h3><p>¥5,280</p></article><article class="card"><div class="emoji" aria-hidden="true">💧</div><h3>水素トリートメント</h3><p>¥8,800〜¥13,200（髪の長さによります）</p></article><article class="card"><div class="card-photos"><img src="photo-1.jpg" alt="ネイルスペース" width="400" height="360" loading="lazy" decoding="async" style="max-width:400px"></div><h3>ネイルケア・フットケア</h3><p>ハンドもフットも。</p></article><article class="card"><div class="emoji" aria-hidden="true">👁️</div><h3>まつげパーマ</h3><p>目元のメニュー。</p></article><article class="card"><div class="emoji" aria-hidden="true">💄</div><h3>メイク</h3><p>ヘアと合わせて。</p></article><article class="card"><div class="emoji" aria-hidden="true">🌿</div><h3>ヘッドスパ</h3><p>頭皮のケア。</p></article></div>
         <p class="note">料金はお問い合わせ時にご確認ください。</p>
       </div>
     </section>
@@ -157,6 +163,7 @@
         <h2>お店への行き方</h2>
         <div class="visit-grid">
           <div class="card">
+            <div class="access-photo"><img src="photo-3.jpg" alt="REIR dichaの店頭" width="400" height="400" loading="lazy" decoding="async" style="max-width:400px"></div>
             <h3>REIR dicha（レイールディッチャ）</h3>
             <p class="addr">千葉県松戸市五香</p>
             <p>五香駅から徒歩1分。駐車場あり。</p>
