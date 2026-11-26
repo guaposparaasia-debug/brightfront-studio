@@ -1,0 +1,51 @@
+/* Blog-only styles, loaded after pages.css on /blog/* pages.
+   Larger body text and generous spacing: the blog is written for readers 40+.
+   Linked as blog.css?v=N: bump N when this file changes (/assets/* is cached 30 days). */
+.blog body,body.blog{font-size:1.1875rem;line-height:1.72}
+body.blog main p,body.blog main li{color:#26231F}
+body.blog .article p,body.blog .article li{font-size:1.1875rem}
+body.blog .article h2{margin-top:3rem}
+body.blog .article h3{font-size:1.45rem;margin-top:2rem}
+body.blog .lede{font-size:1.25rem}
+body.blog .toc{font-size:.98rem}
+body.blog .article a{color:var(--pine);text-decoration-thickness:1px}
+body.blog .article a:hover{text-decoration-thickness:2px}
+
+.post-hero{margin:0 0 2.2rem}
+.post-hero img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--paper-2)}
+
+.tip{margin:1.8rem 0 0;padding:1.1rem 1.3rem;background:#fff;border:1px solid var(--line);border-left:3px solid #B5893B}
+.tip strong:first-child{display:block;font-family:var(--serif);font-weight:400;font-size:1.3rem;margin-bottom:.2rem}
+.tip p{margin:.4rem 0 0}
+
+.byline{display:flex;flex-wrap:wrap;gap:.3rem 1rem;font-size:.95rem;color:var(--muted);margin-top:1.2rem}
+.cat{display:inline-block;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--pine);text-decoration:none;margin:0 0 .6rem}
+
+.post-list{list-style:none;padding:0;margin:1.6rem 0 0;display:grid;gap:1.4rem}
+@media (min-width:760px){.post-list{grid-template-columns:1fr 1fr}}
+.post-list li{margin:0;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column;transition:border-color .15s ease}
+.post-list li:hover{border-color:var(--pine)}
+.post-list img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--paper-2)}
+.post-list .pl-body{padding:1.1rem 1.3rem 1.3rem}
+.post-list h2,.post-list h3{margin:0 0 .45rem;font-size:1.5rem;line-height:1.15}
+.post-list a{text-decoration:none}
+.post-list h2 a:hover,.post-list h3 a:hover{text-decoration:underline}
+.post-list p{margin:0;color:var(--muted);font-size:1.02rem}
+.post-list .pl-meta{margin-top:.7rem;font-size:.88rem}
+
+.featured{display:grid;gap:0;background:#fff;border:1px solid var(--line);margin:0 0 1rem}
+@media (min-width:860px){.featured{grid-template-columns:1.2fr 1fr}}
+.featured img{width:100%;height:100%;aspect-ratio:16/9;object-fit:cover}
+.featured .pl-body{padding:1.5rem 1.6rem}
+.featured h2{margin:0 0 .6rem;font-size:clamp(1.7rem,3vw,2.3rem)}
+.featured a{text-decoration:none}
+.featured h2 a:hover{text-decoration:underline}
+.featured p{color:var(--muted)}
+
+.cat-nav{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.6rem 0 0;padding:0;list-style:none}
+.cat-nav li{margin:0}
+.cat-nav a{display:inline-flex;align-items:center;min-height:44px;padding:0 1rem;border:1px solid var(--line);background:#fff;text-decoration:none;font-size:.95rem}
+.cat-nav a:hover{border-color:var(--pine)}
+
+.about-box{margin:3rem 0 0;padding:1.4rem 1.5rem;background:var(--paper-2);border:1px solid var(--line)}
+.about-box h2{margin-top:0;font-size:1.5rem}
