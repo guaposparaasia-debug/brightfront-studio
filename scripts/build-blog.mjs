@@ -40,7 +40,7 @@ const ICON = `<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www
 const LOGO = `<svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#1C3D34"/><path fill="#F6F3EC" d="M6 22.6V12.2L16 5.6l10 6.6v10.4H6z"/><rect x="13.2" y="15.2" width="5.6" height="7.4" fill="#1C3D34"/></svg>`;
 
 function head({ title, description, url, type = "website", image, imageAlt, schema = [] }) {
-  const img = SITE + (image || "/img/07-team.webp");
+  const img = SITE + (image ? imgInfo(image).src : "/img/blog/how-to-start-a-business-after-40-1200w.webp");
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -135,8 +135,13 @@ const posts = readdirSync(SRC).filter((f) => f.endsWith(".html")).map((f) => {
 const bySlug = Object.fromEntries(posts.map((p) => [p.slug, p]));
 const cats = [...new Set(posts.map((p) => p.category))];
 
+// Real photos for posts: /img/blog/<slug>-{800,1200}w.webp (16:9 crops of the Pexels originals in img/blog/*.jpg).
+const imgInfo = (image) => image.startsWith("/img/blog/")
+  ? { w: 1200, h: 675, set: `${image}-800w.webp 800w, ${image}-1200w.webp 1200w`, src: `${image}-1200w.webp` }
+  : IMAGES[image];
+
 function picture(image, alt, eager) {
-  const i = IMAGES[image];
+  const i = imgInfo(image);
   if (!i) throw new Error("Unknown image " + image);
   return `<img src="${i.src}" srcset="${i.set}" sizes="(min-width:1000px) 44rem, 100vw" width="${i.w}" height="${i.h}" alt="${esc(alt)}"${eager ? ' fetchpriority="high"' : ' loading="lazy" decoding="async"'}>`;
 }
@@ -149,7 +154,7 @@ for (const p of posts) {
     {
       "@context": "https://schema.org", "@type": "BlogPosting", headline: p.h1, description: p.description,
       datePublished: p.date, dateModified: p.updated, inLanguage: "en", wordCount: p.words,
-      mainEntityOfPage: p.url, image: SITE + p.image, articleSection: p.category,
+      mainEntityOfPage: p.url, image: SITE + imgInfo(p.image).src, articleSection: p.category,
       author: ORG, publisher: ORG, isPartOf: { "@type": "Blog", name: BLOG, url: SITE + "/blog/" },
     },
     {
@@ -215,7 +220,7 @@ const indexSchema = [
 const indexHtml = head({
   title: `${BLOG}: Starting a Small Business After 40 | Brightfront Studio`,
   description: "Plain-English guides for people 40 and over who want to start a side business, freelance or open a small shop: ideas, first steps, pricing, getting customers and simple tech.",
-  url: SITE + "/blog/", image: "/img/07-team.webp", imageAlt: "People working together at a table with laptops and sketches.", schema: indexSchema,
+  url: SITE + "/blog/", image: "/img/blog/how-to-start-a-business-after-40", imageAlt: "A woman in her fifties working on a laptop at a wooden desk in her office.", schema: indexSchema,
 }) + `
     <div class="page-head">
       <div class="wrap">
