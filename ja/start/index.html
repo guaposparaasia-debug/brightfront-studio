@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>ホームページ制作を始める — $250 | Brightfront Studio</title>
+  <meta name="description" content="メールアドレスを入力し、PayPalで$250をお支払いいただくと、ホームページ制作を開始します。">
+  <meta name="theme-color" content="#F6F3EC">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231C3D34'/%3E%3Cpath fill='%23F6F3EC' d='M6 22.6V12.2L16 5.6l10 6.6v10.4H6z'/%3E%3Crect x='13.2' y='15.2' width='5.6' height='7.4' fill='%231C3D34'/%3E%3C/svg%3E">
+  <link rel="preload" href="/assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/pages.css?v=2">
+  <style>
+    main{padding-top:2.4rem}
+    .start{display:grid;gap:1.4rem}
+    .start .price-list b small{font-family:var(--sans);font-size:.55em;color:var(--muted);margin-left:.15rem}
+    .pay{background:#fff;border:1px solid var(--line);border-top:3px solid var(--pine);padding:1.4rem}
+    .pay label{display:block;font-weight:600;margin:0 0 .4rem}
+    .pay input[type=email]{width:100%;min-height:52px;padding:.75rem .85rem;border:1px solid var(--line);background:#fff;font:inherit;font-size:1.05rem;color:var(--ink)}
+    .pay input[type=email]:focus{outline:2px solid var(--pine);outline-offset:1px}
+    .pay .hint{margin:.45rem 0 1rem;color:var(--muted);font-size:.9rem}
+    .pay .btn{width:100%;font-size:1.05rem;min-height:54px;cursor:pointer}
+    .pay .fine{margin-top:.7rem}
+    ol.next{margin:1rem 0 0;padding-left:1.25rem} ol.next li{margin:.4rem 0}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">本文へスキップ</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="/ja/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#1C3D34"/><path fill="#F6F3EC" d="M6 22.6V12.2L16 5.6l10 6.6v10.4H6z"/><rect x="13.2" y="15.2" width="5.6" height="7.4" fill="#1C3D34"/></svg><span>Brightfront Studio</span></a>
+      <nav class="top-nav" aria-label="Language"><a href="/start/" hreflang="en" lang="en">English</a></nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap read start">
+      <div>
+        <p class="eyebrow">制作のお申し込み</p>
+        <h1>ホームページ制作を始める</h1>
+        <ol class="next"><li>メールアドレスを入力し、PayPalで$250をお支払いいただくと制作を開始します。</li><li>1営業日以内に info@brightfrontdesign.com からご連絡し、写真やお店の情報をうかがいます。</li><li>完成したホームページをメールでお送りします。2回目の$250は、ご承認いただいてからのお支払いです。</li></ol>
+      </div>
+      <section class="price-box" aria-labelledby="price-h">
+        <h2 id="price-h">料金</h2>
+        <ul class="price-list"><li><span>今：制作開始</span><b>$250</b></li><li><span>完成したサイトのご承認後</span><b>$250</b></li><li><span>その後：毎月</span><b>$39<small>/月</small></b></li></ul>
+        <p class="meta">月額$39には、ホスティング・更新・修正が含まれます。月単位のご契約で、いつでも解約できます。</p>
+      </section>
+      <!-- Same PayPal _xclick start payment as the homepage pricing form. The only visible input is the
+           customer's email, sent as PayPal "custom"; /api/paypal-ipn adds it to the owner's notification. -->
+      <form class="pay" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <label for="start-email">メールアドレス</label>
+        <input id="start-email" type="email" name="custom" required maxlength="120" autocomplete="email" inputmode="email" placeholder="you@yourshop.com">
+        <p class="hint">今お知らせいただくのはこれだけです。このアドレスにご連絡します。</p>
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="chedamso@naver.com">
+        <input type="hidden" name="item_name" value="Brightfront website — first payment (start build)">
+        <input type="hidden" name="amount" value="250.00">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="no_shipping" value="1">
+        <input type="hidden" name="no_note" value="1">
+        <input type="hidden" name="charset" value="UTF-8">
+        <input type="hidden" name="notify_url" value="https://brightfrontdesign.com/api/paypal-ipn">
+        <input type="hidden" name="return" value="https://brightfrontdesign.com/thanks/">
+        <input type="hidden" name="cancel_return" value="https://brightfrontdesign.com/ja/start/">
+        <button type="submit" class="btn">PayPalで$250を支払う</button>
+        <p class="fine">お支払いはPayPalの安全なページで行います。PayPalのお支払い画面でクレジットカードもご利用いただけます。</p>
+      </form>
+      <p class="fine"><a href="/ja/">トップページへ戻る</a> · <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a></p>
+    </div>
+  </main>
+</body>
+</html>
