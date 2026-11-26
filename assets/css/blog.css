@@ -8,8 +8,8 @@ body.blog .article h2{margin-top:3rem}
 body.blog .article h3{font-size:1.45rem;margin-top:2rem}
 body.blog .lede{font-size:1.25rem}
 body.blog .toc{font-size:.98rem}
-body.blog .article a{color:var(--pine);text-decoration-thickness:1px}
-body.blog .article a:hover{text-decoration-thickness:2px}
+body.blog .article a:not(.btn):not(.btn-ghost){color:var(--pine);text-decoration-thickness:1px}
+body.blog .article a:not(.btn):not(.btn-ghost):hover{text-decoration-thickness:2px}
 
 .post-hero{margin:0 0 2.2rem}
 .post-hero img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--paper-2)}

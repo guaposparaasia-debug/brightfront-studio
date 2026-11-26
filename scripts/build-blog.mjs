@@ -15,7 +15,7 @@ const SITE = "https://brightfrontdesign.com";
 const BLOG = "Second Act";
 const BLOG_TAG = "Starting and running a small business after 40";
 const ADSENSE = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1521418120439711" crossorigin="anonymous"></script>`;
-const CSS_V = { pages: 2, blog: 1 };
+const CSS_V = { pages: 2, blog: 2 };
 
 const IMAGES = {
   "/img/07-team.webp": { w: 1200, h: 675, set: "/img/07-team-800w.webp 800w, /img/07-team-1200w.webp 1200w", src: "/img/07-team-1200w.webp" },
