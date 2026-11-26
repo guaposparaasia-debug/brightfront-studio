@@ -13,3 +13,7 @@
 
 /assets/*
   Cache-Control: public, max-age=2592000
+
+# Blog post sources and build scripts are not pages. Keep them out of search.
+/scripts/*
+  X-Robots-Tag: noindex
