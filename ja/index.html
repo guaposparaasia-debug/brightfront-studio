@@ -219,6 +219,19 @@
     @media (min-width:1180px) { .lang { margin-right:.25rem; } }
     @media (max-width:400px) { .bar { gap:.5rem; } .brand { gap:.4rem; } .brand span { font-size:.9rem; } .lang a { min-width:34px; padding:0 .45rem; } }
 
+    /* Desktop header: keep every label on one line, vertically centred, brand name never truncated */
+    @media (min-width:1180px) {
+      .bar { gap:1rem; }
+      .brand { flex:none; } .brand span { overflow:visible; text-overflow:clip; }
+      .desk-nav { gap:1.15rem; flex:1 1 auto; justify-content:center; }
+      .desk-nav a { font-size:.88rem; white-space:nowrap; line-height:1.2; }
+      .header-cta { white-space:nowrap; font-size:.88rem; min-height:42px; padding:0 .95rem; flex:none; }
+      .lang { flex:none; }
+    }
+    @media (min-width:1180px) and (max-width:1319px) { .desk-nav { gap:.85rem; } .desk-nav a, .header-cta { font-size:.84rem; } }
+    /* Japanese labels and button are longer: keep the compact size at every desktop width */
+    @media (min-width:1180px) { .desk-nav { gap:.85rem; } .desk-nav a, .header-cta { font-size:.84rem; } }
+
     /* Japanese typography */
     :root { --sans:"Instrument Sans","Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic UI","Yu Gothic","Meiryo",system-ui,sans-serif; --serif:"Instrument Serif","Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",Georgia,serif; }
     body { line-height:1.85; line-break:strict; }
@@ -430,7 +443,7 @@
         <span>Brightfront Studio</span>
       </a>
       <nav class="desk-nav" aria-label="メインナビゲーション">
-        <a href="#shops">こんなお店に</a><a href="#how">ご利用の流れ</a><a href="#examples">制作事例</a><a href="#whats-included">含まれるもの</a><a href="#pricing">料金</a><a href="#faq">よくある質問</a>
+        <a href="#shops">こんなお店に</a><a href="#how">ご利用の流れ</a><a href="#examples">制作事例</a><a href="#whats-included">含まれるもの</a><a href="#pricing">料金</a><a href="#faq">よくある質問</a><a href="/blog/" hreflang="en">ブログ</a>
       </nav>
       <nav class="lang" aria-label="言語 / Language"><a href="/" hreflang="en" lang="en">EN</a><a href="/ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a><a href="/zh/" hreflang="zh-CN" lang="zh-CN">中文</a></nav>
       <a class="btn header-cta" href="#contact">ホームページを依頼する</a>
@@ -438,7 +451,7 @@
     <details class="mob-nav">
       <summary>メニュー</summary>
       <nav aria-label="モバイルメニュー">
-        <a href="#shops">こんなお店に</a><a href="#how">ご利用の流れ</a><a href="#examples">制作事例</a><a href="#whats-included">含まれるもの</a><a href="#pricing">料金</a><a href="#faq">よくある質問</a><a href="#contact">ホームページを依頼する</a>
+        <a href="#shops">こんなお店に</a><a href="#how">ご利用の流れ</a><a href="#examples">制作事例</a><a href="#whats-included">含まれるもの</a><a href="#pricing">料金</a><a href="#faq">よくある質問</a><a href="/blog/" hreflang="en">ブログ</a><a href="#contact">ホームページを依頼する</a>
       </nav>
     </details>
   </header>

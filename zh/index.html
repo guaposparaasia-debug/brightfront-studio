@@ -219,6 +219,17 @@
     @media (min-width:1180px) { .lang { margin-right:.25rem; } }
     @media (max-width:400px) { .bar { gap:.5rem; } .brand { gap:.4rem; } .brand span { font-size:.9rem; } .lang a { min-width:34px; padding:0 .45rem; } }
 
+    /* Desktop header: keep every label on one line, vertically centred, brand name never truncated */
+    @media (min-width:1180px) {
+      .bar { gap:1rem; }
+      .brand { flex:none; } .brand span { overflow:visible; text-overflow:clip; }
+      .desk-nav { gap:1.15rem; flex:1 1 auto; justify-content:center; }
+      .desk-nav a { font-size:.88rem; white-space:nowrap; line-height:1.2; }
+      .header-cta { white-space:nowrap; font-size:.88rem; min-height:42px; padding:0 .95rem; flex:none; }
+      .lang { flex:none; }
+    }
+    @media (min-width:1180px) and (max-width:1319px) { .desk-nav { gap:.85rem; } .desk-nav a, .header-cta { font-size:.84rem; } }
+
     /* Simplified Chinese typography */
     :root { --sans:"Instrument Sans","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC",system-ui,sans-serif; --serif:"Instrument Serif","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",Georgia,sans-serif; }
     body { line-height:1.8; }
@@ -431,7 +442,7 @@
         <span>Brightfront Studio</span>
       </a>
       <nav class="desk-nav" aria-label="主导航">
-        <a href="#shops">适合哪些小店</a><a href="#how">合作流程</a><a href="#examples">案例展示</a><a href="#whats-included">包含内容</a><a href="#pricing">价格</a><a href="#faq">常见问题</a>
+        <a href="#shops">适合哪些小店</a><a href="#how">合作流程</a><a href="#examples">案例展示</a><a href="#whats-included">包含内容</a><a href="#pricing">价格</a><a href="#faq">常见问题</a><a href="/blog/" hreflang="en">博客</a>
       </nav>
       <nav class="lang" aria-label="语言 / Language"><a href="/" hreflang="en" lang="en">EN</a><a href="/ja/" hreflang="ja" lang="ja">日本語</a><a href="/zh/" hreflang="zh-CN" lang="zh-CN" aria-current="page">中文</a></nav>
       <a class="btn header-cta" href="#contact">我要做网站</a>
@@ -439,7 +450,7 @@
     <details class="mob-nav">
       <summary>菜单</summary>
       <nav aria-label="移动端菜单">
-        <a href="#shops">适合哪些小店</a><a href="#how">合作流程</a><a href="#examples">案例展示</a><a href="#whats-included">包含内容</a><a href="#pricing">价格</a><a href="#faq">常见问题</a><a href="#contact">我要做网站</a>
+        <a href="#shops">适合哪些小店</a><a href="#how">合作流程</a><a href="#examples">案例展示</a><a href="#whats-included">包含内容</a><a href="#pricing">价格</a><a href="#faq">常见问题</a><a href="/blog/" hreflang="en">博客</a><a href="#contact">我要做网站</a>
       </nav>
     </details>
   </header>

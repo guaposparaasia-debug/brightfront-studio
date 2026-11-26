@@ -219,6 +219,17 @@
     .brand { min-width:0; } .brand span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
     @media (min-width:1180px) { .lang { margin-right:.25rem; } }
     @media (max-width:400px) { .bar { gap:.5rem; } .brand { gap:.4rem; } .brand span { font-size:.9rem; } .lang a { min-width:34px; padding:0 .45rem; } }
+
+    /* Desktop header: keep every label on one line, vertically centred, brand name never truncated */
+    @media (min-width:1180px) {
+      .bar { gap:1rem; }
+      .brand { flex:none; } .brand span { overflow:visible; text-overflow:clip; }
+      .desk-nav { gap:1.15rem; flex:1 1 auto; justify-content:center; }
+      .desk-nav a { font-size:.88rem; white-space:nowrap; line-height:1.2; }
+      .header-cta { white-space:nowrap; font-size:.88rem; min-height:42px; padding:0 .95rem; flex:none; }
+      .lang { flex:none; }
+    }
+    @media (min-width:1180px) and (max-width:1319px) { .desk-nav { gap:.85rem; } .desk-nav a, .header-cta { font-size:.84rem; } }
   </style>
   <!-- Static copy of the Tailwind v3.4.17 preflight reset (MIT) that the Tailwind Play CDN script used to inject;
        kept so the layout is unchanged without loading the 120 KB CDN script. Must stay after the main <style>. -->
