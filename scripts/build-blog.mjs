@@ -275,6 +275,9 @@ const aboutHtml = head({
   <li><strong>Reviewed and updated.</strong> Articles carry a published date and, when we revise them, an updated date. If you spot a mistake, email <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a> and we will fix it.</li>
   <li><strong>Human-edited.</strong> We use writing tools to help with drafts, the same way we suggest you might in your own business, but every article is edited, fact-checked and approved by a person before it goes live.</li>
 </ul>
+<h2>Photos</h2>
+<p>Photos: <a href="https://www.pexels.com/">Pexels</a>. The photos on this blog are real photographs from Pexels, used under the free Pexels licence. The people shown are not the people described in the articles.</p>
+<ul>${posts.filter((p) => p.photoCredit).map((p) => `<li><a href="${p.photoCredit}" rel="nofollow noopener">Photo for &ldquo;${esc(p.h1)}&rdquo;</a></li>`).join("")}</ul>
 <h2>How the blog is funded</h2>
 <p>The blog is free to read. It is supported in two ways: by Brightfront Studio's website service, which we mention where it is genuinely relevant, and by advertising served by Google AdSense. Ads are clearly separate from our writing, and advertisers have no say in what we write. You can read how ads and cookies work on this site in our <a href="/privacy/">privacy policy</a>.</p>
 <h2>Contact</h2>
