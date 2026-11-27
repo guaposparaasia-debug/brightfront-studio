@@ -60,6 +60,8 @@
     .btn-ghost:hover { background:var(--ink); color:var(--paper); }
     .btn:disabled { opacity:.45; cursor:not-allowed; }
     .pp-note { margin:.5rem 0 0; font-size:.85rem; color:var(--muted); }
+    .stripe-pay { width:100%; margin-top:.6rem; }
+    details.maint-later .stripe-pay { width:auto; }
     .site-header { position:sticky; top:0; z-index:30; background:color-mix(in srgb,var(--paper) 90%,transparent); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
     .bar { min-height:4.25rem; display:flex; align-items:center; justify-content:space-between; gap:.75rem; }
     .header-cta { display:none; }
@@ -656,6 +658,8 @@
                 <button type="submit" class="btn">$250を支払って制作を開始する</button>
               </form>
               <p class="pp-note">お支払いはPayPalで行います。PayPalのお支払い画面でクレジットカードもご利用いただけます。</p>
+              <button type="button" class="btn-ghost stripe-pay" data-plan="start">カードで$250を支払う（Stripe）</button>
+              <p class="pp-note stripe-err" role="alert" aria-live="polite"></p>
             </div>
             <noscript><p class="fine">このフォームの利用にはJavaScriptが必要です。<a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a> までメールでご連絡ください。</p></noscript>
           </div>
@@ -698,6 +702,9 @@
               <button type="submit" class="btn btn-primary" id="pp-submit">保守プラン — 月額$39（PayPalで支払う）</button>
               <p class="pp-note">PayPalのお支払い画面でカードもご利用いただけます。PayPalアカウントからいつでも解約でき、契約の縛りはありません。</p>
             </form>
+            <button type="button" class="btn-ghost stripe-pay" data-plan="maintenance">保守プラン — 月額$39（Stripeで支払う）</button>
+            <p class="pp-note">Stripeでもカードでお支払いいただけます。いつでも解約でき、契約の縛りはありません。</p>
+            <p class="pp-note stripe-err" role="alert" aria-live="polite"></p>
 <script>
 (function(){var f=document.getElementById('pp-sub');if(!f)return;var bi=document.getElementById('pp-biz');
 bi.addEventListener('input',function(){bi.setCustomValidity('');});
@@ -754,6 +761,8 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
                 <button type="submit" class="btn">$250を支払って制作を開始する</button>
               </form>
               <p class="pp-note">お支払いはPayPalで行います。PayPalのお支払い画面でクレジットカードもご利用いただけます。</p>
+              <button type="button" class="btn-ghost stripe-pay" data-plan="start">カードで$250を支払う（Stripe）</button>
+              <p class="pp-note stripe-err" role="alert" aria-live="polite"></p>
             </div>
             <noscript><p class="fine">このフォームの利用にはJavaScriptが必要です。<a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a> までメールでご連絡ください。</p></noscript>
         </div>
@@ -1004,6 +1013,31 @@ document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);}
         a.addEventListener("click", function () { document.querySelector(".mob-nav").open = false; });
       });
     })();
+  </script>
+
+  <script>
+  /* Stripe Checkout buttons (PayPal forms above stay unchanged). */
+  (function(){
+    var MSG_BIZ='屋号・店名を入力してください。', MSG_ERR='カード決済ページを開けませんでした。PayPalをお試しいただくか、info@brightfrontdesign.com までご連絡ください。';
+    document.querySelectorAll('.stripe-pay').forEach(function(b){
+      b.addEventListener('click',function(){
+        var plan=b.getAttribute('data-plan'), err=b.parentNode.querySelector('.stripe-err'), body={plan:plan};
+        if(plan==='maintenance'){
+          var bi=document.getElementById('pp-biz'), biz=bi?bi.value.trim():'';
+          if(!biz){if(bi){bi.setCustomValidity(MSG_BIZ);bi.reportValidity();}return;}
+          body.business=biz.slice(0,64);
+          body.ref=new URLSearchParams(location.search).get('ref')||((document.getElementById('ls-ref')||{}).value)||'';
+        } else {
+          var pay=b.closest('.lead-pay'), c=pay&&pay.querySelector('.pp-first-custom');
+          body.email=c?c.value:'';
+        }
+        b.disabled=true; if(err)err.textContent='';
+        fetch('/api/stripe-checkout',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})
+          .then(function(r){return r.json().then(function(j){if(!r.ok||!j||!j.url)throw new Error('stripe');location.href=j.url;});})
+          .catch(function(){b.disabled=false;if(err)err.textContent=MSG_ERR;});
+      });
+    });
+  })();
   </script>
 
 </body>
