@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Clean View",
+  "version": "1.0.0",
+  "description": "Hide Shorts, recommendations, comments, end screens and promoted cards on YouTube. Every part is a toggle.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "YouTube Clean View",
+    "default_icon": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" }
+  },
+  "icons": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+      "js": ["settings.js", "content.js"],
+      "css": ["clean.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

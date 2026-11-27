@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>YouTube Clean View</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <img src="icons/icon32.png" alt="" width="24" height="24">
+    <h1>Clean View</h1>
+    <label class="switch master" title="Turn everything on or off">
+      <input type="checkbox" id="enabled">
+      <span class="slider"></span>
+    </label>
+  </header>
+  <ul id="options"></ul>
+  <footer>
+    <button id="reset" type="button">Reset to defaults</button>
+  </footer>
+  <script src="settings.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
