@@ -53,7 +53,7 @@
     .card-photos img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:12px; }
     .gallery { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:22px 0 0; max-width:44rem; } .gallery figure { margin:0; }
     .gallery img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:16px; }
-    .access-photo img { display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; border-radius:14px; margin-bottom:10px; }
+    .access-photo img { display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; border-radius:14px; margin-bottom:10px; } .access-photo img.natural { aspect-ratio:auto; object-fit:contain; margin-inline:auto; }
     section { padding:52px 18px; }
     .wrap { max-width:1080px; margin:0 auto; }
     .eyebrow { margin:0 0 6px; color:var(--accent2); font-size:.8rem; font-weight:700; letter-spacing:.12em; }
@@ -62,7 +62,7 @@
     .story { background:var(--paper); } .story p { max-width:44rem; }
     .facts { display:flex; flex-wrap:wrap; gap:8px; list-style:none; padding:0; margin:18px 0 0; }
     .facts li { background:var(--tint); border-radius:999px; padding:6px 12px; font-weight:700; font-size:.9rem; }
-    .grid { display:grid; gap:12px; } .grid > * { min-width:0; } img { max-width:100%; }
+    .grid { display:grid; gap:12px; } .grid > * { min-width:0; } .nav-toggle { white-space:nowrap; flex:none; } img { max-width:100%; }
     .card { background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:16px; box-shadow:var(--shadow); }
     .card h3 { margin:6px 0 4px; font-size:1.08rem; } .card p { margin:0; color:var(--soft); }
     .emoji { font-size:1.6rem; }
@@ -128,7 +128,7 @@
           </div>
           <div class="hero-actions"><a class="btn btn-main" href="tel:+81764602230">電話する</a><a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=%E5%AF%8C%E5%B1%B1%E7%9C%8C%E5%AF%8C%E5%B1%B1%E5%B8%82%E6%89%8D%E8%A6%9A%E5%AF%BA837" rel="noopener">道順を見る</a></div>
         </div>
-        <div class="art photo"><img src="photo-hero.jpg" alt="粉をまとった、焼きたてのライ麦パンが並ぶクーラー" fetchpriority="high" decoding="async"></div>
+        <div class="art photo"><img src="photo-hero.jpg" alt="粉をまとった、焼きたてのライ麦パンが並ぶクーラー" width="1000" height="750" fetchpriority="high" decoding="async" style="max-width:1000px"></div>
       </div>
     </section>
     <section class="story" id="story">
@@ -143,7 +143,7 @@
       <div class="wrap">
         <p class="eyebrow">メニュー・おすすめ</p>
         <h2>看板のパン</h2>
-        <div class="grid"><article class="card"><div class="card-photos"><img src="photo-1.jpg" alt="クープの入ったパン オ セーグル" loading="lazy" decoding="async"></div><h3>パン オ セーグル</h3><p>¥980（日曜日のみ）</p></article><article class="card"><div class="emoji" aria-hidden="true">🌾</div><h3>パン ド カンパーニュ</h3><p>¥980　自然栽培の小麦を使ったカンパーニュ。</p></article><article class="card"><div class="card-photos"><img src="photo-2.jpg" alt="店頭のかごに並ぶスペルト100と手書きの値札" loading="lazy" decoding="async"></div><h3>スペルト100</h3><p>¥900</p></article><article class="card"><div class="card-photos"><img src="photo-3.jpg" alt="COKKI PANの刻印入りの木皿にのったこうじブレッド" loading="lazy" decoding="async"></div><h3>こうじブレッド</h3><p>¥500</p></article><article class="card"><div class="emoji" aria-hidden="true">🍇</div><h3>麹レーズンブレッド</h3><p>¥520</p></article><article class="card"><div class="emoji" aria-hidden="true">🌑</div><h3>ロブロ玄米</h3><p>看板のライ麦サワードウ。</p></article></div>
+        <div class="grid"><article class="card"><div class="card-photos"><img src="photo-1.jpg" alt="クープの入ったパン オ セーグル" width="744" height="1000" loading="lazy" decoding="async" style="max-width:744px"></div><h3>パン オ セーグル</h3><p>¥980（日曜日のみ）</p></article><article class="card"><div class="emoji" aria-hidden="true">🌾</div><h3>パン ド カンパーニュ</h3><p>¥980　自然栽培の小麦を使ったカンパーニュ。</p></article><article class="card"><div class="card-photos"><img src="photo-2.jpg" alt="店頭のかごに並ぶスペルト100と手書きの値札" width="744" height="1000" loading="lazy" decoding="async" style="max-width:744px"></div><h3>スペルト100</h3><p>¥900</p></article><article class="card"><div class="card-photos"><img src="photo-3.jpg" alt="COKKI PANの刻印入りの木皿にのったこうじブレッド" width="750" height="1000" loading="lazy" decoding="async" style="max-width:750px"></div><h3>こうじブレッド</h3><p>¥500</p></article><article class="card"><div class="emoji" aria-hidden="true">🍇</div><h3>麹レーズンブレッド</h3><p>¥520</p></article><article class="card"><div class="emoji" aria-hidden="true">🌑</div><h3>ロブロ玄米</h3><p>看板のライ麦サワードウ。</p></article></div>
         <p class="note">パンは売り切れ次第終了です。ご予約は2日前までにどうぞ。</p>
       </div>
     </section>

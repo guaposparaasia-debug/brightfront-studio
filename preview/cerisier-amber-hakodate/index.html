@@ -53,7 +53,7 @@
     .card-photos img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:12px; }
     .gallery { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:22px 0 0; max-width:44rem; } .gallery figure { margin:0; }
     .gallery img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:16px; }
-    .access-photo img { display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; border-radius:14px; margin-bottom:10px; }
+    .access-photo img { display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; border-radius:14px; margin-bottom:10px; } .access-photo img.natural { aspect-ratio:auto; object-fit:contain; margin-inline:auto; }
     section { padding:52px 18px; }
     .wrap { max-width:1080px; margin:0 auto; }
     .eyebrow { margin:0 0 6px; color:var(--accent2); font-size:.8rem; font-weight:700; letter-spacing:.12em; }
@@ -62,7 +62,7 @@
     .story { background:var(--paper); } .story p { max-width:44rem; }
     .facts { display:flex; flex-wrap:wrap; gap:8px; list-style:none; padding:0; margin:18px 0 0; }
     .facts li { background:var(--tint); border-radius:999px; padding:6px 12px; font-weight:700; font-size:.9rem; }
-    .grid { display:grid; gap:12px; } .grid > * { min-width:0; } img { max-width:100%; }
+    .grid { display:grid; gap:12px; } .grid > * { min-width:0; } .nav-toggle { white-space:nowrap; flex:none; } img { max-width:100%; }
     .card { background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:16px; box-shadow:var(--shadow); }
     .card h3 { margin:6px 0 4px; font-size:1.08rem; } .card p { margin:0; color:var(--soft); }
     .emoji { font-size:1.6rem; }
@@ -128,14 +128,14 @@
           </div>
           <div class="hero-actions"><a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=%E5%8C%97%E6%B5%B7%E9%81%93%E5%87%BD%E9%A4%A8%E5%B8%82%E6%9D%B1%E5%B1%B12-56-19" rel="noopener">道順を見る</a></div>
         </div>
-        <div class="art photo"><img src="photo-hero.jpg" alt="カウンセリングスペースと施術ルームのある、グレートーンの落ち着いた店内" fetchpriority="high" decoding="async"></div>
+        <div class="art photo"><img src="photo-hero.jpg" alt="カウンセリングスペースと施術ルームのある、グレートーンの落ち着いた店内" width="350" height="525" fetchpriority="high" decoding="async" style="max-width:350px"></div>
       </div>
     </section>
     <section class="story" id="story">
       <div class="wrap">
         <p class="eyebrow">お店について</p>
         <h2>静かな住宅街の、プライベートサロン。</h2>
-        <p>Cerisier Amber face salonは、2025年4月18日に函館市東山にオープンした、女性専用・完全予約制のプライベートサロンです。静かな住宅街にあり、店内はグレートーンの落ち着いた空間です。</p><p>大人の女性のたるみ・ゆらぎ・フェイスライン・乾燥・毛穴・くすみのお悩みに。カウンセリングをもとに、高周波、美容成分導入、EMS、マイクロニードルを使ってケアします。ご自宅でのホームケアもサポートします。</p><div class="gallery"><figure><img src="photo-2.jpg" alt="タブレットを使ったカウンセリングのようす" loading="lazy" decoding="async"></figure></div>
+        <p>Cerisier Amber face salonは、2025年4月18日に函館市東山にオープンした、女性専用・完全予約制のプライベートサロンです。静かな住宅街にあり、店内はグレートーンの落ち着いた空間です。</p><p>大人の女性のたるみ・ゆらぎ・フェイスライン・乾燥・毛穴・くすみのお悩みに。カウンセリングをもとに、高周波、美容成分導入、EMS、マイクロニードルを使ってケアします。ご自宅でのホームケアもサポートします。</p><div class="gallery"><figure><img src="photo-2.jpg" alt="サロンの看板の横で、タブレットを使ってカウンセリングするスタッフ" width="350" height="525" loading="lazy" decoding="async" style="max-width:350px"></figure></div>
         <ul class="facts"><li>女性専用</li><li>完全予約制のプライベートサロン</li><li>2025年4月18日オープン</li><li>駐車場1台</li></ul>
       </div>
     </section>
@@ -143,7 +143,7 @@
       <div class="wrap">
         <p class="eyebrow">メニュー・おすすめ</p>
         <h2>はじめての方のお試しコース</h2>
-        <div class="grid"><article class="card"><div class="card-photos"><img src="photo-1.jpg" alt="美容機器を使ったフェイシャルの施術" loading="lazy" decoding="async"></div><h3>うる艶肌再整コース（80分）</h3><p>初回お試し ¥9,900（税込）</p></article><article class="card"><div class="card-photos"><img src="photo-3.jpg" alt="機器での施術のようすとサロンの外観" loading="lazy" decoding="async"></div><h3>深部リフトコース（70分）</h3><p>初回お試し ¥9,900（税込）</p></article><article class="card"><div class="emoji" aria-hidden="true">⚡</div><h3>EMS導入ケアコース（50分）</h3><p>初回お試し ¥6,900（税込）</p></article></div>
+        <div class="grid"><article class="card"><div class="card-photos"><img src="photo-1.jpg" alt="美容機器を使ったフェイシャルの施術" width="350" height="467" loading="lazy" decoding="async" style="max-width:350px"></div><h3>うる艶肌再整コース（80分）</h3><p>初回お試し ¥9,900（税込）</p></article><article class="card"><div class="emoji" aria-hidden="true">💆</div><h3>深部リフトコース（70分）</h3><p>初回お試し ¥9,900（税込）</p></article><article class="card"><div class="emoji" aria-hidden="true">⚡</div><h3>EMS導入ケアコース（50分）</h3><p>初回お試し ¥6,900（税込）</p></article></div>
         <p class="note">価格は初回お試し価格（税込）です。施術はカウンセリングをもとに行います。</p>
       </div>
     </section>
@@ -163,7 +163,7 @@
         <h2>お店への行き方</h2>
         <div class="visit-grid">
           <div class="card">
-            
+            <div class="access-photo"><img class="natural" src="photo-3.jpg" alt="美容機器での施術のようすと、サロンの建物の外観" width="350" height="439" loading="lazy" decoding="async" style="max-width:350px"></div>
             <h3>Cerisier Amber face salon（スリズィエ アンバー フェイスサロン）</h3>
             <p class="addr">北海道函館市東山2-56-19</p>
             <p>JR五稜郭駅から車で12分。函館バス「東山団地」バス停から徒歩8分。お店の前に駐車場が1台分あります。</p>

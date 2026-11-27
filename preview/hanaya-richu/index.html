@@ -53,7 +53,7 @@
     .card-photos img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:12px; }
     .gallery { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:22px 0 0; max-width:44rem; } .gallery figure { margin:0; }
     .gallery img { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; border-radius:16px; }
-    .access-photo img { display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; border-radius:14px; margin-bottom:10px; }
+    .access-photo img { display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; border-radius:14px; margin-bottom:10px; } .access-photo img.natural { aspect-ratio:auto; object-fit:contain; margin-inline:auto; }
     section { padding:52px 18px; }
     .wrap { max-width:1080px; margin:0 auto; }
     .eyebrow { margin:0 0 6px; color:var(--accent2); font-size:.8rem; font-weight:700; letter-spacing:.12em; }
@@ -62,7 +62,7 @@
     .story { background:var(--paper); } .story p { max-width:44rem; }
     .facts { display:flex; flex-wrap:wrap; gap:8px; list-style:none; padding:0; margin:18px 0 0; }
     .facts li { background:var(--tint); border-radius:999px; padding:6px 12px; font-weight:700; font-size:.9rem; }
-    .grid { display:grid; gap:12px; } .grid > * { min-width:0; } img { max-width:100%; }
+    .grid { display:grid; gap:12px; } .grid > * { min-width:0; } .nav-toggle { white-space:nowrap; flex:none; } img { max-width:100%; }
     .card { background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:16px; box-shadow:var(--shadow); }
     .card h3 { margin:6px 0 4px; font-size:1.08rem; } .card p { margin:0; color:var(--soft); }
     .emoji { font-size:1.6rem; }
@@ -128,7 +128,7 @@
           </div>
           <div class="hero-actions"><a class="btn btn-main" href="tel:+819089536919">電話する</a><a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&destination=%E5%A4%A7%E9%98%AA%E5%BA%9C%E6%B3%89%E5%8D%97%E9%83%A1%E7%86%8A%E5%8F%96%E7%94%BA%E5%B0%8F%E8%B0%B7%E5%8D%971-98-1" rel="noopener">道順を見る</a><a class="btn btn-ghost" href="https://www.instagram.com/hanayarichu0909/" rel="noopener">Instagram</a></div>
         </div>
-        <div class="art photo"><img src="photo-hero.jpg" alt="ピンクのリボンを結んだ、バラ・カーネーション・トルコキキョウの花束" fetchpriority="high" decoding="async"></div>
+        <div class="art photo"><img src="photo-hero.jpg" alt="ピンクのリボンを結んだ、バラ・カーネーション・トルコキキョウの花束" width="719" height="719" fetchpriority="high" decoding="async" style="max-width:719px"></div>
       </div>
     </section>
     <section class="story" id="story">
@@ -143,7 +143,7 @@
       <div class="wrap">
         <p class="eyebrow">メニュー・おすすめ</p>
         <h2>季節の花と、グリーン。</h2>
-        <div class="grid"><article class="card"><div class="card-photos"><img src="photo-3.jpg" alt="季節の花をいけたアレンジメント" loading="lazy" decoding="async"></div><h3>花束・アレンジメント</h3><p>ご予算・サイズ・イメージに合わせてお作りします。</p></article><article class="card"><div class="card-photos"><img src="photo-1.jpg" alt="名札付きの多肉植物の寄せ鉢" loading="lazy" decoding="async"></div><h3>多肉植物</h3><p>小さな鉢の多肉植物。</p></article><article class="card"><div class="card-photos"><img src="photo-2.jpg" alt="店先に並ぶ観葉植物やサボテン" loading="lazy" decoding="async"></div><h3>観葉植物・グリーン</h3><p>観葉植物やグリーンを店頭に。</p></article><article class="card"><div class="emoji" aria-hidden="true">🌷</div><h3>季節の生花</h3><p>その季節の花を仕入れています。</p></article><article class="card"><div class="emoji" aria-hidden="true">🌱</div><h3>鉢物の苗</h3><p>鉢植えの苗も扱っています。</p></article><article class="card"><div class="emoji" aria-hidden="true">🏺</div><h3>花瓶</h3><p>店内で花瓶も販売しています。</p></article></div>
+        <div class="grid"><article class="card"><div class="card-photos"><img src="photo-3.jpg" alt="深い色のガラスの花瓶にいけた、季節の花のアレンジメント" width="750" height="1000" loading="lazy" decoding="async" style="max-width:750px"></div><h3>花束・アレンジメント</h3><p>ご予算・サイズ・イメージに合わせてお作りします。</p></article><article class="card"><div class="card-photos"><img src="photo-1.jpg" alt="名札付きの多肉植物の寄せ鉢" width="1000" height="1000" loading="lazy" decoding="async" style="max-width:1000px"></div><h3>多肉植物</h3><p>小さな鉢の多肉植物。</p></article><article class="card"><div class="card-photos"><img src="photo-2.jpg" alt="店先に並ぶ観葉植物やサボテン" width="750" height="1000" loading="lazy" decoding="async" style="max-width:750px"></div><h3>観葉植物・グリーン</h3><p>観葉植物やグリーンを店頭に。</p></article><article class="card"><div class="emoji" aria-hidden="true">🌷</div><h3>季節の生花</h3><p>その季節の花を仕入れています。</p></article><article class="card"><div class="emoji" aria-hidden="true">🌱</div><h3>鉢物の苗</h3><p>鉢植えの苗も扱っています。</p></article><article class="card"><div class="emoji" aria-hidden="true">🏺</div><h3>花瓶</h3><p>店内で花瓶も販売しています。</p></article></div>
         <p class="note">価格はご予算に合わせてご相談ください。</p>
       </div>
     </section>
