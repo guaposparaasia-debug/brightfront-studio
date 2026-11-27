@@ -225,4 +225,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://brightfrontdesign.com/care/</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brightfrontdesign.com/care/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://brightfrontdesign.com/ja/care/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brightfrontdesign.com/care/"/>
+  </url>
+  <url>
+    <loc>https://brightfrontdesign.com/ja/care/</loc>
+    <lastmod>2026-11-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://brightfrontdesign.com/care/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://brightfrontdesign.com/ja/care/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://brightfrontdesign.com/care/"/>
+  </url>
 </urlset>
