@@ -17,3 +17,7 @@
 # Blog post sources and build scripts are not pages. Keep them out of search.
 /scripts/*
   X-Robots-Tag: noindex
+
+# Source for the YouTube Chrome extension, not a site page.
+/chrome-extension-youtube/*
+  X-Robots-Tag: noindex, nofollow

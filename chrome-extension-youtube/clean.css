@@ -1,0 +1,81 @@
+/* Every rule is gated by a data attribute the content script sets on <html>,
+   so turning a toggle off restores the element instantly. */
+
+/* ---------- Shorts ---------- */
+html[data-ytc-shorts] ytd-reel-shelf-renderer,
+html[data-ytc-shorts] ytd-rich-shelf-renderer[is-shorts],
+html[data-ytc-shorts] ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[is-shorts]),
+html[data-ytc-shorts] ytd-rich-section-renderer:has(a[href^="/shorts/"]),
+html[data-ytc-shorts] grid-shelf-view-model:has(a[href^="/shorts/"]),
+html[data-ytc-shorts] ytd-item-section-renderer:has(grid-shelf-view-model a[href^="/shorts/"]),
+html[data-ytc-shorts] ytd-rich-item-renderer:has(a[href^="/shorts/"]),
+html[data-ytc-shorts] ytd-video-renderer:has(a[href^="/shorts/"]),
+html[data-ytc-shorts] ytd-grid-video-renderer:has(a[href^="/shorts/"]),
+html[data-ytc-shorts] ytd-compact-video-renderer:has(a[href^="/shorts/"]),
+html[data-ytc-shorts] yt-lockup-view-model:has(a[href^="/shorts/"]),
+html[data-ytc-shorts] ytd-guide-entry-renderer:has(a[title="Shorts"]),
+html[data-ytc-shorts] ytd-guide-entry-renderer:has(a[href^="/shorts"]),
+html[data-ytc-shorts] ytd-mini-guide-entry-renderer[aria-label="Shorts"],
+html[data-ytc-shorts] yt-tab-shape[tab-title="Shorts"],
+html[data-ytc-shorts] ytm-reel-shelf-renderer,
+html[data-ytc-shorts] ytm-shorts-lockup-view-model,
+html[data-ytc-shorts] ytm-pivot-bar-item-renderer:has(.pivot-shorts) {
+  display: none !important;
+}
+
+/* ---------- Home feed ---------- */
+html[data-ytc-home] ytd-browse[page-subtype="home"] #primary > ytd-rich-grid-renderer,
+html[data-ytc-home] ytd-browse[page-subtype="home"] ytd-rich-grid-renderer #contents {
+  display: none !important;
+}
+
+/* ---------- Recommendations sidebar ---------- */
+html[data-ytc-related] ytd-watch-flexy #secondary #related,
+html[data-ytc-related] ytd-watch-next-secondary-results-renderer,
+html[data-ytc-related] ytm-item-section-renderer[section-identifier="related-items"] {
+  display: none !important;
+}
+
+/* ---------- Comments ---------- */
+html[data-ytc-comments] ytd-comments#comments,
+html[data-ytc-comments] ytd-watch-flexy #comments,
+html[data-ytc-comments] ytm-comments-entry-point-header-renderer,
+html[data-ytc-comments] ytm-comment-section-renderer {
+  display: none !important;
+}
+
+/* ---------- End screens & cards ---------- */
+html[data-ytc-endscreen] .ytp-ce-element,
+html[data-ytc-endscreen] .ytp-endscreen-content,
+html[data-ytc-endscreen] .videowall-endscreen,
+html[data-ytc-endscreen] .ytp-cards-teaser,
+html[data-ytc-endscreen] .ytp-cards-button,
+html[data-ytc-endscreen] .ytp-suggested-action,
+html[data-ytc-endscreen] .ytp-pause-overlay {
+  display: none !important;
+}
+
+/* ---------- Promoted / sponsored cards ---------- */
+html[data-ytc-promoted] ytd-ad-slot-renderer,
+html[data-ytc-promoted] ytd-rich-item-renderer:has(ytd-ad-slot-renderer),
+html[data-ytc-promoted] ytd-in-feed-ad-layout-renderer,
+html[data-ytc-promoted] ytd-promoted-sparkles-web-renderer,
+html[data-ytc-promoted] ytd-promoted-video-renderer,
+html[data-ytc-promoted] ytd-display-ad-renderer,
+html[data-ytc-promoted] ytd-banner-promo-renderer,
+html[data-ytc-promoted] ytd-statement-banner-renderer,
+html[data-ytc-promoted] ytd-primetime-promo-renderer,
+html[data-ytc-promoted] #masthead-ad,
+html[data-ytc-promoted] #player-ads,
+html[data-ytc-promoted] ytd-merch-shelf-renderer,
+html[data-ytc-promoted] ytm-promoted-sparkles-web-renderer {
+  display: none !important;
+}
+
+/* ---------- Topic chips ---------- */
+html[data-ytc-chips] ytd-feed-filter-chip-bar-renderer,
+html[data-ytc-chips] #chips-wrapper,
+html[data-ytc-chips] yt-related-chip-cloud-renderer,
+html[data-ytc-chips] ytm-feed-filter-chip-bar-renderer {
+  display: none !important;
+}
