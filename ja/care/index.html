@@ -27,7 +27,12 @@
     .price-big small{font-family:var(--sans);font-size:.4em;color:var(--muted);margin-left:.25rem}
     .checklist li strong{display:block}
     .checklist li span{color:var(--muted)}
-    .subscribe .btn{display:inline-flex;justify-content:center;width:100%;max-width:26rem;min-height:54px;font-size:1.05rem}
+    .subscribe .btn{display:inline-flex;justify-content:center;width:100%;max-width:26rem;min-height:54px;font-size:1.05rem;cursor:pointer;border:0}
+    .pp-sub{display:grid;gap:.5rem;max-width:26rem;margin:.6rem 0 0}
+    .pp-biz-label{font-weight:600;font-size:.95rem}
+    .pp-biz{width:100%;min-height:48px;padding:.6rem .75rem;border:1px solid var(--line);background:#fff;font:inherit;color:var(--ink)}
+    .pp-biz:focus{outline:2px solid var(--pine);outline-offset:1px}
+    .subscribe .hint{margin:0;color:var(--muted);font-size:.95rem}
     .subscribe .note{margin-top:1rem}
     .subscribe .fine{margin-top:.7rem}
     .closing{margin:2.4rem 0 0;padding-top:1.4rem;border-top:1px solid var(--line)}
@@ -35,7 +40,7 @@
     :target{scroll-margin-top:5.5rem}
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"月額ケアプラン","serviceType":"月額ケアプラン","url":"https://brightfrontdesign.com/ja/care/","inLanguage":"ja","provider":{"@type":"Organization","name":"Brightfront Studio","url":"https://brightfrontdesign.com/","email":"info@brightfrontdesign.com"},"description":"Brightfront Studio の月額ケアプラン（月額 $49）。ホスティング・更新・修正に、Google クチコミの月次チェックとお知らせ投稿 月1回まで含まれます。契約期間の縛りはなく、いつでも解約できます。","offers":{"@type":"Offer","price":"49.00","priceCurrency":"USD","url":"https://brightfrontdesign.com/ja/care/","priceSpecification":{"@type":"UnitPriceSpecification","price":"49.00","priceCurrency":"USD","unitCode":"MON","referenceQuantity":{"@type":"QuantitativeValue","value":1,"unitCode":"MON"}}}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","url":"https://brightfrontdesign.com/ja/care/","inLanguage":"ja","mainEntity":[{"@type":"Question","name":"支払い方法を教えてください。","acceptedAnswer":{"@type":"Answer","text":"クレジットカード決済（Stripe）です。毎月、ご登録のカードから自動でお支払いいただきます。領収書は Stripe からメールで届きます。制作費のお支払い（PayPal）とは別の仕組みになりますが、特に難しい手続きはありません。"}},{"@type":"Question","name":"解約はいつでもできますか。","acceptedAnswer":{"@type":"Answer","text":"はい、いつでも解約できます。違約金はありません。解約をご希望の場合は、メールでご連絡ください。解約は、その月のお支払い済み期間の終了をもって有効となり、それまではプランの内容をご利用いただけます。翌月以降の請求は止まります。"}},{"@type":"Question","name":"解約すると、ホームページはどうなりますか。","acceptedAnswer":{"@type":"Answer","text":"ホームページ自体が消えることはありません。解約後は、更新代行と月次チェックが終了します。ホスティング等の扱いについては、解約時に個別にご案内いたします。"}},{"@type":"Question","name":"月額料金は、ほかに何か加算されますか。","acceptedAnswer":{"@type":"Answer","text":"いいえ、月額料金はケアプラン（月額 $49）のみです。ホスティング・更新・修正に、月次のクチコミチェックとお知らせ投稿（月1回）まで含まれています。大きなページ追加など範囲を超える作業だけ、事前にお見積もりのうえ別料金で承ります。"}},{"@type":"Question","name":"更新をお願いしてから、どれくらいで反映されますか。","acceptedAnswer":{"@type":"Answer","text":"通常、ご依頼から3営業日以内の反映を目安にしています。写真の加工や文章作成が伴う場合は少しお時間をいただくことがありますが、その際は事前にご連絡します。"}},{"@type":"Question","name":"対応してもらえる更新の範囲はどこまでですか。","acceptedAnswer":{"@type":"Answer","text":"テキストの変更、メニュー・料金の変更、写真の差し替えといった日常的な更新が対象です。ページの大幅な追加や全面リニューアルは対象外となりますが、ご希望の場合は別途お見積もりいたします。"}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","url":"https://brightfrontdesign.com/ja/care/","inLanguage":"ja","mainEntity":[{"@type":"Question","name":"支払い方法を教えてください。","acceptedAnswer":{"@type":"Answer","text":"PayPal でのお支払いです。毎月、自動でお支払いいただきます。PayPal のお支払い画面ではクレジットカードもご利用いただけます。領収書は PayPal からメールで届きます。制作費と同じく PayPal ですが、ケアプランは別の月額のお申し込みになります。特に難しい手続きはありません。"}},{"@type":"Question","name":"解約はいつでもできますか。","acceptedAnswer":{"@type":"Answer","text":"はい、いつでも解約できます。違約金はありません。解約をご希望の場合は、メールでご連絡ください。解約は、その月のお支払い済み期間の終了をもって有効となり、それまではプランの内容をご利用いただけます。翌月以降の請求は止まります。"}},{"@type":"Question","name":"解約すると、ホームページはどうなりますか。","acceptedAnswer":{"@type":"Answer","text":"ホームページ自体が消えることはありません。解約後は、更新代行と月次チェックが終了します。ホスティング等の扱いについては、解約時に個別にご案内いたします。"}},{"@type":"Question","name":"月額料金は、ほかに何か加算されますか。","acceptedAnswer":{"@type":"Answer","text":"いいえ、月額料金はケアプラン（月額 $49）のみです。ホスティング・更新・修正に、月次のクチコミチェックとお知らせ投稿（月1回）まで含まれています。大きなページ追加など範囲を超える作業だけ、事前にお見積もりのうえ別料金で承ります。"}},{"@type":"Question","name":"更新をお願いしてから、どれくらいで反映されますか。","acceptedAnswer":{"@type":"Answer","text":"通常、ご依頼から3営業日以内の反映を目安にしています。写真の加工や文章作成が伴う場合は少しお時間をいただくことがありますが、その際は事前にご連絡します。"}},{"@type":"Question","name":"対応してもらえる更新の範囲はどこまでですか。","acceptedAnswer":{"@type":"Answer","text":"テキストの変更、メニュー・料金の変更、写真の差し替えといった日常的な更新が対象です。ページの大幅な追加や全面リニューアルは対象外となりますが、ご希望の場合は別途お見積もりいたします。"}}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ホーム","item":"https://brightfrontdesign.com/ja/"},{"@type":"ListItem","position":2,"name":"月額ケアプラン","item":"https://brightfrontdesign.com/ja/care/"}]}</script>
 </head>
 <body>
@@ -59,7 +64,7 @@
       <section class="price-box" aria-labelledby="price-h">
         <h2 id="price-h">料金</h2>
         <p class="price-big">$49<small>/月（USD）</small></p>
-        <ul class="checklist"><li>契約期間の縛りはありません。いつでも解約できます。</li><li>お支払いはクレジットカード（Stripe の安全な決済ページ）です。毎月自動でお支払いいただく形になります。</li><li>ウェブサイト制作費（着手時 $250・ご承認後 $250）とは別のお支払いです。制作のお申し込みは、これまで通り下記のページからお願いいたします。<br>▼ 制作のお申し込み: <a href="/ja/start/">https://brightfrontdesign.com/ja/start/</a></li></ul>
+        <ul class="checklist"><li>契約期間の縛りはありません。いつでも解約できます。</li><li>お支払いは PayPal で、毎月自動でお支払いいただく形になります。PayPal のお支払い画面ではクレジットカードもご利用いただけます。</li><li>ウェブサイト制作費（着手時 $250・ご承認後 $250）とは別のお支払いです。制作のお申し込みは、これまで通り下記のページからお願いいたします。<br>▼ 制作のお申し込み: <a href="/ja/start/">https://brightfrontdesign.com/ja/start/</a></li></ul>
       </section>
 
       <h2 id="included" style="margin-top:2.6rem">プランに含まれること</h2>
@@ -67,18 +72,42 @@
       <p class="note">※ 大きなページ追加やデザインの作り替えなど、通常の更新の範囲を超える作業は、事前にお見積もりのうえ別料金で承ります。勝手に請求することはありません。</p>
 
       <h2 id="how" style="margin-top:2.6rem">進め方</h2>
-      <ol class="steps-list"><li>このページ下部のボタンからお申し込みください（Stripe の決済ページに移動します）。</li><li>初回のお支払いが確認でき次第、ご案内のメールをお送りします。</li><li>あとは、変更したい内容をメールでお送りいただくだけです。通常、<strong>3営業日以内の反映</strong>を目安に対応いたします（内容により前後する場合は、その旨をご連絡します）。</li></ol>
+      <ol class="steps-list"><li>このページ下部のボタンからお申し込みください（PayPal のお支払い画面に移動します）。</li><li>初回のお支払いが確認でき次第、ご案内のメールをお送りします。</li><li>あとは、変更したい内容をメールでお送りいただくだけです。通常、<strong>3営業日以内の反映</strong>を目安に対応いたします（内容により前後する場合は、その旨をご連絡します）。</li></ol>
 
       <section class="cta subscribe" aria-labelledby="sub-h">
         <h2 id="sub-h">ケアプランのお申し込み</h2>
-        <!-- Stripe checkout is not set up yet (test mode comes later). Replace href="#stripe-care-link-pending" with the Stripe care-plan checkout link once it exists. -->
-        <a class="btn" href="#stripe-care-link-pending" data-pending="stripe-care-link">ケアプランを申し込む（月額 $49）</a>
+        <p class="hint">ホームページのご承認・公開後にお申し込みください。お支払いは PayPal で毎月自動で行われ、いつでも解約できます。</p>
+        <!-- Same PayPal _xclick-subscriptions form as the homepage Care Plan (a3=49 monthly). /api/paypal-ipn accepts $49 (and $39 for existing subscribers). -->
+        <form class="pp-sub" id="pp-sub" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <label class="pp-biz-label" for="pp-biz">店名</label>
+          <input class="pp-biz" id="pp-biz" type="text" required maxlength="64" autocomplete="organization">
+          <input type="hidden" name="custom" id="pp-custom">
+          <input type="hidden" name="on0" value="Business">
+          <input type="hidden" name="os0" id="pp-os0">
+          <input type="hidden" name="cmd" value="_xclick-subscriptions">
+          <input type="hidden" name="business" value="chedamso@naver.com">
+          <input type="hidden" name="item_name" value="Brightfront Studio Care Plan - $49/month">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="hidden" name="a3" value="49">
+          <input type="hidden" name="p3" value="1">
+          <input type="hidden" name="t3" value="M">
+          <input type="hidden" name="src" value="1">
+          <input type="hidden" name="no_shipping" value="1">
+          <input type="hidden" name="no_note" value="1">
+          <input type="hidden" name="charset" value="UTF-8">
+          <input type="hidden" name="lc" value="JP">
+          <input type="hidden" name="notify_url" value="https://brightfrontdesign.com/api/paypal-ipn">
+          <input type="hidden" name="return" value="https://brightfrontdesign.com/thanks/">
+          <input type="hidden" name="cancel_return" value="https://brightfrontdesign.com/ja/care/">
+          <button type="submit" class="btn">ケアプランを申し込む（月額 $49）</button>
+          <p class="fine">PayPal のお支払い画面ではクレジットカードもご利用いただけます。PayPal のアカウントからいつでも解約できます。</p>
+          <p class="fine">PayPalのお支払い画面では、運営事業者名「체드랍（CHEDLAB）」と表示されます。Brightfront Studioの運営会社の名称ですので、そのままお進みください。</p>
+        </form>
         <p class="fine">月額料金はケアプラン（月額 $49）のみです。別の月額料金が重なることはありません。</p>
-        <p class="note" id="stripe-care-link-pending" role="note">オンラインでのお申し込みは、まもなく受付を開始します。それまでは、<a href="/ja/start/">制作のお申し込みページ</a>、または <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a> までご連絡ください。</p>
       </section>
 
       <h2 id="faq" style="margin-top:2.6rem">よくあるご質問</h2>
-      <div class="faq"><details><summary>支払い方法を教えてください。</summary><p>クレジットカード決済（Stripe）です。毎月、ご登録のカードから自動でお支払いいただきます。領収書は Stripe からメールで届きます。制作費のお支払い（PayPal）とは別の仕組みになりますが、特に難しい手続きはありません。</p></details><details><summary>解約はいつでもできますか。</summary><p>はい、いつでも解約できます。違約金はありません。解約をご希望の場合は、メールでご連絡ください。解約は、その月のお支払い済み期間の終了をもって有効となり、それまではプランの内容をご利用いただけます。翌月以降の請求は止まります。</p></details><details><summary>解約すると、ホームページはどうなりますか。</summary><p>ホームページ自体が消えることはありません。解約後は、更新代行と月次チェックが終了します。ホスティング等の扱いについては、解約時に個別にご案内いたします。</p></details><details><summary>月額料金は、ほかに何か加算されますか。</summary><p>いいえ、月額料金はケアプラン（月額 $49）のみです。ホスティング・更新・修正に、月次のクチコミチェックとお知らせ投稿（月1回）まで含まれています。大きなページ追加など範囲を超える作業だけ、事前にお見積もりのうえ別料金で承ります。</p></details><details><summary>更新をお願いしてから、どれくらいで反映されますか。</summary><p>通常、ご依頼から3営業日以内の反映を目安にしています。写真の加工や文章作成が伴う場合は少しお時間をいただくことがありますが、その際は事前にご連絡します。</p></details><details><summary>対応してもらえる更新の範囲はどこまでですか。</summary><p>テキストの変更、メニュー・料金の変更、写真の差し替えといった日常的な更新が対象です。ページの大幅な追加や全面リニューアルは対象外となりますが、ご希望の場合は別途お見積もりいたします。</p></details></div>
+      <div class="faq"><details><summary>支払い方法を教えてください。</summary><p>PayPal でのお支払いです。毎月、自動でお支払いいただきます。PayPal のお支払い画面ではクレジットカードもご利用いただけます。領収書は PayPal からメールで届きます。制作費と同じく PayPal ですが、ケアプランは別の月額のお申し込みになります。特に難しい手続きはありません。</p></details><details><summary>解約はいつでもできますか。</summary><p>はい、いつでも解約できます。違約金はありません。解約をご希望の場合は、メールでご連絡ください。解約は、その月のお支払い済み期間の終了をもって有効となり、それまではプランの内容をご利用いただけます。翌月以降の請求は止まります。</p></details><details><summary>解約すると、ホームページはどうなりますか。</summary><p>ホームページ自体が消えることはありません。解約後は、更新代行と月次チェックが終了します。ホスティング等の扱いについては、解約時に個別にご案内いたします。</p></details><details><summary>月額料金は、ほかに何か加算されますか。</summary><p>いいえ、月額料金はケアプラン（月額 $49）のみです。ホスティング・更新・修正に、月次のクチコミチェックとお知らせ投稿（月1回）まで含まれています。大きなページ追加など範囲を超える作業だけ、事前にお見積もりのうえ別料金で承ります。</p></details><details><summary>更新をお願いしてから、どれくらいで反映されますか。</summary><p>通常、ご依頼から3営業日以内の反映を目安にしています。写真の加工や文章作成が伴う場合は少しお時間をいただくことがありますが、その際は事前にご連絡します。</p></details><details><summary>対応してもらえる更新の範囲はどこまでですか。</summary><p>テキストの変更、メニュー・料金の変更、写真の差し替えといった日常的な更新が対象です。ページの大幅な追加や全面リニューアルは対象外となりますが、ご希望の場合は別途お見積もりいたします。</p></details></div>
 
       <div class="closing">
         <p>ご不明な点があれば、お気軽にメールでお問い合わせください。</p>
@@ -100,5 +129,14 @@
       </div>
     </div>
   </footer>
+  <script>
+(function(){var f=document.getElementById('pp-sub');if(!f)return;var bi=document.getElementById('pp-biz');
+bi.addEventListener('input',function(){bi.setCustomValidity('');});
+f.addEventListener('submit',function(e){var b=bi.value.trim();
+if(!b){e.preventDefault();bi.setCustomValidity("店名を入力してください。");bi.reportValidity();return;}
+var ref=new URLSearchParams(location.search).get('ref')||'';
+document.getElementById('pp-os0').value=b.slice(0,64);
+document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);});})();
+  </script>
 </body>
 </html>
