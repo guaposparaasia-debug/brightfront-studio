@@ -26,8 +26,13 @@ const TIERS = {
   standard: { name: "Standard", monthly: 39 },
   pro: { name: "Pro", monthly: 69 },
 };
-// Current pricing: $250 upfront, $250 after approval, then $39/month maintenance.
-const SUB_MONTHLY = 39;
+// Current pricing: $250 upfront, $250 after approval, then the $49/month Care Plan (from 2026-11-27).
+// Customers who subscribed or were quoted before that keep $39/month, so $39 is still a valid plan amount.
+const SUB_MONTHLY = 49;
+const SUB_MONTHLY_LEGACY = 39;
+function isPlanAmount(a) { return sameAmount(a, SUB_MONTHLY) || sameAmount(a, SUB_MONTHLY_LEGACY); }
+function planLabelKo(a) { return sameAmount(a, SUB_MONTHLY_LEGACY) ? "$39/월 유지보수 (기존 요금)" : "$49/월 케어플랜"; }
+function planLabelEn(a) { return sameAmount(a, SUB_MONTHLY_LEGACY) ? "$39/month maintenance for your website" : "$49/month Care Plan for your website"; }
 const PLAN_MAP = {
   "P-37C72428AU1150909NLEHO6Y": ["starter", "basic"],
   "P-4PJ33085CC684101TNLEHO7A": ["starter", "standard"],
@@ -300,7 +305,7 @@ export async function onRequestPost({ request, env }) {
   }
 
   // Brightfront subscription (PayPal Standard _xclick-subscriptions, no plan id):
-  // $39/month maintenance (period3 "1 M"), no trial (amount1 absent or 0). The $250 + $250 build
+  // $49/month Care Plan, or $39/month for existing customers (period3 "1 M"), no trial (amount1 absent or 0). The $250 + $250 build
   // payments are separate one-time _xclick payments handled below.
   if (txnType === "subscr_signup" || txnType === "subscr_payment") {
     const recv = (g("receiver_email") || g("business")).toLowerCase();
@@ -315,7 +320,7 @@ export async function onRequestPost({ request, env }) {
     const noTrial = !amt1 || sameAmount(amt1, 0);
     const amt3 = g("mc_amount3") || g("amount3");
     const period3 = (g("period3") || "").trim();
-    const isMonthly = sameAmount(amt3, SUB_MONTHLY) && period3 === "1 M";
+    const isMonthly = isPlanAmount(amt3) && period3 === "1 M";
     const planOk = noTrial && isMonthly;
     if (txnType === "subscr_signup") {
       const termsOk = isOurs && cur === "USD" && planOk;
@@ -324,7 +329,7 @@ export async function onRequestPost({ request, env }) {
         const result = await processPayment(env, Object.assign({
           id: "subsignup:" + subId, kind: "subscription", sendEmail: false,
           amount: amt3, currency: cur,
-          titleKo: termsOk ? "🎉 새 구독 신청 — $39/월 유지보수 (Brightfront)" : "💳 PayPal 구독 신청 (조건 다름 — 확인 필요)",
+          titleKo: termsOk ? ("🎉 새 구독 신청 — " + planLabelKo(amt3) + " (Brightfront)") : "💳 PayPal 구독 신청 (조건 다름 — 확인 필요)",
           amountKo: amountText(amt3, cur) + "/월 유지보수",
           itemKo: itemName || "-", refLabel: "PayPal 구독 ID", refId: subId, memo: [g("custom"), g("option_selection1")].filter(Boolean).join(" / "), source: "PayPal IPN subscr_signup",
         }, payer));
@@ -335,7 +340,7 @@ export async function onRequestPost({ request, env }) {
     // subscr_payment
     if (g("payment_status") !== "Completed" || !txnId) { console.log("ipn: subscr_payment status", g("payment_status"), txnId); return new Response("ignored", { status: 200 }); }
     const gross = g("mc_gross") || g("payment_gross");
-    const isMonthlyPay = sameAmount(gross, SUB_MONTHLY);
+    const isMonthlyPay = isPlanAmount(gross);
     const amountOk = isOurs && cur === "USD" && isMonthlyPay;
     // First payment for this subscr_id: marker in KV (not inferred from the payment amount).
     let isFirst = false;
@@ -352,8 +357,8 @@ export async function onRequestPost({ request, env }) {
         isFirst = true;
       }
     }
-    const planText = "$39/month maintenance for your website, after the $250 + $250 build payments";
-    const planKo = "$39/월 유지보수";
+    const planText = planLabelEn(gross) + ", after the $250 + $250 build payments";
+    const planKo = planLabelKo(gross);
     try {
       const result = await processPayment(env, Object.assign({
         id: txnId, kind: "subscription", sendEmail: amountOk && isFirst,
