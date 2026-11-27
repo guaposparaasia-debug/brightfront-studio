@@ -27,7 +27,12 @@
     .price-big small{font-family:var(--sans);font-size:.4em;color:var(--muted);margin-left:.25rem}
     .checklist li strong{display:block}
     .checklist li span{color:var(--muted)}
-    .subscribe .btn{display:inline-flex;justify-content:center;width:100%;max-width:26rem;min-height:54px;font-size:1.05rem}
+    .subscribe .btn{display:inline-flex;justify-content:center;width:100%;max-width:26rem;min-height:54px;font-size:1.05rem;cursor:pointer;border:0}
+    .pp-sub{display:grid;gap:.5rem;max-width:26rem;margin:.6rem 0 0}
+    .pp-biz-label{font-weight:600;font-size:.95rem}
+    .pp-biz{width:100%;min-height:48px;padding:.6rem .75rem;border:1px solid var(--line);background:#fff;font:inherit;color:var(--ink)}
+    .pp-biz:focus{outline:2px solid var(--pine);outline-offset:1px}
+    .subscribe .hint{margin:0;color:var(--muted);font-size:.95rem}
     .subscribe .note{margin-top:1rem}
     .subscribe .fine{margin-top:.7rem}
     .closing{margin:2.4rem 0 0;padding-top:1.4rem;border-top:1px solid var(--line)}
@@ -35,7 +40,7 @@
     :target{scroll-margin-top:5.5rem}
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Monthly Care Plan","serviceType":"Monthly Care Plan","url":"https://brightfrontdesign.com/care/","inLanguage":"en","provider":{"@type":"Organization","name":"Brightfront Studio","url":"https://brightfrontdesign.com/","email":"info@brightfrontdesign.com"},"description":"Brightfront Studio's Monthly Care Plan: $49/month for hosting, updates, fixes, a monthly Google review check and one notice post a month. Cancel anytime.","offers":{"@type":"Offer","price":"49.00","priceCurrency":"USD","url":"https://brightfrontdesign.com/care/","priceSpecification":{"@type":"UnitPriceSpecification","price":"49.00","priceCurrency":"USD","unitCode":"MON","referenceQuantity":{"@type":"QuantitativeValue","value":1,"unitCode":"MON"}}}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","url":"https://brightfrontdesign.com/care/","inLanguage":"en","mainEntity":[{"@type":"Question","name":"How do I pay?","acceptedAnswer":{"@type":"Answer","text":"By credit card via Stripe, billed automatically each month. Stripe emails your receipts. This is separate from the PayPal payment used for the website build fee."}},{"@type":"Question","name":"Can I cancel anytime?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is no cancellation fee. Email us to cancel; your plan stays active until the end of the period you've already paid for, and no further charges are made."}},{"@type":"Question","name":"What happens to my website if I cancel?","acceptedAnswer":{"@type":"Answer","text":"Your website stays online — cancelling only ends the update service and monthly checks. We'll explain any hosting arrangements individually when you cancel."}},{"@type":"Question","name":"Are there any other monthly fees on top of this?","acceptedAnswer":{"@type":"Answer","text":"No. The care plan ($49/month) is the single monthly fee. It includes hosting, updates and fixes, plus the monthly Google review check and one notice post per month. Only work beyond that scope — such as large new sections — is quoted separately in advance."}},{"@type":"Question","name":"How fast are updates applied?","acceptedAnswer":{"@type":"Answer","text":"We aim for within 3 business days of your request. Updates that involve photo preparation or writing may take slightly longer; we'll tell you in advance if so."}},{"@type":"Question","name":"What's not covered?","acceptedAnswer":{"@type":"Answer","text":"Everyday updates are covered. Large additions or a full redesign are quoted separately, only if you ask for them."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","url":"https://brightfrontdesign.com/care/","inLanguage":"en","mainEntity":[{"@type":"Question","name":"How do I pay?","acceptedAnswer":{"@type":"Answer","text":"Through PayPal, billed automatically each month. Cards are accepted at PayPal checkout, and PayPal emails your receipts. The website build fee is also paid through PayPal; the Care Plan is a separate monthly subscription."}},{"@type":"Question","name":"Can I cancel anytime?","acceptedAnswer":{"@type":"Answer","text":"Yes. There is no cancellation fee. Email us to cancel; your plan stays active until the end of the period you've already paid for, and no further charges are made."}},{"@type":"Question","name":"What happens to my website if I cancel?","acceptedAnswer":{"@type":"Answer","text":"Your website stays online — cancelling only ends the update service and monthly checks. We'll explain any hosting arrangements individually when you cancel."}},{"@type":"Question","name":"Are there any other monthly fees on top of this?","acceptedAnswer":{"@type":"Answer","text":"No. The care plan ($49/month) is the single monthly fee. It includes hosting, updates and fixes, plus the monthly Google review check and one notice post per month. Only work beyond that scope — such as large new sections — is quoted separately in advance."}},{"@type":"Question","name":"How fast are updates applied?","acceptedAnswer":{"@type":"Answer","text":"We aim for within 3 business days of your request. Updates that involve photo preparation or writing may take slightly longer; we'll tell you in advance if so."}},{"@type":"Question","name":"What's not covered?","acceptedAnswer":{"@type":"Answer","text":"Everyday updates are covered. Large additions or a full redesign are quoted separately, only if you ask for them."}}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://brightfrontdesign.com/"},{"@type":"ListItem","position":2,"name":"Monthly Care Plan","item":"https://brightfrontdesign.com/care/"}]}</script>
 </head>
 <body>
@@ -59,7 +64,7 @@
       <section class="price-box" aria-labelledby="price-h">
         <h2 id="price-h">Price</h2>
         <p class="price-big">$49<small>/month (USD)</small></p>
-        <ul class="checklist"><li>No minimum term. Cancel anytime.</li><li>Paid by credit card through Stripe's secure checkout, billed automatically each month.</li><li>This is separate from the website build fee ($250 to start, $250 after your approval). To order a website, please use the usual page: <a href="/start/">https://brightfrontdesign.com/start/</a></li></ul>
+        <ul class="checklist"><li>No minimum term. Cancel anytime.</li><li>Paid monthly through PayPal, billed automatically each month. Cards are accepted at PayPal checkout.</li><li>This is separate from the website build fee ($250 to start, $250 after your approval). To order a website, please use the usual page: <a href="/start/">https://brightfrontdesign.com/start/</a></li></ul>
       </section>
 
       <h2 id="included" style="margin-top:2.6rem">What&#x27;s included</h2>
@@ -67,18 +72,41 @@
       <p class="note">Work beyond everyday updates — such as adding large new sections or a redesign — is quoted separately in advance. We never charge for it without your agreement.</p>
 
       <h2 id="how" style="margin-top:2.6rem">How it works</h2>
-      <ol class="steps-list"><li>Subscribe using the button below (you'll be taken to Stripe's secure checkout).</li><li>Once your first payment is confirmed, we'll email you with the details.</li><li>From then on, just email us what you'd like changed. We aim to apply updates <strong>within 3 business days</strong> and will let you know if something needs a little longer.</li></ol>
+      <ol class="steps-list"><li>Subscribe using the button below (you'll be taken to PayPal's secure checkout).</li><li>Once your first payment is confirmed, we'll email you with the details.</li><li>From then on, just email us what you'd like changed. We aim to apply updates <strong>within 3 business days</strong> and will let you know if something needs a little longer.</li></ol>
 
       <section class="cta subscribe" aria-labelledby="sub-h">
         <h2 id="sub-h">Subscribe to the Care Plan</h2>
-        <!-- Stripe checkout is not set up yet (test mode comes later). Replace href="#stripe-care-link-pending" with the Stripe care-plan checkout link once it exists. -->
-        <a class="btn" href="#stripe-care-link-pending" data-pending="stripe-care-link">Subscribe to the Care Plan ($49/month)</a>
+        <p class="hint">Start this once your website is approved and live. The plan is paid monthly through PayPal, and you can cancel anytime.</p>
+        <!-- Same PayPal _xclick-subscriptions form as the homepage Care Plan (a3=49 monthly). /api/paypal-ipn accepts $49 (and $39 for existing subscribers). -->
+        <form class="pp-sub" id="pp-sub" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <label class="pp-biz-label" for="pp-biz">Business name</label>
+          <input class="pp-biz" id="pp-biz" type="text" required maxlength="64" autocomplete="organization">
+          <input type="hidden" name="custom" id="pp-custom">
+          <input type="hidden" name="on0" value="Business">
+          <input type="hidden" name="os0" id="pp-os0">
+          <input type="hidden" name="cmd" value="_xclick-subscriptions">
+          <input type="hidden" name="business" value="chedamso@naver.com">
+          <input type="hidden" name="item_name" value="Brightfront Studio Care Plan - $49/month">
+          <input type="hidden" name="currency_code" value="USD">
+          <input type="hidden" name="a3" value="49">
+          <input type="hidden" name="p3" value="1">
+          <input type="hidden" name="t3" value="M">
+          <input type="hidden" name="src" value="1">
+          <input type="hidden" name="no_shipping" value="1">
+          <input type="hidden" name="no_note" value="1">
+          <input type="hidden" name="charset" value="UTF-8">
+          <input type="hidden" name="notify_url" value="https://brightfrontdesign.com/api/paypal-ipn">
+          <input type="hidden" name="return" value="https://brightfrontdesign.com/thanks/">
+          <input type="hidden" name="cancel_return" value="https://brightfrontdesign.com/care/">
+          <button type="submit" class="btn">Subscribe to the Care Plan ($49/month)</button>
+          <p class="fine">Cards are accepted at PayPal checkout. Cancel anytime in your PayPal account, no contract.</p>
+          <p class="fine">On the PayPal checkout screen you&#x27;ll see our operating company name, 체드랍 (CHEDLAB). That&#x27;s Brightfront Studio&#x27;s operator — you&#x27;re in the right place.</p>
+        </form>
         <p class="fine">The care plan ($49/month) is the only monthly fee — no other monthly charge is added on top of it.</p>
-        <p class="note" id="stripe-care-link-pending" role="note">Online sign-up opens soon. Until then, please get in touch through the <a href="/start/">start page</a> or email <a href="mailto:info@brightfrontdesign.com">info@brightfrontdesign.com</a>.</p>
       </section>
 
       <h2 id="faq" style="margin-top:2.6rem">FAQ</h2>
-      <div class="faq"><details><summary>How do I pay?</summary><p>By credit card via Stripe, billed automatically each month. Stripe emails your receipts. This is separate from the PayPal payment used for the website build fee.</p></details><details><summary>Can I cancel anytime?</summary><p>Yes. There is no cancellation fee. Email us to cancel; your plan stays active until the end of the period you&#x27;ve already paid for, and no further charges are made.</p></details><details><summary>What happens to my website if I cancel?</summary><p>Your website stays online — cancelling only ends the update service and monthly checks. We&#x27;ll explain any hosting arrangements individually when you cancel.</p></details><details><summary>Are there any other monthly fees on top of this?</summary><p>No. The care plan ($49/month) is the single monthly fee. It includes hosting, updates and fixes, plus the monthly Google review check and one notice post per month. Only work beyond that scope — such as large new sections — is quoted separately in advance.</p></details><details><summary>How fast are updates applied?</summary><p>We aim for within 3 business days of your request. Updates that involve photo preparation or writing may take slightly longer; we&#x27;ll tell you in advance if so.</p></details><details><summary>What&#x27;s not covered?</summary><p>Everyday updates are covered. Large additions or a full redesign are quoted separately, only if you ask for them.</p></details></div>
+      <div class="faq"><details><summary>How do I pay?</summary><p>Through PayPal, billed automatically each month. Cards are accepted at PayPal checkout, and PayPal emails your receipts. The website build fee is also paid through PayPal; the Care Plan is a separate monthly subscription.</p></details><details><summary>Can I cancel anytime?</summary><p>Yes. There is no cancellation fee. Email us to cancel; your plan stays active until the end of the period you&#x27;ve already paid for, and no further charges are made.</p></details><details><summary>What happens to my website if I cancel?</summary><p>Your website stays online — cancelling only ends the update service and monthly checks. We&#x27;ll explain any hosting arrangements individually when you cancel.</p></details><details><summary>Are there any other monthly fees on top of this?</summary><p>No. The care plan ($49/month) is the single monthly fee. It includes hosting, updates and fixes, plus the monthly Google review check and one notice post per month. Only work beyond that scope — such as large new sections — is quoted separately in advance.</p></details><details><summary>How fast are updates applied?</summary><p>We aim for within 3 business days of your request. Updates that involve photo preparation or writing may take slightly longer; we&#x27;ll tell you in advance if so.</p></details><details><summary>What&#x27;s not covered?</summary><p>Everyday updates are covered. Large additions or a full redesign are quoted separately, only if you ask for them.</p></details></div>
 
       <div class="closing">
         <p>Questions? Email us anytime.</p>
@@ -100,5 +128,14 @@
       </div>
     </div>
   </footer>
+  <script>
+(function(){var f=document.getElementById('pp-sub');if(!f)return;var bi=document.getElementById('pp-biz');
+bi.addEventListener('input',function(){bi.setCustomValidity('');});
+f.addEventListener('submit',function(e){var b=bi.value.trim();
+if(!b){e.preventDefault();bi.setCustomValidity("Please enter your business name.");bi.reportValidity();return;}
+var ref=new URLSearchParams(location.search).get('ref')||'';
+document.getElementById('pp-os0').value=b.slice(0,64);
+document.getElementById('pp-custom').value=(b+(ref?' | '+ref:'')).slice(0,255);});})();
+  </script>
 </body>
 </html>
