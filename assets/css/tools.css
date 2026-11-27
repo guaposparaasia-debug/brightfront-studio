@@ -1,0 +1,69 @@
+/* Interactive tools (/tools/*). Loaded after pages.css. Bump ?v=N when this file changes. */
+.tool{display:grid;gap:1.6rem;margin:0 0 2.5rem}
+@media (min-width:900px){.tool{grid-template-columns:1.1fr 1fr;align-items:start}}
+.tool-form,.tool-out{background:#fff;border:1px solid var(--line);padding:1.3rem 1.3rem 1.5rem}
+.tool-out{position:sticky;top:5.5rem}
+@media (max-width:899px){.tool-out{position:static}}
+.tool-form fieldset{border:0;padding:0;margin:0 0 1.1rem}
+.tool-form legend{font-family:var(--serif);font-size:1.35rem;margin:0 0 .6rem;padding:0}
+.field-row{display:grid;gap:.3rem;margin:0 0 .9rem}
+.field-row label{font-weight:600;font-size:.95rem}
+.field-row .hint{margin:0;color:var(--muted);font-size:.85rem}
+.tool input,.tool select,.tool textarea{font:inherit;font-size:1rem;width:100%;min-height:44px;padding:.55rem .7rem;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:0}
+.tool textarea{min-height:5.5rem;resize:vertical}
+.tool input:focus,.tool select:focus,.tool textarea:focus{outline:2px solid var(--pine);outline-offset:1px}
+.money{position:relative}
+.money span{position:absolute;left:.7rem;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+.money input{padding-left:1.6rem}
+.grid-2{display:grid;gap:0 1rem}
+@media (min-width:560px){.grid-2{grid-template-columns:1fr 1fr}}
+.tool-out h2{margin:0 0 .8rem;font-size:1.6rem}
+.out-list{list-style:none;margin:0;padding:0}
+.out-list li{display:flex;justify-content:space-between;gap:1rem;padding:.5rem 0;border-bottom:1px solid var(--line);font-size:.98rem}
+.out-list li b{font-variant-numeric:tabular-nums;white-space:nowrap}
+.out-list li.sub{color:var(--muted);font-size:.9rem}
+.out-list li.total{border-bottom:0;border-top:2px solid var(--ink);margin-top:.3rem;padding-top:.7rem;font-weight:600}
+.out-list li.total b{font-size:1.3rem}
+.big-total{margin:1rem 0 0;padding:1rem;background:var(--paper-2);display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.big-total span{font-weight:600}
+.big-total b{font-family:var(--serif);font-weight:400;font-size:2rem;font-variant-numeric:tabular-nums}
+.tool-out .fine{margin-top:.8rem}
+.points{display:grid;gap:.8rem;margin:.4rem 0 0}
+.point{border:1px solid var(--line);padding:.9rem 1rem;background:var(--paper)}
+.point.mid{border:2px solid var(--pine);background:#fff}
+.point h3{margin:0 0 .2rem;font-size:1rem;font-family:var(--sans);font-weight:600}
+.point .price{font-family:var(--serif);font-size:2rem;line-height:1.1;font-variant-numeric:tabular-nums}
+.point dl{display:grid;grid-template-columns:1fr auto;gap:.15rem 1rem;margin:.5rem 0 0;font-size:.92rem}
+.point dt{color:var(--muted)}
+.point dd{margin:0;text-align:right;font-variant-numeric:tabular-nums}
+.tool-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1rem}
+.tool-actions button{font:inherit;cursor:pointer}
+.btn-plain{background:none;border:1px solid var(--line);padding:.6rem 1rem;min-height:44px}
+.tool-list{list-style:none;padding:0;margin:1.6rem 0 0;display:grid;gap:1.2rem}
+@media (min-width:860px){.tool-list{grid-template-columns:repeat(3,1fr)}}
+.tool-list li{background:#fff;border:1px solid var(--line);padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;gap:.5rem}
+.tool-list h2,.tool-list h3{margin:0;font-size:1.45rem}
+.tool-list p{margin:0;color:var(--muted)}
+.tool-list .go{margin-top:auto;padding-top:.4rem;font-weight:600}
+/* one-page plan */
+.plan{background:#fff;border:1px solid var(--line);padding:2rem 2rem 1.6rem;margin:0 0 2.5rem}
+.plan[hidden]{display:none}
+.plan header{border-bottom:2px solid var(--ink);padding-bottom:.6rem;margin-bottom:1rem}
+.plan h2{margin:0;font-size:2rem}
+.plan .plan-sub{margin:.2rem 0 0;color:var(--muted);font-size:.95rem}
+.plan-grid{display:grid;gap:.9rem 1.6rem}
+@media (min-width:760px){.plan-grid{grid-template-columns:1fr 1fr}}
+.plan section h3{margin:0 0 .2rem;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--pine);font-family:var(--sans);font-weight:600}
+.plan section p{margin:0;white-space:pre-line;font-size:.98rem}
+.plan .wide{grid-column:1/-1}
+.plan footer{margin-top:1.2rem;padding-top:.6rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted)}
+@media print{
+  @page{size:A4;margin:14mm}
+  body.printing{background:#fff}
+  body.printing .skip,body.printing .site-header,body.printing .site-footer,body.printing .page-head,body.printing .tool,body.printing .read,body.printing #plan-actions,body.printing ins,body.printing iframe{display:none !important}
+  body.printing main,body.printing .wrap{padding:0;margin:0;width:auto;max-width:none}
+  body.printing .plan{border:0;padding:0;margin:0;font-size:10.5pt}
+  body.printing .plan-grid{grid-template-columns:1fr 1fr;gap:8pt 16pt}
+  body.printing .plan h2{font-size:20pt}
+  body.printing .plan section p{font-size:10pt}
+}

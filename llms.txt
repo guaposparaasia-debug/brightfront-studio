@@ -22,6 +22,13 @@ The blog is written and edited by the Brightfront Studio team. Articles are gene
 - [How to use AI in your small business: a beginner's guide (no tech skills needed)](https://brightfrontdesign.com/blog/ai-tools-for-small-business-beginners/): A plain-English guide to AI assistants such as ChatGPT, Claude, Gemini and Copilot for small business owners: what they do well, prompts and mistakes to avoid.
 - [10 scams that target new small business owners, and how to spot them](https://brightfrontdesign.com/blog/small-business-scams/): New business owners are a favourite scam target. The 10 most common small business scams, from fake domain renewals to invoice fraud, and how to stay safe.
 
+## Free tools
+
+- [Free small business tools](https://brightfrontdesign.com/tools/): Browser-based calculators for new small business owners
+- [Startup cost calculator](https://brightfrontdesign.com/tools/startup-cost-calculator/): Itemised startup total (one-time costs plus first month of rent and marketing) and a runway reserve
+- [Pricing calculator](https://brightfrontdesign.com/tools/pricing-calculator/): Suggested price per job or unit from costs, time, hourly rate, overhead and margin, with profit at three price points
+- [One-page business plan generator](https://brightfrontdesign.com/tools/business-plan-generator/): Nine short questions turned into a printable one-page business plan
+
 ## About
 
 - [About Second Act and our editorial policy](https://brightfrontdesign.com/blog/about/): Who writes the blog, how articles are checked, and how it is funded
